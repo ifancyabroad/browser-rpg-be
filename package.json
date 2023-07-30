@@ -24,12 +24,22 @@
         "url": "git+https://github.com/ifancyabroad/browser-rpg-be.git"
     },
     "dependencies": {
+        "bcrypt": "^5.1.0",
         "dotenv": "^10.0.0",
         "express": "^4.17.1",
-        "mongodb": "^5.7.0"
+        "express-async-handler": "^1.2.0",
+        "http-errors": "^2.0.0",
+        "http-status-codes": "^2.2.0",
+        "jsonwebtoken": "^9.0.1",
+        "mongodb": "^5.7.0",
+        "mongoose": "^7.4.1"
     },
     "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
         "@types/express": "^4.17.13",
+        "@types/http-errors": "^2.0.1",
+        "@types/jsonwebtoken": "^9.0.2",
+        "@types/mongoose": "^5.11.97",
         "@types/node": "^16.4.7",
         "husky": "^8.0.0",
         "prettier": "^2.3.2",

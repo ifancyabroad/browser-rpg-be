@@ -1,7 +1,19 @@
-// External dependencies
-import { ObjectId } from "mongodb";
+import mongoose, { Schema } from "mongoose";
 
-// Class Implementation
-export default class User {
-    constructor(public email: string, public password: number, public id?: ObjectId) {}
-}
+const userSchema = new Schema(
+    {
+        email: {
+            type: String,
+            lowercase: true,
+            unique: true,
+            required: [true, "Please enter an email"],
+        },
+        password: {
+            type: String,
+            required: true,
+        },
+    },
+    { timestamps: true },
+);
+
+export default mongoose.model("User", userSchema);
