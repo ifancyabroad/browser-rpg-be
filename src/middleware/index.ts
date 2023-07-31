@@ -4,8 +4,8 @@ import { notFound } from "./notFound";
 import { errorRequest } from "./errorRequest";
 
 export const middleware = {
-    userAuth,
-    checkObjectId,
-    notFound,
-    errorRequest,
+	userAuth,
+	checkObjectId,
+	notFound,
+	errorRequest,
 };

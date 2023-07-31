@@ -13,13 +13,13 @@ import createHttpError from "http-errors";
  * converted into a 500 - Internal server errors
  */
 const errorRequest: ErrorRequestHandler = (err, req, res, _) => {
-    console.error(err.message);
-    // If the error is not an HTTP error, the whole object is printed through console.error
-    if (!createHttpError.isHttpError(err)) {
-        console.error(err);
-    }
-    const status = err.status ?? httpStatus.INTERNAL_SERVER_ERROR;
-    res.status(status).send(ErrorRo(status, err.message));
+	console.error(err.message);
+	// If the error is not an HTTP error, the whole object is printed through console.error
+	if (!createHttpError.isHttpError(err)) {
+		console.error(err);
+	}
+	const status = err.status ?? httpStatus.INTERNAL_SERVER_ERROR;
+	res.status(status).send(ErrorRo(status, err.message));
 };
 
 export { errorRequest };

@@ -1,4 +1,4 @@
 export interface IModelDI {
-    name: string;
-    model: any;
+	name: string;
+	model: any;
 }

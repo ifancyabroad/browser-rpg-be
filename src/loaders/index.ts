@@ -6,18 +6,18 @@ import { IModelDI } from "src/types/dependencyInjectors";
 import { dependencyInjector } from "./dependencyInjector";
 
 export const loaders = async (app: Application): Promise<void> => {
-    console.info("Loaders running");
-    await mongooseLoader();
-    const userModel: IModelDI = {
-        name: "userModel",
-        model: UserModel,
-    };
+	console.info("Loaders running");
+	await mongooseLoader();
+	const userModel: IModelDI = {
+		name: "userModel",
+		model: UserModel,
+	};
 
-    await dependencyInjector({
-        models: [userModel],
-    });
-    console.info("Dependency Injector loaded");
-    console.info("Jobs loaded");
+	await dependencyInjector({
+		models: [userModel],
+	});
+	console.info("Dependency Injector loaded");
+	console.info("Jobs loaded");
 
-    await expressLoader(app);
+	await expressLoader(app);
 };

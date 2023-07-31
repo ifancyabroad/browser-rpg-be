@@ -3,10 +3,10 @@
  * It may contains an error and enable API consumer to treat every responses the same way
  */
 export interface Ro {
-    error?: {
-        statusCode: number;
-        message: string;
-    };
+	error?: {
+		statusCode: number;
+		message: string;
+	};
 }
 
 /**
@@ -17,10 +17,10 @@ export interface Ro {
  * @constructor
  */
 export function ErrorRo(statusCode: number, message: string): Ro {
-    return {
-        error: {
-            statusCode,
-            message,
-        },
-    };
+	return {
+		error: {
+			statusCode,
+			message,
+		},
+	};
 }

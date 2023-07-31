@@ -6,21 +6,21 @@ import { config } from "src/config";
 import { middleware } from "src/middleware";
 
 export const expressLoader = async (app: Application) => {
-    /* Middleware*/
-    app.use(cors({ origin: true }));
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: false }));
-    // app.use(helmet());
+	/* Middleware*/
+	app.use(cors({ origin: true }));
+	app.use(express.json());
+	app.use(express.urlencoded({ extended: false }));
+	// app.use(helmet());
 
-    /*  Proxy rules */
-    app.set("trust proxy", true);
+	/*  Proxy rules */
+	app.set("trust proxy", true);
 
-    /*  Routes  */
-    app.use(config.api.prefix, appRouter);
+	/*  Routes  */
+	app.use(config.api.prefix, appRouter);
 
-    /*  404 middleware  */
-    app.use(middleware.notFound);
+	/*  404 middleware  */
+	app.use(middleware.notFound);
 
-    /*  Error middleware  */
-    app.use(middleware.errorRequest);
+	/*  Error middleware  */
+	app.use(middleware.errorRequest);
 };
