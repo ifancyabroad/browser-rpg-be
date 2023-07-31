@@ -15,3 +15,8 @@ export interface IUserInput {
 export interface RequestUser extends Request {
     user?: IUserInput;
 }
+
+export interface IUserService {
+    loginUser: (userInput: IUserInput) => Promise<any>;
+    registerUser: (userInput: IUserInput) => Promise<any>;
+}

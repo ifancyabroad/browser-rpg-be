@@ -1,22 +1,18 @@
-import express from "express";
-import { userRouter } from "./routes/user.router";
-import mongoose from "mongoose";
-import * as dotenv from "dotenv";
+import "reflect-metadata"; // We need this in order to use @Decorators
+import express, { Application } from "express";
+import { config } from "./config";
+import { loaders } from "./loaders";
 
-dotenv.config();
-const app = express();
-const port = 8080; // default port to listen
-
-mongoose
-    .connect(process.env.DB_CONN_STRING)
-    .then(() => {
-        app.use("/user", userRouter);
-
-        app.listen(port, () => {
-            console.log(`Server started at http://localhost:${port}`);
-        });
-    })
-    .catch((error: Error) => {
-        console.error("Database connection failed", error);
-        process.exit();
+const startServer = async () => {
+    const app: Application = express();
+    await loaders(app);
+    console.debug(`MODE ENV ${process.env.NODE_ENV}`);
+    app.listen(config.port, () => {
+        console.info(`Server listening on port: ${config.port}`);
+    }).on("error", (err) => {
+        console.error(err);
+        process.exit(1);
     });
+};
+
+startServer();
