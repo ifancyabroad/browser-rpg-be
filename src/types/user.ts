@@ -33,8 +33,8 @@ export class UserSignupDto {
 }
 
 export class UserSigninDto {
-	@IsString()
-	username: string;
+	@IsEmail()
+	email: string;
 
 	@IsString()
 	password: string;
