@@ -4,6 +4,8 @@ import { appRouter } from "src/routes";
 import { config } from "src/config";
 import helmet from "helmet";
 import { middleware } from "src/middleware";
+import session from "express-session";
+import MongoStore from "connect-mongo";
 
 export const expressLoader = async (app: Application) => {
 	/* Middleware*/
@@ -11,6 +13,22 @@ export const expressLoader = async (app: Application) => {
 	app.use(express.json());
 	app.use(express.urlencoded({ extended: false }));
 	app.use(helmet());
+	app.use(
+		session({
+			name: "sid",
+			secret: config.jwtSecret,
+			cookie: {
+				httpOnly: true,
+				secure: true,
+				maxAge: 1000 * 60 * 60 * 7,
+			},
+			resave: false,
+			saveUninitialized: true,
+			store: MongoStore.create({
+				mongoUrl: config.dbUrl,
+			}),
+		}),
+	);
 
 	/*  Proxy rules */
 	app.set("trust proxy", true);

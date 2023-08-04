@@ -16,32 +16,25 @@ export class UserService implements IUserService {
 			// Get user from db
 			const userCheck = await this.userModel.findOne({ email: userInput.email });
 			if (!userCheck) {
-				console.log("Warning loginUser: InValid credentials");
+				console.log("Warning loginUser: Invalid credentials");
 				throw createHttpError(httpStatus.FORBIDDEN, "Invalid  credentials");
 			}
 			// Check password
 			const isMatch = await bcrypt.compare(userInput.password, userCheck.password);
 			if (!isMatch) {
-				console.log("Warning loginUser: InValid credentials");
+				console.log("Warning loginUser: Invalid credentials");
 				throw createHttpError(httpStatus.FORBIDDEN, "Invalid  credentials");
 			}
 
-			//Return jsonwebtoken
+			// Remove password
 			const payload = {
-				user: {
-					id: userCheck.id,
-				},
+				id: userCheck.id,
+				email: userCheck.email,
 			};
 
-			const jwtSecret = process.env.JWT_SECRET;
-			try {
-				const token = jwt.sign(payload, jwtSecret, { expiresIn: "2h" });
-				return token;
-			} catch (error) {
-				console.error(`Error loginUser: ${error.message}`);
-				throw createHttpError(httpStatus.FORBIDDEN, "loginUser: Error jsonwebtoken");
-			}
+			return payload;
 		} catch (error) {
+			console.error(`Error loginUser: ${error.message}`);
 			throw error;
 		}
 	}
@@ -61,21 +54,13 @@ export class UserService implements IUserService {
 				password: encryptPass,
 			});
 
-			// Return password
+			// Remove password
 			const payload = {
-				user: {
-					id: userRecord.id,
-				},
+				id: userRecord.id,
+				email: userRecord.email,
 			};
-			const jwtSecret = process.env.JWT_SECRET;
-			try {
-				const token = jwt.sign(payload, jwtSecret, { expiresIn: "2h" });
-				console.log("Success registerUser");
-				return token;
-			} catch (error) {
-				console.error(`Error registerUser: ${error.message}`);
-				throw createHttpError(httpStatus.FORBIDDEN, "RegisterUser: Error jsonwebtoken");
-			}
+
+			return payload;
 		} catch (error) {
 			console.error(`Error registerUser: ${error.message}`);
 			throw error;

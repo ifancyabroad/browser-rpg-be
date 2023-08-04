@@ -18,6 +18,16 @@ userRouter.get(
 	}),
 );
 
+// @GET '/auth'
+// @DEST Get user session
+userRouter.get(
+	"/session",
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const session = Boolean(req.session.user);
+		res.status(200).json({ session });
+	}),
+);
+
 // @POST '/auth'
 // @DES Login user
 userRouter.post(
@@ -25,8 +35,10 @@ userRouter.post(
 	middleware.validation(UserSigninDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const userService = Container.get(UserService);
-		const token = await userService.loginUser(req.body);
-		res.json({ token });
+		const user = await userService.loginUser(req.body);
+		req.session.user = user;
+		req.session.save();
+		res.json({ user });
 	}),
 );
 
@@ -37,8 +49,10 @@ userRouter.put(
 	middleware.validation(UserSignupDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const userService = Container.get(UserService);
-		const token = await userService.registerUser(req.body);
-		res.json({ token });
+		const user = await userService.registerUser(req.body);
+		req.session.user = user;
+		req.session.save();
+		res.json({ user });
 	}),
 );
 
