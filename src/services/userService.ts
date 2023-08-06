@@ -4,7 +4,6 @@ import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
 /* User service */
 @Service()

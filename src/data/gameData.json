@@ -1,0 +1,1184 @@
+{
+	"armours": {
+		"-NMEwPxI9DXom0AaME0Z": {
+			"defense": 10,
+			"description": "Some leather armour.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
+			"level": 1,
+			"name": "Leather Armour",
+			"price": 90,
+			"type": "armour"
+		},
+		"-NNvLeBtvpWhwHiOrBKJ": {
+			"defense": 5,
+			"description": "Some leather boots.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
+			"level": 1,
+			"name": "Leather Boots",
+			"price": 50,
+			"type": "boots"
+		},
+		"-NNvLkVyFUS4L9Zio2lO": {
+			"defense": 5,
+			"description": "A pair of leather gloves.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
+			"level": 1,
+			"name": "Leather Gloves",
+			"price": 50,
+			"type": "gloves"
+		},
+		"-NNvLx5iIM_zb3YGnsNC": {
+			"defense": 5,
+			"description": "A leather hood.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
+			"level": 1,
+			"name": "Leather Hood",
+			"price": 70,
+			"type": "helmet"
+		},
+		"-NZMqz87pcH6a1OgycJ9": {
+			"defense": 10,
+			"description": "A basic wooden shield.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
+			"level": 1,
+			"name": "Wooden Shield",
+			"price": 10,
+			"type": "shield"
+		},
+		"-NZN-pDbqOJ2N6bjuW-2": {
+			"defense": 40,
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
+			"level": 4,
+			"name": "Gold Armour",
+			"price": 4500,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "radiant",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lighting",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 50
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		}
+	},
+	"classes": {
+		"-N_Ot99GWjYjrv9Gs-fP": {
+			"description": "Proud and honorable, specialising in brute strength. Primary stats are strength and constitution.",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"feet": "-NNvLeBtvpWhwHiOrBKJ",
+				"hand1": "-NMmvhpTgBUrely_XRJ7",
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
+			},
+			"name": "Fighter",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP?alt=media&token=d5f2ff3c-b47d-44a2-8c86-4c8f4e0d0bfe",
+			"skillClass": "warrior",
+			"skills": ["-NJQ2hml_9m6iHzAfES5"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 16,
+				"dexterity": 15,
+				"intelligence": 10,
+				"strength": 18,
+				"wisdom": 9
+			}
+		},
+		"-N_OzueqvUwAUNXnlWpb": {
+			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"hand1": "-NNwMy0q-XKUT-EUvxFF",
+				"head": "-NNvLx5iIM_zb3YGnsNC"
+			},
+			"name": "Thief",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb?alt=media&token=df7d8777-000e-4118-b1e3-fda257e39d92",
+			"skillClass": "rogue",
+			"skills": ["-NZq_C6vPLiGUFkYHy3u"],
+			"stats": {
+				"charisma": 17,
+				"constitution": 13,
+				"dexterity": 18,
+				"intelligence": 13,
+				"strength": 9,
+				"wisdom": 10
+			}
+		},
+		"-N_P0pcakZhKbNDftKoc": {
+			"description": "Trained in the arcane arts and proficient with all forms of magic. Primary stat is intelligence.",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z"
+			},
+			"name": "Mage",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc?alt=media&token=33fc4e27-40c8-4cf4-b6b6-d0148c3847af",
+			"skillClass": "mage",
+			"skills": ["-NZqaJ9QZYIpe6P1iDYy"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 15,
+				"dexterity": 11,
+				"intelligence": 18,
+				"strength": 8,
+				"wisdom": 16
+			}
+		}
+	},
+	"monsters": {
+		"-NKsyKI9WEI82s5dZFJ_": {
+			"challenge": 4,
+			"description": "",
+			"equipment": {
+				"hand1": "-NNwMy0q-XKUT-EUvxFF",
+				"hand2": "-NNwMy0q-XKUT-EUvxFF"
+			},
+			"name": "Goblin Assassin",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=9f43fad6-deaa-4309-af8b-e69d59edbce7",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 25,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NKt5eqAEIJYZFNbvK8f", "-NZqa_ZuZcAZCuzTr5c3", "-NZq_C6vPLiGUFkYHy3u"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 7,
+				"dexterity": 16,
+				"intelligence": 8,
+				"strength": 8,
+				"wisdom": 10
+			}
+		},
+		"-NKszEMMl4YFhX86psew": {
+			"challenge": 2,
+			"description": "",
+			"equipment": {
+				"hand1": "-NMmvhpTgBUrely_XRJ7"
+			},
+			"name": "Skeleton Warrior",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=a734eb27-6d01-41d7-a6ec-bcba84d64ae3",
+			"resistances": {
+				"acid": -50,
+				"cold": 50,
+				"crushing": -50,
+				"fire": -50,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"stats": {
+				"charisma": 2,
+				"constitution": 8,
+				"dexterity": 7,
+				"intelligence": 2,
+				"strength": 8,
+				"wisdom": 7
+			}
+		},
+		"-NKt-VrmU-I7ve15fvwC": {
+			"challenge": 8,
+			"description": "",
+			"name": "Orc Shaman",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=f099e184-0233-4773-a07e-62888963307b",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 16,
+				"dexterity": 13,
+				"intelligence": 12,
+				"strength": 14,
+				"wisdom": 17
+			}
+		},
+		"-NKt0FqDCM_Ms7YFjWhj": {
+			"challenge": 4,
+			"description": "",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"feet": "-NNvLeBtvpWhwHiOrBKJ",
+				"hand1": "-NNwMy0q-XKUT-EUvxFF",
+				"hand2": "-NNwMy0q-XKUT-EUvxFF"
+			},
+			"name": "Chieftan's Daughter",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=d5f4ff92-7905-47f7-8ab0-681f5dc27fcf",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJQ2hml_9m6iHzAfES5"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 15,
+				"dexterity": 15,
+				"intelligence": 10,
+				"strength": 12,
+				"wisdom": 8
+			}
+		},
+		"-NKt0uevyBhRIvkURXy4": {
+			"challenge": 5,
+			"description": "",
+			"equipment": {
+				"hand1": "-NNwMy0q-XKUT-EUvxFF"
+			},
+			"name": "Orc Guard",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=75d23389-7714-43d6-b715-a08bad4fd0d8",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 10
+			},
+			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 16,
+				"dexterity": 15,
+				"intelligence": 8,
+				"strength": 17,
+				"wisdom": 10
+			}
+		},
+		"-NKt3ujmy2tXghwqSM9o": {
+			"challenge": 6,
+			"description": "",
+			"equipment": {
+				"feet": "-NNvLeBtvpWhwHiOrBKJ",
+				"hand1": "-NNwPg099VI_pDe9E_Zd",
+				"hands": "-NNvLkVyFUS4L9Zio2lO"
+			},
+			"name": "Dwarven Hammerguard",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=4e6ac63a-2440-453a-8c38-0600a9afbc14",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NJQ2hml_9m6iHzAfES5", "-NKt0W8prsXi7-54nBVz", "-NJLRtY1B4JdDuOGq2sd"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 19,
+				"dexterity": 9,
+				"intelligence": 11,
+				"strength": 15,
+				"wisdom": 14
+			}
+		},
+		"-NNvOKycvGLGjgkXhAwj": {
+			"challenge": 11,
+			"description": "A black dragon.",
+			"name": "Black Dragon",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=a6feef64-8ebf-47fc-be9f-46e5175cec1f",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 25,
+				"fire": 50,
+				"lighting": 50,
+				"necrotic": 0,
+				"piercing": 25,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 25
+			},
+			"skills": ["-NZMIV5OGOr4bChwrNEE"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 19,
+				"dexterity": 10,
+				"intelligence": 12,
+				"strength": 23,
+				"wisdom": 13
+			}
+		},
+		"-NZMCIuuab0gVQ5bMj6j": {
+			"challenge": 4,
+			"description": "A wolf like creatue.",
+			"name": "Worg",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=f21d1e69-395e-4cde-9a7f-c2ab06e0ae82",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 25
+			},
+			"skills": ["-NJQ2hml_9m6iHzAfES5"],
+			"stats": {
+				"charisma": 7,
+				"constitution": 13,
+				"dexterity": 16,
+				"intelligence": 6,
+				"strength": 11,
+				"wisdom": 4
+			}
+		}
+	},
+	"skills": {
+		"-NJLRtY1B4JdDuOGq2sd": {
+			"class": "warrior",
+			"description": "A powerful weapon swing that deals additional slashing damage.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"damageType": "slashing",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Cleave",
+			"price": 20,
+			"target": "enemy"
+		},
+		"-NJPxBkEam2oJZtHIBgY": {
+			"class": "warrior",
+			"description": "Stand your ground to greatly increase armour but reduce mobility.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": 50
+						},
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 5
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -5
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Stand Ground",
+			"price": 70,
+			"target": "enemy"
+		},
+		"-NJQ2hml_9m6iHzAfES5": {
+			"class": "warrior",
+			"description": "Roar at the enemy to lower their dexterity.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 20,
+			"name": "Intimidating Shout",
+			"price": 50,
+			"target": "enemy"
+		},
+		"-NKt0W8prsXi7-54nBVz": {
+			"class": "warrior",
+			"description": "Crushes the enemies head like a melon.",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 12,
+					"min": 1,
+					"modifier": "strength",
+					"multiplier": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 2,
+					"properties": [
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Melon Crush",
+			"price": 160,
+			"target": "enemy"
+		},
+		"-NKt5eqAEIJYZFNbvK8f": {
+			"class": "rogue",
+			"description": "Slice the enemies throat open causing them to bleed.",
+			"effects": [
+				{
+					"multiplier": 2.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"accuracy": 100,
+					"duration": 5,
+					"effect": "bleed",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Slit Throat",
+			"price": 1300,
+			"target": "enemy"
+		},
+		"-NZMHqP01D8-tN-uBn5s": {
+			"class": "warrior",
+			"description": "Sprint towards the enemy catching them off guard with a chance to stun.",
+			"effects": [
+				{
+					"multiplier": 1.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 1,
+					"effect": "stun",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 1,
+			"name": "Charge",
+			"price": 200,
+			"target": "enemy"
+		},
+		"-NZMIV5OGOr4bChwrNEE": {
+			"class": "warrior",
+			"description": "Force the enemy back, lowering their dexterity.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -6
+						},
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Brutal Advance",
+			"price": 160,
+			"target": "enemy"
+		},
+		"-NZMJ9LGQM22pDRl_EYc": {
+			"class": "warrior",
+			"description": "Leap towards the enemy to land a powerful strike with a chance to drop their defence.",
+			"effects": [
+				{
+					"multiplier": 1.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Lunging Strike",
+			"price": 420,
+			"target": "enemy"
+		},
+		"-NZqTywT0RDubTou99c2": {
+			"class": "warrior",
+			"description": "Become enraged, greatly increasing strength but lowering defenses.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 8
+						},
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 1,
+			"name": "Berserk",
+			"price": 550
+		},
+		"-NZqUWZDeys5x3n8eLNA": {
+			"class": "warrior",
+			"description": "Attack three times in quick succession.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Whirlwind Strike",
+			"price": 1260
+		},
+		"-NZqUxJ5hBOkYc_e-wuG": {
+			"class": "warrior",
+			"description": "Attempt to disarm the enemy.",
+			"effects": [
+				{
+					"accuracy": 75,
+					"duration": 3,
+					"effect": "disarm",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Disarm",
+			"price": 400
+		},
+		"-NZqWi-RbH2vwtAawttY": {
+			"class": "warrior",
+			"description": "Greatly increases chance for a critical strike with rhythmic movement.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 50
+						},
+						{
+							"name": "critChance",
+							"type": "auxiliaryStat",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Dancing Defense",
+			"price": 1090
+		},
+		"-NZqXb0gVgqwcQmz5Kty": {
+			"class": "warrior",
+			"description": "Beat the enemy into submission with a chance to lower physical resistances.",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 20,
+					"min": 10,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -25
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -25
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Tenderise",
+			"price": 1020
+		},
+		"-NZqZdRYK5clYyJxqQKi": {
+			"class": "rogue",
+			"description": "Strike the enemy from above as you leap over them in an attempt to get behind.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 1,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 50
+						},
+						{
+							"name": "critChance",
+							"type": "auxiliaryStat",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 5,
+			"name": "Acrobatic Strike",
+			"price": 90
+		},
+		"-NZq_C6vPLiGUFkYHy3u": {
+			"class": "rogue",
+			"description": "Prepare to attack with great speed.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "critChance",
+							"type": "auxiliaryStat",
+							"value": 25
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 20,
+			"name": "Quick Fingers",
+			"price": 60
+		},
+		"-NZq_nhusxIdvv9LFwJZ": {
+			"class": "rogue",
+			"description": "Coat your weapon in poison to increase poison type damage.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "poison",
+							"type": "damage",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Poison Coat",
+			"price": 260
+		},
+		"-NZqaJ9QZYIpe6P1iDYy": {
+			"class": "rogue",
+			"description": "Fling acid at the enemy to corrode their defense.",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 5,
+			"name": "Acid Burn",
+			"price": 120
+		},
+		"-NZqa_ZuZcAZCuzTr5c3": {
+			"class": "rogue",
+			"description": "Sneak behind the enemy to strike them in the back.",
+			"effects": [
+				{
+					"multiplier": 2,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 1,
+			"name": "Backstab",
+			"price": 350
+		},
+		"-NZqb8JkDlplkchg0htc": {
+			"class": "rogue",
+			"description": "Aim for the opponents eyes with a chance to temporarily blind them.",
+			"effects": [
+				{
+					"accuracy": 75,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": -75
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 5,
+			"name": "Go For The Eyes",
+			"price": 250
+		},
+		"-NZqbgWmfMqnnjnXn-Hp": {
+			"class": "rogue",
+			"description": "Throw a poisoned explosive at the enemy with a chance to poison them.",
+			"effects": [
+				{
+					"damageType": "poison",
+					"max": 14,
+					"min": 7,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"accuracy": 50,
+					"duration": 4,
+					"effect": "poison",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 1,
+			"name": "Poison Bomb",
+			"price": 760
+		},
+		"-NZqc6Kl781JP6QdXB-m": {
+			"class": "rogue",
+			"description": "Corner the opponent reducing their defenses.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -50
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Press The Advantage",
+			"price": 600
+		},
+		"-NZqcxgP5ITgFn-T8xj6": {
+			"class": "rogue",
+			"description": "A flurry of attacks in quick succession.",
+			"effects": [
+				{
+					"multiplier": 0.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 0.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 0.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 0.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Flurry",
+			"price": 550
+		},
+		"-NZqdUiFhyxCULAsWYJl": {
+			"class": "rogue",
+			"description": "Use your cloak to increase elemental resistances.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "lighting",
+							"type": "resistance",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Cloak Of Shadows",
+			"price": 1300
+		},
+		"-NZqdkxMP9wTCz81_T4e": {
+			"class": "rogue",
+			"description": "Trap your enemy to incapacitate them.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 3,
+					"effect": "stun",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Spring The Trap",
+			"price": 1380
+		}
+	},
+	"weapons": {
+		"-NMDekxBlRvJBq18KmM3": {
+			"damageType": "slashing",
+			"description": "A short sword.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMDekxBlRvJBq18KmM3?alt=media&token=3be33c24-8d4e-4a3b-ac2e-f635c5f0f23f",
+			"level": 1,
+			"max": 5,
+			"min": 1,
+			"name": "Short Sword",
+			"price": 60,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-NMmvhpTgBUrely_XRJ7": {
+			"damageType": "slashing",
+			"description": "A long sword",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=ee71ef00-b63a-44c3-9bad-d8209ee75766",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Long Sword",
+			"price": 80,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-NNwMy0q-XKUT-EUvxFF": {
+			"damageType": "slashing",
+			"description": "A dagger.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwMy0q-XKUT-EUvxFF?alt=media&token=b7578304-8b60-498d-89e6-b3cef2341bce",
+			"level": 1,
+			"max": 4,
+			"min": 1,
+			"name": "Dagger",
+			"price": 20,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-NNwPg099VI_pDe9E_Zd": {
+			"damageType": "crushing",
+			"description": "A hammer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwPg099VI_pDe9E_Zd?alt=media&token=15388ed7-514e-4534-9f65-8acb9c181851",
+			"level": 1,
+			"max": 7,
+			"min": 2,
+			"name": "Hammer",
+			"price": 90,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-NNwRG-llD60pf8sSKeM": {
+			"damageType": "slashing",
+			"description": "An evil sword of doom.",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 20,
+					"min": 10,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwRG-llD60pf8sSKeM?alt=media&token=0e1136ad-56ab-466b-9ab8-c4f268c93d6f",
+			"level": 5,
+			"max": 45,
+			"min": 20,
+			"name": "Black Blade of Doom",
+			"price": 300,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 5
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 50
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		}
+	}
+}
