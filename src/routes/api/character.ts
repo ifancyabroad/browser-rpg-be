@@ -34,5 +34,17 @@ characterRouter.put(
 	}),
 );
 
+// @POST '/character'
+// @DEST Retire character
+characterRouter.post(
+	"/retire",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestCharacter, res: Response) => {
+		const characterService = Container.get(CharacterService);
+		const character = await characterService.retireActiveCharacter(req.session);
+		res.json({ character });
+	}),
+);
+
 export { characterRouter };
 export default characterRouter;

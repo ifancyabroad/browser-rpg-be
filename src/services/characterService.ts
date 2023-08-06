@@ -20,7 +20,7 @@ export class CharacterService implements ICharacterService {
 	public async getActiveCharacter(session: Session & Partial<SessionData>) {
 		const { user } = session;
 		try {
-			const characterRecord = await this.characterModel.findOne({ userId: user.id });
+			const characterRecord = await this.characterModel.findOne({ user: user.id, status: Status.Alive });
 			if (characterRecord) {
 				return characterRecord;
 			}
@@ -61,6 +61,25 @@ export class CharacterService implements ICharacterService {
 			return characterRecord;
 		} catch (error) {
 			console.error(`Error createCharacter: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public async retireActiveCharacter(session: Session & Partial<SessionData>) {
+		const { user } = session;
+		try {
+			const characterRecord = await this.characterModel.findOneAndUpdate(
+				{ user: user.id, status: Status.Alive },
+				{ status: Status.Retired },
+				{ new: true },
+			);
+			if (!characterRecord) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No active character found");
+			}
+
+			return characterRecord;
+		} catch (error) {
+			console.error(`Error getActiveCharacter: ${error.message}`);
 			throw error;
 		}
 	}

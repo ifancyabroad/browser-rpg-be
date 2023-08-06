@@ -7,6 +7,7 @@ export enum CharacterClass {
 export enum Status {
 	Alive = "alive",
 	Dead = "dead",
+	Retired = "retired",
 }
 
 export enum State {
