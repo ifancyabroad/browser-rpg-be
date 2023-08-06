@@ -4,7 +4,7 @@ import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { Status } from "src/enums/character";
+import { State, Status } from "src/enums";
 import { GameDataService } from "src/game/services/gameDataService";
 import { GameService } from "src/game/services/gameService";
 
@@ -69,17 +69,17 @@ export class CharacterService implements ICharacterService {
 		const { user } = session;
 		try {
 			const characterRecord = await this.characterModel.findOneAndUpdate(
-				{ user: user.id, status: Status.Alive },
+				{ user: user.id, status: Status.Alive, state: State.Idle },
 				{ status: Status.Retired },
 				{ new: true },
 			);
 			if (!characterRecord) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "No active character found");
+				throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 			}
 
 			return characterRecord;
 		} catch (error) {
-			console.error(`Error getActiveCharacter: ${error.message}`);
+			console.error(`Error retireActiveCharacter: ${error.message}`);
 			throw error;
 		}
 	}

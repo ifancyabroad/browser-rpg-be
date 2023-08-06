@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { CharacterClass, State, Status } from "src/enums/character";
+import { CharacterClass, State, Status } from "src/enums";
 
 const skillSchema = new Schema({
 	skill: {

@@ -1,5 +1,4 @@
 import { Request } from "express";
-import { IsEmail, IsString, MinLength } from "class-validator";
 
 export interface IUser {
 	id: string;

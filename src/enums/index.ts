@@ -14,3 +14,8 @@ export enum State {
 	Idle = "idle",
 	Battle = "battle",
 }
+
+export enum BattleState {
+	Active = "active",
+	Complete = "complete",
+}

@@ -2,6 +2,7 @@ import { Container } from "typedi";
 import { IModelDI } from "src/types/dependencyInjectors";
 import UserModel from "src/models/users";
 import CharacterModel from "src/models/character";
+import BattleModel from "src/models/battle";
 
 const models: IModelDI[] = [
 	{
@@ -11,6 +12,10 @@ const models: IModelDI[] = [
 	{
 		name: "characterModel",
 		model: CharacterModel,
+	},
+	{
+		name: "battleModel",
+		model: BattleModel,
 	},
 ];
 
