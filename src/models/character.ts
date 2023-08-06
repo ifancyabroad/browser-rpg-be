@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
 import { CharacterClass, State, Status } from "src/enums/character";
 
@@ -5,7 +6,7 @@ const skillSchema = new Schema({
 	skill: {
 		type: String,
 	},
-	used: {
+	remaining: {
 		type: Number,
 		min: 0,
 	},
@@ -30,6 +31,10 @@ const historySchema = new Schema({
 
 const characterSchema = new Schema(
 	{
+		user: {
+			type: ObjectId,
+			ref: "User",
+		},
 		name: {
 			type: String,
 			required: [true, "Please enter a name"],
@@ -37,7 +42,7 @@ const characterSchema = new Schema(
 			minLength: 3,
 			maxLength: 10,
 		},
-		class: {
+		characterClass: {
 			type: String,
 			enum: CharacterClass,
 			required: [true, "Please choose a class"],
@@ -56,6 +61,12 @@ const characterSchema = new Schema(
 			type: Number,
 			min: 0,
 			default: 0,
+		},
+		level: {
+			type: Number,
+			min: 1,
+			max: 30,
+			default: 1,
 		},
 		gold: {
 			type: Number,

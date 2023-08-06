@@ -19,7 +19,7 @@ export const expressLoader = async (app: Application) => {
 			secret: config.jwtSecret,
 			cookie: {
 				httpOnly: true,
-				secure: true,
+				secure: false,
 				maxAge: 1000 * 60 * 60 * 7,
 			},
 			resave: false,
