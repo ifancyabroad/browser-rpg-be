@@ -21,21 +21,3 @@ export interface IUserService {
 	loginUser: (userInput: IUserInput) => Promise<any>;
 	registerUser: (userInput: IUserInput) => Promise<any>;
 }
-
-/* Data transfer object */
-export class UserSignupDto {
-	@IsEmail()
-	email: string;
-
-	@IsString()
-	@MinLength(3)
-	password: string;
-}
-
-export class UserSigninDto {
-	@IsEmail()
-	email: string;
-
-	@IsString()
-	password: string;
-}

@@ -36,7 +36,7 @@ export class CharacterService implements ICharacterService {
 		const { name, characterClass } = characterInput;
 		const { user } = session;
 		try {
-			const characters = await this.characterModel.find({ userId: user.id, status: Status.Alive });
+			const characters = await this.characterModel.find({ user: user.id, status: Status.Alive });
 			if (characters.length) {
 				throw createHttpError(httpStatus.BAD_REQUEST, `An active character already exists`);
 			}
@@ -50,7 +50,7 @@ export class CharacterService implements ICharacterService {
 
 			const characterRecord = await this.characterModel.create({
 				user: user.id,
-				name,
+				name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
 				characterClass: classData.skillClass,
 				skills,
 				equipment: classData.equipment,

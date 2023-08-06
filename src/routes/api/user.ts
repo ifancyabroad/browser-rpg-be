@@ -1,10 +1,10 @@
-// External Dependencies
 import { Response, Router } from "express";
 import { middleware } from "src/middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser, UserSigninDto, UserSignupDto } from "src/types/user";
+import { RequestUser } from "src/types/user";
 import { Container } from "typedi";
 import { UserService } from "src/services/userService";
+import { UserSigninDto, UserSignupDto } from "src/validation/user";
 
 const userRouter = Router();
 

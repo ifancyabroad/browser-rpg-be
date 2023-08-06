@@ -4,7 +4,8 @@ import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "src/types/user";
 import { Container } from "typedi";
 import { CharacterService } from "src/services/characterService";
-import { CharacterCreateDto, RequestCharacter } from "src/types/character";
+import { RequestCharacter } from "src/types/character";
+import { CharacterCreateDto } from "src/validation/character";
 
 const characterRouter = Router();
 
