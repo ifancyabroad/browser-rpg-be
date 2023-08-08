@@ -35,7 +35,7 @@ export class BattleService implements IBattleService {
 				user: user.id,
 			});
 
-			return characterRecord;
+			return battleRecord;
 		} catch (error) {
 			console.error(`Error startBattle: ${error.message}`);
 			throw error;
