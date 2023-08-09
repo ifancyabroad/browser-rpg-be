@@ -1,8 +1,8 @@
 import { Container } from "typedi";
 import { IModelDI } from "types/dependencyInjectors";
-import UserModel from "models/users";
-import CharacterModel from "models/character";
-import BattleModel from "models/battle";
+import UserModel from "@models/users";
+import CharacterModel from "@models/character";
+import BattleModel from "@models/battle";
 
 const models: IModelDI[] = [
 	{

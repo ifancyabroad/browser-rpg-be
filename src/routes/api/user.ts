@@ -3,8 +3,8 @@ import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "types/user";
 import { Container } from "typedi";
-import { UserService } from "services/userService";
-import { UserSigninDto, UserSignupDto } from "validation/user";
+import { UserService } from "@services/userService";
+import { UserSigninDto, UserSignupDto } from "@validation/user";
 
 const userRouter = Router();
 

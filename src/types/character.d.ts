@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { CharacterClass, State, Status } from "enums";
+import { CharacterClass, State, Status } from "@enums/index";
 
 export interface ISkill {
 	skill: string;

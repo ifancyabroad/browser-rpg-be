@@ -11,7 +11,19 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"strictPropertyInitialization": false,
-		"baseUrl": "src"
+		"baseUrl": "src",
+		"paths": {
+			"@config/*": ["config/*"],
+			"@data/*": ["data/*"],
+			"@enums/*": ["enums/*"],
+			"@game/*": ["game/*"],
+			"@loaders/*": ["loaders/*"],
+			"@middleware/*": ["middleware/*"],
+			"@models/*": ["models/*"],
+			"@routes/*": ["routes/*"],
+			"@services/*": ["services/*"],
+			"@validation/*": ["validation/*"]
+		}
 	},
 	"include": ["src"]
 }

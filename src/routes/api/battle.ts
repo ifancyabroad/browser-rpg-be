@@ -3,7 +3,7 @@ import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "types/user";
 import { Container } from "typedi";
-import { BattleService } from "services/battleService";
+import { BattleService } from "@services/battleService";
 
 const battleRouter = Router();
 

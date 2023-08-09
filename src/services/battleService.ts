@@ -4,9 +4,9 @@ import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "enums";
-import { GameDataService } from "game/services/gameDataService";
-import { GameService } from "game/services/gameService";
+import { State, Status } from "@enums/index";
+import { GameDataService } from "@game/services/gameDataService";
+import { GameService } from "@game/services/gameService";
 import { IBattle, IBattleService } from "types/battle";
 
 /* Battle service */

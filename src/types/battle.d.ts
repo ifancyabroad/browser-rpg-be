@@ -1,6 +1,6 @@
 import { Session, SessionData } from "express-session";
 import { ICharacter } from "./character";
-import { BattleState } from "enums";
+import { BattleState } from "@enums/index";
 
 export interface IEnemy {}
 
