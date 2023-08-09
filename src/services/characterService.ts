@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import { ICharacter, ICharacterInput, ICharacterService } from "src/types/character";
+import { ICharacter, ICharacterInput, ICharacterService } from "types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "src/enums";
-import { GameDataService } from "src/game/services/gameDataService";
-import { GameService } from "src/game/services/gameService";
+import { State, Status } from "enums";
+import { GameDataService } from "game/services/gameDataService";
+import { GameService } from "game/services/gameService";
 
 /* Character service */
 @Service()

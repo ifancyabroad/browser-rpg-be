@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { BattleState } from "src/enums";
+import { BattleState } from "enums";
 
 const turnSchema = new Schema({});
 

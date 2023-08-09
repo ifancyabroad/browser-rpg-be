@@ -1,6 +1,6 @@
-import { expressLoader } from "src/loaders/express";
+import { expressLoader } from "loaders/express";
 import { Application } from "express";
-import { mongooseLoader } from "src/loaders/mongoose";
+import { mongooseLoader } from "loaders/mongoose";
 import { dependencyInjector } from "./dependencyInjector";
 
 export const loaders = async (app: Application): Promise<void> => {

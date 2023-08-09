@@ -1,6 +1,6 @@
 import { Service } from "typedi";
-import { IGameService } from "src/types/game";
-import { MODIFIERS } from "src/game/constants";
+import { IGameService } from "types/game";
+import { MODIFIERS } from "game/constants";
 
 /* Game service */
 @Service()

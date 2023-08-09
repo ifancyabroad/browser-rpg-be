@@ -1,5 +1,5 @@
 import { Response, NextFunction, RequestHandler } from "express";
-import { RequestUser } from "src/types/user";
+import { RequestUser } from "types/user";
 import httpStatus from "http-status-codes";
 import expressAsyncHandler from "express-async-handler";
 import createError from "http-errors";

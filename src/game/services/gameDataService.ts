@@ -1,6 +1,6 @@
 import { Service } from "typedi";
-import { IGameDataService } from "src/types/gameData";
-import data from "src/data/gameData.json";
+import { IGameDataService } from "types/gameData";
+import data from "data/gameData.json";
 
 /* Game Data service */
 @Service()

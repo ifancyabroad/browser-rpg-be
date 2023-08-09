@@ -7,7 +7,7 @@ import {
 	IsAlpha,
 	IsEnum,
 } from "class-validator";
-import { CharacterClass } from "src/enums";
+import { CharacterClass } from "enums";
 import Filter from "bad-words";
 
 export function IsNotProfane(validationOptions?: ValidationOptions) {

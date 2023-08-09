@@ -1,10 +1,10 @@
 import { Response, Router } from "express";
-import { middleware } from "src/middleware";
+import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "src/types/user";
+import { RequestUser } from "types/user";
 import { Container } from "typedi";
-import { UserService } from "src/services/userService";
-import { UserSigninDto, UserSignupDto } from "src/validation/user";
+import { UserService } from "services/userService";
+import { UserSigninDto, UserSignupDto } from "validation/user";
 
 const userRouter = Router();
 

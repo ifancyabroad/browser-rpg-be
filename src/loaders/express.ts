@@ -1,9 +1,9 @@
 import express, { Application } from "express";
 import cors from "cors";
-import { appRouter } from "src/routes";
-import { config } from "src/config";
+import { appRouter } from "routes";
+import { config } from "config";
 import helmet from "helmet";
-import { middleware } from "src/middleware";
+import { middleware } from "middleware";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 

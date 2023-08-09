@@ -1,9 +1,9 @@
 import { Response, Router } from "express";
-import { middleware } from "src/middleware";
+import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "src/types/user";
+import { RequestUser } from "types/user";
 import { Container } from "typedi";
-import { BattleService } from "src/services/battleService";
+import { BattleService } from "services/battleService";
 
 const battleRouter = Router();
 
