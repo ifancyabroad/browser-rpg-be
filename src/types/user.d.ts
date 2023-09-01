@@ -6,6 +6,12 @@ export interface IUser {
 	password: string;
 }
 
+export interface IToken {
+	user: string;
+	token: string;
+	createdAt: Date;
+}
+
 export interface IUserInput {
 	id?: string;
 	email: string;
@@ -14,6 +20,10 @@ export interface IUserInput {
 
 export interface RequestUser extends Request {
 	user?: IUserInput;
+}
+
+export interface RequestResetPassword extends Request {
+	email: string;
 }
 
 export interface IUserService {

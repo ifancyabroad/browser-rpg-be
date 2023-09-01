@@ -1,15 +1,15 @@
 import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "types/user";
+import { RequestResetPassword, RequestUser } from "types/user";
 import { Container } from "typedi";
 import { UserService } from "@services/userService";
-import { UserSigninDto, UserSignupDto } from "@validation/user";
+import { UserResetPasswordDto, UserSigninDto, UserSignupDto } from "@validation/user";
 
 const userRouter = Router();
 
 // @GET '/auth'
-// @DEST Get user authenticated
+// @DEST Get user
 userRouter.get(
 	"/",
 	middleware.userAuth,
@@ -18,7 +18,7 @@ userRouter.get(
 	}),
 );
 
-// @GET '/auth'
+// @GET '/auth/session'
 // @DEST Get user session
 userRouter.get(
 	"/session",
@@ -28,7 +28,7 @@ userRouter.get(
 	}),
 );
 
-// @POST '/auth'
+// @POST '/auth/login'
 // @DES Login user
 userRouter.post(
 	"/login",
@@ -42,10 +42,38 @@ userRouter.post(
 	}),
 );
 
-// @PUT '/auth/users'
+// @PUT '/auth/register'
 // @DES Register user
 userRouter.put(
 	"/register",
+	middleware.validation(UserSignupDto),
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const userService = Container.get(UserService);
+		const user = await userService.registerUser(req.body);
+		req.session.user = user;
+		req.session.save();
+		res.json({ user });
+	}),
+);
+
+// @POST '/auth/requestResetPassword'
+// @DES Request reset password
+userRouter.post(
+	"/requestResetPassword",
+	middleware.validation(UserResetPasswordDto),
+	expressAsyncHandler(async (req: RequestResetPassword, res: Response) => {
+		const userService = Container.get(UserService);
+		const user = await userService.registerUser(req.body);
+		req.session.user = user;
+		req.session.save();
+		res.json({ user });
+	}),
+);
+
+// @POST '/auth/resetPassword'
+// @DES Reset password
+userRouter.post(
+	"/resetPassword",
 	middleware.validation(UserSignupDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const userService = Container.get(UserService);
