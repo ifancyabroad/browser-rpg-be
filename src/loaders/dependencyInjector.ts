@@ -5,6 +5,7 @@ import CharacterModel from "@models/character";
 import BattleModel from "@models/battle";
 import nodemailer from "nodemailer";
 import { MailerService } from "@services/mailerService";
+import TokenModel from "@models/token";
 
 const models: IModelDI[] = [
 	{
@@ -19,6 +20,10 @@ const models: IModelDI[] = [
 		name: "battleModel",
 		model: BattleModel,
 	},
+	{
+		name: "tokenModel",
+		model: TokenModel,
+	},
 ];
 
 const dependencyInjector = async (): Promise<void> => {
@@ -27,7 +32,7 @@ const dependencyInjector = async (): Promise<void> => {
 			Container.set(m.name, m.model);
 		});
 
-		Container.set("emailClient", nodemailer);
+		Container.set("mailerService", nodemailer);
 		Container.get(MailerService).createConnection();
 	} catch (error) {
 		console.error(`Error on dependency injector loader: ${error}`);

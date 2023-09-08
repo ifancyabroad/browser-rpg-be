@@ -7,7 +7,7 @@ import * as aws from "@aws-sdk/client-ses";
 export class MailerService {
 	private transporter: nodemailer.Transporter;
 
-	constructor(@Inject("emailClient") private emailClient: typeof nodemailer) {}
+	constructor(@Inject("mailerService") private mailerService: typeof nodemailer) {}
 
 	async createConnection() {
 		const ses = new aws.SES({
@@ -19,7 +19,7 @@ export class MailerService {
 			},
 		});
 
-		this.transporter = this.emailClient.createTransport({
+		this.transporter = this.mailerService.createTransport({
 			SES: { ses, aws },
 			sendingRate: 1,
 		});
