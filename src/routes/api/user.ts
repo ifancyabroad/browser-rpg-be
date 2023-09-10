@@ -42,6 +42,22 @@ userRouter.post(
 	}),
 );
 
+// @POST '/auth/logout'
+// @DES Logout user
+userRouter.delete(
+	"/logout",
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		req.session.destroy((err) => {
+			if (err) {
+				console.error(`Error logout: ${err.message}`);
+				throw err;
+			} else {
+				res.json({});
+			}
+		});
+	}),
+);
+
 // @PUT '/auth/register'
 // @DES Register user
 userRouter.put(
