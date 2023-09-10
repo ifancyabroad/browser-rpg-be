@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { CharacterClass, State, Status } from "@enums/index";
+import { State, Status } from "@enums/index";
 
 export interface ISkill {
 	skill: string;
@@ -40,7 +40,7 @@ export interface ICharacter {
 	id: string;
 	user: string;
 	name: string;
-	characterClass: CharacterClass;
+	characterClass: string;
 	status: Status;
 	state: State;
 	experience: number;
@@ -57,7 +57,7 @@ export interface ICharacter {
 export interface ICharacterInput {
 	id?: string;
 	name: string;
-	characterClass: CharacterClass;
+	characterClass: string;
 }
 
 export interface RequestCharacter extends Request {

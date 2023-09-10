@@ -41,7 +41,7 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, `An active character already exists`);
 			}
 
-			const classData = this.gameDataService.getCharacterClassByName(characterClass);
+			const classData = this.gameDataService.getCharacterClassById(characterClass);
 			const hitPoints = this.gameService.getHitPoints(classData.stats.constitution);
 			const skills = classData.skills.map((skill) => ({
 				skill,
@@ -51,7 +51,7 @@ export class CharacterService implements ICharacterService {
 			const characterRecord = await this.characterModel.create({
 				user: user.id,
 				name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
-				characterClass: classData.skillClass,
+				characterClass,
 				skills,
 				equipment: classData.equipment,
 				stats: classData.stats,

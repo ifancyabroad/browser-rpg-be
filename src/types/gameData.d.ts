@@ -1,9 +1,9 @@
 import { GameDataService } from "@game/services/gameDataService";
 
-export type TClass = ReturnType<GameDataService["getCharacterClassByName"]>;
+export type TClass = ReturnType<GameDataService["getCharacterClassById"]>;
 export type TSkill = ReturnType<GameDataService["getSkillById"]>;
 
 export interface IGameDataService {
-	getCharacterClassByName: (name: string) => TClass;
+	getCharacterClassById: (id: string) => TClass;
 	getSkillById: (id: string) => TSkill;
 }

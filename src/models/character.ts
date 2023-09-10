@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { CharacterClass, State, Status } from "@enums/index";
+import { State, Status } from "@enums/index";
 
 const skillSchema = new Schema({
 	skill: {
@@ -44,7 +44,6 @@ const characterSchema = new Schema(
 		},
 		characterClass: {
 			type: String,
-			enum: CharacterClass,
 			required: [true, "Please choose a class"],
 		},
 		status: {

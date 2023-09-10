@@ -20,12 +20,12 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public getCharacterClassByName(name: string) {
+	public getCharacterClassById(id: string) {
 		try {
 			const { classes } = data;
-			const classData = Object.values(classes).find(({ skillClass }) => skillClass === name);
+			const classData = classes[id as keyof typeof classes];
 			if (!classData) {
-				throw new Error(`Class Data not found for ${name}`);
+				throw new Error(`Class Data not found for ${id}`);
 			}
 			return classData;
 		} catch (error) {

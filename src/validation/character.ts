@@ -1,13 +1,4 @@
-import {
-	registerDecorator,
-	ValidationOptions,
-	ValidationArguments,
-	IsString,
-	Length,
-	IsAlpha,
-	IsEnum,
-} from "class-validator";
-import { CharacterClass } from "@enums/index";
+import { registerDecorator, ValidationOptions, ValidationArguments, IsString, Length, IsAlpha } from "class-validator";
 import Filter from "bad-words";
 
 export function IsNotProfane(validationOptions?: ValidationOptions) {
@@ -34,6 +25,6 @@ export class CharacterCreateDto {
 	@IsNotProfane()
 	name: string;
 
-	@IsEnum(CharacterClass)
-	characterClass: CharacterClass;
+	@IsString()
+	characterClass: string;
 }
