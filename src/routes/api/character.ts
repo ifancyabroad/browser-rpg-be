@@ -6,6 +6,7 @@ import { Container } from "typedi";
 import { CharacterService } from "@services/characterService";
 import { RequestCharacter } from "types/character";
 import { CharacterCreateDto } from "@validation/character";
+import { GameDataService } from "@game/services/gameDataService";
 
 const characterRouter = Router();
 
@@ -21,7 +22,7 @@ characterRouter.get(
 	}),
 );
 
-// @PUT '/character'
+// @PUT '/character/create'
 // @DEST Create new character
 characterRouter.put(
 	"/create",
@@ -34,7 +35,7 @@ characterRouter.put(
 	}),
 );
 
-// @POST '/character'
+// @POST '/character/retire'
 // @DEST Retire character
 characterRouter.post(
 	"/retire",
@@ -43,6 +44,18 @@ characterRouter.post(
 		const characterService = Container.get(CharacterService);
 		const character = await characterService.retireActiveCharacter(req.session);
 		res.json({ character });
+	}),
+);
+
+// @GET '/character/classes'
+// @DEST Get available classes for character create
+characterRouter.get(
+	"/classes",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const gameDataService = Container.get(GameDataService);
+		const classes = await gameDataService.getClasses();
+		res.json({ classes });
 	}),
 );
 

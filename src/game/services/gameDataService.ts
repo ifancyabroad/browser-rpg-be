@@ -7,6 +7,19 @@ import data from "@data/gameData.json";
 export class GameDataService implements IGameDataService {
 	constructor() {}
 
+	public getClasses() {
+		try {
+			const { classes } = data;
+			return Object.keys(classes).map((id) => ({
+				...classes[id as keyof typeof classes],
+				id,
+			}));
+		} catch (error) {
+			console.error(`Error getClasses: ${error.message}`);
+			throw error;
+		}
+	}
+
 	public getCharacterClassByName(name: string) {
 		try {
 			const { classes } = data;
