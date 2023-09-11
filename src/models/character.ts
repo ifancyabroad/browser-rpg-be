@@ -1,9 +1,9 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { State, Status } from "@enums/index";
+import { State, Status } from "@utils/enums/index";
 
 const skillSchema = new Schema({
-	skill: {
+	id: {
 		type: String,
 	},
 	remaining: {

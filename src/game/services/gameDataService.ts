@@ -1,6 +1,8 @@
 import { Service } from "typedi";
 import { IGameDataService } from "types/gameData";
 import data from "@data/gameData.json";
+import { mapToArray } from "@utils/helpers";
+import { IEquipment, ISkill } from "types/character";
 
 /* Game Data service */
 @Service()
@@ -10,10 +12,7 @@ export class GameDataService implements IGameDataService {
 	public getClasses() {
 		try {
 			const { classes } = data;
-			return Object.keys(classes).map((id) => ({
-				...classes[id as keyof typeof classes],
-				id,
-			}));
+			return mapToArray(classes);
 		} catch (error) {
 			console.error(`Error getClasses: ${error.message}`);
 			throw error;
@@ -34,6 +33,13 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
+	public populateClass(id: string) {
+		return {
+			id,
+			...this.getCharacterClassById(id),
+		};
+	}
+
 	public getSkillById(id: string) {
 		try {
 			const { skills } = data;
@@ -46,5 +52,35 @@ export class GameDataService implements IGameDataService {
 			console.error(`Error getSkillById: ${error.message}`);
 			throw error;
 		}
+	}
+
+	public populateSkills(skills: ISkill[]) {
+		return skills.map(({ id, remaining }) => ({
+			id,
+			remaining,
+			...this.getSkillById(id),
+		}));
+	}
+
+	public getEquipmentById(id: string) {
+		try {
+			const { armours, weapons } = data;
+			const equipment = Object.assign(armours, weapons);
+			const equipmentData = equipment[id as keyof typeof equipment];
+			if (!equipmentData) {
+				throw new Error(`Equipment Data not found for ${id}`);
+			}
+			return equipmentData;
+		} catch (error) {
+			console.error(`Error getEquipmentById: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public populateEquipment(equipment: IEquipment) {
+		const equipmentArray = Object.entries(equipment).map(([k, v]) =>
+			v ? [k, { id: v, ...this.getEquipmentById(v) }] : [k, v],
+		);
+		return Object.fromEntries(equipmentArray);
 	}
 }

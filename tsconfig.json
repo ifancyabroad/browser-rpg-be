@@ -15,7 +15,7 @@
 		"paths": {
 			"@config/*": ["config/*"],
 			"@data/*": ["data/*"],
-			"@enums/*": ["enums/*"],
+			"@utils/*": ["utils/*"],
 			"@game/*": ["game/*"],
 			"@loaders/*": ["loaders/*"],
 			"@middleware/*": ["middleware/*"],

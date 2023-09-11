@@ -4,7 +4,7 @@ import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "@enums/index";
+import { State, Status } from "@utils/enums/index";
 import { GameDataService } from "@game/services/gameDataService";
 import { GameService } from "@game/services/gameService";
 
@@ -17,12 +17,21 @@ export class CharacterService implements ICharacterService {
 		@Inject() private gameService: GameService,
 	) {}
 
+	private populateCharacter(character: ICharacter) {
+		return {
+			...character,
+			skills: this.gameDataService.populateSkills(character.skills),
+			equipment: this.gameDataService.populateEquipment(character.equipment),
+			characterClass: this.gameDataService.populateClass(character.characterClass),
+		};
+	}
+
 	public async getActiveCharacter(session: Session & Partial<SessionData>) {
 		const { user } = session;
 		try {
 			const characterRecord = await this.characterModel.findOne({ user: user.id, status: Status.Alive });
 			if (characterRecord) {
-				return characterRecord;
+				return this.populateCharacter(characterRecord.toObject());
 			}
 
 			return null;
@@ -58,7 +67,7 @@ export class CharacterService implements ICharacterService {
 				hitPoints,
 			});
 
-			return characterRecord;
+			return this.populateCharacter(characterRecord.toObject());
 		} catch (error) {
 			console.error(`Error createCharacter: ${error.message}`);
 			throw error;
@@ -77,7 +86,7 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 			}
 
-			return characterRecord;
+			return this.populateCharacter(characterRecord.toObject());
 		} catch (error) {
 			console.error(`Error retireActiveCharacter: ${error.message}`);
 			throw error;

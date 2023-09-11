@@ -1,9 +1,9 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "@enums/index";
+import { State, Status } from "@utils/enums/index";
 
 export interface ISkill {
-	skill: string;
+	id: string;
 	remaining: number;
 }
 
