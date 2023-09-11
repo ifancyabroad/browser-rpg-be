@@ -65,6 +65,7 @@ export class CharacterService implements ICharacterService {
 				equipment: classData.equipment,
 				stats: classData.stats,
 				hitPoints,
+				maxHitPoints: hitPoints,
 			});
 
 			return this.populateCharacter(characterRecord.toObject());

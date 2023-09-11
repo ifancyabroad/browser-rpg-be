@@ -130,6 +130,10 @@ const characterSchema = new Schema(
 			type: Number,
 			required: true,
 		},
+		maxHitPoints: {
+			type: Number,
+			required: true,
+		},
 		stats: {
 			strength: {
 				type: Number,

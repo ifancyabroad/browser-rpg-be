@@ -51,6 +51,7 @@ export interface ICharacter {
 	history: IHistory[];
 	equipment: IEquipment;
 	hitPoints: number;
+	maxHitPoints: number;
 	stats: IStats;
 }
 
