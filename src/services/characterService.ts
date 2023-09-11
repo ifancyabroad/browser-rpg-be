@@ -52,9 +52,9 @@ export class CharacterService implements ICharacterService {
 
 			const classData = this.gameDataService.getCharacterClassById(characterClass);
 			const hitPoints = this.gameService.getHitPoints(classData.stats.constitution);
-			const skills = classData.skills.map((skill) => ({
-				skill,
-				remaining: this.gameDataService.getSkillById(skill).maxUses,
+			const skills = classData.skills.map((id) => ({
+				id,
+				remaining: this.gameDataService.getSkillById(id).maxUses,
 			}));
 
 			const characterRecord = await this.characterModel.create({
