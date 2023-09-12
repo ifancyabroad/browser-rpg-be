@@ -1,8 +1,9 @@
 {
 	"armours": {
 		"-NMEwPxI9DXom0AaME0Z": {
-			"defense": 10,
-			"description": "Some leather armour.",
+			"armourType": "medium",
+			"defense": 15,
+			"description": "Simple leather armour.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
 			"level": 1,
 			"name": "Leather Armour",
@@ -10,6 +11,7 @@
 			"type": "armour"
 		},
 		"-NNvLeBtvpWhwHiOrBKJ": {
+			"armourType": "medium",
 			"defense": 5,
 			"description": "Some leather boots.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
@@ -19,6 +21,7 @@
 			"type": "boots"
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
+			"armourType": "medium",
 			"defense": 5,
 			"description": "A pair of leather gloves.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
@@ -28,6 +31,7 @@
 			"type": "gloves"
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
+			"armourType": "medium",
 			"defense": 5,
 			"description": "A leather hood.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
@@ -37,6 +41,7 @@
 			"type": "helmet"
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
+			"armourType": "medium",
 			"defense": 10,
 			"description": "A basic wooden shield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
@@ -46,6 +51,7 @@
 			"type": "shield"
 		},
 		"-NZN-pDbqOJ2N6bjuW-2": {
+			"armourType": "heavy",
 			"defense": 40,
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
@@ -125,20 +131,91 @@
 				}
 			],
 			"type": "armour"
+		},
+		"-Nc44lyRjk-mHNox3H_P": {
+			"armourType": "heavy",
+			"defense": 20,
+			"description": "Simple chain mail armour.",
+			"icon": "",
+			"level": 1,
+			"name": "Chain Mail",
+			"price": 110,
+			"type": "armour"
+		},
+		"-Nc44ulAZW4VDmlUdugz": {
+			"armourType": "heavy",
+			"defense": 10,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Chain Boots",
+			"price": 70,
+			"type": "boots"
+		},
+		"-Nc45CfPFl5WOAOiI-bT": {
+			"armourType": "heavy",
+			"defense": 10,
+			"description": "Simple chain mail gloves.",
+			"icon": "",
+			"level": 1,
+			"name": "Chain Gloves",
+			"price": 70,
+			"type": "gloves"
+		},
+		"-Nc45OA1HAAOs_BCsoag": {
+			"armourType": "heavy",
+			"defense": 10,
+			"description": "Simple chain mail coif.",
+			"icon": "",
+			"level": 1,
+			"name": "Chain Coif",
+			"price": 70,
+			"type": "helmet"
+		},
+		"-Nc45gPIxmy9nc7aorfO": {
+			"armourType": "light",
+			"defense": 5,
+			"description": "A simple robe.",
+			"icon": "",
+			"level": 1,
+			"name": "Robe",
+			"price": 50,
+			"type": "armour"
+		},
+		"-Nc45pVe2gGeYcmq2MIh": {
+			"armourType": "light",
+			"defense": 0,
+			"description": "Simple boots.",
+			"icon": "",
+			"level": 1,
+			"name": "Boots",
+			"price": 10,
+			"type": "boots"
+		},
+		"-Nc45v1m0uZ5VxV0Zco-": {
+			"armourType": "light",
+			"defense": 0,
+			"description": "Simple gloves.",
+			"icon": "",
+			"level": 1,
+			"name": "Gloves",
+			"price": 10,
+			"type": "gloves"
 		}
 	},
 	"classes": {
 		"-N_Ot99GWjYjrv9Gs-fP": {
+			"armourTypes": ["heavy"],
 			"description": "Proud and honorable, specialising in brute strength. Primary stats are strength and constitution.",
 			"equipment": {
-				"body": "-NMEwPxI9DXom0AaME0Z",
-				"feet": "-NNvLeBtvpWhwHiOrBKJ",
+				"body": "-Nc44lyRjk-mHNox3H_P",
+				"feet": "-Nc44ulAZW4VDmlUdugz",
 				"hand1": "-NMmvhpTgBUrely_XRJ7",
-				"hand2": "-NZMqz87pcH6a1OgycJ9"
+				"hands": "-Nc45CfPFl5WOAOiI-bT"
 			},
 			"name": "Fighter",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP?alt=media&token=d5f2ff3c-b47d-44a2-8c86-4c8f4e0d0bfe",
-			"skillClass": "warrior",
+			"skillClasses": ["warrior"],
 			"skills": ["-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 12,
@@ -147,18 +224,21 @@
 				"intelligence": 10,
 				"strength": 18,
 				"wisdom": 9
-			}
+			},
+			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
+			"armourTypes": ["medium"],
 			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
+				"feet": "-NNvLeBtvpWhwHiOrBKJ",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
 				"head": "-NNvLx5iIM_zb3YGnsNC"
 			},
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb?alt=media&token=df7d8777-000e-4118-b1e3-fda257e39d92",
-			"skillClass": "rogue",
+			"skillClasses": ["rogue"],
 			"skills": ["-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
 				"charisma": 17,
@@ -167,17 +247,22 @@
 				"intelligence": 13,
 				"strength": 9,
 				"wisdom": 10
-			}
+			},
+			"weaponTypes": ["dagger", "crossbow"]
 		},
 		"-N_P0pcakZhKbNDftKoc": {
+			"armourTypes": ["light"],
 			"description": "Trained in the arcane arts and proficient with all forms of magic. Primary stat is intelligence.",
 			"equipment": {
-				"body": "-NMEwPxI9DXom0AaME0Z"
+				"body": "-Nc45gPIxmy9nc7aorfO",
+				"feet": "-Nc45pVe2gGeYcmq2MIh",
+				"hand1": "-Nc46CPWJz2atC_uII9i",
+				"hands": "-Nc45v1m0uZ5VxV0Zco-"
 			},
 			"name": "Mage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc?alt=media&token=33fc4e27-40c8-4cf4-b6b6-d0148c3847af",
-			"skillClass": "mage",
-			"skills": ["-NZqaJ9QZYIpe6P1iDYy"],
+			"skillClasses": ["mage"],
+			"skills": ["-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 15,
@@ -185,7 +270,8 @@
 				"intelligence": 18,
 				"strength": 8,
 				"wisdom": 16
-			}
+			},
+			"weaponTypes": ["staff", "dagger"]
 		}
 	},
 	"monsters": {
@@ -1086,6 +1172,379 @@
 			"maxUses": 1,
 			"name": "Spring The Trap",
 			"price": 1380
+		},
+		"-Nc3vvlL3y_va4dkw6_B": {
+			"class": "mage",
+			"description": "Conjure three small projectiles.",
+			"effects": [
+				{
+					"damageType": "piercing",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "piercing",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "piercing",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 15,
+			"name": "Magic Missiles",
+			"price": 60
+		},
+		"-Nc3xGd_-Cawo2Zo0ipP": {
+			"class": "mage",
+			"description": "Dazzle the enemy with a flurry of bright colours.",
+			"effects": [
+				{
+					"accuracy": 50,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				},
+				{
+					"accuracy": 25,
+					"duration": 1,
+					"effect": "stun",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"accuracy": 50,
+					"duration": 3,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Colour Spray",
+			"price": 120
+		},
+		"-Nc3xhpxzM4iz55_jXYj": {
+			"class": "mage",
+			"description": "Conjure a thin layer of physical protection.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 5,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": 30
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 15,
+			"name": "Armour",
+			"price": 90
+		},
+		"-Nc3yE_BOq5Xmhy4LvbI": {
+			"class": "mage",
+			"description": "Harden the skin to greatly increase armour.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 5,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": 60
+						},
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": 25
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 25
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 25
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Iron Skin",
+			"price": 900
+		},
+		"-Nc3yZ_5d4QQI4y90Inu": {
+			"class": "mage",
+			"description": "Deteriorate opponents armour.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Destroy Armour",
+			"price": 280
+		},
+		"-Nc3z5D4In6VQLtKZxrV": {
+			"class": "mage",
+			"description": "Create a shield to protect against elemental attacks.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "lighting",
+							"type": "resistance",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 2,
+			"name": "Resist Elements",
+			"price": 350
+		},
+		"-Nc3zPER2-voArWHwNy9": {
+			"class": "mage",
+			"description": "Conjure a lightning bolt.",
+			"effects": [
+				{
+					"damageType": "lighting",
+					"max": 18,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 5,
+			"name": "Lighting Bolt",
+			"price": 280
+		},
+		"-Nc4-UVARP8jFmsiuXC9": {
+			"class": "mage",
+			"description": "Conjure a ball of fire.",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Fireball",
+			"price": 1000
+		},
+		"-Nc404KHFQ3zZaHpCbe2": {
+			"class": "mage",
+			"description": "Reduce the opponents magic resistance.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 4,
+					"properties": [
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": -50
+						},
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -50
+						},
+						{
+							"name": "lighting",
+							"type": "resistance",
+							"value": -50
+						},
+						{
+							"name": "radiant",
+							"type": "resistance",
+							"value": -25
+						},
+						{
+							"name": "necrotic",
+							"type": "resistance",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 8,
+			"name": "Pierce Magic",
+			"price": 950
+		},
+		"-Nc40XqHNv0vjMrSUhRM": {
+			"class": "mage",
+			"description": "Target the opponent with paralysis to incapacitate them.",
+			"effects": [
+				{
+					"accuracy": 50,
+					"duration": 3,
+					"effect": "stun",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"accuracy": 100,
+					"duration": 5,
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -8
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Paralyze",
+			"price": 1450
+		},
+		"-Nc41TbX58HmCh6nednT": {
+			"class": "mage",
+			"description": "Attempt to fully drain the lifeforce of your enemy by calling death herself.",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 30,
+					"min": 18,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"accuracy": 10,
+					"duration": 1,
+					"properties": [
+						{
+							"name": "hitPoints",
+							"type": "auxiliaryStat",
+							"value": -100
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Finger Of Death",
+			"price": 1550
+		},
+		"-Nc43Ea3uk2s6Flfxpga": {
+			"class": "mage",
+			"description": "Transform into a wild beast increasing combat abilities.",
+			"effects": [
+				{
+					"accuracy": 100,
+					"duration": 5,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 8
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": 8
+						},
+						{
+							"name": "hitPoints",
+							"type": "auxiliaryStat",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 4,
+			"name": "Shapeshift",
+			"price": 1320
 		}
 	},
 	"weapons": {
@@ -1179,6 +1638,19 @@
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "sword"
+		},
+		"-Nc46CPWJz2atC_uII9i": {
+			"damageType": "crushing",
+			"description": "A simple staff.",
+			"icon": "",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Staff",
+			"price": 50,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
 		}
 	}
 }
