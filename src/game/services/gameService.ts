@@ -1,6 +1,7 @@
 import { Service } from "typedi";
 import { IGameService } from "types/game";
 import { MODIFIERS } from "@utils/constants";
+import { ICharacter } from "types/character";
 
 /* Game service */
 @Service()

@@ -49,6 +49,7 @@ export interface ICharacter {
 	day: number;
 	skills: ISkill[];
 	history: IHistory[];
+	availableItems: string[];
 	equipment: IEquipment;
 	hitPoints: number;
 	maxHitPoints: number;

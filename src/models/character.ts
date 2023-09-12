@@ -84,6 +84,10 @@ const characterSchema = new Schema(
 		history: {
 			type: [historySchema],
 		},
+		availableItems: {
+			type: [String],
+			required: true,
+		},
 		equipment: {
 			head: {
 				type: String,

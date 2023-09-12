@@ -22,6 +22,7 @@ export class CharacterService implements ICharacterService {
 			...character,
 			skills: this.gameDataService.populateSkills(character.skills),
 			equipment: this.gameDataService.populateEquipment(character.equipment),
+			availableItems: this.gameDataService.populateAvailableItems(character.availableItems),
 			characterClass: this.gameDataService.populateClass(character.characterClass),
 		};
 	}
@@ -56,6 +57,7 @@ export class CharacterService implements ICharacterService {
 				id,
 				remaining: this.gameDataService.getSkillById(id).maxUses,
 			}));
+			const availableItems = this.gameDataService.getShopItems(characterClass, 1);
 
 			const characterRecord = await this.characterModel.create({
 				user: user.id,
@@ -63,6 +65,7 @@ export class CharacterService implements ICharacterService {
 				characterClass,
 				skills,
 				equipment: classData.equipment,
+				availableItems,
 				stats: classData.stats,
 				hitPoints,
 				maxHitPoints: hitPoints,
