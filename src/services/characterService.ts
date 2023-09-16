@@ -127,8 +127,9 @@ export class CharacterService implements ICharacterService {
 			}
 
 			const { armourTypes, weaponTypes } = this.gameDataService.getCharacterClassById(character.characterClass);
-			const equipmentTypes = [...armourTypes, ...weaponTypes];
-			if (!equipmentTypes.includes(id)) {
+			const validArmourType = "armourType" in itemData && armourTypes.includes(itemData.armourType);
+			const validWeaponType = "weaponType" in itemData && weaponTypes.includes(itemData.weaponType);
+			if (!validArmourType && !validWeaponType) {
 				throw createHttpError(httpStatus.BAD_REQUEST, "Class cannot use this item");
 			}
 
@@ -137,24 +138,18 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "Item cannot be equipped to this slot");
 			}
 
-			const gold = character.gold - itemData.price;
-			const availableItems = character.availableItems.filter((item) => item !== id);
 			const isTwoHandedWeapon = "size" in itemData && itemData.size === WeaponSize.TwoHanded;
 			const offHand = isTwoHandedWeapon ? null : character.equipment.hand2;
-			const equipment: IEquipment = {
+
+			character.gold = character.gold - itemData.price;
+			character.availableItems = character.availableItems.filter((item) => item !== id);
+			character.equipment = {
 				...character.equipment,
 				[EquipmentSlot.Hand2]: offHand,
 				[slot]: id,
 			};
 
-			const characterRecord = await character.updateOne(
-				{
-					gold,
-					availableItems,
-					equipment,
-				},
-				{ new: true },
-			);
+			const characterRecord = await character.save();
 
 			return this.populateCharacter(characterRecord.toObject());
 		} catch (error) {
