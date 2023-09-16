@@ -4,7 +4,7 @@ import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "types/user";
 import { Container } from "typedi";
 import { CharacterService } from "@services/characterService";
-import { RequestCharacter } from "types/character";
+import { RequestCharacter, RequestItem } from "types/character";
 import { CharacterCreateDto } from "@validation/character";
 import { GameDataService } from "@game/services/gameDataService";
 
@@ -56,6 +56,18 @@ characterRouter.get(
 		const gameDataService = Container.get(GameDataService);
 		const classes = await gameDataService.getClasses();
 		res.json({ classes });
+	}),
+);
+
+// @POST '/character/buy'
+// @DEST Get available classes for character create
+characterRouter.post(
+	"/buy",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestItem, res: Response) => {
+		const characterService = Container.get(CharacterService);
+		const character = await characterService.buyItem(req.body, req.session);
+		res.json({ character });
 	}),
 );
 

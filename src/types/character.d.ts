@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "@utils/enums/index";
+import { EquipmentSlot, State, Status } from "@utils/enums/index";
 
 export interface ISkill {
 	id: string;
@@ -24,16 +24,16 @@ export interface IStats {
 }
 
 export interface IEquipment {
-	head: string | null;
-	neck: string | null;
-	body: string | null;
-	waist: string | null;
-	hands: string | null;
-	feet: string | null;
-	finger1: string | null;
-	finger2: string | null;
-	hand1: string | null;
-	hand2: string | null;
+	[EquipmentSlot.Head]: string | null;
+	[EquipmentSlot.Neck]: string | null;
+	[EquipmentSlot.Body]: string | null;
+	[EquipmentSlot.Waist]: string | null;
+	[EquipmentSlot.Hands]: string | null;
+	[EquipmentSlot.Feet]: string | null;
+	[EquipmentSlot.Finger1]: string | null;
+	[EquipmentSlot.Finger2]: string | null;
+	[EquipmentSlot.Hand1]: string | null;
+	[EquipmentSlot.Hand2]: string | null;
 }
 
 export interface ICharacter {
@@ -64,6 +64,15 @@ export interface ICharacterInput {
 
 export interface RequestCharacter extends Request {
 	character?: ICharacterInput;
+}
+
+export interface IBuyItemInput {
+	id: string;
+	slot: EquipmentSlot;
+}
+
+export interface RequestItem extends Request {
+	item: IBuyItemInput;
 }
 
 export interface ICharacterService {

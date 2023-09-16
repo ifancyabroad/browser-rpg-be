@@ -1,3 +1,5 @@
+import { EquipmentSlot, EquipmentType } from "@utils/enums/index";
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],
@@ -62,4 +64,16 @@ export const EQUIPMENT_LEVELS = new Map([
 	[28, 5],
 	[29, 5],
 	[30, 5],
+]);
+
+export const EQUIPMENT_SLOT_TYPE_MAP = new Map([
+	[EquipmentType.Helmet, [EquipmentSlot.Head]],
+	[EquipmentType.Amulet, [EquipmentSlot.Neck]],
+	[EquipmentType.Armour, [EquipmentSlot.Body]],
+	[EquipmentType.Belt, [EquipmentSlot.Waist]],
+	[EquipmentType.Gloves, [EquipmentSlot.Hands]],
+	[EquipmentType.Boots, [EquipmentSlot.Feet]],
+	[EquipmentType.Ring, [EquipmentSlot.Finger1, EquipmentSlot.Finger2]],
+	[EquipmentType.Weapon, [EquipmentSlot.Hand1, EquipmentSlot.Hand2]],
+	[EquipmentType.Shield, [EquipmentSlot.Hand2]],
 ]);

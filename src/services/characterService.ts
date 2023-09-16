@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
-import { ICharacter, ICharacterInput, ICharacterService } from "types/character";
+import { IBuyItemInput, ICharacter, ICharacterInput, ICharacterService, IEquipment } from "types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "@utils/enums/index";
+import { EquipmentSlot, EquipmentType, State, Status, WeaponSize } from "@utils/enums/index";
 import { GameDataService } from "@game/services/gameDataService";
 import { GameService } from "@game/services/gameService";
+import { EQUIPMENT_SLOT_TYPE_MAP } from "@utils/constants";
 
 /* Character service */
 @Service()
@@ -17,7 +18,12 @@ export class CharacterService implements ICharacterService {
 		@Inject() private gameService: GameService,
 	) {}
 
-	private populateCharacter(character: ICharacter) {
+	private populateCharacter(
+		character: ICharacter &
+			mongoose.Document<any, {}, ICharacter> & {
+				_id: mongoose.Types.ObjectId;
+			},
+	) {
 		return {
 			...character,
 			skills: this.gameDataService.populateSkills(character.skills),
@@ -93,6 +99,66 @@ export class CharacterService implements ICharacterService {
 			return this.populateCharacter(characterRecord.toObject());
 		} catch (error) {
 			console.error(`Error retireActiveCharacter: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public async buyItem(item: IBuyItemInput, session: Session & Partial<SessionData>) {
+		const { id, slot } = item;
+		const { user } = session;
+		try {
+			const character = await this.characterModel.findOne({
+				user: user.id,
+				status: Status.Alive,
+				state: State.Idle,
+			});
+			if (!character) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy item");
+			}
+
+			const itemData = this.gameDataService.getEquipmentById(id);
+
+			if (!character.availableItems.includes(id)) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "Item is not available");
+			}
+
+			if (itemData.price > character.gold) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold");
+			}
+
+			const { armourTypes, weaponTypes } = this.gameDataService.getCharacterClassById(character.characterClass);
+			const equipmentTypes = [...armourTypes, ...weaponTypes];
+			if (!equipmentTypes.includes(id)) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "Class cannot use this item");
+			}
+
+			const slotTypes = EQUIPMENT_SLOT_TYPE_MAP.get(itemData.type as EquipmentType);
+			if (!slotTypes.includes(slot)) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "Item cannot be equipped to this slot");
+			}
+
+			const gold = character.gold - itemData.price;
+			const availableItems = character.availableItems.filter((item) => item !== id);
+			const isTwoHandedWeapon = "size" in itemData && itemData.size === WeaponSize.TwoHanded;
+			const offHand = isTwoHandedWeapon ? null : character.equipment.hand2;
+			const equipment: IEquipment = {
+				...character.equipment,
+				[EquipmentSlot.Hand2]: offHand,
+				[slot]: id,
+			};
+
+			const characterRecord = await character.updateOne(
+				{
+					gold,
+					availableItems,
+					equipment,
+				},
+				{ new: true },
+			);
+
+			return this.populateCharacter(characterRecord.toObject());
+		} catch (error) {
+			console.error(`Error buyItem: ${error.message}`);
 			throw error;
 		}
 	}
