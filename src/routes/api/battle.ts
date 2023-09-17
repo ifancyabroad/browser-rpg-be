@@ -7,7 +7,7 @@ import { BattleService } from "@services/battleService";
 
 const battleRouter = Router();
 
-// @POST '/battle'
+// @POST '/battle/start'
 // @DEST Start new battle
 battleRouter.post(
 	"/start",
@@ -15,7 +15,19 @@ battleRouter.post(
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const battleService = Container.get(BattleService);
 		const battle = await battleService.startBattle(req.session);
-		res.json({ battle });
+		res.json(battle);
+	}),
+);
+
+// @GET '/battle'
+// @DEST Get active battle
+battleRouter.get(
+	"/",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const battleService = Container.get(BattleService);
+		const battle = await battleService.getBattle(req.session);
+		res.json(battle);
 	}),
 );
 

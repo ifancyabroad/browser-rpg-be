@@ -1,8 +1,8 @@
 import { Service } from "typedi";
 import { IGameDataService } from "types/gameData";
 import data from "@data/gameData.json";
-import { getMultipleRandom, mapToArray } from "@utils/helpers";
-import { ICharacter, IEquipment, ISkill } from "types/character";
+import { getMultipleRandom, getRandomElement, mapToArray } from "@utils/helpers";
+import { IEquipment, ISkill } from "types/character";
 import { EQUIPMENT_LEVELS } from "@utils/constants";
 
 /* Game Data service */
@@ -115,5 +115,20 @@ export class GameDataService implements IGameDataService {
 			id,
 			...this.getEquipmentById(id),
 		}));
+	}
+
+	public getEnemy(day: number) {
+		try {
+			const { monsters } = data;
+			const minRating = day - 5;
+			const maxRating = day + 5;
+			const enemyPool = mapToArray(monsters).filter(
+				({ challenge }) => challenge >= minRating && challenge <= maxRating,
+			);
+			return getRandomElement(enemyPool);
+		} catch (error) {
+			console.error(`Error getEnemy: ${error.message}`);
+			throw error;
+		}
 	}
 }

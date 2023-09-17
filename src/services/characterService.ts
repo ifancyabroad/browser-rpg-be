@@ -18,7 +18,7 @@ export class CharacterService implements ICharacterService {
 		@Inject() private gameService: GameService,
 	) {}
 
-	private populateCharacter(
+	public populateCharacter(
 		character: ICharacter &
 			mongoose.Document<any, {}, ICharacter> & {
 				_id: mongoose.Types.ObjectId;

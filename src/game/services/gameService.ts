@@ -36,12 +36,16 @@ export class GameService implements IGameService {
 		return MODIFIERS.get(value);
 	}
 
-	public getHitPoints(constitution: number) {
-		const hitPoints = this.d10 + this.getModifier(constitution);
-		if (hitPoints < 1) {
-			return 1;
+	public getHitPoints(constitution: number, level: number = 1) {
+		let hitPoints = this.d10;
+		for (let i = 0; i < level; i++) {
+			hitPoints += this.d10;
 		}
-		return hitPoints;
+
+		const modifierBonus = this.getModifier(constitution) * level;
+		hitPoints += modifierBonus;
+
+		return hitPoints > 0 ? hitPoints : 1;
 	}
 
 	public getRestPrice(day: number) {
