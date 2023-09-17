@@ -40,7 +40,7 @@ characterRouter.put(
 characterRouter.post(
 	"/retire",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestCharacter, res: Response) => {
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const characterService = Container.get(CharacterService);
 		const character = await characterService.retireActiveCharacter(req.session);
 		res.json({ character });
@@ -60,13 +60,25 @@ characterRouter.get(
 );
 
 // @POST '/character/buy'
-// @DEST Get available classes for character create
+// @DEST Buy an item from the shop
 characterRouter.post(
 	"/buy",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestItem, res: Response) => {
 		const characterService = Container.get(CharacterService);
 		const character = await characterService.buyItem(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/rest'
+// @DEST Rest at the tavern
+characterRouter.post(
+	"/rest",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const characterService = Container.get(CharacterService);
+		const character = await characterService.rest(req.session);
 		res.json({ character });
 	}),
 );

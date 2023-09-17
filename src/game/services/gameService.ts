@@ -43,4 +43,8 @@ export class GameService implements IGameService {
 		}
 		return hitPoints;
 	}
+
+	public getRestPrice(day: number) {
+		return day * 100;
+	}
 }

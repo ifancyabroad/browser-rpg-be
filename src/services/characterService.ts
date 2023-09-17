@@ -157,4 +157,39 @@ export class CharacterService implements ICharacterService {
 			throw error;
 		}
 	}
+
+	public async rest(session: Session & Partial<SessionData>) {
+		const { user } = session;
+		try {
+			const character = await this.characterModel.findOne({
+				user: user.id,
+				status: Status.Alive,
+				state: State.Idle,
+			});
+			if (!character) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
+			}
+
+			const price = this.gameService.getRestPrice(character.day);
+			if (price > character.gold) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold");
+			}
+
+			character.gold = character.gold - price;
+			character.day = character.day + 1;
+			character.availableItems = this.gameDataService.getShopItems(character.characterClass, character.level);
+			character.hitPoints = character.maxHitPoints;
+			character.skills.forEach((skill) => {
+				const skillData = this.gameDataService.getSkillById(skill.id);
+				return (skill.remaining = skillData.maxUses);
+			});
+
+			const characterRecord = await character.save();
+
+			return this.populateCharacter(characterRecord.toObject());
+		} catch (error) {
+			console.error(`Error rest: ${error.message}`);
+			throw error;
+		}
+	}
 }
