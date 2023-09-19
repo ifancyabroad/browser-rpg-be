@@ -1,9 +1,10 @@
 import { Service } from "typedi";
-import { IGameDataService } from "types/gameData";
+import { IGameDataService, TEquipment, TWeapon } from "types/gameData";
 import data from "@data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@utils/helpers";
 import { IEquipment, ISkill } from "types/character";
 import { EQUIPMENT_LEVELS } from "@utils/constants";
+import { EquipmentSlot, EquipmentType } from "@utils/enums";
 
 /* Game Data service */
 @Service()
@@ -63,6 +64,34 @@ export class GameDataService implements IGameDataService {
 		}));
 	}
 
+	public getWeaponById(id: string) {
+		try {
+			const { weapons } = data;
+			const weaponData = weapons[id as keyof typeof weapons];
+			if (!weaponData) {
+				throw new Error(`Weapon Data not found for ${id}`);
+			}
+			return weaponData;
+		} catch (error) {
+			console.error(`Error getWeaponById: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public getArmourById(id: string) {
+		try {
+			const { armours } = data;
+			const armourData = armours[id as keyof typeof armours];
+			if (!armourData) {
+				throw new Error(`Armour Data not found for ${id}`);
+			}
+			return armourData;
+		} catch (error) {
+			console.error(`Error getArmourById: ${error.message}`);
+			throw error;
+		}
+	}
+
 	public getEquipmentById(id: string) {
 		try {
 			const { armours, weapons } = data;
@@ -78,11 +107,11 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public populateEquipment(equipment: IEquipment) {
+	public populateEquipment(equipment: Partial<IEquipment>) {
 		const equipmentArray = Object.entries(equipment).map(([k, v]) =>
 			v ? [k, { id: v, ...this.getEquipmentById(v) }] : [k, v],
 		);
-		return Object.fromEntries(equipmentArray);
+		return Object.fromEntries(equipmentArray) as Record<EquipmentSlot, TEquipment>;
 	}
 
 	public getShopItems(classID: string, level: number) {
@@ -130,5 +159,23 @@ export class GameDataService implements IGameDataService {
 			console.error(`Error getEnemy: ${error.message}`);
 			throw error;
 		}
+	}
+
+	public getEquipment(equipment: Partial<IEquipment>) {
+		try {
+			const populatedEquipment = this.populateEquipment(equipment);
+			return mapToArray(populatedEquipment) as TEquipment[];
+		} catch (error) {
+			console.error(`Error getEquipment: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public getEquipmentByType(equipment: Partial<IEquipment>, type: EquipmentType) {
+		return this.getEquipment(equipment).filter((item) => item.type === type);
+	}
+
+	public getWeapons(equipment: Partial<IEquipment>) {
+		return this.getEquipment(equipment).filter((item) => item.type === EquipmentType.Weapon) as TWeapon[];
 	}
 }

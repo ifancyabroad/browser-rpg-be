@@ -4,6 +4,7 @@ import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "types/user";
 import { Container } from "typedi";
 import { BattleService } from "@services/battleService";
+import { RequestAction } from "types/battle";
 
 const battleRouter = Router();
 
@@ -27,6 +28,18 @@ battleRouter.get(
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const battleService = Container.get(BattleService);
 		const battle = await battleService.getBattle(req.session);
+		res.json(battle);
+	}),
+);
+
+// @POST '/battle/action'
+// @DEST Perform an action in active battle
+battleRouter.post(
+	"/action",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestAction, res: Response) => {
+		const battleService = Container.get(BattleService);
+		const battle = await battleService.action(req.body, req.session);
 		res.json(battle);
 	}),
 );

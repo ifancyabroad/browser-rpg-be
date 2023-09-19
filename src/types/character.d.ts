@@ -79,4 +79,6 @@ export interface ICharacterService {
 	getActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
 	retireActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
 	createCharacter: (characterInput: ICharacterInput, session: Session & Partial<SessionData>) => Promise<any>;
+	buyItem: (item: IBuyItemInput, session: Session & Partial<SessionData>) => Promise<any>;
+	rest: (session: Session & Partial<SessionData>) => Promise<any>;
 }

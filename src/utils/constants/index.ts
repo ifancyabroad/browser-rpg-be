@@ -1,4 +1,4 @@
-import { EquipmentSlot, EquipmentType } from "@utils/enums/index";
+import { EquipmentSlot, EquipmentType, Stat, WeaponType } from "@utils/enums/index";
 
 export const MODIFIERS = new Map([
 	[1, -5],
@@ -76,4 +76,17 @@ export const EQUIPMENT_SLOT_TYPE_MAP = new Map([
 	[EquipmentType.Ring, [EquipmentSlot.Finger1, EquipmentSlot.Finger2]],
 	[EquipmentType.Weapon, [EquipmentSlot.Hand1, EquipmentSlot.Hand2]],
 	[EquipmentType.Shield, [EquipmentSlot.Hand2]],
+]);
+
+export const WEAPON_MODIFIER_MAP = new Map([
+	[WeaponType.Axe, Stat.Strength],
+	[WeaponType.Bow, Stat.Dexterity],
+	[WeaponType.Club, Stat.Strength],
+	[WeaponType.Crossbow, Stat.Strength],
+	[WeaponType.Dagger, Stat.Dexterity],
+	[WeaponType.Hammer, Stat.Strength],
+	[WeaponType.Mace, Stat.Strength],
+	[WeaponType.Spear, Stat.Strength],
+	[WeaponType.Staff, Stat.Strength],
+	[WeaponType.Sword, Stat.Strength],
 ]);

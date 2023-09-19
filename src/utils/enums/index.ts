@@ -1,3 +1,17 @@
+export enum EffectType {
+	WeaponDamage = "weaponDamage",
+	Damage = "damage",
+	Heal = "heal",
+	Status = "status",
+	Auxiliary = "auxiliary",
+}
+
+export enum Target {
+	Self = "self",
+	Ally = "ally",
+	Enemy = "enemy",
+}
+
 export enum Status {
 	Alive = "alive",
 	Dead = "dead",
@@ -12,6 +26,28 @@ export enum State {
 export enum BattleState {
 	Active = "active",
 	Complete = "complete",
+}
+
+export enum Stat {
+	Strength = "strength",
+	Dexterity = "dexterity",
+	Constitution = "constitution",
+	Intelligence = "intelligence",
+	Wisdom = "wisdom",
+	Charisma = "charisma",
+}
+
+export enum WeaponType {
+	Axe = "axe",
+	Bow = "bow",
+	Club = "club",
+	Crossbow = "crossbow",
+	Dagger = "dagger",
+	Hammer = "hammer",
+	Mace = "mace",
+	Spear = "spear",
+	Staff = "staff",
+	Sword = "sword",
 }
 
 export enum WeaponSize {
