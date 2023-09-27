@@ -6,7 +6,7 @@ import { Container } from "typedi";
 import { CharacterService } from "@services/characterService";
 import { RequestCharacter, RequestItem } from "types/character";
 import { CharacterCreateDto } from "@validation/character";
-import { GameDataService } from "@game/services/gameDataService";
+import { GameData } from "@game/GameData";
 
 const characterRouter = Router();
 
@@ -53,8 +53,7 @@ characterRouter.get(
 	"/classes",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const gameDataService = Container.get(GameDataService);
-		const classes = await gameDataService.getClasses();
+		const classes = GameData.getClasses();
 		res.json({ classes });
 	}),
 );

@@ -12,6 +12,13 @@ export enum Target {
 	Enemy = "enemy",
 }
 
+export enum AuxiliaryEffect {
+	Poison = "poison",
+	Stun = "stun",
+	Bleed = "bleed",
+	Disarm = "disarm",
+}
+
 export enum Status {
 	Alive = "alive",
 	Dead = "dead",
@@ -35,6 +42,26 @@ export enum Stat {
 	Intelligence = "intelligence",
 	Wisdom = "wisdom",
 	Charisma = "charisma",
+}
+
+export enum AuxiliaryStat {
+	Defence = "defence",
+	HitChance = "hitChance",
+	CritChance = "critChance",
+	HitPoints = "hitPoints",
+}
+
+export enum DamageType {
+	Slashing = "slashing",
+	Crushing = "crushing",
+	Piercing = "piercing",
+	Cold = "cold",
+	Fire = "fire",
+	Lighting = "lighting",
+	Radiant = "radiant",
+	Necrotic = "necrotic",
+	Poison = "poison",
+	Acid = "acid",
 }
 
 export enum WeaponType {
@@ -78,4 +105,17 @@ export enum EquipmentSlot {
 	Feet = "feet",
 	Hand1 = "hand1",
 	Hand2 = "hand2",
+}
+
+export enum PropertyType {
+	Stat = "stat",
+	AuxiliaryStat = "auxiliaryStat",
+	Resistance = "resistance",
+	Damage = "damage",
+}
+
+export enum HitType {
+	Hit = "hit",
+	Crit = "crit",
+	Miss = "miss",
 }

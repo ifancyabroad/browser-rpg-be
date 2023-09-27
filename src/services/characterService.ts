@@ -1,44 +1,25 @@
 import mongoose from "mongoose";
-import { IBuyItemInput, ICharacter, ICharacterInput, ICharacterService, IEquipment } from "types/character";
+import { IBuyItemInput, ICharacter, ICharacterInput, ICharacterService } from "types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { EquipmentSlot, EquipmentType, State, Status, WeaponSize } from "@utils/enums/index";
-import { GameDataService } from "@game/services/gameDataService";
-import { GameService } from "@game/services/gameService";
-import { EQUIPMENT_SLOT_TYPE_MAP } from "@utils/constants";
+import { State, Status } from "@utils/enums/index";
+import { GameData } from "@game/GameData";
+import { Hero } from "@game/Hero";
+import { Game } from "@game/Game";
 
 /* Character service */
 @Service()
 export class CharacterService implements ICharacterService {
-	constructor(
-		@Inject("characterModel") private characterModel: mongoose.Model<ICharacter & mongoose.Document>,
-		@Inject() private gameDataService: GameDataService,
-		@Inject() private gameService: GameService,
-	) {}
-
-	public populateCharacter(
-		character: ICharacter &
-			mongoose.Document<any, {}, ICharacter> & {
-				_id: mongoose.Types.ObjectId;
-			},
-	) {
-		return {
-			...character,
-			skills: this.gameDataService.populateSkills(character.skills),
-			equipment: this.gameDataService.populateEquipment(character.equipment),
-			availableItems: this.gameDataService.populateAvailableItems(character.availableItems),
-			characterClass: this.gameDataService.populateClass(character.characterClass),
-		};
-	}
+	constructor(@Inject("characterModel") private characterModel: mongoose.Model<ICharacter & mongoose.Document>) {}
 
 	public async getActiveCharacter(session: Session & Partial<SessionData>) {
 		const { user } = session;
 		try {
 			const characterRecord = await this.characterModel.findOne({ user: user.id, status: Status.Alive });
 			if (characterRecord) {
-				return this.populateCharacter(characterRecord.toObject());
+				return new Hero(characterRecord.toObject()).characterJSON;
 			}
 
 			return null;
@@ -57,13 +38,13 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, `An active character already exists`);
 			}
 
-			const classData = this.gameDataService.getCharacterClassById(characterClass);
-			const hitPoints = this.gameService.getHitPoints(classData.stats.constitution);
+			const classData = GameData.getCharacterClassById(characterClass);
+			const hitPoints = Game.getHitPoints(classData.stats.constitution);
 			const skills = classData.skills.map((id) => ({
 				id,
-				remaining: this.gameDataService.getSkillById(id).maxUses,
+				remaining: GameData.getSkillById(id).maxUses,
 			}));
-			const availableItems = this.gameDataService.getShopItems(characterClass, 1);
+			const availableItems = GameData.getShopItems(characterClass, 1);
 
 			const characterRecord = await this.characterModel.create({
 				user: user.id,
@@ -77,7 +58,7 @@ export class CharacterService implements ICharacterService {
 				maxHitPoints: hitPoints,
 			});
 
-			return this.populateCharacter(characterRecord.toObject());
+			return new Hero(characterRecord.toObject()).characterJSON;
 		} catch (error) {
 			console.error(`Error createCharacter: ${error.message}`);
 			throw error;
@@ -96,7 +77,7 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 			}
 
-			return this.populateCharacter(characterRecord.toObject());
+			return new Hero(characterRecord.toObject()).characterJSON;
 		} catch (error) {
 			console.error(`Error retireActiveCharacter: ${error.message}`);
 			throw error;
@@ -116,42 +97,11 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy item");
 			}
 
-			const itemData = this.gameDataService.getEquipmentById(id);
+			const hero = new Hero(character.toObject());
+			hero.buyItem(id, slot);
+			await character.updateOne({ $set: hero.data }, { new: true });
 
-			if (!character.availableItems.includes(id)) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "Item is not available");
-			}
-
-			if (itemData.price > character.gold) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold");
-			}
-
-			const { armourTypes, weaponTypes } = this.gameDataService.getCharacterClassById(character.characterClass);
-			const validArmourType = "armourType" in itemData && armourTypes.includes(itemData.armourType);
-			const validWeaponType = "weaponType" in itemData && weaponTypes.includes(itemData.weaponType);
-			if (!validArmourType && !validWeaponType) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "Class cannot use this item");
-			}
-
-			const slotTypes = EQUIPMENT_SLOT_TYPE_MAP.get(itemData.type as EquipmentType);
-			if (!slotTypes.includes(slot)) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "Item cannot be equipped to this slot");
-			}
-
-			const isTwoHandedWeapon = "size" in itemData && itemData.size === WeaponSize.TwoHanded;
-			const offHand = isTwoHandedWeapon ? null : character.equipment.hand2;
-
-			character.gold = character.gold - itemData.price;
-			character.availableItems = character.availableItems.filter((item) => item !== id);
-			character.equipment = {
-				...character.equipment,
-				[EquipmentSlot.Hand2]: offHand,
-				[slot]: id,
-			};
-
-			const characterRecord = await character.save();
-
-			return this.populateCharacter(characterRecord.toObject());
+			return hero.characterJSON;
 		} catch (error) {
 			console.error(`Error buyItem: ${error.message}`);
 			throw error;
@@ -170,23 +120,11 @@ export class CharacterService implements ICharacterService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
 			}
 
-			const price = this.gameService.getRestPrice(character.day);
-			if (price > character.gold) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold");
-			}
+			const hero = new Hero(character.toObject());
+			hero.rest();
+			await character.updateOne({ $set: hero.data }, { new: true });
 
-			character.gold = character.gold - price;
-			character.day = character.day + 1;
-			character.availableItems = this.gameDataService.getShopItems(character.characterClass, character.level);
-			character.hitPoints = character.maxHitPoints;
-			character.skills.forEach((skill) => {
-				const skillData = this.gameDataService.getSkillById(skill.id);
-				return (skill.remaining = skillData.maxUses);
-			});
-
-			const characterRecord = await character.save();
-
-			return this.populateCharacter(characterRecord.toObject());
+			return hero.characterJSON;
 		} catch (error) {
 			console.error(`Error rest: ${error.message}`);
 			throw error;

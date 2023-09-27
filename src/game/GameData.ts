@@ -1,17 +1,12 @@
-import { Service } from "typedi";
-import { IGameDataService, TEquipment, TWeapon } from "types/gameData";
+import { TEquipment, TWeapon } from "types/gameData";
 import data from "@data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@utils/helpers";
 import { IEquipment, ISkill } from "types/character";
 import { EQUIPMENT_LEVELS } from "@utils/constants";
 import { EquipmentSlot, EquipmentType } from "@utils/enums";
 
-/* Game Data service */
-@Service()
-export class GameDataService implements IGameDataService {
-	constructor() {}
-
-	public getClasses() {
+export class GameData {
+	public static getClasses() {
 		try {
 			const { classes } = data;
 			return mapToArray(classes);
@@ -21,7 +16,7 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public getCharacterClassById(id: string) {
+	public static getCharacterClassById(id: string) {
 		try {
 			const { classes } = data;
 			const classData = classes[id as keyof typeof classes];
@@ -35,14 +30,14 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public populateClass(id: string) {
+	public static populateClass(id: string) {
 		return {
 			id,
 			...this.getCharacterClassById(id),
 		};
 	}
 
-	public getSkillById(id: string) {
+	public static getSkillById(id: string) {
 		try {
 			const { skills } = data;
 			const skillData = skills[id as keyof typeof skills];
@@ -56,7 +51,7 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public populateSkills(skills: ISkill[]) {
+	public static populateSkills(skills: ISkill[]) {
 		return skills.map(({ id, remaining }) => ({
 			id,
 			remaining,
@@ -64,7 +59,7 @@ export class GameDataService implements IGameDataService {
 		}));
 	}
 
-	public getWeaponById(id: string) {
+	public static getWeaponById(id: string) {
 		try {
 			const { weapons } = data;
 			const weaponData = weapons[id as keyof typeof weapons];
@@ -78,7 +73,7 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public getArmourById(id: string) {
+	public static getArmourById(id: string) {
 		try {
 			const { armours } = data;
 			const armourData = armours[id as keyof typeof armours];
@@ -92,7 +87,7 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public getEquipmentById(id: string) {
+	public static getEquipmentById(id: string) {
 		try {
 			const { armours, weapons } = data;
 			const equipment = Object.assign(armours, weapons);
@@ -107,14 +102,14 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public populateEquipment(equipment: Partial<IEquipment>) {
+	public static populateEquipment(equipment: Partial<IEquipment>) {
 		const equipmentArray = Object.entries(equipment).map(([k, v]) =>
 			v ? [k, { id: v, ...this.getEquipmentById(v) }] : [k, v],
 		);
 		return Object.fromEntries(equipmentArray) as Record<EquipmentSlot, TEquipment>;
 	}
 
-	public getShopItems(classID: string, level: number) {
+	public static getShopItems(classID: string, level: number) {
 		try {
 			const { armours, weapons } = data;
 			const characterClass = this.getCharacterClassById(classID);
@@ -139,14 +134,14 @@ export class GameDataService implements IGameDataService {
 		}
 	}
 
-	public populateAvailableItems(items: string[]) {
+	public static populateAvailableItems(items: string[]) {
 		return items.map((id) => ({
 			id,
 			...this.getEquipmentById(id),
 		}));
 	}
 
-	public getEnemy(day: number) {
+	public static getEnemy(day: number) {
 		try {
 			const { monsters } = data;
 			const minRating = day - 5;
@@ -159,23 +154,5 @@ export class GameDataService implements IGameDataService {
 			console.error(`Error getEnemy: ${error.message}`);
 			throw error;
 		}
-	}
-
-	public getEquipment(equipment: Partial<IEquipment>) {
-		try {
-			const populatedEquipment = this.populateEquipment(equipment);
-			return mapToArray(populatedEquipment) as TEquipment[];
-		} catch (error) {
-			console.error(`Error getEquipment: ${error.message}`);
-			throw error;
-		}
-	}
-
-	public getEquipmentByType(equipment: Partial<IEquipment>, type: EquipmentType) {
-		return this.getEquipment(equipment).filter((item) => item.type === type);
-	}
-
-	public getWeapons(equipment: Partial<IEquipment>) {
-		return this.getEquipment(equipment).filter((item) => item.type === EquipmentType.Weapon) as TWeapon[];
 	}
 }

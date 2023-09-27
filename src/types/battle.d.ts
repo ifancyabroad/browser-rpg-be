@@ -1,6 +1,6 @@
 import { Session, SessionData } from "express-session";
 import { ICharacter, IEquipment, ISkill, IStats } from "./character";
-import { BattleState, Status } from "@utils/enums/index";
+import { BattleState, HitType, Status, Target } from "@utils/enums/index";
 import { Request } from "express";
 
 export interface IResistances {
@@ -33,6 +33,21 @@ export interface IEnemy {
 export interface IDamage {
 	type: string;
 	value: number;
+	hitType: HitType;
+	target: Target;
+}
+
+export interface IHeal {
+	value: number;
+	target: Target;
+}
+
+export interface IAction {
+	weaponDamage: IDamage[][];
+	damage: IDamage[];
+	heal: IHeal[];
+	status: any[];
+	auxiliary: any[];
 }
 
 export interface ITurn {}
