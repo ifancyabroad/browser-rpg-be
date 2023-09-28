@@ -1,33 +1,10 @@
 import { Session, SessionData } from "express-session";
-import { ICharacter, IEquipment, ISkill, IStats } from "./character";
-import { BattleState, HitType, Status, Target } from "@utils/enums/index";
+import { ICharacter, IHero } from "./character";
+import { BattleState, HitType, Target } from "@utils/enums/index";
 import { Request } from "express";
 
-export interface IResistances {
-	slashing: number;
-	crushing: number;
-	piercing: number;
-	cold: number;
-	fire: number;
-	lighting: number;
-	radiant: number;
-	necrotic: number;
-	poison: number;
-	acid: number;
-}
-
-export interface IEnemy {
-	id: string;
-	name: string;
+export interface IEnemy extends ICharacter {
 	image: string;
-	status: Status;
-	level: number;
-	skills: ISkill[];
-	equipment: IEquipment;
-	hitPoints: number;
-	maxHitPoints: number;
-	stats: IStats;
-	resistances: IResistances;
 }
 
 export interface IDamage {
@@ -50,14 +27,12 @@ export interface IAction {
 	auxiliary: any[];
 }
 
-export interface ITurn {}
-
 export interface IBattle {
 	id: string;
 	user: string;
-	character: ICharacter;
+	character: IHero;
 	enemy: IEnemy;
-	turns: ITurn[];
+	turns: IAction[][];
 	state: BattleState;
 }
 

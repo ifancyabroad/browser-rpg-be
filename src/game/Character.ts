@@ -1,32 +1,58 @@
 import { ICharacter } from "types/character";
-import { DamageType, EffectType, EquipmentType, HitType, Stat, WeaponType } from "@utils/enums/index";
+import {
+	DamageType,
+	EffectType,
+	EquipmentType,
+	HitType,
+	PropertyType,
+	Stat,
+	Status,
+	Target,
+	WeaponType,
+} from "@utils/enums/index";
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { mapToArray } from "@utils/helpers";
 import { TEquipment, TWeapon } from "types/gameData";
-import { IAction } from "types/battle";
+import { IAction, IDamage, IHeal } from "types/battle";
 import { IDamageEffect, IHealEffect, IWeaponDamageEffect } from "types/effect";
 
 export class Character {
 	constructor(public data: ICharacter) {}
 
-	private getEquipmentBonus(type: string) {
+	private getEquipmentBonus(type: PropertyType, name: string) {
 		return mapToArray(this.equipmentAsArray)
 			.flatMap((item) => "properties" in item && item.properties)
-			.filter((item) => item.name === type)
+			.filter((property) => property.type === type && property.name === name)
 			.reduce((n, { value }) => n + value, 0);
 	}
 
-	private getAciveEffectBonus(type: string) {
+	private getAciveEffectBonus(type: string, name: string) {
 		return 0;
 	}
 
 	private getAttribute(stat: Stat) {
-		return this.data.stats[stat] + this.getEquipmentBonus(stat) + this.getAciveEffectBonus(stat);
+		return (
+			this.data.stats[stat] +
+			this.getEquipmentBonus(PropertyType.Stat, stat) +
+			this.getAciveEffectBonus(PropertyType.Stat, stat)
+		);
 	}
 
 	private getDamageBonus(type: DamageType) {
-		return this.getEquipmentBonus(type) + this.getAciveEffectBonus(type);
+		return this.getEquipmentBonus(PropertyType.Damage, type) + this.getAciveEffectBonus(PropertyType.Damage, type);
+	}
+
+	private getResistance(type: DamageType) {
+		return (
+			this.data.resistances[type] +
+			this.getEquipmentBonus(PropertyType.Resistance, type) +
+			this.getAciveEffectBonus(PropertyType.Resistance, type)
+		);
+	}
+
+	public get alive() {
+		return this.data.hitPoints > 0;
 	}
 
 	public get skills() {
@@ -35,14 +61,6 @@ export class Character {
 
 	public get equipment() {
 		return GameData.populateEquipment(this.data.equipment);
-	}
-
-	public get availableItems() {
-		return GameData.populateAvailableItems(this.data.availableItems);
-	}
-
-	public get characterClass() {
-		return GameData.populateClass(this.data.characterClass);
 	}
 
 	public get equipmentAsArray() {
@@ -89,7 +107,7 @@ export class Character {
 		};
 	}
 
-	public handleWeaponDamage(effect: IWeaponDamageEffect) {
+	public getWeaponsDamage(effect: IWeaponDamageEffect) {
 		return this.weaponsAsArray.map((weapon) => {
 			return this.getWeaponDamage(weapon, effect);
 		});
@@ -106,20 +124,12 @@ export class Character {
 		};
 	}
 
-	public handleDamage(effect: IDamageEffect) {
-		return this.getDamage(effect);
-	}
-
 	private getHeal(effect: IHealEffect) {
 		const heal = Game.dx(effect.min, effect.max);
 		return {
 			target: effect.target,
 			value: heal,
 		};
-	}
-
-	public handleHeal(effect: IHealEffect) {
-		return this.getHeal(effect);
 	}
 
 	public createAction(id: string) {
@@ -144,13 +154,13 @@ export class Character {
 		skill.effects.forEach((effect) => {
 			switch (effect.type) {
 				case EffectType.WeaponDamage:
-					action.weaponDamage.push(this.handleWeaponDamage(effect as IWeaponDamageEffect));
+					action.weaponDamage.push(this.getWeaponsDamage(effect as IWeaponDamageEffect));
 					break;
 				case EffectType.Damage:
-					action.damage.push(this.handleDamage(effect as IDamageEffect));
+					action.damage.push(this.getDamage(effect as IDamageEffect));
 					break;
 				case EffectType.Heal:
-					action.heal.push(this.handleHeal(effect as IHealEffect));
+					action.heal.push(this.getHeal(effect as IHealEffect));
 					break;
 				case EffectType.Status:
 					break;
@@ -159,6 +169,41 @@ export class Character {
 			}
 		});
 
+		return action;
+	}
+
+	public handleDamage(damage: IDamage) {
+		const resistance = this.getResistance(damage.type as DamageType) / 100;
+		let value = damage.value * (1 - resistance);
+		if (damage.hitType === HitType.Crit) {
+			value *= 2;
+			this.data.hitPoints -= value;
+		}
+		if (damage.hitType === HitType.Hit) {
+			this.data.hitPoints -= value;
+		}
+		if (!this.alive) {
+			this.data.status = Status.Dead;
+		}
+		return { ...damage, value };
+	}
+
+	public handleHeal(heal: IHeal) {
+		const hitPoints = this.data.hitPoints + heal.value;
+		if (hitPoints > this.data.maxHitPoints) {
+			this.data.hitPoints = this.data.maxHitPoints;
+		} else {
+			this.data.hitPoints = hitPoints;
+		}
+		return heal;
+	}
+
+	public handleAction(action: IAction, target: Target) {
+		action.weaponDamage = action.weaponDamage.map((effects) => {
+			return effects.filter((effect) => effect.target === target).map(this.handleDamage);
+		});
+		action.damage = action.damage.filter((effect) => effect.target === target).map(this.handleDamage);
+		action.heal = action.heal.filter((effect) => effect.target === target).map(this.handleHeal);
 		return action;
 	}
 }

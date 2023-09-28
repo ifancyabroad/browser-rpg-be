@@ -1,16 +1,12 @@
-import { ICharacter } from "types/character";
+import { IHero } from "types/character";
 import { Character } from "@game/Character";
 import { GameData } from "@game/GameData";
 import { EquipmentSlot, EquipmentType, WeaponSize } from "@utils/enums";
 import { EQUIPMENT_SLOT_TYPE_MAP } from "@utils/constants";
 
 export class Hero extends Character {
-	constructor(public data: ICharacter) {
+	constructor(public data: IHero) {
 		super(data);
-	}
-
-	public get restPrice() {
-		return this.data.day * 100;
 	}
 
 	public get characterJSON() {
@@ -21,6 +17,18 @@ export class Hero extends Character {
 			availableItems: this.availableItems,
 			characterClass: this.characterClass,
 		};
+	}
+
+	public get availableItems() {
+		return GameData.populateAvailableItems(this.data.availableItems);
+	}
+
+	public get characterClass() {
+		return GameData.populateClass(this.data.characterClass);
+	}
+
+	public get restPrice() {
+		return this.data.day * 100;
 	}
 
 	public rest() {

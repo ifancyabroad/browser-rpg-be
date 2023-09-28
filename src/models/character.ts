@@ -176,6 +176,68 @@ const characterSchema = new Schema(
 				required: true,
 			},
 		},
+		resistances: {
+			slashing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			crushing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			piercing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			cold: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			fire: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			lightning: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			radiant: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			necrotic: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			poison: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			acid: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+		},
 	},
 	{ timestamps: true },
 );

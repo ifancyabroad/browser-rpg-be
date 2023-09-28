@@ -23,6 +23,19 @@ export interface IStats {
 	charisma: number;
 }
 
+export interface IResistances {
+	slashing: number;
+	crushing: number;
+	piercing: number;
+	cold: number;
+	fire: number;
+	lighting: number;
+	radiant: number;
+	necrotic: number;
+	poison: number;
+	acid: number;
+}
+
 export interface IEquipment {
 	[EquipmentSlot.Head]: string | null;
 	[EquipmentSlot.Neck]: string | null;
@@ -38,22 +51,26 @@ export interface IEquipment {
 
 export interface ICharacter {
 	id: string;
-	user: string;
 	name: string;
-	characterClass: string;
 	status: Status;
-	state: State;
-	experience: number;
 	level: number;
-	gold: number;
-	day: number;
 	skills: ISkill[];
-	history: IHistory[];
-	availableItems: string[];
 	equipment: IEquipment;
 	hitPoints: number;
 	maxHitPoints: number;
 	stats: IStats;
+	resistances: IResistances;
+}
+
+export interface IHero extends ICharacter {
+	user: string;
+	characterClass: string;
+	state: State;
+	experience: number;
+	gold: number;
+	day: number;
+	history: IHistory[];
+	availableItems: string[];
 }
 
 export interface ICharacterInput {
@@ -79,6 +96,4 @@ export interface ICharacterService {
 	getActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
 	retireActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
 	createCharacter: (characterInput: ICharacterInput, session: Session & Partial<SessionData>) => Promise<any>;
-	buyItem: (item: IBuyItemInput, session: Session & Partial<SessionData>) => Promise<any>;
-	rest: (session: Session & Partial<SessionData>) => Promise<any>;
 }

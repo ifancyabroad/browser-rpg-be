@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IBuyItemInput, ICharacter, ICharacterInput, ICharacterService } from "types/character";
+import { IBuyItemInput, ICharacterInput, ICharacterService, IHero } from "types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
@@ -12,7 +12,7 @@ import { Game } from "@game/Game";
 /* Character service */
 @Service()
 export class CharacterService implements ICharacterService {
-	constructor(@Inject("characterModel") private characterModel: mongoose.Model<ICharacter & mongoose.Document>) {}
+	constructor(@Inject("characterModel") private characterModel: mongoose.Model<IHero & mongoose.Document>) {}
 
 	public async getActiveCharacter(session: Session & Partial<SessionData>) {
 		const { user } = session;
