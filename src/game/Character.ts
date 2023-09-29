@@ -94,6 +94,18 @@ export class Character {
 		}
 	}
 
+	private getUnarmedDamage(effect: IWeaponDamageEffect) {
+		const damage = Game.dx(1, 4);
+		const modifier = Game.getModifier(this.stats.strength);
+		const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
+		return {
+			target: effect.target,
+			type: DamageType.Crushing,
+			value: (damage + modifier) * effect.multiplier * bonusMultiplier,
+			hitType: this.hitType,
+		};
+	}
+
 	private getWeaponDamage(weapon: TWeapon, effect: IWeaponDamageEffect) {
 		const damage = Game.dx(weapon.min, weapon.max);
 		const stat = Game.getWeaponStat(weapon.type as WeaponType);
@@ -108,9 +120,12 @@ export class Character {
 	}
 
 	public getWeaponsDamage(effect: IWeaponDamageEffect) {
-		return this.weaponsAsArray.map((weapon) => {
-			return this.getWeaponDamage(weapon, effect);
-		});
+		if (this.weaponsAsArray.length > 0) {
+			return this.weaponsAsArray.map((weapon) => {
+				return this.getWeaponDamage(weapon, effect);
+			});
+		}
+		return [this.getUnarmedDamage(effect)];
 	}
 
 	private getDamage(effect: IDamageEffect) {
