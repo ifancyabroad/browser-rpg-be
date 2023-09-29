@@ -216,7 +216,7 @@
 			"name": "Fighter",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP?alt=media&token=d5f2ff3c-b47d-44a2-8c86-4c8f4e0d0bfe",
 			"skillClasses": ["warrior"],
-			"skills": ["-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 16,
@@ -239,7 +239,7 @@
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb?alt=media&token=df7d8777-000e-4118-b1e3-fda257e39d92",
 			"skillClasses": ["rogue"],
-			"skills": ["-NZq_C6vPLiGUFkYHy3u"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
 				"charisma": 17,
 				"constitution": 13,
@@ -262,7 +262,7 @@
 			"name": "Mage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc?alt=media&token=33fc4e27-40c8-4cf4-b6b6-d0148c3847af",
 			"skillClasses": ["mage"],
-			"skills": ["-Nc3vvlL3y_va4dkw6_B"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 15,
@@ -296,7 +296,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NKt5eqAEIJYZFNbvK8f", "-NZqa_ZuZcAZCuzTr5c3", "-NZq_C6vPLiGUFkYHy3u"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 7,
@@ -326,7 +326,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 2,
 				"constitution": 8,
@@ -353,7 +353,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -386,7 +386,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 15,
@@ -416,7 +416,7 @@
 				"radiant": 0,
 				"slashing": 10
 			},
-			"skills": ["-NJLRtY1B4JdDuOGq2sd", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJPxBkEam2oJZtHIBgY"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -448,7 +448,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NJQ2hml_9m6iHzAfES5", "-NKt0W8prsXi7-54nBVz", "-NJLRtY1B4JdDuOGq2sd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 19,
@@ -475,7 +475,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NZMIV5OGOr4bChwrNEE"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 19,
@@ -502,7 +502,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 13,
@@ -1545,6 +1545,22 @@
 			"maxUses": 4,
 			"name": "Shapeshift",
 			"price": 1320
+		},
+		"-NfROP8bobODCeEQFrpd": {
+			"class": "common",
+			"description": "A basic weapon attack.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 0,
+			"maxUses": 0,
+			"name": "Attack",
+			"price": 0
 		}
 	},
 	"weapons": {
