@@ -106,15 +106,15 @@ export class BattleService implements IBattleService {
 		}
 	}
 
-	private handleAction(first: Character, second: Character, id: string) {
-		const firstAction = first.createAction(id);
+	private handleAction(first: Character, second: Character, firstSkill: string, secondSkill: string) {
+		const firstAction = first.createAction(firstSkill);
 		const firstActionSelf = first.handleAction(firstAction, Target.Self);
 		const firstActionFinal = second.handleAction(firstActionSelf, Target.Enemy);
 
 		if (first.alive && second.alive) {
-			const secondAction = first.createAction(id);
-			const secondActionSelf = first.handleAction(secondAction, Target.Self);
-			const secondActionFinal = second.handleAction(secondActionSelf, Target.Enemy);
+			const secondAction = second.createAction(secondSkill);
+			const secondActionSelf = second.handleAction(secondAction, Target.Self);
+			const secondActionFinal = first.handleAction(secondActionSelf, Target.Enemy);
 			return [firstActionFinal, secondActionFinal];
 		}
 
@@ -134,31 +134,30 @@ export class BattleService implements IBattleService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
 			}
 
-			const battle = await this.battleModel.findOne({
+			const battleRecord = await this.battleModel.findOne({
 				character: characterRecord.id,
 				state: BattleState.Active,
 			});
-			if (!battle) {
+			if (!battleRecord) {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
 			}
 
 			const hero = new Hero(characterRecord.toObject());
-			const enemy = new Enemy(battle.enemy);
-			const turn: IAction[][] = [];
+			const enemy = new Enemy(battleRecord.enemy);
+			let turn: IAction[];
 
 			if (hero.stats.dexterity >= enemy.stats.dexterity) {
-				turn.push(this.handleAction(hero, enemy, id));
+				turn = this.handleAction(hero, enemy, id, enemy.skill.id);
 			} else {
-				turn.push(this.handleAction(enemy, hero, enemy.skill.id));
+				turn = this.handleAction(enemy, hero, enemy.skill.id, id);
 			}
 
-			battle.enemy = enemy.data;
-			battle.turns = battle.turns.concat(turn);
-			battle.state = hero.alive && enemy.alive ? battle.state : BattleState.Complete;
+			battleRecord.enemy = enemy.data;
+			battleRecord.turns.push(turn);
+			battleRecord.state = hero.alive && enemy.alive ? battleRecord.state : BattleState.Complete;
+			const battle = await battleRecord.save();
 
-			await battle.save();
 			await characterRecord.updateOne({ $set: hero.data }, { new: true });
-
 			const character = hero.characterJSON;
 
 			return { battle, character };

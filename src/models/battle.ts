@@ -1,8 +1,45 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { BattleState, Status } from "@utils/enums/index";
+import { BattleState, HitType, Status, Target } from "@utils/enums/index";
 
-const turnSchema = new Schema({});
+const damageSchema = new Schema({
+	type: {
+		type: String,
+		required: true,
+	},
+	value: {
+		type: Number,
+		required: true,
+	},
+	hitType: {
+		type: String,
+		enum: HitType,
+		required: true,
+	},
+	target: {
+		type: String,
+		enum: Target,
+		required: true,
+	},
+});
+
+const healSchema = new Schema({
+	value: {
+		type: Number,
+		required: true,
+	},
+	target: {
+		type: String,
+		enum: Target,
+		required: true,
+	},
+});
+
+const actionSchema = new Schema({
+	weaponDamage: [[damageSchema]],
+	damage: [damageSchema],
+	heal: [healSchema],
+});
 
 const skillSchema = new Schema({
 	id: {
@@ -211,7 +248,7 @@ const battleSchema = new Schema(
 			required: true,
 		},
 		turns: {
-			type: [turnSchema],
+			type: [[actionSchema]],
 		},
 		state: {
 			type: String,

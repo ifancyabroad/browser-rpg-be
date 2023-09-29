@@ -108,13 +108,14 @@ export class Character {
 
 	private getWeaponDamage(weapon: TWeapon, effect: IWeaponDamageEffect) {
 		const damage = Game.dx(weapon.min, weapon.max);
-		const stat = Game.getWeaponStat(weapon.type as WeaponType);
+		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
 		const modifier = Game.getModifier(this.stats[stat]);
 		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
+		const value = Math.round((damage + modifier) * effect.multiplier * bonusMultiplier);
 		return {
 			target: effect.target,
 			type: weapon.damageType,
-			value: (damage + modifier) * effect.multiplier * bonusMultiplier,
+			value,
 			hitType: this.hitType,
 		};
 	}
@@ -131,10 +132,11 @@ export class Character {
 	private getDamage(effect: IDamageEffect) {
 		const damage = Game.dx(effect.min, effect.max);
 		const bonusMultiplier = this.getDamageBonus(effect.damageType) / 100 + 1;
+		const value = Math.round(damage * bonusMultiplier);
 		return {
 			target: effect.target,
 			type: effect.damageType,
-			value: damage * bonusMultiplier,
+			value,
 			hitType: HitType.Hit,
 		};
 	}
@@ -154,11 +156,13 @@ export class Character {
 			throw new Error("Skill is not available");
 		}
 
-		if (skill.remaining <= 0) {
+		if (skill.maxUses > 0 && skill.remaining <= 0) {
 			throw new Error("No uses remaining for this skill");
 		}
 
-		this.data.skills.find((sk) => sk.id === id).remaining--;
+		if (skill.maxUses > 0) {
+			this.data.skills.find((sk) => sk.id === id).remaining--;
+		}
 
 		const action: IAction = {
 			weaponDamage: [],
@@ -217,10 +221,10 @@ export class Character {
 
 	public handleAction(action: IAction, target: Target) {
 		action.weaponDamage = action.weaponDamage.map((effects) => {
-			return effects.filter((effect) => effect.target === target).map(this.handleDamage);
+			return effects.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
 		});
-		action.damage = action.damage.filter((effect) => effect.target === target).map(this.handleDamage);
-		action.heal = action.heal.filter((effect) => effect.target === target).map(this.handleHeal);
+		action.damage = action.damage.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
+		action.heal = action.heal.map((effect) => (effect.target === target ? this.handleHeal(effect) : effect));
 		return action;
 	}
 }
