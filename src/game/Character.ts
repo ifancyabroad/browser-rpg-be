@@ -143,6 +143,8 @@ export class Character {
 			throw new Error("No uses remaining for this skill");
 		}
 
+		this.data.skills.find((sk) => sk.id === id).remaining--;
+
 		const action: IAction = {
 			weaponDamage: [],
 			damage: [],
