@@ -1,5 +1,6 @@
 import { MODIFIERS, WEAPON_MODIFIER_MAP } from "@utils/constants";
-import { WeaponType } from "@utils/enums";
+import { Target, WeaponType } from "@utils/enums";
+import { Character } from "./Character";
 
 export class Game {
 	public static get d4() {
@@ -48,5 +49,20 @@ export class Game {
 		hitPoints += modifierBonus;
 
 		return hitPoints > 0 ? hitPoints : 1;
+	}
+
+	public static handleAction(first: Character, second: Character, firstSkill: string, secondSkill: string) {
+		const firstAction = first.createAction(firstSkill);
+		const firstActionSelf = first.handleAction(firstAction, Target.Self);
+		const firstActionFinal = second.handleAction(firstActionSelf, Target.Enemy);
+
+		if (first.alive && second.alive) {
+			const secondAction = second.createAction(secondSkill);
+			const secondActionSelf = second.handleAction(secondAction, Target.Self);
+			const secondActionFinal = first.handleAction(secondActionSelf, Target.Enemy);
+			return [firstActionFinal, secondActionFinal];
+		}
+
+		return [firstActionFinal];
 	}
 }

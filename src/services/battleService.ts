@@ -52,6 +52,7 @@ export class BattleService implements IBattleService {
 				name: enemyData.name,
 				image: enemyData.portrait,
 				level,
+				challenge: enemyData.challenge,
 				skills,
 				equipment,
 				stats: enemyData.stats,
@@ -106,21 +107,6 @@ export class BattleService implements IBattleService {
 		}
 	}
 
-	private handleAction(first: Character, second: Character, firstSkill: string, secondSkill: string) {
-		const firstAction = first.createAction(firstSkill);
-		const firstActionSelf = first.handleAction(firstAction, Target.Self);
-		const firstActionFinal = second.handleAction(firstActionSelf, Target.Enemy);
-
-		if (first.alive && second.alive) {
-			const secondAction = second.createAction(secondSkill);
-			const secondActionSelf = second.handleAction(secondAction, Target.Self);
-			const secondActionFinal = first.handleAction(secondActionSelf, Target.Enemy);
-			return [firstActionFinal, secondActionFinal];
-		}
-
-		return [firstActionFinal];
-	}
-
 	public async action(skill: IBattleInput, session: Session & Partial<SessionData>) {
 		const { id } = skill;
 		const { user } = session;
@@ -147,14 +133,23 @@ export class BattleService implements IBattleService {
 			let turn: IAction[];
 
 			if (hero.stats.dexterity >= enemy.stats.dexterity) {
-				turn = this.handleAction(hero, enemy, id, enemy.skill.id);
+				turn = Game.handleAction(hero, enemy, id, enemy.skill.id);
 			} else {
-				turn = this.handleAction(enemy, hero, enemy.skill.id, id);
+				turn = Game.handleAction(enemy, hero, enemy.skill.id, id);
 			}
 
 			battleRecord.enemy = enemy.data;
 			battleRecord.turns.push(turn);
-			battleRecord.state = hero.alive && enemy.alive ? battleRecord.state : BattleState.Complete;
+
+			if (!hero.alive) {
+				battleRecord.state = BattleState.Complete;
+			}
+
+			if (!enemy.alive) {
+				battleRecord.reward = enemy.reward;
+				battleRecord.state = BattleState.Complete;
+			}
+
 			const battle = await battleRecord.save();
 
 			await characterRecord.updateOne({ $set: hero.data }, { new: true });

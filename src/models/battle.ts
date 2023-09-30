@@ -76,6 +76,12 @@ const enemySchema = new Schema(
 			max: 30,
 			default: 1,
 		},
+		challenge: {
+			type: Number,
+			min: 1,
+			max: 30,
+			required: true,
+		},
 		skills: {
 			type: [skillSchema],
 		},
@@ -254,6 +260,16 @@ const battleSchema = new Schema(
 			type: String,
 			enum: BattleState,
 			default: BattleState.Active,
+		},
+		reward: {
+			gold: {
+				type: Number,
+				required: true,
+			},
+			experience: {
+				type: Number,
+				required: true,
+			},
 		},
 	},
 	{ timestamps: true },

@@ -10,4 +10,16 @@ export class Enemy extends Character {
 	get skill() {
 		return getRandomElement(this.skills);
 	}
+
+	get gold() {
+		return 100 * (this.data.level + this.data.challenge);
+	}
+
+	get experience() {
+		return 50 * (this.data.level + this.data.challenge);
+	}
+
+	get reward() {
+		return { gold: this.gold, experience: this.experience };
+	}
 }

@@ -5,6 +5,7 @@ import { Request } from "express";
 
 export interface IEnemy extends ICharacter {
 	image: string;
+	challenge: number;
 }
 
 export interface IDamage {
@@ -27,6 +28,11 @@ export interface IAction {
 	auxiliary: any[];
 }
 
+export interface IReward {
+	gold: number;
+	experience: number;
+}
+
 export interface IBattle {
 	id: string;
 	user: string;
@@ -34,6 +40,7 @@ export interface IBattle {
 	enemy: IEnemy;
 	turns: IAction[][];
 	state: BattleState;
+	reward?: IReward;
 }
 
 export interface IBattleInput {
