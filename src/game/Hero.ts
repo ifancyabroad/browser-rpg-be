@@ -1,8 +1,9 @@
 import { IHero } from "types/character";
 import { Character } from "@game/Character";
 import { GameData } from "@game/GameData";
-import { EquipmentSlot, EquipmentType, WeaponSize } from "@utils/enums";
-import { EQUIPMENT_SLOT_TYPE_MAP } from "@utils/constants";
+import { EquipmentSlot, EquipmentType, State, WeaponSize } from "@utils/enums";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP } from "@utils/constants";
+import { IReward } from "types/battle";
 
 export class Hero extends Character {
 	constructor(public data: IHero) {
@@ -78,5 +79,19 @@ export class Hero extends Character {
 			[EquipmentSlot.Hand2]: offHand,
 			[slot]: id,
 		};
+	}
+
+	private levelUpCheck() {
+		const experienceRequired = EXPERIENCE_MAP.get(this.data.level + 1);
+		if (this.data.experience >= experienceRequired) {
+			// TODO: level up logic
+		}
+	}
+
+	public completeBattle(reward: IReward) {
+		this.data.experience += reward.experience;
+		this.data.gold += reward.gold;
+		this.data.state = State.Idle;
+		this.levelUpCheck();
 	}
 }

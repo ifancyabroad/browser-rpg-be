@@ -32,6 +32,18 @@ battleRouter.get(
 	}),
 );
 
+// @POST '/battle'
+// @DEST Complete active battle
+battleRouter.post(
+	"/complete",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const battleService = Container.get(BattleService);
+		const character = await battleService.completeBattle(req.session);
+		res.json({ character });
+	}),
+);
+
 // @POST '/battle/action'
 // @DEST Perform an action in active battle
 battleRouter.post(

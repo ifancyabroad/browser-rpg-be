@@ -264,11 +264,9 @@ const battleSchema = new Schema(
 		reward: {
 			gold: {
 				type: Number,
-				required: true,
 			},
 			experience: {
 				type: Number,
-				required: true,
 			},
 		},
 	},

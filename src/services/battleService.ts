@@ -92,7 +92,6 @@ export class BattleService implements IBattleService {
 
 			const battle = await this.battleModel.findOne({
 				character: characterRecord.id,
-				state: BattleState.Active,
 			});
 			if (!battle) {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
@@ -103,6 +102,38 @@ export class BattleService implements IBattleService {
 			return { battle, character };
 		} catch (error) {
 			console.error(`Error getBattle: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public async completeBattle(session: Session & Partial<SessionData>) {
+		const { user } = session;
+		try {
+			const characterRecord = await this.characterModel.findOne({
+				user: user.id,
+				status: Status.Alive,
+				state: State.Battle,
+			});
+			if (!characterRecord) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
+			}
+
+			const battleRecord = await this.battleModel.findOne({
+				character: characterRecord.id,
+				state: BattleState.Complete,
+			});
+			if (!battleRecord) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
+			}
+
+			const hero = new Hero(characterRecord.toObject());
+			hero.completeBattle(battleRecord.reward);
+			await characterRecord.updateOne({ $set: hero.data }, { new: true });
+			await battleRecord.deleteOne();
+
+			return hero.characterJSON;
+		} catch (error) {
+			console.error(`Error completeBattle: ${error.message}`);
 			throw error;
 		}
 	}
