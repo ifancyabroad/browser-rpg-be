@@ -22,7 +22,7 @@ export class Character {
 
 	private getEquipmentBonus(type: PropertyType, name: string) {
 		return mapToArray(this.equipmentAsArray)
-			.flatMap((item) => "properties" in item && item.properties)
+			.flatMap((item) => ("properties" in item ? item.properties : []))
 			.filter((property) => property.type === type && property.name === name)
 			.reduce((n, { value }) => n + value, 0);
 	}

@@ -4,13 +4,12 @@ import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { BattleState, State, Status, Target } from "@utils/enums/index";
+import { BattleState, State, Status } from "@utils/enums/index";
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { IAction, IBattle, IBattleInput, IBattleService } from "types/battle";
 import { Hero } from "@game/Hero";
 import { Enemy } from "@game/Enemy";
-import { Character } from "@game/Character";
 
 /* Battle service */
 @Service()
