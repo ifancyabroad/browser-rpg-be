@@ -7,13 +7,6 @@ export interface ISkill {
 	remaining: number;
 }
 
-export interface IHistory {
-	enemy: string;
-	level: number;
-	day: number;
-	defeated: boolean;
-}
-
 export interface IStats {
 	strength: number;
 	dexterity: number;
@@ -69,7 +62,8 @@ export interface IHero extends ICharacter {
 	experience: number;
 	gold: number;
 	day: number;
-	history: IHistory[];
+	kills: number;
+	slainBy?: string;
 	availableItems: string[];
 }
 

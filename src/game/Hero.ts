@@ -88,10 +88,15 @@ export class Hero extends Character {
 		}
 	}
 
-	public completeBattle(reward: IReward) {
+	public battleWon(reward: IReward) {
+		this.data.kills++;
 		this.data.experience += reward.experience;
 		this.data.gold += reward.gold;
 		this.data.state = State.Idle;
 		this.levelUpCheck();
+	}
+
+	public battleLost(name: string) {
+		this.data.slainBy = name;
 	}
 }

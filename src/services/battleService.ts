@@ -7,7 +7,7 @@ import { Session, SessionData } from "express-session";
 import { BattleState, State, Status } from "@utils/enums/index";
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
-import { IAction, IBattle, IBattleInput, IBattleService } from "types/battle";
+import { IBattle, IBattleInput, IBattleService } from "types/battle";
 import { Hero } from "@game/Hero";
 import { Enemy } from "@game/Enemy";
 
@@ -33,6 +33,7 @@ export class BattleService implements IBattleService {
 
 			const battleRecord = await this.battleModel.findOne({
 				character: characterRecord.id,
+				state: BattleState.Active,
 			});
 			if (battleRecord) {
 				throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
@@ -91,9 +92,10 @@ export class BattleService implements IBattleService {
 
 			const battle = await this.battleModel.findOne({
 				character: characterRecord.id,
+				state: BattleState.Active,
 			});
 			if (!battle) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
+				throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 			}
 
 			const character = new Hero(characterRecord.toObject()).characterJSON;
@@ -101,38 +103,6 @@ export class BattleService implements IBattleService {
 			return { battle, character };
 		} catch (error) {
 			console.error(`Error getBattle: ${error.message}`);
-			throw error;
-		}
-	}
-
-	public async completeBattle(session: Session & Partial<SessionData>) {
-		const { user } = session;
-		try {
-			const characterRecord = await this.characterModel.findOne({
-				user: user.id,
-				status: Status.Alive,
-				state: State.Battle,
-			});
-			if (!characterRecord) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
-			}
-
-			const battleRecord = await this.battleModel.findOne({
-				character: characterRecord.id,
-				state: BattleState.Complete,
-			});
-			if (!battleRecord) {
-				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
-			}
-
-			const hero = new Hero(characterRecord.toObject());
-			hero.completeBattle(battleRecord.reward);
-			await characterRecord.updateOne({ $set: hero.data }, { new: true });
-			await battleRecord.deleteOne();
-
-			return hero.characterJSON;
-		} catch (error) {
-			console.error(`Error completeBattle: ${error.message}`);
 			throw error;
 		}
 	}
@@ -160,24 +130,20 @@ export class BattleService implements IBattleService {
 
 			const hero = new Hero(characterRecord.toObject());
 			const enemy = new Enemy(battleRecord.enemy);
-			let turn: IAction[];
-
-			if (hero.stats.dexterity >= enemy.stats.dexterity) {
-				turn = Game.handleAction(hero, enemy, id, enemy.skill.id);
-			} else {
-				turn = Game.handleAction(enemy, hero, enemy.skill.id, id);
-			}
+			const turn = Game.handleTurn({ character: hero, skill: id }, { character: enemy, skill: enemy.skill.id });
 
 			battleRecord.enemy = enemy.data;
 			battleRecord.turns.push(turn);
 
 			if (!hero.alive) {
-				battleRecord.state = BattleState.Complete;
+				hero.battleLost(enemy.data.name);
+				battleRecord.state = BattleState.Lost;
 			}
 
-			if (!enemy.alive) {
+			if (hero.alive && !enemy.alive) {
+				hero.battleWon(enemy.reward);
 				battleRecord.reward = enemy.reward;
-				battleRecord.state = BattleState.Complete;
+				battleRecord.state = BattleState.Won;
 			}
 
 			const battle = await battleRecord.save();

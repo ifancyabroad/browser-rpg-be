@@ -32,7 +32,8 @@ export enum State {
 
 export enum BattleState {
 	Active = "active",
-	Complete = "complete",
+	Won = "won",
+	Lost = "lost",
 }
 
 export enum Stat {

@@ -12,23 +12,6 @@ const skillSchema = new Schema({
 	},
 });
 
-const historySchema = new Schema({
-	enemy: {
-		type: String,
-	},
-	level: {
-		type: Number,
-		min: 1,
-	},
-	day: {
-		type: Number,
-		min: 1,
-	},
-	defeated: {
-		type: Boolean,
-	},
-});
-
 const characterSchema = new Schema(
 	{
 		user: {
@@ -70,7 +53,6 @@ const characterSchema = new Schema(
 		gold: {
 			type: Number,
 			min: 0,
-			max: 10000,
 			default: 0,
 		},
 		day: {
@@ -78,11 +60,16 @@ const characterSchema = new Schema(
 			min: 1,
 			default: 1,
 		},
+		kills: {
+			type: Number,
+			min: 0,
+			default: 0,
+		},
+		slainBy: {
+			type: String,
+		},
 		skills: {
 			type: [skillSchema],
-		},
-		history: {
-			type: [historySchema],
 		},
 		availableItems: {
 			type: [String],

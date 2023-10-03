@@ -2,6 +2,7 @@ import { Session, SessionData } from "express-session";
 import { ICharacter, IHero } from "./character";
 import { BattleState, HitType, Target } from "@utils/enums/index";
 import { Request } from "express";
+import { Character } from "@game/Character";
 
 export interface IEnemy extends ICharacter {
 	image: string;
@@ -49,6 +50,11 @@ export interface IBattleInput {
 
 export interface RequestAction extends Request {
 	skill: IBattleInput;
+}
+
+export interface ITurnData {
+	character: Character;
+	skill: string;
 }
 
 export interface IBattleService {
