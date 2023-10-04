@@ -1,6 +1,5 @@
 import { MODIFIERS, WEAPON_MODIFIER_MAP } from "@utils/constants";
 import { Target, WeaponType } from "@utils/enums";
-import { Character } from "./Character";
 import { IAction, ITurnData } from "types/battle";
 
 export class Game {
@@ -53,24 +52,22 @@ export class Game {
 	}
 
 	public static handleAction(first: ITurnData, second: ITurnData) {
-		const firstAction = first.character.createAction(first.skill);
-		const firstActionSelf = first.character.handleAction(firstAction, Target.Self);
-		const firstActionFinal = second.character.handleAction(firstActionSelf, Target.Enemy);
-
-		if (first.character.alive && second.character.alive) {
-			const secondAction = second.character.createAction(second.skill);
-			const secondActionSelf = second.character.handleAction(secondAction, Target.Self);
-			const secondActionFinal = first.character.handleAction(secondActionSelf, Target.Enemy);
-			return [firstActionFinal, secondActionFinal];
-		}
-
-		return [firstActionFinal];
+		const turn: IAction[] = [];
+		[first, second].forEach((data) => {
+			if (data.self.alive && data.enemy.alive) {
+				const action = data.self.createAction(data);
+				const actionSelf = data.self.handleAction(action, Target.Self);
+				const actionFinal = data.enemy.handleAction(actionSelf, Target.Enemy);
+				turn.push(actionFinal);
+			}
+		});
+		return turn;
 	}
 
 	public static handleTurn(hero: ITurnData, enemy: ITurnData) {
 		let turn: IAction[];
 
-		if (hero.character.stats.dexterity >= enemy.character.stats.dexterity) {
+		if (hero.self.stats.dexterity >= enemy.self.stats.dexterity) {
 			turn = this.handleAction(hero, enemy);
 		} else {
 			turn = this.handleAction(enemy, hero);

@@ -130,7 +130,18 @@ export class BattleService implements IBattleService {
 
 			const hero = new Hero(characterRecord.toObject());
 			const enemy = new Enemy(battleRecord.enemy);
-			const turn = Game.handleTurn({ character: hero, skill: id }, { character: enemy, skill: enemy.skill.id });
+			const turn = Game.handleTurn(
+				{
+					self: hero,
+					enemy,
+					skill: id,
+				},
+				{
+					self: enemy,
+					enemy: hero,
+					skill: enemy.skill.id,
+				},
+			);
 
 			battleRecord.enemy = enemy.data;
 			battleRecord.turns.push(turn);

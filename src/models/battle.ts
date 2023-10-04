@@ -36,6 +36,15 @@ const healSchema = new Schema({
 });
 
 const actionSchema = new Schema({
+	self: {
+		type: String,
+	},
+	enemy: {
+		type: String,
+	},
+	skill: {
+		type: String,
+	},
 	weaponDamage: [[damageSchema]],
 	damage: [damageSchema],
 	heal: [healSchema],

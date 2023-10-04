@@ -14,7 +14,7 @@ import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { mapToArray } from "@utils/helpers";
 import { TEquipment, TWeapon } from "types/gameData";
-import { IAction, IDamage, IHeal } from "types/battle";
+import { IAction, IDamage, IHeal, ITurnData } from "types/battle";
 import { IDamageEffect, IHealEffect, IWeaponDamageEffect } from "types/effect";
 
 export class Character {
@@ -149,8 +149,8 @@ export class Character {
 		};
 	}
 
-	public createAction(id: string) {
-		const skill = this.skills.find((sk) => sk.id === id);
+	public createAction(data: ITurnData) {
+		const skill = this.skills.find((sk) => sk.id === data.skill);
 
 		if (!skill) {
 			throw new Error("Skill is not available");
@@ -161,10 +161,13 @@ export class Character {
 		}
 
 		if (skill.maxUses > 0) {
-			this.data.skills.find((sk) => sk.id === id).remaining--;
+			this.data.skills.find((sk) => sk.id === data.skill).remaining--;
 		}
 
 		const action: IAction = {
+			skill: skill.name,
+			self: data.self.data.name,
+			enemy: data.enemy.data.name,
 			weaponDamage: [],
 			damage: [],
 			heal: [],
@@ -195,13 +198,16 @@ export class Character {
 
 	public handleDamage(damage: IDamage) {
 		const resistance = this.getResistance(damage.type as DamageType) / 100;
-		let value = damage.value * (1 - resistance);
+		let value = Math.round(damage.value * (1 - resistance));
 		if (damage.hitType === HitType.Crit) {
 			value *= 2;
 			this.data.hitPoints -= value;
 		}
 		if (damage.hitType === HitType.Hit) {
 			this.data.hitPoints -= value;
+		}
+		if (damage.hitType === HitType.Miss) {
+			value = 0;
 		}
 		if (!this.alive) {
 			this.data.status = Status.Dead;

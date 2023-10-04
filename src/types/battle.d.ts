@@ -22,6 +22,9 @@ export interface IHeal {
 }
 
 export interface IAction {
+	skill: string;
+	self: string;
+	enemy: string;
 	weaponDamage: IDamage[][];
 	damage: IDamage[];
 	heal: IHeal[];
@@ -53,7 +56,8 @@ export interface RequestAction extends Request {
 }
 
 export interface ITurnData {
-	character: Character;
+	self: Character;
+	enemy: Character;
 	skill: string;
 }
 
