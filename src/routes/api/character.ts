@@ -4,7 +4,7 @@ import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "types/user";
 import { Container } from "typedi";
 import { CharacterService } from "@services/characterService";
-import { RequestCharacter, RequestItem } from "types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp } from "types/character";
 import { CharacterCreateDto } from "@validation/character";
 import { GameData } from "@game/GameData";
 
@@ -78,6 +78,18 @@ characterRouter.post(
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const characterService = Container.get(CharacterService);
 		const character = await characterService.rest(req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/levelup'
+// @DEST Level up your character
+characterRouter.post(
+	"/levelup",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestLevelUp, res: Response) => {
+		const characterService = Container.get(CharacterService);
+		const character = await characterService.levelUp(req.body, req.session);
 		res.json({ character });
 	}),
 );

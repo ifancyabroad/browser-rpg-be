@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IBuyItemInput, ICharacterInput, ICharacterService, IHero } from "types/character";
+import { IBuyItemInput, ICharacterInput, ICharacterService, IHero, ILevelUpInput } from "types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
@@ -127,6 +127,30 @@ export class CharacterService implements ICharacterService {
 			return hero.characterJSON;
 		} catch (error) {
 			console.error(`Error rest: ${error.message}`);
+			throw error;
+		}
+	}
+
+	public async levelUp(levelUp: ILevelUpInput, session: Session & Partial<SessionData>) {
+		const { stat, skill } = levelUp;
+		const { user } = session;
+		try {
+			const character = await this.characterModel.findOne({
+				user: user.id,
+				status: Status.Alive,
+				state: State.Idle,
+			});
+			if (!character) {
+				throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to level up");
+			}
+
+			const hero = new Hero(character.toObject());
+			hero.levelUp(stat, skill);
+			await character.updateOne({ $set: hero.data }, { new: true });
+
+			return hero.characterJSON;
+		} catch (error) {
+			console.error(`Error levelUp: ${error.message}`);
 			throw error;
 		}
 	}

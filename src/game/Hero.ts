@@ -1,9 +1,10 @@
 import { IHero } from "types/character";
 import { Character } from "@game/Character";
 import { GameData } from "@game/GameData";
-import { EquipmentSlot, EquipmentType, State, WeaponSize } from "@utils/enums";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP } from "@utils/constants";
+import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@utils/enums";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@utils/constants";
 import { IReward } from "types/battle";
+import { Game } from "./Game";
 
 export class Hero extends Character {
 	constructor(public data: IHero) {
@@ -30,6 +31,10 @@ export class Hero extends Character {
 
 	public get restPrice() {
 		return this.data.day * 100;
+	}
+
+	public get nextLevelExperience() {
+		return EXPERIENCE_MAP.get(this.data.level + 1);
 	}
 
 	public rest() {
@@ -81,10 +86,30 @@ export class Hero extends Character {
 		};
 	}
 
+	public levelUp(stat: Stat, skill?: string) {
+		if (!this.data.levelUp) {
+			throw new Error("No level up available");
+		}
+		if (this.data.stats[stat] + 1 > 25) {
+			throw new Error("Attribute is already at maximum level");
+		}
+		if (skill && this.data.levelUp.skills.includes(skill)) {
+			const skillData = GameData.getSkillById(skill);
+			this.data.skills.push({ id: skill, remaining: skillData.maxUses });
+		}
+		this.data.stats[stat]++;
+
+		const hitPoints = Game.d10 + Game.getModifier(this.stats.constitution);
+		this.data.maxHitPoints += hitPoints;
+		this.data.hitPoints += hitPoints;
+		delete this.data.levelUp;
+	}
+
 	private levelUpCheck() {
-		const experienceRequired = EXPERIENCE_MAP.get(this.data.level + 1);
-		if (this.data.experience >= experienceRequired) {
-			// TODO: level up logic
+		if (this.data.experience >= this.nextLevelExperience) {
+			const level = this.data.level + 1;
+			const skills = SKILL_LEVEL_MAP.get(level) ? GameData.getLevelUpSkills(this.data.characterClass, level) : [];
+			this.data.levelUp = { level, skills };
 		}
 	}
 

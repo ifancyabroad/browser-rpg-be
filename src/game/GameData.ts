@@ -155,4 +155,22 @@ export class GameData {
 			throw error;
 		}
 	}
+
+	public static getLevelUpSkills(classID: string, level: number) {
+		try {
+			const { skills } = data;
+			const characterClass = this.getCharacterClassById(classID);
+			const maxSkillLevel = EQUIPMENT_LEVELS.get(level);
+
+			const filteredSkills = mapToArray(skills)
+				.filter((skill) => characterClass.skillClasses.includes(skill.class))
+				.filter(({ level }) => maxSkillLevel >= level)
+				.map(({ id }) => id);
+
+			return getMultipleRandom(filteredSkills, 3);
+		} catch (error) {
+			console.error(`Error getLevelUpSkills: ${error.message}`);
+			throw error;
+		}
+	}
 }

@@ -225,6 +225,14 @@ const characterSchema = new Schema(
 				default: 0,
 			},
 		},
+		levelUp: {
+			level: {
+				type: Number,
+			},
+			skills: {
+				type: [String],
+			},
+		},
 	},
 	{ timestamps: true },
 );

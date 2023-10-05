@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { EquipmentSlot, State, Status } from "@utils/enums/index";
+import { EquipmentSlot, Stat, State, Status } from "@utils/enums/index";
 
 export interface ISkill {
 	id: string;
@@ -42,6 +42,11 @@ export interface IEquipment {
 	[EquipmentSlot.Hand2]: string | null;
 }
 
+export interface ILevelUp {
+	level: number;
+	skills: string[];
+}
+
 export interface ICharacter {
 	id: string;
 	name: string;
@@ -65,6 +70,7 @@ export interface IHero extends ICharacter {
 	kills: number;
 	slainBy?: string;
 	availableItems: string[];
+	levelUp?: ILevelUp;
 }
 
 export interface ICharacterInput {
@@ -84,6 +90,15 @@ export interface IBuyItemInput {
 
 export interface RequestItem extends Request {
 	item: IBuyItemInput;
+}
+
+export interface ILevelUpInput {
+	stat: Stat;
+	skill?: string;
+}
+
+export interface RequestLevelUp extends Request {
+	levelUp: ILevelUpInput;
 }
 
 export interface ICharacterService {
