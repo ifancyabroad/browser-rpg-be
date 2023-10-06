@@ -18,6 +18,8 @@ export class Hero extends Character {
 			equipment: this.equipment,
 			availableItems: this.availableItems,
 			characterClass: this.characterClass,
+			nextLevelExperience: this.nextLevelExperience,
+			levelUp: this.levelUpData,
 		};
 	}
 
@@ -35,6 +37,20 @@ export class Hero extends Character {
 
 	public get nextLevelExperience() {
 		return EXPERIENCE_MAP.get(this.data.level + 1);
+	}
+
+	public get levelUpData() {
+		if (this.data.levelUp) {
+			return {
+				...this.data.levelUp,
+				skills: GameData.populateSkillsFromID(this.data.levelUp.skills),
+			};
+		}
+	}
+
+	public addExperience(xp: number) {
+		this.data.experience += xp;
+		this.levelUpCheck();
 	}
 
 	public rest() {
@@ -86,6 +102,14 @@ export class Hero extends Character {
 		};
 	}
 
+	private levelUpCheck() {
+		if (this.data.experience >= this.nextLevelExperience) {
+			const level = this.data.level + 1;
+			const skills = SKILL_LEVEL_MAP.get(level) ? GameData.getLevelUpSkills(this.data.characterClass, level) : [];
+			this.data.levelUp = { level, skills };
+		}
+	}
+
 	public levelUp(stat: Stat, skill?: string) {
 		if (!this.data.levelUp) {
 			throw new Error("No level up available");
@@ -97,28 +121,21 @@ export class Hero extends Character {
 			const skillData = GameData.getSkillById(skill);
 			this.data.skills.push({ id: skill, remaining: skillData.maxUses });
 		}
+		this.data.level++;
 		this.data.stats[stat]++;
 
 		const hitPoints = Game.d10 + Game.getModifier(this.stats.constitution);
 		this.data.maxHitPoints += hitPoints;
 		this.data.hitPoints += hitPoints;
 		delete this.data.levelUp;
-	}
-
-	private levelUpCheck() {
-		if (this.data.experience >= this.nextLevelExperience) {
-			const level = this.data.level + 1;
-			const skills = SKILL_LEVEL_MAP.get(level) ? GameData.getLevelUpSkills(this.data.characterClass, level) : [];
-			this.data.levelUp = { level, skills };
-		}
+		this.levelUpCheck();
 	}
 
 	public battleWon(reward: IReward) {
-		this.data.kills++;
-		this.data.experience += reward.experience;
+		this.addExperience(reward.experience);
 		this.data.gold += reward.gold;
+		this.data.kills++;
 		this.data.state = State.Idle;
-		this.levelUpCheck();
 	}
 
 	public battleLost(name: string) {

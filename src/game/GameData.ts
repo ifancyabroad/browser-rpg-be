@@ -51,6 +51,13 @@ export class GameData {
 		}
 	}
 
+	public static populateSkillsFromID(skills: string[]) {
+		return skills.map((id) => ({
+			id,
+			...this.getSkillById(id),
+		}));
+	}
+
 	public static populateSkills(skills: ISkill[]) {
 		return skills.map(({ id, remaining }) => ({
 			id,
