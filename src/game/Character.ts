@@ -1,5 +1,6 @@
 import { ICharacter } from "@common/types/character";
 import {
+	AuxiliaryStat,
 	DamageType,
 	EffectType,
 	EquipmentType,
@@ -19,6 +20,12 @@ import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect, IWeaponDam
 
 export class Character {
 	constructor(public data: ICharacter) {}
+
+	private getEquipmentDefence() {
+		return mapToArray(this.equipmentAsArray)
+			.map((item) => "defence" in item && item.defence)
+			.reduce((n, value) => n + value, 0);
+	}
 
 	private getEquipmentBonus(type: PropertyType, name: string) {
 		return mapToArray(this.equipmentAsArray)
@@ -54,6 +61,13 @@ export class Character {
 		);
 	}
 
+	private getAuxiliaryStat(type: AuxiliaryStat) {
+		return (
+			this.getEquipmentBonus(PropertyType.AuxiliaryStat, type) +
+			this.getActiveEffectBonus(PropertyType.AuxiliaryStat, type)
+		);
+	}
+
 	public get alive() {
 		return this.data.hitPoints > 0;
 	}
@@ -85,12 +99,28 @@ export class Character {
 		};
 	}
 
+	public get defence() {
+		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.Defence) / 100 + 1;
+		return Math.round(this.getEquipmentDefence() * multiplier);
+	}
+
+	public get hitBonus() {
+		return this.getAuxiliaryStat(AuxiliaryStat.HitChance);
+	}
+
+	public get critBonus() {
+		return this.getAuxiliaryStat(AuxiliaryStat.CritChance);
+	}
+
 	public get hitType() {
 		const modifier = Game.getModifier(this.stats.dexterity);
-		const roll = Game.d20 + modifier;
-		if (roll >= 20) {
+		const hitMultiplier = this.hitBonus / 100 + 1;
+		const critMultiplier = this.critBonus / 100 + 1;
+		const hitRoll = Math.round((Game.d20 + modifier) * hitMultiplier);
+		const critRoll = Math.round((Game.d20 + modifier) * critMultiplier);
+		if (hitRoll >= 10 && critRoll >= 20) {
 			return HitType.Crit;
-		} else if (roll >= 10) {
+		} else if (hitRoll >= 10) {
 			return HitType.Hit;
 		} else {
 			return HitType.Miss;
@@ -235,6 +265,12 @@ export class Character {
 		return action;
 	}
 
+	public handleWeaponDamage(damage: IDamage) {
+		const resistance = this.defence / 100;
+		damage.value = Math.round(damage.value * (1 - resistance));
+		return this.handleDamage(damage);
+	}
+
 	public handleDamage(damage: IDamage) {
 		const resistance = this.getResistance(damage.type as DamageType) / 100;
 		let value = Math.round(damage.value * (1 - resistance));
@@ -310,7 +346,7 @@ export class Character {
 
 	public handleAction(action: IAction, target: Target) {
 		action.weaponDamage = action.weaponDamage.map((effects) => {
-			return effects.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
+			return effects.map((effect) => (effect.target === target ? this.handleWeaponDamage(effect) : effect));
 		});
 		action.damage = action.damage.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
 		action.heal = action.heal.map((effect) => (effect.target === target ? this.handleHeal(effect) : effect));

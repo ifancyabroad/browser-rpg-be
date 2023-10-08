@@ -20,6 +20,9 @@ export class Hero extends Character {
 			characterClass: this.characterClass,
 			nextLevelExperience: this.nextLevelExperience,
 			levelUp: this.levelUpData,
+			defence: this.defence,
+			hitBonus: this.hitBonus,
+			critBonus: this.critBonus,
 		};
 	}
 

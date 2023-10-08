@@ -2,7 +2,7 @@
 	"armours": {
 		"-NMEwPxI9DXom0AaME0Z": {
 			"armourType": "medium",
-			"defense": 15,
+			"defence": 15,
 			"description": "Simple leather armour.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
 			"level": 1,
@@ -12,7 +12,7 @@
 		},
 		"-NNvLeBtvpWhwHiOrBKJ": {
 			"armourType": "medium",
-			"defense": 5,
+			"defence": 5,
 			"description": "Some leather boots.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
 			"level": 1,
@@ -22,7 +22,7 @@
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
 			"armourType": "medium",
-			"defense": 5,
+			"defence": 5,
 			"description": "A pair of leather gloves.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
 			"level": 1,
@@ -32,7 +32,7 @@
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
 			"armourType": "medium",
-			"defense": 5,
+			"defence": 5,
 			"description": "A leather hood.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
 			"level": 1,
@@ -42,7 +42,7 @@
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
 			"armourType": "medium",
-			"defense": 10,
+			"defence": 10,
 			"description": "A basic wooden shield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
 			"level": 1,
@@ -52,7 +52,7 @@
 		},
 		"-NZN-pDbqOJ2N6bjuW-2": {
 			"armourType": "heavy",
-			"defense": 40,
+			"defence": 20,
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
 			"level": 4,
@@ -134,7 +134,7 @@
 		},
 		"-Nc44lyRjk-mHNox3H_P": {
 			"armourType": "heavy",
-			"defense": 20,
+			"defence": 10,
 			"description": "Simple chain mail armour.",
 			"icon": "",
 			"level": 1,
@@ -144,7 +144,7 @@
 		},
 		"-Nc44ulAZW4VDmlUdugz": {
 			"armourType": "heavy",
-			"defense": 10,
+			"defence": 10,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -154,7 +154,7 @@
 		},
 		"-Nc45CfPFl5WOAOiI-bT": {
 			"armourType": "heavy",
-			"defense": 10,
+			"defence": 10,
 			"description": "Simple chain mail gloves.",
 			"icon": "",
 			"level": 1,
@@ -164,7 +164,7 @@
 		},
 		"-Nc45OA1HAAOs_BCsoag": {
 			"armourType": "heavy",
-			"defense": 10,
+			"defence": 10,
 			"description": "Simple chain mail coif.",
 			"icon": "",
 			"level": 1,
@@ -174,7 +174,7 @@
 		},
 		"-Nc45gPIxmy9nc7aorfO": {
 			"armourType": "light",
-			"defense": 5,
+			"defence": 5,
 			"description": "A simple robe.",
 			"icon": "",
 			"level": 1,
@@ -184,7 +184,7 @@
 		},
 		"-Nc45pVe2gGeYcmq2MIh": {
 			"armourType": "light",
-			"defense": 0,
+			"defence": 1,
 			"description": "Simple boots.",
 			"icon": "",
 			"level": 1,
@@ -194,7 +194,7 @@
 		},
 		"-Nc45v1m0uZ5VxV0Zco-": {
 			"armourType": "light",
-			"defense": 0,
+			"defence": 1,
 			"description": "Simple gloves.",
 			"icon": "",
 			"level": 1,
