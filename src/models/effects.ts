@@ -1,5 +1,8 @@
-import { AuxiliaryEffect, HitType, Stat, Target } from "@common/utils";
+import { AuxiliaryEffect, HitType, PropertyType, Stat, Target } from "@common/utils";
 import { Schema } from "mongoose";
+
+// Allow empty strings to pass `required` check
+Schema.Types.String.checkRequired((v) => v != null);
 
 export const damageSchema = new Schema({
 	type: {
@@ -34,10 +37,36 @@ export const healSchema = new Schema({
 	},
 });
 
-export const statusEffectSchema = new Schema({
-	skill: {
+const propertySchema = new Schema({
+	type: {
+		type: String,
+		enum: PropertyType,
+		required: true,
+	},
+	name: {
 		type: String,
 		required: true,
+	},
+	value: {
+		type: Number,
+		required: true,
+	},
+});
+
+export const statusEffectSchema = new Schema({
+	skill: {
+		id: {
+			type: String,
+			required: true,
+		},
+		name: {
+			type: String,
+			required: true,
+		},
+		icon: {
+			type: String,
+			required: true,
+		},
 	},
 	target: {
 		type: String,
@@ -45,7 +74,7 @@ export const statusEffectSchema = new Schema({
 		required: true,
 	},
 	properties: {
-		type: [],
+		type: [propertySchema],
 	},
 	remaining: {
 		type: Number,
@@ -58,12 +87,26 @@ export const statusEffectSchema = new Schema({
 	difficulty: {
 		type: Number,
 	},
+	saved: {
+		type: Boolean,
+		required: true,
+	},
 });
 
 export const auxiliaryEffectSchema = new Schema({
 	skill: {
-		type: String,
-		required: true,
+		id: {
+			type: String,
+			required: true,
+		},
+		name: {
+			type: String,
+			required: true,
+		},
+		icon: {
+			type: String,
+			required: true,
+		},
 	},
 	target: {
 		type: String,
@@ -85,5 +128,9 @@ export const auxiliaryEffectSchema = new Schema({
 	},
 	difficulty: {
 		type: Number,
+	},
+	saved: {
+		type: Boolean,
+		required: true,
 	},
 });

@@ -135,6 +135,8 @@ export class Hero extends Character {
 		this.addExperience(reward.experience);
 		this.data.gold += reward.gold;
 		this.data.kills++;
+		this.data.activeStatusEffects = [];
+		this.data.activeAuxiliaryEffects = [];
 		this.data.state = State.Idle;
 	}
 

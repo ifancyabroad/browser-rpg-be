@@ -22,8 +22,14 @@ export interface IHeal {
 	target: Target;
 }
 
+export interface IStatusSkill {
+	id: string;
+	name: string;
+	icon: string;
+}
+
 export interface IStatus {
-	skill: string;
+	skill: IStatusSkill;
 	target: Target;
 	properties: TProperty[];
 	remaining: number;
@@ -34,7 +40,7 @@ export interface IStatus {
 }
 
 export interface IAuxiliary {
-	skill: string;
+	skill: IStatusSkill;
 	target: Target;
 	effect: AuxiliaryEffect;
 	remaining: number;

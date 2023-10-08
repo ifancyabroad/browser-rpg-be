@@ -13,7 +13,7 @@ import {
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { mapToArray } from "@common/utils/helpers";
-import { TEquipment, TWeapon } from "@common/types/gameData";
+import { TEquipment, TSkill, TWeapon } from "@common/types/gameData";
 import { IAction, IAuxiliary, IDamage, IHeal, IStatus, ITurnData } from "@common/types/battle";
 import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect, IWeaponDamageEffect } from "@common/types/effect";
 
@@ -27,7 +27,7 @@ export class Character {
 			.reduce((n, { value }) => n + value, 0);
 	}
 
-	private getAciveEffectBonus(type: string, name: string) {
+	private getActiveEffectBonus(type: string, name: string) {
 		return this.data.activeStatusEffects
 			.flatMap((effect) => effect.properties)
 			.filter((property) => property.type === type && property.name === name)
@@ -38,19 +38,19 @@ export class Character {
 		return (
 			this.data.stats[stat] +
 			this.getEquipmentBonus(PropertyType.Stat, stat) +
-			this.getAciveEffectBonus(PropertyType.Stat, stat)
+			this.getActiveEffectBonus(PropertyType.Stat, stat)
 		);
 	}
 
 	private getDamageBonus(type: DamageType) {
-		return this.getEquipmentBonus(PropertyType.Damage, type) + this.getAciveEffectBonus(PropertyType.Damage, type);
+		return this.getEquipmentBonus(PropertyType.Damage, type) + this.getActiveEffectBonus(PropertyType.Damage, type);
 	}
 
 	private getResistance(type: DamageType) {
 		return (
 			this.data.resistances[type] +
 			this.getEquipmentBonus(PropertyType.Resistance, type) +
-			this.getAciveEffectBonus(PropertyType.Resistance, type)
+			this.getActiveEffectBonus(PropertyType.Resistance, type)
 		);
 	}
 
@@ -152,9 +152,13 @@ export class Character {
 		};
 	}
 
-	private getStatus(effect: IStatusEffect, skill: string) {
+	private getStatus(effect: IStatusEffect, skill: TSkill & { id: string }) {
 		return {
-			skill,
+			skill: {
+				id: skill.id,
+				name: skill.name,
+				icon: skill.icon,
+			},
 			target: effect.target,
 			properties: effect.properties,
 			remaining: effect.duration,
@@ -165,9 +169,13 @@ export class Character {
 		};
 	}
 
-	private getAuxiliary(effect: IAuxiliaryEffect, skill: string) {
+	private getAuxiliary(effect: IAuxiliaryEffect, skill: TSkill & { id: string }) {
 		return {
-			skill,
+			skill: {
+				id: skill.id,
+				name: skill.name,
+				icon: skill.icon,
+			},
 			target: effect.target,
 			effect: effect.effect,
 			remaining: effect.duration,
@@ -216,10 +224,10 @@ export class Character {
 					action.heal.push(this.getHeal(effect as IHealEffect));
 					break;
 				case EffectType.Status:
-					action.status.push(this.getStatus(effect as IStatusEffect, skill.id));
+					action.status.push(this.getStatus(effect as IStatusEffect, skill));
 					break;
 				case EffectType.Auxiliary:
-					action.auxiliary.push(this.getAuxiliary(effect as IAuxiliaryEffect, skill.id));
+					action.auxiliary.push(this.getAuxiliary(effect as IAuxiliaryEffect, skill));
 					break;
 			}
 		});
@@ -267,7 +275,7 @@ export class Character {
 			return status;
 		}
 
-		const existingStatusEffect = this.data.activeStatusEffects.find(({ skill }) => skill === status.skill);
+		const existingStatusEffect = this.data.activeStatusEffects.find(({ skill }) => skill.id === status.skill.id);
 		if (existingStatusEffect) {
 			existingStatusEffect.remaining = existingStatusEffect.duration;
 		} else {
@@ -288,7 +296,9 @@ export class Character {
 			return auxiliary;
 		}
 
-		const existingAuxiliaryEffect = this.data.activeAuxiliaryEffects.find(({ skill }) => skill === auxiliary.skill);
+		const existingAuxiliaryEffect = this.data.activeAuxiliaryEffects.find(
+			({ skill }) => skill.id === auxiliary.skill.id,
+		);
 		if (existingAuxiliaryEffect) {
 			existingAuxiliaryEffect.remaining = existingAuxiliaryEffect.duration;
 		} else {
