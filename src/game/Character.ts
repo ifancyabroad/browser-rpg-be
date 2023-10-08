@@ -14,8 +14,8 @@ import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { mapToArray } from "@common/utils/helpers";
 import { TEquipment, TWeapon } from "@common/types/gameData";
-import { IAction, IDamage, IHeal, ITurnData } from "@common/types/battle";
-import { IDamageEffect, IHealEffect, IStatusEffect, IWeaponDamageEffect } from "@common/types/effect";
+import { IAction, IAuxiliary, IDamage, IHeal, IStatus, ITurnData } from "@common/types/battle";
+import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect, IWeaponDamageEffect } from "@common/types/effect";
 
 export class Character {
 	constructor(public data: ICharacter) {}
@@ -28,7 +28,10 @@ export class Character {
 	}
 
 	private getAciveEffectBonus(type: string, name: string) {
-		return 0;
+		return this.data.activeStatusEffects
+			.flatMap((effect) => effect.properties)
+			.filter((property) => property.type === type && property.name === name)
+			.reduce((n, { value }) => n + value, 0);
 	}
 
 	private getAttribute(stat: Stat) {
@@ -95,7 +98,7 @@ export class Character {
 	}
 
 	private getUnarmedDamage(effect: IWeaponDamageEffect) {
-		const damage = Game.dx(1, 4);
+		const damage = Game.d4;
 		const modifier = Game.getModifier(this.stats.strength);
 		const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
 		return {
@@ -149,11 +152,29 @@ export class Character {
 		};
 	}
 
-	private getStatus(effect: IStatusEffect) {
+	private getStatus(effect: IStatusEffect, skill: string) {
 		return {
+			skill,
 			target: effect.target,
 			properties: effect.properties,
 			remaining: effect.duration,
+			duration: effect.duration,
+			saved: false,
+			modifier: effect.modifier,
+			difficulty: effect.difficulty,
+		};
+	}
+
+	private getAuxiliary(effect: IAuxiliaryEffect, skill: string) {
+		return {
+			skill,
+			target: effect.target,
+			effect: effect.effect,
+			remaining: effect.duration,
+			duration: effect.duration,
+			saved: false,
+			modifier: effect.modifier,
+			difficulty: effect.difficulty,
 		};
 	}
 
@@ -195,9 +216,10 @@ export class Character {
 					action.heal.push(this.getHeal(effect as IHealEffect));
 					break;
 				case EffectType.Status:
-					action.status.push(this.getStatus(effect as IStatusEffect));
+					action.status.push(this.getStatus(effect as IStatusEffect, skill.id));
 					break;
 				case EffectType.Auxiliary:
+					action.auxiliary.push(this.getAuxiliary(effect as IAuxiliaryEffect, skill.id));
 					break;
 			}
 		});
@@ -234,12 +256,58 @@ export class Character {
 		return heal;
 	}
 
+	public handleStatus(status: IStatus) {
+		if (status.modifier && status.difficulty) {
+			const modifier = Game.getModifier(this.stats[status.modifier]);
+			const roll = Game.d20 + modifier;
+			status.saved = roll >= status.difficulty;
+		}
+
+		if (status.saved) {
+			return status;
+		}
+
+		const existingStatusEffect = this.data.activeStatusEffects.find(({ skill }) => skill === status.skill);
+		if (existingStatusEffect) {
+			existingStatusEffect.remaining = existingStatusEffect.duration;
+		} else {
+			this.data.activeStatusEffects.push(status);
+		}
+
+		return status;
+	}
+
+	public handleAuxiliary(auxiliary: IAuxiliary) {
+		if (auxiliary.modifier && auxiliary.difficulty) {
+			const modifier = Game.getModifier(this.stats[auxiliary.modifier]);
+			const roll = Game.d20 + modifier;
+			auxiliary.saved = roll >= auxiliary.difficulty;
+		}
+
+		if (auxiliary.saved) {
+			return auxiliary;
+		}
+
+		const existingAuxiliaryEffect = this.data.activeAuxiliaryEffects.find(({ skill }) => skill === auxiliary.skill);
+		if (existingAuxiliaryEffect) {
+			existingAuxiliaryEffect.remaining = existingAuxiliaryEffect.duration;
+		} else {
+			this.data.activeAuxiliaryEffects.push(auxiliary);
+		}
+
+		return auxiliary;
+	}
+
 	public handleAction(action: IAction, target: Target) {
 		action.weaponDamage = action.weaponDamage.map((effects) => {
 			return effects.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
 		});
 		action.damage = action.damage.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
 		action.heal = action.heal.map((effect) => (effect.target === target ? this.handleHeal(effect) : effect));
+		action.status = action.status.map((effect) => (effect.target === target ? this.handleStatus(effect) : effect));
+		action.auxiliary = action.auxiliary.map((effect) =>
+			effect.target === target ? this.handleAuxiliary(effect) : effect,
+		);
 		return action;
 	}
 }

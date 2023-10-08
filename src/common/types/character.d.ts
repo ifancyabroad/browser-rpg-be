@@ -1,6 +1,7 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
 import { EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
+import { IAuxiliary, IStatus } from "./battle";
 
 export interface ISkill {
 	id: string;
@@ -58,6 +59,8 @@ export interface ICharacter {
 	maxHitPoints: number;
 	stats: IStats;
 	resistances: IResistances;
+	activeStatusEffects: IStatus[];
+	activeAuxiliaryEffects: IAuxiliary[];
 }
 
 export interface IHero extends ICharacter {

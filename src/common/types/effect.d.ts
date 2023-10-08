@@ -25,8 +25,8 @@ export interface IHealEffect {
 export interface IStatusEffect {
 	type: EffectType.Status;
 	target: Target;
-	modifier: Stat;
-	difficulty: number;
+	modifier?: Stat;
+	difficulty?: number;
 	duration: number;
 	properties?: TProperty[];
 }
@@ -34,9 +34,10 @@ export interface IStatusEffect {
 export interface IAuxiliaryEffect {
 	type: EffectType.Auxiliary;
 	target: Target;
-	effect: AuxiliaryEffect;
-	accuracy: number;
+	modifier?: Stat;
+	difficulty?: number;
 	duration: number;
+	effect: AuxiliaryEffect;
 }
 
 export type ISkillEffect = IWeaponDamageEffect | IDamageEffect | IHealEffect | IStatusEffect | IAuxiliaryEffect;

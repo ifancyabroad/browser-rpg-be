@@ -1,8 +1,9 @@
 import { Session, SessionData } from "express-session";
 import { ICharacter, IHero } from "./character";
-import { BattleState, HitType, Target } from "@common/utils/enums/index";
+import { AuxiliaryEffect, BattleState, HitType, Stat, Target } from "@common/utils/enums/index";
 import { Request } from "express";
 import { Character } from "@game/Character";
+import { TProperty } from "./property";
 
 export interface IEnemy extends ICharacter {
 	image: string;
@@ -21,6 +22,28 @@ export interface IHeal {
 	target: Target;
 }
 
+export interface IStatus {
+	skill: string;
+	target: Target;
+	properties: TProperty[];
+	remaining: number;
+	duration: number;
+	saved: boolean;
+	modifier?: Stat;
+	difficulty?: number;
+}
+
+export interface IAuxiliary {
+	skill: string;
+	target: Target;
+	effect: AuxiliaryEffect;
+	remaining: number;
+	duration: number;
+	saved: boolean;
+	modifier?: Stat;
+	difficulty?: number;
+}
+
 export interface IAction {
 	skill: string;
 	self: string;
@@ -28,8 +51,8 @@ export interface IAction {
 	weaponDamage: IDamage[][];
 	damage: IDamage[];
 	heal: IHeal[];
-	status: any[];
-	auxiliary: any[];
+	status: IStatus[];
+	auxiliary: IAuxiliary[];
 }
 
 export interface IReward {
