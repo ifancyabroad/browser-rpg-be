@@ -1,7 +1,7 @@
 import type { ErrorRequestHandler } from "express";
 import httpStatus from "http-status-codes";
 
-import { ErrorRo } from "types/appRo";
+import { ErrorRo } from "@common/types/appRo";
 import createHttpError from "http-errors";
 
 /**

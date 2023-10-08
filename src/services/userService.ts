@@ -1,5 +1,5 @@
 import mongoose, { ObjectId } from "mongoose";
-import { IToken, IUser, IUserInput, IUserService } from "types/user";
+import { IToken, IUser, IUserInput, IUserService } from "@common/types/user";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";

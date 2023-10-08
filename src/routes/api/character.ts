@@ -1,11 +1,11 @@
 import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "types/user";
+import { RequestUser } from "@common/types/user";
 import { Container } from "typedi";
 import { CharacterService } from "@services/characterService";
-import { RequestCharacter, RequestItem, RequestLevelUp } from "types/character";
-import { CharacterCreateDto } from "@validation/character";
+import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
+import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@game/GameData";
 
 const characterRouter = Router();

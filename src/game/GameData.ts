@@ -1,9 +1,9 @@
-import { TEquipment, TWeapon } from "types/gameData";
-import data from "@data/gameData.json";
-import { getMultipleRandom, getRandomElement, mapToArray } from "@utils/helpers";
-import { IEquipment, ISkill } from "types/character";
-import { EQUIPMENT_LEVELS } from "@utils/constants";
-import { EquipmentSlot, EquipmentType } from "@utils/enums";
+import { TEquipment } from "@common/types/gameData";
+import data from "@common/data/gameData.json";
+import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
+import { IEquipment, ISkill } from "@common/types/character";
+import { EQUIPMENT_LEVELS } from "@common/utils/constants";
+import { EquipmentSlot } from "@common/utils/enums";
 
 export class GameData {
 	public static getClasses() {

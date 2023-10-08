@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
-import { EquipmentSlot, Stat, State, Status } from "@utils/enums/index";
+import { EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
 
 export interface ISkill {
 	id: string;

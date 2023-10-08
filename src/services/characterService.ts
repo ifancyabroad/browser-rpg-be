@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import { IBuyItemInput, ICharacterInput, ICharacterService, IHero, ILevelUpInput } from "types/character";
+import { IBuyItemInput, ICharacterInput, ICharacterService, IHero, ILevelUpInput } from "@common/types/character";
 import { Inject, Service } from "typedi";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status } from "@utils/enums/index";
+import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@game/GameData";
 import { Hero } from "@game/Hero";
 import { Game } from "@game/Game";

@@ -1,4 +1,4 @@
-import { AuxiliaryEffect, DamageType, EffectType, Target } from "@utils/enums";
+import { AuxiliaryEffect, DamageType, EffectType, Stat, Target } from "@common/utils/enums";
 import { TProperty } from "./property";
 
 export interface IWeaponDamageEffect {
@@ -25,7 +25,8 @@ export interface IHealEffect {
 export interface IStatusEffect {
 	type: EffectType.Status;
 	target: Target;
-	accuracy: number;
+	modifier: Stat;
+	difficulty: number;
 	duration: number;
 	properties?: TProperty[];
 }

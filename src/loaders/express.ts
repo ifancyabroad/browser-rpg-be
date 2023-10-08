@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import cors from "cors";
 import { appRouter } from "routes";
-import { config } from "@config/index";
+import { config } from "@common/config/index";
 import helmet from "helmet";
 import { middleware } from "middleware";
 import session from "express-session";

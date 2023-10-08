@@ -1,6 +1,6 @@
 import { Session, SessionData } from "express-session";
 import { ICharacter, IHero } from "./character";
-import { BattleState, HitType, Target } from "@utils/enums/index";
+import { BattleState, HitType, Target } from "@common/utils/enums/index";
 import { Request } from "express";
 import { Character } from "@game/Character";
 

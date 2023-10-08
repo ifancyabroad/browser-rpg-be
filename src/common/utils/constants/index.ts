@@ -1,4 +1,4 @@
-import { EquipmentSlot, EquipmentType, Stat, WeaponType } from "@utils/enums/index";
+import { EquipmentSlot, EquipmentType, Stat, WeaponType } from "@common/utils/enums/index";
 
 export const MODIFIERS = new Map([
 	[1, -5],

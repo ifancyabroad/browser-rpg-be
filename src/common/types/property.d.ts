@@ -1,4 +1,4 @@
-import { AuxiliaryStat, DamageType, PropertyType, Stat } from "@utils/enums";
+import { AuxiliaryStat, DamageType, PropertyType, Stat } from "@common/utils/enums";
 
 export interface IStatProperty {
 	type: PropertyType.Stat;

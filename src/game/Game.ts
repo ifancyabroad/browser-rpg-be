@@ -1,6 +1,6 @@
-import { MODIFIERS, WEAPON_MODIFIER_MAP } from "@utils/constants";
-import { Target, WeaponType } from "@utils/enums";
-import { IAction, ITurnData } from "types/battle";
+import { MODIFIERS, WEAPON_MODIFIER_MAP } from "@common/utils/constants";
+import { Target, WeaponType } from "@common/utils/enums";
+import { IAction, ITurnData } from "@common/types/battle";
 
 export class Game {
 	public static get d4() {

@@ -1,5 +1,5 @@
 import { Service, Inject } from "typedi";
-import { config } from "@config/index";
+import { config } from "@common/config/index";
 import nodemailer, { SendMailOptions } from "nodemailer";
 import * as aws from "@aws-sdk/client-ses";
 

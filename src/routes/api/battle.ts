@@ -1,10 +1,10 @@
 import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "types/user";
+import { RequestUser } from "@common/types/user";
 import { Container } from "typedi";
 import { BattleService } from "@services/battleService";
-import { RequestAction } from "types/battle";
+import { RequestAction } from "@common/types/battle";
 
 const battleRouter = Router();
 

@@ -1,6 +1,6 @@
 import { Character } from "@game/Character";
-import { getRandomElement } from "@utils/helpers";
-import { IEnemy } from "types/battle";
+import { getRandomElement } from "@common/utils/helpers";
+import { IEnemy } from "@common/types/battle";
 
 export class Enemy extends Character {
 	constructor(public data: IEnemy) {

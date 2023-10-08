@@ -1,9 +1,9 @@
-import { IHero } from "types/character";
+import { IHero } from "common/types/character";
 import { Character } from "@game/Character";
 import { GameData } from "@game/GameData";
-import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@utils/enums";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@utils/constants";
-import { IReward } from "types/battle";
+import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@common/utils/enums";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "common/utils/constants";
+import { IReward } from "common/types/battle";
 import { Game } from "./Game";
 
 export class Hero extends Character {

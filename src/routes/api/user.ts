@@ -1,10 +1,10 @@
 import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestResetPassword, RequestUser } from "types/user";
+import { RequestResetPassword, RequestUser } from "@common/types/user";
 import { Container } from "typedi";
 import { UserService } from "@services/userService";
-import { UserResetPasswordDto, UserSigninDto, UserSignupDto } from "@validation/user";
+import { UserResetPasswordDto, UserSigninDto, UserSignupDto } from "@common/validation/user";
 
 const userRouter = Router();
 

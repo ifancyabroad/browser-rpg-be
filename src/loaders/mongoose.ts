@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { config } from "@config/index";
+import { config } from "@common/config/index";
 export const mongooseLoader = async () => {
 	const db = config.dbUrl;
 	try {

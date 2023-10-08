@@ -1,4 +1,4 @@
-import { ICharacter } from "types/character";
+import { ICharacter } from "@common/types/character";
 import {
 	DamageType,
 	EffectType,
@@ -9,13 +9,13 @@ import {
 	Status,
 	Target,
 	WeaponType,
-} from "@utils/enums/index";
+} from "@common/utils/enums/index";
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
-import { mapToArray } from "@utils/helpers";
-import { TEquipment, TWeapon } from "types/gameData";
-import { IAction, IDamage, IHeal, ITurnData } from "types/battle";
-import { IDamageEffect, IHealEffect, IWeaponDamageEffect } from "types/effect";
+import { mapToArray } from "@common/utils/helpers";
+import { TEquipment, TWeapon } from "@common/types/gameData";
+import { IAction, IDamage, IHeal, ITurnData } from "@common/types/battle";
+import { IDamageEffect, IHealEffect, IStatusEffect, IWeaponDamageEffect } from "@common/types/effect";
 
 export class Character {
 	constructor(public data: ICharacter) {}
@@ -149,6 +149,14 @@ export class Character {
 		};
 	}
 
+	private getStatus(effect: IStatusEffect) {
+		return {
+			target: effect.target,
+			properties: effect.properties,
+			remaining: effect.duration,
+		};
+	}
+
 	public createAction(data: ITurnData) {
 		const skill = this.skills.find((sk) => sk.id === data.skill);
 
@@ -187,6 +195,7 @@ export class Character {
 					action.heal.push(this.getHeal(effect as IHealEffect));
 					break;
 				case EffectType.Status:
+					action.status.push(this.getStatus(effect as IStatusEffect));
 					break;
 				case EffectType.Auxiliary:
 					break;

@@ -13,16 +13,13 @@
 		"strictPropertyInitialization": false,
 		"baseUrl": "src",
 		"paths": {
-			"@config/*": ["config/*"],
-			"@data/*": ["data/*"],
-			"@utils/*": ["utils/*"],
+			"@common/*": ["common/*"],
 			"@game/*": ["game/*"],
 			"@loaders/*": ["loaders/*"],
 			"@middleware/*": ["middleware/*"],
 			"@models/*": ["models/*"],
 			"@routes/*": ["routes/*"],
-			"@services/*": ["services/*"],
-			"@validation/*": ["validation/*"]
+			"@services/*": ["services/*"]
 		}
 	},
 	"include": ["src"]

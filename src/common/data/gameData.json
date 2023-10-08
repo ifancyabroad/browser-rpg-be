@@ -579,7 +579,9 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 18,
 					"duration": 3,
+					"modifier": "wisdom",
 					"properties": [
 						{
 							"name": "strength",
@@ -613,7 +615,9 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 15,
 					"duration": 2,
+					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "crushing",
@@ -643,8 +647,10 @@
 				},
 				{
 					"accuracy": 100,
+					"difficulty": 22,
 					"duration": 5,
 					"effect": "bleed",
+					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
 				}
@@ -667,8 +673,10 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 15,
 					"duration": 1,
 					"effect": "stun",
+					"modifier": "dexterity",
 					"target": "enemy",
 					"type": "auxiliary"
 				}
@@ -686,7 +694,9 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 15,
 					"duration": 4,
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "dexterity",
@@ -721,7 +731,9 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 18,
 					"duration": 4,
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "defence",
@@ -801,8 +813,10 @@
 			"effects": [
 				{
 					"accuracy": 75,
+					"difficulty": 16,
 					"duration": 3,
 					"effect": "disarm",
+					"modifier": "strength",
 					"target": "enemy",
 					"type": "auxiliary"
 				}
@@ -855,7 +869,9 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 24,
 					"duration": 4,
+					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "slashing",
@@ -978,7 +994,9 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 15,
 					"duration": 3,
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "defence",
@@ -1018,7 +1036,9 @@
 			"effects": [
 				{
 					"accuracy": 75,
+					"difficulty": 12,
 					"duration": 3,
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "hitChance",
@@ -1049,8 +1069,10 @@
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 15,
 					"duration": 4,
 					"effect": "poison",
+					"modifier": "dexterity",
 					"target": "enemy",
 					"type": "auxiliary"
 				}
@@ -1067,7 +1089,9 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 20,
 					"duration": 4,
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "defence",
@@ -1161,8 +1185,10 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 18,
 					"duration": 3,
 					"effect": "stun",
+					"modifier": "dexterity",
 					"target": "enemy",
 					"type": "auxiliary"
 				}
@@ -1211,7 +1237,9 @@
 			"effects": [
 				{
 					"accuracy": 50,
+					"difficulty": 10,
 					"duration": 3,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "defence",
@@ -1224,14 +1252,18 @@
 				},
 				{
 					"accuracy": 25,
+					"difficulty": 10,
 					"duration": 1,
 					"effect": "stun",
+					"modifier": "intelligence",
 					"target": "enemy",
 					"type": "auxiliary"
 				},
 				{
 					"accuracy": 50,
+					"difficulty": 10,
 					"duration": 3,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "hitChance",
@@ -1318,7 +1350,9 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 18,
 					"duration": 4,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "defence",
@@ -1412,7 +1446,9 @@
 			"effects": [
 				{
 					"accuracy": 100,
+					"difficulty": 20,
 					"duration": 4,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "cold",
@@ -1456,14 +1492,18 @@
 			"effects": [
 				{
 					"accuracy": 50,
+					"difficulty": 15,
 					"duration": 3,
 					"effect": "stun",
+					"modifier": "intelligence",
 					"target": "enemy",
 					"type": "auxiliary"
 				},
 				{
 					"accuracy": 100,
+					"difficulty": 20,
 					"duration": 5,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "dexterity",
@@ -1494,7 +1534,9 @@
 				},
 				{
 					"accuracy": 10,
+					"difficulty": 10,
 					"duration": 1,
+					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "hitPoints",

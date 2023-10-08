@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import { BattleState, HitType, Status, Target } from "@utils/enums/index";
+import { BattleState, HitType, Status, Target } from "@common/utils/enums/index";
 
 const damageSchema = new Schema({
 	type: {

@@ -1,6 +1,6 @@
 import "reflect-metadata"; // We need this in order to use @Decorators
 import express, { Application } from "express";
-import { config } from "./config";
+import { config } from "./common/config";
 import { loaders } from "./loaders";
 
 const startServer = async () => {
