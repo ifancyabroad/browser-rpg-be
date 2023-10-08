@@ -80,6 +80,10 @@ export const statusEffectSchema = new Schema({
 		type: Number,
 		required: true,
 	},
+	duration: {
+		type: Number,
+		required: true,
+	},
 	modifier: {
 		type: String,
 		enum: Stat,
@@ -119,6 +123,10 @@ export const auxiliaryEffectSchema = new Schema({
 		required: true,
 	},
 	remaining: {
+		type: Number,
+		required: true,
+	},
+	duration: {
 		type: Number,
 		required: true,
 	},
