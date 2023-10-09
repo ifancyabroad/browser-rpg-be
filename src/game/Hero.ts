@@ -65,7 +65,7 @@ export class Hero extends Character {
 		this.data.gold = this.data.gold - this.restPrice;
 		this.data.day++;
 		this.data.availableItems = GameData.getShopItems(this.data.characterClass, this.data.level);
-		this.data.hitPoints = this.data.maxHitPoints;
+		this.setHitPoints(this.data.maxHitPoints);
 		this.data.skills.forEach((skill) => {
 			const skillData = this.skills.find((sk) => sk.id === skill.id);
 			return (skill.remaining = skillData.maxUses);

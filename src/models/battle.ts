@@ -18,6 +18,7 @@ const actionSchema = new Schema({
 	heal: [healSchema],
 	status: [statusEffectSchema],
 	auxiliary: [auxiliaryEffectSchema],
+	activeEffects: [auxiliaryEffectSchema],
 });
 
 const skillSchema = new Schema({

@@ -1,5 +1,6 @@
 import { ICharacter } from "@common/types/character";
 import {
+	AuxiliaryEffect,
 	AuxiliaryStat,
 	DamageType,
 	EffectType,
@@ -105,6 +106,13 @@ export class Character {
 		return Math.round((this.data.hitPoints + modifier) * multiplier);
 	}
 
+	public setHitPoints(value: number) {
+		this.data.hitPoints = value;
+		if (!this.alive) {
+			this.data.status = Status.Dead;
+		}
+	}
+
 	public get maxHitPoints() {
 		const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.data.level;
 		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
@@ -122,6 +130,22 @@ export class Character {
 
 	public get critBonus() {
 		return this.getAuxiliaryStat(AuxiliaryStat.CritChance);
+	}
+
+	public get isStunned() {
+		return this.data.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Stun);
+	}
+
+	public get isPoisoned() {
+		return this.data.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Poison);
+	}
+
+	public get isDisarmed() {
+		return this.data.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Disarm);
+	}
+
+	public get isBleeding() {
+		return this.data.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Bleed);
 	}
 
 	public get hitType() {
@@ -166,7 +190,7 @@ export class Character {
 	}
 
 	public getWeaponsDamage(effect: IWeaponDamageEffect) {
-		if (this.weaponsAsArray.length > 0) {
+		if (this.weaponsAsArray.length > 0 && !this.isDisarmed) {
 			return this.weaponsAsArray.map((weapon) => {
 				return this.getWeaponDamage(weapon, effect);
 			});
@@ -239,10 +263,6 @@ export class Character {
 			throw new Error("No uses remaining for this skill");
 		}
 
-		if (skill.maxUses > 0) {
-			this.data.skills.find((sk) => sk.id === data.skill).remaining--;
-		}
-
 		const action: IAction = {
 			skill: skill.name,
 			self: data.self.data.name,
@@ -252,7 +272,16 @@ export class Character {
 			heal: [],
 			status: [],
 			auxiliary: [],
+			activeEffects: data.self.data.activeAuxiliaryEffects,
 		};
+
+		if (this.isStunned) {
+			return action;
+		}
+
+		if (skill.maxUses > 0) {
+			this.data.skills.find((sk) => sk.id === data.skill).remaining--;
+		}
 
 		skill.effects.forEach((effect) => {
 			switch (effect.type) {
@@ -280,6 +309,9 @@ export class Character {
 	public handleWeaponDamage(damage: IDamage) {
 		const resistance = this.defence / 100;
 		damage.value = Math.round(damage.value * (1 - resistance));
+		if (this.isBleeding) {
+			damage.value = Math.round(damage.value * 1.5);
+		}
 		return this.handleDamage(damage);
 	}
 
@@ -288,26 +320,23 @@ export class Character {
 		let value = Math.round(damage.value * (1 - resistance));
 		if (damage.hitType === HitType.Crit) {
 			value *= 2;
-			this.data.hitPoints -= value;
+			this.setHitPoints(this.data.hitPoints - value);
 		}
 		if (damage.hitType === HitType.Hit) {
-			this.data.hitPoints -= value;
+			this.setHitPoints(this.data.hitPoints - value);
 		}
 		if (damage.hitType === HitType.Miss) {
 			value = 0;
-		}
-		if (!this.alive) {
-			this.data.status = Status.Dead;
 		}
 		return { ...damage, value };
 	}
 
 	public handleHeal(heal: IHeal) {
-		const hitPoints = this.data.hitPoints + heal.value;
-		if (hitPoints > this.data.maxHitPoints) {
-			this.data.hitPoints = this.data.maxHitPoints;
+		const hitPoints = this.hitPoints + heal.value;
+		if (hitPoints > this.maxHitPoints) {
+			this.setHitPoints(this.data.maxHitPoints);
 		} else {
-			this.data.hitPoints = hitPoints;
+			this.setHitPoints(this.data.hitPoints + heal.value);
 		}
 		return heal;
 	}
@@ -366,6 +395,22 @@ export class Character {
 		action.auxiliary = action.auxiliary.map((effect) =>
 			effect.target === target ? this.handleAuxiliary(effect) : effect,
 		);
+		return action;
+	}
+
+	public tickEffects(action: IAction) {
+		if (this.isPoisoned) {
+			const damage = Math.round(this.maxHitPoints / 8);
+			this.setHitPoints(this.data.hitPoints - damage);
+		}
+
+		this.data.activeStatusEffects = this.data.activeStatusEffects
+			.filter((effect) => effect.remaining > 0)
+			.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
+		this.data.activeAuxiliaryEffects = this.data.activeAuxiliaryEffects
+			.filter((effect) => effect.remaining > 0)
+			.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
+
 		return action;
 	}
 }

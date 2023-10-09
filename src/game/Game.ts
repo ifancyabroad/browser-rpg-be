@@ -53,7 +53,8 @@ export class Game {
 			if (data.self.alive && data.enemy.alive) {
 				const action = data.self.createAction(data);
 				const actionSelf = data.self.handleAction(action, Target.Self);
-				const actionFinal = data.enemy.handleAction(actionSelf, Target.Enemy);
+				const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);
+				const actionFinal = data.self.tickEffects(actionEnemy);
 				turn.push(actionFinal);
 			}
 		});

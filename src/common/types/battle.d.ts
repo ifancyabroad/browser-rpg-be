@@ -60,6 +60,7 @@ export interface IAction {
 	heal: IHeal[];
 	status: IStatus[];
 	auxiliary: IAuxiliary[];
+	activeEffects: IAuxiliary[];
 }
 
 export interface IReward {
