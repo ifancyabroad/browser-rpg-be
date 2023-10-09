@@ -2,6 +2,7 @@ import { Request } from "express";
 import { Session, SessionData } from "express-session";
 import { EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
 import { IAuxiliary, IStatus } from "./battle";
+import { Document } from "mongoose";
 
 export interface ISkill {
 	id: string;
@@ -48,7 +49,7 @@ export interface ILevelUp {
 	skills: string[];
 }
 
-export interface ICharacter {
+export interface ICharacter extends Document {
 	id: string;
 	name: string;
 	status: Status;

@@ -23,6 +23,8 @@ export class Hero extends Character {
 			defence: this.defence,
 			hitBonus: this.hitBonus,
 			critBonus: this.critBonus,
+			hitPoints: this.hitPoints,
+			maxHitPoints: this.maxHitPoints,
 		};
 	}
 
@@ -127,7 +129,7 @@ export class Hero extends Character {
 		this.data.level++;
 		this.data.stats[stat]++;
 
-		const hitPoints = Game.d10 + Game.getModifier(this.stats.constitution);
+		const hitPoints = Game.d10;
 		this.data.maxHitPoints += hitPoints;
 		this.data.hitPoints += hitPoints;
 		delete this.data.levelUp;

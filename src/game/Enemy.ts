@@ -7,6 +7,14 @@ export class Enemy extends Character {
 		super(data);
 	}
 
+	public get characterJSON() {
+		return {
+			...this.data,
+			hitPoints: this.hitPoints,
+			maxHitPoints: this.maxHitPoints,
+		};
+	}
+
 	get skill() {
 		return getRandomElement(this.skills);
 	}

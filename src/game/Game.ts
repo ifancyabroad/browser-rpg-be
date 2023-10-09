@@ -39,16 +39,12 @@ export class Game {
 		return WEAPON_MODIFIER_MAP.get(type);
 	}
 
-	public static getHitPoints(constitution: number, level = 1) {
-		let hitPoints = this.d10;
+	public static getHitPoints(level = 1) {
+		let hitPoints = 0;
 		for (let i = 0; i < level; i++) {
 			hitPoints += this.d10;
 		}
-
-		const modifierBonus = this.getModifier(constitution) * level;
-		hitPoints += modifierBonus;
-
-		return hitPoints > 0 ? hitPoints : 1;
+		return hitPoints;
 	}
 
 	public static handleAction(first: ITurnData, second: ITurnData) {

@@ -19,6 +19,13 @@ export class BattleService implements IBattleService {
 		@Inject("battleModel") private battleModel: mongoose.Model<IBattle & mongoose.Document>,
 	) {}
 
+	private getBattleResponse(battle: IBattle, character: Hero, enemy: Enemy) {
+		return {
+			battle: { ...battle, enemy: enemy.characterJSON },
+			character: character.characterJSON,
+		};
+	}
+
 	public async startBattle(session: Session & Partial<SessionData>) {
 		const { user } = session;
 		try {
@@ -41,37 +48,37 @@ export class BattleService implements IBattleService {
 
 			const enemyData = GameData.getEnemy(characterRecord.day);
 			const level = characterRecord.day;
-			const hitPoints = Game.getHitPoints(enemyData.stats.constitution, level);
+			const hitPoints = Game.getHitPoints(level);
 			const skills = enemyData.skills.map((id) => ({
 				id,
 				remaining: GameData.getSkillById(id).maxUses,
 			}));
 			const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
-			const enemy = {
-				id: enemyData.id,
-				name: enemyData.name,
-				image: enemyData.portrait,
-				level,
-				challenge: enemyData.challenge,
-				skills,
-				equipment,
-				stats: enemyData.stats,
-				resistances: enemyData.resistances,
-				hitPoints,
-				maxHitPoints: hitPoints,
-			};
 
 			const battle = await this.battleModel.create({
 				user: user.id,
 				character: characterRecord.id,
-				enemy,
+				enemy: {
+					id: enemyData.id,
+					name: enemyData.name,
+					image: enemyData.portrait,
+					level,
+					challenge: enemyData.challenge,
+					skills,
+					equipment,
+					stats: enemyData.stats,
+					resistances: enemyData.resistances,
+					hitPoints,
+					maxHitPoints: hitPoints,
+				},
 			});
 
 			characterRecord.state = State.Battle;
 			const newCharacter = await characterRecord.save();
-			const character = new Hero(newCharacter.toObject()).characterJSON;
+			const character = new Hero(newCharacter.toObject());
+			const enemy = new Enemy(battle.enemy.toObject());
 
-			return { battle, character };
+			return this.getBattleResponse(battle.toObject(), character, enemy);
 		} catch (error) {
 			console.error(`Error startBattle: ${error.message}`);
 			throw error;
@@ -98,9 +105,10 @@ export class BattleService implements IBattleService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 			}
 
-			const character = new Hero(characterRecord.toObject()).characterJSON;
+			const character = new Hero(characterRecord.toObject());
+			const enemy = new Enemy(battle.enemy.toObject());
 
-			return { battle, character };
+			return this.getBattleResponse(battle.toObject(), character, enemy);
 		} catch (error) {
 			console.error(`Error getBattle: ${error.message}`);
 			throw error;
@@ -128,17 +136,17 @@ export class BattleService implements IBattleService {
 				throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
 			}
 
-			const hero = new Hero(characterRecord.toObject());
-			const enemy = new Enemy(battleRecord.enemy);
+			const character = new Hero(characterRecord.toObject());
+			const enemy = new Enemy(battleRecord.enemy.toObject());
 			const turn = Game.handleTurn(
 				{
-					self: hero,
+					self: character,
 					enemy,
 					skill: id,
 				},
 				{
 					self: enemy,
-					enemy: hero,
+					enemy: character,
 					skill: enemy.skill.id,
 				},
 			);
@@ -146,23 +154,21 @@ export class BattleService implements IBattleService {
 			battleRecord.enemy = enemy.data;
 			battleRecord.turns.push(turn);
 
-			if (!hero.alive) {
-				hero.battleLost(enemy.data.name);
+			if (!character.alive) {
+				character.battleLost(enemy.data.name);
 				battleRecord.state = BattleState.Lost;
 			}
 
-			if (hero.alive && !enemy.alive) {
-				hero.battleWon(enemy.reward);
+			if (character.alive && !enemy.alive) {
+				character.battleWon(enemy.reward);
 				battleRecord.reward = enemy.reward;
 				battleRecord.state = BattleState.Won;
 			}
 
 			const battle = await battleRecord.save();
+			await characterRecord.updateOne({ $set: character.data }, { new: true });
 
-			await characterRecord.updateOne({ $set: hero.data }, { new: true });
-			const character = hero.characterJSON;
-
-			return { battle, character };
+			return this.getBattleResponse(battle.toObject(), character, enemy);
 		} catch (error) {
 			console.error(`Error getBattle: ${error.message}`);
 			throw error;

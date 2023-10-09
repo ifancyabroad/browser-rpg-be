@@ -1,9 +1,10 @@
 import { Session, SessionData } from "express-session";
-import { ICharacter, IHero } from "./character";
+import { ICharacter } from "./character";
 import { AuxiliaryEffect, BattleState, HitType, Stat, Target } from "@common/utils/enums/index";
 import { Request } from "express";
 import { Character } from "@game/Character";
 import { TProperty } from "./property";
+import { ObjectId } from "mongoose";
 
 export interface IEnemy extends ICharacter {
 	image: string;
@@ -66,10 +67,10 @@ export interface IReward {
 	experience: number;
 }
 
-export interface IBattle {
+export interface IBattle extends Document {
 	id: string;
 	user: string;
-	character: IHero;
+	character: ObjectId;
 	enemy: IEnemy;
 	turns: IAction[][];
 	state: BattleState;

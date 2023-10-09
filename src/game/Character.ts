@@ -69,7 +69,7 @@ export class Character {
 	}
 
 	public get alive() {
-		return this.data.hitPoints > 0;
+		return this.hitPoints > 0;
 	}
 
 	public get skills() {
@@ -97,6 +97,18 @@ export class Character {
 			[Stat.Wisdom]: this.getAttribute(Stat.Wisdom),
 			[Stat.Charisma]: this.getAttribute(Stat.Charisma),
 		};
+	}
+
+	public get hitPoints() {
+		const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.data.level;
+		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
+		return Math.round((this.data.hitPoints + modifier) * multiplier);
+	}
+
+	public get maxHitPoints() {
+		const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.data.level;
+		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
+		return Math.round((this.data.maxHitPoints + modifier) * multiplier);
 	}
 
 	public get defence() {
