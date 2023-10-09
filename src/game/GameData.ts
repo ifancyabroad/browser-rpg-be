@@ -163,13 +163,14 @@ export class GameData {
 		}
 	}
 
-	public static getLevelUpSkills(classID: string, level: number) {
+	public static getLevelUpSkills(classID: string, level: number, currentSkills: ISkill[]) {
 		try {
 			const { skills } = data;
 			const characterClass = this.getCharacterClassById(classID);
 			const maxSkillLevel = EQUIPMENT_LEVELS.get(level);
 
 			const filteredSkills = mapToArray(skills)
+				.filter((skill) => currentSkills.findIndex((sk) => sk.id === skill.id) === -1)
 				.filter((skill) => characterClass.skillClasses.includes(skill.class))
 				.filter(({ level }) => maxSkillLevel >= level)
 				.map(({ id }) => id);

@@ -110,7 +110,9 @@ export class Hero extends Character {
 	private levelUpCheck() {
 		if (this.data.experience >= this.nextLevelExperience) {
 			const level = this.data.level + 1;
-			const skills = SKILL_LEVEL_MAP.get(level) ? GameData.getLevelUpSkills(this.data.characterClass, level) : [];
+			const skills = SKILL_LEVEL_MAP.get(level)
+				? GameData.getLevelUpSkills(this.data.characterClass, level, this.data.skills)
+				: [];
 			this.data.levelUp = { level, skills };
 		}
 	}
