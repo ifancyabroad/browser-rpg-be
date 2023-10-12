@@ -200,8 +200,10 @@ export class Character {
 
 	private getDamage(effect: IDamageEffect) {
 		const damage = Game.dx(effect.min, effect.max);
+		const stat = Game.getDamageStat(effect.damageType as DamageType);
+		const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 		const bonusMultiplier = this.getDamageBonus(effect.damageType) / 100 + 1;
-		const value = Math.round(damage * bonusMultiplier);
+		const value = Math.round((damage + modifier) * bonusMultiplier);
 		return {
 			target: effect.target,
 			type: effect.damageType,
@@ -212,9 +214,10 @@ export class Character {
 
 	private getHeal(effect: IHealEffect) {
 		const heal = Game.dx(effect.min, effect.max);
+		const modifier = Game.getModifier(this.stats[Stat.Wisdom]);
 		return {
 			target: effect.target,
-			value: heal,
+			value: heal + modifier,
 		};
 	}
 

@@ -1,5 +1,5 @@
-import { MODIFIERS, WEAPON_MODIFIER_MAP } from "@common/utils/constants";
-import { Target, WeaponType } from "@common/utils/enums";
+import { DAMAGE_TYPE_MODIFIER_MAP, MODIFIERS, WEAPON_MODIFIER_MAP } from "@common/utils/constants";
+import { DamageType, Target, WeaponType } from "@common/utils/enums";
 import { IAction, ITurnData } from "@common/types/battle";
 
 export class Game {
@@ -37,6 +37,10 @@ export class Game {
 
 	public static getWeaponStat(type: WeaponType) {
 		return WEAPON_MODIFIER_MAP.get(type);
+	}
+
+	public static getDamageStat(type: DamageType) {
+		return DAMAGE_TYPE_MODIFIER_MAP.get(type);
 	}
 
 	public static getHitPoints(level = 1) {
