@@ -21,14 +21,12 @@ export class UserService implements IUserService {
 			// Get user from db
 			const userCheck = await this.userModel.findOne({ email: userInput.email });
 			if (!userCheck) {
-				console.log("Warning loginUser: Invalid credentials");
-				throw createHttpError(httpStatus.FORBIDDEN, "Invalid  credentials");
+				throw createHttpError(httpStatus.FORBIDDEN, "Email does not exist, please register");
 			}
 			// Check password
 			const isMatch = await bcrypt.compare(userInput.password, userCheck.password);
 			if (!isMatch) {
-				console.log("Warning loginUser: Invalid credentials");
-				throw createHttpError(httpStatus.FORBIDDEN, "Invalid  credentials");
+				throw createHttpError(httpStatus.FORBIDDEN, "Password is incorrect");
 			}
 
 			// Remove password
