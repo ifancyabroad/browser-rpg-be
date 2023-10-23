@@ -2,7 +2,7 @@
 	"armours": {
 		"-NMEwPxI9DXom0AaME0Z": {
 			"armourType": "medium",
-			"defence": 15,
+			"defence": 9,
 			"description": "Simple leather armour.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
 			"level": 1,
@@ -12,7 +12,7 @@
 		},
 		"-NNvLeBtvpWhwHiOrBKJ": {
 			"armourType": "medium",
-			"defence": 5,
+			"defence": 3,
 			"description": "Some leather boots.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
 			"level": 1,
@@ -22,7 +22,7 @@
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
 			"armourType": "medium",
-			"defence": 5,
+			"defence": 3,
 			"description": "A pair of leather gloves.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
 			"level": 1,
@@ -32,7 +32,7 @@
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
 			"armourType": "medium",
-			"defence": 5,
+			"defence": 3,
 			"description": "A leather hood.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
 			"level": 1,
@@ -41,8 +41,8 @@
 			"type": "helmet"
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
-			"armourType": "medium",
-			"defence": 10,
+			"armourType": "light",
+			"defence": 18,
 			"description": "A basic wooden shield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
 			"level": 1,
@@ -52,7 +52,7 @@
 		},
 		"-NZN-pDbqOJ2N6bjuW-2": {
 			"armourType": "heavy",
-			"defence": 20,
+			"defence": 24,
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
 			"level": 4,
@@ -134,7 +134,7 @@
 		},
 		"-Nc44lyRjk-mHNox3H_P": {
 			"armourType": "heavy",
-			"defence": 10,
+			"defence": 15,
 			"description": "Simple chain mail armour.",
 			"icon": "",
 			"level": 1,
@@ -144,7 +144,7 @@
 		},
 		"-Nc44ulAZW4VDmlUdugz": {
 			"armourType": "heavy",
-			"defence": 10,
+			"defence": 5,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -154,7 +154,7 @@
 		},
 		"-Nc45CfPFl5WOAOiI-bT": {
 			"armourType": "heavy",
-			"defence": 10,
+			"defence": 5,
 			"description": "Simple chain mail gloves.",
 			"icon": "",
 			"level": 1,
@@ -164,7 +164,7 @@
 		},
 		"-Nc45OA1HAAOs_BCsoag": {
 			"armourType": "heavy",
-			"defence": 10,
+			"defence": 5,
 			"description": "Simple chain mail coif.",
 			"icon": "",
 			"level": 1,
@@ -174,7 +174,7 @@
 		},
 		"-Nc45gPIxmy9nc7aorfO": {
 			"armourType": "light",
-			"defence": 5,
+			"defence": 2,
 			"description": "A simple robe.",
 			"icon": "",
 			"level": 1,
@@ -201,11 +201,299 @@
 			"name": "Gloves",
 			"price": 10,
 			"type": "gloves"
+		},
+		"-NgJxsDuymhUWq2V4ew8": {
+			"armourType": "heavy",
+			"defence": 24,
+			"description": "Plate mail armour.",
+			"icon": "",
+			"level": 2,
+			"name": "Plate Armour",
+			"price": 650,
+			"type": "armour"
+		},
+		"-NgJy9Jlz0vb0jkTHkgy": {
+			"armourType": "heavy",
+			"defence": 8,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Plate Gauntlets",
+			"price": 800,
+			"type": "gloves"
+		},
+		"-NgJyJCDG-1UEccRymvT": {
+			"armourType": "heavy",
+			"defence": 8,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Plate Helm",
+			"price": 900,
+			"type": "helmet"
+		},
+		"-NgJyTQysCK4qafqZ3jN": {
+			"armourType": "heavy",
+			"defence": 8,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Plate Boots",
+			"price": 800,
+			"type": "boots"
+		},
+		"-NgJyz3yv_isH2ozl7vj": {
+			"armourType": "misc",
+			"defence": 0,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Ring of Fire Resistance",
+			"price": 90,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "ring"
+		},
+		"-NgJz9XiQvutptUoYpNc": {
+			"armourType": "misc",
+			"defence": 0,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Ring of Cold Resistance",
+			"price": 90,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "ring"
+		},
+		"-NgJzNDx7O2sLwCLS8rd": {
+			"armourType": "light",
+			"defence": 14,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Buckler",
+			"price": 120,
+			"type": "shield"
+		},
+		"-NgJzhkhaQDrg55F1iM1": {
+			"armourType": "medium",
+			"defence": 16,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Hide Armour",
+			"price": 450,
+			"type": "armour"
+		},
+		"-NgJzs7bwVtbBagisMEh": {
+			"armourType": "medium",
+			"defence": 5,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Hide Gloves",
+			"price": 300,
+			"type": "gloves"
+		},
+		"-NgK-2BiZcCUjmAHKw3O": {
+			"armourType": "medium",
+			"defence": 5,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Hide Boots",
+			"price": 340,
+			"type": "boots"
+		},
+		"-NgK-7vy3aNlPRE3P0-e": {
+			"armourType": "medium",
+			"defence": 5,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Hide Hood",
+			"price": 360,
+			"type": "helmet"
+		},
+		"-NgO5fUaNmJH7LpPo2LP": {
+			"armourType": "light",
+			"defence": 2,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Traveller's Robe",
+			"price": 240,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 15
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 15
+				},
+				{
+					"name": "lighting",
+					"type": "resistance",
+					"value": 15
+				}
+			],
+			"type": "armour"
+		},
+		"-NgO5sJUrIhMs51cklUw": {
+			"armourType": "light",
+			"defence": 1,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Traveller's Boots",
+			"price": 220,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "boots"
+		},
+		"-NgO67F5LvAQ45_mIfvS": {
+			"armourType": "light",
+			"defence": 1,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Traveller's Gloves",
+			"price": 260,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "gloves"
+		},
+		"-NgO6HxDB1nJzwsoS1r-": {
+			"armourType": "light",
+			"defence": 1,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Traveller's Hood",
+			"price": 270,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "helmet"
+		},
+		"-NgO6sAjD4s9LSirM2lr": {
+			"armourType": "heavy",
+			"defence": 4,
+			"description": "",
+			"icon": "",
+			"level": 3,
+			"name": "Girdle of Ogre Strength",
+			"price": 1100,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "belt"
+		},
+		"-NgO7BPLLUJS5JjAH6o0": {
+			"armourType": "misc",
+			"defence": 0,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Amulet of Light",
+			"price": 480,
+			"properties": [
+				{
+					"name": "radiant",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "amulet"
+		},
+		"-NgO8PhCToY1JdZzRShH": {
+			"armourType": "light",
+			"defence": 2,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Cloak",
+			"price": 50,
+			"type": "armour"
+		},
+		"-NgO8UlarVWVemCx3yP2": {
+			"armourType": "light",
+			"defence": 1,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Hood",
+			"price": 20,
+			"type": "helmet"
+		},
+		"-NgO9edxFCHlRJNEhoqg": {
+			"armourType": "light",
+			"defence": 1,
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"name": "Loincloth",
+			"price": 10,
+			"type": "armour"
+		},
+		"-NgO9yRhdOivFSL6xkCK": {
+			"armourType": "medium",
+			"defence": 2,
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"name": "Shaman's Belt",
+			"price": 260,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "belt"
 		}
 	},
 	"classes": {
 		"-N_Ot99GWjYjrv9Gs-fP": {
-			"armourTypes": ["heavy"],
+			"armourTypes": ["heavy", "misc"],
 			"description": "Proud and honorable, specialising in brute strength. Primary stats are strength and constitution.",
 			"equipment": {
 				"body": "-Nc44lyRjk-mHNox3H_P",
@@ -228,7 +516,7 @@
 			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
-			"armourTypes": ["medium"],
+			"armourTypes": ["medium", "misc"],
 			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
@@ -251,7 +539,7 @@
 			"weaponTypes": ["dagger", "crossbow"]
 		},
 		"-N_P0pcakZhKbNDftKoc": {
-			"armourTypes": ["light"],
+			"armourTypes": ["light", "misc"],
 			"description": "Trained in the arcane arts and proficient with all forms of magic. Primary stat is intelligence.",
 			"equipment": {
 				"body": "-Nc45gPIxmy9nc7aorfO",
@@ -276,11 +564,13 @@
 	},
 	"monsters": {
 		"-NKsyKI9WEI82s5dZFJ_": {
-			"challenge": 4,
+			"challenge": 1,
 			"description": "",
 			"equipment": {
+				"body": "-NgO8PhCToY1JdZzRShH",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
-				"hand2": "-NNwMy0q-XKUT-EUvxFF"
+				"hand2": "-NNwMy0q-XKUT-EUvxFF",
+				"head": "-NgO8UlarVWVemCx3yP2"
 			},
 			"name": "Goblin Assassin",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=9f43fad6-deaa-4309-af8b-e69d59edbce7",
@@ -292,18 +582,18 @@
 				"lighting": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 25,
+				"poison": 0,
 				"radiant": 0,
 				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
-				"charisma": 12,
-				"constitution": 7,
-				"dexterity": 16,
-				"intelligence": 8,
+				"charisma": 8,
+				"constitution": 10,
+				"dexterity": 14,
+				"intelligence": 10,
 				"strength": 8,
-				"wisdom": 10
+				"wisdom": 8
 			}
 		},
 		"-NKszEMMl4YFhX86psew": {
@@ -315,30 +605,34 @@
 			"name": "Skeleton Warrior",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=a734eb27-6d01-41d7-a6ec-bcba84d64ae3",
 			"resistances": {
-				"acid": -50,
-				"cold": 50,
+				"acid": 0,
+				"cold": 0,
 				"crushing": -50,
-				"fire": -50,
+				"fire": 0,
 				"lighting": 0,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 0,
 				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
-				"charisma": 2,
-				"constitution": 8,
-				"dexterity": 7,
-				"intelligence": 2,
-				"strength": 8,
-				"wisdom": 7
+				"charisma": 5,
+				"constitution": 16,
+				"dexterity": 15,
+				"intelligence": 4,
+				"strength": 12,
+				"wisdom": 8
 			}
 		},
 		"-NKt-VrmU-I7ve15fvwC": {
-			"challenge": 8,
+			"challenge": 3,
 			"description": "",
+			"equipment": {
+				"body": "-NgO9edxFCHlRJNEhoqg",
+				"waist": "-NgO9yRhdOivFSL6xkCK"
+			},
 			"name": "Orc Shaman",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=f099e184-0233-4773-a07e-62888963307b",
 			"resistances": {
@@ -353,18 +647,18 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTQlY-RMpBaNkunfb7", "-NgTRA6CoAdH4tX5ht_3"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
-				"dexterity": 13,
+				"dexterity": 14,
 				"intelligence": 12,
-				"strength": 14,
-				"wisdom": 17
+				"strength": 15,
+				"wisdom": 16
 			}
 		},
 		"-NKt0FqDCM_Ms7YFjWhj": {
-			"challenge": 4,
+			"challenge": 2,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
@@ -372,7 +666,7 @@
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
 				"hand2": "-NNwMy0q-XKUT-EUvxFF"
 			},
-			"name": "Chieftan's Daughter",
+			"name": "Orc Rogue",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=d5f4ff92-7905-47f7-8ab0-681f5dc27fcf",
 			"resistances": {
 				"acid": 0,
@@ -386,21 +680,25 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqa_ZuZcAZCuzTr5c3"],
 			"stats": {
 				"charisma": 12,
-				"constitution": 15,
-				"dexterity": 15,
-				"intelligence": 10,
-				"strength": 12,
-				"wisdom": 8
+				"constitution": 16,
+				"dexterity": 14,
+				"intelligence": 8,
+				"strength": 15,
+				"wisdom": 11
 			}
 		},
 		"-NKt0uevyBhRIvkURXy4": {
-			"challenge": 5,
+			"challenge": 2,
 			"description": "",
 			"equipment": {
-				"hand1": "-NNwMy0q-XKUT-EUvxFF"
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"feet": "-NNvLeBtvpWhwHiOrBKJ",
+				"hand1": "-NgO--jUsGrVSzpmk0lB",
+				"hand2": "-NZMqz87pcH6a1OgycJ9",
+				"hands": "-NNvLkVyFUS4L9Zio2lO"
 			},
 			"name": "Orc Guard",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=75d23389-7714-43d6-b715-a08bad4fd0d8",
@@ -414,7 +712,7 @@
 				"piercing": 0,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 10
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJPxBkEam2oJZtHIBgY"],
 			"stats": {
@@ -427,11 +725,12 @@
 			}
 		},
 		"-NKt3ujmy2tXghwqSM9o": {
-			"challenge": 6,
+			"challenge": 4,
 			"description": "",
 			"equipment": {
+				"body": "-Nc44lyRjk-mHNox3H_P",
 				"feet": "-NNvLeBtvpWhwHiOrBKJ",
-				"hand1": "-NNwPg099VI_pDe9E_Zd",
+				"hand1": "-NgK07SpTQiVML_pBgQ4",
 				"hands": "-NNvLkVyFUS4L9Zio2lO"
 			},
 			"name": "Dwarven Hammerguard",
@@ -486,7 +785,7 @@
 			}
 		},
 		"-NZMCIuuab0gVQ5bMj6j": {
-			"challenge": 4,
+			"challenge": 2,
 			"description": "A wolf like creatue.",
 			"name": "Worg",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=f21d1e69-395e-4cde-9a7f-c2ab06e0ae82",
@@ -500,16 +799,398 @@
 				"piercing": 0,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 13,
+				"dexterity": 13,
+				"intelligence": 7,
+				"strength": 16,
+				"wisdom": 11
+			}
+		},
+		"-NgJtJTYuhqG-w5XwC9d": {
+			"challenge": 1,
+			"description": "",
+			"equipment": {
+				"hand1": "-NMDekxBlRvJBq18KmM3"
+			},
+			"name": "Skeleton",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": -50,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"stats": {
+				"charisma": 5,
+				"constitution": 15,
+				"dexterity": 14,
+				"intelligence": 6,
+				"strength": 10,
+				"wisdom": 8
+			}
+		},
+		"-NgTNI7tNRD7gPFbOyq-": {
+			"challenge": 1,
+			"description": "",
+			"equipment": {
+				"hand1": "-NMmvhpTgBUrely_XRJ7"
+			},
+			"name": "Hobgoblin",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"stats": {
+				"charisma": 9,
+				"constitution": 12,
+				"dexterity": 12,
+				"intelligence": 10,
+				"strength": 13,
+				"wisdom": 10
+			}
+		},
+		"-NgTNbCiHpz6PPDP3_Qm": {
+			"challenge": 3,
+			"description": "",
+			"name": "Giant Spider",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-NgTOiesS7DlEfpA_jDR"],
+			"stats": {
+				"charisma": 4,
+				"constitution": 12,
+				"dexterity": 16,
+				"intelligence": 2,
+				"strength": 14,
+				"wisdom": 11
+			}
+		},
+		"-NgTPWvUSrJHK-FcH_R1": {
+			"challenge": 3,
+			"description": "",
+			"name": "Basilisk",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-NgTPv9FLqVI9cJXml2R"],
 			"stats": {
 				"charisma": 7,
-				"constitution": 13,
-				"dexterity": 16,
+				"constitution": 15,
+				"dexterity": 8,
+				"intelligence": 2,
+				"strength": 16,
+				"wisdom": 8
+			}
+		},
+		"-NgTZVlj1jll9-HF8fPh": {
+			"challenge": 1,
+			"description": "",
+			"equipment": {
+				"hand1": "-NgK0TICJLv1vVaBGrbT"
+			},
+			"name": "Gnoll Marauder",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NgTZhoqeh-K00UZDd2_"],
+			"stats": {
+				"charisma": 7,
+				"constitution": 11,
+				"dexterity": 12,
 				"intelligence": 6,
+				"strength": 14,
+				"wisdom": 10
+			}
+		},
+		"-NgT_UhmZUanGpfiYwvB": {
+			"challenge": 3,
+			"description": "",
+			"name": "Ghoul",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgT_si0jS5qW1S5SbaJ"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 10,
+				"dexterity": 15,
+				"intelligence": 7,
+				"strength": 13,
+				"wisdom": 10
+			}
+		},
+		"-NgTapI8d3C9HY86AtnN": {
+			"challenge": 13,
+			"description": "",
+			"name": "Vampire",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 50,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 50,
+				"piercing": 50,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NgTbtbVc3qk03XQO0GP",
+				"-NgTbEHpokQy-0H5xsHh",
+				"-NZqdUiFhyxCULAsWYJl",
+				"-NZqZdRYK5clYyJxqQKi"
+			],
+			"stats": {
+				"charisma": 18,
+				"constitution": 18,
+				"dexterity": 18,
+				"intelligence": 17,
+				"strength": 18,
+				"wisdom": 15
+			}
+		},
+		"-NgTl1sgx8KyoiRbtpyg": {
+			"challenge": 6,
+			"description": "",
+			"name": "Wyvern",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-NgTlKRQQ38mTQ-94KcL"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 16,
+				"dexterity": 10,
+				"intelligence": 5,
+				"strength": 19,
+				"wisdom": 12
+			}
+		},
+		"-NgTmEuMs3XJu8TMDs9P": {
+			"challenge": 3,
+			"description": "",
+			"name": "Ankheg",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-NgTn5gefrbm_w1g4ocL"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 13,
+				"dexterity": 11,
+				"intelligence": 1,
+				"strength": 17,
+				"wisdom": 13
+			}
+		},
+		"-NgTnsfQ_nzEzn_ochM3": {
+			"challenge": 5,
+			"description": "",
+			"equipment": {
+				"body": "-NgO9edxFCHlRJNEhoqg",
+				"hand1": "-NgToUYVTRc1av-QcBA2"
+			},
+			"name": "Hill Giant",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 19,
+				"dexterity": 8,
+				"intelligence": 5,
+				"strength": 21,
+				"wisdom": 9
+			}
+		},
+		"-NgTpSKiIRPOLlAMwvOl": {
+			"challenge": 2,
+			"description": "",
+			"equipment": {
+				"body": "-NgJzhkhaQDrg55F1iM1",
+				"hand1": "-NgToUYVTRc1av-QcBA2"
+			},
+			"name": "Ogre",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"stats": {
+				"charisma": 7,
+				"constitution": 16,
+				"dexterity": 8,
+				"intelligence": 5,
+				"strength": 19,
+				"wisdom": 7
+			}
+		},
+		"-NgTqLUaOc0-qU_ug8Ly": {
+			"challenge": 10,
+			"description": "",
+			"name": "Stone Golem",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 75,
+				"fire": 50,
+				"lighting": 50,
+				"necrotic": 0,
+				"piercing": 75,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 75
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NZMIV5OGOr4bChwrNEE", "-NZqXb0gVgqwcQmz5Kty"],
+			"stats": {
+				"charisma": 1,
+				"constitution": 20,
+				"dexterity": 9,
+				"intelligence": 3,
+				"strength": 22,
+				"wisdom": 11
+			}
+		},
+		"-NgYk1uHzdomGArMmxVa": {
+			"challenge": 21,
+			"description": "",
+			"name": "Lich",
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 50,
+				"fire": 0,
+				"lighting": 50,
+				"necrotic": 50,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-Nc41TbX58HmCh6nednT",
+				"-Nc40XqHNv0vjMrSUhRM",
+				"-Nc4-UVARP8jFmsiuXC9",
+				"-Nc404KHFQ3zZaHpCbe2",
+				"-Nc3yE_BOq5Xmhy4LvbI",
+				"-Nc3z5D4In6VQLtKZxrV"
+			],
+			"stats": {
+				"charisma": 16,
+				"constitution": 16,
+				"dexterity": 16,
+				"intelligence": 20,
 				"strength": 11,
-				"wisdom": 4
+				"wisdom": 14
 			}
 		}
 	},
@@ -1603,6 +2284,552 @@
 			"maxUses": 0,
 			"name": "Attack",
 			"price": 0
+		},
+		"-NgTOJ5N4B3V55HpTl-8": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 4,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 4,
+			"name": "Poison Bite",
+			"price": 0
+		},
+		"-NgTOiesS7DlEfpA_jDR": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 12,
+					"duration": 4,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -8
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 4,
+			"name": "Web",
+			"price": 0
+		},
+		"-NgTPv9FLqVI9cJXml2R": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 12,
+					"duration": 4,
+					"effect": "stun",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Petrifying Gaze",
+			"price": 0
+		},
+		"-NgTQlY-RMpBaNkunfb7": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"max": 6,
+					"min": 1,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 5,
+			"name": "Cure Minor Wounds",
+			"price": 0
+		},
+		"-NgTRA6CoAdH4tX5ht_3": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"duration": 6,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": 25
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Power Word: Shield",
+			"price": 0
+		},
+		"-NgTRbewhOgSp1zw1Uu7": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "radiant",
+					"max": 8,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Holy Bolt",
+			"price": 0
+		},
+		"-NgTRk0hkXBsKEHMEWD2": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"max": 12,
+					"min": 6,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 5,
+			"name": "Cure Medium Wounds",
+			"price": 0
+		},
+		"-NgTTlgwOpa5b9n39404": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 3,
+					"effect": "stun",
+					"modifier": "wisdom",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 2,
+			"name": "Power Word: Sleep",
+			"price": 0
+		},
+		"-NgTUH0cjt_Ek0BEIgUh": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "radiant",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "necrotic",
+							"type": "resistance",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 15,
+			"name": "Prayer",
+			"price": 0
+		},
+		"-NgTUQdooGB1fZa6Q-pv": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"max": 18,
+					"min": 12,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Cure Major Wounds",
+			"price": 0
+		},
+		"-NgTUsnh4THCA3EXJQn2": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 6
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Power Word: Fortitude",
+			"price": 0
+		},
+		"-NgTX-eKaRJ03i_t4QJ7": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "radiant",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 8,
+			"name": "Flamestrike",
+			"price": 0
+		},
+		"-NgTXdELX-HExDeZ8y6L": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 5
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": 5
+						},
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 5
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Divine Intervention",
+			"price": 0
+		},
+		"-NgTXoshOPa5Fo9AGlh2": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"max": 24,
+					"min": 16,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Cure Critical Wounds",
+			"price": 0
+		},
+		"-NgTYFhLYpX2p1ZbdUfj": {
+			"class": "cleric",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 8,
+					"duration": 1,
+					"modifier": "wisdom",
+					"properties": [
+						{
+							"name": "hitPoints",
+							"type": "auxiliaryStat",
+							"value": -100
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				},
+				{
+					"damageType": "necrotic",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 2,
+			"name": "Power Word: Death",
+			"price": 0
+		},
+		"-NgTZhoqeh-K00UZDd2_": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 20,
+			"name": "Bite",
+			"price": 0
+		},
+		"-NgT_si0jS5qW1S5SbaJ": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 8,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 12,
+					"duration": 1,
+					"effect": "stun",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Ghoul Strike",
+			"price": 0
+		},
+		"-NgTbEHpokQy-0H5xsHh": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 18,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"max": 12,
+					"min": 6,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 10,
+			"name": "Drain Life",
+			"price": 0
+		},
+		"-NgTbtbVc3qk03XQO0GP": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 5,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": -4
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -4
+						},
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 10,
+			"name": "Drain Energy",
+			"price": 0
+		},
+		"-NgTlKRQQ38mTQ-94KcL": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "poison",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 15,
+					"duration": 4,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 8,
+			"name": "Stinger",
+			"price": 0
+		},
+		"-NgTmlFYyunJA4SqDKIX": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 0,
+			"maxUses": 20,
+			"name": "Acid Bite",
+			"price": 0
+		},
+		"-NgTn5gefrbm_w1g4ocL": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 18,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 12,
+					"duration": 6,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Acid Spray",
+			"price": 0
+		},
+		"-NgTnzsxBYgTye5lFfkd": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 6,
+			"name": "Double Strike",
+			"price": 0
 		}
 	},
 	"weapons": {
@@ -1611,10 +2838,10 @@
 			"description": "A short sword.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMDekxBlRvJBq18KmM3?alt=media&token=3be33c24-8d4e-4a3b-ac2e-f635c5f0f23f",
 			"level": 1,
-			"max": 5,
+			"max": 6,
 			"min": 1,
-			"name": "Short Sword",
-			"price": 60,
+			"name": "Shortsword",
+			"price": 50,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
@@ -1626,8 +2853,8 @@
 			"level": 1,
 			"max": 6,
 			"min": 1,
-			"name": "Long Sword",
-			"price": 80,
+			"name": "Longsword",
+			"price": 60,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
@@ -1650,10 +2877,10 @@
 			"description": "A hammer.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwPg099VI_pDe9E_Zd?alt=media&token=15388ed7-514e-4534-9f65-8acb9c181851",
 			"level": 1,
-			"max": 7,
-			"min": 2,
+			"max": 6,
+			"min": 1,
 			"name": "Hammer",
-			"price": 90,
+			"price": 50,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "hammer"
@@ -1704,11 +2931,278 @@
 			"level": 1,
 			"max": 6,
 			"min": 1,
-			"name": "Staff",
-			"price": 50,
+			"name": "Quarterstaff",
+			"price": 30,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "staff"
+		},
+		"-NgK-VVeMfZnyRzNuNyK": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Handaxe",
+			"price": 50,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-NgK-mAaFXHeapzVbWAb": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Battleaxe",
+			"price": 60,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-NgK07SpTQiVML_pBgQ4": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Warhammer",
+			"price": 60,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-NgK0I2STX7An8WjEeUN": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Longbow",
+			"price": 50,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "bow"
+		},
+		"-NgK0TICJLv1vVaBGrbT": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Spear",
+			"price": 40,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "spear"
+		},
+		"-NgK0n7aPw0NHeefOnRg": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 12,
+			"min": 6,
+			"name": "Greatsword",
+			"price": 210,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-NgNzkZJ0nG0Iep0uzOb": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Crossbow",
+			"price": 60,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "crossbow"
+		},
+		"-NgNzsJrS-5TLLJ5aZCn": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 4,
+			"min": 1,
+			"name": "Club",
+			"price": 20,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "club"
+		},
+		"-NgO--jUsGrVSzpmk0lB": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Mace",
+			"price": 50,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-NgO-8McFOtJ7gLrS1UI": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Morningstar",
+			"price": 70,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-NgO0Km6wNCpoHt51Smw": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 6,
+			"min": 2,
+			"name": "Fine Dagger",
+			"price": 150,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-NgO0_TN42Pqrd5WQENu": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 8,
+			"min": 4,
+			"name": "Fine Longsword",
+			"price": 190,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-NgO0jyrXf6cOaoRZZ6N": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 8,
+			"min": 4,
+			"name": "Fine Shortsword",
+			"price": 170,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-NgO1-16PWvnT302EIO_": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 16,
+			"min": 8,
+			"name": "FIne Battleaxe",
+			"price": 240,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-NgO1IZu27jgUnBZOesh": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 8,
+			"min": 4,
+			"name": "Fine Handaxe",
+			"price": 200,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-NgO1hZuxcjitw8l7yjz": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 16,
+			"min": 8,
+			"name": "Fine Warhammer",
+			"price": 230,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-NgO1zYRL8NINq5O1XvX": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 8,
+			"min": 4,
+			"name": "Fine Mace",
+			"price": 180,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-NgO2__1WpZ52xfbNJx_": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 6,
+			"min": 1,
+			"name": "Traveller's Staff",
+			"price": 220,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-NgO2xYEe4Kzg3ST0JW2": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "",
+			"level": 2,
+			"max": 8,
+			"min": 4,
+			"name": "Fine Spear",
+			"price": 160,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "spear"
+		},
+		"-NgToUYVTRc1av-QcBA2": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "",
+			"level": 1,
+			"max": 8,
+			"min": 1,
+			"name": "Greatclub",
+			"price": 100,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "club"
 		}
 	}
 }
