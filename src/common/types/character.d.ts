@@ -1,7 +1,7 @@
 import { Request } from "express";
 import { Session, SessionData } from "express-session";
 import { EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
-import { IAuxiliary, IStatus } from "./battle";
+import { IActiveEffect, IStatus } from "./battle";
 import { Document } from "mongoose";
 
 export interface ISkill {
@@ -61,7 +61,7 @@ export interface ICharacter extends Document {
 	stats: IStats;
 	resistances: IResistances;
 	activeStatusEffects: IStatus[];
-	activeAuxiliaryEffects: IAuxiliary[];
+	activeAuxiliaryEffects: IActiveEffect[];
 }
 
 export interface IHero extends ICharacter {

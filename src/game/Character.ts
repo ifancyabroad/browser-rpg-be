@@ -270,12 +270,12 @@ export class Character {
 			skill: skill.name,
 			self: data.self.data.name,
 			enemy: data.enemy.data.name,
+			activeEffects: data.self.data.activeAuxiliaryEffects,
 			weaponDamage: [],
 			damage: [],
 			heal: [],
 			status: [],
 			auxiliary: [],
-			activeEffects: data.self.data.activeAuxiliaryEffects,
 		};
 
 		if (this.isStunned) {
@@ -377,12 +377,15 @@ export class Character {
 		}
 
 		const existingAuxiliaryEffect = this.data.activeAuxiliaryEffects.find(
-			({ skill }) => skill.id === auxiliary.skill.id,
+			({ effect }) => effect === auxiliary.effect,
 		);
 		if (existingAuxiliaryEffect) {
-			existingAuxiliaryEffect.remaining = existingAuxiliaryEffect.duration;
+			existingAuxiliaryEffect.remaining += auxiliary.duration;
 		} else {
-			this.data.activeAuxiliaryEffects.push(auxiliary);
+			this.data.activeAuxiliaryEffects.push({
+				effect: auxiliary.effect,
+				remaining: auxiliary.duration,
+			});
 		}
 
 		return auxiliary;

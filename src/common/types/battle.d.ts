@@ -51,6 +51,11 @@ export interface IAuxiliary {
 	difficulty?: number;
 }
 
+export interface IActiveEffect {
+	effect: AuxiliaryEffect;
+	remaining: number;
+}
+
 export interface IAction {
 	skill: string;
 	self: string;
@@ -60,7 +65,7 @@ export interface IAction {
 	heal: IHeal[];
 	status: IStatus[];
 	auxiliary: IAuxiliary[];
-	activeEffects: IAuxiliary[];
+	activeEffects: IActiveEffect[];
 }
 
 export interface IReward {

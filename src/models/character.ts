@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
 import { State, Status } from "@common/utils/enums/index";
-import { auxiliaryEffectSchema, statusEffectSchema } from "./effects";
+import { activeEffectSchema, statusEffectSchema } from "./effects";
 
 const skillSchema = new Schema({
 	id: {
@@ -80,7 +80,7 @@ const characterSchema = new Schema(
 			type: [statusEffectSchema],
 		},
 		activeAuxiliaryEffects: {
-			type: [auxiliaryEffectSchema],
+			type: [activeEffectSchema],
 		},
 		equipment: {
 			head: {

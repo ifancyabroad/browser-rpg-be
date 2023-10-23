@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
 import { BattleState, Status } from "@common/utils/enums/index";
-import { auxiliaryEffectSchema, damageSchema, healSchema, statusEffectSchema } from "./effects";
+import { activeEffectSchema, auxiliaryEffectSchema, damageSchema, healSchema, statusEffectSchema } from "./effects";
 
 const actionSchema = new Schema({
 	self: {
@@ -18,7 +18,7 @@ const actionSchema = new Schema({
 	heal: [healSchema],
 	status: [statusEffectSchema],
 	auxiliary: [auxiliaryEffectSchema],
-	activeEffects: [auxiliaryEffectSchema],
+	activeEffects: [activeEffectSchema],
 });
 
 const skillSchema = new Schema({
@@ -69,7 +69,7 @@ const enemySchema = new Schema(
 			type: [statusEffectSchema],
 		},
 		activeAuxiliaryEffects: {
-			type: [auxiliaryEffectSchema],
+			type: [activeEffectSchema],
 		},
 		equipment: {
 			head: {

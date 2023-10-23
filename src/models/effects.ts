@@ -142,3 +142,15 @@ export const auxiliaryEffectSchema = new Schema({
 		required: true,
 	},
 });
+
+export const activeEffectSchema = new Schema({
+	effect: {
+		type: String,
+		enum: AuxiliaryEffect,
+		required: true,
+	},
+	remaining: {
+		type: Number,
+		required: true,
+	},
+});
