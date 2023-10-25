@@ -113,6 +113,12 @@ export class Character {
 		}
 	}
 
+	public constitutionCheck() {
+		if (!this.alive && this.data.status === Status.Alive) {
+			this.setHitPoints(1);
+		}
+	}
+
 	public get maxHitPoints() {
 		const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.data.level;
 		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
@@ -416,6 +422,8 @@ export class Character {
 		this.data.activeAuxiliaryEffects = this.data.activeAuxiliaryEffects
 			.filter((effect) => effect.remaining > 0)
 			.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
+
+		this.constitutionCheck();
 
 		return action;
 	}

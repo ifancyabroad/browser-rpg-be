@@ -105,6 +105,8 @@ export class Hero extends Character {
 			[EquipmentSlot.Hand2]: offHand,
 			[slot]: id,
 		};
+
+		this.constitutionCheck();
 	}
 
 	private levelUpCheck() {
