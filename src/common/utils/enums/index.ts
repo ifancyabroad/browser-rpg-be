@@ -36,6 +36,15 @@ export enum BattleState {
 	Lost = "lost",
 }
 
+export enum SkillClass {
+	Common = "common",
+	Unique = "unique",
+	Warrior = "warrior",
+	Rogue = "rogue",
+	Mage = "mage",
+	Cleric = "cleric",
+}
+
 export enum Stat {
 	Strength = "strength",
 	Dexterity = "dexterity",
@@ -113,6 +122,13 @@ export enum PropertyType {
 	AuxiliaryStat = "auxiliaryStat",
 	Resistance = "resistance",
 	Damage = "damage",
+}
+
+export enum ArmourType {
+	Heavy = "heavy",
+	Medium = "medium",
+	Light = "light",
+	Miscellaneous = "misc",
 }
 
 export enum HitType {

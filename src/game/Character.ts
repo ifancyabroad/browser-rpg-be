@@ -15,7 +15,7 @@ import {
 import { GameData } from "@game/GameData";
 import { Game } from "@game/Game";
 import { mapToArray } from "@common/utils/helpers";
-import { TEquipment, TSkill, TWeapon } from "@common/types/gameData";
+import { ISkillData, IWeaponData } from "@common/types/gameData";
 import { IAction, IAuxiliary, IDamage, IHeal, IStatus, ITurnData } from "@common/types/battle";
 import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect, IWeaponDamageEffect } from "@common/types/effect";
 
@@ -82,11 +82,13 @@ export class Character {
 	}
 
 	public get equipmentAsArray() {
-		return mapToArray(this.equipment) as TEquipment[];
+		return mapToArray(this.equipment);
 	}
 
 	public get weaponsAsArray() {
-		return this.equipmentAsArray.filter((item) => item.type === EquipmentType.Weapon) as TWeapon[];
+		return this.equipmentAsArray.filter((item) => item.type === EquipmentType.Weapon) as (IWeaponData & {
+			id: string;
+		})[];
 	}
 
 	public get stats() {
@@ -181,7 +183,7 @@ export class Character {
 		};
 	}
 
-	private getWeaponDamage(weapon: TWeapon, effect: IWeaponDamageEffect) {
+	private getWeaponDamage(weapon: IWeaponData & { id: string }, effect: IWeaponDamageEffect) {
 		const damage = Game.dx(weapon.min, weapon.max);
 		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
 		const modifier = Game.getModifier(this.stats[stat]);
@@ -227,7 +229,7 @@ export class Character {
 		};
 	}
 
-	private getStatus(effect: IStatusEffect, skill: TSkill & { id: string }) {
+	private getStatus(effect: IStatusEffect, skill: ISkillData & { id: string }) {
 		return {
 			skill: {
 				id: skill.id,
@@ -244,7 +246,7 @@ export class Character {
 		};
 	}
 
-	private getAuxiliary(effect: IAuxiliaryEffect, skill: TSkill & { id: string }) {
+	private getAuxiliary(effect: IAuxiliaryEffect, skill: ISkillData & { id: string }) {
 		return {
 			skill: {
 				id: skill.id,
