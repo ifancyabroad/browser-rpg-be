@@ -507,10 +507,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 12,
-				"constitution": 16,
-				"dexterity": 15,
+				"constitution": 14,
+				"dexterity": 13,
 				"intelligence": 10,
-				"strength": 18,
+				"strength": 17,
 				"wisdom": 9
 			},
 			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
@@ -529,10 +529,10 @@
 			"skillClasses": ["rogue"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
-				"charisma": 17,
+				"charisma": 15,
 				"constitution": 13,
-				"dexterity": 18,
-				"intelligence": 13,
+				"dexterity": 17,
+				"intelligence": 11,
 				"strength": 9,
 				"wisdom": 10
 			},
@@ -553,11 +553,11 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
 				"charisma": 12,
-				"constitution": 15,
-				"dexterity": 11,
-				"intelligence": 18,
+				"constitution": 13,
+				"dexterity": 10,
+				"intelligence": 17,
 				"strength": 8,
-				"wisdom": 16
+				"wisdom": 15
 			},
 			"weaponTypes": ["staff", "dagger"]
 		}
@@ -586,7 +586,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u", "-Nhgyxj9aTH40MK_MCPF"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 10,
@@ -680,7 +680,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqa_ZuZcAZCuzTr5c3"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqa_ZuZcAZCuzTr5c3", "-Nhh-SuuVlmZIYSG87sp", "-Nhh0AreyuN6wco1X_6B"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 16,
@@ -714,7 +714,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJPxBkEam2oJZtHIBgY", "-Nhggr8CtVaNEZYVBilF"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -747,7 +747,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz", "-NJPxBkEam2oJZtHIBgY"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 19,
@@ -848,7 +848,7 @@
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
 			"name": "Hobgoblin",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=f485226a-2846-4f5f-a102-eb6bdbfa2258",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -861,7 +861,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqZdRYK5clYyJxqQKi", "-NhgzTUnXwX4Iw8JGJev"],
 			"stats": {
 				"charisma": 9,
 				"constitution": 12,
@@ -875,7 +875,7 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Giant Spider",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=bfef52e8-e44b-422d-90c2-9980962979e8",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -902,7 +902,7 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Basilisk",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=5472f2c0-1b51-4608-9c35-cc4fa2e85dd8",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -932,7 +932,7 @@
 				"hand1": "-NgK0TICJLv1vVaBGrbT"
 			},
 			"name": "Gnoll Marauder",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=05f2a3e3-7467-4cee-9006-64562e3e6fb0",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -959,7 +959,7 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Ghoul",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=bd425c12-006a-4cb4-a463-2864b7079e46",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -986,7 +986,7 @@
 			"challenge": 13,
 			"description": "",
 			"name": "Vampire",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTapI8d3C9HY86AtnN?alt=media&token=09d175a4-ca54-4655-a451-ae393576e7f9",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -1019,7 +1019,7 @@
 			"challenge": 6,
 			"description": "",
 			"name": "Wyvern",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=0473e716-b9d2-4d4e-8dd0-f234b95b0740",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -1046,7 +1046,7 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Ankheg",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=57b92b15-1b0a-43ee-8b69-dc5a47dd0a0f",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -1077,7 +1077,7 @@
 				"hand1": "-NgToUYVTRc1av-QcBA2"
 			},
 			"name": "Hill Giant",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=8e58aa4a-7d38-4c8c-af51-0b4741333e3f",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -1090,7 +1090,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpxFRvn_sOrij-K0F", "-NhgrvvBiejH010EI8ME", "-NJPxBkEam2oJZtHIBgY"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 19,
@@ -1108,7 +1108,7 @@
 				"hand1": "-NgToUYVTRc1av-QcBA2"
 			},
 			"name": "Ogre",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=7659e232-29d6-4b99-b16d-efb76c7c5abe",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -1121,7 +1121,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE", "-NhgpxFRvn_sOrij-K0F", "-NKt0W8prsXi7-54nBVz"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 16,
@@ -1135,7 +1135,7 @@
 			"challenge": 10,
 			"description": "",
 			"name": "Stone Golem",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=adfcbd79-94ac-4b64-a4c0-a09a1bfa931e",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -1148,7 +1148,13 @@
 				"radiant": 0,
 				"slashing": 75
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NZMIV5OGOr4bChwrNEE", "-NZqXb0gVgqwcQmz5Kty"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NZMIV5OGOr4bChwrNEE",
+				"-NZqXb0gVgqwcQmz5Kty",
+				"-NhgrvvBiejH010EI8ME",
+				"-NhgyQeYWKGMfv97Ojh0"
+			],
 			"stats": {
 				"charisma": 1,
 				"constitution": 20,
@@ -1162,7 +1168,7 @@
 			"challenge": 21,
 			"description": "",
 			"name": "Lich",
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=6d934032-5fff-4a34-a6a0-09bca68fd232",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -1181,8 +1187,9 @@
 				"-Nc40XqHNv0vjMrSUhRM",
 				"-Nc4-UVARP8jFmsiuXC9",
 				"-Nc404KHFQ3zZaHpCbe2",
-				"-Nc3yE_BOq5Xmhy4LvbI",
-				"-Nc3z5D4In6VQLtKZxrV"
+				"-Nhh7BnVOa0W7OdE_0YR",
+				"-Nhh6cp8cTNG_6h4WvSN",
+				"-Nhh5vG7znDT-6DBan2F"
 			],
 			"stats": {
 				"charisma": 16,
@@ -1191,6 +1198,268 @@
 				"intelligence": 20,
 				"strength": 11,
 				"wisdom": 14
+			}
+		},
+		"-NhkUQSsszVLO_4PrBQy": {
+			"challenge": 1,
+			"description": "",
+			"equipment": {
+				"hand2": "-NMDekxBlRvJBq18KmM3"
+			},
+			"name": "Kobold",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=7a0ee97d-5a12-45fa-918d-e1a375ae6d08",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 9,
+				"dexterity": 15,
+				"intelligence": 8,
+				"strength": 7,
+				"wisdom": 7
+			}
+		},
+		"-NhkVOZVy5W_2PPD1vjr": {
+			"challenge": 4,
+			"description": "",
+			"equipment": {
+				"body": "-NgO9edxFCHlRJNEhoqg",
+				"hand1": "-NgK-mAaFXHeapzVbWAb"
+			},
+			"name": "Ettin",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=766534f9-e374-4985-8d8d-b2d3a2ee5a6c",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgrvvBiejH010EI8ME"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 17,
+				"dexterity": 8,
+				"intelligence": 6,
+				"strength": 21,
+				"wisdom": 10
+			}
+		},
+		"-NhkWbFFsefw7IS2Vxk0": {
+			"challenge": 4,
+			"description": "",
+			"name": "Wereboar",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=3114ac4b-3e7c-41cd-afee-772ad748d5d3",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 50,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NZMHqP01D8-tN-uBn5s", "-NgTnzsxBYgTye5lFfkd"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 15,
+				"dexterity": 10,
+				"intelligence": 10,
+				"strength": 17,
+				"wisdom": 11
+			}
+		},
+		"-NhkXJrcYTG_XtKdj_B8": {
+			"challenge": 4,
+			"description": "",
+			"equipment": {
+				"body": "-Nc44lyRjk-mHNox3H_P",
+				"feet": "-Nc44ulAZW4VDmlUdugz",
+				"hand1": "-NgO1-16PWvnT302EIO_",
+				"hands": "-Nc45CfPFl5WOAOiI-bT"
+			},
+			"name": "Orc War Chief",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=c8c20610-8ae2-4bd0-938b-1636982905f3",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd", "-NJPxBkEam2oJZtHIBgY"],
+			"stats": {
+				"charisma": 16,
+				"constitution": 18,
+				"dexterity": 12,
+				"intelligence": 11,
+				"strength": 18,
+				"wisdom": 11
+			}
+		},
+		"-NhkYK7-G0lWSQ6VxFJy": {
+			"challenge": 4,
+			"description": "",
+			"name": "Banshee",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=0f7aafcd-1e91-41a7-9ae9-476da821525c",
+			"resistances": {
+				"acid": 50,
+				"cold": 100,
+				"crushing": 50,
+				"fire": 50,
+				"lighting": 50,
+				"necrotic": 100,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkZtl6i7THVGIaWaQR", "-NhkZb3a3j2ykQWUtTC0"],
+			"stats": {
+				"charisma": 17,
+				"constitution": 10,
+				"dexterity": 14,
+				"intelligence": 12,
+				"strength": 1,
+				"wisdom": 11
+			}
+		},
+		"-NhkbQX-i_HQ7Gt2qHgm": {
+			"challenge": 5,
+			"description": "",
+			"name": "Troll",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=eecd7569-a723-4709-890d-9bbdef655d09",
+			"resistances": {
+				"acid": -100,
+				"cold": 0,
+				"crushing": 0,
+				"fire": -100,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NgTnzsxBYgTye5lFfkd", "-NhkbeREMKyQCVSlZOQf"],
+			"stats": {
+				"charisma": 7,
+				"constitution": 20,
+				"dexterity": 13,
+				"intelligence": 7,
+				"strength": 18,
+				"wisdom": 9
+			}
+		},
+		"-NhkcIl5L0eB39i3HIeJ": {
+			"challenge": 5,
+			"description": "",
+			"name": "Fire Elemental",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=525bbaa6-7b5b-47dd-bec8-26ba188fc9cc",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 50,
+				"fire": 100,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgpG6pLRAqTW1AU0Eg"],
+			"stats": {
+				"charisma": 7,
+				"constitution": 16,
+				"dexterity": 17,
+				"intelligence": 6,
+				"strength": 10,
+				"wisdom": 10
+			}
+		},
+		"-NhkcuvakLcMmPpk-jQk": {
+			"challenge": 5,
+			"description": "",
+			"name": "Water Elemental",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=9ac75064-3fda-4a06-8518-cdb98151edf4",
+			"resistances": {
+				"acid": 50,
+				"cold": 0,
+				"crushing": 50,
+				"fire": 0,
+				"lighting": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhkdJeDGDat6H-Mf7WV"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 18,
+				"dexterity": 14,
+				"intelligence": 5,
+				"strength": 18,
+				"wisdom": 10
+			}
+		},
+		"-NhkeXYbGnQ67kC7gWyw": {
+			"challenge": 5,
+			"description": "",
+			"equipment": {
+				"body": "-Nc44lyRjk-mHNox3H_P",
+				"feet": "-Nc44ulAZW4VDmlUdugz",
+				"hand1": "-NgO2xYEe4Kzg3ST0JW2",
+				"hands": "-Nc45CfPFl5WOAOiI-bT"
+			},
+			"name": "Cambion",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=81f33c46-dd70-4ab7-a420-7a9583499016",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 50,
+				"fire": 50,
+				"lighting": 50,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 50,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9", "-NgTnzsxBYgTye5lFfkd", "-Nhh3D7-ihgBpi0AbfB5"],
+			"stats": {
+				"charisma": 16,
+				"constitution": 16,
+				"dexterity": 18,
+				"intelligence": 14,
+				"strength": 18,
+				"wisdom": 12
 			}
 		}
 	},
@@ -1322,7 +1591,7 @@
 			"description": "Slice the enemies throat open causing them to bleed.",
 			"effects": [
 				{
-					"multiplier": 2.5,
+					"multiplier": 1.5,
 					"target": "enemy",
 					"type": "weaponDamage"
 				},
@@ -1337,7 +1606,7 @@
 				}
 			],
 			"icon": "",
-			"level": 4,
+			"level": 3,
 			"maxUses": 1,
 			"name": "Slit Throat",
 			"price": 1300,
@@ -1406,7 +1675,7 @@
 			"description": "Leap towards the enemy to land a powerful strike with a chance to drop their defence.",
 			"effects": [
 				{
-					"multiplier": 1.5,
+					"multiplier": 1.75,
 					"target": "enemy",
 					"type": "weaponDamage"
 				},
@@ -1743,8 +2012,8 @@
 			"effects": [
 				{
 					"damageType": "poison",
-					"max": 14,
-					"min": 7,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -1760,7 +2029,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 1,
+			"maxUses": 5,
 			"name": "Poison Bomb",
 			"price": 760
 		},
@@ -1821,7 +2090,7 @@
 				}
 			],
 			"icon": "",
-			"level": 3,
+			"level": 4,
 			"maxUses": 2,
 			"name": "Flurry",
 			"price": 550
@@ -2117,7 +2386,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 6,
 			"name": "Fireball",
 			"price": 1000
 		},
@@ -2208,7 +2477,7 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 30,
+					"max": 32,
 					"min": 18,
 					"target": "enemy",
 					"type": "damage"
@@ -2669,7 +2938,7 @@
 			"price": 0
 		},
 		"-NgTbEHpokQy-0H5xsHh": {
-			"class": "common",
+			"class": "cleric",
 			"description": "",
 			"effects": [
 				{
@@ -2693,7 +2962,7 @@
 			"price": 0
 		},
 		"-NgTbtbVc3qk03XQO0GP": {
-			"class": "common",
+			"class": "cleric",
 			"description": "",
 			"effects": [
 				{
@@ -2722,7 +2991,7 @@
 				}
 			],
 			"icon": "",
-			"level": 4,
+			"level": 3,
 			"maxUses": 10,
 			"name": "Drain Energy",
 			"price": 0
@@ -2811,8 +3080,8 @@
 			"price": 0
 		},
 		"-NgTnzsxBYgTye5lFfkd": {
-			"class": "common",
-			"description": "",
+			"class": "warrior",
+			"description": "Become a whirlwind of steel, striking twice in rapid succession with the deadly finesse of the Double Strike technique in combat.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -2829,6 +3098,960 @@
 			"level": 3,
 			"maxUses": 6,
 			"name": "Double Strike",
+			"price": 0
+		},
+		"-Nhggr8CtVaNEZYVBilF": {
+			"class": "warrior",
+			"description": "Amplify your strength with a resounding Battle Cry.",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 4
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 20,
+			"name": "Battle Cry",
+			"price": 0
+		},
+		"-NhgpG6pLRAqTW1AU0Eg": {
+			"class": "warrior",
+			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
+			"effects": [
+				{
+					"duration": 3,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 5,
+			"name": "Focus Energy",
+			"price": 0
+		},
+		"-NhgpxFRvn_sOrij-K0F": {
+			"class": "warrior",
+			"description": "Unleash devastating force with Heavy Strike, crushing enemies under the weight of your mighty blows in battle.",
+			"effects": [
+				{
+					"multiplier": 1.5,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 5,
+			"name": "Heavy Strike",
+			"price": 0
+		},
+		"-NhgrvvBiejH010EI8ME": {
+			"class": "warrior",
+			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 3,
+					"effect": "stun",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"difficulty": 15,
+					"duration": 3,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Knock Down",
+			"price": 0
+		},
+		"-Nhgx8gnKSMnxB7h9F60": {
+			"class": "warrior",
+			"description": "Stand resolute with Shield Wall, shielding yourself from harm and repelling enemy assaults with unwavering defense.",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": 40
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 2,
+			"name": "Shield Wall",
+			"price": 0
+		},
+		"-Nhgy1Vmh0FTTPCWBory": {
+			"class": "warrior",
+			"description": "Instill fear with Deafening Roar, disrupting enemies with a reverberating surge of primal power in combat.",
+			"effects": [
+				{
+					"difficulty": 20,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": -6
+						},
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": -6
+						},
+						{
+							"name": "intelligence",
+							"type": "stat",
+							"value": -6
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Deafening Roar",
+			"price": 0
+		},
+		"-NhgyQeYWKGMfv97Ojh0": {
+			"class": "warrior",
+			"description": "Channel immense strength with Mighty Blow, striking with earth-shattering force that overwhelms adversaries in combat.",
+			"effects": [
+				{
+					"multiplier": 3,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 3,
+			"name": "Mighty Blow",
+			"price": 0
+		},
+		"-Nhgyxj9aTH40MK_MCPF": {
+			"class": "rogue",
+			"description": "Inflict lethal venom with Poison Jab, debilitating foes and gradually sapping their strength in the midst of battle.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"difficulty": 15,
+					"duration": 4,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Poison Jab",
+			"price": 0
+		},
+		"-NhgzTUnXwX4Iw8JGJev": {
+			"class": "rogue",
+			"description": "Inflict debilitating injury with Cripple, weakening enemies and hindering their movements in the throes of battle.",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 5,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Cripple",
+			"price": 0
+		},
+		"-Nhh-SuuVlmZIYSG87sp": {
+			"class": "rogue",
+			"description": "Master nimble footwork with Evasion, dodging attacks and maneuvering through the chaos of battle unscathed and agile.",
+			"effects": [
+				{
+					"duration": 2,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": 100
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 100
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 100
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 2,
+			"name": "Evasion",
+			"price": 0
+		},
+		"-Nhh0AreyuN6wco1X_6B": {
+			"class": "rogue",
+			"description": "Master the art of close-quarters combat, employing the Kick skill to swiftly stagger foes.",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 10,
+					"duration": 1,
+					"effect": "stun",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Kick",
+			"price": 0
+		},
+		"-Nhh0aZeozWw6_HWDH23": {
+			"class": "rogue",
+			"description": "Corrode defenses with Acid Strike, inflicting lingering damage and weakening foes with a potent toxic assault in combat.",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"damageType": "acid",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 20,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "acid",
+							"type": "resistance",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Acid Strike",
+			"price": 0
+		},
+		"-Nhh16M9sVTTOKw5g6rO": {
+			"class": "rogue",
+			"description": "Inflict fatal venom with Deadly Poison, sowing insidious decay and weakening adversaries.",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "poison",
+							"type": "damage",
+							"value": 100
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Deadly Poison",
+			"price": 0
+		},
+		"-Nhh1jOIoeiE7yvBATmT": {
+			"class": "rogue",
+			"description": "Mangle adversaries with brutal precision, ensuring incapacitation.",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 12,
+					"duration": 6,
+					"effect": "disarm",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"difficulty": 20,
+					"duration": 6,
+					"effect": "bleed",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 4,
+			"name": "Maim",
+			"price": 0
+		},
+		"-Nhh2aa9hENKmzll2Md-": {
+			"class": "rogue",
+			"description": "Exploit weaknesses to maximize the impact of attacks.",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 5,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -75
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -75
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": -75
+						},
+						{
+							"name": "defence",
+							"type": "auxiliaryStat",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Expose Weakness",
+			"price": 0
+		},
+		"-Nhh3D7-ihgBpi0AbfB5": {
+			"class": "mage",
+			"description": "Fuse with elements, amplifying prowess in elemental warfare.",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "cold",
+							"type": "damage",
+							"value": 25
+						},
+						{
+							"name": "fire",
+							"type": "damage",
+							"value": 25
+						},
+						{
+							"name": "lighting",
+							"type": "damage",
+							"value": 25
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 6,
+			"name": "Embrace Elements",
+			"price": 0
+		},
+		"-Nhh3v9mXEeAJhlsZfwB": {
+			"class": "mage",
+			"description": "Cast a glacial beam, immobilizing enemies with frosty intensity.",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 15,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 6,
+			"name": "Ray of Frost",
+			"price": 0
+		},
+		"-Nhh4hPWuWx_NN1YApGU": {
+			"class": "mage",
+			"description": "Create duplicates to bewilder and evade adversaries.",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 4,
+					"modifier": "intelligence",
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": -75
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 5,
+			"name": "Mirror Image",
+			"price": 0
+		},
+		"-Nhh50tlZXmwsJcskPE8": {
+			"class": "mage",
+			"description": "Cast a venomous projectile, engulfing targets in corrosive acid.",
+			"effects": [
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "acid",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Acid Arrow",
+			"price": 0
+		},
+		"-Nhh5ROOn89jDWYu49HW": {
+			"class": "mage",
+			"description": "Unleash a mighty fist, pulverizing enemies with ethereal power.",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 16,
+					"duration": 2,
+					"effect": "stun",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Crushing Fist",
+			"price": 0
+		},
+		"-Nhh5vG7znDT-6DBan2F": {
+			"class": "mage",
+			"description": "Emit a frigid blast, freezing enemies in a wide cone.",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 18,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 18,
+					"duration": 3,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -6
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 6,
+			"name": "Cone of Cold",
+			"price": 0
+		},
+		"-Nhh6cp8cTNG_6h4WvSN": {
+			"class": "mage",
+			"description": "Summon cascading thunder, chaining electrical strikes across enemies.",
+			"effects": [
+				{
+					"damageType": "lighting",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "lighting",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "lighting",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Chain Lightning",
+			"price": 0
+		},
+		"-Nhh7BnVOa0W7OdE_0YR": {
+			"class": "mage",
+			"description": "Summon an invincible dome, deflecting magical attacks.",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": 100
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": 100
+						},
+						{
+							"name": "lighting",
+							"type": "resistance",
+							"value": 100
+						},
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Globe of Invulnerability",
+			"price": 0
+		},
+		"-NhkFjgyu0pTYRw3DVD-": {
+			"class": "cleric",
+			"description": "Infuse divine energy, amplifying strength and resilience.",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "damage",
+							"value": 25
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": 25
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": 25
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Bless",
+			"price": 0
+		},
+		"-NhkGRRiaTZa0Q2JeWOd": {
+			"class": "cleric",
+			"description": "Invoke a malignant hex, plaguing adversaries with misfortune.",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 4,
+					"modifier": "wisdom",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "damage",
+							"value": -25
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": -25
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 1,
+			"maxUses": 10,
+			"name": "Curse",
+			"price": 0
+		},
+		"-NhkOF38JibaTuWhFGg_": {
+			"class": "cleric",
+			"description": "Infuse yourself with divine might, bolstering physical prowess.",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 4
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 10,
+			"name": "Divine Strength",
+			"price": 0
+		},
+		"-NhkP4BW6tSXQG6EoCJq": {
+			"class": "cleric",
+			"description": "Unleash divine retribution, smiting foes with holy power.",
+			"effects": [
+				{
+					"multiplier": 1.2,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"damageType": "radiant",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 2,
+			"maxUses": 8,
+			"name": "Holy Strike",
+			"price": 0
+		},
+		"-NhkR-olGXWxxR9Poqo3": {
+			"class": "cleric",
+			"description": "Invoke celestial safeguard, shielding yourself from harm and dark forces.",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "radiant",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "necrotic",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "lighting",
+							"type": "resistance",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 4,
+			"name": "Divine Protection",
+			"price": 0
+		},
+		"-NhkT3OrPY0IOvzISeE0": {
+			"class": "cleric",
+			"description": "Invoke magical paralysis, restraining foes with an unyielding grasp.",
+			"effects": [
+				{
+					"difficulty": 22,
+					"duration": 4,
+					"effect": "stun",
+					"modifier": "wisdom",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 2,
+			"name": "Hold Person",
+			"price": 0
+		},
+		"-NhkZb3a3j2ykQWUtTC0": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 13,
+					"duration": 1,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "hitPoints",
+							"type": "auxiliaryStat",
+							"value": -100
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				},
+				{
+					"damageType": "necrotic",
+					"max": 12,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 6,
+			"name": "Wail",
+			"price": 0
+		},
+		"-NhkZtl6i7THVGIaWaQR": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 18,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 10,
+			"name": "Corrupting Touch",
+			"price": 0
+		},
+		"-NhkbeREMKyQCVSlZOQf": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"duration": 1,
+					"properties": [
+						{
+							"name": "hitPoints",
+							"type": "auxiliaryStat",
+							"value": 100
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "",
+			"level": 3,
+			"maxUses": 6,
+			"name": "Regeneration",
+			"price": 0
+		},
+		"-NhkdJeDGDat6H-Mf7WV": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 16,
+					"min": 8,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 15,
+					"duration": 3,
+					"effect": "stun",
+					"modifier": "strength",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "",
+			"level": 4,
+			"maxUses": 5,
+			"name": "Whelm",
 			"price": 0
 		}
 	},
