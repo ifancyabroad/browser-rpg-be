@@ -147,7 +147,7 @@ export class BattleService implements IBattleService {
 				{
 					self: enemy,
 					enemy: character,
-					skill: enemy.skill.id,
+					skill: enemy.getSkill(character).id,
 				},
 			);
 
