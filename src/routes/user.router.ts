@@ -1,10 +1,14 @@
 import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestResetPassword, RequestUser } from "@common/types/user";
-import { Container } from "typedi";
-import { UserService } from "@services/userService";
-import { UserResetPasswordDto, UserSigninDto, UserSignupDto } from "@common/validation/user";
+import { RequestRequestResetPassword, RequestResetPassword, RequestUser } from "@common/types/user";
+import { loginUser, registerUser, requestResetPassword, resetPassword } from "@services/user.service";
+import {
+	UserRequestResetPasswordDto,
+	UserResetPasswordDto,
+	UserSigninDto,
+	UserSignupDto,
+} from "@common/validation/user";
 
 const userRouter = Router();
 
@@ -34,8 +38,7 @@ userRouter.post(
 	"/login",
 	middleware.validation(UserSigninDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const userService = Container.get(UserService);
-		const user = await userService.loginUser(req.body);
+		const user = await loginUser(req.body);
 		req.session.user = user;
 		req.session.save();
 		res.json({ user });
@@ -64,8 +67,7 @@ userRouter.put(
 	"/register",
 	middleware.validation(UserSignupDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const userService = Container.get(UserService);
-		const user = await userService.registerUser(req.body);
+		const user = await registerUser(req.body);
 		req.session.user = user;
 		req.session.save();
 		res.json({ user });
@@ -76,13 +78,10 @@ userRouter.put(
 // @DES Request reset password
 userRouter.post(
 	"/requestResetPassword",
-	middleware.validation(UserResetPasswordDto),
-	expressAsyncHandler(async (req: RequestResetPassword, res: Response) => {
-		const userService = Container.get(UserService);
-		const user = await userService.registerUser(req.body);
-		req.session.user = user;
-		req.session.save();
-		res.json({ user });
+	middleware.validation(UserRequestResetPasswordDto),
+	expressAsyncHandler(async (req: RequestRequestResetPassword, res: Response) => {
+		const link = await requestResetPassword(req.body);
+		res.json({ link });
 	}),
 );
 
@@ -90,13 +89,10 @@ userRouter.post(
 // @DES Reset password
 userRouter.post(
 	"/resetPassword",
-	middleware.validation(UserSignupDto),
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const userService = Container.get(UserService);
-		const user = await userService.registerUser(req.body);
-		req.session.user = user;
-		req.session.save();
-		res.json({ user });
+	middleware.validation(UserResetPasswordDto),
+	expressAsyncHandler(async (req: RequestResetPassword, res: Response) => {
+		const message = await resetPassword(req.body);
+		res.json({ message });
 	}),
 );
 

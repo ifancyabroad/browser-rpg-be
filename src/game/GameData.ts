@@ -154,8 +154,8 @@ export class GameData {
 	public static getEnemy(day: number) {
 		try {
 			const { monsters } = data as IGameData;
-			const minRating = day - 5;
-			const maxRating = day + 5;
+			const minRating = day - 1;
+			const maxRating = day + 1;
 			const enemyPool = mapToArray(monsters).filter(
 				({ challenge }) => challenge >= minRating && challenge <= maxRating,
 			);

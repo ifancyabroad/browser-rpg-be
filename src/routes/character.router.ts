@@ -2,8 +2,14 @@ import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "@common/types/user";
-import { Container } from "typedi";
-import { CharacterService } from "@services/characterService";
+import {
+	buyItem,
+	createCharacter,
+	getActiveCharacter,
+	levelUp,
+	rest,
+	retireActiveCharacter,
+} from "@services/character.service";
 import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@game/GameData";
@@ -16,8 +22,7 @@ characterRouter.get(
 	"/",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.getActiveCharacter(req.session);
+		const character = await getActiveCharacter(req.session);
 		res.json({ character });
 	}),
 );
@@ -29,8 +34,7 @@ characterRouter.put(
 	middleware.userAuth,
 	middleware.validation(CharacterCreateDto),
 	expressAsyncHandler(async (req: RequestCharacter, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.createCharacter(req.body, req.session);
+		const character = await createCharacter(req.body, req.session);
 		res.json({ character });
 	}),
 );
@@ -41,8 +45,7 @@ characterRouter.post(
 	"/retire",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.retireActiveCharacter(req.session);
+		const character = await retireActiveCharacter(req.session);
 		res.json({ character });
 	}),
 );
@@ -64,8 +67,7 @@ characterRouter.post(
 	"/buy",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestItem, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.buyItem(req.body, req.session);
+		const character = await buyItem(req.body, req.session);
 		res.json({ character });
 	}),
 );
@@ -76,8 +78,7 @@ characterRouter.post(
 	"/rest",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.rest(req.session);
+		const character = await rest(req.session);
 		res.json({ character });
 	}),
 );
@@ -88,8 +89,7 @@ characterRouter.post(
 	"/levelup",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestLevelUp, res: Response) => {
-		const characterService = Container.get(CharacterService);
-		const character = await characterService.levelUp(req.body, req.session);
+		const character = await levelUp(req.body, req.session);
 		res.json({ character });
 	}),
 );

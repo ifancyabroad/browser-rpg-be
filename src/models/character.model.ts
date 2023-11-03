@@ -1,22 +1,52 @@
-import { ObjectId } from "mongodb";
-import mongoose, { Schema } from "mongoose";
-import { State, Status } from "@common/utils/enums/index";
-import { activeEffectSchema, statusEffectSchema } from "./effects";
+import { Model, Schema, Types } from "mongoose";
+import { DamageType, EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
+import { IActiveEffect, IStatusEffect, activeEffectSchema, statusEffectSchema } from "./effects.model";
+import { model } from "mongoose";
+import { ISkill, skillSchema } from "./skill.model";
 
-const skillSchema = new Schema({
-	id: {
-		type: String,
-	},
-	remaining: {
-		type: Number,
-		min: 0,
-	},
-});
+interface ILevelUp {
+	level: number;
+	skills: Types.Array<string>;
+}
 
-const characterSchema = new Schema(
+interface ICharacter {
+	user: Types.ObjectId;
+	name: string;
+	characterClass: string;
+	status: Status;
+	state: State;
+	experience: number;
+	level: number;
+	gold: number;
+	day: number;
+	kills: number;
+	skills: Types.DocumentArray<ISkill>;
+	availableItems: Types.Array<string>;
+	activeStatusEffects: Types.DocumentArray<IStatusEffect>;
+	activeAuxiliaryEffects: Types.DocumentArray<IActiveEffect>;
+	equipment: Record<EquipmentSlot, string | null>;
+	hitPoints: number;
+	maxHitPoints: number;
+	stats: Record<Stat, number>;
+	resistances: Record<DamageType, number>;
+	levelUp?: ILevelUp;
+	slainBy?: string;
+}
+
+// Add methods here
+interface ICharacterMethods {
+	// fullName(): string;
+}
+
+// Add static methods here
+interface ICharacterModel extends Model<ICharacter, {}, ICharacterMethods> {
+	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
+}
+
+const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethods>(
 	{
 		user: {
-			type: ObjectId,
+			type: Schema.Types.ObjectId,
 			ref: "User",
 		},
 		name: {
@@ -244,7 +274,7 @@ const characterSchema = new Schema(
 	{ timestamps: true },
 );
 
-const CharacterModel = mongoose.model("Character", characterSchema);
+const CharacterModel = model<ICharacter, ICharacterModel>("Character", characterSchema);
 
 export { CharacterModel };
 export default CharacterModel;

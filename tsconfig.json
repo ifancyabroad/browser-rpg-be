@@ -15,7 +15,6 @@
 		"paths": {
 			"@common/*": ["common/*"],
 			"@game/*": ["game/*"],
-			"@loaders/*": ["loaders/*"],
 			"@middleware/*": ["middleware/*"],
 			"@models/*": ["models/*"],
 			"@routes/*": ["routes/*"],

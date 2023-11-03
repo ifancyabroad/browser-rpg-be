@@ -58,8 +58,10 @@ export class Game {
 				const action = data.self.createAction(data);
 				const actionSelf = data.self.handleAction(action, Target.Self);
 				const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);
-				const actionFinal = data.self.tickEffects(actionEnemy);
-				turn.push(actionFinal);
+				turn.push(actionEnemy);
+
+				data.self.tickPoison();
+				data.self.tickEffects();
 			}
 		});
 		return turn;

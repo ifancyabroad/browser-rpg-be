@@ -110,6 +110,10 @@ export class Character {
 
 	public setHitPoints(value: number) {
 		this.data.hitPoints = value;
+		this.aliveCheck();
+	}
+
+	public aliveCheck() {
 		if (!this.alive) {
 			this.data.status = Status.Dead;
 		}
@@ -123,8 +127,7 @@ export class Character {
 
 	public get maxHitPoints() {
 		const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.data.level;
-		const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
-		return Math.round((this.data.maxHitPoints + modifier) * multiplier);
+		return Math.round(this.data.maxHitPoints + modifier);
 	}
 
 	public get defence() {
@@ -333,12 +336,13 @@ export class Character {
 			value *= 2;
 			this.setHitPoints(this.data.hitPoints - value);
 		}
-		if (damage.hitType === HitType.Hit) {
-			this.setHitPoints(this.data.hitPoints - value);
-		}
 		if (damage.hitType === HitType.Miss) {
 			value = 0;
 		}
+		if (value < 0) {
+			value = 0;
+		}
+		this.setHitPoints(this.data.hitPoints - value);
 		return { ...damage, value };
 	}
 
@@ -368,6 +372,7 @@ export class Character {
 			existingStatusEffect.remaining = existingStatusEffect.duration;
 		} else {
 			this.data.activeStatusEffects.push(status);
+			this.aliveCheck();
 		}
 
 		return status;
@@ -412,12 +417,15 @@ export class Character {
 		return action;
 	}
 
-	public tickEffects(action: IAction) {
+	public tickPoison() {
 		if (this.isPoisoned) {
-			const damage = Math.round(this.maxHitPoints / 8);
+			const resistance = this.getResistance(DamageType.Poison) / 100;
+			const damage = Math.round((this.maxHitPoints / 8) * (1 - resistance));
 			this.setHitPoints(this.data.hitPoints - damage);
 		}
+	}
 
+	public tickEffects() {
 		this.data.activeStatusEffects = this.data.activeStatusEffects
 			.filter((effect) => effect.remaining > 0)
 			.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
@@ -426,7 +434,5 @@ export class Character {
 			.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
 
 		this.constitutionCheck();
-
-		return action;
 	}
 }

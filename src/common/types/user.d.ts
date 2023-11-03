@@ -18,15 +18,24 @@ export interface IUserInput {
 	password: string;
 }
 
+export interface IRequestResetPasswordInput {
+	email: string;
+}
+
+export interface IResetPasswordInput {
+	userId: string;
+	token: string;
+	password: string;
+}
+
 export interface RequestUser extends Request {
 	user?: IUserInput;
 }
 
-export interface RequestResetPassword extends Request {
-	email: string;
+export interface RequestRequestResetPassword extends Request {
+	requestResetPassword: IRequestResetPasswordInput;
 }
 
-export interface IUserService {
-	loginUser: (userInput: IUserInput) => Promise<any>;
-	registerUser: (userInput: IUserInput) => Promise<any>;
+export interface RequestResetPassword extends Request {
+	requestResetPassword: IResetPasswordInput;
 }

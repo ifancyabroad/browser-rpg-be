@@ -1,37 +1,36 @@
-import { ObjectId } from "mongodb";
-import mongoose, { Schema } from "mongoose";
-import { BattleState, Status } from "@common/utils/enums/index";
-import { activeEffectSchema, auxiliaryEffectSchema, damageSchema, healSchema, statusEffectSchema } from "./effects";
+import { DamageType, EquipmentSlot, Stat, Status } from "@common/utils";
+import { Model, Schema, Types } from "mongoose";
+import { ISkill, skillSchema } from "./skill.model";
+import { IActiveEffect, IStatusEffect, activeEffectSchema, statusEffectSchema } from "./effects.model";
 
-const actionSchema = new Schema({
-	self: {
-		type: String,
-	},
-	enemy: {
-		type: String,
-	},
-	skill: {
-		type: String,
-	},
-	weaponDamage: [[damageSchema]],
-	damage: [damageSchema],
-	heal: [healSchema],
-	status: [statusEffectSchema],
-	auxiliary: [auxiliaryEffectSchema],
-	activeEffects: [activeEffectSchema],
-});
+export interface IEnemy {
+	id: string;
+	name: string;
+	image: string;
+	status: Status;
+	level: number;
+	challenge: number;
+	skills: Types.DocumentArray<ISkill>;
+	activeStatusEffects: Types.DocumentArray<IStatusEffect>;
+	activeAuxiliaryEffects: Types.DocumentArray<IActiveEffect>;
+	equipment: Record<EquipmentSlot, string | null>;
+	hitPoints: number;
+	maxHitPoints: number;
+	stats: Record<Stat, number>;
+	resistances: Record<DamageType, number>;
+}
 
-const skillSchema = new Schema({
-	id: {
-		type: String,
-	},
-	remaining: {
-		type: Number,
-		min: 0,
-	},
-});
+// Add methods here
+interface IEnemyMethods {
+	// fullName(): string;
+}
 
-const enemySchema = new Schema(
+// Add static methods here
+interface IEnemyModel extends Model<IEnemy, {}, IEnemyMethods> {
+	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
+}
+
+export const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 	{
 		id: {
 			type: String,
@@ -224,42 +223,3 @@ const enemySchema = new Schema(
 	},
 	{ timestamps: true },
 );
-
-const battleSchema = new Schema(
-	{
-		user: {
-			type: ObjectId,
-			ref: "User",
-		},
-		character: {
-			type: ObjectId,
-			ref: "Character",
-		},
-		enemy: {
-			type: enemySchema,
-			required: true,
-		},
-		turns: {
-			type: [[actionSchema]],
-		},
-		state: {
-			type: String,
-			enum: BattleState,
-			default: BattleState.Active,
-		},
-		reward: {
-			gold: {
-				type: Number,
-			},
-			experience: {
-				type: Number,
-			},
-		},
-	},
-	{ timestamps: true },
-);
-
-const BattleModel = mongoose.model("Battle", battleSchema);
-
-export { BattleModel };
-export default BattleModel;

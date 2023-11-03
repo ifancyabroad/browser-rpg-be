@@ -17,7 +17,13 @@ export class UserSigninDto {
 	password: string;
 }
 
-export class UserResetPasswordDto {
+export class UserRequestResetPasswordDto {
 	@IsEmail()
 	email: string;
+}
+
+export class UserResetPasswordDto {
+	@IsString()
+	@MinLength(3)
+	password: string;
 }

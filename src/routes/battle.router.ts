@@ -2,8 +2,7 @@ import { Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "@common/types/user";
-import { Container } from "typedi";
-import { BattleService } from "@services/battleService";
+import { action, getBattle, startBattle } from "@services/battle.service";
 import { RequestAction } from "@common/types/battle";
 
 const battleRouter = Router();
@@ -14,8 +13,7 @@ battleRouter.post(
 	"/start",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const battleService = Container.get(BattleService);
-		const battle = await battleService.startBattle(req.session);
+		const battle = await startBattle(req.session);
 		res.json(battle);
 	}),
 );
@@ -26,8 +24,7 @@ battleRouter.get(
 	"/",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const battleService = Container.get(BattleService);
-		const battle = await battleService.getBattle(req.session);
+		const battle = await getBattle(req.session);
 		res.json(battle);
 	}),
 );
@@ -38,8 +35,7 @@ battleRouter.post(
 	"/action",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestAction, res: Response) => {
-		const battleService = Container.get(BattleService);
-		const battle = await battleService.action(req.body, req.session);
+		const battle = await action(req.body, req.session);
 		res.json(battle);
 	}),
 );
