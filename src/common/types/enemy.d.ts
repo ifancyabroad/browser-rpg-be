@@ -11,7 +11,6 @@ export interface IReward {
 export interface IEnemy extends ICharacter {
 	image: string;
 	challenge: number;
-	battle: Types.ObjectId;
 }
 
 export interface IEnemyMethods extends ICharacterMethods {

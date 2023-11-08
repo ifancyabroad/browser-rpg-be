@@ -31,185 +31,188 @@ import { Game } from "@common/utils/game/Game";
 import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "@common/types/effect";
 import { IAction, ITurnData } from "@common/types/battle";
 
-const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethods>({
-	name: {
-		type: String,
-		required: [true, "Please enter a name"],
-		trim: true,
-		minLength: 3,
-		maxLength: 10,
-	},
-	status: {
-		type: String,
-		enum: Status,
-		default: Status.Alive,
-	},
-	level: {
-		type: Number,
-		min: 1,
-		max: 30,
-		default: 1,
-	},
-	activeStatusEffects: {
-		type: [statusEffectSchema],
-	},
-	activeAuxiliaryEffects: {
-		type: [activeEffectSchema],
-	},
-	skillIDs: {
-		type: [skillSchema],
-	},
-	equipmentIDs: {
-		head: {
+const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethods>(
+	{
+		name: {
 			type: String,
-			default: null,
+			required: [true, "Please enter a name"],
+			trim: true,
+			minLength: 3,
+			maxLength: 10,
 		},
-		neck: {
+		status: {
 			type: String,
-			default: null,
+			enum: Status,
+			default: Status.Alive,
 		},
-		body: {
-			type: String,
-			default: null,
-		},
-		waist: {
-			type: String,
-			default: null,
-		},
-		hands: {
-			type: String,
-			default: null,
-		},
-		feet: {
-			type: String,
-			default: null,
-		},
-		finger1: {
-			type: String,
-			default: null,
-		},
-		finger2: {
-			type: String,
-			default: null,
-		},
-		hand1: {
-			type: String,
-			default: null,
-		},
-		hand2: {
-			type: String,
-			default: null,
-		},
-	},
-	baseHitPoints: {
-		type: Number,
-		required: true,
-	},
-	baseMaxHitPoints: {
-		type: Number,
-		required: true,
-	},
-	baseStats: {
-		strength: {
+		level: {
 			type: Number,
 			min: 1,
 			max: 30,
+			default: 1,
+		},
+		activeStatusEffects: {
+			type: [statusEffectSchema],
+		},
+		activeAuxiliaryEffects: {
+			type: [activeEffectSchema],
+		},
+		skillIDs: {
+			type: [skillSchema],
+		},
+		equipmentIDs: {
+			head: {
+				type: String,
+				default: null,
+			},
+			neck: {
+				type: String,
+				default: null,
+			},
+			body: {
+				type: String,
+				default: null,
+			},
+			waist: {
+				type: String,
+				default: null,
+			},
+			hands: {
+				type: String,
+				default: null,
+			},
+			feet: {
+				type: String,
+				default: null,
+			},
+			finger1: {
+				type: String,
+				default: null,
+			},
+			finger2: {
+				type: String,
+				default: null,
+			},
+			hand1: {
+				type: String,
+				default: null,
+			},
+			hand2: {
+				type: String,
+				default: null,
+			},
+		},
+		baseHitPoints: {
+			type: Number,
 			required: true,
 		},
-		dexterity: {
+		baseMaxHitPoints: {
 			type: Number,
-			min: 1,
-			max: 30,
 			required: true,
 		},
-		constitution: {
-			type: Number,
-			min: 1,
-			max: 30,
-			required: true,
+		baseStats: {
+			strength: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
+			dexterity: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
+			constitution: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
+			intelligence: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
+			wisdom: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
+			charisma: {
+				type: Number,
+				min: 1,
+				max: 30,
+				required: true,
+			},
 		},
-		intelligence: {
-			type: Number,
-			min: 1,
-			max: 30,
-			required: true,
-		},
-		wisdom: {
-			type: Number,
-			min: 1,
-			max: 30,
-			required: true,
-		},
-		charisma: {
-			type: Number,
-			min: 1,
-			max: 30,
-			required: true,
+		baseResistances: {
+			slashing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			crushing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			piercing: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			cold: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			fire: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			lightning: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			radiant: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			necrotic: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			poison: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
+			acid: {
+				type: Number,
+				min: -100,
+				max: 100,
+				default: 0,
+			},
 		},
 	},
-	baseResistances: {
-		slashing: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		crushing: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		piercing: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		cold: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		fire: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		lightning: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		radiant: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		necrotic: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		poison: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-		acid: {
-			type: Number,
-			min: -100,
-			max: 100,
-			default: 0,
-		},
-	},
-});
+	{ timestamps: true },
+);
 
 characterSchema.virtual("alive").get(function () {
 	return this.hitPoints > 0;

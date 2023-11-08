@@ -42,13 +42,13 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		const characterRecord = await HeroModel.create({
 			user: user.id,
 			name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
-			characterClass,
-			skills,
-			equipment: classData.equipment,
-			availableItems,
+			characterClassID: characterClass,
+			skillIDs: skills,
+			equipmentIDs: classData.equipment,
+			availableItemIDs: availableItems,
 			baseStats: classData.stats,
-			hitPoints,
-			maxHitPoints: hitPoints,
+			baseHitPoints: hitPoints,
+			baseMaxHitPoints: hitPoints,
 		});
 
 		return characterRecord.toJSON({ virtuals: true });

@@ -8,6 +8,7 @@ import { IBattleInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
+import { IEnemy, IEnemyMethods } from "@common/types/enemy";
 
 export async function startBattle(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -22,7 +23,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const battleRecord = await BattleModel.findOne({
-			character: characterRecord.id,
+			hero: characterRecord.id,
 			state: BattleState.Active,
 		});
 		if (battleRecord) {
@@ -39,31 +40,31 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
 
 		const enemy = await EnemyModel.create({
-			battle: battleRecord.id,
 			name: enemyData.name,
 			image: enemyData.portrait,
 			level,
 			challenge: enemyData.challenge,
-			skills,
-			equipment,
+			skillIDs: skills,
+			equipmentIDs: equipment,
 			baseStats: enemyData.stats,
 			baseResistances: enemyData.resistances,
-			hitPoints,
-			maxHitPoints: hitPoints,
+			baseHitPoints: hitPoints,
+			baseMaxHitPoints: hitPoints,
 		});
 
 		const battle = await BattleModel.create({
 			user: user.id,
-			character: characterRecord.id,
+			hero: characterRecord.id,
 			enemy: enemy.id,
 		});
+
+		await battle.populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
 
 		characterRecord.state = State.Battle;
 		const character = await characterRecord.save();
 
 		return {
-			battle: battle.toJSON(),
-			enemy: enemy.toJSON({ virtuals: true }),
+			battle: battle.toJSON({ virtuals: true }),
 			character: character.toJSON({ virtuals: true }),
 		};
 	} catch (error) {
@@ -85,18 +86,15 @@ export async function getBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const battleRecord = await BattleModel.findOne({
-			character: characterRecord.id,
+			hero: characterRecord.id,
 			state: BattleState.Active,
-		});
+		}).populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
 		if (!battleRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 		}
 
-		const enemyRecord = await EnemyModel.findById(battleRecord.enemy);
-
 		return {
-			battle: battleRecord.toJSON(),
-			enemy: enemyRecord.toJSON({ virtuals: true }),
+			battle: battleRecord.toJSON({ virtuals: true }),
 			character: characterRecord.toJSON({ virtuals: true }),
 		};
 	} catch (error) {
@@ -119,48 +117,44 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		}
 
 		const battleRecord = await BattleModel.findOne({
-			character: characterRecord.id,
+			hero: characterRecord.id,
 			state: BattleState.Active,
-		});
+		}).populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
 		if (!battleRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
 		}
 
-		const enemyRecord = await EnemyModel.findById(battleRecord.enemy);
-
 		const turn = battleRecord.handleTurn(
 			{
 				self: characterRecord,
-				enemy: enemyRecord,
+				enemy: battleRecord.enemy,
 				skill: id,
 			},
 			{
-				self: enemyRecord,
+				self: battleRecord.enemy,
 				enemy: characterRecord,
-				skill: enemyRecord.getSkill(characterRecord).id,
+				skill: battleRecord.enemy.getSkill(characterRecord).id,
 			},
 		);
 
 		battleRecord.turns.push(turn);
 
 		if (!characterRecord.alive) {
-			characterRecord.battleLost(enemyRecord.name);
+			characterRecord.battleLost(battleRecord.enemy.name);
 			battleRecord.state = BattleState.Lost;
 		}
 
-		if (characterRecord.alive && !enemyRecord.alive) {
-			characterRecord.battleWon(enemyRecord.reward);
-			battleRecord.reward = enemyRecord.reward;
+		if (characterRecord.alive && !battleRecord.enemy.alive) {
+			characterRecord.battleWon(battleRecord.enemy.reward);
+			battleRecord.reward = battleRecord.enemy.reward;
 			battleRecord.state = BattleState.Won;
 		}
 
-		const battle = await battleRecord.save();
-		const enemy = await enemyRecord.save();
 		const character = await characterRecord.save();
+		const battle = await battleRecord.save();
 
 		return {
-			battle: battle.toJSON(),
-			enemy: enemy.toJSON({ virtuals: true }),
+			battle: battle.toJSON({ virtuals: true }),
 			character: character.toJSON({ virtuals: true }),
 		};
 	} catch (error) {

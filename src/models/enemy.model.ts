@@ -5,6 +5,10 @@ import { IHero } from "@common/types/hero";
 import { EffectType, Target, getRandomElement } from "@common/utils";
 
 const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>({
+	name: {
+		type: String,
+		required: true,
+	},
 	image: {
 		type: String,
 		required: true,
