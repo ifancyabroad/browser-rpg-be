@@ -1,45 +1,53 @@
-import { AuxiliaryEffect, DamageType, EffectType, Stat, Target } from "@common/utils/enums";
-import { TProperty } from "./property";
-
-export interface IWeaponDamageEffect {
-	type: EffectType.WeaponDamage;
-	target: Target;
-	multiplier: number;
-}
+import { AuxiliaryEffect, HitType, PropertyType, Stat, Target } from "@common/utils/enums";
+import { Types } from "mongoose";
 
 export interface IDamageEffect {
-	type: EffectType.Damage;
+	type: string;
+	value: number;
+	hitType: HitType;
 	target: Target;
-	damageType: DamageType;
-	min: number;
-	max: number;
 }
 
 export interface IHealEffect {
-	type: EffectType.Heal;
+	value: number;
 	target: Target;
-	min: number;
-	max: number;
+}
+
+export interface IProperty {
+	type: PropertyType;
+	name: string;
+	value: number;
+}
+
+export interface IStatusEffectSkill {
+	id: string;
+	name: string;
+	icon: string;
 }
 
 export interface IStatusEffect {
-	type: EffectType.Status;
+	skill: IStatusEffectSkill;
 	target: Target;
-	modifier?: Stat;
-	difficulty?: number;
+	properties: Types.DocumentArray<IProperty>;
+	remaining: number;
 	duration: number;
-	properties?: TProperty[];
+	modifier: Stat;
+	difficulty: number;
+	saved: boolean;
 }
 
 export interface IAuxiliaryEffect {
-	type: EffectType.Auxiliary;
+	skill: IStatusEffectSkill;
 	target: Target;
-	modifier?: Stat;
-	difficulty?: number;
-	duration: number;
 	effect: AuxiliaryEffect;
+	remaining: number;
+	duration: number;
+	modifier: Stat;
+	difficulty: number;
+	saved: boolean;
 }
 
-export type ISkillEffect = IWeaponDamageEffect | IDamageEffect | IHealEffect | IStatusEffect | IAuxiliaryEffect;
-
-export type IWeaponEffect = IDamageEffect | IStatusEffect | IAuxiliaryEffect;
+export interface IActiveAuxiliaryEffect {
+	effect: AuxiliaryEffect;
+	remaining: number;
+}

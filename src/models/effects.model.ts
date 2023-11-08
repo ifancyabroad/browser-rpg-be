@@ -1,15 +1,16 @@
+import {
+	IActiveAuxiliaryEffect,
+	IAuxiliaryEffect,
+	IDamageEffect,
+	IHealEffect,
+	IProperty,
+	IStatusEffect,
+} from "@common/types/effect";
 import { AuxiliaryEffect, HitType, PropertyType, Stat, Target } from "@common/utils";
-import { Model, Schema, Types } from "mongoose";
+import { Model, Schema } from "mongoose";
 
 // Allow empty strings to pass `required` check
 Schema.Types.String.checkRequired((v) => v != null);
-
-export interface IDamageEffect {
-	type: string;
-	value: number;
-	hitType: HitType;
-	target: Target;
-}
 
 export const damageSchema = new Schema<IDamageEffect, Model<IDamageEffect>>({
 	type: {
@@ -32,11 +33,6 @@ export const damageSchema = new Schema<IDamageEffect, Model<IDamageEffect>>({
 	},
 });
 
-export interface IHealEffect {
-	value: number;
-	target: Target;
-}
-
 export const healSchema = new Schema<IHealEffect, Model<IHealEffect>>({
 	value: {
 		type: Number,
@@ -48,12 +44,6 @@ export const healSchema = new Schema<IHealEffect, Model<IHealEffect>>({
 		required: true,
 	},
 });
-
-export interface IProperty {
-	type: PropertyType;
-	name: string;
-	value: number;
-}
 
 const propertySchema = new Schema<IProperty, Model<IProperty>>({
 	type: {
@@ -70,23 +60,6 @@ const propertySchema = new Schema<IProperty, Model<IProperty>>({
 		required: true,
 	},
 });
-
-export interface IStatusEffectSkill {
-	id: string;
-	name: string;
-	icon: string;
-}
-
-export interface IStatusEffect {
-	skill: IStatusEffectSkill;
-	target: Target;
-	properties: Types.DocumentArray<IProperty>;
-	remaining: number;
-	duration: number;
-	modifier: Stat;
-	difficulty: number;
-	saved: boolean;
-}
 
 export const statusEffectSchema = new Schema<IStatusEffect, Model<IStatusEffect>>({
 	skill: {
@@ -131,17 +104,6 @@ export const statusEffectSchema = new Schema<IStatusEffect, Model<IStatusEffect>
 		required: true,
 	},
 });
-
-export interface IAuxiliaryEffect {
-	skill: IStatusEffectSkill;
-	target: Target;
-	effect: AuxiliaryEffect;
-	remaining: number;
-	duration: number;
-	modifier: Stat;
-	difficulty: number;
-	saved: boolean;
-}
 
 export const auxiliaryEffectSchema = new Schema<IAuxiliaryEffect, Model<IAuxiliaryEffect>>({
 	skill: {
@@ -189,12 +151,7 @@ export const auxiliaryEffectSchema = new Schema<IAuxiliaryEffect, Model<IAuxilia
 	},
 });
 
-export interface IActiveEffect {
-	effect: AuxiliaryEffect;
-	remaining: number;
-}
-
-export const activeEffectSchema = new Schema<IActiveEffect, Model<IActiveEffect>>({
+export const activeEffectSchema = new Schema<IActiveAuxiliaryEffect, Model<IActiveAuxiliaryEffect>>({
 	effect: {
 		type: String,
 		enum: AuxiliaryEffect,

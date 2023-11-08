@@ -14,7 +14,6 @@
 		"baseUrl": "src",
 		"paths": {
 			"@common/*": ["common/*"],
-			"@game/*": ["game/*"],
 			"@middleware/*": ["middleware/*"],
 			"@models/*": ["models/*"],
 			"@routes/*": ["routes/*"],

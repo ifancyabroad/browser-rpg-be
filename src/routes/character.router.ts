@@ -12,7 +12,7 @@ import {
 } from "@services/character.service";
 import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
-import { GameData } from "@game/GameData";
+import { GameData } from "@common/utils/game/GameData";
 
 const characterRouter = Router();
 

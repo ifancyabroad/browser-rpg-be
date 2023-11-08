@@ -1,33 +1,15 @@
-import { ObjectId } from "mongodb";
-import { Model, Schema, Types, model } from "mongoose";
-import { BattleState, Status } from "@common/utils/enums/index";
+import { Model, Schema, model } from "mongoose";
+import { BattleState, Target } from "@common/utils/enums/index";
 import {
-	IActiveEffect,
-	IAuxiliaryEffect,
-	IDamageEffect,
-	IHealEffect,
-	IStatusEffect,
 	activeEffectSchema,
 	auxiliaryEffectSchema,
 	damageSchema,
 	healSchema,
 	statusEffectSchema,
 } from "./effects.model";
-import { IEnemy, enemySchema } from "./enemy.model";
+import { IAction, IBattle, IBattleMethods, IBattleModel, ITurnData } from "@common/types/battle";
 
-interface IAction {
-	self: string;
-	enemy: string;
-	skill: string;
-	weaponDamage: Types.DocumentArray<IDamageEffect>[];
-	damage: Types.DocumentArray<IDamageEffect>;
-	heal: Types.DocumentArray<IHealEffect>;
-	status: Types.DocumentArray<IStatusEffect>;
-	auxiliary: Types.DocumentArray<IAuxiliaryEffect>;
-	activeEffects: Types.DocumentArray<IActiveEffect>;
-}
-
-const actionSchema = new Schema<IAction>({
+const actionSchema = new Schema<IAction, Model<IAction>>({
 	self: {
 		type: String,
 		required: true,
@@ -48,33 +30,19 @@ const actionSchema = new Schema<IAction>({
 	activeEffects: [activeEffectSchema],
 });
 
-interface IReward {
-	gold: number;
-	experience: number;
-}
-
-interface IBattle {
-	user: Types.ObjectId;
-	character: Types.ObjectId;
-	enemy: IEnemy;
-	turns: Types.DocumentArray<IAction>[];
-	state: BattleState;
-	reward: IReward;
-}
-
-const battleSchema = new Schema<IBattle, Model<IBattle>>(
+const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 	{
 		user: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
 		},
-		character: {
+		hero: {
 			type: Schema.Types.ObjectId,
-			ref: "Character",
+			ref: "Hero",
 		},
 		enemy: {
-			type: enemySchema,
-			required: true,
+			type: Schema.Types.ObjectId,
+			ref: "Enemy",
 		},
 		turns: {
 			type: [[actionSchema]],
@@ -96,7 +64,35 @@ const battleSchema = new Schema<IBattle, Model<IBattle>>(
 	{ timestamps: true },
 );
 
-const BattleModel = model<IBattle, Model<IBattle>>("Battle", battleSchema);
+battleSchema.method("handleAction", function handleAction(first: ITurnData, second: ITurnData) {
+	const turn: IAction[] = [];
+	[first, second].forEach((data) => {
+		if (data.self.vAlive && data.enemy.vAlive) {
+			const action = data.self.createAction(data);
+			const actionSelf = data.self.handleAction(action, Target.Self);
+			const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);
+			turn.push(actionEnemy);
+
+			data.self.tickPoison();
+			data.self.tickEffects();
+		}
+	});
+	return turn;
+});
+
+battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
+	let turn: IAction[];
+
+	if (hero.self.stats.dexterity >= enemy.self.stats.dexterity) {
+		turn = this.handleAction(hero, enemy);
+	} else {
+		turn = this.handleAction(enemy, hero);
+	}
+
+	return turn;
+});
+
+const BattleModel = model<IBattle, IBattleModel>("Battle", battleSchema);
 
 export { BattleModel };
 export default BattleModel;

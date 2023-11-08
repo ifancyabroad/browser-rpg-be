@@ -1,14 +1,16 @@
 import {
 	ArmourType,
+	AuxiliaryEffect,
 	DamageType,
+	EffectType,
 	EquipmentSlot,
 	EquipmentType,
 	SkillClass,
 	Stat,
+	Target,
 	WeaponSize,
 	WeaponType,
 } from "@common/utils";
-import { ISkillEffect, IWeaponEffect } from "./effect";
 import { TProperty } from "./property";
 
 export type TStats = Record<Stat, number>;
@@ -37,6 +39,54 @@ export interface IClassData {
 	stats: TStats;
 	equipment?: Partial<TEquipment>;
 }
+
+export interface IWeaponDamageEffectData {
+	type: EffectType.WeaponDamage;
+	target: Target;
+	multiplier: number;
+}
+
+export interface IDamageEffectData {
+	type: EffectType.Damage;
+	target: Target;
+	damageType: DamageType;
+	min: number;
+	max: number;
+}
+
+export interface IHealEffectData {
+	type: EffectType.Heal;
+	target: Target;
+	min: number;
+	max: number;
+}
+
+export interface IStatusEffectData {
+	type: EffectType.Status;
+	target: Target;
+	modifier?: Stat;
+	difficulty?: number;
+	duration: number;
+	properties?: TProperty[];
+}
+
+export interface IAuxiliaryEffectData {
+	type: EffectType.Auxiliary;
+	target: Target;
+	modifier?: Stat;
+	difficulty?: number;
+	duration: number;
+	effect: AuxiliaryEffect;
+}
+
+export type ISkillEffect =
+	| IWeaponDamageEffectData
+	| IDamageEffectData
+	| IHealEffectData
+	| IStatusEffectData
+	| IAuxiliaryEffectData;
+
+export type IWeaponEffect = IDamageEffectData | IStatusEffectData | IAuxiliaryEffectData;
 
 export interface ISkillData {
 	class: SkillClass;
@@ -84,3 +134,30 @@ export interface IGameData {
 	skills: Record<string, ISkillData>;
 	weapons: Record<string, IWeaponData>;
 }
+
+export interface IEnemyDataWithID extends IEnemyData {
+	id: string;
+}
+
+export interface ISkillDataWithID extends ISkillData {
+	id: string;
+}
+
+export interface ISkillDataWithRemaining extends ISkillData {
+	id: string;
+	remaining: number;
+}
+
+export interface IClassDataWithID extends IClassData {
+	id: string;
+}
+
+export interface IWeaponDataWithID extends IWeaponData {
+	id: string;
+}
+
+export interface IArmourDataWithID extends IArmourData {
+	id: string;
+}
+
+export type TEquipmentDataWithID = IWeaponDataWithID | IArmourDataWithID;

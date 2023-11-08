@@ -1,80 +1,104 @@
 import { Request } from "express";
-import { Session, SessionData } from "express-session";
-import { EquipmentSlot, Stat, State, Status } from "@common/utils/enums/index";
-import { IActiveEffect, IStatus } from "./battle";
-import { Document } from "mongoose";
+import {
+	AuxiliaryStat,
+	DamageType,
+	EquipmentSlot,
+	HitType,
+	PropertyType,
+	Stat,
+	Status,
+	Target,
+} from "@common/utils/enums/index";
+import { Model, Types } from "mongoose";
+import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
+import {
+	IAuxiliaryEffectData,
+	IDamageEffectData,
+	IHealEffectData,
+	ISkillDataWithID,
+	ISkillDataWithRemaining,
+	IStatusEffectData,
+	IWeaponDamageEffectData,
+	IWeaponDataWithID,
+	TDamageTypes,
+	TEquipment,
+	TEquipmentDataWithID,
+	TStats,
+} from "./gameData";
+import { IAction, ITurnData } from "./battle";
 
 export interface ISkill {
 	id: string;
 	remaining: number;
 }
 
-export interface IStats {
-	strength: number;
-	dexterity: number;
-	constitution: number;
-	intelligence: number;
-	wisdom: number;
-	charisma: number;
-}
-
-export interface IResistances {
-	slashing: number;
-	crushing: number;
-	piercing: number;
-	cold: number;
-	fire: number;
-	lighting: number;
-	radiant: number;
-	necrotic: number;
-	poison: number;
-	acid: number;
-}
-
-export interface IEquipment {
-	[EquipmentSlot.Head]: string | null;
-	[EquipmentSlot.Neck]: string | null;
-	[EquipmentSlot.Body]: string | null;
-	[EquipmentSlot.Waist]: string | null;
-	[EquipmentSlot.Hands]: string | null;
-	[EquipmentSlot.Feet]: string | null;
-	[EquipmentSlot.Finger1]: string | null;
-	[EquipmentSlot.Finger2]: string | null;
-	[EquipmentSlot.Hand1]: string | null;
-	[EquipmentSlot.Hand2]: string | null;
-}
-
-export interface ILevelUp {
-	level: number;
-	skills: string[];
-}
-
-export interface ICharacter extends Document {
-	id: string;
+export interface ICharacter {
 	name: string;
 	status: Status;
 	level: number;
-	skills: ISkill[];
-	equipment: IEquipment;
+	activeStatusEffects: Types.DocumentArray<IStatusEffect>;
+	activeAuxiliaryEffects: Types.DocumentArray<IActiveAuxiliaryEffect>;
+	skills: Types.DocumentArray<ISkill>;
+	equipment: TEquipment;
 	hitPoints: number;
 	maxHitPoints: number;
-	stats: IStats;
-	resistances: IResistances;
-	activeStatusEffects: IStatus[];
-	activeAuxiliaryEffects: IActiveEffect[];
+	stats: TStats;
+	resistances: TDamageTypes;
 }
 
-export interface IHero extends ICharacter {
-	user: string;
-	characterClass: string;
-	state: State;
-	experience: number;
-	gold: number;
-	day: number;
-	kills: number;
-	slainBy?: string;
-	availableItems: string[];
-	levelUp?: ILevelUp;
+export interface ICharacterMethods {
+	// Add virtuals here
+	get vAlive(): boolean;
+	get vSkills(): Types.DocumentArray<ISkillDataWithRemaining>;
+	get vStats(): TStats;
+	get vResistances(): TDamageTypes;
+	get vEquipment(): Record<EquipmentSlot, TEquipmentDataWithID>;
+	get vEquipmentAsArray(): TEquipmentDataWithID[];
+	get vWeaponsAsArray(): IWeaponDataWithID[];
+	get vHitPoints(): number;
+	get vMaxHitPoints(): number;
+	get vDefence(): number;
+	get vHitBonus(): number;
+	get vCritBonus(): number;
+	get vIsStunned(): boolean;
+	get vIsPoisoned(): boolean;
+	get vIsDisarmed(): boolean;
+	get vIsBleeding(): boolean;
+
+	// Add methods here
+	getEquipmentDefence(): number;
+	getEquipmentBonus(type: PropertyType, name: string): number;
+	getActiveEffectBonus(type: string, name: string): number;
+	getAttribute(stat: Stat): number;
+	getDamageBonus(type: DamageType): number;
+	getResistance(type: DamageType): number;
+	getAuxiliaryStat(type: AuxiliaryStat): number;
+	getHitType(): HitType;
+	setHitPoints(value: number): void;
+	getUnarmedDamage(effect: IWeaponDamageEffectData): number;
+	getWeaponDamage(weapon: IWeaponDataWithID, effect: IWeaponDamageEffectData): IDamageEffect;
+	getWeaponsDamage(effect: IWeaponDamageEffectData): IDamageEffect[];
+	getDamage(effect: IDamageEffectData): IDamageEffect;
+	getHeal(effect: IHealEffectData): IHealEffect;
+	getStatus(effect: IStatusEffectData, skill: ISkillDataWithID): IStatusEffect;
+	getAuxiliary(effect: IAuxiliaryEffectData, skill: ISkillDataWithID): IAuxiliaryEffect;
+	createAction(data: ITurnData): IAction;
+	handleWeaponDamage(damage: IDamageEffect): IDamageEffect;
+	handleDamage(damage: IDamageEffect): IDamageEffect;
+	handleHeal(heal: IHealEffect): IHealEffect;
+	handleStatus(status: IStatusEffect): IStatusEffect;
+	handleAuxiliary(auxiliary: IAuxiliaryEffect): IAuxiliaryEffect;
+	handleAction(action: IAction, target: Target): IAction;
+	tickPoison(): void;
+	tickEffects(): void;
+
+	checkAlive(): void;
+	checkConstitution(): void;
+}
+
+// Add static methods here
+export interface ICharacterModel extends Model<ICharacter, {}, ICharacterMethods> {
+	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
 }
 
 export interface ICharacterInput {
@@ -103,10 +127,4 @@ export interface ILevelUpInput {
 
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
-}
-
-export interface ICharacterService {
-	getActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
-	retireActiveCharacter: (session: Session & Partial<SessionData>) => Promise<any>;
-	createCharacter: (characterInput: ICharacterInput, session: Session & Partial<SessionData>) => Promise<any>;
 }

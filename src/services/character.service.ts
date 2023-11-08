@@ -3,17 +3,16 @@ import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
 import { State, Status } from "@common/utils/enums/index";
-import { GameData } from "@game/GameData";
-import { Hero } from "@game/Hero";
-import { Game } from "@game/Game";
-import CharacterModel from "@models/character.model";
+import { GameData } from "@common/utils/game/GameData";
+import { Game } from "@common/utils/game/Game";
+import HeroModel from "@models/hero.model";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const characterRecord = await CharacterModel.findOne({ user: user.id, status: Status.Alive });
+		const characterRecord = await HeroModel.findOne({ user: user.id, status: Status.Alive });
 		if (characterRecord) {
-			return new Hero(characterRecord.toObject()).characterJSON;
+			return characterRecord.toJSON({ virtuals: true });
 		}
 
 		return null;
@@ -27,7 +26,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 	const { name, characterClass } = characterInput;
 	const { user } = session;
 	try {
-		const characters = await CharacterModel.find({ user: user.id, status: Status.Alive });
+		const characters = await HeroModel.find({ user: user.id, status: Status.Alive });
 		if (characters.length) {
 			throw createHttpError(httpStatus.BAD_REQUEST, `An active character already exists`);
 		}
@@ -40,7 +39,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getShopItems(characterClass, 1);
 
-		const characterRecord = await CharacterModel.create({
+		const characterRecord = await HeroModel.create({
 			user: user.id,
 			name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
 			characterClass,
@@ -52,7 +51,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			maxHitPoints: hitPoints,
 		});
 
-		return new Hero(characterRecord.toObject()).characterJSON;
+		return characterRecord.toJSON({ virtuals: true });
 	} catch (error) {
 		console.error(`Error createCharacter: ${error.message}`);
 		throw error;
@@ -62,7 +61,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 export async function retireActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const characterRecord = await CharacterModel.findOneAndUpdate(
+		const characterRecord = await HeroModel.findOneAndUpdate(
 			{ user: user.id, status: Status.Alive, state: State.Idle },
 			{ status: Status.Retired },
 			{ new: true },
@@ -71,7 +70,7 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 			throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 		}
 
-		return new Hero(characterRecord.toObject()).characterJSON;
+		return characterRecord.toJSON({ virtuals: true });
 	} catch (error) {
 		console.error(`Error retireActiveCharacter: ${error.message}`);
 		throw error;
@@ -82,20 +81,19 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 	const { id, slot } = item;
 	const { user } = session;
 	try {
-		const character = await CharacterModel.findOne({
+		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
 			state: State.Idle,
 		});
-		if (!character) {
+		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy item");
 		}
 
-		const hero = new Hero(character.toObject());
-		hero.buyItem(id, slot);
-		await character.updateOne({ $set: hero.data }, { new: true });
+		characterRecord.buyItem(id, slot);
+		const character = await characterRecord.save();
 
-		return hero.characterJSON;
+		return character.toJSON({ virtuals: true });
 	} catch (error) {
 		console.error(`Error buyItem: ${error.message}`);
 		throw error;
@@ -105,20 +103,19 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 export async function rest(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const character = await CharacterModel.findOne({
+		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
 			state: State.Idle,
 		});
-		if (!character) {
+		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
 		}
 
-		const hero = new Hero(character.toObject());
-		hero.rest();
-		await character.updateOne({ $set: hero.data }, { new: true });
+		characterRecord.rest();
+		const character = await characterRecord.save();
 
-		return hero.characterJSON;
+		return character.toJSON({ virtuals: true });
 	} catch (error) {
 		console.error(`Error rest: ${error.message}`);
 		throw error;
@@ -129,20 +126,19 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 	const { stat, skill } = levelUp;
 	const { user } = session;
 	try {
-		const character = await CharacterModel.findOne({
+		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
 			state: State.Idle,
 		});
-		if (!character) {
+		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to level up");
 		}
 
-		const hero = new Hero(character.toObject());
-		hero.levelUp(stat, skill);
-		await character.updateOne({ $set: hero.data }, { new: true });
+		characterRecord.addLevel(stat, skill);
+		const character = await characterRecord.save();
 
-		return hero.characterJSON;
+		return character.toJSON({ virtuals: true });
 	} catch (error) {
 		console.error(`Error levelUp: ${error.message}`);
 		throw error;

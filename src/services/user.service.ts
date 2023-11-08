@@ -121,7 +121,7 @@ export async function resetPassword(resetPasswordInput: IResetPasswordInput) {
 
 		await UserModel.updateOne({ _id: userId }, { $set: { password: encryptPass } }, { new: true });
 
-		const user = await UserModel.findById({ _id: userId });
+		const user = await UserModel.findById(userId);
 
 		sendMail({
 			from: "noreply@browserheroes.com",

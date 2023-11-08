@@ -1,6 +1,5 @@
 import { DAMAGE_TYPE_MODIFIER_MAP, MODIFIERS, WEAPON_MODIFIER_MAP } from "@common/utils/constants";
-import { DamageType, Target, WeaponType } from "@common/utils/enums";
-import { IAction, ITurnData } from "@common/types/battle";
+import { DamageType, WeaponType } from "@common/utils/enums";
 
 export class Game {
 	public static get d4() {
@@ -49,33 +48,5 @@ export class Game {
 			hitPoints += this.d10;
 		}
 		return hitPoints;
-	}
-
-	public static handleAction(first: ITurnData, second: ITurnData) {
-		const turn: IAction[] = [];
-		[first, second].forEach((data) => {
-			if (data.self.alive && data.enemy.alive) {
-				const action = data.self.createAction(data);
-				const actionSelf = data.self.handleAction(action, Target.Self);
-				const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);
-				turn.push(actionEnemy);
-
-				data.self.tickPoison();
-				data.self.tickEffects();
-			}
-		});
-		return turn;
-	}
-
-	public static handleTurn(hero: ITurnData, enemy: ITurnData) {
-		let turn: IAction[];
-
-		if (hero.self.stats.dexterity >= enemy.self.stats.dexterity) {
-			turn = this.handleAction(hero, enemy);
-		} else {
-			turn = this.handleAction(enemy, hero);
-		}
-
-		return turn;
 	}
 }

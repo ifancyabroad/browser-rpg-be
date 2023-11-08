@@ -1,7 +1,7 @@
-import { IArmourData, IGameData, IWeaponData } from "@common/types/gameData";
+import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
-import { IEquipment, ISkill } from "@common/types/character";
+import { ISkill } from "@common/types/character";
 import { EQUIPMENT_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot } from "@common/utils/enums";
 
@@ -109,7 +109,7 @@ export class GameData {
 		}
 	}
 
-	public static populateEquipment(equipment: Partial<IEquipment>) {
+	public static populateEquipment(equipment: Partial<TEquipment>) {
 		const equipmentArray = Object.entries(equipment).map(([k, v]) =>
 			v ? [k, { id: v, ...this.getEquipmentById(v) }] : [k, v],
 		);
