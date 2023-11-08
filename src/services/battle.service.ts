@@ -46,8 +46,8 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			challenge: enemyData.challenge,
 			skills,
 			equipment,
-			stats: enemyData.stats,
-			resistances: enemyData.resistances,
+			baseStats: enemyData.stats,
+			baseResistances: enemyData.resistances,
 			hitPoints,
 			maxHitPoints: hitPoints,
 		});
@@ -143,14 +143,14 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		battleRecord.turns.push(turn);
 
-		if (!characterRecord.vAlive) {
+		if (!characterRecord.alive) {
 			characterRecord.battleLost(enemyRecord.name);
 			battleRecord.state = BattleState.Lost;
 		}
 
-		if (characterRecord.vAlive && !enemyRecord.vAlive) {
-			characterRecord.battleWon(enemyRecord.vReward);
-			battleRecord.reward = enemyRecord.vReward;
+		if (characterRecord.alive && !enemyRecord.alive) {
+			characterRecord.battleWon(enemyRecord.reward);
+			battleRecord.reward = enemyRecord.reward;
 			battleRecord.state = BattleState.Won;
 		}
 

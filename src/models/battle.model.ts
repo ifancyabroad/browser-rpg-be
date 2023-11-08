@@ -67,7 +67,7 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 battleSchema.method("handleAction", function handleAction(first: ITurnData, second: ITurnData) {
 	const turn: IAction[] = [];
 	[first, second].forEach((data) => {
-		if (data.self.vAlive && data.enemy.vAlive) {
+		if (data.self.alive && data.enemy.alive) {
 			const action = data.self.createAction(data);
 			const actionSelf = data.self.handleAction(action, Target.Self);
 			const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);

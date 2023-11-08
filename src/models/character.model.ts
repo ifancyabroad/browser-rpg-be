@@ -56,10 +56,10 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 	activeAuxiliaryEffects: {
 		type: [activeEffectSchema],
 	},
-	skills: {
+	skillIDs: {
 		type: [skillSchema],
 	},
-	equipment: {
+	equipmentIDs: {
 		head: {
 			type: String,
 			default: null,
@@ -101,15 +101,15 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 			default: null,
 		},
 	},
-	hitPoints: {
+	baseHitPoints: {
 		type: Number,
 		required: true,
 	},
-	maxHitPoints: {
+	baseMaxHitPoints: {
 		type: Number,
 		required: true,
 	},
-	stats: {
+	baseStats: {
 		strength: {
 			type: Number,
 			min: 1,
@@ -147,7 +147,7 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 			required: true,
 		},
 	},
-	resistances: {
+	baseResistances: {
 		slashing: {
 			type: Number,
 			min: -100,
@@ -211,15 +211,15 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 	},
 });
 
-characterSchema.virtual("vAlive").get(function () {
+characterSchema.virtual("alive").get(function () {
 	return this.hitPoints > 0;
 });
 
-characterSchema.virtual("vSkills").get(function () {
-	return GameData.populateSkills(this.skills);
+characterSchema.virtual("skills").get(function () {
+	return GameData.populateSkills(this.skillIDs);
 });
 
-characterSchema.virtual("vStats").get(function () {
+characterSchema.virtual("stats").get(function () {
 	return {
 		[Stat.Strength]: this.getAttribute(Stat.Strength),
 		[Stat.Dexterity]: this.getAttribute(Stat.Dexterity),
@@ -230,7 +230,7 @@ characterSchema.virtual("vStats").get(function () {
 	};
 });
 
-characterSchema.virtual("vResistances").get(function () {
+characterSchema.virtual("resistances").get(function () {
 	return {
 		[DamageType.Crushing]: this.getResistance(DamageType.Crushing),
 		[DamageType.Piercing]: this.getResistance(DamageType.Piercing),
@@ -245,66 +245,66 @@ characterSchema.virtual("vResistances").get(function () {
 	};
 });
 
-characterSchema.virtual("vEquipment").get(function () {
-	return GameData.populateEquipment(this.equipment);
+characterSchema.virtual("equipment").get(function () {
+	return GameData.populateEquipment(this.equipmentIDs);
 });
 
-characterSchema.virtual("vEquipmentAsArray").get(function () {
-	return mapToArray(this.vEquipment);
+characterSchema.virtual("equipmentAsArray").get(function () {
+	return mapToArray(this.equipment);
 });
 
-characterSchema.virtual("vWeaponsAsArray").get(function () {
-	return this.vEquipmentAsArray.filter((item) => item.type === EquipmentType.Weapon) as IWeaponDataWithID[];
+characterSchema.virtual("weaponsAsArray").get(function () {
+	return this.equipmentAsArray.filter((item) => item.type === EquipmentType.Weapon) as IWeaponDataWithID[];
 });
 
-characterSchema.virtual("vHitPoints").get(function () {
+characterSchema.virtual("hitPoints").get(function () {
 	const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.level;
 	const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
-	return Math.round((this.hitPoints + modifier) * multiplier);
+	return Math.round((this.baseHitPoints + modifier) * multiplier);
 });
 
-characterSchema.virtual("vMaxHitPoints").get(function () {
+characterSchema.virtual("maxHitPoints").get(function () {
 	const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.level;
-	return Math.round(this.maxHitPoints + modifier);
+	return Math.round(this.baseMaxHitPoints + modifier);
 });
 
-characterSchema.virtual("vDefence").get(function () {
+characterSchema.virtual("defence").get(function () {
 	const multiplier = this.getAuxiliaryStat(AuxiliaryStat.Defence) / 100 + 1;
 	return Math.round(this.getEquipmentDefence() * multiplier);
 });
 
-characterSchema.virtual("vHitBonus").get(function () {
+characterSchema.virtual("hitBonus").get(function () {
 	return this.getAuxiliaryStat(AuxiliaryStat.HitChance);
 });
 
-characterSchema.virtual("vCritBonus").get(function () {
+characterSchema.virtual("critBonus").get(function () {
 	return this.getAuxiliaryStat(AuxiliaryStat.CritChance);
 });
 
-characterSchema.virtual("vIsStunned").get(function () {
+characterSchema.virtual("isStunned").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Stun);
 });
 
-characterSchema.virtual("vIsPoisoned").get(function () {
+characterSchema.virtual("isPoisoned").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Poison);
 });
 
-characterSchema.virtual("vIsDisarmed").get(function () {
+characterSchema.virtual("isDisarmed").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Disarm);
 });
 
-characterSchema.virtual("vIsBleeding").get(function () {
+characterSchema.virtual("isBleeding").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Bleed);
 });
 
 characterSchema.method("getEquipmentDefence", function getEquipmentDefence() {
-	return mapToArray(this.vEquipmentAsArray)
+	return mapToArray(this.equipmentAsArray)
 		.map((item) => "defence" in item && item.defence)
 		.reduce((n, value) => n + value, 0);
 });
 
 characterSchema.method("getEquipmentBonus", function getEquipmentBonus(type: PropertyType, name: string) {
-	return mapToArray(this.vEquipmentAsArray)
+	return mapToArray(this.equipmentAsArray)
 		.flatMap((item) => ("properties" in item ? item.properties : []))
 		.filter((property) => property.type === type && property.name === name)
 		.reduce((n, { value }) => n + value, 0);
@@ -319,7 +319,7 @@ characterSchema.method("getActiveEffectBonus", function getActiveEffectBonus(typ
 
 characterSchema.method("getAttribute", function getAttribute(stat: Stat) {
 	return (
-		this.stats[stat] +
+		this.baseStats[stat] +
 		this.getEquipmentBonus(PropertyType.Stat, stat) +
 		this.getActiveEffectBonus(PropertyType.Stat, stat)
 	);
@@ -331,7 +331,7 @@ characterSchema.method("getDamageBonus", function getDamageBonus(type: DamageTyp
 
 characterSchema.method("getResistance", function getResistance(type: DamageType) {
 	return (
-		this.resistances[type] +
+		this.baseResistances[type] +
 		this.getEquipmentBonus(PropertyType.Resistance, type) +
 		this.getActiveEffectBonus(PropertyType.Resistance, type)
 	);
@@ -345,9 +345,9 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 });
 
 characterSchema.method("getHitType", function getHitType() {
-	const modifier = Game.getModifier(this.vStats.dexterity);
-	const hitMultiplier = this.vHitBonus / 100 + 1;
-	const critMultiplier = this.vCritBonus / 100 + 1;
+	const modifier = Game.getModifier(this.stats.dexterity);
+	const hitMultiplier = this.hitBonus / 100 + 1;
+	const critMultiplier = this.critBonus / 100 + 1;
 	const hitRoll = Math.round((Game.d20 + modifier) * hitMultiplier);
 	const critRoll = Math.round((Game.d20 + modifier) * critMultiplier);
 	if (hitRoll >= 10 && critRoll >= 20) {
@@ -360,13 +360,13 @@ characterSchema.method("getHitType", function getHitType() {
 });
 
 characterSchema.method("setHitPoints", function setHitPoints(value: number) {
-	this.hitPoints = value;
+	this.baseHitPoints = value;
 	this.checkAlive();
 });
 
 characterSchema.method("getUnarmedDamage", function getUnarmedDamage(effect: IWeaponDamageEffectData) {
 	const damage = Game.d4;
-	const modifier = Game.getModifier(this.vStats.strength);
+	const modifier = Game.getModifier(this.stats.strength);
 	const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
 	return {
 		target: effect.target,
@@ -381,7 +381,7 @@ characterSchema.method(
 	function getWeaponDamage(weapon: IWeaponDataWithID, effect: IWeaponDamageEffectData) {
 		const damage = Game.dx(weapon.min, weapon.max);
 		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
-		const modifier = Game.getModifier(this.vStats[stat]);
+		const modifier = Game.getModifier(this.stats[stat]);
 		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
 		const value = Math.round((damage + modifier) * effect.multiplier * bonusMultiplier);
 		return {
@@ -394,20 +394,20 @@ characterSchema.method(
 );
 
 characterSchema.method("checkAlive", function checkAlive() {
-	if (!this.vAlive) {
+	if (!this.alive) {
 		this.status = Status.Dead;
 	}
 });
 
 characterSchema.method("checkConstitution", function checkConstitution() {
-	if (!this.vAlive && this.status === Status.Alive) {
+	if (!this.alive && this.status === Status.Alive) {
 		this.setHitPoints(1);
 	}
 });
 
 characterSchema.method("getWeaponsDamage", function getWeaponsDamage(effect: IWeaponDamageEffectData) {
-	if (this.vWeaponsAsArray.length > 0 && !this.vIsDisarmed) {
-		return this.vWeaponsAsArray.map((weapon) => {
+	if (this.weaponsAsArray.length > 0 && !this.isDisarmed) {
+		return this.weaponsAsArray.map((weapon) => {
 			return this.getWeaponDamage(weapon, effect);
 		});
 	}
@@ -417,7 +417,7 @@ characterSchema.method("getWeaponsDamage", function getWeaponsDamage(effect: IWe
 characterSchema.method("getDamage", function getDamage(effect: IDamageEffectData) {
 	const damage = Game.dx(effect.min, effect.max);
 	const stat = Game.getDamageStat(effect.damageType as DamageType);
-	const modifier = Game.getModifier(this.vStats[stat]) ?? 0;
+	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 	const bonusMultiplier = this.getDamageBonus(effect.damageType) / 100 + 1;
 	const value = Math.round((damage + modifier) * bonusMultiplier);
 	return {
@@ -430,7 +430,7 @@ characterSchema.method("getDamage", function getDamage(effect: IDamageEffectData
 
 characterSchema.method("getHeal", function getHeal(effect: IHealEffectData) {
 	const heal = Game.dx(effect.min, effect.max);
-	const modifier = Game.getModifier(this.vStats[Stat.Wisdom]);
+	const modifier = Game.getModifier(this.stats[Stat.Wisdom]);
 	return {
 		target: effect.target,
 		value: heal + modifier,
@@ -472,7 +472,7 @@ characterSchema.method("getAuxiliary", function getAuxiliary(effect: IAuxiliaryE
 });
 
 characterSchema.method("createAction", function createAction(data: ITurnData) {
-	const skill = this.vSkills.find((sk) => sk.id === data.skill);
+	const skill = this.skills.find((sk) => sk.id === data.skill);
 
 	if (!skill) {
 		throw new Error("Skill is not available");
@@ -494,12 +494,12 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
 	};
 
-	if (this.vIsStunned) {
+	if (this.isStunned) {
 		return action;
 	}
 
 	if (skill.maxUses > 0) {
-		this.skills.find((sk) => sk.id === data.skill).remaining--;
+		this.skillIDs.find((sk) => sk.id === data.skill).remaining--;
 	}
 
 	skill.effects.forEach((effect) => {
@@ -526,9 +526,9 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 });
 
 characterSchema.method("handleWeaponDamage", function handleWeaponDamage(damage: IDamageEffect) {
-	const resistance = this.vDefence / 100;
+	const resistance = this.defence / 100;
 	damage.value = Math.round(damage.value * (1 - resistance));
-	if (this.vIsBleeding) {
+	if (this.isBleeding) {
 		damage.value = Math.round(damage.value * 1.5);
 	}
 	return this.handleDamage(damage);
@@ -546,23 +546,23 @@ characterSchema.method("handleDamage", function handleDamage(damage: IDamageEffe
 	if (value < 0) {
 		value = 0;
 	}
-	this.setHitPoints(this.hitPoints - value);
+	this.setHitPoints(this.baseHitPoints - value);
 	return { ...damage, value };
 });
 
 characterSchema.method("handleHeal", function handleHeal(heal: IHealEffect) {
-	const hitPoints = this.vHitPoints + heal.value;
-	if (hitPoints > this.vMaxHitPoints) {
-		this.setHitPoints(this.maxHitPoints);
+	const hitPoints = this.hitPoints + heal.value;
+	if (hitPoints > this.maxHitPoints) {
+		this.setHitPoints(this.baseMaxHitPoints);
 	} else {
-		this.setHitPoints(this.hitPoints + heal.value);
+		this.setHitPoints(this.baseHitPoints + heal.value);
 	}
 	return heal;
 });
 
 characterSchema.method("handleStatus", function handleStatus(status: IStatusEffect) {
 	if (status.modifier && status.difficulty) {
-		const modifier = Game.getModifier(this.vStats[status.modifier]);
+		const modifier = Game.getModifier(this.stats[status.modifier]);
 		const roll = Game.d20 + modifier;
 		status.saved = roll >= status.difficulty;
 	}
@@ -584,7 +584,7 @@ characterSchema.method("handleStatus", function handleStatus(status: IStatusEffe
 
 characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IAuxiliaryEffect) {
 	if (auxiliary.modifier && auxiliary.difficulty) {
-		const modifier = Game.getModifier(this.vStats[auxiliary.modifier]);
+		const modifier = Game.getModifier(this.stats[auxiliary.modifier]);
 		const roll = Game.d20 + modifier;
 		auxiliary.saved = roll >= auxiliary.difficulty;
 	}
@@ -628,10 +628,10 @@ characterSchema.method("handleAction", function handleAction(action: IAction, ta
 });
 
 characterSchema.method("tickPoison", function tickPoison() {
-	if (this.vIsPoisoned) {
+	if (this.isPoisoned) {
 		const resistance = this.getResistance(DamageType.Poison) / 100;
-		const damage = Math.round((this.vMaxHitPoints / 8) * (1 - resistance));
-		this.setHitPoints(this.hitPoints - damage);
+		const damage = Math.round((this.maxHitPoints / 8) * (1 - resistance));
+		this.setHitPoints(this.baseHitPoints - damage);
 	}
 });
 

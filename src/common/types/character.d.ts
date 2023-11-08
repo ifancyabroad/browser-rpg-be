@@ -38,32 +38,32 @@ export interface ICharacter {
 	level: number;
 	activeStatusEffects: Types.DocumentArray<IStatusEffect>;
 	activeAuxiliaryEffects: Types.DocumentArray<IActiveAuxiliaryEffect>;
-	skills: Types.DocumentArray<ISkill>;
-	equipment: TEquipment;
-	hitPoints: number;
-	maxHitPoints: number;
-	stats: TStats;
-	resistances: TDamageTypes;
+	skillIDs: Types.DocumentArray<ISkill>;
+	equipmentIDs: TEquipment;
+	baseHitPoints: number;
+	baseMaxHitPoints: number;
+	baseStats: TStats;
+	baseResistances: TDamageTypes;
 }
 
 export interface ICharacterMethods {
 	// Add virtuals here
-	get vAlive(): boolean;
-	get vSkills(): Types.DocumentArray<ISkillDataWithRemaining>;
-	get vStats(): TStats;
-	get vResistances(): TDamageTypes;
-	get vEquipment(): Record<EquipmentSlot, TEquipmentDataWithID>;
-	get vEquipmentAsArray(): TEquipmentDataWithID[];
-	get vWeaponsAsArray(): IWeaponDataWithID[];
-	get vHitPoints(): number;
-	get vMaxHitPoints(): number;
-	get vDefence(): number;
-	get vHitBonus(): number;
-	get vCritBonus(): number;
-	get vIsStunned(): boolean;
-	get vIsPoisoned(): boolean;
-	get vIsDisarmed(): boolean;
-	get vIsBleeding(): boolean;
+	get alive(): boolean;
+	get skills(): Types.DocumentArray<ISkillDataWithRemaining>;
+	get stats(): TStats;
+	get resistances(): TDamageTypes;
+	get equipment(): Record<EquipmentSlot, TEquipmentDataWithID>;
+	get equipmentAsArray(): TEquipmentDataWithID[];
+	get weaponsAsArray(): IWeaponDataWithID[];
+	get hitPoints(): number;
+	get maxHitPoints(): number;
+	get defence(): number;
+	get hitBonus(): number;
+	get critBonus(): number;
+	get isStunned(): boolean;
+	get isPoisoned(): boolean;
+	get isDisarmed(): boolean;
+	get isBleeding(): boolean;
 
 	// Add methods here
 	getEquipmentDefence(): number;

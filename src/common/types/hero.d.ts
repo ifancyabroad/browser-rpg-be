@@ -16,24 +16,24 @@ export interface ILevelUpData {
 
 export interface IHero extends ICharacter {
 	user: Types.ObjectId;
-	characterClass: string;
+	characterClassID: string;
 	state: State;
 	experience: number;
 	gold: number;
 	day: number;
 	kills: number;
-	availableItems: Types.Array<string>;
+	availableItemIDs: Types.Array<string>;
 	levelUp?: ILevelUp;
 	slainBy?: string;
 }
 
 export interface IHeroMethods extends ICharacterMethods {
 	// Add virtuals here
-	get vAvailableItems(): Types.DocumentArray<TEquipmentDataWithID>;
-	get vCharacterClass(): IClassDataWithID;
-	get vRestPrice(): number;
-	get vNextLevelExperience(): number;
-	get vLevelUpData(): ILevelUpData;
+	get availableItems(): Types.DocumentArray<TEquipmentDataWithID>;
+	get characterClass(): IClassDataWithID;
+	get restPrice(): number;
+	get nextLevelExperience(): number;
+	get levelUpData(): ILevelUpData;
 
 	// Add methods here
 	addExperience(xp: number): void;

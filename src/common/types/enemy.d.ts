@@ -16,9 +16,9 @@ export interface IEnemy extends ICharacter {
 
 export interface IEnemyMethods extends ICharacterMethods {
 	// Add virtuals here
-	get vGold(): number;
-	get vExperience(): number;
-	get vReward(): IReward;
+	get gold(): number;
+	get experience(): number;
+	get reward(): IReward;
 
 	// Add methods here
 	getSkill(hero: IHero): ISkillDataWithID;

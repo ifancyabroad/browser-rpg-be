@@ -13,7 +13,7 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			type: Schema.Types.ObjectId,
 			ref: "User",
 		},
-		characterClass: {
+		characterClassID: {
 			type: String,
 			required: [true, "Please choose a class"],
 		},
@@ -45,7 +45,7 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 		slainBy: {
 			type: String,
 		},
-		availableItems: {
+		availableItemIDs: {
 			type: [String],
 			required: true,
 		},
@@ -61,23 +61,23 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 	{ timestamps: true },
 );
 
-heroSchema.virtual("vAvailableItems").get(function () {
-	return GameData.populateAvailableItems(this.availableItems);
+heroSchema.virtual("availableItems").get(function () {
+	return GameData.populateAvailableItems(this.availableItemIDs);
 });
 
-heroSchema.virtual("vCharacterClass").get(function () {
-	return GameData.populateClass(this.characterClass);
+heroSchema.virtual("characterClass").get(function () {
+	return GameData.populateClass(this.characterClassID);
 });
 
-heroSchema.virtual("vRestPrice").get(function () {
+heroSchema.virtual("restPrice").get(function () {
 	return this.day * 100;
 });
 
-heroSchema.virtual("vNextLevelExperience").get(function () {
+heroSchema.virtual("nextLevelExperience").get(function () {
 	return EXPERIENCE_MAP.get(this.level + 1);
 });
 
-heroSchema.virtual("vLevelUpData").get(function () {
+heroSchema.virtual("levelUpData").get(function () {
 	if (this.levelUp) {
 		return {
 			...this.levelUp,
@@ -95,39 +95,39 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 	if (!this.levelUp) {
 		throw new Error("No level up available");
 	}
-	if (this.stats[stat] + 1 > 25) {
+	if (this.baseStats[stat] + 1 > 25) {
 		throw new Error("Attribute is already at maximum level");
 	}
 	if (skill && this.levelUp.skills.includes(skill)) {
 		const skillData = GameData.getSkillById(skill);
-		this.skills.push({ id: skill, remaining: skillData.maxUses });
+		this.skillIDs.push({ id: skill, remaining: skillData.maxUses });
 	}
 	this.level++;
-	this.stats[stat]++;
+	this.baseStats[stat]++;
 
 	const hitPoints = Game.d10;
-	this.maxHitPoints += hitPoints;
-	this.hitPoints += hitPoints;
+	this.baseMaxHitPoints += hitPoints;
+	this.baseHitPoints += hitPoints;
 	delete this.levelUp;
 	this.checkLevelUp();
 });
 
 heroSchema.method("rest", function rest() {
-	if (this.vRestPrice > this.gold) {
+	if (this.restPrice > this.gold) {
 		throw new Error("Not enough gold");
 	}
-	this.gold = this.gold - this.vRestPrice;
+	this.gold = this.gold - this.restPrice;
 	this.day++;
-	this.set("availableItems", GameData.getShopItems(this.characterClass, this.level));
-	this.setHitPoints(this.maxHitPoints);
-	this.skills.forEach((skill) => {
-		const skillData = this.vSkills.find((sk) => sk.id === skill.id);
+	this.set("availableItems", GameData.getShopItems(this.characterClassID, this.level));
+	this.setHitPoints(this.baseMaxHitPoints);
+	this.skillIDs.forEach((skill) => {
+		const skillData = this.skills.find((sk) => sk.id === skill.id);
 		return (skill.remaining = skillData.maxUses);
 	});
 });
 
 heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
-	const item = this.vAvailableItems.find((it) => it.id === id);
+	const item = this.availableItems.find((it) => it.id === id);
 
 	if (!item) {
 		throw new Error("Item is not available");
@@ -137,7 +137,7 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 		throw new Error("Not enough gold");
 	}
 
-	const { armourTypes, weaponTypes } = this.vCharacterClass;
+	const { armourTypes, weaponTypes } = this.characterClass;
 	const validArmourType = "armourType" in item && armourTypes.includes(item.armourType);
 	const validWeaponType = "weaponType" in item && weaponTypes.includes(item.weaponType);
 	if (!validArmourType && !validWeaponType) {
@@ -150,15 +150,15 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 	}
 
 	const isTwoHandedWeapon = "size" in item && item.size === WeaponSize.TwoHanded;
-	const offHand = isTwoHandedWeapon ? null : this.equipment.hand2;
+	const offHand = isTwoHandedWeapon ? null : this.equipmentIDs.hand2;
 
 	this.gold = this.gold - item.price;
 	this.set(
 		"availableItems",
-		this.availableItems.filter((it) => it !== id),
+		this.availableItemIDs.filter((it) => it !== id),
 	);
-	this.equipment = {
-		...this.equipment,
+	this.equipmentIDs = {
+		...this.equipmentIDs,
 		[EquipmentSlot.Hand2]: offHand,
 		[slot]: id,
 	};
@@ -180,10 +180,10 @@ heroSchema.method("battleLost", function battleLost(name: string) {
 });
 
 heroSchema.method("checkLevelUp", function checkLevelUp() {
-	if (this.experience >= this.vNextLevelExperience) {
+	if (this.experience >= this.nextLevelExperience) {
 		const level = this.level + 1;
 		const skills = SKILL_LEVEL_MAP.get(level)
-			? GameData.getLevelUpSkills(this.characterClass, level, this.skills)
+			? GameData.getLevelUpSkills(this.characterClassID, level, this.skillIDs)
 			: [];
 		this.levelUp = { level, skills: skills as Types.Array<string> };
 	}

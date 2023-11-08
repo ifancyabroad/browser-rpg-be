@@ -46,7 +46,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			skills,
 			equipment: classData.equipment,
 			availableItems,
-			stats: classData.stats,
+			baseStats: classData.stats,
 			hitPoints,
 			maxHitPoints: hitPoints,
 		});

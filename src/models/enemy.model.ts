@@ -17,20 +17,20 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>({
 	},
 });
 
-enemySchema.virtual("vGold").get(function () {
+enemySchema.virtual("gold").get(function () {
 	return 100 * (this.level + this.challenge);
 });
 
-enemySchema.virtual("vExperience").get(function () {
+enemySchema.virtual("experience").get(function () {
 	return 50 * (this.level + this.challenge);
 });
 
-enemySchema.virtual("vReward").get(function () {
-	return { gold: this.vGold, experience: this.vExperience };
+enemySchema.virtual("reward").get(function () {
+	return { gold: this.gold, experience: this.experience };
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
-	const skills = this.vSkills.filter((skill) => {
+	const skills = this.skills.filter((skill) => {
 		if (skill.maxUses > 0 && skill.remaining <= 0) {
 			return false;
 		}
