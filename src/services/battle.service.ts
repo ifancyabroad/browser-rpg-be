@@ -124,34 +124,38 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
 		}
 
+		const enemyRecord = await EnemyModel.findById(battleRecord.enemy);
+
 		const turn = battleRecord.handleTurn(
 			{
 				self: characterRecord,
-				enemy: battleRecord.enemy,
+				enemy: enemyRecord,
 				skill: id,
 			},
 			{
-				self: battleRecord.enemy,
+				self: enemyRecord,
 				enemy: characterRecord,
-				skill: battleRecord.enemy.getSkill(characterRecord).id,
+				skill: enemyRecord.getSkill(characterRecord).id,
 			},
 		);
 
 		battleRecord.turns.push(turn);
 
 		if (!characterRecord.alive) {
-			characterRecord.battleLost(battleRecord.enemy.name);
+			characterRecord.battleLost(enemyRecord.name);
 			battleRecord.state = BattleState.Lost;
 		}
 
-		if (characterRecord.alive && !battleRecord.enemy.alive) {
-			characterRecord.battleWon(battleRecord.enemy.reward);
-			battleRecord.reward = battleRecord.enemy.reward;
+		if (characterRecord.alive && !enemyRecord.alive) {
+			characterRecord.battleWon(enemyRecord.reward);
+			battleRecord.reward = enemyRecord.reward;
 			battleRecord.state = BattleState.Won;
 		}
 
 		const character = await characterRecord.save();
-		const battle = await battleRecord.save();
+		await enemyRecord.save();
+		await battleRecord.save();
+		const battle = await battleRecord.populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
 
 		return {
 			battle: battle.toJSON({ virtuals: true }),
