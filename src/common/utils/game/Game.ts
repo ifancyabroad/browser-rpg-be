@@ -43,7 +43,7 @@ export class Game {
 	}
 
 	public static getHitPoints(level = 1) {
-		let hitPoints = 0;
+		let hitPoints = 10;
 		for (let i = 0; i < level; i++) {
 			hitPoints += this.d10;
 		}
