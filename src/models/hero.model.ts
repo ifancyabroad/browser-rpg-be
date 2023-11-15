@@ -118,7 +118,7 @@ heroSchema.method("rest", function rest() {
 	}
 	this.gold = this.gold - this.restPrice;
 	this.day++;
-	this.set("availableItems", GameData.getShopItems(this.characterClassID, this.level));
+	this.set("availableItemIDs", GameData.getShopItems(this.characterClassID, this.level));
 	this.setHitPoints(this.baseMaxHitPoints);
 	this.skillIDs.forEach((skill) => {
 		const skillData = this.skills.find((sk) => sk.id === skill.id);
@@ -154,7 +154,7 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 
 	this.gold = this.gold - item.price;
 	this.set(
-		"availableItems",
+		"availableItemIDs",
 		this.availableItemIDs.filter((it) => it !== id),
 	);
 	this.equipmentIDs = {
