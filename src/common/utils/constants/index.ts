@@ -133,7 +133,7 @@ export const DAMAGE_TYPE_MODIFIER_MAP = new Map([
 	[DamageType.Slashing, null],
 	[DamageType.Cold, Stat.Intelligence],
 	[DamageType.Fire, Stat.Intelligence],
-	[DamageType.Lighting, Stat.Intelligence],
+	[DamageType.Lightning, Stat.Intelligence],
 	[DamageType.Necrotic, Stat.Wisdom],
 	[DamageType.Radiant, Stat.Wisdom],
 	[DamageType.Acid, null],

@@ -85,7 +85,7 @@
 					"value": 20
 				},
 				{
-					"name": "lighting",
+					"name": "lightning",
 					"type": "resistance",
 					"value": 20
 				},
@@ -346,7 +346,7 @@
 					"value": 15
 				},
 				{
-					"name": "lighting",
+					"name": "lightning",
 					"type": "resistance",
 					"value": 15
 				}
@@ -579,7 +579,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -609,7 +609,7 @@
 				"cold": 0,
 				"crushing": -50,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 100,
@@ -640,7 +640,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -673,7 +673,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -707,7 +707,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -740,7 +740,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -767,7 +767,7 @@
 				"cold": 50,
 				"crushing": 25,
 				"fire": 50,
-				"lighting": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -794,7 +794,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -824,7 +824,7 @@
 				"cold": 0,
 				"crushing": -50,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 100,
@@ -854,7 +854,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -881,7 +881,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -908,7 +908,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -938,7 +938,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -965,7 +965,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 100,
@@ -992,7 +992,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 50,
 				"piercing": 50,
 				"poison": 0,
@@ -1025,7 +1025,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1052,7 +1052,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1083,7 +1083,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1114,7 +1114,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1141,7 +1141,7 @@
 				"cold": 50,
 				"crushing": 75,
 				"fire": 50,
-				"lighting": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 75,
 				"poison": 100,
@@ -1174,7 +1174,7 @@
 				"cold": 50,
 				"crushing": 50,
 				"fire": 0,
-				"lighting": 50,
+				"lightning": 50,
 				"necrotic": 50,
 				"piercing": 50,
 				"poison": 100,
@@ -1213,7 +1213,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1244,7 +1244,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1271,7 +1271,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 0,
@@ -1304,7 +1304,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1331,7 +1331,7 @@
 				"cold": 100,
 				"crushing": 50,
 				"fire": 50,
-				"lighting": 50,
+				"lightning": 50,
 				"necrotic": 100,
 				"piercing": 50,
 				"poison": 100,
@@ -1358,7 +1358,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": -100,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
@@ -1385,7 +1385,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 100,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -1412,7 +1412,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
-				"lighting": 0,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -1445,7 +1445,7 @@
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
-				"lighting": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 50,
@@ -2114,7 +2114,7 @@
 							"value": 50
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "resistance",
 							"value": 50
 						}
@@ -2339,7 +2339,7 @@
 							"value": 50
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "resistance",
 							"value": 50
 						}
@@ -2359,7 +2359,7 @@
 			"description": "Conjure a lightning bolt.",
 			"effects": [
 				{
-					"damageType": "lighting",
+					"damageType": "lightning",
 					"max": 18,
 					"min": 6,
 					"target": "enemy",
@@ -2369,7 +2369,7 @@
 			"icon": "",
 			"level": 2,
 			"maxUses": 5,
-			"name": "Lighting Bolt",
+			"name": "lightning Bolt",
 			"price": 280
 		},
 		"-Nc4-UVARP8jFmsiuXC9": {
@@ -2411,7 +2411,7 @@
 							"value": -50
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "resistance",
 							"value": -50
 						},
@@ -3529,7 +3529,7 @@
 							"value": 25
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "damage",
 							"value": 25
 						}
@@ -3689,21 +3689,21 @@
 			"description": "Summon cascading thunder, chaining electrical strikes across enemies.",
 			"effects": [
 				{
-					"damageType": "lighting",
+					"damageType": "lightning",
 					"max": 12,
 					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"damageType": "lighting",
+					"damageType": "lightning",
 					"max": 12,
 					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"damageType": "lighting",
+					"damageType": "lightning",
 					"max": 12,
 					"min": 6,
 					"target": "enemy",
@@ -3734,7 +3734,7 @@
 							"value": 100
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "resistance",
 							"value": 100
 						},
@@ -3921,7 +3921,7 @@
 							"value": 50
 						},
 						{
-							"name": "lighting",
+							"name": "lightning",
 							"type": "resistance",
 							"value": 50
 						}

@@ -240,7 +240,7 @@ characterSchema.virtual("resistances").get(function () {
 		[DamageType.Slashing]: this.getResistance(DamageType.Slashing),
 		[DamageType.Cold]: this.getResistance(DamageType.Cold),
 		[DamageType.Fire]: this.getResistance(DamageType.Fire),
-		[DamageType.Lighting]: this.getResistance(DamageType.Lighting),
+		[DamageType.Lightning]: this.getResistance(DamageType.Lightning),
 		[DamageType.Acid]: this.getResistance(DamageType.Acid),
 		[DamageType.Poison]: this.getResistance(DamageType.Poison),
 		[DamageType.Necrotic]: this.getResistance(DamageType.Necrotic),
