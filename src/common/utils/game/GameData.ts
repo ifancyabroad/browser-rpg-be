@@ -1,4 +1,4 @@
-import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
+import { IArmourData, IClassData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
@@ -9,7 +9,11 @@ export class GameData {
 	public static getClasses() {
 		try {
 			const { classes } = data as IGameData;
-			return mapToArray(classes);
+			return mapToArray(classes).map((characterClass) => ({
+				...characterClass,
+				skills: this.populateSkillsFromID(characterClass.skills),
+				equipment: this.populateEquipment(characterClass.equipment),
+			}));
 		} catch (error) {
 			console.error(`Error getClasses: ${error.message}`);
 			throw error;
