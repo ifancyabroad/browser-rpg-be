@@ -3,7 +3,7 @@ import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@common/u
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@common/utils";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, REST_MULTIPLIER, SKILL_LEVEL_MAP } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
 import { IReward } from "@common/types/battle";
 
@@ -70,7 +70,8 @@ heroSchema.virtual("characterClass").get(function () {
 });
 
 heroSchema.virtual("restPrice").get(function () {
-	return this.day * 100;
+	const multiplier = Game.getModifier(this.stats.charisma) / 10 + 1;
+	return Math.round((this.day * REST_MULTIPLIER) / multiplier);
 });
 
 heroSchema.virtual("nextLevelExperience").get(function () {
@@ -87,7 +88,7 @@ heroSchema.virtual("levelUpData").get(function () {
 });
 
 heroSchema.virtual("goldMultiplier").get(function () {
-	return Game.getModifier(this.stats.charisma) / 10 + 1;
+	return Math.round(Game.getModifier(this.stats.charisma) / 10 + 1);
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {
