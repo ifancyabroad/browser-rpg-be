@@ -272,8 +272,7 @@ characterSchema.virtual("maxHitPoints").get(function () {
 });
 
 characterSchema.virtual("defence").get(function () {
-	const multiplier = this.getAuxiliaryStat(AuxiliaryStat.Defence) / 100 + 1;
-	return Math.round(this.getEquipmentDefence() * multiplier);
+	return this.getEquipmentDefence() + this.getAuxiliaryStat(AuxiliaryStat.Defence);
 });
 
 characterSchema.virtual("hitBonus").get(function () {
