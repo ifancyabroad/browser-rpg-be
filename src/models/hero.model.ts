@@ -5,7 +5,7 @@ import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
 import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
-import { IReward } from "@common/types/enemy";
+import { IReward } from "@common/types/battle";
 
 const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 	{
@@ -84,6 +84,10 @@ heroSchema.virtual("levelUpData").get(function () {
 			skills: GameData.populateSkillsFromID(this.levelUp.skills),
 		};
 	}
+});
+
+heroSchema.virtual("goldMultiplier").get(function () {
+	return Game.getModifier(this.stats.charisma) / 10 + 1;
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {

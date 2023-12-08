@@ -2,7 +2,7 @@ import { Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
 import { EquipmentSlot, Stat, State } from "@common/utils";
 import { IClassDataWithID, ISkillDataWithID, TEquipmentDataWithID } from "./gameData";
-import { IReward } from "./enemy";
+import { IReward } from "./battle";
 
 export interface ILevelUp {
 	level: number;
@@ -34,6 +34,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get restPrice(): number;
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
+	get goldMultiplier(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;

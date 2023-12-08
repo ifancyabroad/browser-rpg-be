@@ -3,11 +3,6 @@ import { ICharacter, ICharacterMethods } from "./character";
 import { IHero } from "./hero";
 import { ISkillDataWithID } from "./gameData";
 
-export interface IReward {
-	gold: number;
-	experience: number;
-}
-
 export interface IEnemy extends ICharacter {
 	image: string;
 	challenge: number;
@@ -15,9 +10,6 @@ export interface IEnemy extends ICharacter {
 
 export interface IEnemyMethods extends ICharacterMethods {
 	// Add virtuals here
-	get gold(): number;
-	get experience(): number;
-	get reward(): IReward;
 
 	// Add methods here
 	getSkill(hero: IHero): ISkillDataWithID;

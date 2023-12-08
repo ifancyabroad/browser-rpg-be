@@ -1,9 +1,15 @@
-import { BattleState, Target } from "@common/utils/enums/index";
+import { BattleState } from "@common/utils/enums/index";
 import { Request } from "express";
 import { Model, Types } from "mongoose";
-import { IReward } from "./enemy";
 import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
-import { ICharacter, ICharacterMethods, ICharacterModel } from "./character";
+import { ICharacter, ICharacterMethods } from "./character";
+import { IHero, IHeroMethods } from "./hero";
+import { IEnemy, IEnemyMethods } from "./enemy";
+
+export interface IReward {
+	gold: number;
+	experience: number;
+}
 
 export interface IAction {
 	self: string;
@@ -32,6 +38,7 @@ export interface IBattleMethods {
 	// Add methods here
 	handleAction(first: ITurnData, second: ITurnData): IAction[];
 	handleTurn(hero: ITurnData, enemy: ITurnData): IAction[];
+	handleReward(hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods): void;
 }
 
 // Add static methods here

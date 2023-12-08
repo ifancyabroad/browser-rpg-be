@@ -8,6 +8,9 @@ import {
 	statusEffectSchema,
 } from "./effects.model";
 import { IAction, IBattle, IBattleMethods, IBattleModel, ITurnData } from "@common/types/battle";
+import { IHero, IHeroMethods } from "@common/types/hero";
+import { IEnemy, IEnemyMethods } from "@common/types/enemy";
+import { EXPERIENCE_MULTIPLIER, GOLD_MULTIPLIER } from "@common/utils";
 
 const actionSchema = new Schema<IAction, Model<IAction>>({
 	self: {
@@ -90,6 +93,12 @@ battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
 	}
 
 	return turn;
+});
+
+battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
+	const gold = GOLD_MULTIPLIER * (enemy.level + enemy.challenge);
+	const experience = EXPERIENCE_MULTIPLIER * (enemy.level + enemy.challenge);
+	this.reward = { gold: gold * hero.goldMultiplier, experience };
 });
 
 const BattleModel = model<IBattle, IBattleModel>("Battle", battleSchema);
