@@ -57,7 +57,7 @@ export interface ICharacterMethods {
 	get weaponsAsArray(): IWeaponDataWithID[];
 	get hitPoints(): number;
 	get maxHitPoints(): number;
-	get defence(): number;
+	get armourClass(): number;
 	get hitBonus(): number;
 	get critBonus(): number;
 	get isStunned(): boolean;
@@ -66,7 +66,7 @@ export interface ICharacterMethods {
 	get isBleeding(): boolean;
 
 	// Add methods here
-	getEquipmentDefence(): number;
+	getEquipmentArmourClass(): number;
 	getEquipmentBonus(type: PropertyType, name: string): number;
 	getActiveEffectBonus(type: string, name: string): number;
 	getAttribute(stat: Stat): number;

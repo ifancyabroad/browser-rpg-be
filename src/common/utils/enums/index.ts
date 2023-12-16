@@ -55,10 +55,9 @@ export enum Stat {
 }
 
 export enum AuxiliaryStat {
-	Defence = "defence",
+	ArmourClass = "armourClass",
 	HitChance = "hitChance",
 	CritChance = "critChance",
-	HitPoints = "hitPoints",
 }
 
 export enum DamageType {

@@ -130,7 +130,7 @@ export class GameData {
 			const maxItemLevel = EQUIPMENT_LEVELS.get(level);
 
 			const filteredArmours = mapToArray(armours)
-				.filter(({ armourType }) => characterClass.armourTypes.includes(armourType))
+				.filter(({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType))
 				.filter(({ level }) => maxItemLevel >= level)
 				.map(({ id }) => id);
 			const armourItems = getMultipleRandom(filteredArmours, 3);

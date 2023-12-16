@@ -262,8 +262,7 @@ characterSchema.virtual("weaponsAsArray").get(function () {
 
 characterSchema.virtual("hitPoints").get(function () {
 	const modifier = Game.getModifier(this.stats[Stat.Constitution]) * this.level;
-	const multiplier = this.getAuxiliaryStat(AuxiliaryStat.HitPoints) / 100 + 1;
-	return Math.round((this.baseHitPoints + modifier) * multiplier);
+	return Math.round(this.baseHitPoints + modifier);
 });
 
 characterSchema.virtual("maxHitPoints").get(function () {
@@ -271,8 +270,8 @@ characterSchema.virtual("maxHitPoints").get(function () {
 	return Math.round(this.baseMaxHitPoints + modifier);
 });
 
-characterSchema.virtual("defence").get(function () {
-	return this.getEquipmentDefence() + this.getAuxiliaryStat(AuxiliaryStat.Defence);
+characterSchema.virtual("armourClass").get(function () {
+	return this.getEquipmentArmourClass() + this.getAuxiliaryStat(AuxiliaryStat.ArmourClass);
 });
 
 characterSchema.virtual("hitBonus").get(function () {
@@ -299,9 +298,9 @@ characterSchema.virtual("isBleeding").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Bleed);
 });
 
-characterSchema.method("getEquipmentDefence", function getEquipmentDefence() {
+characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
 	return mapToArray(this.equipmentAsArray)
-		.map((item) => "defence" in item && item.defence)
+		.map((item) => "armourClass" in item && item.armourClass)
 		.reduce((n, value) => n + value, 0);
 });
 
@@ -528,8 +527,6 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 });
 
 characterSchema.method("handleWeaponDamage", function handleWeaponDamage(damage: IDamageEffect) {
-	const resistance = this.defence / 100;
-	damage.value = Math.round(damage.value * (1 - resistance));
 	if (this.isBleeding) {
 		damage.value = Math.round(damage.value * 1.5);
 	}
