@@ -58,7 +58,7 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			},
 		},
 	},
-	{ timestamps: true },
+	{ timestamps: true, toJSON: { virtuals: true } },
 );
 
 heroSchema.virtual("availableItems").get(function () {

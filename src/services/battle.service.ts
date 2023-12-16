@@ -64,8 +64,8 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		const character = await characterRecord.save();
 
 		return {
-			battle: battle.toJSON({ virtuals: true }),
-			character: character.toJSON({ virtuals: true }),
+			battle: battle.toJSON(),
+			character: character.toJSON(),
 		};
 	} catch (error) {
 		console.error(`Error startBattle: ${error.message}`);
@@ -94,8 +94,8 @@ export async function getBattle(session: Session & Partial<SessionData>) {
 		}
 
 		return {
-			battle: battleRecord.toJSON({ virtuals: true }),
-			character: characterRecord.toJSON({ virtuals: true }),
+			battle: battleRecord.toJSON(),
+			character: characterRecord.toJSON(),
 		};
 	} catch (error) {
 		console.error(`Error getBattle: ${error.message}`);
@@ -158,8 +158,8 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		const battle = await battleRecord.populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
 
 		return {
-			battle: battle.toJSON({ virtuals: true }),
-			character: character.toJSON({ virtuals: true }),
+			battle: battle.toJSON(),
+			character: character.toJSON(),
 		};
 	} catch (error) {
 		console.error(`Error getBattle: ${error.message}`);

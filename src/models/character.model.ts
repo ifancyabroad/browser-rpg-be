@@ -29,7 +29,6 @@ import {
 import { Game } from "@common/utils/game/Game";
 import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "@common/types/effect";
 import { IAction, ITurnData } from "@common/types/battle";
-import mongooseLeanVirtuals from "mongoose-lean-virtuals";
 
 const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethods>(
 	{
@@ -211,7 +210,7 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 			},
 		},
 	},
-	{ timestamps: true },
+	{ timestamps: true, toJSON: { virtuals: true } },
 );
 
 characterSchema.virtual("alive").get(function () {
@@ -670,8 +669,6 @@ characterSchema.method("tickEffects", function tickEffects() {
 
 	this.checkConstitution();
 });
-
-characterSchema.plugin(mongooseLeanVirtuals);
 
 const CharacterModel = model<ICharacter, ICharacterModel>("Character", characterSchema);
 

@@ -12,7 +12,7 @@ export async function getActiveCharacter(session: Session & Partial<SessionData>
 	try {
 		const characterRecord = await HeroModel.findOne({ user: user.id, status: Status.Alive });
 		if (characterRecord) {
-			return characterRecord.toJSON({ virtuals: true });
+			return characterRecord.toJSON();
 		}
 
 		return null;
@@ -51,7 +51,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			baseMaxHitPoints: hitPoints,
 		});
 
-		return characterRecord.toJSON({ virtuals: true });
+		return characterRecord.toJSON();
 	} catch (error) {
 		console.error(`Error createCharacter: ${error.message}`);
 		throw error;
@@ -70,7 +70,7 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 			throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 		}
 
-		return characterRecord.toJSON({ virtuals: true });
+		return characterRecord.toJSON();
 	} catch (error) {
 		console.error(`Error retireActiveCharacter: ${error.message}`);
 		throw error;
@@ -93,7 +93,7 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 		characterRecord.buyItem(id, slot);
 		const character = await characterRecord.save();
 
-		return character.toJSON({ virtuals: true });
+		return character.toJSON();
 	} catch (error) {
 		console.error(`Error buyItem: ${error.message}`);
 		throw error;
@@ -115,7 +115,7 @@ export async function rest(session: Session & Partial<SessionData>) {
 		characterRecord.rest();
 		const character = await characterRecord.save();
 
-		return character.toJSON({ virtuals: true });
+		return character.toJSON();
 	} catch (error) {
 		console.error(`Error rest: ${error.message}`);
 		throw error;
@@ -138,7 +138,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 		characterRecord.addLevel(stat, skill);
 		const character = await characterRecord.save();
 
-		return character.toJSON({ virtuals: true });
+		return character.toJSON();
 	} catch (error) {
 		console.error(`Error levelUp: ${error.message}`);
 		throw error;

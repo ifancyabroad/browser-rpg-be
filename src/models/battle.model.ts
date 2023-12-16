@@ -64,7 +64,7 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			},
 		},
 	},
-	{ timestamps: true },
+	{ timestamps: true, toJSON: { virtuals: true } },
 );
 
 battleSchema.method("handleAction", function handleAction(first: ITurnData, second: ITurnData) {

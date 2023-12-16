@@ -4,10 +4,7 @@ import HeroModel from "@models/hero.model";
 
 export async function getLeaderboard() {
 	try {
-		const leaderboard = await HeroModel.find()
-			.sort({ kills: "desc", name: "asc" })
-			.limit(20)
-			.lean({ virtuals: ["characterClass"] });
+		const leaderboard = await HeroModel.find().sort({ kills: "desc", name: "asc" }).limit(20);
 		if (!leaderboard) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No characters found");
 		}

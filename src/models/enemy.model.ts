@@ -4,22 +4,25 @@ import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
 import { EffectType, Target, getRandomElement } from "@common/utils";
 
-const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>({
-	name: {
-		type: String,
-		required: true,
+const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
+	{
+		name: {
+			type: String,
+			required: true,
+		},
+		image: {
+			type: String,
+			required: true,
+		},
+		challenge: {
+			type: Number,
+			min: 1,
+			max: 30,
+			required: true,
+		},
 	},
-	image: {
-		type: String,
-		required: true,
-	},
-	challenge: {
-		type: Number,
-		min: 1,
-		max: 30,
-		required: true,
-	},
-});
+	{ toJSON: { virtuals: true } },
+);
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
 	const skills = this.skills.filter((skill) => {
