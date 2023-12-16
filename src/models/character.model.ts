@@ -16,7 +16,7 @@ import { activeEffectSchema, statusEffectSchema } from "./effects.model";
 import { model } from "mongoose";
 import { skillSchema } from "./skill.model";
 import { GameData } from "@common/utils/game/GameData";
-import { ICharacter, ICharacterMethods, ICharacterModel } from "@common/types/character";
+import { ICharacter, ICharacterMethods, ICharacterModel, IEffectData } from "@common/types/character";
 import { mapToArray } from "@common/utils";
 import {
 	IAuxiliaryEffectData,
@@ -345,15 +345,13 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 	);
 });
 
-characterSchema.method("getHitType", function getHitType() {
+characterSchema.method("getHitType", function getHitType(armourClass: number) {
 	const modifier = Game.getModifier(this.stats.dexterity);
-	const hitMultiplier = this.hitBonus / 100 + 1;
-	const critMultiplier = this.critBonus / 100 + 1;
-	const hitRoll = Math.round((Game.d20 + modifier) * hitMultiplier);
-	const critRoll = Math.round((Game.d20 + modifier) * critMultiplier);
-	if (hitRoll >= 10 && critRoll >= 20) {
+	const hitRoll = Math.round(Game.d20 + modifier + this.hitBonus);
+	const critRoll = Math.round(Game.d20 + modifier + this.critBonus);
+	if (hitRoll >= armourClass && critRoll >= 20) {
 		return HitType.Crit;
-	} else if (hitRoll >= 10) {
+	} else if (hitRoll >= armourClass) {
 		return HitType.Hit;
 	} else {
 		return HitType.Miss;
@@ -364,35 +362,6 @@ characterSchema.method("setHitPoints", function setHitPoints(value: number) {
 	this.baseHitPoints = value;
 	this.checkAlive();
 });
-
-characterSchema.method("getUnarmedDamage", function getUnarmedDamage(effect: IWeaponDamageEffectData) {
-	const damage = Game.d4;
-	const modifier = Game.getModifier(this.stats.strength);
-	const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
-	return {
-		target: effect.target,
-		type: DamageType.Crushing,
-		value: (damage + modifier) * effect.multiplier * bonusMultiplier,
-		hitType: this.getHitType(),
-	};
-});
-
-characterSchema.method(
-	"getWeaponDamage",
-	function getWeaponDamage(weapon: IWeaponDataWithID, effect: IWeaponDamageEffectData) {
-		const damage = Game.dx(weapon.min, weapon.max);
-		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
-		const modifier = Game.getModifier(this.stats[stat]);
-		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
-		const value = Math.round((damage + modifier) * effect.multiplier * bonusMultiplier);
-		return {
-			target: effect.target,
-			type: weapon.damageType,
-			value,
-			hitType: this.getHitType(),
-		};
-	},
-);
 
 characterSchema.method("checkAlive", function checkAlive() {
 	if (!this.alive) {
@@ -406,69 +375,147 @@ characterSchema.method("checkConstitution", function checkConstitution() {
 	}
 });
 
-characterSchema.method("getWeaponsDamage", function getWeaponsDamage(effect: IWeaponDamageEffectData) {
-	if (this.weaponsAsArray.length > 0 && !this.isDisarmed) {
-		return this.weaponsAsArray.map((weapon) => {
-			return this.getWeaponDamage(weapon, effect);
-		});
-	}
-	return [this.getUnarmedDamage(effect)];
-});
+characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
+	const weaponEffect = effect as IWeaponDamageEffectData;
+	const damage = Game.d4;
+	const modifier = Game.getModifier(this.stats.strength);
+	const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
+	const hitType = this.getHitType(effectTarget.armourClass);
+	const hitMultiplier = Game.getHitMultiplier(hitType);
+	const resistance = effectTarget.getResistance(DamageType.Crushing) / 100;
+	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+	const value = Math.round(
+		(damage + modifier) *
+			weaponEffect.multiplier *
+			bonusMultiplier *
+			hitMultiplier *
+			bleedMuliplier *
+			(1 - resistance),
+	);
 
-characterSchema.method("getDamage", function getDamage(effect: IDamageEffectData) {
-	const damage = Game.dx(effect.min, effect.max);
-	const stat = Game.getDamageStat(effect.damageType as DamageType);
-	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
-	const bonusMultiplier = this.getDamageBonus(effect.damageType) / 100 + 1;
-	const value = Math.round((damage + modifier) * bonusMultiplier);
 	return {
 		target: effect.target,
-		type: effect.damageType,
+		type: DamageType.Crushing,
+		value,
+		hitType,
+	};
+});
+
+characterSchema.method(
+	"getWeaponDamage",
+	function getWeaponDamage({ effect, effectTarget }: IEffectData, weapon: IWeaponDataWithID) {
+		const weaponEffect = effect as IWeaponDamageEffectData;
+		const damage = Game.dx(weapon.min, weapon.max);
+		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
+		const modifier = Game.getModifier(this.stats[stat]);
+		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
+		const hitType = this.getHitType(effectTarget.armourClass);
+		const hitMultiplier = Game.getHitMultiplier(hitType);
+		const resistance = effectTarget.getResistance(weapon.damageType) / 100;
+		const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+		const value = Math.round(
+			(damage + modifier) *
+				weaponEffect.multiplier *
+				bonusMultiplier *
+				hitMultiplier *
+				bleedMuliplier *
+				(1 - resistance),
+		);
+
+		return {
+			target: effect.target,
+			type: weapon.damageType,
+			value,
+			hitType,
+		};
+	},
+);
+
+characterSchema.method("getWeaponsDamage", function getWeaponsDamage(data: IEffectData) {
+	if (this.weaponsAsArray.length > 0 && !this.isDisarmed) {
+		return this.weaponsAsArray.map((weapon) => {
+			return this.getWeaponDamage(data, weapon);
+		});
+	}
+	return [this.getUnarmedDamage(data)];
+});
+
+characterSchema.method("getDamage", function getDamage({ effect, effectTarget }: IEffectData) {
+	const damageEffect = effect as IDamageEffectData;
+	const damage = Game.dx(damageEffect.min, damageEffect.max);
+	const stat = Game.getDamageStat(damageEffect.damageType);
+	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
+	const bonusMultiplier = this.getDamageBonus(damageEffect.damageType) / 100 + 1;
+	const resistance = effectTarget.getResistance(damageEffect.damageType) / 100;
+	const value = Math.round((damage + modifier) * bonusMultiplier * (1 - resistance));
+
+	return {
+		target: effect.target,
+		type: damageEffect.damageType,
 		value,
 		hitType: HitType.Hit,
 	};
 });
 
-characterSchema.method("getHeal", function getHeal(effect: IHealEffectData) {
-	const heal = Game.dx(effect.min, effect.max);
+characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
+	const healEffect = effect as IHealEffectData;
+	const heal = Game.dx(healEffect.min, healEffect.max);
 	const modifier = Game.getModifier(this.stats[Stat.Wisdom]);
 	return {
-		target: effect.target,
+		target: healEffect.target,
 		value: heal + modifier,
 	};
 });
 
-characterSchema.method("getStatus", function getStatus(effect: IStatusEffectData, skill: ISkillDataWithID) {
+characterSchema.method("getStatus", function getStatus({ effect, effectTarget, skill }: IEffectData) {
+	const statusEffect = effect as IStatusEffectData;
+
+	let saved = false;
+	if (statusEffect.modifier && statusEffect.difficulty) {
+		const modifier = Game.getModifier(effectTarget.stats[statusEffect.modifier]);
+		const roll = Game.d20 + modifier;
+		saved = roll >= statusEffect.difficulty;
+	}
+
 	return {
 		skill: {
 			id: skill.id,
 			name: skill.name,
 			icon: skill.icon,
 		},
-		target: effect.target,
-		properties: effect.properties,
-		remaining: effect.duration,
-		duration: effect.duration,
-		saved: false,
-		modifier: effect.modifier,
-		difficulty: effect.difficulty,
+		target: statusEffect.target,
+		properties: statusEffect.properties,
+		remaining: statusEffect.duration,
+		duration: statusEffect.duration,
+		saved,
+		modifier: statusEffect.modifier,
+		difficulty: statusEffect.difficulty,
 	};
 });
 
-characterSchema.method("getAuxiliary", function getAuxiliary(effect: IAuxiliaryEffectData, skill: ISkillDataWithID) {
+characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTarget, skill }: IEffectData) {
+	const auxiliaryEffect = effect as IAuxiliaryEffectData;
+
+	let saved = false;
+	if (auxiliaryEffect.modifier && auxiliaryEffect.difficulty) {
+		const modifier = Game.getModifier(effectTarget.stats[auxiliaryEffect.modifier]);
+		const roll = Game.d20 + modifier;
+		saved = roll >= auxiliaryEffect.difficulty;
+	}
+
 	return {
 		skill: {
 			id: skill.id,
 			name: skill.name,
 			icon: skill.icon,
 		},
-		target: effect.target,
-		effect: effect.effect,
-		remaining: effect.duration,
-		duration: effect.duration,
-		saved: false,
-		modifier: effect.modifier,
-		difficulty: effect.difficulty,
+		target: auxiliaryEffect.target,
+		effect: auxiliaryEffect.effect,
+		remaining: auxiliaryEffect.duration,
+		duration: auxiliaryEffect.duration,
+		saved,
+		modifier: auxiliaryEffect.modifier,
+		difficulty: auxiliaryEffect.difficulty,
 	};
 });
 
@@ -504,21 +551,24 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 	}
 
 	skill.effects.forEach((effect) => {
+		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+		const effectData = { effect, effectTarget, skill };
+
 		switch (effect.type) {
 			case EffectType.WeaponDamage:
-				action.weaponDamage.push(this.getWeaponsDamage(effect as IWeaponDamageEffectData));
+				action.weaponDamage.push(this.getWeaponsDamage(effectData));
 				break;
 			case EffectType.Damage:
-				action.damage.push(this.getDamage(effect as IDamageEffectData));
+				action.damage.push(this.getDamage(effectData));
 				break;
 			case EffectType.Heal:
-				action.heal.push(this.getHeal(effect as IHealEffectData));
+				action.heal.push(this.getHeal(effectData));
 				break;
 			case EffectType.Status:
-				action.status.push(this.getStatus(effect as IStatusEffectData, skill));
+				action.status.push(this.getStatus(effectData));
 				break;
 			case EffectType.Auxiliary:
-				action.auxiliary.push(this.getAuxiliary(effect as IAuxiliaryEffectData, skill));
+				action.auxiliary.push(this.getAuxiliary(effectData));
 				break;
 		}
 	});
@@ -526,27 +576,8 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 	return action;
 });
 
-characterSchema.method("handleWeaponDamage", function handleWeaponDamage(damage: IDamageEffect) {
-	if (this.isBleeding) {
-		damage.value = Math.round(damage.value * 1.5);
-	}
-	return this.handleDamage(damage);
-});
-
 characterSchema.method("handleDamage", function handleDamage(damage: IDamageEffect) {
-	const resistance = this.getResistance(damage.type as DamageType) / 100;
-	let value = Math.round(damage.value * (1 - resistance));
-	if (damage.hitType === HitType.Crit) {
-		value *= 2;
-	}
-	if (damage.hitType === HitType.Miss) {
-		value = 0;
-	}
-	if (value < 0) {
-		value = 0;
-	}
-	this.setHitPoints(this.baseHitPoints - value);
-	return { ...damage, value };
+	this.setHitPoints(this.baseHitPoints - damage.value);
 });
 
 characterSchema.method("handleHeal", function handleHeal(heal: IHealEffect) {
@@ -556,18 +587,11 @@ characterSchema.method("handleHeal", function handleHeal(heal: IHealEffect) {
 	} else {
 		this.setHitPoints(this.baseHitPoints + heal.value);
 	}
-	return heal;
 });
 
 characterSchema.method("handleStatus", function handleStatus(status: IStatusEffect) {
-	if (status.modifier && status.difficulty) {
-		const modifier = Game.getModifier(this.stats[status.modifier]);
-		const roll = Game.d20 + modifier;
-		status.saved = roll >= status.difficulty;
-	}
-
 	if (status.saved) {
-		return status;
+		return;
 	}
 
 	const existingStatusEffect = this.activeStatusEffects.find(({ skill }) => skill.id === status.skill.id);
@@ -577,19 +601,11 @@ characterSchema.method("handleStatus", function handleStatus(status: IStatusEffe
 		this.activeStatusEffects.push(status);
 		this.checkAlive();
 	}
-
-	return status;
 });
 
 characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IAuxiliaryEffect) {
-	if (auxiliary.modifier && auxiliary.difficulty) {
-		const modifier = Game.getModifier(this.stats[auxiliary.modifier]);
-		const roll = Game.d20 + modifier;
-		auxiliary.saved = roll >= auxiliary.difficulty;
-	}
-
 	if (auxiliary.saved) {
-		return auxiliary;
+		return;
 	}
 
 	const existingAuxiliaryEffect = this.activeAuxiliaryEffects.find(({ effect }) => effect === auxiliary.effect);
@@ -601,29 +617,36 @@ characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IA
 			remaining: auxiliary.duration,
 		});
 	}
-
-	return auxiliary;
 });
 
 characterSchema.method("handleAction", function handleAction(action: IAction, target: Target) {
-	const weaponDamage = action.weaponDamage.map((effects) =>
-		effects.map((effect) => (effect.target === target ? this.handleWeaponDamage(effect) : effect)),
-	);
-	const damage = action.damage.map((effect) => (effect.target === target ? this.handleDamage(effect) : effect));
-	const heal = action.heal.map((effect) => (effect.target === target ? this.handleHeal(effect) : effect));
-	const status = action.status.map((effect) => (effect.target === target ? this.handleStatus(effect) : effect));
-	const auxiliary = action.auxiliary.map((effect) =>
-		effect.target === target ? this.handleAuxiliary(effect) : effect,
-	);
-
-	return {
-		...action,
-		weaponDamage,
-		damage,
-		heal,
-		status,
-		auxiliary,
-	};
+	action.weaponDamage.forEach((effects) => {
+		effects.forEach((effect) => {
+			if (effect.target === target) {
+				this.handleDamage(effect);
+			}
+		});
+	});
+	action.damage.forEach((effect) => {
+		if (effect.target === target) {
+			this.handleDamage(effect);
+		}
+	});
+	action.heal.forEach((effect) => {
+		if (effect.target === target) {
+			this.handleHeal(effect);
+		}
+	});
+	action.status.forEach((effect) => {
+		if (effect.target === target) {
+			this.handleStatus(effect);
+		}
+	});
+	action.auxiliary.forEach((effect) => {
+		if (effect.target === target) {
+			this.handleAuxiliary(effect);
+		}
+	});
 });
 
 characterSchema.method("tickPoison", function tickPoison() {

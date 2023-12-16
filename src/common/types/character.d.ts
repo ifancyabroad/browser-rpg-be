@@ -12,13 +12,9 @@ import {
 import { Model, Types } from "mongoose";
 import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
 import {
-	IAuxiliaryEffectData,
-	IDamageEffectData,
-	IHealEffectData,
 	ISkillDataWithID,
 	ISkillDataWithRemaining,
-	IStatusEffectData,
-	IWeaponDamageEffectData,
+	ISkillEffect,
 	IWeaponDataWithID,
 	TDamageTypes,
 	TEquipment,
@@ -44,6 +40,12 @@ export interface ICharacter {
 	baseMaxHitPoints: number;
 	baseStats: TStats;
 	baseResistances: TDamageTypes;
+}
+
+export interface IEffectData {
+	effect: ISkillEffect;
+	effectTarget: ICharacter & ICharacterMethods;
+	skill: ISkillDataWithID;
 }
 
 export interface ICharacterMethods {
@@ -73,22 +75,21 @@ export interface ICharacterMethods {
 	getDamageBonus(type: DamageType): number;
 	getResistance(type: DamageType): number;
 	getAuxiliaryStat(type: AuxiliaryStat): number;
-	getHitType(): HitType;
+	getHitType(armourClass: number): HitType;
 	setHitPoints(value: number): void;
-	getUnarmedDamage(effect: IWeaponDamageEffectData): number;
-	getWeaponDamage(weapon: IWeaponDataWithID, effect: IWeaponDamageEffectData): IDamageEffect;
-	getWeaponsDamage(effect: IWeaponDamageEffectData): IDamageEffect[];
-	getDamage(effect: IDamageEffectData): IDamageEffect;
-	getHeal(effect: IHealEffectData): IHealEffect;
-	getStatus(effect: IStatusEffectData, skill: ISkillDataWithID): IStatusEffect;
-	getAuxiliary(effect: IAuxiliaryEffectData, skill: ISkillDataWithID): IAuxiliaryEffect;
+	getUnarmedDamage(data: IEffectData): number;
+	getWeaponDamage(data: IEffectData, weapon: IWeaponDataWithID): IDamageEffect;
+	getWeaponsDamage(data: IEffectData): IDamageEffect[];
+	getDamage(data: IEffectData): IDamageEffect;
+	getHeal(data: IEffectData): IHealEffect;
+	getStatus(data: IEffectData): IStatusEffect;
+	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
 	createAction(data: ITurnData): IAction;
-	handleWeaponDamage(damage: IDamageEffect): IDamageEffect;
-	handleDamage(damage: IDamageEffect): IDamageEffect;
-	handleHeal(heal: IHealEffect): IHealEffect;
-	handleStatus(status: IStatusEffect): IStatusEffect;
-	handleAuxiliary(auxiliary: IAuxiliaryEffect): IAuxiliaryEffect;
-	handleAction(action: IAction, target: Target): IAction;
+	handleDamage(damage: IDamageEffect): void;
+	handleHeal(heal: IHealEffect): void;
+	handleStatus(status: IStatusEffect): void;
+	handleAuxiliary(auxiliary: IAuxiliaryEffect): void;
+	handleAction(action: IAction, target: Target): void;
 	tickPoison(): void;
 	tickEffects(): void;
 

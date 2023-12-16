@@ -1,5 +1,10 @@
-import { DAMAGE_TYPE_MODIFIER_MAP, MODIFIERS, WEAPON_MODIFIER_MAP } from "@common/utils/constants";
-import { DamageType, WeaponType } from "@common/utils/enums";
+import {
+	DAMAGE_TYPE_MODIFIER_MAP,
+	HIT_TYPE_MULTIPLIER_MAP,
+	MODIFIERS,
+	WEAPON_MODIFIER_MAP,
+} from "@common/utils/constants";
+import { DamageType, HitType, WeaponType } from "@common/utils/enums";
 
 export class Game {
 	public static get d4() {
@@ -40,6 +45,10 @@ export class Game {
 
 	public static getDamageStat(type: DamageType) {
 		return DAMAGE_TYPE_MODIFIER_MAP.get(type);
+	}
+
+	public static getHitMultiplier(hitType: HitType) {
+		return HIT_TYPE_MULTIPLIER_MAP.get(hitType);
 	}
 
 	public static getHitPoints(level = 1) {

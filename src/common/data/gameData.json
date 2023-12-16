@@ -1,8 +1,8 @@
 {
 	"armours": {
 		"-NMEwPxI9DXom0AaME0Z": {
-			"armourType": "medium",
-			"defence": 9,
+			"armourClass": 11,
+			"armourType": "light",
 			"description": "Simple leather armour.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
 			"level": 1,
@@ -11,8 +11,6 @@
 			"type": "armour"
 		},
 		"-NNvLeBtvpWhwHiOrBKJ": {
-			"armourType": "medium",
-			"defence": 3,
 			"description": "Some leather boots.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
 			"level": 1,
@@ -21,8 +19,6 @@
 			"type": "boots"
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
-			"armourType": "medium",
-			"defence": 3,
 			"description": "A pair of leather gloves.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
 			"level": 1,
@@ -31,8 +27,6 @@
 			"type": "gloves"
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
-			"armourType": "medium",
-			"defence": 3,
 			"description": "A leather hood.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
 			"level": 1,
@@ -41,18 +35,23 @@
 			"type": "helmet"
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
-			"armourType": "light",
-			"defence": 18,
 			"description": "A basic wooden shield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
 			"level": 1,
 			"name": "Wooden Shield",
 			"price": 10,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 3
+				}
+			],
 			"type": "shield"
 		},
 		"-NZN-pDbqOJ2N6bjuW-2": {
+			"armourClass": 18,
 			"armourType": "heavy",
-			"defence": 24,
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
 			"level": 4,
@@ -133,8 +132,8 @@
 			"type": "armour"
 		},
 		"-Nc44lyRjk-mHNox3H_P": {
-			"armourType": "heavy",
-			"defence": 15,
+			"armourClass": 13,
+			"armourType": "medium",
 			"description": "Simple chain mail armour.",
 			"icon": "",
 			"level": 1,
@@ -143,8 +142,6 @@
 			"type": "armour"
 		},
 		"-Nc44ulAZW4VDmlUdugz": {
-			"armourType": "heavy",
-			"defence": 5,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -153,8 +150,6 @@
 			"type": "boots"
 		},
 		"-Nc45CfPFl5WOAOiI-bT": {
-			"armourType": "heavy",
-			"defence": 5,
 			"description": "Simple chain mail gloves.",
 			"icon": "",
 			"level": 1,
@@ -163,8 +158,6 @@
 			"type": "gloves"
 		},
 		"-Nc45OA1HAAOs_BCsoag": {
-			"armourType": "heavy",
-			"defence": 5,
 			"description": "Simple chain mail coif.",
 			"icon": "",
 			"level": 1,
@@ -173,8 +166,8 @@
 			"type": "helmet"
 		},
 		"-Nc45gPIxmy9nc7aorfO": {
-			"armourType": "light",
-			"defence": 2,
+			"armourClass": 4,
+			"armourType": "misc",
 			"description": "A simple robe.",
 			"icon": "",
 			"level": 1,
@@ -183,8 +176,6 @@
 			"type": "armour"
 		},
 		"-Nc45pVe2gGeYcmq2MIh": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "Simple boots.",
 			"icon": "",
 			"level": 1,
@@ -193,8 +184,6 @@
 			"type": "boots"
 		},
 		"-Nc45v1m0uZ5VxV0Zco-": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "Simple gloves.",
 			"icon": "",
 			"level": 1,
@@ -203,8 +192,8 @@
 			"type": "gloves"
 		},
 		"-NgJxsDuymhUWq2V4ew8": {
+			"armourClass": 18,
 			"armourType": "heavy",
-			"defence": 24,
 			"description": "Plate mail armour.",
 			"icon": "",
 			"level": 2,
@@ -213,8 +202,6 @@
 			"type": "armour"
 		},
 		"-NgJy9Jlz0vb0jkTHkgy": {
-			"armourType": "heavy",
-			"defence": 8,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -223,8 +210,6 @@
 			"type": "gloves"
 		},
 		"-NgJyJCDG-1UEccRymvT": {
-			"armourType": "heavy",
-			"defence": 8,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -233,8 +218,6 @@
 			"type": "helmet"
 		},
 		"-NgJyTQysCK4qafqZ3jN": {
-			"armourType": "heavy",
-			"defence": 8,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -243,8 +226,6 @@
 			"type": "boots"
 		},
 		"-NgJyz3yv_isH2ozl7vj": {
-			"armourType": "misc",
-			"defence": 0,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -260,8 +241,6 @@
 			"type": "ring"
 		},
 		"-NgJz9XiQvutptUoYpNc": {
-			"armourType": "misc",
-			"defence": 0,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -277,18 +256,23 @@
 			"type": "ring"
 		},
 		"-NgJzNDx7O2sLwCLS8rd": {
-			"armourType": "light",
-			"defence": 14,
 			"description": "",
 			"icon": "",
 			"level": 1,
 			"name": "Buckler",
 			"price": 120,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
 			"type": "shield"
 		},
 		"-NgJzhkhaQDrg55F1iM1": {
+			"armourClass": 12,
 			"armourType": "medium",
-			"defence": 16,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -297,8 +281,6 @@
 			"type": "armour"
 		},
 		"-NgJzs7bwVtbBagisMEh": {
-			"armourType": "medium",
-			"defence": 5,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -307,8 +289,6 @@
 			"type": "gloves"
 		},
 		"-NgK-2BiZcCUjmAHKw3O": {
-			"armourType": "medium",
-			"defence": 5,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -317,8 +297,6 @@
 			"type": "boots"
 		},
 		"-NgK-7vy3aNlPRE3P0-e": {
-			"armourType": "medium",
-			"defence": 5,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -327,8 +305,8 @@
 			"type": "helmet"
 		},
 		"-NgO5fUaNmJH7LpPo2LP": {
-			"armourType": "light",
-			"defence": 2,
+			"armourClass": 6,
+			"armourType": "misc",
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -346,7 +324,7 @@
 					"value": 15
 				},
 				{
-					"name": "lightning",
+					"name": "lighting",
 					"type": "resistance",
 					"value": 15
 				}
@@ -354,8 +332,6 @@
 			"type": "armour"
 		},
 		"-NgO5sJUrIhMs51cklUw": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -371,8 +347,6 @@
 			"type": "boots"
 		},
 		"-NgO67F5LvAQ45_mIfvS": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -388,8 +362,6 @@
 			"type": "gloves"
 		},
 		"-NgO6HxDB1nJzwsoS1r-": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -405,8 +377,6 @@
 			"type": "helmet"
 		},
 		"-NgO6sAjD4s9LSirM2lr": {
-			"armourType": "heavy",
-			"defence": 4,
 			"description": "",
 			"icon": "",
 			"level": 3,
@@ -422,8 +392,6 @@
 			"type": "belt"
 		},
 		"-NgO7BPLLUJS5JjAH6o0": {
-			"armourType": "misc",
-			"defence": 0,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -439,8 +407,8 @@
 			"type": "amulet"
 		},
 		"-NgO8PhCToY1JdZzRShH": {
-			"armourType": "light",
-			"defence": 2,
+			"armourClass": 2,
+			"armourType": "misc",
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -449,8 +417,6 @@
 			"type": "armour"
 		},
 		"-NgO8UlarVWVemCx3yP2": {
-			"armourType": "light",
-			"defence": 1,
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -459,8 +425,8 @@
 			"type": "helmet"
 		},
 		"-NgO9edxFCHlRJNEhoqg": {
-			"armourType": "light",
-			"defence": 1,
+			"armourClass": 1,
+			"armourType": "misc",
 			"description": "",
 			"icon": "",
 			"level": 1,
@@ -469,8 +435,6 @@
 			"type": "armour"
 		},
 		"-NgO9yRhdOivFSL6xkCK": {
-			"armourType": "medium",
-			"defence": 2,
 			"description": "",
 			"icon": "",
 			"level": 2,
@@ -579,6 +543,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -609,6 +574,7 @@
 				"cold": 0,
 				"crushing": -50,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -640,6 +606,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -673,6 +640,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -707,6 +675,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -740,6 +709,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -767,7 +737,8 @@
 				"cold": 50,
 				"crushing": 25,
 				"fire": 50,
-				"lightning": 50,
+				"lighting": 50,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -794,6 +765,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -811,36 +783,6 @@
 				"wisdom": 11
 			}
 		},
-		"-NgJtJTYuhqG-w5XwC9d": {
-			"challenge": 1,
-			"description": "",
-			"equipment": {
-				"hand1": "-NMDekxBlRvJBq18KmM3"
-			},
-			"name": "Skeleton",
-			"portrait": "",
-			"resistances": {
-				"acid": 0,
-				"cold": 0,
-				"crushing": -50,
-				"fire": 0,
-				"lightning": 0,
-				"necrotic": 0,
-				"piercing": 0,
-				"poison": 100,
-				"radiant": 0,
-				"slashing": 0
-			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
-			"stats": {
-				"charisma": 5,
-				"constitution": 15,
-				"dexterity": 14,
-				"intelligence": 6,
-				"strength": 10,
-				"wisdom": 8
-			}
-		},
 		"-NgTNI7tNRD7gPFbOyq-": {
 			"challenge": 1,
 			"description": "",
@@ -854,6 +796,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -881,6 +824,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -908,6 +852,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -938,6 +883,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -965,6 +911,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -992,6 +939,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 50,
 				"piercing": 50,
@@ -1025,6 +973,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1052,6 +1001,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1083,6 +1033,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1114,6 +1065,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1141,6 +1093,7 @@
 				"cold": 50,
 				"crushing": 75,
 				"fire": 50,
+				"lighting": 50,
 				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 75,
@@ -1174,7 +1127,8 @@
 				"cold": 50,
 				"crushing": 50,
 				"fire": 0,
-				"lightning": 50,
+				"lighting": 50,
+				"lightning": 0,
 				"necrotic": 50,
 				"piercing": 50,
 				"poison": 100,
@@ -1213,6 +1167,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1244,6 +1199,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1271,6 +1227,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
@@ -1304,6 +1261,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1331,7 +1289,8 @@
 				"cold": 100,
 				"crushing": 50,
 				"fire": 50,
-				"lightning": 50,
+				"lighting": 50,
+				"lightning": 0,
 				"necrotic": 100,
 				"piercing": 50,
 				"poison": 100,
@@ -1358,6 +1317,7 @@
 				"cold": 0,
 				"crushing": 0,
 				"fire": -100,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
@@ -1385,6 +1345,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 100,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
@@ -1412,6 +1373,7 @@
 				"cold": 0,
 				"crushing": 50,
 				"fire": 0,
+				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
@@ -1445,6 +1407,7 @@
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
+				"lighting": 50,
 				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
@@ -1497,9 +1460,9 @@
 					"duration": 4,
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 4
 						},
 						{
 							"name": "constitution",
@@ -1654,9 +1617,9 @@
 							"value": -6
 						},
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -20
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -1716,9 +1679,9 @@
 							"value": 8
 						},
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -50
+							"value": -10
 						}
 					],
 					"target": "self",
@@ -1865,12 +1828,12 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						}
 					],
 					"target": "self",
@@ -1993,7 +1956,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -75
+							"value": -10
 						}
 					],
 					"target": "enemy",
@@ -2044,9 +2007,9 @@
 					"modifier": "dexterity",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -50
+							"value": -4
 						},
 						{
 							"name": "dexterity",
@@ -2192,9 +2155,9 @@
 					"modifier": "intelligence",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -20
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -2218,7 +2181,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -20
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -2240,9 +2203,9 @@
 					"duration": 5,
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 30
+							"value": 11
 						}
 					],
 					"target": "self",
@@ -2263,11 +2226,6 @@
 					"accuracy": 100,
 					"duration": 5,
 					"properties": [
-						{
-							"name": "defence",
-							"type": "auxiliaryStat",
-							"value": 60
-						},
 						{
 							"name": "slashing",
 							"type": "resistance",
@@ -2305,9 +2263,9 @@
 					"modifier": "intelligence",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -50
+							"value": -10
 						}
 					],
 					"target": "enemy",
@@ -2369,7 +2327,7 @@
 			"icon": "",
 			"level": 2,
 			"maxUses": 5,
-			"name": "lightning Bolt",
+			"name": "Lighting Bolt",
 			"price": 280
 		},
 		"-Nc4-UVARP8jFmsiuXC9": {
@@ -2481,21 +2439,6 @@
 					"min": 18,
 					"target": "enemy",
 					"type": "damage"
-				},
-				{
-					"accuracy": 10,
-					"difficulty": 10,
-					"duration": 1,
-					"modifier": "intelligence",
-					"properties": [
-						{
-							"name": "hitPoints",
-							"type": "auxiliaryStat",
-							"value": -100
-						}
-					],
-					"target": "enemy",
-					"type": "status"
 				}
 			],
 			"icon": "",
@@ -2523,9 +2466,9 @@
 							"value": 8
 						},
 						{
-							"name": "hitPoints",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						}
 					],
 					"target": "self",
@@ -3064,9 +3007,9 @@
 					"modifier": "constitution",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -25
+							"value": -6
 						}
 					],
 					"target": "enemy",
@@ -3133,7 +3076,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						}
 					],
 					"target": "self",
@@ -3203,9 +3146,9 @@
 					"duration": 5,
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 40
+							"value": 12
 						}
 					],
 					"target": "self",
@@ -3326,19 +3269,9 @@
 					"duration": 2,
 					"properties": [
 						{
-							"name": "slashing",
-							"type": "resistance",
-							"value": 100
-						},
-						{
-							"name": "crushing",
-							"type": "resistance",
-							"value": 100
-						},
-						{
-							"name": "piercing",
-							"type": "resistance",
-							"value": 100
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": 12
 						}
 					],
 					"target": "self",
@@ -3494,11 +3427,6 @@
 							"name": "piercing",
 							"type": "resistance",
 							"value": -75
-						},
-						{
-							"name": "defence",
-							"type": "auxiliaryStat",
-							"value": -50
 						}
 					],
 					"target": "enemy",
@@ -3588,7 +3516,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -75
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -3960,20 +3888,6 @@
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 13,
-					"duration": 1,
-					"modifier": "constitution",
-					"properties": [
-						{
-							"name": "hitPoints",
-							"type": "auxiliaryStat",
-							"value": -100
-						}
-					],
-					"target": "enemy",
-					"type": "status"
-				},
-				{
 					"damageType": "necrotic",
 					"max": 12,
 					"min": 6,
@@ -4010,16 +3924,10 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 1,
-					"properties": [
-						{
-							"name": "hitPoints",
-							"type": "auxiliaryStat",
-							"value": 100
-						}
-					],
+					"max": 12,
+					"min": 2,
 					"target": "self",
-					"type": "status"
+					"type": "heal"
 				}
 			],
 			"icon": "",

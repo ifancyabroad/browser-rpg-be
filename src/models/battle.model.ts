@@ -72,10 +72,9 @@ battleSchema.method("handleAction", function handleAction(first: ITurnData, seco
 	[first, second].forEach((data) => {
 		if (data.self.alive && data.enemy.alive) {
 			const action = data.self.createAction(data);
-			const actionSelf = data.self.handleAction(action, Target.Self);
-			const actionEnemy = data.enemy.handleAction(actionSelf, Target.Enemy);
-			turn.push(actionEnemy);
-
+			turn.push(action);
+			data.self.handleAction(action, Target.Self);
+			data.enemy.handleAction(action, Target.Enemy);
 			data.self.tickPoison();
 			data.self.tickEffects();
 		}

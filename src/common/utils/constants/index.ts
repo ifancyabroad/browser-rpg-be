@@ -1,4 +1,4 @@
-import { DamageType, EquipmentSlot, EquipmentType, Stat, WeaponType } from "@common/utils/enums/index";
+import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, WeaponType } from "@common/utils/enums/index";
 
 export const GOLD_MULTIPLIER = 10;
 export const EXPERIENCE_MULTIPLIER = 50;
@@ -112,4 +112,10 @@ export const DAMAGE_TYPE_MODIFIER_MAP = new Map([
 	[DamageType.Radiant, Stat.Wisdom],
 	[DamageType.Acid, null],
 	[DamageType.Poison, null],
+]);
+
+export const HIT_TYPE_MULTIPLIER_MAP = new Map([
+	[HitType.Crit, 2],
+	[HitType.Hit, 1],
+	[HitType.Miss, 0],
 ]);
