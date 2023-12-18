@@ -10,7 +10,6 @@ const leaderboardRouter = Router();
 // @DEST Get leaderboards
 leaderboardRouter.get(
 	"/",
-	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
 		const leaderboard = await getLeaderboard();
 		res.json(leaderboard);
