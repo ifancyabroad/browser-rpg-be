@@ -2,7 +2,7 @@ import { IArmourData, IClassData, IGameData, IWeaponData, TEquipment } from "@co
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { EQUIPMENT_LEVELS } from "@common/utils/constants";
+import { EQUIPMENT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot } from "@common/utils/enums";
 
 export class GameData {
@@ -174,12 +174,12 @@ export class GameData {
 		try {
 			const { skills } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
-			const maxSkillLevel = EQUIPMENT_LEVELS.get(level);
+			const skillLevel = SKILL_LEVELS.get(level);
 
 			const filteredSkills = mapToArray(skills)
 				.filter((skill) => currentSkills.findIndex((sk) => sk.id === skill.id) === -1)
 				.filter((skill) => characterClass.skillClasses.includes(skill.class))
-				.filter(({ level }) => maxSkillLevel >= level)
+				.filter(({ level }) => skillLevel === level)
 				.map(({ id }) => id);
 
 			return getMultipleRandom(filteredSkills, 3);

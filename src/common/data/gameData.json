@@ -3,43 +3,49 @@
 		"-NMEwPxI9DXom0AaME0Z": {
 			"armourClass": 11,
 			"armourType": "light",
-			"description": "Simple leather armour.",
+			"description": "Lightweight and agile, the classic leather armor for nimble warriors.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
-			"level": 1,
+			"level": 2,
 			"name": "Leather Armour",
-			"price": 90,
+			"price": 110,
 			"type": "armour"
 		},
-		"-NNvLeBtvpWhwHiOrBKJ": {
-			"description": "Some leather boots.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLeBtvpWhwHiOrBKJ?alt=media&token=c569991c-bc55-4cc3-b698-95f91b4c452d",
-			"level": 1,
-			"name": "Leather Boots",
-			"price": 50,
-			"type": "boots"
-		},
 		"-NNvLkVyFUS4L9Zio2lO": {
-			"description": "A pair of leather gloves.",
+			"description": "Insulated gloves, shielding hands from bitter cold and frost.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
 			"level": 1,
-			"name": "Leather Gloves",
-			"price": 50,
+			"name": "Insulated Gloves",
+			"price": 80,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 50
+				}
+			],
 			"type": "gloves"
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
-			"description": "A leather hood.",
+			"description": "The Hood of the Fox, an enchanting accessory for those who revel in trickery.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
 			"level": 1,
-			"name": "Leather Hood",
+			"name": "Hood of the Fox",
 			"price": 70,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				}
+			],
 			"type": "helmet"
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
-			"description": "A basic wooden shield.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=467d5bc4-06ba-4595-8c82-9f1b3e27254c",
+			"description": "A sturdy, basic shield for versatile defense in close combat.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=c3b6295d-0578-4fdc-80a2-caca78f611c5",
 			"level": 1,
-			"name": "Wooden Shield",
-			"price": 10,
+			"name": "Shield",
+			"price": 30,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -52,7 +58,7 @@
 		"-NZN-pDbqOJ2N6bjuW-2": {
 			"armourClass": 18,
 			"armourType": "heavy",
-			"description": "",
+			"description": "Gilded in enchantments, this gold-plated armor radiates magical protection.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
 			"level": 4,
 			"name": "Gold Armour",
@@ -132,105 +138,46 @@
 			"type": "armour"
 		},
 		"-Nc44lyRjk-mHNox3H_P": {
-			"armourClass": 13,
-			"armourType": "medium",
-			"description": "Simple chain mail armour.",
-			"icon": "",
+			"armourClass": 16,
+			"armourType": "heavy",
+			"description": "Basic but sturdy, this chain mail ensures both mobility and protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nc44lyRjk-mHNox3H_P?alt=media&token=0f8267f4-6f20-4993-ac94-d0d32857b4bf",
 			"level": 1,
 			"name": "Chain Mail",
-			"price": 110,
+			"price": 90,
 			"type": "armour"
-		},
-		"-Nc44ulAZW4VDmlUdugz": {
-			"description": "",
-			"icon": "",
-			"level": 1,
-			"name": "Chain Boots",
-			"price": 70,
-			"type": "boots"
-		},
-		"-Nc45CfPFl5WOAOiI-bT": {
-			"description": "Simple chain mail gloves.",
-			"icon": "",
-			"level": 1,
-			"name": "Chain Gloves",
-			"price": 70,
-			"type": "gloves"
-		},
-		"-Nc45OA1HAAOs_BCsoag": {
-			"description": "Simple chain mail coif.",
-			"icon": "",
-			"level": 1,
-			"name": "Chain Coif",
-			"price": 70,
-			"type": "helmet"
-		},
-		"-Nc45gPIxmy9nc7aorfO": {
-			"armourClass": 4,
-			"armourType": "misc",
-			"description": "A simple robe.",
-			"icon": "",
-			"level": 1,
-			"name": "Robe",
-			"price": 50,
-			"type": "armour"
-		},
-		"-Nc45pVe2gGeYcmq2MIh": {
-			"description": "Simple boots.",
-			"icon": "",
-			"level": 1,
-			"name": "Boots",
-			"price": 10,
-			"type": "boots"
-		},
-		"-Nc45v1m0uZ5VxV0Zco-": {
-			"description": "Simple gloves.",
-			"icon": "",
-			"level": 1,
-			"name": "Gloves",
-			"price": 10,
-			"type": "gloves"
 		},
 		"-NgJxsDuymhUWq2V4ew8": {
 			"armourClass": 18,
 			"armourType": "heavy",
-			"description": "Plate mail armour.",
-			"icon": "",
-			"level": 2,
+			"description": "Standard plate armor, providing formidable defense on the battlefield.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJxsDuymhUWq2V4ew8?alt=media&token=b3fc5a36-eed3-4600-a813-db447dfe9ad0",
+			"level": 3,
 			"name": "Plate Armour",
-			"price": 650,
+			"price": 300,
 			"type": "armour"
 		},
-		"-NgJy9Jlz0vb0jkTHkgy": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Plate Gauntlets",
-			"price": 800,
-			"type": "gloves"
-		},
 		"-NgJyJCDG-1UEccRymvT": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Plate Helm",
-			"price": 900,
+			"description": "Simple yet reliable plate helm, favored by defenders of the realm.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyJCDG-1UEccRymvT?alt=media&token=f57a92f0-2d11-4b59-a945-8baee93657b1",
+			"level": 1,
+			"name": "Helmet",
+			"price": 20,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				}
+			],
 			"type": "helmet"
 		},
-		"-NgJyTQysCK4qafqZ3jN": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Plate Boots",
-			"price": 800,
-			"type": "boots"
-		},
 		"-NgJyz3yv_isH2ozl7vj": {
-			"description": "",
-			"icon": "",
+			"description": "Withstands searing temperatures, a ring providing steadfast fire resistance.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyz3yv_isH2ozl7vj?alt=media&token=117a6afc-11bd-4c59-a8d0-77df14ad7566",
 			"level": 1,
 			"name": "Ring of Fire Resistance",
-			"price": 90,
+			"price": 100,
 			"properties": [
 				{
 					"name": "fire",
@@ -241,8 +188,8 @@
 			"type": "ring"
 		},
 		"-NgJz9XiQvutptUoYpNc": {
-			"description": "",
-			"icon": "",
+			"description": "Shields against bitter cold, a ring of unwavering resistance.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJz9XiQvutptUoYpNc?alt=media&token=bb82961d-101a-4c0e-bacb-6b4daf5e5aba",
 			"level": 1,
 			"name": "Ring of Cold Resistance",
 			"price": 90,
@@ -256,11 +203,11 @@
 			"type": "ring"
 		},
 		"-NgJzNDx7O2sLwCLS8rd": {
-			"description": "",
-			"icon": "",
+			"description": "Basic yet dependable, an essential companion for any aspiring adventurer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzNDx7O2sLwCLS8rd?alt=media&token=69db882b-867b-4ba1-83dc-0cda5e98b330",
 			"level": 1,
 			"name": "Buckler",
-			"price": 120,
+			"price": 10,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -273,130 +220,51 @@
 		"-NgJzhkhaQDrg55F1iM1": {
 			"armourClass": 12,
 			"armourType": "medium",
-			"description": "",
-			"icon": "",
-			"level": 2,
+			"description": "Basic yet durable, woven from beast hides for agile wilderness warriors.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzhkhaQDrg55F1iM1?alt=media&token=35a4dc70-0a1a-4b80-a5c7-b1f55c73ef51",
+			"level": 1,
 			"name": "Hide Armour",
-			"price": 450,
+			"price": 60,
 			"type": "armour"
-		},
-		"-NgJzs7bwVtbBagisMEh": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Hide Gloves",
-			"price": 300,
-			"type": "gloves"
-		},
-		"-NgK-2BiZcCUjmAHKw3O": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Hide Boots",
-			"price": 340,
-			"type": "boots"
-		},
-		"-NgK-7vy3aNlPRE3P0-e": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Hide Hood",
-			"price": 360,
-			"type": "helmet"
 		},
 		"-NgO5fUaNmJH7LpPo2LP": {
-			"armourClass": 6,
+			"armourClass": 8,
 			"armourType": "misc",
-			"description": "",
-			"icon": "",
+			"description": "Simple yet durable, this robe is tailored for those who journey far and wide.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO5fUaNmJH7LpPo2LP?alt=media&token=b8831c20-85bf-4e00-823f-f4ba915576c4",
 			"level": 2,
 			"name": "Traveller's Robe",
-			"price": 240,
+			"price": 180,
 			"properties": [
 				{
-					"name": "cold",
-					"type": "resistance",
-					"value": 15
-				},
-				{
-					"name": "fire",
-					"type": "resistance",
-					"value": 15
-				},
-				{
-					"name": "lighting",
-					"type": "resistance",
-					"value": 15
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
 				}
 			],
 			"type": "armour"
 		},
-		"-NgO5sJUrIhMs51cklUw": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Traveller's Boots",
-			"price": 220,
-			"properties": [
-				{
-					"name": "dexterity",
-					"type": "stat",
-					"value": 1
-				}
-			],
-			"type": "boots"
-		},
-		"-NgO67F5LvAQ45_mIfvS": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Traveller's Gloves",
-			"price": 260,
-			"properties": [
-				{
-					"name": "strength",
-					"type": "stat",
-					"value": 1
-				}
-			],
-			"type": "gloves"
-		},
-		"-NgO6HxDB1nJzwsoS1r-": {
-			"description": "",
-			"icon": "",
-			"level": 2,
-			"name": "Traveller's Hood",
-			"price": 270,
-			"properties": [
-				{
-					"name": "charisma",
-					"type": "stat",
-					"value": 1
-				}
-			],
-			"type": "helmet"
-		},
 		"-NgO6sAjD4s9LSirM2lr": {
-			"description": "",
-			"icon": "",
-			"level": 3,
+			"description": "Woven with enchanted fibers, bestowing the strength of ogres upon the wearer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO6sAjD4s9LSirM2lr?alt=media&token=c5055f9b-d939-4c9d-abbd-bafb5adec1c1",
+			"level": 2,
 			"name": "Girdle of Ogre Strength",
 			"price": 1100,
 			"properties": [
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 2
+					"value": 1
 				}
 			],
 			"type": "belt"
 		},
 		"-NgO7BPLLUJS5JjAH6o0": {
 			"description": "",
-			"icon": "",
-			"level": 2,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO7BPLLUJS5JjAH6o0?alt=media&token=6a3834e9-721f-4953-be17-ce408ad6bbda",
+			"level": 1,
 			"name": "Amulet of Light",
-			"price": 480,
+			"price": 80,
 			"properties": [
 				{
 					"name": "radiant",
@@ -406,37 +274,9 @@
 			],
 			"type": "amulet"
 		},
-		"-NgO8PhCToY1JdZzRShH": {
-			"armourClass": 2,
-			"armourType": "misc",
-			"description": "",
-			"icon": "",
-			"level": 1,
-			"name": "Cloak",
-			"price": 50,
-			"type": "armour"
-		},
-		"-NgO8UlarVWVemCx3yP2": {
-			"description": "",
-			"icon": "",
-			"level": 1,
-			"name": "Hood",
-			"price": 20,
-			"type": "helmet"
-		},
-		"-NgO9edxFCHlRJNEhoqg": {
-			"armourClass": 1,
-			"armourType": "misc",
-			"description": "",
-			"icon": "",
-			"level": 1,
-			"name": "Loincloth",
-			"price": 10,
-			"type": "armour"
-		},
 		"-NgO9yRhdOivFSL6xkCK": {
-			"description": "",
-			"icon": "",
+			"description": "Infused with primal energy, the shaman's belt links to the natural world.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=885df85d-7e3e-4fa0-964c-9681b8941287",
 			"level": 2,
 			"name": "Shaman's Belt",
 			"price": 260,
@@ -449,21 +289,101 @@
 				{
 					"name": "cold",
 					"type": "resistance",
-					"value": 25
+					"value": 50
 				}
 			],
 			"type": "belt"
+		},
+		"-Nm2AhkGYoZ3Qw0JaJfd": {
+			"armourClass": 10,
+			"armourType": "light",
+			"description": "Simple yet effective, padded armor for agile adventurers.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2AhkGYoZ3Qw0JaJfd?alt=media&token=b74b2b95-f833-4b3f-92b6-ceac6dbc4e29",
+			"level": 1,
+			"name": "Padded Armour",
+			"price": 40,
+			"type": "armour"
+		},
+		"-Nm2B54qxLaMzsSjGgWO": {
+			"armourClass": 12,
+			"armourType": "light",
+			"description": "Entry-level studded leather, balancing flexibility and protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2B54qxLaMzsSjGgWO?alt=media&token=2635218d-04d5-4994-80f5-5f78525759bd",
+			"level": 3,
+			"name": "Studded Leather",
+			"price": 200,
+			"type": "armour"
+		},
+		"-Nm2Cd-d46R6iuL4782x": {
+			"armourClass": 14,
+			"armourType": "medium",
+			"description": "Sturdy breastplate, favored by vigilant guardians for reliable protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2Cd-d46R6iuL4782x?alt=media&token=233f430a-9221-442c-b15e-aa82326accab",
+			"level": 2,
+			"name": "Breastplate",
+			"price": 150,
+			"type": "armour"
+		},
+		"-Nm2D2w4xiCJtkX_yQHG": {
+			"armourClass": 15,
+			"armourType": "medium",
+			"description": "A balanced mix of protection and mobility, favored by seasoned warriors.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2D2w4xiCJtkX_yQHG?alt=media&token=00ba260f-5081-4080-9ba8-9f7071593b35",
+			"level": 3,
+			"name": "Half Plate",
+			"price": 250,
+			"type": "armour"
+		},
+		"-Nm2DaHdeREq1LsjfY1C": {
+			"armourClass": 17,
+			"armourType": "heavy",
+			"description": "Basic splints interwoven for reliable defense on the battlefield.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2DaHdeREq1LsjfY1C?alt=media&token=5fe5516e-9705-467f-9d1c-cf29320d3996",
+			"level": 2,
+			"name": "Splint Mail",
+			"price": 220,
+			"type": "armour"
+		},
+		"-Nm2GvWJKAW8lLaCcu7n": {
+			"armourClass": 9,
+			"armourType": "misc",
+			"description": "A versatile adventurer's robe, perfect for those seeking the unknown.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2GvWJKAW8lLaCcu7n?alt=media&token=9369a473-acb8-4a03-afdf-0e2e0919bfba",
+			"level": 3,
+			"name": "Adventurer's Robe",
+			"price": 240,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-Nm2HibRx3V8P1isPlRf": {
+			"armourClass": 7,
+			"armourType": "misc",
+			"description": "The Knave's robe, tailored for subtle moves and shadowy maneuvers.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2HibRx3V8P1isPlRf?alt=media&token=f9c58f19-e43f-40ba-b953-ea2bd710b1eb",
+			"level": 1,
+			"name": "Knave's Robe",
+			"price": 60,
+			"type": "armour"
 		}
 	},
 	"classes": {
 		"-N_Ot99GWjYjrv9Gs-fP": {
-			"armourTypes": ["heavy", "misc"],
+			"armourTypes": ["heavy", "medium"],
 			"description": "Proud and honorable, specialising in brute strength. Primary stats are strength and constitution.",
 			"equipment": {
 				"body": "-Nc44lyRjk-mHNox3H_P",
-				"feet": "-Nc44ulAZW4VDmlUdugz",
-				"hand1": "-NMmvhpTgBUrely_XRJ7",
-				"hands": "-Nc45CfPFl5WOAOiI-bT"
+				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
 			"name": "Fighter",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP?alt=media&token=d5f2ff3c-b47d-44a2-8c86-4c8f4e0d0bfe",
@@ -480,13 +400,11 @@
 			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
-			"armourTypes": ["medium", "misc"],
+			"armourTypes": ["light"],
 			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"feet": "-NNvLeBtvpWhwHiOrBKJ",
-				"hand1": "-NNwMy0q-XKUT-EUvxFF",
-				"head": "-NNvLx5iIM_zb3YGnsNC"
+				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb?alt=media&token=df7d8777-000e-4118-b1e3-fda257e39d92",
@@ -503,13 +421,11 @@
 			"weaponTypes": ["dagger", "crossbow"]
 		},
 		"-N_P0pcakZhKbNDftKoc": {
-			"armourTypes": ["light", "misc"],
+			"armourTypes": ["misc"],
 			"description": "Trained in the arcane arts and proficient with all forms of magic. Primary stat is intelligence.",
 			"equipment": {
-				"body": "-Nc45gPIxmy9nc7aorfO",
-				"feet": "-Nc45pVe2gGeYcmq2MIh",
-				"hand1": "-Nc46CPWJz2atC_uII9i",
-				"hands": "-Nc45v1m0uZ5VxV0Zco-"
+				"body": "-Nm2HibRx3V8P1isPlRf",
+				"hand1": "-Nc46CPWJz2atC_uII9i"
 			},
 			"name": "Mage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc?alt=media&token=33fc4e27-40c8-4cf4-b6b6-d0148c3847af",
@@ -528,13 +444,11 @@
 	},
 	"monsters": {
 		"-NKsyKI9WEI82s5dZFJ_": {
-			"challenge": 1,
+			"challenge": 2,
 			"description": "",
 			"equipment": {
-				"body": "-NgO8PhCToY1JdZzRShH",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
-				"hand2": "-NNwMy0q-XKUT-EUvxFF",
-				"head": "-NgO8UlarVWVemCx3yP2"
+				"hand2": "-NNwMy0q-XKUT-EUvxFF"
 			},
 			"name": "Goblin Assassin",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=9f43fad6-deaa-4309-af8b-e69d59edbce7",
@@ -585,18 +499,17 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 16,
-				"dexterity": 15,
-				"intelligence": 4,
-				"strength": 12,
+				"constitution": 15,
+				"dexterity": 14,
+				"intelligence": 6,
+				"strength": 10,
 				"wisdom": 8
 			}
 		},
 		"-NKt-VrmU-I7ve15fvwC": {
-			"challenge": 3,
+			"challenge": 4,
 			"description": "",
 			"equipment": {
-				"body": "-NgO9edxFCHlRJNEhoqg",
 				"waist": "-NgO9yRhdOivFSL6xkCK"
 			},
 			"name": "Orc Shaman",
@@ -625,11 +538,10 @@
 			}
 		},
 		"-NKt0FqDCM_Ms7YFjWhj": {
-			"challenge": 2,
+			"challenge": 3,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"feet": "-NNvLeBtvpWhwHiOrBKJ",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
 				"hand2": "-NNwMy0q-XKUT-EUvxFF"
 			},
@@ -659,14 +571,12 @@
 			}
 		},
 		"-NKt0uevyBhRIvkURXy4": {
-			"challenge": 2,
+			"challenge": 3,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"feet": "-NNvLeBtvpWhwHiOrBKJ",
 				"hand1": "-NgO--jUsGrVSzpmk0lB",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
-				"hands": "-NNvLkVyFUS4L9Zio2lO"
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
 			},
 			"name": "Orc Guard",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=75d23389-7714-43d6-b715-a08bad4fd0d8",
@@ -698,9 +608,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-Nc44lyRjk-mHNox3H_P",
-				"feet": "-NNvLeBtvpWhwHiOrBKJ",
-				"hand1": "-NgK07SpTQiVML_pBgQ4",
-				"hands": "-NNvLkVyFUS4L9Zio2lO"
+				"hand1": "-NgK07SpTQiVML_pBgQ4"
 			},
 			"name": "Dwarven Hammerguard",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=4e6ac63a-2440-453a-8c38-0600a9afbc14",
@@ -728,7 +636,7 @@
 			}
 		},
 		"-NNvOKycvGLGjgkXhAwj": {
-			"challenge": 11,
+			"challenge": 10,
 			"description": "A black dragon.",
 			"name": "Black Dragon",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=a6feef64-8ebf-47fc-be9f-46e5175cec1f",
@@ -815,7 +723,7 @@
 			}
 		},
 		"-NgTNbCiHpz6PPDP3_Qm": {
-			"challenge": 3,
+			"challenge": 2,
 			"description": "",
 			"name": "Giant Spider",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=bfef52e8-e44b-422d-90c2-9980962979e8",
@@ -843,7 +751,7 @@
 			}
 		},
 		"-NgTPWvUSrJHK-FcH_R1": {
-			"challenge": 3,
+			"challenge": 5,
 			"description": "",
 			"name": "Basilisk",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=5472f2c0-1b51-4608-9c35-cc4fa2e85dd8",
@@ -930,7 +838,7 @@
 			}
 		},
 		"-NgTapI8d3C9HY86AtnN": {
-			"challenge": 13,
+			"challenge": 9,
 			"description": "",
 			"name": "Vampire",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTapI8d3C9HY86AtnN?alt=media&token=09d175a4-ca54-4655-a451-ae393576e7f9",
@@ -964,7 +872,7 @@
 			}
 		},
 		"-NgTl1sgx8KyoiRbtpyg": {
-			"challenge": 6,
+			"challenge": 7,
 			"description": "",
 			"name": "Wyvern",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=0473e716-b9d2-4d4e-8dd0-f234b95b0740",
@@ -992,7 +900,7 @@
 			}
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
-			"challenge": 3,
+			"challenge": 4,
 			"description": "",
 			"name": "Ankheg",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=57b92b15-1b0a-43ee-8b69-dc5a47dd0a0f",
@@ -1020,10 +928,9 @@
 			}
 		},
 		"-NgTnsfQ_nzEzn_ochM3": {
-			"challenge": 5,
+			"challenge": 6,
 			"description": "",
 			"equipment": {
-				"body": "-NgO9edxFCHlRJNEhoqg",
 				"hand1": "-NgToUYVTRc1av-QcBA2"
 			},
 			"name": "Hill Giant",
@@ -1052,7 +959,7 @@
 			}
 		},
 		"-NgTpSKiIRPOLlAMwvOl": {
-			"challenge": 2,
+			"challenge": 3,
 			"description": "",
 			"equipment": {
 				"body": "-NgJzhkhaQDrg55F1iM1",
@@ -1084,7 +991,7 @@
 			}
 		},
 		"-NgTqLUaOc0-qU_ug8Ly": {
-			"challenge": 10,
+			"challenge": 8,
 			"description": "",
 			"name": "Stone Golem",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=adfcbd79-94ac-4b64-a4c0-a09a1bfa931e",
@@ -1118,7 +1025,7 @@
 			}
 		},
 		"-NgYk1uHzdomGArMmxVa": {
-			"challenge": 21,
+			"challenge": 10,
 			"description": "",
 			"name": "Lich",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=6d934032-5fff-4a34-a6a0-09bca68fd232",
@@ -1186,10 +1093,9 @@
 			}
 		},
 		"-NhkVOZVy5W_2PPD1vjr": {
-			"challenge": 4,
+			"challenge": 5,
 			"description": "",
 			"equipment": {
-				"body": "-NgO9edxFCHlRJNEhoqg",
 				"hand1": "-NgK-mAaFXHeapzVbWAb"
 			},
 			"name": "Ettin",
@@ -1246,13 +1152,11 @@
 			}
 		},
 		"-NhkXJrcYTG_XtKdj_B8": {
-			"challenge": 4,
+			"challenge": 7,
 			"description": "",
 			"equipment": {
 				"body": "-Nc44lyRjk-mHNox3H_P",
-				"feet": "-Nc44ulAZW4VDmlUdugz",
-				"hand1": "-NgO1-16PWvnT302EIO_",
-				"hands": "-Nc45CfPFl5WOAOiI-bT"
+				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
 			"name": "Orc War Chief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=c8c20610-8ae2-4bd0-938b-1636982905f3",
@@ -1280,7 +1184,7 @@
 			}
 		},
 		"-NhkYK7-G0lWSQ6VxFJy": {
-			"challenge": 4,
+			"challenge": 6,
 			"description": "",
 			"name": "Banshee",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=0f7aafcd-1e91-41a7-9ae9-476da821525c",
@@ -1364,7 +1268,7 @@
 			}
 		},
 		"-NhkcuvakLcMmPpk-jQk": {
-			"challenge": 5,
+			"challenge": 7,
 			"description": "",
 			"name": "Water Elemental",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=9ac75064-3fda-4a06-8518-cdb98151edf4",
@@ -1392,13 +1296,11 @@
 			}
 		},
 		"-NhkeXYbGnQ67kC7gWyw": {
-			"challenge": 5,
+			"challenge": 8,
 			"description": "",
 			"equipment": {
 				"body": "-Nc44lyRjk-mHNox3H_P",
-				"feet": "-Nc44ulAZW4VDmlUdugz",
-				"hand1": "-NgO2xYEe4Kzg3ST0JW2",
-				"hands": "-Nc45CfPFl5WOAOiI-bT"
+				"hand1": "-NgO2xYEe4Kzg3ST0JW2"
 			},
 			"name": "Cambion",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=81f33c46-dd70-4ab7-a420-7a9583499016",
@@ -1446,7 +1348,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 4,
 			"name": "Cleave",
 			"price": 20,
 			"target": "enemy"
@@ -1457,7 +1359,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 4,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "armourClass",
@@ -1481,7 +1383,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Stand Ground",
 			"price": 70,
 			"target": "enemy"
@@ -1493,11 +1395,11 @@
 				{
 					"accuracy": 100,
 					"difficulty": 18,
-					"duration": 3,
+					"duration": 8,
 					"modifier": "wisdom",
 					"properties": [
 						{
-							"name": "strength",
+							"name": "dexterity",
 							"type": "stat",
 							"value": -4
 						}
@@ -1508,7 +1410,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 20,
+			"maxUses": 4,
 			"name": "Intimidating Shout",
 			"price": 50,
 			"target": "enemy"
@@ -1529,7 +1431,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 15,
-					"duration": 2,
+					"duration": 8,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -1544,7 +1446,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 5,
 			"name": "Melon Crush",
 			"price": 160,
 			"target": "enemy"
@@ -1608,7 +1510,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 15,
-					"duration": 4,
+					"duration": 5,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -1628,7 +1530,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 3,
 			"name": "Brutal Advance",
 			"price": 160,
 			"target": "enemy"
@@ -1645,13 +1547,13 @@
 				{
 					"accuracy": 50,
 					"difficulty": 18,
-					"duration": 4,
+					"duration": 8,
 					"modifier": "dexterity",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -25
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -1660,7 +1562,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 1,
 			"name": "Lunging Strike",
 			"price": 420,
 			"target": "enemy"
@@ -1727,7 +1629,7 @@
 				{
 					"accuracy": 75,
 					"difficulty": 16,
-					"duration": 3,
+					"duration": 4,
 					"effect": "disarm",
 					"modifier": "strength",
 					"target": "enemy",
@@ -1736,7 +1638,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Disarm",
 			"price": 400
 		},
@@ -1783,7 +1685,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 24,
-					"duration": 4,
+					"duration": 3,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -1808,7 +1710,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Tenderise",
 			"price": 1020
 		},
@@ -1842,7 +1744,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Acrobatic Strike",
 			"price": 90
 		},
@@ -1852,12 +1754,12 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 3,
+					"duration": 12,
 					"properties": [
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 25
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -1866,7 +1768,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 20,
+			"maxUses": 4,
 			"name": "Quick Fingers",
 			"price": 60
 		},
@@ -1876,7 +1778,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 4,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "poison",
@@ -1890,7 +1792,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 3,
 			"name": "Poison Coat",
 			"price": 260
 		},
@@ -1912,9 +1814,9 @@
 					"modifier": "dexterity",
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -25
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -1923,7 +1825,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 4,
 			"name": "Acid Burn",
 			"price": 120
 		},
@@ -1950,13 +1852,13 @@
 				{
 					"accuracy": 75,
 					"difficulty": 12,
-					"duration": 3,
+					"duration": 7,
 					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -10
+							"value": -8
 						}
 					],
 					"target": "enemy",
@@ -1965,7 +1867,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 1,
 			"name": "Go For The Eyes",
 			"price": 250
 		},
@@ -1992,7 +1894,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Poison Bomb",
 			"price": 760
 		},
@@ -2003,7 +1905,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 20,
-					"duration": 4,
+					"duration": 8,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -2023,7 +1925,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Press The Advantage",
 			"price": 600
 		},
@@ -2064,7 +1966,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 4,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "fire",
@@ -2088,7 +1990,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Cloak Of Shadows",
 			"price": 1300
 		},
@@ -2117,21 +2019,21 @@
 			"description": "Conjure three small projectiles.",
 			"effects": [
 				{
-					"damageType": "piercing",
+					"damageType": "cold",
 					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"damageType": "piercing",
+					"damageType": "fire",
 					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"damageType": "piercing",
+					"damageType": "lightning",
 					"max": 4,
 					"min": 1,
 					"target": "enemy",
@@ -2140,8 +2042,8 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 15,
-			"name": "Magic Missiles",
+			"maxUses": 7,
+			"name": "Elemental Missiles",
 			"price": 60
 		},
 		"-Nc3xGd_-Cawo2Zo0ipP": {
@@ -2151,7 +2053,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 10,
-					"duration": 3,
+					"duration": 6,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -2175,7 +2077,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 10,
-					"duration": 3,
+					"duration": 6,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -2190,7 +2092,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 5,
 			"name": "Colour Spray",
 			"price": 120
 		},
@@ -2200,12 +2102,12 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 5,
+					"duration": 10,
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 11
+							"value": 6
 						}
 					],
 					"target": "self",
@@ -2214,7 +2116,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 15,
+			"maxUses": 8,
 			"name": "Armour",
 			"price": 90
 		},
@@ -2224,7 +2126,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 5,
+					"duration": 12,
 					"properties": [
 						{
 							"name": "slashing",
@@ -2248,7 +2150,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 4,
 			"name": "Iron Skin",
 			"price": 900
 		},
@@ -2259,7 +2161,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 18,
-					"duration": 4,
+					"duration": 12,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -2274,7 +2176,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 4,
 			"name": "Destroy Armour",
 			"price": 280
 		},
@@ -2344,7 +2246,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 6,
+			"maxUses": 5,
 			"name": "Fireball",
 			"price": 1000
 		},
@@ -2355,7 +2257,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 20,
-					"duration": 4,
+					"duration": 10,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -2390,7 +2292,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 8,
+			"maxUses": 4,
 			"name": "Pierce Magic",
 			"price": 950
 		},
@@ -2589,12 +2491,12 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 6,
+					"duration": 12,
 					"properties": [
 						{
-							"name": "defence",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 25
+							"value": 5
 						}
 					],
 					"target": "self",
@@ -2603,7 +2505,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 5,
 			"name": "Power Word: Shield",
 			"price": 0
 		},
@@ -2621,7 +2523,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 4,
 			"name": "Holy Bolt",
 			"price": 0
 		},
@@ -2666,7 +2568,7 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 20,
 					"properties": [
 						{
 							"name": "radiant",
@@ -2685,7 +2587,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 15,
+			"maxUses": 4,
 			"name": "Prayer",
 			"price": 0
 		},
@@ -2711,7 +2613,7 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 12,
 					"properties": [
 						{
 							"name": "constitution",
@@ -2750,7 +2652,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 8,
+			"maxUses": 3,
 			"name": "Flamestrike",
 			"price": 0
 		},
@@ -2850,7 +2752,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 20,
+			"maxUses": 10,
 			"name": "Bite",
 			"price": 0
 		},
@@ -2876,7 +2778,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 3,
 			"name": "Ghoul Strike",
 			"price": 0
 		},
@@ -2900,7 +2802,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Drain Life",
 			"price": 0
 		},
@@ -2910,7 +2812,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 5,
+					"duration": 10,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -2935,7 +2837,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Drain Energy",
 			"price": 0
 		},
@@ -2961,7 +2863,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 8,
+			"maxUses": 7,
 			"name": "Stinger",
 			"price": 0
 		},
@@ -2986,7 +2888,7 @@
 			],
 			"icon": "",
 			"level": 0,
-			"maxUses": 20,
+			"maxUses": 3,
 			"name": "Acid Bite",
 			"price": 0
 		},
@@ -3018,7 +2920,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Acid Spray",
 			"price": 0
 		},
@@ -3039,7 +2941,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 6,
+			"maxUses": 2,
 			"name": "Double Strike",
 			"price": 0
 		},
@@ -3048,7 +2950,7 @@
 			"description": "Amplify your strength with a resounding Battle Cry.",
 			"effects": [
 				{
-					"duration": 4,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "strength",
@@ -3062,7 +2964,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 20,
+			"maxUses": 5,
 			"name": "Battle Cry",
 			"price": 0
 		},
@@ -3071,12 +2973,12 @@
 			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
 			"effects": [
 				{
-					"duration": 3,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 10
+							"value": 5
 						}
 					],
 					"target": "self",
@@ -3101,7 +3003,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Heavy Strike",
 			"price": 0
 		},
@@ -3167,7 +3069,7 @@
 			"effects": [
 				{
 					"difficulty": 20,
-					"duration": 2,
+					"duration": 4,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -3192,7 +3094,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Deafening Roar",
 			"price": 0
 		},
@@ -3223,7 +3125,7 @@
 				},
 				{
 					"difficulty": 15,
-					"duration": 4,
+					"duration": 6,
 					"effect": "poison",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -3232,7 +3134,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 5,
 			"name": "Poison Jab",
 			"price": 0
 		},
@@ -3242,7 +3144,7 @@
 			"effects": [
 				{
 					"difficulty": 15,
-					"duration": 5,
+					"duration": 8,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -3257,7 +3159,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 5,
 			"name": "Cripple",
 			"price": 0
 		},
@@ -3306,7 +3208,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Kick",
 			"price": 0
 		},
@@ -3343,7 +3245,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Acid Strike",
 			"price": 0
 		},
@@ -3435,7 +3337,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Expose Weakness",
 			"price": 0
 		},
@@ -3500,7 +3402,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 6,
+			"maxUses": 4,
 			"name": "Ray of Frost",
 			"price": 0
 		},
@@ -3510,7 +3412,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 4,
+					"duration": 10,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -3525,7 +3427,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 4,
 			"name": "Mirror Image",
 			"price": 0
 		},
@@ -3550,7 +3452,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 4,
 			"name": "Acid Arrow",
 			"price": 0
 		},
@@ -3593,13 +3495,13 @@
 				},
 				{
 					"difficulty": 18,
-					"duration": 3,
+					"duration": 6,
 					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "dexterity",
 							"type": "stat",
-							"value": -6
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -3608,7 +3510,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 6,
+			"maxUses": 4,
 			"name": "Cone of Cold",
 			"price": 0
 		},
@@ -3649,7 +3551,7 @@
 			"description": "Summon an invincible dome, deflecting magical attacks.",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "fire",
@@ -3688,7 +3590,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Globe of Invulnerability",
 			"price": 0
 		},
@@ -3697,7 +3599,7 @@
 			"description": "Infuse divine energy, amplifying strength and resilience.",
 			"effects": [
 				{
-					"duration": 4,
+					"duration": 10,
 					"properties": [
 						{
 							"name": "slashing",
@@ -3721,7 +3623,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 6,
 			"name": "Bless",
 			"price": 0
 		},
@@ -3731,7 +3633,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 4,
+					"duration": 20,
 					"modifier": "wisdom",
 					"properties": [
 						{
@@ -3756,7 +3658,7 @@
 			],
 			"icon": "",
 			"level": 1,
-			"maxUses": 10,
+			"maxUses": 6,
 			"name": "Curse",
 			"price": 0
 		},
@@ -3765,7 +3667,7 @@
 			"description": "Infuse yourself with divine might, bolstering physical prowess.",
 			"effects": [
 				{
-					"duration": 4,
+					"duration": 12,
 					"properties": [
 						{
 							"name": "strength",
@@ -3779,7 +3681,7 @@
 			],
 			"icon": "",
 			"level": 2,
-			"maxUses": 10,
+			"maxUses": 2,
 			"name": "Divine Strength",
 			"price": 0
 		},
@@ -3889,15 +3791,15 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 12,
-					"min": 6,
+					"max": 24,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 6,
+			"maxUses": 2,
 			"name": "Wail",
 			"price": 0
 		},
@@ -3915,7 +3817,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 10,
+			"maxUses": 3,
 			"name": "Corrupting Touch",
 			"price": 0
 		},
@@ -3932,7 +3834,7 @@
 			],
 			"icon": "",
 			"level": 3,
-			"maxUses": 6,
+			"maxUses": 3,
 			"name": "Regeneration",
 			"price": 0
 		},
@@ -3958,7 +3860,7 @@
 			],
 			"icon": "",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Whelm",
 			"price": 0
 		}
