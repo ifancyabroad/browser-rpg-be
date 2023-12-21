@@ -1,4 +1,4 @@
-import { IArmourData, IClassData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
+import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
@@ -101,7 +101,7 @@ export class GameData {
 	public static getEquipmentById(id: string) {
 		try {
 			const { armours, weapons } = data as IGameData;
-			const equipment = Object.assign(armours, weapons);
+			const equipment = { ...armours, ...weapons };
 			const equipmentData = equipment[id as keyof typeof equipment];
 			if (!equipmentData) {
 				throw new Error(`Equipment Data not found for ${id}`);

@@ -143,8 +143,14 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 	}
 
 	const { armourTypes, weaponTypes } = this.characterClass;
-	const validArmourType = "armourType" in item && armourTypes.includes(item.armourType);
-	const validWeaponType = "weaponType" in item && weaponTypes.includes(item.weaponType);
+
+	let validArmourType,
+		validWeaponType = true;
+	if ([EquipmentType.Armour, EquipmentType.Weapon].includes(item.type)) {
+		validArmourType = "armourType" in item && armourTypes.includes(item.armourType);
+		validWeaponType = "weaponType" in item && weaponTypes.includes(item.weaponType);
+	}
+
 	if (!validArmourType && !validWeaponType) {
 		throw new Error("Class cannot use this item");
 	}
