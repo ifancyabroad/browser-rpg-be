@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.441.0",
+		"astar-typescript": "^1.2.7",
 		"bad-words": "^3.0.4",
 		"bcrypt": "^5.1.1",
 		"class-transformer": "^0.5.1",

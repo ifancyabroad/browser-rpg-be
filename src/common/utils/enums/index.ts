@@ -150,6 +150,6 @@ export enum RoomType {
 
 export enum RoomState {
 	Idle = "idle",
-	Active = "active",
+	Blocking = "blocking",
 	Complete = "complete",
 }

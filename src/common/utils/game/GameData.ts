@@ -192,7 +192,9 @@ export class GameData {
 	}
 
 	private static mapRoom(type: RoomType) {
-		return { type, state: RoomState.Idle };
+		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None];
+		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
+		return { type, state };
 	}
 
 	private static mapLevel(rows: RoomType[][]) {
@@ -205,8 +207,9 @@ export class GameData {
 
 	public static getStartingLocation(maps: IRoom[][][]) {
 		let x: number, y: number;
-		x = maps[0].findIndex((row) => {
-			y = row.findIndex(({ type }) => type === RoomType.Entrance);
+		y = maps[0].findIndex((row) => {
+			x = row.findIndex(({ type }) => type === RoomType.Entrance);
+			return x > -1;
 		});
 		return { level: 0, x, y };
 	}

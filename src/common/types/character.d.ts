@@ -22,6 +22,7 @@ import {
 	TStats,
 } from "./gameData";
 import { IAction, ITurnData } from "./battle";
+import { ILocation } from "./map";
 
 export interface ISkill {
 	id: string;
@@ -128,4 +129,8 @@ export interface ILevelUpInput {
 
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
+}
+
+export interface RequestMove extends Request {
+	location: ILocation;
 }

@@ -7,6 +7,7 @@ import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
 import MapModel from "@models/map.model";
+import { ILocation } from "@common/types/map";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -147,6 +148,31 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error levelUp: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function move(location: ILocation, session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to level up");
+		}
+
+		const mapRecord = await MapModel.findById(characterRecord.map);
+
+		mapRecord.move(location);
+		await mapRecord.save();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error move: ${error.message}`);
 		throw error;
 	}
 }

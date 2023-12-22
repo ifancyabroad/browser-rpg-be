@@ -21,7 +21,14 @@ export interface IMap {
 	location: ILocation;
 }
 
-export interface IMapMethods {}
+export interface IMapMethods {
+	// Add virtuals here
+	get level(): TMap;
+
+	// Add methods here
+	findPath(location: ILocation): number[][];
+	move(location: ILocation): void;
+}
 
 // Add static methods here
 export interface IMapModel extends Model<IMap, {}, IMapMethods> {

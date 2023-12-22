@@ -7,10 +7,11 @@ import {
 	createCharacter,
 	getActiveCharacter,
 	levelUp,
+	move,
 	rest,
 	retireActiveCharacter,
 } from "@services/character.service";
-import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp, RequestMove } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@common/utils/game/GameData";
 
@@ -90,6 +91,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestLevelUp, res: Response) => {
 		const character = await levelUp(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/move'
+// @DEST Level up your character
+characterRouter.post(
+	"/move",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestMove, res: Response) => {
+		const character = await move(req.body, req.session);
 		res.json({ character });
 	}),
 );
