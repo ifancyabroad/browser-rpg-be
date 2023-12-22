@@ -16,6 +16,7 @@ export interface ILevelUpData {
 
 export interface IHero extends ICharacter {
 	user: Types.ObjectId;
+	map: Types.ObjectId;
 	characterClassID: string;
 	state: State;
 	experience: number;

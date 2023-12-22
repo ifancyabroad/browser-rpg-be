@@ -58,8 +58,6 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			enemy: enemy.id,
 		});
 
-		await battle.populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
-
 		characterRecord.state = State.Battle;
 		const character = await characterRecord.save();
 
@@ -88,7 +86,7 @@ export async function getBattle(session: Session & Partial<SessionData>) {
 		const battleRecord = await BattleModel.findOne({
 			hero: characterRecord.id,
 			state: BattleState.Active,
-		}).populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
+		});
 		if (!battleRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 		}
@@ -119,7 +117,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		const battleRecord = await BattleModel.findOne({
 			hero: characterRecord.id,
 			state: BattleState.Active,
-		}).populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
+		});
 		if (!battleRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle found");
 		}
@@ -154,8 +152,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		const character = await characterRecord.save();
 		await enemyRecord.save();
-		await battleRecord.save();
-		const battle = await battleRecord.populate<{ enemy: IEnemy & IEnemyMethods }>("enemy");
+		const battle = await battleRecord.save();
 
 		return {
 			battle: battle.toJSON(),

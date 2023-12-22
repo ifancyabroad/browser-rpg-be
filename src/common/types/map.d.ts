@@ -1,0 +1,29 @@
+import { RoomState, RoomType } from "@common/utils";
+import { Model, Types } from "mongoose";
+
+export interface IRoom {
+	state: RoomState;
+	type: RoomType;
+}
+
+type TMapRow = Types.DocumentArray<IRoom>;
+
+type TMap = Types.DocumentArray<TMapRow>;
+
+export interface ILocation {
+	level: number;
+	x: number;
+	y: number;
+}
+
+export interface IMap {
+	maps: Types.DocumentArray<TMap>;
+	location: ILocation;
+}
+
+export interface IMapMethods {}
+
+// Add static methods here
+export interface IMapModel extends Model<IMap, {}, IMapMethods> {
+	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
+}

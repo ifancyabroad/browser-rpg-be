@@ -6,12 +6,18 @@ import { GameData } from "@common/utils/game/GameData";
 import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, REST_MULTIPLIER, SKILL_LEVEL_MAP } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
 import { IReward } from "@common/types/battle";
+import mongooseAutoPopulate from "mongoose-autopopulate";
 
 const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 	{
 		user: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
+		},
+		map: {
+			type: Schema.Types.ObjectId,
+			ref: "Map",
+			autopopulate: true,
 		},
 		characterClassID: {
 			type: String,
@@ -199,6 +205,8 @@ heroSchema.method("checkLevelUp", function checkLevelUp() {
 		this.levelUp = { level, skills: skills as Types.Array<string> };
 	}
 });
+
+heroSchema.plugin(mongooseAutoPopulate);
 
 const HeroModel = CharacterModel.discriminator<IHero, IHeroModel>("Hero", heroSchema);
 

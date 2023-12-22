@@ -1,9 +1,11 @@
 import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
+import mapData from "@common/data/mapData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
 import { EQUIPMENT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
-import { EquipmentSlot } from "@common/utils/enums";
+import { EquipmentSlot, RoomState, RoomType } from "@common/utils/enums";
+import { IRoom } from "@common/types/map";
 
 export class GameData {
 	public static getClasses() {
@@ -187,5 +189,25 @@ export class GameData {
 			console.error(`Error getLevelUpSkills: ${error.message}`);
 			throw error;
 		}
+	}
+
+	private static mapRoom(type: RoomType) {
+		return { type, state: RoomState.Idle };
+	}
+
+	private static mapLevel(rows: RoomType[][]) {
+		return rows.map((row) => row.map(this.mapRoom));
+	}
+
+	public static getMaps() {
+		return mapData.map((maps) => this.mapLevel(getRandomElement(maps)));
+	}
+
+	public static getStartingLocation(maps: IRoom[][][]) {
+		let x: number, y: number;
+		x = maps[0].findIndex((row) => {
+			y = row.findIndex(({ type }) => type === RoomType.Entrance);
+		});
+		return { level: 0, x, y };
 	}
 }

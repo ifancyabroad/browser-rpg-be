@@ -135,3 +135,21 @@ export enum HitType {
 	Crit = "crit",
 	Miss = "miss",
 }
+
+export enum RoomType {
+	None,
+	Empty,
+	Battle,
+	Boss,
+	Shop,
+	Treasure,
+	Rest,
+	Entrance,
+	Exit,
+}
+
+export enum RoomState {
+	Idle = "idle",
+	Active = "active",
+	Complete = "complete",
+}

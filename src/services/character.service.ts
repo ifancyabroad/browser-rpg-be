@@ -6,6 +6,7 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
+import MapModel from "@models/map.model";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -39,8 +40,13 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getShopItems(characterClass, 1);
 
+		const maps = GameData.getMaps();
+		const location = GameData.getStartingLocation(maps);
+		const map = await MapModel.create({ maps, location });
+
 		const characterRecord = await HeroModel.create({
 			user: user.id,
+			map: map.id,
 			name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
 			characterClassID: characterClass,
 			skillIDs: skills,

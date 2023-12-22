@@ -11,6 +11,7 @@ import { IAction, IBattle, IBattleMethods, IBattleModel, ITurnData } from "@comm
 import { IHero, IHeroMethods } from "@common/types/hero";
 import { IEnemy, IEnemyMethods } from "@common/types/enemy";
 import { EXPERIENCE_MULTIPLIER, GOLD_MULTIPLIER } from "@common/utils";
+import mongooseAutoPopulate from "mongoose-autopopulate";
 
 const actionSchema = new Schema<IAction, Model<IAction>>({
 	self: {
@@ -46,6 +47,7 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 		enemy: {
 			type: Schema.Types.ObjectId,
 			ref: "Enemy",
+			autopopulate: true,
 		},
 		turns: {
 			type: [[actionSchema]],
@@ -99,6 +101,8 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 	const experience = EXPERIENCE_MULTIPLIER * (enemy.level + enemy.challenge);
 	this.reward = { gold: gold * hero.goldMultiplier, experience };
 });
+
+battleSchema.plugin(mongooseAutoPopulate);
 
 const BattleModel = model<IBattle, IBattleModel>("Battle", battleSchema);
 
