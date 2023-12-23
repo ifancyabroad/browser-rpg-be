@@ -157,11 +157,11 @@ export class GameData {
 		}));
 	}
 
-	public static getEnemy(day: number) {
+	public static getEnemy(level: number) {
 		try {
 			const { monsters } = data as IGameData;
-			const minRating = day - 1;
-			const maxRating = day + 1;
+			const maxRating = level * 2;
+			const minRating = maxRating - 1;
 			const enemyPool = mapToArray(monsters).filter(
 				({ challenge }) => challenge >= minRating && challenge <= maxRating,
 			);

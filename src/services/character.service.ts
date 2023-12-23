@@ -97,6 +97,11 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy item");
 		}
 
+		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		if (!mapRecord.isShop) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No shop in this room");
+		}
+
 		characterRecord.buyItem(id, slot);
 		const character = await characterRecord.save();
 
@@ -117,6 +122,11 @@ export async function rest(session: Session & Partial<SessionData>) {
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
+		}
+
+		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		if (!mapRecord.isRest) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No campfire in this room");
 		}
 
 		characterRecord.rest();
@@ -161,7 +171,7 @@ export async function move(location: ILocation, session: Session & Partial<Sessi
 			state: State.Idle,
 		});
 		if (!characterRecord) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to level up");
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to move");
 		}
 
 		const mapRecord = await MapModel.findById(characterRecord.map);

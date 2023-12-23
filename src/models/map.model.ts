@@ -40,6 +40,26 @@ mapSchema.virtual("room").get(function () {
 	return this.level[this.location.y][this.location.x];
 });
 
+mapSchema.virtual("isBattle").get(function () {
+	return [RoomType.Battle, RoomType.Boss].includes(this.room.type) && this.room.state !== RoomState.Complete;
+});
+
+mapSchema.virtual("isShop").get(function () {
+	return this.room.type === RoomType.Shop;
+});
+
+mapSchema.virtual("isTreasure").get(function () {
+	return this.room.type === RoomType.Treasure;
+});
+
+mapSchema.virtual("isRest").get(function () {
+	return this.room.type === RoomType.Rest;
+});
+
+mapSchema.virtual("isExit").get(function () {
+	return this.room.type === RoomType.Exit;
+});
+
 mapSchema.method("findPath", function findPath(destination: ILocation) {
 	const matrix = this.level.map((row, y) =>
 		row.map(({ state }, x) => {

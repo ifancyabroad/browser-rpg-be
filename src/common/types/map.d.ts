@@ -25,6 +25,11 @@ export interface IMapMethods {
 	// Add virtuals here
 	get level(): TMap;
 	get room(): IRoom;
+	get isBattle(): boolean;
+	get isShop(): boolean;
+	get isTreasure(): boolean;
+	get isRest(): boolean;
+	get isExit(): boolean;
 
 	// Add methods here
 	findPath(location: ILocation): number[][];

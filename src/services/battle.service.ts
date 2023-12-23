@@ -30,8 +30,13 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
-		const enemyData = GameData.getEnemy(characterRecord.day);
-		const level = characterRecord.day;
+		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		if (!mapRecord.isBattle) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No battle in this room");
+		}
+
+		const enemyData = GameData.getEnemy(mapRecord.location.level);
+		const level = characterRecord.level;
 		const hitPoints = Game.getHitPoints(level);
 		const skills = enemyData.skills.map((id) => ({
 			id,
@@ -51,8 +56,6 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
 		});
-
-		const mapRecord = await MapModel.findById(characterRecord.map.id);
 
 		const battle = await BattleModel.create({
 			user: user.id,
