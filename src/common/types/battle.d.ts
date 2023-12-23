@@ -5,6 +5,7 @@ import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, I
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero, IHeroMethods } from "./hero";
 import { IEnemy, IEnemyMethods } from "./enemy";
+import { ILocation } from "./map";
 
 export interface IReward {
 	gold: number;
@@ -27,6 +28,8 @@ export interface IBattle {
 	user: Types.ObjectId;
 	hero: Types.ObjectId;
 	enemy: Types.ObjectId;
+	map: Types.ObjectId;
+	location: ILocation;
 	turns: Types.DocumentArray<IAction[]>;
 	state: BattleState;
 	reward?: IReward;

@@ -8,7 +8,7 @@ import { IBattleInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
-import { IEnemy, IEnemyMethods } from "@common/types/enemy";
+import MapModel from "@models/map.model";
 
 export async function startBattle(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -52,10 +52,14 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			baseMaxHitPoints: hitPoints,
 		});
 
+		const mapRecord = await MapModel.findById(characterRecord.map.id);
+
 		const battle = await BattleModel.create({
 			user: user.id,
 			hero: characterRecord.id,
 			enemy: enemy.id,
+			map: mapRecord.id,
+			location: mapRecord.location,
 		});
 
 		characterRecord.state = State.Battle;
@@ -139,6 +143,8 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		battleRecord.turns.push(turn);
 
+		const mapRecord = await MapModel.findById(characterRecord.map);
+
 		if (!characterRecord.alive) {
 			battleRecord.state = BattleState.Lost;
 			characterRecord.battleLost(enemyRecord.name);
@@ -148,8 +154,11 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.handleReward(characterRecord, enemyRecord);
 			battleRecord.state = BattleState.Won;
 			characterRecord.battleWon(battleRecord.reward);
+			mapRecord.completeRoom();
+			mapRecord.markModified("maps");
 		}
 
+		await mapRecord.save();
 		const character = await characterRecord.save();
 		await enemyRecord.save();
 		const battle = await battleRecord.save();
@@ -159,7 +168,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			character: character.toJSON(),
 		};
 	} catch (error) {
-		console.error(`Error getBattle: ${error.message}`);
+		console.error(`Error action: ${error.message}`);
 		throw error;
 	}
 }

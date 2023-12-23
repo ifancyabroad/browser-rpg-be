@@ -24,10 +24,12 @@ export interface IMap {
 export interface IMapMethods {
 	// Add virtuals here
 	get level(): TMap;
+	get room(): IRoom;
 
 	// Add methods here
 	findPath(location: ILocation): number[][];
 	move(location: ILocation): void;
+	completeRoom(): void;
 }
 
 // Add static methods here

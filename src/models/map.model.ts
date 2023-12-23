@@ -3,6 +3,7 @@ import { RoomState, RoomType } from "@common/utils";
 import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
 import { AStarFinder } from "astar-typescript";
+import { locationSchema } from "./location.model";
 
 const roomSchema = new Schema<IRoom, Model<IRoom>>({
 	state: {
@@ -13,21 +14,6 @@ const roomSchema = new Schema<IRoom, Model<IRoom>>({
 	type: {
 		type: Number,
 		enum: RoomType,
-		required: true,
-	},
-});
-
-const locationSchema = new Schema<ILocation, Model<ILocation>>({
-	level: {
-		type: Number,
-		required: true,
-	},
-	x: {
-		type: Number,
-		required: true,
-	},
-	y: {
-		type: Number,
 		required: true,
 	},
 });
@@ -50,8 +36,19 @@ mapSchema.virtual("level").get(function () {
 	return this.maps[this.location.level];
 });
 
+mapSchema.virtual("room").get(function () {
+	return this.level[this.location.y][this.location.x];
+});
+
 mapSchema.method("findPath", function findPath(destination: ILocation) {
-	const matrix = this.level.map((row) => row.map(({ state }) => (state === RoomState.Blocking ? 1 : 0)));
+	const matrix = this.level.map((row, y) =>
+		row.map(({ state }, x) => {
+			if (y === destination.y && x === destination.x) {
+				return 0;
+			}
+			return state === RoomState.Blocking ? 1 : 0;
+		}),
+	);
 	const aStarInstance = new AStarFinder({
 		grid: { matrix },
 		diagonalAllowed: false,
@@ -67,6 +64,10 @@ mapSchema.method("move", function move(location: ILocation) {
 		throw new Error("No path found");
 	}
 	this.location = location;
+});
+
+mapSchema.method("completeRoom", function completeRoom() {
+	this.room.state = RoomState.Complete;
 });
 
 const MapModel = model<IMap, IMapModel>("Map", mapSchema);
