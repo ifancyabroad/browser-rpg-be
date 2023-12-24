@@ -103,6 +103,12 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 		}
 
 		characterRecord.buyItem(id, slot);
+
+		if (!characterRecord.availableItems.length) {
+			mapRecord.completeRoom();
+			await mapRecord.save();
+		}
+
 		const character = await characterRecord.save();
 
 		return character.toJSON();
@@ -128,6 +134,9 @@ export async function rest(session: Session & Partial<SessionData>) {
 		if (!mapRecord.isRest) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No campfire in this room");
 		}
+
+		mapRecord.completeRoom();
+		await mapRecord.save();
 
 		characterRecord.rest();
 		const character = await characterRecord.save();

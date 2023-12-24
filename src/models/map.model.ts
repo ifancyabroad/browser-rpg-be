@@ -45,19 +45,19 @@ mapSchema.virtual("isBattle").get(function () {
 });
 
 mapSchema.virtual("isShop").get(function () {
-	return this.room.type === RoomType.Shop;
+	return this.room.type === RoomType.Shop && this.room.state !== RoomState.Complete;
 });
 
 mapSchema.virtual("isTreasure").get(function () {
-	return this.room.type === RoomType.Treasure;
+	return this.room.type === RoomType.Treasure && this.room.state !== RoomState.Complete;
 });
 
 mapSchema.virtual("isRest").get(function () {
-	return this.room.type === RoomType.Rest;
+	return this.room.type === RoomType.Rest && this.room.state !== RoomState.Complete;
 });
 
 mapSchema.virtual("isExit").get(function () {
-	return this.room.type === RoomType.Exit;
+	return this.room.type === RoomType.Exit && this.room.state !== RoomState.Complete;
 });
 
 mapSchema.method("findPath", function findPath(destination: ILocation) {
@@ -88,6 +88,7 @@ mapSchema.method("move", function move(location: ILocation) {
 
 mapSchema.method("completeRoom", function completeRoom() {
 	this.room.state = RoomState.Complete;
+	this.markModified("maps");
 });
 
 const MapModel = model<IMap, IMapModel>("Map", mapSchema);

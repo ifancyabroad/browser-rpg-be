@@ -158,10 +158,9 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.state = BattleState.Won;
 			characterRecord.battleWon(battleRecord.reward);
 			mapRecord.completeRoom();
-			mapRecord.markModified("maps");
+			await mapRecord.save();
 		}
 
-		await mapRecord.save();
 		const character = await characterRecord.save();
 		await enemyRecord.save();
 		const battle = await battleRecord.save();
