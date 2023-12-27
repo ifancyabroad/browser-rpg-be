@@ -35,7 +35,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle in this room");
 		}
 
-		const enemyData = GameData.getEnemy(mapRecord.location.level + 1);
+		const enemyData = GameData.getEnemy(mapRecord.location.level + 1, mapRecord.isBoss);
 		const level = characterRecord.level;
 		const hitPoints = Game.getHitPoints(level);
 		const skills = enemyData.skills.map((id) => ({

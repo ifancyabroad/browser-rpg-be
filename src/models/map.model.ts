@@ -44,6 +44,10 @@ mapSchema.virtual("isBattle").get(function () {
 	return [RoomType.Battle, RoomType.Boss].includes(this.room.type) && this.room.state !== RoomState.Complete;
 });
 
+mapSchema.virtual("isBoss").get(function () {
+	return this.room.type === RoomType.Boss && this.room.state !== RoomState.Complete;
+});
+
 mapSchema.virtual("isShop").get(function () {
 	return this.room.type === RoomType.Shop && this.room.state !== RoomState.Complete;
 });

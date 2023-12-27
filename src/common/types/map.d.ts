@@ -26,6 +26,7 @@ export interface IMapMethods {
 	get level(): TMap;
 	get room(): IRoom;
 	get isBattle(): boolean;
+	get isBoss(): boolean;
 	get isShop(): boolean;
 	get isTreasure(): boolean;
 	get isRest(): boolean;
