@@ -5,7 +5,7 @@ import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/h
 import { ISkill } from "@common/types/character";
 import { EQUIPMENT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, RoomState, RoomType } from "@common/utils/enums";
-import { IRoom } from "@common/types/map";
+import { ILocation, IRoom } from "@common/types/map";
 
 export class GameData {
 	public static getClasses() {
@@ -189,26 +189,26 @@ export class GameData {
 		}
 	}
 
-	private static mapRoom(type: RoomType) {
+	private static mapRoom(type: RoomType, location: ILocation) {
 		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None];
 		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
-		return { type, state };
+		return { location, type, state };
 	}
 
-	private static mapLevel(rows: RoomType[][]) {
-		return rows.map((row) => row.map(this.mapRoom));
+	private static mapLevel(rows: RoomType[][], level: number) {
+		return rows.map((row, y) => row.map((room, x) => this.mapRoom(room, { level, y, x })));
 	}
 
 	public static getMaps() {
-		return mapData.map((maps) => this.mapLevel(getRandomElement(maps)));
+		return mapData.map((maps, level) => this.mapLevel(getRandomElement(maps), level));
 	}
 
-	public static getStartingLocation(maps: IRoom[][][]) {
+	public static getStartingLocation(maps: IRoom[][][], level = 0) {
 		let x: number, y: number;
-		y = maps[0].findIndex((row) => {
+		y = maps[level].findIndex((row) => {
 			x = row.findIndex(({ type }) => type === RoomType.Entrance);
 			return x > -1;
 		});
-		return { level: 0, x, y };
+		return { level, x, y };
 	}
 }

@@ -195,3 +195,28 @@ export async function move(location: ILocation, session: Session & Partial<Sessi
 		throw error;
 	}
 }
+
+export async function nextLevel(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
+		}
+
+		const mapRecord = await MapModel.findById(characterRecord.map);
+
+		mapRecord.nextLevel();
+		await mapRecord.save();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error nextLevel: ${error.message}`);
+		throw error;
+	}
+}

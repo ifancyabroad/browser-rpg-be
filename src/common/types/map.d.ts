@@ -1,20 +1,21 @@
 import { RoomState, RoomType } from "@common/utils";
 import { Model, Types } from "mongoose";
 
-export interface IRoom {
-	state: RoomState;
-	type: RoomType;
-}
-
-type TMapRow = Types.DocumentArray<IRoom>;
-
-type TMap = Types.DocumentArray<TMapRow>;
-
 export interface ILocation {
 	level: number;
 	x: number;
 	y: number;
 }
+
+export interface IRoom {
+	state: RoomState;
+	type: RoomType;
+	location: ILocation;
+}
+
+type TMapRow = Types.DocumentArray<IRoom>;
+
+type TMap = Types.DocumentArray<TMapRow>;
 
 export interface IMap {
 	maps: Types.DocumentArray<TMap>;
@@ -36,6 +37,7 @@ export interface IMapMethods {
 	findPath(location: ILocation): number[][];
 	move(location: ILocation): void;
 	completeRoom(): void;
+	nextLevel(): void;
 }
 
 // Add static methods here

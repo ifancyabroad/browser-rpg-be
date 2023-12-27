@@ -1,5 +1,5 @@
 import { ILocation, IMap, IMapMethods, IMapModel, IRoom } from "@common/types/map";
-import { RoomState, RoomType } from "@common/utils";
+import { GameData, RoomState, RoomType } from "@common/utils";
 import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
 import { AStarFinder } from "astar-typescript";
@@ -14,6 +14,10 @@ const roomSchema = new Schema<IRoom, Model<IRoom>>({
 	type: {
 		type: Number,
 		enum: RoomType,
+		required: true,
+	},
+	location: {
+		type: locationSchema,
 		required: true,
 	},
 });
@@ -93,6 +97,10 @@ mapSchema.method("move", function move(location: ILocation) {
 mapSchema.method("completeRoom", function completeRoom() {
 	this.room.state = RoomState.Complete;
 	this.markModified("maps");
+});
+
+mapSchema.method("nextLevel", function nextLevel() {
+	this.location = GameData.getStartingLocation(this.maps, this.location.level + 1);
 });
 
 const MapModel = model<IMap, IMapModel>("Map", mapSchema);

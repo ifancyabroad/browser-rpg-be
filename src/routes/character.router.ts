@@ -8,6 +8,7 @@ import {
 	getActiveCharacter,
 	levelUp,
 	move,
+	nextLevel,
 	rest,
 	retireActiveCharacter,
 } from "@services/character.service";
@@ -102,6 +103,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestMove, res: Response) => {
 		const character = await move(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/nextLevel'
+// @DEST Proceed to the next dungeon level
+characterRouter.post(
+	"/nextLevel",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const character = await nextLevel(req.session);
 		res.json({ character });
 	}),
 );

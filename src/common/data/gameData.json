@@ -642,7 +642,7 @@
 			}
 		},
 		"-NNvOKycvGLGjgkXhAwj": {
-			"boss": false,
+			"boss": true,
 			"challenge": 5,
 			"description": "A black dragon.",
 			"name": "Black Dragon",
@@ -886,7 +886,7 @@
 			}
 		},
 		"-NgTl1sgx8KyoiRbtpyg": {
-			"boss": false,
+			"boss": true,
 			"challenge": 4,
 			"description": "",
 			"name": "Wyvern",
@@ -916,7 +916,7 @@
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
 			"boss": false,
-			"challenge": 4,
+			"challenge": 3,
 			"description": "",
 			"name": "Ankheg",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=57b92b15-1b0a-43ee-8b69-dc5a47dd0a0f",
@@ -976,8 +976,8 @@
 			}
 		},
 		"-NgTpSKiIRPOLlAMwvOl": {
-			"boss": false,
-			"challenge": 2,
+			"boss": true,
+			"challenge": 1,
 			"description": "",
 			"equipment": {
 				"body": "-NgJzhkhaQDrg55F1iM1",
@@ -1237,7 +1237,7 @@
 			}
 		},
 		"-NhkbQX-i_HQ7Gt2qHgm": {
-			"boss": false,
+			"boss": true,
 			"challenge": 2,
 			"description": "",
 			"name": "Troll",
@@ -1267,7 +1267,7 @@
 		},
 		"-NhkcIl5L0eB39i3HIeJ": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 4,
 			"description": "",
 			"name": "Fire Elemental",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=525bbaa6-7b5b-47dd-bec8-26ba188fc9cc",
@@ -1296,7 +1296,7 @@
 		},
 		"-NhkcuvakLcMmPpk-jQk": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 4,
 			"description": "",
 			"name": "Water Elemental",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=9ac75064-3fda-4a06-8518-cdb98151edf4",
