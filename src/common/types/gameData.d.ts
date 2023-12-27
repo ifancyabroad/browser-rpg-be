@@ -23,6 +23,7 @@ export interface IEnemyData {
 	description: string;
 	name: string;
 	portrait: string;
+	boss: boolean;
 	skills: string[];
 	stats: TStats;
 	equipment?: Partial<TEquipment>;

@@ -39,15 +39,15 @@ export const MODIFIERS = new Map([
 
 export const EQUIPMENT_LEVELS = new Map([
 	[1, 1],
-	[2, 2],
+	[2, 1],
 	[3, 2],
-	[4, 3],
-	[5, 3],
+	[4, 2],
+	[5, 2],
 	[6, 3],
-	[7, 4],
-	[8, 4],
+	[7, 3],
+	[8, 3],
 	[9, 4],
-	[10, 5],
+	[10, 4],
 ]);
 
 export const EXPERIENCE_MAP = new Map([
@@ -68,12 +68,12 @@ export const SKILL_LEVELS = new Map([
 	[2, 1],
 	[3, 2],
 	[4, 2],
-	[5, 3],
+	[5, 2],
 	[6, 3],
-	[7, 4],
-	[8, 4],
-	[9, 5],
-	[10, 5],
+	[7, 3],
+	[8, 3],
+	[9, 4],
+	[10, 4],
 ]);
 
 export const SKILL_LEVEL_MAP = new Map([

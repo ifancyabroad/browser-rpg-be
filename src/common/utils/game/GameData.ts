@@ -157,13 +157,11 @@ export class GameData {
 		}));
 	}
 
-	public static getEnemy(level: number) {
+	public static getEnemy(level: number, isBoss = false) {
 		try {
 			const { monsters } = data as IGameData;
-			const maxRating = level * 2;
-			const minRating = maxRating - 1;
 			const enemyPool = mapToArray(monsters).filter(
-				({ challenge }) => challenge >= minRating && challenge <= maxRating,
+				({ challenge, boss }) => boss === isBoss && challenge === level,
 			);
 			return getRandomElement(enemyPool);
 		} catch (error) {
