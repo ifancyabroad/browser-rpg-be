@@ -92,7 +92,6 @@ mapSchema.method("move", function move(location: ILocation) {
 		throw new Error("No path found");
 	}
 	this.location = location;
-	return path;
 });
 
 mapSchema.method("completeRoom", function completeRoom() {

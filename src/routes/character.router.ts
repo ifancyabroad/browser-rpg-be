@@ -12,9 +12,10 @@ import {
 	rest,
 	retireActiveCharacter,
 } from "@services/character.service";
-import { RequestCharacter, RequestItem, RequestLevelUp, RequestMove } from "@common/types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@common/utils/game/GameData";
+import { RequestMove } from "@common/types/map";
 
 const characterRouter = Router();
 
@@ -79,8 +80,8 @@ characterRouter.post(
 characterRouter.post(
 	"/rest",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const character = await rest(req.session);
+	expressAsyncHandler(async (req: RequestMove, res: Response) => {
+		const character = await rest(req.body, req.session);
 		res.json({ character });
 	}),
 );
@@ -102,8 +103,8 @@ characterRouter.post(
 	"/move",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const payload = await move(req.body, req.session);
-		res.json(payload);
+		const character = await move(req.body, req.session);
+		res.json({ character });
 	}),
 );
 
@@ -112,9 +113,9 @@ characterRouter.post(
 characterRouter.post(
 	"/nextLevel",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const payload = await nextLevel(req.session);
-		res.json(payload);
+	expressAsyncHandler(async (req: RequestMove, res: Response) => {
+		const character = await nextLevel(req.body, req.session);
+		res.json({ character });
 	}),
 );
 

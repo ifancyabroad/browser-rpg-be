@@ -116,6 +116,7 @@ export interface RequestCharacter extends Request {
 export interface IBuyItemInput {
 	id: string;
 	slot: EquipmentSlot;
+	location: ILocation;
 }
 
 export interface RequestItem extends Request {
@@ -129,8 +130,4 @@ export interface ILevelUpInput {
 
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
-}
-
-export interface RequestMove extends Request {
-	location: ILocation;
 }

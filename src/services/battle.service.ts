@@ -9,8 +9,9 @@ import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import MapModel from "@models/map.model";
+import { ILocation } from "@common/types/map";
 
-export async function startBattle(session: Session & Partial<SessionData>) {
+export async function startBattle(location: ILocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -31,6 +32,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		mapRecord.move(location);
 		if (!mapRecord.isBattle) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle in this room");
 		}
@@ -66,6 +68,8 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		});
 
 		characterRecord.state = State.Battle;
+
+		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return {

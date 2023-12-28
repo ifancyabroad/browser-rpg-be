@@ -1,4 +1,5 @@
 import { RoomState, RoomType } from "@common/utils";
+import { Request } from "express";
 import { Model, Types } from "mongoose";
 
 export interface ILocation {
@@ -43,4 +44,8 @@ export interface IMapMethods {
 // Add static methods here
 export interface IMapModel extends Model<IMap, {}, IMapMethods> {
 	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
+}
+
+export interface RequestMove extends Request {
+	location: ILocation;
 }

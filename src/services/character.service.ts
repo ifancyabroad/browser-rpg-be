@@ -85,7 +85,7 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 }
 
 export async function buyItem(item: IBuyItemInput, session: Session & Partial<SessionData>) {
-	const { id, slot } = item;
+	const { id, slot, location } = item;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -98,6 +98,7 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 		}
 
 		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		mapRecord.move(location);
 		if (!mapRecord.isShop) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No shop in this room");
 		}
@@ -106,9 +107,9 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 
 		if (!characterRecord.availableItems.length) {
 			mapRecord.completeRoom();
-			await mapRecord.save();
 		}
 
+		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return character.toJSON();
@@ -118,7 +119,7 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 	}
 }
 
-export async function rest(session: Session & Partial<SessionData>) {
+export async function rest(location: ILocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -131,6 +132,7 @@ export async function rest(session: Session & Partial<SessionData>) {
 		}
 
 		const mapRecord = await MapModel.findById(characterRecord.map.id);
+		mapRecord.move(location);
 		if (!mapRecord.isRest) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No campfire in this room");
 		}
@@ -185,18 +187,18 @@ export async function move(location: ILocation, session: Session & Partial<Sessi
 
 		const mapRecord = await MapModel.findById(characterRecord.map);
 
-		const path = mapRecord.move(location);
+		mapRecord.move(location);
 		await mapRecord.save();
 		const character = await characterRecord.save();
 
-		return { character: character.toJSON(), path };
+		return character.toJSON();
 	} catch (error) {
 		console.error(`Error move: ${error.message}`);
 		throw error;
 	}
 }
 
-export async function nextLevel(session: Session & Partial<SessionData>) {
+export async function nextLevel(location: ILocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -209,12 +211,16 @@ export async function nextLevel(session: Session & Partial<SessionData>) {
 		}
 
 		const mapRecord = await MapModel.findById(characterRecord.map);
-
+		mapRecord.move(location);
+		if (!mapRecord.isExit) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No exit in this room");
+		}
 		mapRecord.nextLevel();
 		await mapRecord.save();
+
 		const character = await characterRecord.save();
 
-		return { character: character.toJSON(), path: [] as number[][] };
+		return character.toJSON();
 	} catch (error) {
 		console.error(`Error nextLevel: ${error.message}`);
 		throw error;
