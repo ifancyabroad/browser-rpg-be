@@ -185,11 +185,11 @@ export async function move(location: ILocation, session: Session & Partial<Sessi
 
 		const mapRecord = await MapModel.findById(characterRecord.map);
 
-		mapRecord.move(location);
+		const path = mapRecord.move(location);
 		await mapRecord.save();
 		const character = await characterRecord.save();
 
-		return character.toJSON();
+		return { character: character.toJSON(), path };
 	} catch (error) {
 		console.error(`Error move: ${error.message}`);
 		throw error;
@@ -214,7 +214,7 @@ export async function nextLevel(session: Session & Partial<SessionData>) {
 		await mapRecord.save();
 		const character = await characterRecord.save();
 
-		return character.toJSON();
+		return { character: character.toJSON(), path: [] as number[][] };
 	} catch (error) {
 		console.error(`Error nextLevel: ${error.message}`);
 		throw error;

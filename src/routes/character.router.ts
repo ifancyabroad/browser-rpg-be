@@ -102,8 +102,8 @@ characterRouter.post(
 	"/move",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const character = await move(req.body, req.session);
-		res.json({ character });
+		const payload = await move(req.body, req.session);
+		res.json(payload);
 	}),
 );
 
@@ -113,8 +113,8 @@ characterRouter.post(
 	"/nextLevel",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const character = await nextLevel(req.session);
-		res.json({ character });
+		const payload = await nextLevel(req.session);
+		res.json(payload);
 	}),
 );
 
