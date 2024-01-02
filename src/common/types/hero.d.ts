@@ -32,7 +32,6 @@ export interface IHeroMethods extends ICharacterMethods {
 	// Add virtuals here
 	get availableItems(): Types.DocumentArray<TEquipmentDataWithID>;
 	get characterClass(): IClassDataWithID;
-	get restPrice(): number;
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
 	get goldMultiplier(): number;
@@ -41,6 +40,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	addExperience(xp: number): void;
 	addLevel(stat: Stat, skill?: string): void;
 	rest(): void;
+	restock(level: number): void;
 	buyItem(id: string, slot: EquipmentSlot): void;
 	battleWon(reward: IReward): void;
 	battleLost(name: string): void;

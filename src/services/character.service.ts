@@ -218,6 +218,7 @@ export async function nextLevel(location: ILocation, session: Session & Partial<
 		mapRecord.nextLevel();
 		await mapRecord.save();
 
+		characterRecord.restock(mapRecord.location.level);
 		const character = await characterRecord.save();
 
 		return character.toJSON();

@@ -4,6 +4,9 @@ export const GOLD_MULTIPLIER = 10;
 export const EXPERIENCE_MULTIPLIER = 50;
 export const REST_MULTIPLIER = 20;
 
+export const SHOP_ARMOURS = 5;
+export const SHOP_WEAPONS = 5;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],

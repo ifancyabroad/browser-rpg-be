@@ -3,7 +3,7 @@ import data from "@common/data/gameData.json";
 import mapData from "@common/data/mapData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { EQUIPMENT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
+import { EQUIPMENT_LEVELS, SHOP_ARMOURS, SHOP_WEAPONS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, RoomState, RoomType } from "@common/utils/enums";
 import { ILocation, IRoom } from "@common/types/map";
 
@@ -135,13 +135,13 @@ export class GameData {
 				.filter(({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType))
 				.filter(({ level }) => maxItemLevel >= level)
 				.map(({ id }) => id);
-			const armourItems = getMultipleRandom(filteredArmours, 3);
+			const armourItems = getMultipleRandom(filteredArmours, SHOP_ARMOURS);
 
 			const filteredWeapons = mapToArray(weapons)
 				.filter(({ weaponType }) => characterClass.weaponTypes.includes(weaponType))
 				.filter(({ level }) => maxItemLevel >= level)
 				.map(({ id }) => id);
-			const weaponItems = getMultipleRandom(filteredWeapons, 2);
+			const weaponItems = getMultipleRandom(filteredWeapons, SHOP_WEAPONS);
 
 			return armourItems.concat(weaponItems);
 		} catch (error) {

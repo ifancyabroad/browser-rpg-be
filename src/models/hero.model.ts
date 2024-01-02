@@ -75,11 +75,6 @@ heroSchema.virtual("characterClass").get(function () {
 	return GameData.populateClass(this.characterClassID);
 });
 
-heroSchema.virtual("restPrice").get(function () {
-	const multiplier = Game.getModifier(this.stats.charisma) / 10 + 1;
-	return Math.round((this.day * REST_MULTIPLIER) / multiplier);
-});
-
 heroSchema.virtual("nextLevelExperience").get(function () {
 	return EXPERIENCE_MAP.get(this.level + 1);
 });
@@ -124,17 +119,16 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 });
 
 heroSchema.method("rest", function rest() {
-	if (this.restPrice > this.gold) {
-		throw new Error("Not enough gold");
-	}
-	this.gold = this.gold - this.restPrice;
 	this.day++;
-	this.set("availableItemIDs", GameData.getShopItems(this.characterClassID, this.level));
 	this.setHitPoints(this.baseMaxHitPoints);
 	this.skillIDs.forEach((skill) => {
 		const skillData = this.skills.find((sk) => sk.id === skill.id);
 		return (skill.remaining = skillData.maxUses);
 	});
+});
+
+heroSchema.method("restock", function restock(level) {
+	this.set("availableItemIDs", GameData.getShopItems(this.characterClassID, level));
 });
 
 heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
