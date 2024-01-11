@@ -33,7 +33,7 @@ export async function startBattle(location: ILocation, session: Session & Partia
 
 		const mapRecord = await MapModel.findById(characterRecord.map.id);
 		mapRecord.move(location);
-		if (!mapRecord.isBattle) {
+		if (!mapRecord.isBattle && !mapRecord.isBoss) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No battle in this room");
 		}
 
