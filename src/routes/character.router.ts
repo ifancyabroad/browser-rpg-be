@@ -5,14 +5,16 @@ import { RequestUser } from "@common/types/user";
 import {
 	buyItem,
 	createCharacter,
+	createTreasure,
 	getActiveCharacter,
 	levelUp,
 	move,
 	nextLevel,
 	rest,
 	retireActiveCharacter,
+	takeTreasure,
 } from "@services/character.service";
-import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp, RequestTreasure } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@common/utils/game/GameData";
 import { RequestMove } from "@common/types/map";
@@ -115,6 +117,28 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestMove, res: Response) => {
 		const character = await nextLevel(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/createTreasure'
+// @DEST Add new treasure room items
+characterRouter.post(
+	"/createTreasure",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestMove, res: Response) => {
+		const character = await createTreasure(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/takeTreasure'
+// @DEST Take treasure room item
+characterRouter.post(
+	"/takeTreasure",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestTreasure, res: Response) => {
+		const character = await takeTreasure(req.body, req.session);
 		res.json({ character });
 	}),
 );

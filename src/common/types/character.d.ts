@@ -131,3 +131,13 @@ export interface ILevelUpInput {
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
 }
+
+export interface ITreasureInput {
+	id?: string;
+	slot?: EquipmentSlot;
+	location: ILocation;
+}
+
+export interface RequestTreasure extends Request {
+	item: ITreasureInput;
+}

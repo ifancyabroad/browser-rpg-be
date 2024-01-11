@@ -1,4 +1,4 @@
-import { IBuyItemInput, ICharacterInput, ILevelUpInput } from "@common/types/character";
+import { IBuyItemInput, ICharacterInput, ILevelUpInput, ITreasureInput } from "@common/types/character";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
@@ -39,7 +39,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			id,
 			remaining: GameData.getSkillById(id).maxUses,
 		}));
-		const availableItems = GameData.getShopItems(characterClass, 1);
+		const availableItems = GameData.getClassItems(characterClass, 1, 10);
 
 		const maps = GameData.getMaps();
 		const location = GameData.getStartingLocation(maps);
@@ -103,7 +103,9 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 			throw createHttpError(httpStatus.BAD_REQUEST, "No shop in this room");
 		}
 
-		characterRecord.buyItem(id, slot);
+		characterRecord.checkItem(id, slot);
+		characterRecord.buyItem(id);
+		characterRecord.equipItem(id, slot);
 
 		if (!characterRecord.availableItems.length) {
 			mapRecord.completeRoom();
@@ -218,12 +220,86 @@ export async function nextLevel(location: ILocation, session: Session & Partial<
 		mapRecord.nextLevel();
 		await mapRecord.save();
 
-		characterRecord.restock(mapRecord.location.level);
+		characterRecord.restock(mapRecord.location.level + 1);
 		const character = await characterRecord.save();
 
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error nextLevel: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function createTreasure(location: ILocation, session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
+		}
+
+		const mapRecord = await MapModel.findById(characterRecord.map);
+		mapRecord.move(location);
+		if (!mapRecord.isTreasure) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No treasure in this room");
+		}
+
+		mapRecord.createTreasure(location, characterRecord.characterClassID);
+		await mapRecord.save();
+
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error createTreasure: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function takeTreasure(item: ITreasureInput, session: Session & Partial<SessionData>) {
+	const { id, slot, location } = item;
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
+		}
+
+		const mapRecord = await MapModel.findById(characterRecord.map);
+		mapRecord.move(location);
+		if (!mapRecord.isTreasure) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No treasure in this room");
+		}
+
+		const treasure = mapRecord.getTreasure(location);
+		if (id && !treasure.itemIDs.includes(id)) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Item is not available!");
+		}
+
+		if (id) {
+			characterRecord.checkItem(id, slot);
+			characterRecord.equipItem(id, slot);
+		} else {
+			const goldReward = mapRecord.location.level * 25;
+			characterRecord.gold += goldReward;
+		}
+
+		mapRecord.completeRoom();
+
+		await mapRecord.save();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error takeTreasure: ${error.message}`);
 		throw error;
 	}
 }

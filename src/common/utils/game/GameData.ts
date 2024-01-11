@@ -125,7 +125,7 @@ export class GameData {
 		>;
 	}
 
-	public static getShopItems(classID: string, level: number) {
+	public static getClassItems(classID: string, level: number, amount: number) {
 		try {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
@@ -135,17 +135,17 @@ export class GameData {
 				.filter(({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType))
 				.filter(({ level }) => maxItemLevel >= level)
 				.map(({ id }) => id);
-			const armourItems = getMultipleRandom(filteredArmours, SHOP_ARMOURS);
 
 			const filteredWeapons = mapToArray(weapons)
 				.filter(({ weaponType }) => characterClass.weaponTypes.includes(weaponType))
 				.filter(({ level }) => maxItemLevel >= level)
 				.map(({ id }) => id);
-			const weaponItems = getMultipleRandom(filteredWeapons, SHOP_WEAPONS);
 
-			return armourItems.concat(weaponItems);
+			const items = filteredArmours.concat(filteredWeapons);
+			console.log(items);
+			return getMultipleRandom(items, amount);
 		} catch (error) {
-			console.error(`Error getShopItems: ${error.message}`);
+			console.error(`Error getClassItems: ${error.message}`);
 			throw error;
 		}
 	}

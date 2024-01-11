@@ -41,7 +41,9 @@ export interface IHeroMethods extends ICharacterMethods {
 	addLevel(stat: Stat, skill?: string): void;
 	rest(): void;
 	restock(level: number): void;
-	buyItem(id: string, slot: EquipmentSlot): void;
+	buyItem(id: string): void;
+	checkItem(id: string, slot: EquipmentSlot): void;
+	equipItem(id: string, slot: EquipmentSlot): void;
 	battleWon(reward: IReward): void;
 	battleLost(name: string): void;
 

@@ -1,4 +1,4 @@
-import { ILocation, IMap, IMapMethods, IMapModel, IRoom } from "@common/types/map";
+import { ILocation, IMap, IMapMethods, IMapModel, IRoom, ITreasure } from "@common/types/map";
 import { GameData, RoomState, RoomType } from "@common/utils";
 import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
@@ -22,6 +22,17 @@ const roomSchema = new Schema<IRoom, Model<IRoom>>({
 	},
 });
 
+const treasureSchema = new Schema<ITreasure, Model<ITreasure>>({
+	itemIDs: {
+		type: [String],
+		required: true,
+	},
+	location: {
+		type: locationSchema,
+		required: true,
+	},
+});
+
 const mapSchema = new Schema<IMap, IMapModel, IMapMethods>(
 	{
 		maps: {
@@ -32,8 +43,12 @@ const mapSchema = new Schema<IMap, IMapModel, IMapMethods>(
 			type: locationSchema,
 			required: true,
 		},
+		treasureIDs: {
+			type: [treasureSchema],
+			required: true,
+		},
 	},
-	{ timestamps: true },
+	{ toJSON: { virtuals: true } },
 );
 
 mapSchema.virtual("level").get(function () {
@@ -44,8 +59,15 @@ mapSchema.virtual("room").get(function () {
 	return this.level[this.location.y][this.location.x];
 });
 
+mapSchema.virtual("treasure").get(function () {
+	return this.treasureIDs.map(({ location, itemIDs }) => {
+		const items = GameData.populateAvailableItems(itemIDs);
+		return { location, items };
+	});
+});
+
 mapSchema.virtual("isBattle").get(function () {
-	return [RoomType.Battle, RoomType.Boss].includes(this.room.type) && this.room.state !== RoomState.Complete;
+	return this.room.type === RoomType.Battle && this.room.state !== RoomState.Complete;
 });
 
 mapSchema.virtual("isBoss").get(function () {
@@ -101,6 +123,25 @@ mapSchema.method("completeRoom", function completeRoom() {
 
 mapSchema.method("nextLevel", function nextLevel() {
 	this.location = GameData.getStartingLocation(this.maps, this.location.level + 1);
+});
+
+mapSchema.method("getTreasure", function getTreasure(location) {
+	return this.treasureIDs.find(
+		(treasure) =>
+			treasure.location.level === location.level &&
+			treasure.location.x === location.x &&
+			treasure.location.y === location.y,
+	);
+});
+
+mapSchema.method("createTreasure", function createTreasure(location, classID) {
+	if (this.getTreasure(location)) {
+		throw new Error("Treasure already exists!");
+	}
+
+	const itemIDs = GameData.getClassItems(classID, location.level + 1, 2);
+	const treasure = { itemIDs, location };
+	this.treasureIDs.push(treasure);
 });
 
 const MapModel = model<IMap, IMapModel>("Map", mapSchema);

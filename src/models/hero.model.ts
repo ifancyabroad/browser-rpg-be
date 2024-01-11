@@ -3,7 +3,7 @@ import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@common/u
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, REST_MULTIPLIER, SKILL_LEVEL_MAP } from "@common/utils";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
 import { IReward } from "@common/types/battle";
 import mongooseAutoPopulate from "mongoose-autopopulate";
@@ -128,10 +128,10 @@ heroSchema.method("rest", function rest() {
 });
 
 heroSchema.method("restock", function restock(level) {
-	this.set("availableItemIDs", GameData.getShopItems(this.characterClassID, level));
+	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, level, 10));
 });
 
-heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
+heroSchema.method("buyItem", function buyItem(id: string) {
 	const item = this.availableItems.find((it) => it.id === id);
 
 	if (!item) {
@@ -140,6 +140,20 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 
 	if (item.price > this.gold) {
 		throw new Error("Not enough gold");
+	}
+
+	this.gold = this.gold - item.price;
+	this.set(
+		"availableItemIDs",
+		this.availableItemIDs.filter((it) => it !== id),
+	);
+});
+
+heroSchema.method("checkItem", function checkItem(id: string, slot: EquipmentSlot) {
+	const item = GameData.getEquipmentById(id);
+
+	if (!item) {
+		throw new Error("Item not found");
 	}
 
 	const { armourTypes, weaponTypes } = this.characterClass;
@@ -159,15 +173,18 @@ heroSchema.method("buyItem", function buyItem(id: string, slot: EquipmentSlot) {
 	if (!slotTypes.includes(slot)) {
 		throw new Error("Item cannot be equipped to this slot");
 	}
+});
+
+heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlot) {
+	const item = GameData.getEquipmentById(id);
+
+	if (!item) {
+		throw new Error("Item not found");
+	}
 
 	const isTwoHandedWeapon = "size" in item && item.size === WeaponSize.TwoHanded;
 	const offHand = isTwoHandedWeapon ? null : this.equipmentIDs.hand2;
 
-	this.gold = this.gold - item.price;
-	this.set(
-		"availableItemIDs",
-		this.availableItemIDs.filter((it) => it !== id),
-	);
 	this.equipmentIDs = {
 		...this.equipmentIDs,
 		[EquipmentSlot.Hand2]: offHand,
