@@ -142,7 +142,6 @@ export class GameData {
 				.map(({ id }) => id);
 
 			const items = filteredArmours.concat(filteredWeapons);
-			console.log(items);
 			return getMultipleRandom(items, amount);
 		} catch (error) {
 			console.error(`Error getClassItems: ${error.message}`);
@@ -190,7 +189,7 @@ export class GameData {
 	}
 
 	private static mapRoom(type: RoomType, location: ILocation) {
-		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None];
+		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
 		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
 		return { location, type, state };
 	}

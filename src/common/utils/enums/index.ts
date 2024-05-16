@@ -139,6 +139,7 @@ export enum HitType {
 export enum RoomType {
 	None,
 	Empty,
+	Wall,
 	Battle,
 	Boss,
 	Shop,

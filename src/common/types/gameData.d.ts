@@ -33,6 +33,7 @@ export interface IClassData {
 	description: string;
 	name: string;
 	portrait: string;
+	icon: string;
 	skillClasses: SkillClass[];
 	armourTypes: ArmourType[];
 	weaponTypes: WeaponType[];
