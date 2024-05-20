@@ -1378,7 +1378,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJLRtY1B4JdDuOGq2sd?alt=media&token=23f9149d-b849-48df-a3b7-bbbfe6bdc20a",
 			"level": 1,
 			"maxUses": 4,
 			"name": "Cleave",
@@ -1413,7 +1413,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJPxBkEam2oJZtHIBgY?alt=media&token=ec4c5f5f-5144-49cf-90fe-e2575309b0bf",
 			"level": 1,
 			"maxUses": 2,
 			"name": "Stand Ground",
@@ -1422,28 +1422,26 @@
 		},
 		"-NJQ2hml_9m6iHzAfES5": {
 			"class": "warrior",
-			"description": "Roar at the enemy to lower their dexterity.",
+			"description": "Strike the enemy to pierce the skin and cause them to bleed.",
 			"effects": [
 				{
-					"accuracy": 100,
-					"difficulty": 18,
-					"duration": 8,
-					"modifier": "wisdom",
-					"properties": [
-						{
-							"name": "dexterity",
-							"type": "stat",
-							"value": -4
-						}
-					],
+					"difficulty": 12,
+					"duration": 4,
+					"effect": "bleed",
+					"modifier": "constitution",
 					"target": "enemy",
-					"type": "status"
+					"type": "auxiliary"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJQ2hml_9m6iHzAfES5?alt=media&token=5e94443d-b8ce-4bb2-9f9f-4eb6c8197469",
 			"level": 1,
 			"maxUses": 4,
-			"name": "Intimidating Shout",
+			"name": "Rend",
 			"price": 50,
 			"target": "enemy"
 		},
@@ -1462,21 +1460,21 @@
 				},
 				{
 					"accuracy": 50,
-					"difficulty": 15,
+					"difficulty": 18,
 					"duration": 8,
 					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "crushing",
 							"type": "resistance",
-							"value": -25
+							"value": -50
 						}
 					],
 					"target": "enemy",
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NKt0W8prsXi7-54nBVz?alt=media&token=69b7873d-c808-433e-bf1e-c88e7536f556",
 			"level": 2,
 			"maxUses": 5,
 			"name": "Melon Crush",
@@ -1502,7 +1500,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NKt5eqAEIJYZFNbvK8f?alt=media&token=f17cf62c-3d35-4604-989c-a00f557e328f",
 			"level": 3,
 			"maxUses": 1,
 			"name": "Slit Throat",
@@ -1520,7 +1518,7 @@
 				},
 				{
 					"accuracy": 50,
-					"difficulty": 15,
+					"difficulty": 17,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "dexterity",
@@ -1528,7 +1526,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMHqP01D8-tN-uBn5s?alt=media&token=38cb6db9-89a4-485b-b439-9dd9373a43ec",
 			"level": 2,
 			"maxUses": 1,
 			"name": "Charge",
@@ -1541,7 +1539,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"difficulty": 15,
+					"difficulty": 12,
 					"duration": 5,
 					"modifier": "dexterity",
 					"properties": [
@@ -1560,9 +1558,9 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
-			"level": 2,
-			"maxUses": 3,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMIV5OGOr4bChwrNEE?alt=media&token=238644e4-a4dd-4615-92da-23a215207e37",
+			"level": 1,
+			"maxUses": 5,
 			"name": "Brutal Advance",
 			"price": 160,
 			"target": "enemy"
@@ -1592,7 +1590,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMJ9LGQM22pDRl_EYc?alt=media&token=dd67132b-eb38-458e-bf40-54b90c7c15c1",
 			"level": 3,
 			"maxUses": 1,
 			"name": "Lunging Strike",
@@ -1605,7 +1603,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 3,
+					"duration": 4,
 					"properties": [
 						{
 							"name": "strength",
@@ -1615,16 +1613,16 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -10
+							"value": -8
 						}
 					],
 					"target": "self",
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqTywT0RDubTou99c2?alt=media&token=9ea978e7-bc94-4343-b045-7054eaea6455",
 			"level": 3,
-			"maxUses": 1,
+			"maxUses": 2,
 			"name": "Berserk",
 			"price": 550
 		},
@@ -1648,7 +1646,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqUWZDeys5x3n8eLNA?alt=media&token=74ce578b-3e45-44d2-8565-ccd0187437d0",
 			"level": 4,
 			"maxUses": 1,
 			"name": "Whirlwind Strike",
@@ -1668,7 +1666,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqUxJ5hBOkYc_e-wuG?alt=media&token=0a58571b-84fa-4b18-9ae1-ef62ca3bdd2d",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Disarm",
@@ -1685,21 +1683,21 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 50
+							"value": 10
 						}
 					],
 					"target": "self",
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqWi-RbH2vwtAawttY?alt=media&token=b906457e-c916-43b2-957d-036855d70eb9",
 			"level": 4,
-			"maxUses": 1,
+			"maxUses": 3,
 			"name": "Dancing Defense",
 			"price": 1090
 		},
@@ -1708,39 +1706,32 @@
 			"description": "Beat the enemy into submission with a chance to lower physical resistances.",
 			"effects": [
 				{
-					"damageType": "crushing",
-					"max": 20,
-					"min": 10,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"accuracy": 50,
 					"difficulty": 24,
-					"duration": 3,
+					"duration": 5,
 					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "slashing",
 							"type": "resistance",
-							"value": -25
+							"value": -75
 						},
 						{
 							"name": "crushing",
 							"type": "resistance",
-							"value": -25
+							"value": -75
 						},
 						{
 							"name": "piercing",
 							"type": "resistance",
-							"value": -25
+							"value": -75
 						}
 					],
 					"target": "enemy",
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqXb0gVgqwcQmz5Kty?alt=media&token=888faf17-25f3-4981-b1d4-34a7017ebade",
 			"level": 4,
 			"maxUses": 3,
 			"name": "Tenderise",
@@ -1774,7 +1765,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqZdRYK5clYyJxqQKi?alt=media&token=7529994a-db1d-47e4-8a6f-b1b517e85d8c",
 			"level": 1,
 			"maxUses": 2,
 			"name": "Acrobatic Strike",
@@ -1798,7 +1789,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_C6vPLiGUFkYHy3u?alt=media&token=95e81572-3538-4686-bde3-70eaa9eeb15d",
 			"level": 1,
 			"maxUses": 4,
 			"name": "Quick Fingers",
@@ -1822,7 +1813,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_nhusxIdvv9LFwJZ?alt=media&token=aa5812ba-62fc-4ec5-a1cc-de61023e265c",
 			"level": 2,
 			"maxUses": 3,
 			"name": "Poison Coat",
@@ -1855,7 +1846,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqaJ9QZYIpe6P1iDYy?alt=media&token=a61f4af5-9abf-4e8c-b41c-2cabd76120a1",
 			"level": 1,
 			"maxUses": 4,
 			"name": "Acid Burn",
@@ -1871,7 +1862,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqa_ZuZcAZCuzTr5c3?alt=media&token=e7f6ca07-6427-467d-9aef-21315491dd76",
 			"level": 2,
 			"maxUses": 1,
 			"name": "Backstab",
@@ -1897,7 +1888,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqb8JkDlplkchg0htc?alt=media&token=d137cfde-7d00-42aa-b967-c97844037121",
 			"level": 2,
 			"maxUses": 1,
 			"name": "Go For The Eyes",
@@ -1924,7 +1915,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqbgWmfMqnnjnXn-Hp?alt=media&token=7b653a63-5cb5-41f1-aafe-45beb0b53579",
 			"level": 3,
 			"maxUses": 3,
 			"name": "Poison Bomb",
@@ -1955,7 +1946,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqc6Kl781JP6QdXB-m?alt=media&token=884dd2bc-52ae-478c-a715-59e7226b817c",
 			"level": 3,
 			"maxUses": 3,
 			"name": "Press The Advantage",
@@ -1986,7 +1977,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqcxgP5ITgFn-T8xj6?alt=media&token=2ccf3d59-a4f4-41ce-ba9b-7e9fccac6a6d",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Flurry",
@@ -2020,7 +2011,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdUiFhyxCULAsWYJl?alt=media&token=ab345aab-5ea3-49ef-81e8-ed3481946db6",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Cloak Of Shadows",
@@ -2040,7 +2031,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdkxMP9wTCz81_T4e?alt=media&token=3cf9e91e-ff15-44c3-9a6d-695f68947779",
 			"level": 4,
 			"maxUses": 1,
 			"name": "Spring The Trap",
@@ -2048,84 +2039,38 @@
 		},
 		"-Nc3vvlL3y_va4dkw6_B": {
 			"class": "mage",
-			"description": "Conjure three small projectiles.",
+			"description": "Conjure a flame arrow.",
 			"effects": [
 				{
-					"damageType": "cold",
-					"max": 4,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "fire",
-					"max": 4,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
-					"damageType": "lightning",
-					"max": 4,
+					"max": 6,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3vvlL3y_va4dkw6_B?alt=media&token=93233ba3-b47e-48c4-9978-1bc145f4a2cb",
 			"level": 1,
 			"maxUses": 7,
-			"name": "Elemental Missiles",
+			"name": "Flame Arrow",
 			"price": 60
 		},
 		"-Nc3xGd_-Cawo2Zo0ipP": {
 			"class": "mage",
-			"description": "Dazzle the enemy with a flurry of bright colours.",
+			"description": "Conjure a frost arrow.",
 			"effects": [
 				{
-					"accuracy": 50,
-					"difficulty": 10,
-					"duration": 6,
-					"modifier": "intelligence",
-					"properties": [
-						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
-							"value": -5
-						}
-					],
+					"damageType": "cold",
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
-					"type": "status"
-				},
-				{
-					"accuracy": 25,
-					"difficulty": 10,
-					"duration": 1,
-					"effect": "stun",
-					"modifier": "intelligence",
-					"target": "enemy",
-					"type": "auxiliary"
-				},
-				{
-					"accuracy": 50,
-					"difficulty": 10,
-					"duration": 6,
-					"modifier": "intelligence",
-					"properties": [
-						{
-							"name": "hitChance",
-							"type": "auxiliaryStat",
-							"value": -5
-						}
-					],
-					"target": "enemy",
-					"type": "status"
+					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3xGd_-Cawo2Zo0ipP?alt=media&token=4890dfe4-70f3-459d-b6f1-bce3c3ab7daf",
 			"level": 1,
-			"maxUses": 5,
-			"name": "Colour Spray",
+			"maxUses": 7,
+			"name": "Frost Arrow",
 			"price": 120
 		},
 		"-Nc3xhpxzM4iz55_jXYj": {
@@ -2146,7 +2091,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3xhpxzM4iz55_jXYj?alt=media&token=671e90b7-e472-4ad0-b5aa-47febe8bf8bb",
 			"level": 1,
 			"maxUses": 8,
 			"name": "Armour",
@@ -2180,7 +2125,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3yE_BOq5Xmhy4LvbI?alt=media&token=7098ab93-e0ec-486f-9f9b-2715b57815b6",
 			"level": 3,
 			"maxUses": 4,
 			"name": "Iron Skin",
@@ -2206,7 +2151,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3yZ_5d4QQI4y90Inu?alt=media&token=76dd4e5b-ee38-43d3-8c3c-f8b88d0f3e88",
 			"level": 2,
 			"maxUses": 4,
 			"name": "Destroy Armour",
@@ -2240,7 +2185,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3z5D4In6VQLtKZxrV?alt=media&token=946607f3-f962-428c-8caa-a86a3184e66a",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Resist Elements",
@@ -2258,7 +2203,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3zPER2-voArWHwNy9?alt=media&token=6edea4db-a6d1-4951-8d0a-a67acfb4e788",
 			"level": 2,
 			"maxUses": 5,
 			"name": "Lighting Bolt",
@@ -2276,7 +2221,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc4-UVARP8jFmsiuXC9?alt=media&token=07349932-ea92-4da5-abf5-892cb4b16ba4",
 			"level": 3,
 			"maxUses": 5,
 			"name": "Fireball",
@@ -2322,7 +2267,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc404KHFQ3zZaHpCbe2?alt=media&token=b2a650c7-b8ae-4b7a-93e7-fb8f090a1e85",
 			"level": 3,
 			"maxUses": 4,
 			"name": "Pierce Magic",
@@ -2357,7 +2302,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc40XqHNv0vjMrSUhRM?alt=media&token=6d54092f-efe5-426a-910b-355f0db3c882",
 			"level": 4,
 			"maxUses": 1,
 			"name": "Paralyze",
@@ -2365,20 +2310,20 @@
 		},
 		"-Nc41TbX58HmCh6nednT": {
 			"class": "mage",
-			"description": "Attempt to fully drain the lifeforce of your enemy by calling death herself.",
+			"description": "You summon draconic power to gain a breath weapon.",
 			"effects": [
 				{
-					"damageType": "necrotic",
+					"damageType": "fire",
 					"max": 32,
 					"min": 18,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc41TbX58HmCh6nednT?alt=media&token=a93e95c5-514e-4268-b3b2-db3268545b35",
 			"level": 4,
 			"maxUses": 1,
-			"name": "Finger Of Death",
+			"name": "Dragon Breath",
 			"price": 1550
 		},
 		"-Nc43Ea3uk2s6Flfxpga": {
@@ -2409,7 +2354,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc43Ea3uk2s6Flfxpga?alt=media&token=a4fce984-05db-47b3-a756-1f9ea373e42f",
 			"level": 4,
 			"maxUses": 4,
 			"name": "Shapeshift",
@@ -2425,7 +2370,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NfROP8bobODCeEQFrpd?alt=media&token=5f56ac9a-64e5-422e-89a4-a09a4c7baddb",
 			"level": 0,
 			"maxUses": 0,
 			"name": "Attack",
@@ -2451,7 +2396,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTOJ5N4B3V55HpTl-8?alt=media&token=9e866550-b99b-4c0f-b146-d98d34634113",
 			"level": 2,
 			"maxUses": 4,
 			"name": "Poison Bite",
@@ -2476,7 +2421,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTOiesS7DlEfpA_jDR?alt=media&token=5141b1d2-6098-4490-9b6d-a6c56e24c8f3",
 			"level": 2,
 			"maxUses": 4,
 			"name": "Web",
@@ -2495,7 +2440,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTPv9FLqVI9cJXml2R?alt=media&token=2ef42b93-02e9-40dd-b953-a8ff22d8dacf",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Petrifying Gaze",
@@ -2512,7 +2457,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTQlY-RMpBaNkunfb7?alt=media&token=cdc6656e-ac5c-4366-a65f-6c4025c17ac0",
 			"level": 1,
 			"maxUses": 5,
 			"name": "Cure Minor Wounds",
@@ -2535,7 +2480,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRA6CoAdH4tX5ht_3?alt=media&token=47263956-7149-46fd-9133-8a7827a6b68c",
 			"level": 1,
 			"maxUses": 5,
 			"name": "Power Word: Shield",
@@ -2553,7 +2498,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRbewhOgSp1zw1Uu7?alt=media&token=dca7c698-b44a-4c75-932c-b2291934e4cf",
 			"level": 1,
 			"maxUses": 4,
 			"name": "Holy Bolt",
@@ -2570,7 +2515,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRk0hkXBsKEHMEWD2?alt=media&token=5601f4d5-0951-42a2-b8bc-b41b17629772",
 			"level": 2,
 			"maxUses": 5,
 			"name": "Cure Medium Wounds",
@@ -2589,7 +2534,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTTlgwOpa5b9n39404?alt=media&token=39f0bc4a-7510-4187-8e4f-4aa17316cc93",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Power Word: Sleep",
@@ -2617,7 +2562,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUH0cjt_Ek0BEIgUh?alt=media&token=ac5bf6ce-f097-45f5-b974-ee6bb37de865",
 			"level": 2,
 			"maxUses": 4,
 			"name": "Prayer",
@@ -2634,7 +2579,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUQdooGB1fZa6Q-pv?alt=media&token=98005b9d-49d9-4a20-a366-91a1d99852c5",
 			"level": 3,
 			"maxUses": 5,
 			"name": "Cure Major Wounds",
@@ -2657,7 +2602,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUsnh4THCA3EXJQn2?alt=media&token=182ef9a7-eb29-4876-b743-e017a3694bda",
 			"level": 3,
 			"maxUses": 5,
 			"name": "Power Word: Fortitude",
@@ -2682,7 +2627,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTX-eKaRJ03i_t4QJ7?alt=media&token=59d4c54f-9da1-4e86-b698-c08912e3582b",
 			"level": 3,
 			"maxUses": 3,
 			"name": "Flamestrike",
@@ -2715,7 +2660,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTXdELX-HExDeZ8y6L?alt=media&token=b51b7b94-f31d-4c63-8282-a5c8adc911a1",
 			"level": 4,
 			"maxUses": 1,
 			"name": "Divine Intervention",
@@ -2732,7 +2677,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTXoshOPa5Fo9AGlh2?alt=media&token=10c7904c-62ec-42d7-bb36-97ba9f9007cd",
 			"level": 4,
 			"maxUses": 5,
 			"name": "Cure Critical Wounds",
@@ -2764,7 +2709,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTYFhLYpX2p1ZbdUfj?alt=media&token=3afc9109-23d1-4f2e-9def-e492b0201f1e",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Power Word: Death",
@@ -2782,7 +2727,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTZhoqeh-K00UZDd2_?alt=media&token=9d495ce4-5e69-4ab6-aa98-65fe85f8b9d2",
 			"level": 1,
 			"maxUses": 10,
 			"name": "Bite",
@@ -2808,7 +2753,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgT_si0jS5qW1S5SbaJ?alt=media&token=e9f6910b-b610-407e-8484-3a2bebcc5308",
 			"level": 2,
 			"maxUses": 3,
 			"name": "Ghoul Strike",
@@ -2832,7 +2777,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTbEHpokQy-0H5xsHh?alt=media&token=e978b5e3-acb5-417a-b99d-377658894756",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Drain Life",
@@ -2867,7 +2812,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTbtbVc3qk03XQO0GP?alt=media&token=d7bd191c-11cc-486a-bec4-aba3d27306fb",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Drain Energy",
@@ -2893,7 +2838,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTlKRQQ38mTQ-94KcL?alt=media&token=d8d65416-95b7-49f8-af11-e087261f419b",
 			"level": 3,
 			"maxUses": 7,
 			"name": "Stinger",
@@ -2918,8 +2863,8 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
-			"level": 0,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTmlFYyunJA4SqDKIX?alt=media&token=195bfdc0-a900-4a6e-ad26-a9bca0f2072d",
+			"level": 1,
 			"maxUses": 3,
 			"name": "Acid Bite",
 			"price": 0
@@ -2950,7 +2895,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTn5gefrbm_w1g4ocL?alt=media&token=d2280b22-36b1-4e96-a969-c667322ebc91",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Acid Spray",
@@ -2971,7 +2916,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTnzsxBYgTye5lFfkd?alt=media&token=51004322-ba78-44c5-9f60-332eefbdffec",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Double Strike",
@@ -2994,7 +2939,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhggr8CtVaNEZYVBilF?alt=media&token=a574eb3a-0e7e-4582-ac8b-a8fa654ff4a0",
 			"level": 1,
 			"maxUses": 5,
 			"name": "Battle Cry",
@@ -3005,10 +2950,15 @@
 			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
 			"effects": [
 				{
-					"duration": 8,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 5
+						},
+						{
+							"name": "critChance",
 							"type": "auxiliaryStat",
 							"value": 5
 						}
@@ -3017,8 +2967,8 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
-			"level": 1,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgpG6pLRAqTW1AU0Eg?alt=media&token=049464de-0935-4c27-9f76-c3be3474a194",
+			"level": 2,
 			"maxUses": 5,
 			"name": "Focus Energy",
 			"price": 0
@@ -3033,7 +2983,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgpxFRvn_sOrij-K0F?alt=media&token=92063fcb-0f0c-4f6c-aec9-4c6d205bc431",
 			"level": 2,
 			"maxUses": 3,
 			"name": "Heavy Strike",
@@ -3044,31 +2994,17 @@
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
-					"difficulty": 15,
+					"difficulty": 12,
 					"duration": 3,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
-				},
-				{
-					"difficulty": 15,
-					"duration": 3,
-					"modifier": "constitution",
-					"properties": [
-						{
-							"name": "defence",
-							"type": "auxiliaryStat",
-							"value": -25
-						}
-					],
-					"target": "enemy",
-					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgrvvBiejH010EI8ME?alt=media&token=562118d9-90e1-4dc3-91fc-3a3ca57c6ea5",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Knock Down",
 			"price": 0
 		},
@@ -3082,14 +3018,14 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 12
+							"value": 6
 						}
 					],
 					"target": "self",
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgx8gnKSMnxB7h9F60?alt=media&token=eb3b73bb-3dd1-4891-9ce8-94920b18ee74",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Shield Wall",
@@ -3124,7 +3060,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgy1Vmh0FTTPCWBory?alt=media&token=9f2b03e8-b95d-403d-86e0-acd4e362468e",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Deafening Roar",
@@ -3140,7 +3076,7 @@
 					"type": "weaponDamage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgyQeYWKGMfv97Ojh0?alt=media&token=07293fa5-d503-491b-85a6-f683d04279bf",
 			"level": 4,
 			"maxUses": 3,
 			"name": "Mighty Blow",
@@ -3164,7 +3100,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgyxj9aTH40MK_MCPF?alt=media&token=ed4f5378-03ef-4011-9a54-01da6bb758f3",
 			"level": 1,
 			"maxUses": 5,
 			"name": "Poison Jab",
@@ -3189,7 +3125,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgzTUnXwX4Iw8JGJev?alt=media&token=0e42a7f5-dee5-4f7a-8366-3563b162943f",
 			"level": 1,
 			"maxUses": 5,
 			"name": "Cripple",
@@ -3212,7 +3148,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh-SuuVlmZIYSG87sp?alt=media&token=50aaef62-ac5c-4a23-8360-e7e26095a333",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Evasion",
@@ -3238,7 +3174,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh0AreyuN6wco1X_6B?alt=media&token=bd7521b3-bc47-411c-b523-7eeaf987f773",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Kick",
@@ -3275,7 +3211,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh0aZeozWw6_HWDH23?alt=media&token=7b30ca2b-4a56-43db-a5b2-ce88c87c7fa2",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Acid Strike",
@@ -3298,7 +3234,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh16M9sVTTOKw5g6rO?alt=media&token=c934a0ad-5942-45c9-ada7-02516b04aa9b",
 			"level": 3,
 			"maxUses": 2,
 			"name": "Deadly Poison",
@@ -3332,7 +3268,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh1jOIoeiE7yvBATmT?alt=media&token=dbbe9c2e-7fc1-497e-87c2-471bb5d948df",
 			"level": 4,
 			"maxUses": 4,
 			"name": "Maim",
@@ -3367,7 +3303,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh2aa9hENKmzll2Md-?alt=media&token=811b82c0-59e5-4f46-afbd-0993015d3472",
 			"level": 4,
 			"maxUses": 3,
 			"name": "Expose Weakness",
@@ -3400,7 +3336,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh3D7-ihgBpi0AbfB5?alt=media&token=7a3eb5c6-1571-4e5d-8945-9efb3875f991",
 			"level": 1,
 			"maxUses": 6,
 			"name": "Embrace Elements",
@@ -3412,8 +3348,8 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 6,
-					"min": 1,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -3432,8 +3368,8 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
-			"level": 1,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh3v9mXEeAJhlsZfwB?alt=media&token=3302ddf3-c035-4670-b65c-1e10ddcc6bd0",
+			"level": 2,
 			"maxUses": 4,
 			"name": "Ray of Frost",
 			"price": 0
@@ -3457,7 +3393,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh4hPWuWx_NN1YApGU?alt=media&token=229e6024-e4bd-49c8-a01e-3723de7a7156",
 			"level": 2,
 			"maxUses": 4,
 			"name": "Mirror Image",
@@ -3465,27 +3401,20 @@
 		},
 		"-Nhh50tlZXmwsJcskPE8": {
 			"class": "mage",
-			"description": "Cast a venomous projectile, engulfing targets in corrosive acid.",
+			"description": "Shoot lightning from your fingers.",
 			"effects": [
 				{
-					"damageType": "piercing",
-					"max": 6,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
-					"damageType": "acid",
+					"damageType": "lightning",
 					"max": 6,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
-			"level": 2,
-			"maxUses": 4,
-			"name": "Acid Arrow",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh50tlZXmwsJcskPE8?alt=media&token=f0c44bf4-c4c5-4cf2-b8d5-30203a07ecc6",
+			"level": 1,
+			"maxUses": 7,
+			"name": "Sparks",
 			"price": 0
 		},
 		"-Nhh5ROOn89jDWYu49HW": {
@@ -3508,7 +3437,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh5ROOn89jDWYu49HW?alt=media&token=f5d32b27-11b4-4518-8392-d649d50bdf81",
 			"level": 3,
 			"maxUses": 5,
 			"name": "Crushing Fist",
@@ -3540,7 +3469,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh5vG7znDT-6DBan2F?alt=media&token=4bfc216a-ef3b-4f89-a987-74741a2f1d2c",
 			"level": 3,
 			"maxUses": 4,
 			"name": "Cone of Cold",
@@ -3572,7 +3501,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh6cp8cTNG_6h4WvSN?alt=media&token=f9448ffc-e20a-4c5b-8ccc-a19020ea2999",
 			"level": 4,
 			"maxUses": 5,
 			"name": "Chain Lightning",
@@ -3620,7 +3549,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh7BnVOa0W7OdE_0YR?alt=media&token=7028320b-a438-495b-a8b3-bc22e011b81a",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Globe of Invulnerability",
@@ -3653,7 +3582,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkFjgyu0pTYRw3DVD-?alt=media&token=a19ceedb-9e70-46fb-a0b1-34a68b122a7d",
 			"level": 1,
 			"maxUses": 6,
 			"name": "Bless",
@@ -3688,7 +3617,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkGRRiaTZa0Q2JeWOd?alt=media&token=3cc333c5-9195-4969-9a08-eb4ab974bc34",
 			"level": 1,
 			"maxUses": 6,
 			"name": "Curse",
@@ -3711,7 +3640,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkOF38JibaTuWhFGg_?alt=media&token=18908b64-c7c2-4581-b0b6-04b48c601aaf",
 			"level": 2,
 			"maxUses": 2,
 			"name": "Divine Strength",
@@ -3734,7 +3663,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkP4BW6tSXQG6EoCJq?alt=media&token=1cc90227-b3e3-4e44-bd0c-c35455a2cc97",
 			"level": 2,
 			"maxUses": 8,
 			"name": "Holy Strike",
@@ -3792,7 +3721,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkR-olGXWxxR9Poqo3?alt=media&token=2aa203c7-fff6-4998-b777-bd847ae0773e",
 			"level": 3,
 			"maxUses": 4,
 			"name": "Divine Protection",
@@ -3811,7 +3740,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkT3OrPY0IOvzISeE0?alt=media&token=052b8155-56f6-4eb1-a650-01eaeb7fb7d8",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Hold Person",
@@ -3829,7 +3758,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkZb3a3j2ykQWUtTC0?alt=media&token=068e6888-9b67-4aca-bce4-d315299e625a",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Wail",
@@ -3847,7 +3776,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkZtl6i7THVGIaWaQR?alt=media&token=196c494d-dcca-4687-9f79-92d97c171f04",
 			"level": 3,
 			"maxUses": 3,
 			"name": "Corrupting Touch",
@@ -3864,7 +3793,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkbeREMKyQCVSlZOQf?alt=media&token=25e7cb8e-1605-4ad5-8a17-23bc534c950e",
 			"level": 3,
 			"maxUses": 3,
 			"name": "Regeneration",
@@ -3890,7 +3819,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkdJeDGDat6H-Mf7WV?alt=media&token=93885d69-aadb-48d2-a9ab-0ffd677cc36b",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Whelm",
