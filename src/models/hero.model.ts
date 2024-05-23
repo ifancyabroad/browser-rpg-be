@@ -128,7 +128,7 @@ heroSchema.method("rest", function rest() {
 });
 
 heroSchema.method("restock", function restock(level) {
-	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, level, 10));
+	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, level, 6));
 });
 
 heroSchema.method("buyItem", function buyItem(id: string) {

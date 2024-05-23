@@ -39,7 +39,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			id,
 			remaining: GameData.getSkillById(id).maxUses,
 		}));
-		const availableItems = GameData.getClassItems(characterClass, 1, 10);
+		const availableItems = GameData.getClassItems(characterClass, 1, 6);
 
 		const maps = GameData.getMaps();
 		const location = GameData.getStartingLocation(maps);
