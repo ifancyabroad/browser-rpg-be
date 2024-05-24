@@ -32,6 +32,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	// Add virtuals here
 	get availableItems(): Types.DocumentArray<TEquipmentDataWithID>;
 	get characterClass(): IClassDataWithID;
+	get currentLevelExperience(): number;
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
 	get goldMultiplier(): number;

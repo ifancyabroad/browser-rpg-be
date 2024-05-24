@@ -75,6 +75,10 @@ heroSchema.virtual("characterClass").get(function () {
 	return GameData.populateClass(this.characterClassID);
 });
 
+heroSchema.virtual("currentLevelExperience").get(function () {
+	return EXPERIENCE_MAP.get(this.level);
+});
+
 heroSchema.virtual("nextLevelExperience").get(function () {
 	return EXPERIENCE_MAP.get(this.level + 1);
 });
