@@ -117,8 +117,7 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 
 	const hitPoints = Game.d10;
 	this.baseMaxHitPoints += hitPoints;
-	this.baseHitPoints += hitPoints;
-	delete this.levelUp;
+	this.baseHitPoints = this.baseMaxHitPoints;
 	this.checkLevelUp();
 });
 
