@@ -247,6 +247,21 @@ characterSchema.virtual("resistances").get(function () {
 	};
 });
 
+characterSchema.virtual("damageBonuses").get(function () {
+	return {
+		[DamageType.Crushing]: this.getDamageBonus(DamageType.Crushing),
+		[DamageType.Piercing]: this.getDamageBonus(DamageType.Piercing),
+		[DamageType.Slashing]: this.getDamageBonus(DamageType.Slashing),
+		[DamageType.Cold]: this.getDamageBonus(DamageType.Cold),
+		[DamageType.Fire]: this.getDamageBonus(DamageType.Fire),
+		[DamageType.Lightning]: this.getDamageBonus(DamageType.Lightning),
+		[DamageType.Acid]: this.getDamageBonus(DamageType.Acid),
+		[DamageType.Poison]: this.getDamageBonus(DamageType.Poison),
+		[DamageType.Necrotic]: this.getDamageBonus(DamageType.Necrotic),
+		[DamageType.Radiant]: this.getDamageBonus(DamageType.Radiant),
+	};
+});
+
 characterSchema.virtual("equipment").get(function () {
 	return GameData.populateEquipment(this.equipmentIDs);
 });

@@ -55,6 +55,7 @@ export interface ICharacterMethods {
 	get skills(): Types.DocumentArray<ISkillDataWithRemaining>;
 	get stats(): TStats;
 	get resistances(): TDamageTypes;
+	get damageBonuses(): TDamageTypes;
 	get equipment(): Record<EquipmentSlot, TEquipmentDataWithID>;
 	get equipmentAsArray(): TEquipmentDataWithID[];
 	get weaponsAsArray(): IWeaponDataWithID[];
