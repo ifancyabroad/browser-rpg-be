@@ -4,15 +4,15 @@
 			"armourClass": 11,
 			"armourType": "light",
 			"description": "Lightweight and agile, the classic leather armor for nimble warriors.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=1da785fc-8ee1-4e06-83c4-10a3fb1dd642",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=0e80349b-df1f-484e-9378-69b698ab0d3b",
 			"level": 2,
 			"name": "Leather Armour",
-			"price": 110,
+			"price": 340,
 			"type": "armour"
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
 			"description": "Insulated gloves, shielding hands from bitter cold and frost.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=86cfb59e-fc62-4b17-803a-5c2eeec1a505",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=a7399be8-2084-424e-ba6c-c90cafd7b831",
 			"level": 1,
 			"name": "Insulated Gloves",
 			"price": 80,
@@ -27,7 +27,7 @@
 		},
 		"-NNvLx5iIM_zb3YGnsNC": {
 			"description": "The Hood of the Fox, an enchanting accessory for those who revel in trickery.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=4c91370c-fb34-4c8d-8a9f-ef3f129befca",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=00cbdf99-29c4-4e7f-94da-da8f256e1722",
 			"level": 1,
 			"name": "Hood of the Fox",
 			"price": 70,
@@ -42,7 +42,7 @@
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
 			"description": "A sturdy, basic shield for versatile defense in close combat.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=c3b6295d-0578-4fdc-80a2-caca78f611c5",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=cd077d23-39d2-4c95-8a6e-65fe676b3b30",
 			"level": 1,
 			"name": "Shield",
 			"price": 30,
@@ -59,26 +59,11 @@
 			"armourClass": 18,
 			"armourType": "heavy",
 			"description": "Gilded in enchantments, this gold-plated armor radiates magical protection.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=3bc2f06b-8472-4310-8e4f-ddb19a64a09e",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=65f41764-04fb-45e4-b574-b4c9dde99b5c",
 			"level": 4,
 			"name": "Gold Armour",
-			"price": 4500,
+			"price": 2200,
 			"properties": [
-				{
-					"name": "slashing",
-					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "crushing",
-					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "piercing",
-					"type": "resistance",
-					"value": 20
-				},
 				{
 					"name": "cold",
 					"type": "resistance",
@@ -105,34 +90,9 @@
 					"value": 50
 				},
 				{
-					"name": "strength",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "dexterity",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "constitution",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "intelligence",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "wisdom",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "charisma",
-					"type": "stat",
-					"value": 2
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
 				}
 			],
 			"type": "armour"
@@ -141,7 +101,7 @@
 			"armourClass": 16,
 			"armourType": "heavy",
 			"description": "Basic but sturdy, this chain mail ensures both mobility and protection.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nc44lyRjk-mHNox3H_P?alt=media&token=0f8267f4-6f20-4993-ac94-d0d32857b4bf",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nc44lyRjk-mHNox3H_P?alt=media&token=55ad43c3-81c9-49e9-841a-1474f3ced545",
 			"level": 1,
 			"name": "Chain Mail",
 			"price": 90,
@@ -151,15 +111,15 @@
 			"armourClass": 18,
 			"armourType": "heavy",
 			"description": "Standard plate armor, providing formidable defense on the battlefield.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJxsDuymhUWq2V4ew8?alt=media&token=b3fc5a36-eed3-4600-a813-db447dfe9ad0",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJxsDuymhUWq2V4ew8?alt=media&token=7c799d63-2279-4d0f-babe-670d9d560b56",
 			"level": 3,
 			"name": "Plate Armour",
-			"price": 300,
+			"price": 950,
 			"type": "armour"
 		},
 		"-NgJyJCDG-1UEccRymvT": {
 			"description": "Simple yet reliable plate helm, favored by defenders of the realm.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyJCDG-1UEccRymvT?alt=media&token=f57a92f0-2d11-4b59-a945-8baee93657b1",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyJCDG-1UEccRymvT?alt=media&token=d41ffc74-1619-449d-b7a6-227b3cb71835",
 			"level": 1,
 			"name": "Helmet",
 			"price": 20,
@@ -174,7 +134,7 @@
 		},
 		"-NgJyz3yv_isH2ozl7vj": {
 			"description": "Withstands searing temperatures, a ring providing steadfast fire resistance.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyz3yv_isH2ozl7vj?alt=media&token=117a6afc-11bd-4c59-a8d0-77df14ad7566",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyz3yv_isH2ozl7vj?alt=media&token=bda92907-6815-4c01-89ec-301c4b803d0f",
 			"level": 1,
 			"name": "Ring of Fire Resistance",
 			"price": 100,
@@ -189,7 +149,7 @@
 		},
 		"-NgJz9XiQvutptUoYpNc": {
 			"description": "Shields against bitter cold, a ring of unwavering resistance.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJz9XiQvutptUoYpNc?alt=media&token=bb82961d-101a-4c0e-bacb-6b4daf5e5aba",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJz9XiQvutptUoYpNc?alt=media&token=ef4fd764-7ee4-4463-bd09-ab7e0572e468",
 			"level": 1,
 			"name": "Ring of Cold Resistance",
 			"price": 90,
@@ -204,7 +164,7 @@
 		},
 		"-NgJzNDx7O2sLwCLS8rd": {
 			"description": "Basic yet dependable, an essential companion for any aspiring adventurer.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzNDx7O2sLwCLS8rd?alt=media&token=69db882b-867b-4ba1-83dc-0cda5e98b330",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzNDx7O2sLwCLS8rd?alt=media&token=5896ce43-f035-4706-b700-1b59b1b2cdc9",
 			"level": 1,
 			"name": "Buckler",
 			"price": 10,
@@ -221,7 +181,7 @@
 			"armourClass": 12,
 			"armourType": "medium",
 			"description": "Basic yet durable, woven from beast hides for agile wilderness warriors.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzhkhaQDrg55F1iM1?alt=media&token=35a4dc70-0a1a-4b80-a5c7-b1f55c73ef51",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzhkhaQDrg55F1iM1?alt=media&token=c6ec17ec-274a-4206-b226-99461d705c99",
 			"level": 1,
 			"name": "Hide Armour",
 			"price": 60,
@@ -231,10 +191,10 @@
 			"armourClass": 8,
 			"armourType": "misc",
 			"description": "Simple yet durable, this robe is tailored for those who journey far and wide.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO5fUaNmJH7LpPo2LP?alt=media&token=b8831c20-85bf-4e00-823f-f4ba915576c4",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO5fUaNmJH7LpPo2LP?alt=media&token=fcb298c5-6be0-485e-a713-3333026fb385",
 			"level": 2,
 			"name": "Traveller's Robe",
-			"price": 180,
+			"price": 300,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -246,10 +206,10 @@
 		},
 		"-NgO6sAjD4s9LSirM2lr": {
 			"description": "Woven with enchanted fibers, bestowing the strength of ogres upon the wearer.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO6sAjD4s9LSirM2lr?alt=media&token=c5055f9b-d939-4c9d-abbd-bafb5adec1c1",
-			"level": 2,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO6sAjD4s9LSirM2lr?alt=media&token=12e9a21e-abc3-4b12-820d-bc3f060ab6e0",
+			"level": 1,
 			"name": "Girdle of Ogre Strength",
-			"price": 1100,
+			"price": 250,
 			"properties": [
 				{
 					"name": "strength",
@@ -261,7 +221,7 @@
 		},
 		"-NgO7BPLLUJS5JjAH6o0": {
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO7BPLLUJS5JjAH6o0?alt=media&token=6a3834e9-721f-4953-be17-ce408ad6bbda",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO7BPLLUJS5JjAH6o0?alt=media&token=45324fb0-b7ce-4001-a85a-b001f9968eb5",
 			"level": 1,
 			"name": "Amulet of Light",
 			"price": 80,
@@ -276,10 +236,10 @@
 		},
 		"-NgO9yRhdOivFSL6xkCK": {
 			"description": "Infused with primal energy, the shaman's belt links to the natural world.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=885df85d-7e3e-4fa0-964c-9681b8941287",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=d2b492d4-b97c-44fb-aeb1-6d527f3ee539",
 			"level": 2,
 			"name": "Shaman's Belt",
-			"price": 260,
+			"price": 450,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -289,7 +249,7 @@
 				{
 					"name": "cold",
 					"type": "resistance",
-					"value": 50
+					"value": 20
 				}
 			],
 			"type": "belt"
@@ -298,7 +258,7 @@
 			"armourClass": 10,
 			"armourType": "light",
 			"description": "Simple yet effective, padded armor for agile adventurers.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2AhkGYoZ3Qw0JaJfd?alt=media&token=b74b2b95-f833-4b3f-92b6-ceac6dbc4e29",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2AhkGYoZ3Qw0JaJfd?alt=media&token=23bb17cf-9747-4216-b534-4b7f02b76319",
 			"level": 1,
 			"name": "Padded Armour",
 			"price": 40,
@@ -308,50 +268,50 @@
 			"armourClass": 12,
 			"armourType": "light",
 			"description": "Entry-level studded leather, balancing flexibility and protection.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2B54qxLaMzsSjGgWO?alt=media&token=2635218d-04d5-4994-80f5-5f78525759bd",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2B54qxLaMzsSjGgWO?alt=media&token=a43b02ef-3a09-4946-ba29-ff406bcfb269",
 			"level": 3,
 			"name": "Studded Leather",
-			"price": 200,
+			"price": 660,
 			"type": "armour"
 		},
 		"-Nm2Cd-d46R6iuL4782x": {
 			"armourClass": 14,
 			"armourType": "medium",
 			"description": "Sturdy breastplate, favored by vigilant guardians for reliable protection.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2Cd-d46R6iuL4782x?alt=media&token=233f430a-9221-442c-b15e-aa82326accab",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2Cd-d46R6iuL4782x?alt=media&token=d8ea0126-e3f3-4aaa-a78e-01edf588b702",
 			"level": 2,
 			"name": "Breastplate",
-			"price": 150,
+			"price": 400,
 			"type": "armour"
 		},
 		"-Nm2D2w4xiCJtkX_yQHG": {
 			"armourClass": 15,
 			"armourType": "medium",
 			"description": "A balanced mix of protection and mobility, favored by seasoned warriors.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2D2w4xiCJtkX_yQHG?alt=media&token=00ba260f-5081-4080-9ba8-9f7071593b35",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2D2w4xiCJtkX_yQHG?alt=media&token=19cc2580-9772-4137-8391-e0da157d1f9d",
 			"level": 3,
 			"name": "Half Plate",
-			"price": 250,
+			"price": 900,
 			"type": "armour"
 		},
 		"-Nm2DaHdeREq1LsjfY1C": {
 			"armourClass": 17,
 			"armourType": "heavy",
 			"description": "Basic splints interwoven for reliable defense on the battlefield.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2DaHdeREq1LsjfY1C?alt=media&token=5fe5516e-9705-467f-9d1c-cf29320d3996",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2DaHdeREq1LsjfY1C?alt=media&token=38342233-938a-416c-b667-8dcea9e4dad8",
 			"level": 2,
 			"name": "Splint Mail",
-			"price": 220,
+			"price": 460,
 			"type": "armour"
 		},
 		"-Nm2GvWJKAW8lLaCcu7n": {
 			"armourClass": 9,
 			"armourType": "misc",
 			"description": "A versatile adventurer's robe, perfect for those seeking the unknown.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2GvWJKAW8lLaCcu7n?alt=media&token=9369a473-acb8-4a03-afdf-0e2e0919bfba",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2GvWJKAW8lLaCcu7n?alt=media&token=bd8faa1f-a72b-47ae-a12d-f7c7f6cc5202",
 			"level": 3,
 			"name": "Adventurer's Robe",
-			"price": 240,
+			"price": 600,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -370,11 +330,1586 @@
 			"armourClass": 7,
 			"armourType": "misc",
 			"description": "The Knave's robe, tailored for subtle moves and shadowy maneuvers.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2HibRx3V8P1isPlRf?alt=media&token=f9c58f19-e43f-40ba-b953-ea2bd710b1eb",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2HibRx3V8P1isPlRf?alt=media&token=c2a47714-bbab-46bc-ad63-e2f258216b0e",
 			"level": 1,
 			"name": "Knave's Robe",
 			"price": 60,
 			"type": "armour"
+		},
+		"-Nz9RB3OhlZP2rGnxom1": {
+			"description": "A warding necklace offering potent protection against dark forces.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9RB3OhlZP2rGnxom1?alt=media&token=07407f45-1c6e-4fdb-8ec4-9ab6799671f8",
+			"level": 1,
+			"name": "Warding Necklace",
+			"price": 90,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9SWjFRnu58szE_T-J": {
+			"description": "An enchanted amulet that amplifies the wearer's strength.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9SWjFRnu58szE_T-J?alt=media&token=e81fa74d-fb48-4a21-83fb-e12ed100f319",
+			"level": 1,
+			"name": "Amulet of Strength",
+			"price": 140,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9T7n-ofuYXGZbdLuo": {
+			"description": "A shamanic necklace that aligns the wearer with elemental forces.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9T7n-ofuYXGZbdLuo?alt=media&token=72e6f662-055a-441a-bd37-385c7c2fdbff",
+			"level": 2,
+			"name": "Shaman's Necklace",
+			"price": 240,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9Tzv71IsVm5tRJuxU": {
+			"description": "This pendant promotes healing and enhances the wearer's vitality.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Tzv71IsVm5tRJuxU?alt=media&token=cb2a63a2-2398-42ee-9068-978e654a6345",
+			"level": 2,
+			"name": "Heart Pendant",
+			"price": 250,
+			"properties": [
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9Ue6ryYmCcBTwKlt_": {
+			"description": "This Frost Necklace wards off heat and enhances cold-based abilities.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Ue6ryYmCcBTwKlt_?alt=media&token=b5b63707-2bc7-4040-96ea-ea4ce1dae8bd",
+			"level": 2,
+			"name": "Frostbinder Charm",
+			"price": 220,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9VHPby4Av3Pn5SXOI": {
+			"description": "A Royal Amulet that bestows wisdom and strength to its wearer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9VHPby4Av3Pn5SXOI?alt=media&token=9511fe08-1d1b-4738-906c-964598c1b9f5",
+			"level": 4,
+			"name": "Royal Jewels",
+			"price": 1200,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9XWPqjT0yKB9xwlRp": {
+			"description": "The Accuracy Charm, enhancing precision for deadly strikes.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9XWPqjT0yKB9xwlRp?alt=media&token=ab4394f9-b8cb-4413-9667-8ff647675bff",
+			"level": 3,
+			"name": "Accuracy Charm",
+			"price": 740,
+			"properties": [
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 5
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9Y9q53Z1Bfpt1UeVf": {
+			"description": "The Burning Amulet, channeling the essence of raging flames.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Y9q53Z1Bfpt1UeVf?alt=media&token=6ebf052d-76d4-4bd0-8848-42209f28f097",
+			"level": 3,
+			"name": "Burnt Chain",
+			"price": 620,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": -50
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9Yd_qnAfg6Q5Ue1mG": {
+			"description": "This amulet fortifies defenses, serving as a bulwark against harm.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Yd_qnAfg6Q5Ue1mG?alt=media&token=f9850689-b16a-4c57-9538-40aa7ab04b94",
+			"level": 4,
+			"name": "Shield Amulet",
+			"price": 1360,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9ZE3_8GkLUJ5oYCw7": {
+			"description": "The Voodoo Necklace, harnessing the primal forces of voodoo magic.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ZE3_8GkLUJ5oYCw7?alt=media&token=f9feca84-47e0-4e62-92d6-1cd34c6af964",
+			"level": 3,
+			"name": "Voodoo Charm",
+			"price": 540,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9ZrGaIiOBuE0sHpR1": {
+			"description": "Enhances elemental magic, granting mastery over the natural elements.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ZrGaIiOBuE0sHpR1?alt=media&token=ab576227-488d-4a84-bf72-8ccd81b04e32",
+			"level": 4,
+			"name": "Elemental Locket",
+			"price": 1900,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "amulet"
+		},
+		"-Nz9_mMbYto-jb_Yxxmx": {
+			"description": "Sturdy leather belt, offering durability and style for rugged adventurers.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9_mMbYto-jb_Yxxmx?alt=media&token=45c7eab4-6c56-4db3-883f-f05eb9400c8e",
+			"level": 1,
+			"name": "Leather Belt",
+			"price": 70,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9a4lxlrxNlApNH_Qr": {
+			"description": "The Wizard's Sash, channeling mystical energy for enhanced spellcasting.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9a4lxlrxNlApNH_Qr?alt=media&token=fae14538-8000-4580-b2b7-aa556a92ce83",
+			"level": 1,
+			"name": "Wizard's Sash",
+			"price": 210,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9arODYaOWV5QYzw7E": {
+			"description": "The Belt of Shadows, cloaking wearers in darkness for stealthy maneuvers.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9arODYaOWV5QYzw7E?alt=media&token=cae9f210-efe1-4bc2-8a10-7f413f21b511",
+			"level": 3,
+			"name": "Belt of Shadows",
+			"price": 950,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9beTp8W_WSoAQrD_H": {
+			"description": "Worn by adventurers, this belt neutralizes the effects of harmful acids.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9beTp8W_WSoAQrD_H?alt=media&token=9d5534eb-2c62-4094-91af-f3a6420e22fb",
+			"level": 2,
+			"name": "Belt of Acidic Protection",
+			"price": 300,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9c8HKy-DBVWCITHWn": {
+			"description": "Adorned by champions, this chain represents victory and glory in combat.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9c8HKy-DBVWCITHWn?alt=media&token=40c07237-e892-4fb5-b217-afb551e5a4cd",
+			"level": 2,
+			"name": "Warrior's Chain",
+			"price": 440,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": -2
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 3
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9cb1_qfK3xtaJ9le1": {
+			"description": "The Electric Cinch, crackling with the power of lightning.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9cb1_qfK3xtaJ9le1?alt=media&token=c4613651-96d1-42c2-903d-2edc5a520d09",
+			"level": 3,
+			"name": "Electric Cinch",
+			"price": 710,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9dCPBfsmrmF7finXd": {
+			"description": "Worn by versatile adventurers, this belt aids in mastering various skills.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dCPBfsmrmF7finXd?alt=media&token=096d0b9b-50fe-40db-9d13-f48298c2db4f",
+			"level": 4,
+			"name": "Jack's Belt",
+			"price": 1550,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9dXl3iLqpcbPi2vDZ": {
+			"description": "Wearing this girdle, death's touch repels harm and empowers the wearer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dXl3iLqpcbPi2vDZ?alt=media&token=f375b628-b83c-47a8-b251-900f406b2bca",
+			"level": 3,
+			"name": "Girdle of Death",
+			"price": 800,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9dpRJB6wpOfSUAF24": {
+			"description": "This belt augments spellcasting abilities, a mark of the master mage.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dpRJB6wpOfSUAF24?alt=media&token=b60b1863-c5be-4f18-b30f-d731bcba7c5b",
+			"level": 4,
+			"name": "Archmage's Belt",
+			"price": 2400,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "belt"
+		},
+		"-Nz9ewWW6AAZOa6anIU5": {
+			"description": "A belt that harnesses the deadliest poisons, wielded by the poison master.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ewWW6AAZOa6anIU5?alt=media&token=bd2f43f9-48e9-4b6e-ab7d-8edd766a1a3f",
+			"level": 4,
+			"name": "Poison Master Sash",
+			"price": 1650,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "damage",
+					"value": 100
+				},
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"type": "belt"
+		},
+		"-NzDIo0EKUsHIJUotmlJ": {
+			"description": "Reliable leather boots offering protection and comfort on any quest.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDIo0EKUsHIJUotmlJ?alt=media&token=5fec3690-b6e7-4086-9fe0-2aeec23c5fb2",
+			"level": 1,
+			"name": "Leather Boots",
+			"price": 50,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDJ6_qoM0y7Sg2iTnL": {
+			"description": "Fancy boots adorned with intricate designs for a touch of sophistication.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDJ6_qoM0y7Sg2iTnL?alt=media&token=74369f33-f38b-4ad7-8256-b5af57ac4b68",
+			"level": 1,
+			"name": "Fancy Boots",
+			"price": 90,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDJkRq2hFzUkbrhgnp": {
+			"description": "These boots shield the wearer from acid, ensuring safe traversal.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDJkRq2hFzUkbrhgnp?alt=media&token=70ae1ade-349c-45f2-b967-25bb2638fd8f",
+			"level": 1,
+			"name": "Boots of Acid Protection",
+			"price": 70,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDK8HCNK_ICHhqb-V1": {
+			"description": "Sturdy boots built to withstand the rigors of the battlefield.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDK8HCNK_ICHhqb-V1?alt=media&token=242591a8-6248-4a4b-b924-585a97fc9cee",
+			"level": 2,
+			"name": "Footman's Treads",
+			"price": 240,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDM2ApQWMggqJzd1Oj": {
+			"description": "Warlock's Striders designed for comfort and mystical energy absorption.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDM2ApQWMggqJzd1Oj?alt=media&token=14c5b834-aaa3-4d82-8cf9-460aec1a16d5",
+			"level": 2,
+			"name": "Warlock's Striders",
+			"price": 190,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDMcHFa0GCkFUel8IG": {
+			"description": "These boots enhance strength and resilience, embodying the Black Knight's power.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDMcHFa0GCkFUel8IG?alt=media&token=6f062817-3d72-420c-b1bd-7c9c238a293e",
+			"level": 3,
+			"name": "Boots of the Black Knight",
+			"price": 740,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDNGm-hePKbzQpkGR_": {
+			"description": "These boots combine golden elegance with robust protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDNGm-hePKbzQpkGR_?alt=media&token=d73fa61a-2287-4f19-9b24-57730fd26df3",
+			"level": 3,
+			"name": "Gold Plated Treads",
+			"price": 700,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDNmAFnZcDHdtAbyd1": {
+			"description": "Boots infused with arcane energy, enhancing spellcasting prowess.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDNmAFnZcDHdtAbyd1?alt=media&token=8bc8d829-9062-491a-a733-6199ae968d7f",
+			"level": 4,
+			"name": "Arcane Boots",
+			"price": 1860,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDOAnwyIZqnaKvgDbO": {
+			"description": "Fire Boots that offer both defense and control over fiery environments.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDOAnwyIZqnaKvgDbO?alt=media&token=6af4b127-989a-4b95-9cda-79d6dd858438",
+			"level": 2,
+			"name": "Red Slippers",
+			"price": 300,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDP9ajYLLxtvR7c6Qf": {
+			"description": "Insulated boots that provide warmth in freezing climates.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDP9ajYLLxtvR7c6Qf?alt=media&token=83d1f308-ed45-43ec-898c-110f3ec38625",
+			"level": 4,
+			"name": "Boots of Insulation",
+			"price": 1650,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDQAibdQUg6f9NfaKV": {
+			"description": "These black plated boots imbue the wearer with the essence of darkness.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDQAibdQUg6f9NfaKV?alt=media&token=a726ad0d-42bb-4ce8-87f1-6b52406631be",
+			"level": 4,
+			"name": "Ebonstride Footwear",
+			"price": 1720,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDQeyjdV8Lf92YkIdR": {
+			"description": "Boots crafted for stealthy maneuvers, cloaking the wearer in shadow.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDQeyjdV8Lf92YkIdR?alt=media&token=e5ac25a8-4756-47e0-8d96-33ebfe021c9f",
+			"level": 3,
+			"name": "Shadow Striders",
+			"price": 950,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "boots"
+		},
+		"-NzDREu63hlQeCbeC98U": {
+			"description": "Gloves lined with acid for potent offensive capabilities.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDREu63hlQeCbeC98U?alt=media&token=196ee5ad-8d9d-4256-a6c4-d72f4416036a",
+			"level": 1,
+			"name": "Acid Lined Wraps",
+			"price": 140,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDRlC-CERpPff66SUo": {
+			"description": "Gloves that channel divine power, offering protection and blessings.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDRlC-CERpPff66SUo?alt=media&token=0179bd87-fa5b-4dc0-86fd-68d878976a03",
+			"level": 1,
+			"name": "Cleric's Gloves",
+			"price": 120,
+			"properties": [
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "radiant",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDS1M26zspCTVVGUnu": {
+			"description": "Sturdy Plate Gauntlets offering unparalleled protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDS1M26zspCTVVGUnu?alt=media&token=c606a9e3-8b1e-498b-95cb-bebcbc09018f",
+			"level": 2,
+			"name": "Plate Gauntlets",
+			"price": 450,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDTAMUcHrAa-EWCFeo": {
+			"description": "Mitts that harness the power of ice, freezing foes on contact.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDTAMUcHrAa-EWCFeo?alt=media&token=a7436878-28c1-4326-b133-c004c832c2d8",
+			"level": 2,
+			"name": "Cold Mitts",
+			"price": 350,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDTm9T7VzIuKsvXgM6": {
+			"description": "Wreathed in darkness, these gauntlets embody the essence of the shadow.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDTm9T7VzIuKsvXgM6?alt=media&token=fdbc0e31-725f-421a-8c45-dd3f2ab49aae",
+			"level": 4,
+			"name": "Death Knight Gauntlets",
+			"price": 1890,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 4
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDUFkHJg969i8Fdv_B": {
+			"description": "Gloves that empower the wearer with unparalleled weapon expertise.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUFkHJg969i8Fdv_B?alt=media&token=fc0ea003-8434-4a9c-9e2c-6a00ecc7c459",
+			"level": 2,
+			"name": "Gloves of Weapon Skill",
+			"price": 370,
+			"properties": [
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDUyOXsz_CWrqQKtx3": {
+			"description": "Bracers that carry a curse, bringing calamity upon the wearer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUyOXsz_CWrqQKtx3?alt=media&token=737405c6-b663-44bf-b747-b608006b35e6",
+			"level": 3,
+			"name": "Cursed Bracers",
+			"price": 500,
+			"properties": [
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": -4
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDVvTxuDLvTj0HU7Fq": {
+			"description": "Gloves imbued with the untamed fury of beasts, enhancing combat prowess.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDVvTxuDLvTj0HU7Fq?alt=media&token=7a842ba9-5ecc-4a43-8965-c6a0890a8643",
+			"level": 4,
+			"name": "Beast Hands",
+			"price": 1770,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDWVyxvBUSN2fJhVNb": {
+			"description": "These gauntlets grant the power of giants, crushing foes with ease.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDWVyxvBUSN2fJhVNb?alt=media&token=19380ca9-003d-4319-a1ba-db40e083687e",
+			"level": 3,
+			"name": "Giant's Gauntlets",
+			"price": 920,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDX395Nb8ifGXD2c7F": {
+			"description": "Crafted for the master of magic, these bracers enhance spell weaving.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDX395Nb8ifGXD2c7F?alt=media&token=315168bf-d235-48a5-b21a-8f28e6792e3f",
+			"level": 4,
+			"name": "Bindings of the Archmage",
+			"price": 1520,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDXgwpUa09kT1Ozuvb": {
+			"description": "Shadow Wraps that blend light and darkness, granting versatility.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDXgwpUa09kT1Ozuvb?alt=media&token=ffc3f50d-40fa-42ce-b3ae-bc3ac243fc96",
+			"level": 3,
+			"name": "Shadow Wraps",
+			"price": 790,
+			"properties": [
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 3
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-NzDYFP4JZdQ4KT3WfiB": {
+			"description": "Basic headwear for novice adventurers, offering modest protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDYFP4JZdQ4KT3WfiB?alt=media&token=5060ad42-fc80-4398-9e04-16c277b7beff",
+			"level": 1,
+			"name": "Novice Hood",
+			"price": 80,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEJs3RCx4H78EqaGTc": {
+			"description": "A sturdy full helm offering complete protection for the head.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEJs3RCx4H78EqaGTc?alt=media&token=50f252da-83d7-4134-ac19-c32c1abb5950",
+			"level": 2,
+			"name": "Full Helm",
+			"price": 250,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEKX0v1PxgPkrsuGkt": {
+			"description": "Mask shielding against disease, embodying the iconic plague doctor.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEKX0v1PxgPkrsuGkt?alt=media&token=208de36b-748f-4453-ac0a-1ed388d33540",
+			"level": 2,
+			"name": "Plague Doctor's Mask",
+			"price": 330,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": -2
+				},
+				{
+					"name": "acid",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzELC-nYPOXUFCOWA4M": {
+			"description": "Mask designed for highwaymen, blending stealth with style.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzELC-nYPOXUFCOWA4M?alt=media&token=6f265d3d-7b98-4558-a66c-ea7c475e68cb",
+			"level": 2,
+			"name": "Highwayman's Mask",
+			"price": 290,
+			"properties": [
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzELsGuv2GQ6PDoLFTQ": {
+			"description": "Circlet of Power that enhances magical abilities and focus.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzELsGuv2GQ6PDoLFTQ?alt=media&token=2357c8a5-1553-4729-abe2-fe2342a0a26d",
+			"level": 3,
+			"name": "Circlet of Power",
+			"price": 890,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEMdeX59k0__7Q0g8z": {
+			"description": "A mask that instills fear in all who behold it.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEMdeX59k0__7Q0g8z?alt=media&token=eaa53a09-0f76-43c4-b485-f44b16353a52",
+			"level": 4,
+			"name": "Horrifying Mask",
+			"price": 1920,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": -4
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEN4ov5P7JEqbkdb4A": {
+			"description": "This helm combines golden splendor with superior protection.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEN4ov5P7JEqbkdb4A?alt=media&token=81347577-2c67-40e1-a8d1-036065d518d0",
+			"level": 4,
+			"name": "Gold Helm",
+			"price": 1750,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzENaEY9B6T05UFmdx3": {
+			"description": "Wanderer's Guise offering both protection and anonymity.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzENaEY9B6T05UFmdx3?alt=media&token=2d52238c-0bbd-46a7-8348-841c9b01bc12",
+			"level": 3,
+			"name": "Wanderer's Guise",
+			"price": 660,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEOLAeWmY6AumCTBl_": {
+			"description": "Worn by knights, it combines strength with regal design.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEOLAeWmY6AumCTBl_?alt=media&token=4131b3dc-680e-430e-a92d-4a36cdb3d84c",
+			"level": 3,
+			"name": "Knight's Helm",
+			"price": 810,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEQK4lqKJ7YcxpVgbR": {
+			"description": "Gladiator's Visor crafted to withstand the fiercest battles.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQK4lqKJ7YcxpVgbR?alt=media&token=d7f24651-2e98-4d79-8a6c-3f3c6aab152e",
+			"level": 4,
+			"name": "Gladiator's Visor",
+			"price": 1520,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "crushing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "helmet"
+		},
+		"-NzEQlT7a5v8nuldO2WS": {
+			"description": "A ring that grants resistance against harmful poisons.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQlT7a5v8nuldO2WS?alt=media&token=b6e08ced-2d2e-4709-9929-f0868687d916",
+			"level": 1,
+			"name": "Ring of Poison Resistance",
+			"price": 110,
+			"properties": [
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEcPdzcDO_PG86-m7P": {
+			"description": "A shield emanating a protective aura of fire, shielding its wielder from harm.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEcPdzcDO_PG86-m7P?alt=media&token=a609b946-9e57-4e4d-9f7f-692be2d31dfe",
+			"level": 2,
+			"name": "Fire Ward",
+			"price": 460,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 3
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEciDFUuzY6cG9UEia": {
+			"description": "A hefty tower shield, providing ample cover in the heat of battle.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEciDFUuzY6cG9UEia?alt=media&token=a08121c7-f9e5-4fa8-a348-79220e3bc85b",
+			"level": 1,
+			"name": "Tower Shield",
+			"price": 150,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 4
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEdBv-UWjlNRRjd8Gv": {
+			"description": "A small but sturdy buckler plated with gleaming gold, offering both defense and prestige.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEdBv-UWjlNRRjd8Gv?alt=media&token=748f3207-a3c5-4f77-9cc9-884376588f59",
+			"level": 3,
+			"name": "Gold Buckler",
+			"price": 620,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEd_Qa8Ppnwn6WL86V": {
+			"description": "A shield encased in icy enchantments, warding off attacks.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEd_Qa8Ppnwn6WL86V?alt=media&token=11d6e357-627b-45cb-89c4-6f51dec4aee8",
+			"level": 2,
+			"name": "Ice Guard",
+			"price": 550,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 4
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEeCnEpU0OsAmw_Ewj": {
+			"description": "A massive bulwark of reinforced steel, providing unparalleled defense in battle.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEeCnEpU0OsAmw_Ewj?alt=media&token=9f06009e-be49-49a3-a249-2c75a8a1e088",
+			"level": 4,
+			"name": "Heavy Bulwark",
+			"price": 2050,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 5
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": -2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEewgzTHrzKERJX1Mj": {
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEewgzTHrzKERJX1Mj?alt=media&token=981ffb08-96e7-4603-8d48-bb2f2c1eece0",
+			"level": 4,
+			"name": "Dragon Shield",
+			"price": 1810,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 3
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEfJdAyhMkjgDYnm8R": {
+			"description": "A shield imbued with lightning magic, deflecting attacks.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEfJdAyhMkjgDYnm8R?alt=media&token=3da49619-7acd-48ef-9f25-efea603393a6",
+			"level": 2,
+			"name": "Lighting Shield",
+			"price": 280,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEffxrjZ2Fu9zSmWW9": {
+			"description": "A shield adorned with the crest of a noble house, symbolizing valor and protection on the battlefield.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=5ddcc14a-c8fe-4089-8f3a-069b287812b8",
+			"level": 3,
+			"name": "Knight's Shield",
+			"price": 680,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 3
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEgBl4DzwpCf-EQ7W1": {
+			"description": "A shield plated in gleaming gold, both opulent and resilient in defense.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgBl4DzwpCf-EQ7W1?alt=media&token=392e7209-e5d8-49d0-88f0-872dc9be45eb",
+			"level": 3,
+			"name": "Gold Plated Shield",
+			"price": 890,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 4
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEgcZaaw2oFUsF7NBm": {
+			"description": "A shield crafted with golden wings, symbolizing protection and swift defense.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
+			"level": 4,
+			"name": "Gold Wing",
+			"price": 1750,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "shield"
+		},
+		"-NzEh4OLfUakfi5pWjf2": {
+			"description": "A ring adorned with a coiled serpent, imbued with stealth and cunning.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEh4OLfUakfi5pWjf2?alt=media&token=767354c1-2018-45a0-9e08-34c9f768575c",
+			"level": 3,
+			"name": "Snake Coil",
+			"price": 530,
+			"properties": [
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEhK5Irt3URTvs3ztw": {
+			"description": "A ring crackling with electric energy, empowering the wearer with mastery over lightning.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhK5Irt3URTvs3ztw?alt=media&token=ffc28e5f-85d6-4e07-9856-9ec1333fd136",
+			"level": 3,
+			"name": "Lightning Master's Ring",
+			"price": 650,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEhe4hPN0nCGqfx5Mm": {
+			"description": "A band blessed by divine powers, offering protection against dark forces.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhe4hPN0nCGqfx5Mm?alt=media&token=75289b31-bd0e-4d91-bbc7-46d4edcd4cb4",
+			"level": 2,
+			"name": "Holy Band",
+			"price": 260,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEhzNuCPqOh5YK7fk9": {
+			"description": "A ring pulsating with martial energy, enhancing combat prowess in battle.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhzNuCPqOh5YK7fk9?alt=media&token=384cce8e-9aba-41d6-91c0-05305fde9979",
+			"level": 2,
+			"name": "Ring of War",
+			"price": 350,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEiKLauj-s86ubKuGI": {
+			"description": "A ring embossed with a roaring lion, instilling courage and valor in its wearer.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEiKLauj-s86ubKuGI?alt=media&token=2fe3517b-1a31-43dd-ab5d-f019b490c932",
+			"level": 4,
+			"name": "Lion's Courage",
+			"price": 1650,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEihz88uE1-KftrLns": {
+			"description": "A ring adorned with ice crystals, granting resilience in frigid environments.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEihz88uE1-KftrLns?alt=media&token=2255a077-ce05-46af-a5f8-ee537d3117a9",
+			"level": 2,
+			"name": "Tundra Charm",
+			"price": 310,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 30
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEj39PbQX8tVy6BGOU": {
+			"description": "A ring cloaked in darkness, granting its wearer the ability to blend into shadows.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEj39PbQX8tVy6BGOU?alt=media&token=3e03031d-7e39-4865-b30c-4f4eace7e766",
+			"level": 4,
+			"name": "Ring of Shadows",
+			"price": 1430,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 3
+				},
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 3
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEjbVx4iDWd8myQ-1O": {
+			"description": "A ring attuned to nature's essence, offering protection against physical forces.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEjbVx4iDWd8myQ-1O?alt=media&token=fea5ac09-3bd2-40f9-aabf-606e94a1ee10",
+			"level": 3,
+			"name": "Ring of Natural Defense",
+			"price": 810,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "ring"
+		},
+		"-NzEkYmCcJMY3uyCVbHm": {
+			"description": "A ring housing a sparkling dragon's gem, amplifying the wearer's power and resilience.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEkYmCcJMY3uyCVbHm?alt=media&token=4cf48342-af39-48ee-aadb-97df113e7437",
+			"level": 4,
+			"name": "Dragon's Gem",
+			"price": 1950,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 50
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 50
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "ring"
 		}
 	},
 	"classes": {
@@ -3829,8 +5364,8 @@
 	"weapons": {
 		"-NMDekxBlRvJBq18KmM3": {
 			"damageType": "slashing",
-			"description": "A short sword.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMDekxBlRvJBq18KmM3?alt=media&token=3be33c24-8d4e-4a3b-ac2e-f635c5f0f23f",
+			"description": "A plain steel shortsword, swift and lethal in close combat.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMDekxBlRvJBq18KmM3?alt=media&token=147ef2cc-4ba9-4b9d-97db-50d8d6fa8f39",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3842,8 +5377,8 @@
 		},
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
-			"description": "A long sword",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=ee71ef00-b63a-44c3-9bad-d8209ee75766",
+			"description": "A classic longsword forged from sturdy steel, balanced for versatility and power.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3855,8 +5390,8 @@
 		},
 		"-NNwMy0q-XKUT-EUvxFF": {
 			"damageType": "slashing",
-			"description": "A dagger.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwMy0q-XKUT-EUvxFF?alt=media&token=b7578304-8b60-498d-89e6-b3cef2341bce",
+			"description": "Wielded by rogues, this dagger leaves foes bleeding and incapacitated.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwMy0q-XKUT-EUvxFF?alt=media&token=a9fdd8a5-341c-423a-8ef5-a92726e15605",
 			"level": 1,
 			"max": 4,
 			"min": 1,
@@ -3868,8 +5403,8 @@
 		},
 		"-NNwPg099VI_pDe9E_Zd": {
 			"damageType": "crushing",
-			"description": "A hammer.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwPg099VI_pDe9E_Zd?alt=media&token=15388ed7-514e-4534-9f65-8acb9c181851",
+			"description": "A sturdy tool for shaping metal and driving nails.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwPg099VI_pDe9E_Zd?alt=media&token=6a1a583c-8f1f-47d9-8105-e7a0af2ed7c6",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3891,17 +5426,17 @@
 					"type": "damage"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwRG-llD60pf8sSKeM?alt=media&token=0e1136ad-56ab-466b-9ab8-c4f268c93d6f",
-			"level": 5,
-			"max": 45,
-			"min": 20,
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwRG-llD60pf8sSKeM?alt=media&token=de76b657-3136-49fc-aaa2-b619a0a2d381",
+			"level": 4,
+			"max": 15,
+			"min": 9,
 			"name": "Black Blade of Doom",
 			"price": 300,
 			"properties": [
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 5
+					"value": 2
 				},
 				{
 					"name": "fire",
@@ -3920,8 +5455,8 @@
 		},
 		"-Nc46CPWJz2atC_uII9i": {
 			"damageType": "crushing",
-			"description": "A simple staff.",
-			"icon": "",
+			"description": "A stout wooden quarterstaff, versatile for defense and offense.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-Nc46CPWJz2atC_uII9i?alt=media&token=3bbe8a10-42ee-4987-8c65-aa9bd79730fa",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3933,8 +5468,8 @@
 		},
 		"-NgK-VVeMfZnyRzNuNyK": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "This handaxe is quick and deadly, perfect for agile warriors.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK-VVeMfZnyRzNuNyK?alt=media&token=1860a772-2dba-423c-a98e-c72a50f4a751",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3946,8 +5481,8 @@
 		},
 		"-NgK-mAaFXHeapzVbWAb": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "A battleaxe crafted for strength and precision in combat.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK-mAaFXHeapzVbWAb?alt=media&token=9844fb54-3d24-47d6-be21-4a488771e2f1",
 			"level": 1,
 			"max": 8,
 			"min": 1,
@@ -3959,8 +5494,8 @@
 		},
 		"-NgK07SpTQiVML_pBgQ4": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "Wielded by seasoned fighters, shattering armor and bone.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK07SpTQiVML_pBgQ4?alt=media&token=28026b31-3cf7-4b80-a9c0-3f5a1560f120",
 			"level": 1,
 			"max": 8,
 			"min": 1,
@@ -3972,8 +5507,8 @@
 		},
 		"-NgK0I2STX7An8WjEeUN": {
 			"damageType": "piercing",
-			"description": "",
-			"icon": "",
+			"description": "A longbow favored by marksmen for its precision and range.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0I2STX7An8WjEeUN?alt=media&token=1a253ef1-574f-4cca-b064-848f5c57bb90",
 			"level": 1,
 			"max": 8,
 			"min": 1,
@@ -3985,8 +5520,8 @@
 		},
 		"-NgK0TICJLv1vVaBGrbT": {
 			"damageType": "piercing",
-			"description": "",
-			"icon": "",
+			"description": "A standard wooden spear, balanced for thrusting or throwing.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0TICJLv1vVaBGrbT?alt=media&token=aacd81c0-2d15-4023-8702-6c4d1140d26e",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -3998,8 +5533,8 @@
 		},
 		"-NgK0n7aPw0NHeefOnRg": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "A massive two-handed greatsword, ideal for cleaving through enemies with brute force.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0n7aPw0NHeefOnRg?alt=media&token=6797c36e-4049-4626-b0c0-ff46100ae0fd",
 			"level": 2,
 			"max": 12,
 			"min": 6,
@@ -4011,8 +5546,8 @@
 		},
 		"-NgNzkZJ0nG0Iep0uzOb": {
 			"damageType": "piercing",
-			"description": "",
-			"icon": "",
+			"description": "A crossbow renowned for its accuracy and deadly precision.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgNzkZJ0nG0Iep0uzOb?alt=media&token=0e1a7fc6-e4c8-4bf9-aed3-12d65deccbd4",
 			"level": 1,
 			"max": 8,
 			"min": 1,
@@ -4024,8 +5559,8 @@
 		},
 		"-NgNzsJrS-5TLLJ5aZCn": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "A rugged club designed to shatter bones and crush armor.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgNzsJrS-5TLLJ5aZCn?alt=media&token=9e00ec05-fc8f-45d1-a46e-09a4b653fe32",
 			"level": 1,
 			"max": 4,
 			"min": 1,
@@ -4037,8 +5572,8 @@
 		},
 		"-NgO--jUsGrVSzpmk0lB": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "A sturdy iron mace, reliable in close-quarters battles.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO--jUsGrVSzpmk0lB?alt=media&token=03bd826e-b171-415c-b3b9-817a68ca3053",
 			"level": 1,
 			"max": 6,
 			"min": 1,
@@ -4050,8 +5585,8 @@
 		},
 		"-NgO-8McFOtJ7gLrS1UI": {
 			"damageType": "piercing",
-			"description": "",
-			"icon": "",
+			"description": "A simple spiked iron morningstar, effective against armored foes.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO-8McFOtJ7gLrS1UI?alt=media&token=cce7f1c9-5fe2-4728-ac2c-a666dda298b3",
 			"level": 1,
 			"max": 8,
 			"min": 1,
@@ -4063,10 +5598,10 @@
 		},
 		"-NgO0Km6wNCpoHt51Smw": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "A sleek dagger favored by assassins for its deadly precision.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0Km6wNCpoHt51Smw?alt=media&token=d285dfe0-2e3d-4659-aeb5-ea040a2f02a4",
 			"level": 2,
-			"max": 6,
+			"max": 5,
 			"min": 2,
 			"name": "Fine Dagger",
 			"price": 150,
@@ -4076,11 +5611,11 @@
 		},
 		"-NgO0_TN42Pqrd5WQENu": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "A masterfully crafted longsword, imbued with both elegance and deadly precision.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0_TN42Pqrd5WQENu?alt=media&token=33d9061b-5b71-4a86-a4fe-cb9f8edc7fe3",
 			"level": 2,
-			"max": 8,
-			"min": 4,
+			"max": 7,
+			"min": 2,
 			"name": "Fine Longsword",
 			"price": 190,
 			"size": "oneHanded",
@@ -4089,11 +5624,11 @@
 		},
 		"-NgO0jyrXf6cOaoRZZ6N": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "A finely crafted shortsword, gleaming with expertly honed edges.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0jyrXf6cOaoRZZ6N?alt=media&token=5e733777-144d-48bc-9658-55c2382725b3",
 			"level": 2,
-			"max": 8,
-			"min": 4,
+			"max": 7,
+			"min": 2,
 			"name": "Fine Shortsword",
 			"price": 170,
 			"size": "oneHanded",
@@ -4102,11 +5637,11 @@
 		},
 		"-NgO1-16PWvnT302EIO_": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "This battleaxe strikes with devastating force, sundering armor and bone.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1-16PWvnT302EIO_?alt=media&token=dff6894b-be2c-4506-92c9-6e92e6228c6c",
 			"level": 2,
-			"max": 16,
-			"min": 8,
+			"max": 9,
+			"min": 2,
 			"name": "FIne Battleaxe",
 			"price": 240,
 			"size": "twoHanded",
@@ -4115,11 +5650,11 @@
 		},
 		"-NgO1IZu27jgUnBZOesh": {
 			"damageType": "slashing",
-			"description": "",
-			"icon": "",
+			"description": "Crafted for precision, this handaxe cleaves through armor and flesh alike.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1IZu27jgUnBZOesh?alt=media&token=5ba7ac52-5c76-40da-9cdf-133b085bf997",
 			"level": 2,
-			"max": 8,
-			"min": 4,
+			"max": 7,
+			"min": 2,
 			"name": "Fine Handaxe",
 			"price": 200,
 			"size": "oneHanded",
@@ -4128,11 +5663,11 @@
 		},
 		"-NgO1hZuxcjitw8l7yjz": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "Honed in the arena, it crushes foes with brutal efficiency.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1hZuxcjitw8l7yjz?alt=media&token=9fce3516-784c-4a9f-9d78-debcf7dcf48e",
 			"level": 2,
-			"max": 16,
-			"min": 8,
+			"max": 9,
+			"min": 2,
 			"name": "Fine Warhammer",
 			"price": 230,
 			"size": "twoHanded",
@@ -4141,11 +5676,11 @@
 		},
 		"-NgO1zYRL8NINq5O1XvX": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "A finely crafted mace adorned with ornate engravings, both elegant and lethal.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1zYRL8NINq5O1XvX?alt=media&token=18afa312-c74c-46d1-acaf-afe3d88ca214",
 			"level": 2,
-			"max": 8,
-			"min": 4,
+			"max": 7,
+			"min": 2,
 			"name": "Fine Mace",
 			"price": 180,
 			"size": "oneHanded",
@@ -4154,8 +5689,8 @@
 		},
 		"-NgO2__1WpZ52xfbNJx_": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "A weathered oak staff, etched with runes for protection on long journeys.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO2__1WpZ52xfbNJx_?alt=media&token=a0aeb719-1576-41f7-9948-a878524cd3b4",
 			"level": 2,
 			"max": 6,
 			"min": 1,
@@ -4174,11 +5709,11 @@
 		},
 		"-NgO2xYEe4Kzg3ST0JW2": {
 			"damageType": "piercing",
-			"description": "",
-			"icon": "",
+			"description": "A polished steel spear with a razor-sharp tip, expertly crafted for precision strikes.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO2xYEe4Kzg3ST0JW2?alt=media&token=bd8a4cfb-20e8-4374-b9a1-22b50751d2cc",
 			"level": 2,
-			"max": 8,
-			"min": 4,
+			"max": 7,
+			"min": 2,
 			"name": "Fine Spear",
 			"price": 160,
 			"size": "twoHanded",
@@ -4187,8 +5722,8 @@
 		},
 		"-NgToUYVTRc1av-QcBA2": {
 			"damageType": "crushing",
-			"description": "",
-			"icon": "",
+			"description": "Crafted from dense stone, this club delivers devastating impact.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgToUYVTRc1av-QcBA2?alt=media&token=5c1df0e7-d3fe-457f-b32b-1b29d9d16903",
 			"level": 1,
 			"max": 8,
 			"min": 1,

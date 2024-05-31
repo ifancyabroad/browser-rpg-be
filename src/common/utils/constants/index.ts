@@ -56,14 +56,14 @@ export const EQUIPMENT_LEVELS = new Map([
 export const EXPERIENCE_MAP = new Map([
 	[1, 0],
 	[2, 100],
-	[3, 200],
-	[4, 500],
+	[3, 300],
+	[4, 600],
 	[5, 1000],
-	[6, 2000],
-	[7, 4000],
-	[8, 8000],
-	[9, 15000],
-	[10, 20000],
+	[6, 1500],
+	[7, 2200],
+	[8, 3000],
+	[9, 4000],
+	[10, 5000],
 ]);
 
 export const SKILL_LEVELS = new Map([
