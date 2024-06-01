@@ -39,7 +39,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			id,
 			remaining: GameData.getSkillById(id).maxUses,
 		}));
-		const availableItems = GameData.getClassItems(characterClass, 1, 6);
+		const availableItems = GameData.getClassItems(characterClass, 2, 6);
 
 		const maps = GameData.getMaps();
 		const location = GameData.getStartingLocation(maps);
@@ -220,7 +220,7 @@ export async function nextLevel(location: ILocation, session: Session & Partial<
 		mapRecord.nextLevel();
 		await mapRecord.save();
 
-		characterRecord.restock(mapRecord.location.level + 1);
+		characterRecord.restock(mapRecord.location.level + 2);
 		const character = await characterRecord.save();
 
 		return character.toJSON();

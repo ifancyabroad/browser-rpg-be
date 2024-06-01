@@ -125,11 +125,10 @@ export class GameData {
 		>;
 	}
 
-	public static getClassItems(classID: string, level: number, amount: number) {
+	public static getClassItems(classID: string, maxItemLevel: number, amount: number) {
 		try {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
-			const maxItemLevel = EQUIPMENT_LEVELS.get(level);
 
 			const filteredArmours = mapToArray(armours)
 				.filter(({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType))
