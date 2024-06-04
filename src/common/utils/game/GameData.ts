@@ -1,11 +1,11 @@
 import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
-import mapData from "@common/data/mapData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { EQUIPMENT_LEVELS, SHOP_ARMOURS, SHOP_WEAPONS, SKILL_LEVELS } from "@common/utils/constants";
+import { NUMBER_OF_FLOORS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, RoomState, RoomType } from "@common/utils/enums";
 import { ILocation, IRoom } from "@common/types/map";
+import { Dungeon } from "@common/utils/game";
 
 export class GameData {
 	public static getClasses() {
@@ -198,7 +198,10 @@ export class GameData {
 	}
 
 	public static getMaps() {
-		return mapData.map((maps, level) => this.mapLevel(getRandomElement(maps), level));
+		return Array.from({ length: NUMBER_OF_FLOORS }, (_, index) => {
+			const map = new Dungeon().createMap();
+			return this.mapLevel(map, index);
+		});
 	}
 
 	public static getStartingLocation(maps: IRoom[][][], level = 0) {

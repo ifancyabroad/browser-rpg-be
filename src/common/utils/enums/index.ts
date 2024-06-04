@@ -154,3 +154,12 @@ export enum RoomState {
 	Blocking = "blocking",
 	Complete = "complete",
 }
+
+export enum JunctionType {
+	None,
+	End,
+	Corner,
+	Straight,
+	TJunction,
+	Cross,
+}

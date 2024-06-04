@@ -7,6 +7,8 @@ export const REST_MULTIPLIER = 20;
 export const SHOP_ARMOURS = 5;
 export const SHOP_WEAPONS = 5;
 
+export const NUMBER_OF_FLOORS = 5;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],
