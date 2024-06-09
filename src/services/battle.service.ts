@@ -9,9 +9,9 @@ import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import MapModel from "@models/map.model";
-import { ILocation } from "@common/types/map";
+import { IMapLocation } from "@common/types/map";
 
-export async function startBattle(location: ILocation, session: Session & Partial<SessionData>) {
+export async function startBattle(location: IMapLocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({

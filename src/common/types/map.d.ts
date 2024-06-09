@@ -4,15 +4,19 @@ import { Model, Types } from "mongoose";
 import { TEquipmentDataWithID } from "./gameData";
 
 export interface ILocation {
-	level: number;
 	x: number;
 	y: number;
+}
+
+export interface IMapLocation extends ILocation {
+	level: number;
 }
 
 export interface IRoom {
 	state: RoomState;
 	type: RoomType;
-	location: ILocation;
+	location: IMapLocation;
+	tile: ILocation;
 }
 
 type TMapRow = Types.DocumentArray<IRoom>;
@@ -21,17 +25,17 @@ type TMap = Types.DocumentArray<TMapRow>;
 
 export interface ITreasure {
 	itemIDs: Types.Array<string>;
-	location: ILocation;
+	location: IMapLocation;
 }
 
 export interface IPopulatedTreasure {
 	items: TEquipmentDataWithID;
-	location: ILocation;
+	location: IMapLocation;
 }
 
 export interface IMap {
 	maps: Types.DocumentArray<TMap>;
-	location: ILocation;
+	location: IMapLocation;
 	treasureIDs: Types.DocumentArray<ITreasure>;
 }
 
@@ -48,12 +52,12 @@ export interface IMapMethods {
 	get isExit(): boolean;
 
 	// Add methods here
-	findPath(location: ILocation): number[][];
-	move(location: ILocation): void;
+	findPath(location: IMapLocation): number[][];
+	move(location: IMapLocation): void;
 	completeRoom(): void;
 	nextLevel(): void;
-	getTreasure(location: ILocation): (Types.Subdocument<Types.ObjectId> & ITreasure) | undefined;
-	createTreasure(location: ILocation, classID: string): void;
+	getTreasure(location: IMapLocation): (Types.Subdocument<Types.ObjectId> & ITreasure) | undefined;
+	createTreasure(location: IMapLocation, classID: string): void;
 }
 
 // Add static methods here
@@ -62,5 +66,5 @@ export interface IMapModel extends Model<IMap, {}, IMapMethods> {
 }
 
 export interface RequestMove extends Request {
-	location: ILocation;
+	location: IMapLocation;
 }

@@ -1,4 +1,6 @@
-import { JunctionType, RoomType } from "@common/utils/enums";
+import { IRoom, ILocation, IMapLocation } from "@common/types/map";
+import { JunctionType, RoomState, RoomType, Tile } from "@common/utils/enums";
+import { TILE_LOCATION_MAP } from "../constants";
 
 const LEFT: number[] = [-1, 0];
 const RIGHT: number[] = [1, 0];
@@ -10,6 +12,7 @@ const UP_RIGHT: number[] = [1, -1];
 const DOWN_LEFT: number[] = [-1, 1];
 const DOWN_RIGHT: number[] = [1, 1];
 
+const DEFAULT_LEVEL: number = 0;
 const DEFAULT_DIMENSIONS: number = 20;
 const DEFAULT_MAX_TUNNELS: number = 50;
 const DEFAULT_MAX_LENGTH: number = 8;
@@ -20,11 +23,6 @@ const DEFAULT_ROOM_COUNTS: IRoomCounts = {
 	rest: Math.floor(DEFAULT_DIMENSIONS / 10),
 };
 
-interface ILocation {
-	x: number;
-	y: number;
-}
-
 interface IRoomCounts {
 	battle: number;
 	treasure: number;
@@ -32,6 +30,7 @@ interface IRoomCounts {
 }
 
 interface IDungeonConfig {
+	level?: number;
 	dimensions?: number;
 	maxTunnels?: number;
 	maxLength?: number;
@@ -40,7 +39,7 @@ interface IDungeonConfig {
 }
 
 interface IDungeon {
-	createMap(): number[][];
+	createMap(): IRoom[][];
 }
 
 /**
@@ -49,6 +48,7 @@ interface IDungeon {
 export class Dungeon implements IDungeon {
 	private static ALL_DIRECTIONS: number[][] = [LEFT, RIGHT, UP, DOWN, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT];
 	private static VALID_DIRECTIONS: number[][] = [LEFT, RIGHT, UP, DOWN];
+	private level: number = DEFAULT_LEVEL;
 	private dimensions: number = DEFAULT_DIMENSIONS;
 	private maxTunnels: number = DEFAULT_MAX_TUNNELS;
 	private maxLength: number = DEFAULT_MAX_LENGTH;
@@ -63,7 +63,8 @@ export class Dungeon implements IDungeon {
 	 */
 	constructor(config?: IDungeonConfig) {
 		if (config) {
-			const { dimensions, maxTunnels, maxLength, padding, roomCounts } = config;
+			const { level, dimensions, maxTunnels, maxLength, padding, roomCounts } = config;
+			this.level = level ?? DEFAULT_LEVEL;
 			this.dimensions = dimensions ?? DEFAULT_DIMENSIONS;
 			this.maxTunnels = maxTunnels ?? DEFAULT_MAX_TUNNELS;
 			this.maxLength = maxLength ?? DEFAULT_MAX_LENGTH;
@@ -294,6 +295,92 @@ export class Dungeon implements IDungeon {
 	}
 
 	/**
+	 * Retrieves the tile location based on the room type and location coordinates.
+	 *
+	 * @param {RoomType} roomType - The type of the room for which to retrieve the tile location.
+	 * @param {IMapLocation} location - The coordinates of the location on the map.
+	 * @return {ILocation} The tile location corresponding to the room type and location.
+	 */
+	private getTileLocation(roomType: RoomType, location: IMapLocation): ILocation {
+		const { x, y } = location;
+		const { map } = this;
+
+		switch (roomType) {
+			case RoomType.None:
+				return TILE_LOCATION_MAP.get(Tile.None);
+			case RoomType.Wall:
+				const hasWallAbove = map[y - 1]?.[x] === RoomType.Wall;
+				const hasWallBelow = map[y + 1]?.[x] === RoomType.Wall;
+				const hasWallLeft = map[y]?.[x - 1] === RoomType.Wall;
+				const hasWallRight = map[y]?.[x + 1] === RoomType.Wall;
+
+				if (hasWallAbove && hasWallBelow && hasWallLeft && hasWallRight) {
+					return TILE_LOCATION_MAP.get(Tile.WallTopSplit);
+				}
+
+				if (hasWallAbove && hasWallBelow && hasWallLeft) {
+					return TILE_LOCATION_MAP.get(Tile.WallTopRight);
+				}
+
+				if (hasWallAbove && hasWallBelow && hasWallRight) {
+					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
+				}
+
+				if (hasWallAbove && hasWallLeft && hasWallRight) {
+					return TILE_LOCATION_MAP.get(Tile.WallBottomSplit);
+				}
+
+				if (hasWallAbove && hasWallLeft) {
+					return TILE_LOCATION_MAP.get(Tile.WallBottomRight);
+				}
+
+				if (hasWallAbove && hasWallRight) {
+					return TILE_LOCATION_MAP.get(Tile.WallBottomLeft);
+				}
+
+				if (hasWallBelow && hasWallLeft) {
+					return TILE_LOCATION_MAP.get(Tile.WallTopRight);
+				}
+
+				if (hasWallBelow && hasWallRight) {
+					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
+				}
+
+				if (hasWallAbove || hasWallBelow) {
+					return TILE_LOCATION_MAP.get(Tile.WallVertical);
+				}
+
+				return TILE_LOCATION_MAP.get(Tile.WallHorizontal);
+
+			default:
+				return TILE_LOCATION_MAP.get(Tile.Ground);
+		}
+	}
+
+	/**
+	 * Maps a room based on the type and location to create a room object.
+	 *
+	 * @param {RoomType} type - The type of the room to be mapped.
+	 * @param {IMapLocation} location - The location of the room on the map.
+	 * @return {IRoom} The mapped room object containing location, type, state, and tile.
+	 */
+	private mapRoom(type: RoomType, location: IMapLocation): IRoom {
+		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
+		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
+		const tile = this.getTileLocation(type, location);
+		return { location, type, state, tile };
+	}
+
+	/**
+	 * Maps the entire level by iterating through each row and room to create a mapped level.
+	 *
+	 * @return {Array<Array<IRoom>>} The mapped level containing rooms with location, type, state, and tile.
+	 */
+	private mapLevel(): Array<Array<IRoom>> {
+		return this.map.map((row, y) => row.map((room, x) => this.mapRoom(room, { level: this.level, y, x })));
+	}
+
+	/**
 	 * Generates tunnels in the map.
 	 * Travels through the map in a random direction until the maximum number of tunnels is reached or the map is fully traversed.
 	 */
@@ -428,11 +515,11 @@ export class Dungeon implements IDungeon {
 	}
 
 	/**
-	 * Generates a map using the procedural algorithm.
+	 * Creates the map by initializing, creating tunnels, walls, and rooms.
 	 *
-	 * @returns {number[][]} The generated map.
+	 * @return {IRoom[][]} The generated map.
 	 */
-	public createMap(): number[][] {
+	public createMap(): IRoom[][] {
 		// Initialize the map with zeros
 		this.map = this.createArray(RoomType.None);
 
@@ -445,6 +532,6 @@ export class Dungeon implements IDungeon {
 		// Create the rooms
 		this.createRooms();
 
-		return this.map;
+		return this.mapLevel();
 	}
 }

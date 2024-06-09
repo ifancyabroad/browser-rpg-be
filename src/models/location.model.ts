@@ -1,7 +1,7 @@
-import { ILocation } from "@common/types/map";
+import { IMapLocation } from "@common/types/map";
 import { Model, Schema } from "mongoose";
 
-export const locationSchema = new Schema<ILocation, Model<ILocation>>({
+export const locationSchema = new Schema<IMapLocation, Model<IMapLocation>>({
 	level: {
 		type: Number,
 		required: true,

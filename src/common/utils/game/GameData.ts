@@ -3,8 +3,8 @@ import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
 import { NUMBER_OF_FLOORS, SKILL_LEVELS } from "@common/utils/constants";
-import { EquipmentSlot, RoomState, RoomType } from "@common/utils/enums";
-import { ILocation, IRoom } from "@common/types/map";
+import { EquipmentSlot, RoomType } from "@common/utils/enums";
+import { IRoom } from "@common/types/map";
 import { Dungeon } from "@common/utils/game";
 
 export class GameData {
@@ -187,20 +187,9 @@ export class GameData {
 		}
 	}
 
-	private static mapRoom(type: RoomType, location: ILocation) {
-		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
-		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
-		return { location, type, state };
-	}
-
-	private static mapLevel(rows: RoomType[][], level: number) {
-		return rows.map((row, y) => row.map((room, x) => this.mapRoom(room, { level, y, x })));
-	}
-
 	public static getMaps() {
 		return Array.from({ length: NUMBER_OF_FLOORS }, (_, index) => {
-			const map = new Dungeon().createMap();
-			return this.mapLevel(map, index);
+			return new Dungeon({ level: index }).createMap();
 		});
 	}
 

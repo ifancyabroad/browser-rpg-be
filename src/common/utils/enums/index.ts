@@ -163,3 +163,16 @@ export enum JunctionType {
 	TJunction,
 	Cross,
 }
+
+export enum Tile {
+	None,
+	WallTopSplit,
+	WallBottomSplit,
+	WallVertical,
+	WallHorizontal,
+	WallTopLeft,
+	WallTopRight,
+	WallBottomLeft,
+	WallBottomRight,
+	Ground,
+}

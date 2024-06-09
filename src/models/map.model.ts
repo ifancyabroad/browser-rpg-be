@@ -1,4 +1,4 @@
-import { ILocation, IMap, IMapMethods, IMapModel, IRoom, ITreasure } from "@common/types/map";
+import { IMapLocation, IMap, IMapMethods, IMapModel, IRoom, ITreasure } from "@common/types/map";
 import { GameData, RoomState, RoomType } from "@common/utils";
 import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
@@ -19,6 +19,16 @@ const roomSchema = new Schema<IRoom, Model<IRoom>>({
 	location: {
 		type: locationSchema,
 		required: true,
+	},
+	tile: {
+		x: {
+			type: Number,
+			required: true,
+		},
+		y: {
+			type: Number,
+			required: true,
+		},
 	},
 });
 
@@ -90,7 +100,7 @@ mapSchema.virtual("isExit").get(function () {
 	return this.room.type === RoomType.Exit && this.room.state !== RoomState.Complete;
 });
 
-mapSchema.method("findPath", function findPath(destination: ILocation) {
+mapSchema.method("findPath", function findPath(destination: IMapLocation) {
 	const matrix = this.level.map((row, y) =>
 		row.map(({ state }, x) => {
 			if (y === destination.y && x === destination.x) {
@@ -108,7 +118,7 @@ mapSchema.method("findPath", function findPath(destination: ILocation) {
 	return aStarInstance.findPath(startPos, goalPos);
 });
 
-mapSchema.method("move", function move(location: ILocation) {
+mapSchema.method("move", function move(location: IMapLocation) {
 	const path = this.findPath(location);
 	if (!path.length) {
 		throw new Error("No path found");

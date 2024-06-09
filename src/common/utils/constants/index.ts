@@ -1,4 +1,5 @@
-import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, WeaponType } from "@common/utils/enums/index";
+import { ILocation } from "@common/types/map";
+import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, Tile, WeaponType } from "@common/utils/enums/index";
 
 export const GOLD_MULTIPLIER = 10;
 export const EXPERIENCE_MULTIPLIER = 50;
@@ -136,4 +137,17 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Crit, 2],
 	[HitType.Hit, 1],
 	[HitType.Miss, 0],
+]);
+
+export const TILE_LOCATION_MAP = new Map<Tile, ILocation>([
+	[Tile.None, { x: 0, y: 0 }],
+	[Tile.Ground, { x: 4, y: 10 }],
+	[Tile.WallTopSplit, { x: 8, y: 18 }],
+	[Tile.WallTopLeft, { x: 5, y: 18 }],
+	[Tile.WallTopRight, { x: 7, y: 18 }],
+	[Tile.WallBottomSplit, { x: 8, y: 19 }],
+	[Tile.WallBottomLeft, { x: 5, y: 19 }],
+	[Tile.WallBottomRight, { x: 7, y: 19 }],
+	[Tile.WallHorizontal, { x: 6, y: 18 }],
+	[Tile.WallVertical, { x: 4, y: 18 }],
 ]);

@@ -7,7 +7,7 @@ import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
 import MapModel from "@models/map.model";
-import { ILocation } from "@common/types/map";
+import { IMapLocation } from "@common/types/map";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -121,7 +121,7 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 	}
 }
 
-export async function rest(location: ILocation, session: Session & Partial<SessionData>) {
+export async function rest(location: IMapLocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -175,7 +175,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 	}
 }
 
-export async function move(location: ILocation, session: Session & Partial<SessionData>) {
+export async function move(location: IMapLocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -200,7 +200,7 @@ export async function move(location: ILocation, session: Session & Partial<Sessi
 	}
 }
 
-export async function nextLevel(location: ILocation, session: Session & Partial<SessionData>) {
+export async function nextLevel(location: IMapLocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -230,7 +230,7 @@ export async function nextLevel(location: ILocation, session: Session & Partial<
 	}
 }
 
-export async function createTreasure(location: ILocation, session: Session & Partial<SessionData>) {
+export async function createTreasure(location: IMapLocation, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
