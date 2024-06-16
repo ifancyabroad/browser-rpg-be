@@ -326,10 +326,6 @@ export class Dungeon implements IDungeon {
 					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
 				}
 
-				if (hasWallAbove && hasWallLeft && hasWallRight) {
-					return TILE_LOCATION_MAP.get(Tile.WallBottomSplit);
-				}
-
 				if (hasWallAbove && hasWallLeft) {
 					return TILE_LOCATION_MAP.get(Tile.WallBottomRight);
 				}
@@ -346,8 +342,12 @@ export class Dungeon implements IDungeon {
 					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
 				}
 
-				if (hasWallAbove || hasWallBelow) {
+				if (hasWallBelow) {
 					return TILE_LOCATION_MAP.get(Tile.WallVertical);
+				}
+
+				if (hasWallAbove) {
+					return TILE_LOCATION_MAP.get(Tile.WallBottomEnd);
 				}
 
 				return TILE_LOCATION_MAP.get(Tile.WallHorizontal);

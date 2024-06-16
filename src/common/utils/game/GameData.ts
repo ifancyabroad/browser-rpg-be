@@ -189,7 +189,7 @@ export class GameData {
 
 	public static getMaps() {
 		return Array.from({ length: NUMBER_OF_FLOORS }, (_, index) => {
-			return new Dungeon({ level: index }).createMap();
+			return new Dungeon({ level: index, dimensions: 80 }).createMap();
 		});
 	}
 

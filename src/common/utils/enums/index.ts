@@ -167,7 +167,7 @@ export enum JunctionType {
 export enum Tile {
 	None,
 	WallTopSplit,
-	WallBottomSplit,
+	WallBottomEnd,
 	WallVertical,
 	WallHorizontal,
 	WallTopLeft,

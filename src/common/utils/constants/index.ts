@@ -141,13 +141,13 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 
 export const TILE_LOCATION_MAP = new Map<Tile, ILocation>([
 	[Tile.None, { x: 0, y: 0 }],
-	[Tile.Ground, { x: 4, y: 10 }],
-	[Tile.WallTopSplit, { x: 8, y: 18 }],
-	[Tile.WallTopLeft, { x: 5, y: 18 }],
-	[Tile.WallTopRight, { x: 7, y: 18 }],
-	[Tile.WallBottomSplit, { x: 8, y: 19 }],
-	[Tile.WallBottomLeft, { x: 5, y: 19 }],
-	[Tile.WallBottomRight, { x: 7, y: 19 }],
-	[Tile.WallHorizontal, { x: 6, y: 18 }],
-	[Tile.WallVertical, { x: 4, y: 18 }],
+	[Tile.Ground, { x: 4, y: 11 }],
+	[Tile.WallTopSplit, { x: 9, y: 20 }],
+	[Tile.WallTopLeft, { x: 5, y: 20 }],
+	[Tile.WallTopRight, { x: 8, y: 20 }],
+	[Tile.WallBottomEnd, { x: 9, y: 21 }],
+	[Tile.WallBottomLeft, { x: 5, y: 21 }],
+	[Tile.WallBottomRight, { x: 8, y: 21 }],
+	[Tile.WallHorizontal, { x: 6, y: 20 }],
+	[Tile.WallVertical, { x: 4, y: 20 }],
 ]);
