@@ -20,16 +20,6 @@ const roomSchema = new Schema<IRoom, Model<IRoom>>({
 		type: locationSchema,
 		required: true,
 	},
-	tile: {
-		x: {
-			type: Number,
-			required: true,
-		},
-		y: {
-			type: Number,
-			required: true,
-		},
-	},
 });
 
 const treasureSchema = new Schema<ITreasure, Model<ITreasure>>({

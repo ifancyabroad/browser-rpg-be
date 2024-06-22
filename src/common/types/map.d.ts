@@ -16,7 +16,6 @@ export interface IRoom {
 	state: RoomState;
 	type: RoomType;
 	location: IMapLocation;
-	tile: ILocation;
 }
 
 type TMapRow = Types.DocumentArray<IRoom>;

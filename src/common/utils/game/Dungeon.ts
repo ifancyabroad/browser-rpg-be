@@ -1,6 +1,5 @@
 import { IRoom, ILocation, IMapLocation } from "@common/types/map";
-import { JunctionType, RoomState, RoomType, Tile } from "@common/utils/enums";
-import { TILE_LOCATION_MAP } from "../constants";
+import { JunctionType, RoomState, RoomType } from "@common/utils/enums";
 
 const LEFT: number[] = [-1, 0];
 const RIGHT: number[] = [1, 0];
@@ -295,69 +294,6 @@ export class Dungeon implements IDungeon {
 	}
 
 	/**
-	 * Retrieves the tile location based on the room type and location coordinates.
-	 *
-	 * @param {RoomType} roomType - The type of the room for which to retrieve the tile location.
-	 * @param {IMapLocation} location - The coordinates of the location on the map.
-	 * @return {ILocation} The tile location corresponding to the room type and location.
-	 */
-	private getTileLocation(roomType: RoomType, location: IMapLocation): ILocation {
-		const { x, y } = location;
-		const { map } = this;
-
-		switch (roomType) {
-			case RoomType.None:
-				return TILE_LOCATION_MAP.get(Tile.None);
-			case RoomType.Wall:
-				const hasWallAbove = map[y - 1]?.[x] === RoomType.Wall;
-				const hasWallBelow = map[y + 1]?.[x] === RoomType.Wall;
-				const hasWallLeft = map[y]?.[x - 1] === RoomType.Wall;
-				const hasWallRight = map[y]?.[x + 1] === RoomType.Wall;
-
-				if (hasWallAbove && hasWallBelow && hasWallLeft && hasWallRight) {
-					return TILE_LOCATION_MAP.get(Tile.WallTopSplit);
-				}
-
-				if (hasWallAbove && hasWallBelow && hasWallLeft) {
-					return TILE_LOCATION_MAP.get(Tile.WallTopRight);
-				}
-
-				if (hasWallAbove && hasWallBelow && hasWallRight) {
-					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
-				}
-
-				if (hasWallAbove && hasWallLeft) {
-					return TILE_LOCATION_MAP.get(Tile.WallBottomRight);
-				}
-
-				if (hasWallAbove && hasWallRight) {
-					return TILE_LOCATION_MAP.get(Tile.WallBottomLeft);
-				}
-
-				if (hasWallBelow && hasWallLeft) {
-					return TILE_LOCATION_MAP.get(Tile.WallTopRight);
-				}
-
-				if (hasWallBelow && hasWallRight) {
-					return TILE_LOCATION_MAP.get(Tile.WallTopLeft);
-				}
-
-				if (hasWallBelow) {
-					return TILE_LOCATION_MAP.get(Tile.WallVertical);
-				}
-
-				if (hasWallAbove) {
-					return TILE_LOCATION_MAP.get(Tile.WallBottomEnd);
-				}
-
-				return TILE_LOCATION_MAP.get(Tile.WallHorizontal);
-
-			default:
-				return TILE_LOCATION_MAP.get(Tile.Ground);
-		}
-	}
-
-	/**
 	 * Maps a room based on the type and location to create a room object.
 	 *
 	 * @param {RoomType} type - The type of the room to be mapped.
@@ -367,8 +303,7 @@ export class Dungeon implements IDungeon {
 	private mapRoom(type: RoomType, location: IMapLocation): IRoom {
 		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
 		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
-		const tile = this.getTileLocation(type, location);
-		return { location, type, state, tile };
+		return { location, type, state };
 	}
 
 	/**
