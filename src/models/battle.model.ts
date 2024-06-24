@@ -114,7 +114,7 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 	this.reward = { gold: gold * hero.goldMultiplier, experience };
 });
 
-battleSchema.index({ hero: 1, state: 1 }, { unique: true });
+battleSchema.index({ hero: 1, state: 1 });
 
 battleSchema.plugin(mongooseAutoPopulate);
 
