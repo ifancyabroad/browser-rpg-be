@@ -14,26 +14,29 @@ import { EXPERIENCE_MULTIPLIER, GOLD_MULTIPLIER } from "@common/utils";
 import mongooseAutoPopulate from "mongoose-autopopulate";
 import { locationSchema } from "./location.model";
 
-const actionSchema = new Schema<IAction, Model<IAction>>({
-	self: {
-		type: String,
-		required: true,
+const actionSchema = new Schema<IAction, Model<IAction>>(
+	{
+		self: {
+			type: String,
+			required: true,
+		},
+		enemy: {
+			type: String,
+			required: true,
+		},
+		skill: {
+			type: String,
+			required: true,
+		},
+		weaponDamage: [[damageSchema]],
+		damage: [damageSchema],
+		heal: [healSchema],
+		status: [statusEffectSchema],
+		auxiliary: [auxiliaryEffectSchema],
+		activeEffects: [activeEffectSchema],
 	},
-	enemy: {
-		type: String,
-		required: true,
-	},
-	skill: {
-		type: String,
-		required: true,
-	},
-	weaponDamage: [[damageSchema]],
-	damage: [damageSchema],
-	heal: [healSchema],
-	status: [statusEffectSchema],
-	auxiliary: [auxiliaryEffectSchema],
-	activeEffects: [activeEffectSchema],
-});
+	{ _id: false },
+);
 
 const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 	{
@@ -110,6 +113,8 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 	const experience = EXPERIENCE_MULTIPLIER * (enemy.level + enemy.challenge);
 	this.reward = { gold: gold * hero.goldMultiplier, experience };
 });
+
+battleSchema.index({ hero: 1, state: 1 }, { unique: true });
 
 battleSchema.plugin(mongooseAutoPopulate);
 

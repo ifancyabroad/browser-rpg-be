@@ -5,33 +5,39 @@ import { Schema } from "mongoose";
 import { AStarFinder } from "astar-typescript";
 import { locationSchema } from "./location.model";
 
-const roomSchema = new Schema<IRoom, Model<IRoom>>({
-	state: {
-		type: String,
-		enum: RoomState,
-		required: true,
+const roomSchema = new Schema<IRoom, Model<IRoom>>(
+	{
+		state: {
+			type: String,
+			enum: RoomState,
+			required: true,
+		},
+		type: {
+			type: Number,
+			enum: RoomType,
+			required: true,
+		},
+		location: {
+			type: locationSchema,
+			required: true,
+		},
 	},
-	type: {
-		type: Number,
-		enum: RoomType,
-		required: true,
-	},
-	location: {
-		type: locationSchema,
-		required: true,
-	},
-});
+	{ _id: false },
+);
 
-const treasureSchema = new Schema<ITreasure, Model<ITreasure>>({
-	itemIDs: {
-		type: [String],
-		required: true,
+const treasureSchema = new Schema<ITreasure, Model<ITreasure>>(
+	{
+		itemIDs: {
+			type: [String],
+			required: true,
+		},
+		location: {
+			type: locationSchema,
+			required: true,
+		},
 	},
-	location: {
-		type: locationSchema,
-		required: true,
-	},
-});
+	{ _id: false },
+);
 
 const mapSchema = new Schema<IMap, IMapModel, IMapMethods>(
 	{

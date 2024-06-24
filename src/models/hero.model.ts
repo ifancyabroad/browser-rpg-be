@@ -220,6 +220,8 @@ heroSchema.method("checkLevelUp", function checkLevelUp() {
 	}
 });
 
+heroSchema.index({ user: 1, state: 1 }, { unique: true });
+
 heroSchema.plugin(mongooseAutoPopulate);
 
 const HeroModel = CharacterModel.discriminator<IHero, IHeroModel>("Hero", heroSchema);
