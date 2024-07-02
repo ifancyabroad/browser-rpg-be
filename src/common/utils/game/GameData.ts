@@ -187,16 +187,16 @@ export class GameData {
 		}
 	}
 
-	public static getMaps() {
+	public static getLevels() {
 		return Array.from({ length: NUMBER_OF_FLOORS }, (_, index) => {
 			return new Dungeon({ level: index }).createMap();
 		});
 	}
 
-	public static getStartingLocation(maps: IRoom[][][], level = 0) {
+	public static getStartingLocation(maps: RoomType[][][], level = 0) {
 		let x: number, y: number;
 		y = maps[level].findIndex((row) => {
-			x = row.findIndex(({ type }) => type === RoomType.Entrance);
+			x = row.findIndex((type) => type === RoomType.Entrance);
 			return x > -1;
 		});
 		return { level, x, y };

@@ -41,9 +41,9 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getClassItems(characterClass, 2, 6);
 
-		const maps = GameData.getMaps();
-		const location = GameData.getStartingLocation(maps);
-		const map = await MapModel.create({ maps, location });
+		const levels = GameData.getLevels();
+		const location = GameData.getStartingLocation(levels);
+		const map = await MapModel.create({ levels, location });
 
 		const characterRecord = await HeroModel.create({
 			user: user.id,

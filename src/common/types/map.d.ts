@@ -18,9 +18,9 @@ export interface IRoom {
 	location: IMapLocation;
 }
 
-type TMapRow = Types.DocumentArray<IRoom>;
+type TMapRow = Types.Array<IRoom>;
 
-type TMap = Types.DocumentArray<TMapRow>;
+type TMap = Types.Array<TMapRow>;
 
 export interface ITreasure {
 	itemIDs: Types.Array<string>;
@@ -32,14 +32,20 @@ export interface IPopulatedTreasure {
 	location: IMapLocation;
 }
 
+type TLevelRow = Types.Array<RoomType>;
+
+type TLevel = Types.Array<TLevelRow>;
+
 export interface IMap {
-	maps: Types.DocumentArray<TMap>;
+	levels: Types.Array<TLevel>;
 	location: IMapLocation;
 	treasureIDs: Types.DocumentArray<ITreasure>;
+	completedRooms: Types.DocumentArray<IMapLocation>;
 }
 
 export interface IMapMethods {
 	// Add virtuals here
+	get maps(): Types.DocumentArray<TMap>;
 	get level(): TMap;
 	get room(): IRoom;
 	get treasure(): Types.DocumentArray<IPopulatedTreasure>;
@@ -54,6 +60,8 @@ export interface IMapMethods {
 	findPath(location: IMapLocation): number[][];
 	move(location: IMapLocation): void;
 	completeRoom(): void;
+	getIsRoomComplete(location: IMapLocation): boolean;
+	getRoomState(location: IMapLocation, type: RoomType): RoomState;
 	nextLevel(): void;
 	getTreasure(location: IMapLocation): (Types.Subdocument<Types.ObjectId> & ITreasure) | undefined;
 	createTreasure(location: IMapLocation, classID: string): void;

@@ -1,29 +1,9 @@
-import { IMapLocation, IMap, IMapMethods, IMapModel, IRoom, ITreasure } from "@common/types/map";
+import { IMapLocation, IMap, IMapMethods, IMapModel, ITreasure } from "@common/types/map";
 import { GameData, RoomState, RoomType } from "@common/utils";
 import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
 import { AStarFinder } from "astar-typescript";
 import { locationSchema } from "./location.model";
-
-const roomSchema = new Schema<IRoom, Model<IRoom>>(
-	{
-		state: {
-			type: String,
-			enum: RoomState,
-			required: true,
-		},
-		type: {
-			type: Number,
-			enum: RoomType,
-			required: true,
-		},
-		location: {
-			type: locationSchema,
-			required: true,
-		},
-	},
-	{ _id: false },
-);
 
 const treasureSchema = new Schema<ITreasure, Model<ITreasure>>(
 	{
@@ -41,9 +21,10 @@ const treasureSchema = new Schema<ITreasure, Model<ITreasure>>(
 
 const mapSchema = new Schema<IMap, IMapModel, IMapMethods>(
 	{
-		maps: {
-			type: [[[roomSchema]]],
+		levels: {
+			type: [[[Number]]],
 			required: true,
+			immutable: true,
 		},
 		location: {
 			type: locationSchema,
@@ -53,9 +34,25 @@ const mapSchema = new Schema<IMap, IMapModel, IMapMethods>(
 			type: [treasureSchema],
 			required: true,
 		},
+		completedRooms: {
+			type: [locationSchema],
+			required: true,
+		},
 	},
 	{ toJSON: { virtuals: true } },
 );
+
+mapSchema.virtual("maps").get(function () {
+	return this.levels.map((map, level) =>
+		map.map((row, y) =>
+			row.map((type, x) => {
+				const location = { level, x, y };
+				const state = this.getRoomState(location, type);
+				return { location, type, state };
+			}),
+		),
+	);
+});
 
 mapSchema.virtual("level").get(function () {
 	return this.maps[this.location.level];
@@ -123,12 +120,27 @@ mapSchema.method("move", function move(location: IMapLocation) {
 });
 
 mapSchema.method("completeRoom", function completeRoom() {
-	this.room.state = RoomState.Complete;
-	this.markModified("maps");
+	this.completedRooms.push(this.location);
+	this.markModified("completedRooms");
+});
+
+mapSchema.method("getIsRoomComplete", function getIsRoomComplete(location: IMapLocation) {
+	return this.completedRooms.some(
+		(completed) => completed.level === location.level && completed.x === location.x && completed.y === location.y,
+	);
+});
+
+mapSchema.method("getRoomState", function getRoomState(location: IMapLocation, type: RoomType) {
+	if (this.getIsRoomComplete(location)) {
+		return RoomState.Complete;
+	}
+
+	const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
+	return blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
 });
 
 mapSchema.method("nextLevel", function nextLevel() {
-	this.location = GameData.getStartingLocation(this.maps, this.location.level + 1);
+	this.location = GameData.getStartingLocation(this.levels, this.location.level + 1);
 });
 
 mapSchema.method("getTreasure", function getTreasure(location) {

@@ -1,5 +1,5 @@
-import { IRoom, ILocation, IMapLocation } from "@common/types/map";
-import { JunctionType, RoomState, RoomType } from "@common/utils/enums";
+import { ILocation } from "@common/types/map";
+import { JunctionType, RoomType } from "@common/utils/enums";
 
 const LEFT: number[] = [-1, 0];
 const RIGHT: number[] = [1, 0];
@@ -38,7 +38,7 @@ interface IDungeonConfig {
 }
 
 interface IDungeon {
-	createMap(): IRoom[][];
+	createMap(): RoomType[][];
 }
 
 /**
@@ -294,28 +294,6 @@ export class Dungeon implements IDungeon {
 	}
 
 	/**
-	 * Maps a room based on the type and location to create a room object.
-	 *
-	 * @param {RoomType} type - The type of the room to be mapped.
-	 * @param {IMapLocation} location - The location of the room on the map.
-	 * @return {IRoom} The mapped room object containing location, type, state, and tile.
-	 */
-	private mapRoom(type: RoomType, location: IMapLocation): IRoom {
-		const blockingRooms = [RoomType.Battle, RoomType.Boss, RoomType.None, RoomType.Wall];
-		const state = blockingRooms.includes(type) ? RoomState.Blocking : RoomState.Idle;
-		return { location, type, state };
-	}
-
-	/**
-	 * Maps the entire level by iterating through each row and room to create a mapped level.
-	 *
-	 * @return {Array<Array<IRoom>>} The mapped level containing rooms with location, type, state, and tile.
-	 */
-	private mapLevel(): Array<Array<IRoom>> {
-		return this.map.map((row, y) => row.map((room, x) => this.mapRoom(room, { level: this.level, y, x })));
-	}
-
-	/**
 	 * Generates tunnels in the map.
 	 * Travels through the map in a random direction until the maximum number of tunnels is reached or the map is fully traversed.
 	 */
@@ -452,9 +430,9 @@ export class Dungeon implements IDungeon {
 	/**
 	 * Creates the map by initializing, creating tunnels, walls, and rooms.
 	 *
-	 * @return {IRoom[][]} The generated map.
+	 * @return {RoomType[][]} The generated map.
 	 */
-	public createMap(): IRoom[][] {
+	public createMap(): RoomType[][] {
 		// Initialize the map with zeros
 		this.map = this.createArray(RoomType.None);
 
@@ -467,6 +445,6 @@ export class Dungeon implements IDungeon {
 		// Create the rooms
 		this.createRooms();
 
-		return this.mapLevel();
+		return this.map;
 	}
 }
