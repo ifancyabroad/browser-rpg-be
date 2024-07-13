@@ -55,6 +55,7 @@ export interface IMapMethods {
 	get isTreasure(): boolean;
 	get isRest(): boolean;
 	get isExit(): boolean;
+	get isFinalLevel(): boolean;
 
 	// Add methods here
 	findPath(location: IMapLocation): number[][];

@@ -24,6 +24,12 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 	{ toJSON: { virtuals: true } },
 );
 
+enemySchema.virtual("rating").get(function () {
+	const attributeTotal = Object.values(this.stats).reduce((total, value) => total + value, 0);
+	const attributeAverage = attributeTotal / Object.keys(this.stats).length;
+	return Math.round(attributeAverage);
+});
+
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
 	const skills = this.skills.filter((skill) => {
 		if (skill.maxUses > 0 && skill.remaining <= 0) {

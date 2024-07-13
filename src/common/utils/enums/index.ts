@@ -23,6 +23,7 @@ export enum Status {
 	Alive = "alive",
 	Dead = "dead",
 	Retired = "retired",
+	Complete = "complete",
 }
 
 export enum State {

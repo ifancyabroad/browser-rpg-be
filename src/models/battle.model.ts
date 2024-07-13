@@ -109,8 +109,8 @@ battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
 });
 
 battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
-	const gold = GOLD_MULTIPLIER * (enemy.level + enemy.challenge);
-	const experience = EXPERIENCE_MULTIPLIER * (enemy.level + enemy.challenge);
+	const gold = GOLD_MULTIPLIER * (enemy.level * enemy.rating);
+	const experience = EXPERIENCE_MULTIPLIER * (enemy.level * enemy.rating);
 	this.reward = { gold: gold * hero.goldMultiplier, experience };
 });
 

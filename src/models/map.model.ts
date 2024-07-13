@@ -93,6 +93,10 @@ mapSchema.virtual("isExit").get(function () {
 	return this.room.type === RoomType.Exit && this.room.state !== RoomState.Complete;
 });
 
+mapSchema.virtual("isFinalLevel").get(function () {
+	return this.location.level === this.levels.length - 1;
+});
+
 mapSchema.method("findPath", function findPath(destination: IMapLocation) {
 	const matrix = this.level.map((row, y) =>
 		row.map(({ state }, x) => {

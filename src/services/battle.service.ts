@@ -38,7 +38,7 @@ export async function startBattle(location: IMapLocation, session: Session & Par
 		}
 
 		const enemyData = GameData.getEnemy(mapRecord.location.level + 1, mapRecord.isBoss);
-		const level = characterRecord.level;
+		const level = enemyData.challenge;
 		const hitPoints = Game.getHitPoints(level);
 		const skills = enemyData.skills.map((id) => ({
 			id,

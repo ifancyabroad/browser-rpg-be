@@ -1,8 +1,7 @@
-import { ILocation } from "@common/types/map";
-import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, Tile, WeaponType } from "@common/utils/enums/index";
+import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, WeaponType } from "@common/utils/enums/index";
 
-export const GOLD_MULTIPLIER = 10;
-export const EXPERIENCE_MULTIPLIER = 50;
+export const GOLD_MULTIPLIER = 5;
+export const EXPERIENCE_MULTIPLIER = 20;
 export const REST_MULTIPLIER = 20;
 
 export const SHOP_ARMOURS = 5;

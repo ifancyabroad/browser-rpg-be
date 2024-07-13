@@ -1922,7 +1922,7 @@
 			},
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Ficon?alt=media&token=005fdcb9-7c22-483f-aa69-6d6f2bb33eb2",
 			"name": "Fighter",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=716c77d3-746c-4f86-b7c4-6aea8a402abe",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=ad75076d-9ab8-4336-9705-84c540f0d90c",
 			"skillClasses": ["warrior"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
@@ -1944,7 +1944,7 @@
 			},
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=50bdce94-995a-4722-95e0-7d8db9ecb1cf",
 			"name": "Thief",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=ac3be7c6-b263-4587-8bc9-5a878874ac47",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=5287ee0d-43a6-48ed-bf2e-779ae928e377",
 			"skillClasses": ["rogue"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
@@ -1966,7 +1966,7 @@
 			},
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Ficon?alt=media&token=11bb0e9b-b047-415c-b255-173607f7134e",
 			"name": "Mage",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=9462921f-e82c-4f69-8516-50a4b57f9fe6",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=665df70f-c085-4ba3-9552-7e5d8e329c0c",
 			"skillClasses": ["mage"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
@@ -1985,12 +1985,8 @@
 			"boss": false,
 			"challenge": 1,
 			"description": "",
-			"equipment": {
-				"hand1": "-NNwMy0q-XKUT-EUvxFF",
-				"hand2": "-NNwMy0q-XKUT-EUvxFF"
-			},
-			"name": "Goblin Assassin",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=9f43fad6-deaa-4309-af8b-e69d59edbce7",
+			"name": "Runtling",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=bedc756e-9c3f-4345-989d-ef622a8efbfd",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2004,7 +2000,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u", "-Nhgyxj9aTH40MK_MCPF"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NZMHqP01D8-tN-uBn5s"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 10,
@@ -2016,13 +2012,10 @@
 		},
 		"-NKszEMMl4YFhX86psew": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 2,
 			"description": "",
-			"equipment": {
-				"hand1": "-NMmvhpTgBUrely_XRJ7"
-			},
-			"name": "Skeleton Warrior",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=a734eb27-6d01-41d7-a6ec-bcba84d64ae3",
+			"name": "Skeleton",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=b320253c-e6f2-4352-9845-9faf861d0147",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2036,7 +2029,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 15,
@@ -2051,10 +2044,10 @@
 			"challenge": 2,
 			"description": "",
 			"equipment": {
-				"waist": "-NgO9yRhdOivFSL6xkCK"
+				"hand1": "-NgK0n7aPw0NHeefOnRg"
 			},
-			"name": "Orc Shaman",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=f099e184-0233-4773-a07e-62888963307b",
+			"name": "Grotesque",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=7a794203-ee14-41e2-b34d-506c5009c3d6",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2064,31 +2057,26 @@
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTQlY-RMpBaNkunfb7", "-NgTRA6CoAdH4tX5ht_3"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-NhgpxFRvn_sOrij-K0F"],
 			"stats": {
-				"charisma": 10,
-				"constitution": 16,
-				"dexterity": 14,
-				"intelligence": 12,
-				"strength": 15,
-				"wisdom": 16
+				"charisma": 3,
+				"constitution": 15,
+				"dexterity": 9,
+				"intelligence": 2,
+				"strength": 19,
+				"wisdom": 6
 			}
 		},
 		"-NKt0FqDCM_Ms7YFjWhj": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 2,
 			"description": "",
-			"equipment": {
-				"body": "-NMEwPxI9DXom0AaME0Z",
-				"hand1": "-NNwMy0q-XKUT-EUvxFF",
-				"hand2": "-NNwMy0q-XKUT-EUvxFF"
-			},
-			"name": "Orc Rogue",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=d5f4ff92-7905-47f7-8ab0-681f5dc27fcf",
+			"name": "Zombie Executioner",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=92953e58-8a6f-4292-83dd-f5b773fe8757",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2098,18 +2086,18 @@
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqa_ZuZcAZCuzTr5c3", "-Nhh-SuuVlmZIYSG87sp", "-Nhh0AreyuN6wco1X_6B"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
-				"charisma": 12,
+				"charisma": 5,
 				"constitution": 16,
 				"dexterity": 14,
-				"intelligence": 8,
+				"intelligence": 3,
 				"strength": 15,
-				"wisdom": 11
+				"wisdom": 6
 			}
 		},
 		"-NKt0uevyBhRIvkURXy4": {
@@ -2118,44 +2106,40 @@
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"hand1": "-NgO--jUsGrVSzpmk0lB",
-				"hand2": "-NZMqz87pcH6a1OgycJ9"
+				"hand1": "-NgK-VVeMfZnyRzNuNyK",
+				"hand2": "-NgJzNDx7O2sLwCLS8rd"
 			},
-			"name": "Orc Guard",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=75d23389-7714-43d6-b715-a08bad4fd0d8",
+			"name": "Skeleton Warrior",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=db6a2a45-e0cf-4625-a667-45eff18f3dc5",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
-				"crushing": 0,
+				"crushing": -50,
 				"fire": 0,
 				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJPxBkEam2oJZtHIBgY", "-Nhggr8CtVaNEZYVBilF"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
-				"charisma": 10,
+				"charisma": 5,
 				"constitution": 16,
 				"dexterity": 15,
-				"intelligence": 8,
-				"strength": 17,
-				"wisdom": 10
+				"intelligence": 7,
+				"strength": 12,
+				"wisdom": 8
 			}
 		},
 		"-NKt3ujmy2tXghwqSM9o": {
 			"boss": false,
 			"challenge": 2,
 			"description": "",
-			"equipment": {
-				"body": "-Nc44lyRjk-mHNox3H_P",
-				"hand1": "-NgK07SpTQiVML_pBgQ4"
-			},
-			"name": "Dwarven Hammerguard",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=4e6ac63a-2440-453a-8c38-0600a9afbc14",
+			"name": "Abomination",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=1da27a17-de16-4a5d-bc89-87a2b8680003",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2165,26 +2149,26 @@
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
-				"charisma": 12,
-				"constitution": 19,
-				"dexterity": 9,
-				"intelligence": 11,
-				"strength": 15,
-				"wisdom": 14
+				"charisma": 5,
+				"constitution": 18,
+				"dexterity": 6,
+				"intelligence": 3,
+				"strength": 19,
+				"wisdom": 6
 			}
 		},
 		"-NNvOKycvGLGjgkXhAwj": {
 			"boss": true,
-			"challenge": 5,
-			"description": "A black dragon.",
-			"name": "Black Dragon",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=a6feef64-8ebf-47fc-be9f-46e5175cec1f",
+			"challenge": 3,
+			"description": "A dragon.",
+			"name": "Dragon",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=5bc0274e-8091-4718-8c92-bc6e4c941eb9",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -2198,7 +2182,13 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-Nc41TbX58HmCh6nednT",
+				"-Nc4-UVARP8jFmsiuXC9",
+				"-Nhgy1Vmh0FTTPCWBory",
+				"-NZqUWZDeys5x3n8eLNA"
+			],
 			"stats": {
 				"charisma": 12,
 				"constitution": 19,
@@ -2210,10 +2200,10 @@
 		},
 		"-NZMCIuuab0gVQ5bMj6j": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 1,
 			"description": "A wolf like creatue.",
 			"name": "Worg",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=f21d1e69-395e-4cde-9a7f-c2ab06e0ae82",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=903a2553-899d-4a18-b085-102073bdc281",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2242,10 +2232,10 @@
 			"challenge": 1,
 			"description": "",
 			"equipment": {
-				"hand1": "-NMmvhpTgBUrely_XRJ7"
+				"hand1": "-NgK0I2STX7An8WjEeUN"
 			},
 			"name": "Hobgoblin",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=f485226a-2846-4f5f-a102-eb6bdbfa2258",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=e0b102b0-3e75-421e-9731-84df2f6b3c8e",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2273,8 +2263,8 @@
 			"boss": false,
 			"challenge": 1,
 			"description": "",
-			"name": "Giant Spider",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=bfef52e8-e44b-422d-90c2-9980962979e8",
+			"name": "Chomper",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=d1404b6d-eb58-432b-b6e4-6914b35deda5",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2288,7 +2278,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-NgTOiesS7DlEfpA_jDR"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8"],
 			"stats": {
 				"charisma": 4,
 				"constitution": 12,
@@ -2303,7 +2293,7 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Basilisk",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=5472f2c0-1b51-4608-9c35-cc4fa2e85dd8",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=126adbe6-efbb-4881-b36d-1fc189ea8620",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2332,10 +2322,10 @@
 			"challenge": 1,
 			"description": "",
 			"equipment": {
-				"hand1": "-NgK0TICJLv1vVaBGrbT"
+				"hand1": "-NNwPg099VI_pDe9E_Zd"
 			},
-			"name": "Gnoll Marauder",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=05f2a3e3-7467-4cee-9006-64562e3e6fb0",
+			"name": "Pygmy",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=164ccea4-a2d9-49bb-8406-4790b57dd727",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2349,7 +2339,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NgTZhoqeh-K00UZDd2_"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 11,
@@ -2364,7 +2354,7 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Ghoul",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=bd425c12-006a-4cb4-a463-2864b7079e46",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=3f9719e2-7393-4f3a-a0ad-b43610fb54b4",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2388,47 +2378,12 @@
 				"wisdom": 10
 			}
 		},
-		"-NgTapI8d3C9HY86AtnN": {
-			"boss": false,
-			"challenge": 5,
-			"description": "",
-			"name": "Vampire",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTapI8d3C9HY86AtnN?alt=media&token=09d175a4-ca54-4655-a451-ae393576e7f9",
-			"resistances": {
-				"acid": 0,
-				"cold": 0,
-				"crushing": 50,
-				"fire": 0,
-				"lighting": 0,
-				"lightning": 0,
-				"necrotic": 50,
-				"piercing": 50,
-				"poison": 0,
-				"radiant": 0,
-				"slashing": 50
-			},
-			"skills": [
-				"-NfROP8bobODCeEQFrpd",
-				"-NgTbtbVc3qk03XQO0GP",
-				"-NgTbEHpokQy-0H5xsHh",
-				"-NZqdUiFhyxCULAsWYJl",
-				"-NZqZdRYK5clYyJxqQKi"
-			],
-			"stats": {
-				"charisma": 18,
-				"constitution": 18,
-				"dexterity": 18,
-				"intelligence": 17,
-				"strength": 18,
-				"wisdom": 15
-			}
-		},
 		"-NgTl1sgx8KyoiRbtpyg": {
-			"boss": true,
-			"challenge": 4,
+			"boss": false,
+			"challenge": 1,
 			"description": "",
-			"name": "Wyvern",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=0473e716-b9d2-4d4e-8dd0-f234b95b0740",
+			"name": "Shrieker",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=480bb546-a818-4634-8d7d-44186344a4bc",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2442,22 +2397,22 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-NgTlKRQQ38mTQ-94KcL"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh-SuuVlmZIYSG87sp"],
 			"stats": {
-				"charisma": 6,
-				"constitution": 16,
-				"dexterity": 10,
-				"intelligence": 5,
-				"strength": 19,
-				"wisdom": 12
+				"charisma": 5,
+				"constitution": 12,
+				"dexterity": 12,
+				"intelligence": 2,
+				"strength": 14,
+				"wisdom": 10
 			}
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 2,
 			"description": "",
-			"name": "Ankheg",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=57b92b15-1b0a-43ee-8b69-dc5a47dd0a0f",
+			"name": "Dread Serpent",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=d5fa2385-7273-49fe-ae4b-9c4121e442d9",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2467,7 +2422,7 @@
 				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 0,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
@@ -2483,151 +2438,10 @@
 		},
 		"-NgTnsfQ_nzEzn_ochM3": {
 			"boss": false,
-			"challenge": 4,
+			"challenge": 3,
 			"description": "",
-			"equipment": {
-				"hand1": "-NgToUYVTRc1av-QcBA2"
-			},
-			"name": "Hill Giant",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=8e58aa4a-7d38-4c8c-af51-0b4741333e3f",
-			"resistances": {
-				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
-				"fire": 0,
-				"lighting": 0,
-				"lightning": 0,
-				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
-				"radiant": 0,
-				"slashing": 0
-			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpxFRvn_sOrij-K0F", "-NhgrvvBiejH010EI8ME", "-NJPxBkEam2oJZtHIBgY"],
-			"stats": {
-				"charisma": 6,
-				"constitution": 19,
-				"dexterity": 8,
-				"intelligence": 5,
-				"strength": 21,
-				"wisdom": 9
-			}
-		},
-		"-NgTpSKiIRPOLlAMwvOl": {
-			"boss": true,
-			"challenge": 1,
-			"description": "",
-			"equipment": {
-				"body": "-NgJzhkhaQDrg55F1iM1",
-				"hand1": "-NgToUYVTRc1av-QcBA2"
-			},
-			"name": "Ogre",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=7659e232-29d6-4b99-b16d-efb76c7c5abe",
-			"resistances": {
-				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
-				"fire": 0,
-				"lighting": 0,
-				"lightning": 0,
-				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
-				"radiant": 0,
-				"slashing": 0
-			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE", "-NhgpxFRvn_sOrij-K0F", "-NKt0W8prsXi7-54nBVz"],
-			"stats": {
-				"charisma": 7,
-				"constitution": 16,
-				"dexterity": 8,
-				"intelligence": 5,
-				"strength": 19,
-				"wisdom": 7
-			}
-		},
-		"-NgTqLUaOc0-qU_ug8Ly": {
-			"boss": false,
-			"challenge": 5,
-			"description": "",
-			"name": "Stone Golem",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=adfcbd79-94ac-4b64-a4c0-a09a1bfa931e",
-			"resistances": {
-				"acid": 0,
-				"cold": 50,
-				"crushing": 75,
-				"fire": 50,
-				"lighting": 50,
-				"lightning": 50,
-				"necrotic": 0,
-				"piercing": 75,
-				"poison": 100,
-				"radiant": 0,
-				"slashing": 75
-			},
-			"skills": [
-				"-NfROP8bobODCeEQFrpd",
-				"-NZMIV5OGOr4bChwrNEE",
-				"-NZqXb0gVgqwcQmz5Kty",
-				"-NhgrvvBiejH010EI8ME",
-				"-NhgyQeYWKGMfv97Ojh0"
-			],
-			"stats": {
-				"charisma": 1,
-				"constitution": 20,
-				"dexterity": 9,
-				"intelligence": 3,
-				"strength": 22,
-				"wisdom": 11
-			}
-		},
-		"-NgYk1uHzdomGArMmxVa": {
-			"boss": false,
-			"challenge": 5,
-			"description": "",
-			"name": "Lich",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=6d934032-5fff-4a34-a6a0-09bca68fd232",
-			"resistances": {
-				"acid": 0,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 0,
-				"lighting": 50,
-				"lightning": 0,
-				"necrotic": 50,
-				"piercing": 50,
-				"poison": 100,
-				"radiant": 0,
-				"slashing": 50
-			},
-			"skills": [
-				"-NfROP8bobODCeEQFrpd",
-				"-Nc41TbX58HmCh6nednT",
-				"-Nc40XqHNv0vjMrSUhRM",
-				"-Nc4-UVARP8jFmsiuXC9",
-				"-Nc404KHFQ3zZaHpCbe2",
-				"-Nhh7BnVOa0W7OdE_0YR",
-				"-Nhh6cp8cTNG_6h4WvSN",
-				"-Nhh5vG7znDT-6DBan2F"
-			],
-			"stats": {
-				"charisma": 16,
-				"constitution": 16,
-				"dexterity": 16,
-				"intelligence": 20,
-				"strength": 11,
-				"wisdom": 14
-			}
-		},
-		"-NhkUQSsszVLO_4PrBQy": {
-			"boss": false,
-			"challenge": 1,
-			"description": "",
-			"equipment": {
-				"hand2": "-NMDekxBlRvJBq18KmM3"
-			},
-			"name": "Kobold",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=7a0ee97d-5a12-45fa-918d-e1a375ae6d08",
+			"name": "Fire Beetle",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=4a998759-fe2e-4789-9999-1155923a82ce",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2643,23 +2457,20 @@
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
 			"stats": {
-				"charisma": 8,
-				"constitution": 9,
-				"dexterity": 15,
-				"intelligence": 8,
-				"strength": 7,
+				"charisma": 3,
+				"constitution": 12,
+				"dexterity": 10,
+				"intelligence": 1,
+				"strength": 8,
 				"wisdom": 7
 			}
 		},
-		"-NhkVOZVy5W_2PPD1vjr": {
+		"-NgTpSKiIRPOLlAMwvOl": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 1,
 			"description": "",
-			"equipment": {
-				"hand1": "-NgK-mAaFXHeapzVbWAb"
-			},
-			"name": "Ettin",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=766534f9-e374-4985-8d8d-b2d3a2ee5a6c",
+			"name": "Minotaur",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=c99cae76-ef53-4d1e-b513-ca4914ce3534",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2670,6 +2481,125 @@
 				"necrotic": 0,
 				"piercing": 0,
 				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NJLRtY1B4JdDuOGq2sd"],
+			"stats": {
+				"charisma": 9,
+				"constitution": 16,
+				"dexterity": 11,
+				"intelligence": 6,
+				"strength": 18,
+				"wisdom": 16
+			}
+		},
+		"-NgTqLUaOc0-qU_ug8Ly": {
+			"boss": false,
+			"challenge": 3,
+			"description": "",
+			"name": "Golem",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=72b5d7e6-2db0-47ad-836a-2a5fb27371ba",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 50,
+				"fire": 0,
+				"lighting": 50,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NhgrvvBiejH010EI8ME", "-NhgyQeYWKGMfv97Ojh0"],
+			"stats": {
+				"charisma": 1,
+				"constitution": 20,
+				"dexterity": 9,
+				"intelligence": 3,
+				"strength": 22,
+				"wisdom": 11
+			}
+		},
+		"-NgYk1uHzdomGArMmxVa": {
+			"boss": false,
+			"challenge": 3,
+			"description": "",
+			"name": "Fire Snake",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=685a244d-2609-49e2-a7ea-f0b7be07e48e",
+			"resistances": {
+				"acid": 0,
+				"cold": -50,
+				"crushing": 50,
+				"fire": 100,
+				"lighting": 50,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 50,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 50
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 11,
+				"dexterity": 14,
+				"intelligence": 7,
+				"strength": 12,
+				"wisdom": 10
+			}
+		},
+		"-NhkUQSsszVLO_4PrBQy": {
+			"boss": false,
+			"challenge": 1,
+			"description": "",
+			"name": "Horror",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=0b1dc5be-0b04-426e-bb6c-2b8482acfb2a",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lighting": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX"],
+			"stats": {
+				"charisma": 8,
+				"constitution": 9,
+				"dexterity": 15,
+				"intelligence": 8,
+				"strength": 7,
+				"wisdom": 7
+			}
+		},
+		"-NhkVOZVy5W_2PPD1vjr": {
+			"boss": true,
+			"challenge": 2,
+			"description": "",
+			"equipment": {
+				"hand1": "-NgO1-16PWvnT302EIO_"
+			},
+			"name": "Bone Guardian",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=a756bd84-93f3-4841-b46b-f9f100df1164",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": -50,
+				"fire": 0,
+				"lighting": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 0
 			},
@@ -2685,10 +2615,10 @@
 		},
 		"-NhkWbFFsefw7IS2Vxk0": {
 			"boss": false,
-			"challenge": 4,
+			"challenge": 2,
 			"description": "",
-			"name": "Wereboar",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=3114ac4b-3e7c-41cd-afee-772ad748d5d3",
+			"name": "Wight",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=319c6b24-dfbb-4e5b-baea-a38cdfe7e706",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2696,32 +2626,28 @@
 				"fire": 0,
 				"lighting": 0,
 				"lightning": 0,
-				"necrotic": 0,
+				"necrotic": 50,
 				"piercing": 50,
-				"poison": 0,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NZMHqP01D8-tN-uBn5s", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkZtl6i7THVGIaWaQR", "-Nhh-SuuVlmZIYSG87sp"],
 			"stats": {
-				"charisma": 8,
-				"constitution": 15,
-				"dexterity": 10,
+				"charisma": 15,
+				"constitution": 16,
+				"dexterity": 14,
 				"intelligence": 10,
-				"strength": 17,
-				"wisdom": 11
+				"strength": 15,
+				"wisdom": 13
 			}
 		},
 		"-NhkXJrcYTG_XtKdj_B8": {
-			"boss": true,
+			"boss": false,
 			"challenge": 3,
 			"description": "",
-			"equipment": {
-				"body": "-Nc44lyRjk-mHNox3H_P",
-				"hand1": "-NgO1-16PWvnT302EIO_"
-			},
-			"name": "Orc War Chief",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=c8c20610-8ae2-4bd0-938b-1636982905f3",
+			"name": "Gauth",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=07293199-2086-4512-9ebe-8f4ff31217af",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2735,29 +2661,29 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd", "-NJPxBkEam2oJZtHIBgY"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
-				"charisma": 16,
-				"constitution": 18,
-				"dexterity": 12,
-				"intelligence": 11,
-				"strength": 18,
-				"wisdom": 11
+				"charisma": 13,
+				"constitution": 16,
+				"dexterity": 14,
+				"intelligence": 15,
+				"strength": 10,
+				"wisdom": 15
 			}
 		},
 		"-NhkYK7-G0lWSQ6VxFJy": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 2,
 			"description": "",
-			"name": "Banshee",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=0f7aafcd-1e91-41a7-9ae9-476da821525c",
+			"name": "Wraith",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=e1ce4930-4dbb-47de-a5a2-b9abb8fa4919",
 			"resistances": {
 				"acid": 50,
-				"cold": 100,
+				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
 				"lighting": 50,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 100,
 				"piercing": 50,
 				"poison": 100,
@@ -2766,22 +2692,22 @@
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkZtl6i7THVGIaWaQR", "-NhkZb3a3j2ykQWUtTC0"],
 			"stats": {
-				"charisma": 17,
-				"constitution": 10,
-				"dexterity": 14,
+				"charisma": 15,
+				"constitution": 16,
+				"dexterity": 16,
 				"intelligence": 12,
-				"strength": 1,
-				"wisdom": 11
+				"strength": 6,
+				"wisdom": 14
 			}
 		},
 		"-NhkbQX-i_HQ7Gt2qHgm": {
-			"boss": true,
-			"challenge": 2,
+			"boss": false,
+			"challenge": 1,
 			"description": "",
-			"name": "Troll",
+			"name": "Living Mold",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=eecd7569-a723-4709-890d-9bbdef655d09",
 			"resistances": {
-				"acid": -100,
+				"acid": 0,
 				"cold": 0,
 				"crushing": 0,
 				"fire": -100,
@@ -2793,22 +2719,28 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NgTnzsxBYgTye5lFfkd", "-NhkbeREMKyQCVSlZOQf"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NhkbeREMKyQCVSlZOQf"],
 			"stats": {
-				"charisma": 7,
-				"constitution": 20,
-				"dexterity": 13,
-				"intelligence": 7,
-				"strength": 18,
-				"wisdom": 9
+				"charisma": 5,
+				"constitution": 16,
+				"dexterity": 8,
+				"intelligence": 5,
+				"strength": 14,
+				"wisdom": 10
 			}
 		},
 		"-NhkcIl5L0eB39i3HIeJ": {
-			"boss": false,
-			"challenge": 4,
+			"boss": true,
+			"challenge": 1,
 			"description": "",
-			"name": "Fire Elemental",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=525bbaa6-7b5b-47dd-bec8-26ba188fc9cc",
+			"equipment": {
+				"body": "-Nm2Cd-d46R6iuL4782x",
+				"hand1": "-NMDekxBlRvJBq18KmM3",
+				"hand2": "-NZMqz87pcH6a1OgycJ9",
+				"head": "-NgJyJCDG-1UEccRymvT"
+			},
+			"name": "Flame Guardian",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=be2d42ae-e1e5-4c2d-a582-f4918e955119",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2834,15 +2766,15 @@
 		},
 		"-NhkcuvakLcMmPpk-jQk": {
 			"boss": false,
-			"challenge": 4,
+			"challenge": 3,
 			"description": "",
-			"name": "Water Elemental",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=9ac75064-3fda-4a06-8518-cdb98151edf4",
+			"name": "Fire Elemental",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
 			"resistances": {
 				"acid": 50,
 				"cold": 0,
 				"crushing": 50,
-				"fire": 0,
+				"fire": 100,
 				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
@@ -2851,47 +2783,99 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhkdJeDGDat6H-Mf7WV"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
-				"charisma": 8,
-				"constitution": 18,
-				"dexterity": 14,
-				"intelligence": 5,
-				"strength": 18,
+				"charisma": 7,
+				"constitution": 16,
+				"dexterity": 17,
+				"intelligence": 6,
+				"strength": 10,
 				"wisdom": 10
 			}
 		},
 		"-NhkeXYbGnQ67kC7gWyw": {
 			"boss": false,
-			"challenge": 5,
+			"challenge": 3,
 			"description": "",
-			"equipment": {
-				"body": "-Nc44lyRjk-mHNox3H_P",
-				"hand1": "-NgO2xYEe4Kzg3ST0JW2"
+			"name": "FIre Drake",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=a710c32c-8fec-42f1-8e3e-9b56c83999ff",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 100,
+				"lighting": 50,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
 			},
-			"name": "Cambion",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=81f33c46-dd70-4ab7-a420-7a9583499016",
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9", "-NgTZhoqeh-K00UZDd2_"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 16,
+				"dexterity": 13,
+				"intelligence": 9,
+				"strength": 21,
+				"wisdom": 12
+			}
+		},
+		"-O1g2suyagydsOiCLMPZ": {
+			"boss": false,
+			"challenge": 3,
+			"description": "",
+			"name": "Flame Shrieker",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g2suyagydsOiCLMPZ?alt=media&token=9a1bf9c6-3c1b-45b9-93c8-435c3e182ebd",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqWi-RbH2vwtAawttY", "-NZMJ9LGQM22pDRl_EYc"],
+			"stats": {
+				"charisma": 5,
+				"constitution": 14,
+				"dexterity": 15,
+				"intelligence": 2,
+				"strength": 16,
+				"wisdom": 10
+			}
+		},
+		"-O1g5UbnObhA-7IMjEhj": {
+			"boss": false,
+			"challenge": 3,
+			"description": "",
+			"name": "Pit Fiend",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=a4bd8a27-c914-4418-9565-a96290517d39",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
 				"crushing": 50,
-				"fire": 50,
-				"lighting": 50,
-				"lightning": 50,
+				"fire": 100,
+				"lightning": 0,
 				"necrotic": 0,
 				"piercing": 50,
-				"poison": 50,
+				"poison": 100,
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9", "-NgTnzsxBYgTye5lFfkd", "-Nhh3D7-ihgBpi0AbfB5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
-				"charisma": 16,
-				"constitution": 16,
-				"dexterity": 18,
-				"intelligence": 14,
-				"strength": 18,
-				"wisdom": 12
+				"charisma": 8,
+				"constitution": 18,
+				"dexterity": 10,
+				"intelligence": 5,
+				"strength": 20,
+				"wisdom": 10
 			}
 		}
 	},

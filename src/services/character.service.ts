@@ -217,10 +217,15 @@ export async function nextLevel(location: IMapLocation, session: Session & Parti
 		if (!mapRecord.isExit) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No exit in this room");
 		}
-		mapRecord.nextLevel();
-		await mapRecord.save();
 
-		characterRecord.restock(mapRecord.location.level + 2);
+		if (mapRecord.isFinalLevel) {
+			characterRecord.status = Status.Complete;
+		} else {
+			mapRecord.nextLevel();
+			characterRecord.restock(mapRecord.location.level + 1);
+		}
+
+		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return character.toJSON();
