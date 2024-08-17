@@ -2,7 +2,9 @@ import { Schema } from "mongoose";
 import CharacterModel from "./character.model";
 import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
-import { EffectType, Target, getRandomElement } from "@common/utils";
+import { AuxiliaryStat, DamageType, EffectType, Game, Target, getRandomElement } from "@common/utils";
+import { IEffectData } from "@common/types/character";
+import { IWeaponDamageEffectData } from "@common/types/gameData";
 
 const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 	{
@@ -20,14 +22,70 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			max: 30,
 			required: true,
 		},
+		naturalArmourClass: {
+			type: Number,
+			min: 0,
+			max: 30,
+			required: true,
+		},
+		naturalMinDamage: {
+			type: Number,
+			min: 0,
+			max: 100,
+			required: true,
+		},
+		naturalMaxDamage: {
+			type: Number,
+			min: 0,
+			max: 100,
+			required: true,
+		},
+		naturalDamageType: {
+			type: String,
+			enum: DamageType,
+			required: true,
+		},
 	},
 	{ toJSON: { virtuals: true } },
 );
+
+enemySchema.virtual("armourClass").get(function () {
+	return (
+		Math.max(this.getEquipmentArmourClass(), this.naturalArmourClass) +
+		this.getAuxiliaryStat(AuxiliaryStat.ArmourClass)
+	);
+});
 
 enemySchema.virtual("rating").get(function () {
 	const attributeTotal = Object.values(this.stats).reduce((total, value) => total + value, 0);
 	const attributeAverage = attributeTotal / Object.keys(this.stats).length;
 	return Math.round(attributeAverage);
+});
+
+enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
+	const weaponEffect = effect as IWeaponDamageEffectData;
+	const damage = Game.dx(this.naturalMinDamage, this.naturalMaxDamage);
+	const modifier = Game.getModifier(this.stats.strength);
+	const bonusMultiplier = this.getDamageBonus(this.naturalDamageType) / 100 + 1;
+	const hitType = this.getHitType(effectTarget.armourClass);
+	const hitMultiplier = Game.getHitMultiplier(hitType);
+	const resistance = effectTarget.getResistance(this.naturalDamageType) / 100;
+	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+	const value = Math.round(
+		(damage + modifier) *
+			weaponEffect.multiplier *
+			bonusMultiplier *
+			hitMultiplier *
+			bleedMuliplier *
+			(1 - resistance),
+	);
+
+	return {
+		target: effect.target,
+		type: this.naturalDamageType,
+		value,
+		hitType,
+	};
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {

@@ -1986,6 +1986,10 @@
 			"challenge": 1,
 			"description": "",
 			"name": "Runtling",
+			"naturalArmourClass": 9,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=bedc756e-9c3f-4345-989d-ef622a8efbfd",
 			"resistances": {
 				"acid": 0,
@@ -2003,8 +2007,8 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NZMHqP01D8-tN-uBn5s"],
 			"stats": {
 				"charisma": 8,
-				"constitution": 10,
-				"dexterity": 14,
+				"constitution": 9,
+				"dexterity": 13,
 				"intelligence": 10,
 				"strength": 8,
 				"wisdom": 8
@@ -2015,6 +2019,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Skeleton",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=b320253c-e6f2-4352-9845-9faf861d0147",
 			"resistances": {
 				"acid": 0,
@@ -2032,8 +2040,8 @@
 			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 15,
-				"dexterity": 14,
+				"constitution": 14,
+				"dexterity": 13,
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 8
@@ -2047,6 +2055,10 @@
 				"hand1": "-NgK0n7aPw0NHeefOnRg"
 			},
 			"name": "Grotesque",
+			"naturalArmourClass": 12,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=7a794203-ee14-41e2-b34d-506c5009c3d6",
 			"resistances": {
 				"acid": 0,
@@ -2064,10 +2076,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-NhgpxFRvn_sOrij-K0F"],
 			"stats": {
 				"charisma": 3,
-				"constitution": 15,
-				"dexterity": 9,
+				"constitution": 14,
+				"dexterity": 8,
 				"intelligence": 2,
-				"strength": 19,
+				"strength": 18,
 				"wisdom": 6
 			}
 		},
@@ -2076,6 +2088,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Zombie Executioner",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 9,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=92953e58-8a6f-4292-83dd-f5b773fe8757",
 			"resistances": {
 				"acid": 0,
@@ -2093,10 +2109,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 16,
-				"dexterity": 14,
+				"constitution": 15,
+				"dexterity": 13,
 				"intelligence": 3,
-				"strength": 15,
+				"strength": 14,
 				"wisdom": 6
 			}
 		},
@@ -2110,6 +2126,10 @@
 				"hand2": "-NgJzNDx7O2sLwCLS8rd"
 			},
 			"name": "Skeleton Warrior",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=db6a2a45-e0cf-4625-a667-45eff18f3dc5",
 			"resistances": {
 				"acid": 0,
@@ -2127,8 +2147,8 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 16,
-				"dexterity": 15,
+				"constitution": 15,
+				"dexterity": 14,
 				"intelligence": 7,
 				"strength": 12,
 				"wisdom": 8
@@ -2139,6 +2159,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Abomination",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=1da27a17-de16-4a5d-bc89-87a2b8680003",
 			"resistances": {
 				"acid": 0,
@@ -2156,10 +2180,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 18,
+				"constitution": 17,
 				"dexterity": 6,
 				"intelligence": 3,
-				"strength": 19,
+				"strength": 18,
 				"wisdom": 6
 			}
 		},
@@ -2168,6 +2192,10 @@
 			"challenge": 3,
 			"description": "A dragon.",
 			"name": "Dragon",
+			"naturalArmourClass": 18,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 6,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=5bc0274e-8091-4718-8c92-bc6e4c941eb9",
 			"resistances": {
 				"acid": 0,
@@ -2203,6 +2231,10 @@
 			"challenge": 1,
 			"description": "A wolf like creatue.",
 			"name": "Worg",
+			"naturalArmourClass": 7,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=903a2553-899d-4a18-b085-102073bdc281",
 			"resistances": {
 				"acid": 0,
@@ -2220,10 +2252,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
 			"stats": {
 				"charisma": 8,
-				"constitution": 13,
-				"dexterity": 13,
+				"constitution": 11,
+				"dexterity": 11,
 				"intelligence": 7,
-				"strength": 16,
+				"strength": 14,
 				"wisdom": 11
 			}
 		},
@@ -2235,6 +2267,10 @@
 				"hand1": "-NgK0I2STX7An8WjEeUN"
 			},
 			"name": "Hobgoblin",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=e0b102b0-3e75-421e-9731-84df2f6b3c8e",
 			"resistances": {
 				"acid": 0,
@@ -2264,6 +2300,10 @@
 			"challenge": 1,
 			"description": "",
 			"name": "Chomper",
+			"naturalArmourClass": 6,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=d1404b6d-eb58-432b-b6e4-6914b35deda5",
 			"resistances": {
 				"acid": 0,
@@ -2281,10 +2321,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8"],
 			"stats": {
 				"charisma": 4,
-				"constitution": 12,
-				"dexterity": 16,
+				"constitution": 10,
+				"dexterity": 14,
 				"intelligence": 2,
-				"strength": 14,
+				"strength": 12,
 				"wisdom": 11
 			}
 		},
@@ -2293,6 +2333,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Basilisk",
+			"naturalArmourClass": 13,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=126adbe6-efbb-4881-b36d-1fc189ea8620",
 			"resistances": {
 				"acid": 0,
@@ -2325,6 +2369,10 @@
 				"hand1": "-NNwPg099VI_pDe9E_Zd"
 			},
 			"name": "Pygmy",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=164ccea4-a2d9-49bb-8406-4790b57dd727",
 			"resistances": {
 				"acid": 0,
@@ -2342,10 +2390,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 7,
-				"constitution": 11,
-				"dexterity": 12,
+				"constitution": 10,
+				"dexterity": 11,
 				"intelligence": 6,
-				"strength": 14,
+				"strength": 13,
 				"wisdom": 10
 			}
 		},
@@ -2354,6 +2402,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Ghoul",
+			"naturalArmourClass": 9,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=3f9719e2-7393-4f3a-a0ad-b43610fb54b4",
 			"resistances": {
 				"acid": 0,
@@ -2383,6 +2435,10 @@
 			"challenge": 1,
 			"description": "",
 			"name": "Shrieker",
+			"naturalArmourClass": 6,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=480bb546-a818-4634-8d7d-44186344a4bc",
 			"resistances": {
 				"acid": 0,
@@ -2400,10 +2456,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh-SuuVlmZIYSG87sp"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 12,
-				"dexterity": 12,
+				"constitution": 10,
+				"dexterity": 10,
 				"intelligence": 2,
-				"strength": 14,
+				"strength": 12,
 				"wisdom": 10
 			}
 		},
@@ -2412,6 +2468,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Dread Serpent",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=d5fa2385-7273-49fe-ae4b-9c4121e442d9",
 			"resistances": {
 				"acid": 0,
@@ -2432,7 +2492,7 @@
 				"constitution": 13,
 				"dexterity": 11,
 				"intelligence": 1,
-				"strength": 17,
+				"strength": 16,
 				"wisdom": 13
 			}
 		},
@@ -2441,7 +2501,11 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Fire Beetle",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=4a998759-fe2e-4789-9999-1155923a82ce",
+			"naturalArmourClass": 0,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=ce094b25-e77a-47db-93c7-363cadf92ccf",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2455,7 +2519,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-O4VXesSYLdWh1Qf_7Io"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 12,
@@ -2466,10 +2530,18 @@
 			}
 		},
 		"-NgTpSKiIRPOLlAMwvOl": {
-			"boss": false,
+			"boss": true,
 			"challenge": 1,
 			"description": "",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"hand1": "-NgK-mAaFXHeapzVbWAb"
+			},
 			"name": "Minotaur",
+			"naturalArmourClass": 6,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=c99cae76-ef53-4d1e-b513-ca4914ce3534",
 			"resistances": {
 				"acid": 0,
@@ -2487,10 +2559,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 9,
-				"constitution": 16,
-				"dexterity": 11,
+				"constitution": 14,
+				"dexterity": 9,
 				"intelligence": 6,
-				"strength": 18,
+				"strength": 16,
 				"wisdom": 16
 			}
 		},
@@ -2499,6 +2571,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Golem",
+			"naturalArmourClass": 19,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 8,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=72b5d7e6-2db0-47ad-836a-2a5fb27371ba",
 			"resistances": {
 				"acid": 0,
@@ -2528,6 +2604,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Fire Snake",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=685a244d-2609-49e2-a7ea-f0b7be07e48e",
 			"resistances": {
 				"acid": 0,
@@ -2557,6 +2637,10 @@
 			"challenge": 1,
 			"description": "",
 			"name": "Horror",
+			"naturalArmourClass": 9,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=0b1dc5be-0b04-426e-bb6c-2b8482acfb2a",
 			"resistances": {
 				"acid": 0,
@@ -2575,7 +2659,7 @@
 			"stats": {
 				"charisma": 8,
 				"constitution": 9,
-				"dexterity": 15,
+				"dexterity": 14,
 				"intelligence": 8,
 				"strength": 7,
 				"wisdom": 7
@@ -2589,6 +2673,10 @@
 				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
 			"name": "Bone Guardian",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=a756bd84-93f3-4841-b46b-f9f100df1164",
 			"resistances": {
 				"acid": 0,
@@ -2614,10 +2702,14 @@
 			}
 		},
 		"-NhkWbFFsefw7IS2Vxk0": {
-			"boss": false,
+			"boss": true,
 			"challenge": 2,
 			"description": "",
 			"name": "Wight",
+			"naturalArmourClass": 13,
+			"naturalDamageType": "necrotic",
+			"naturalMaxDamage": 7,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=319c6b24-dfbb-4e5b-baea-a38cdfe7e706",
 			"resistances": {
 				"acid": 0,
@@ -2647,6 +2739,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Gauth",
+			"naturalArmourClass": 12,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=07293199-2086-4512-9ebe-8f4ff31217af",
 			"resistances": {
 				"acid": 0,
@@ -2676,6 +2772,10 @@
 			"challenge": 2,
 			"description": "",
 			"name": "Wraith",
+			"naturalArmourClass": 13,
+			"naturalDamageType": "necrotic",
+			"naturalMaxDamage": 7,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=e1ce4930-4dbb-47de-a5a2-b9abb8fa4919",
 			"resistances": {
 				"acid": 50,
@@ -2705,7 +2805,11 @@
 			"challenge": 1,
 			"description": "",
 			"name": "Living Mold",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=eecd7569-a723-4709-890d-9bbdef655d09",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=f35ef8ba-6735-4fa8-9c66-f438ee8cb920",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2722,10 +2826,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NhkbeREMKyQCVSlZOQf"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 16,
+				"constitution": 14,
 				"dexterity": 8,
 				"intelligence": 5,
-				"strength": 14,
+				"strength": 12,
 				"wisdom": 10
 			}
 		},
@@ -2740,25 +2844,29 @@
 				"head": "-NgJyJCDG-1UEccRymvT"
 			},
 			"name": "Flame Guardian",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "fire",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=be2d42ae-e1e5-4c2d-a582-f4918e955119",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
-				"crushing": 50,
+				"crushing": 25,
 				"fire": 100,
 				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgpG6pLRAqTW1AU0Eg"],
 			"stats": {
 				"charisma": 7,
-				"constitution": 16,
-				"dexterity": 17,
+				"constitution": 15,
+				"dexterity": 16,
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 10
@@ -2769,6 +2877,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Fire Elemental",
+			"naturalArmourClass": 12,
+			"naturalDamageType": "fire",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
 			"resistances": {
 				"acid": 50,
@@ -2797,7 +2909,11 @@
 			"boss": false,
 			"challenge": 3,
 			"description": "",
-			"name": "FIre Drake",
+			"name": "Fire Drake",
+			"naturalArmourClass": 14,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 9,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=a710c32c-8fec-42f1-8e3e-9b56c83999ff",
 			"resistances": {
 				"acid": 0,
@@ -2827,6 +2943,10 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Flame Shrieker",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 8,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g2suyagydsOiCLMPZ?alt=media&token=9a1bf9c6-3c1b-45b9-93c8-435c3e182ebd",
 			"resistances": {
 				"acid": 0,
@@ -2851,10 +2971,14 @@
 			}
 		},
 		"-O1g5UbnObhA-7IMjEhj": {
-			"boss": false,
+			"boss": true,
 			"challenge": 3,
 			"description": "",
 			"name": "Pit Fiend",
+			"naturalArmourClass": 16,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 10,
+			"naturalMinDamage": 3,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=a4bd8a27-c914-4418-9565-a96290517d39",
 			"resistances": {
 				"acid": 0,
@@ -5342,6 +5466,31 @@
 			"level": 4,
 			"maxUses": 2,
 			"name": "Whelm",
+			"price": 0
+		},
+		"-O4VXesSYLdWh1Qf_7Io": {
+			"class": "unique",
+			"description": "Overheat and erupt into flames burning all those around you.",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 12,
+					"min": 6,
+					"target": "self",
+					"type": "damage"
+				},
+				{
+					"damageType": "fire",
+					"max": 24,
+					"min": 12,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O4VXesSYLdWh1Qf_7Io?alt=media&token=ec76c559-adce-4e10-8940-360fb1a03497",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Combust",
 			"price": 0
 		}
 	},

@@ -26,6 +26,10 @@ export interface IEnemyData {
 	boss: boolean;
 	skills: string[];
 	stats: TStats;
+	naturalArmourClass: number;
+	naturalMinDamage: number;
+	naturalMaxDamage: number;
+	naturalDamageType: DamageType;
 	equipment?: Partial<TEquipment>;
 }
 

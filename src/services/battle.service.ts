@@ -57,6 +57,10 @@ export async function startBattle(location: IMapLocation, session: Session & Par
 			baseResistances: enemyData.resistances,
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
+			naturalArmourClass: enemyData.naturalArmourClass,
+			naturalMinDamage: enemyData.naturalMinDamage,
+			naturalMaxDamage: enemyData.naturalMaxDamage,
+			naturalDamageType: enemyData.naturalDamageType,
 		});
 
 		const battle = await BattleModel.create({
