@@ -36,6 +36,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
 	get goldMultiplier(): number;
+	get discountMultiplier(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;

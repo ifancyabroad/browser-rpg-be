@@ -96,6 +96,10 @@ heroSchema.virtual("goldMultiplier").get(function () {
 	return Math.round(Game.getModifier(this.stats.charisma) / 10 + 1);
 });
 
+heroSchema.virtual("discountMultiplier").get(function () {
+	return Math.round(1 - Game.getModifier(this.stats.charisma) / 10);
+});
+
 heroSchema.method("addExperience", function addExperience(xp: number) {
 	this.experience += xp;
 	this.checkLevelUp();
@@ -141,11 +145,13 @@ heroSchema.method("buyItem", function buyItem(id: string) {
 		throw new Error("Item is not available");
 	}
 
-	if (item.price > this.gold) {
+	const price = Math.round(item.price * this.discountMultiplier);
+
+	if (price > this.gold) {
 		throw new Error("Not enough gold");
 	}
 
-	this.gold = this.gold - item.price;
+	this.gold = this.gold - price;
 	this.set(
 		"availableItemIDs",
 		this.availableItemIDs.filter((it) => it !== id),
