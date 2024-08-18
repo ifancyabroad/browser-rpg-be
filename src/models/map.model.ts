@@ -161,7 +161,7 @@ mapSchema.method("createTreasure", function createTreasure(location, classID) {
 		throw new Error("Treasure already exists!");
 	}
 
-	const itemIDs = GameData.getClassItems(classID, location.level + 2, 2);
+	const itemIDs = GameData.getClassItems(classID, location.level, 2);
 	const treasure = { itemIDs, location };
 	this.treasureIDs.push(treasure);
 });
