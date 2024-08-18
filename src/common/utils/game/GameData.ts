@@ -1,8 +1,8 @@
 import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
-import { getMultipleRandom, getRandomElement, mapToArray } from "@common/utils/helpers";
+import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { NUMBER_OF_FLOORS, SKILL_LEVELS } from "@common/utils/constants";
+import { LEVEL_ITEM_WEIGHT_MAP, NUMBER_OF_FLOORS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, RoomType } from "@common/utils/enums";
 import { IRoom } from "@common/types/map";
 import { Dungeon } from "@common/utils/game";
@@ -125,23 +125,36 @@ export class GameData {
 		>;
 	}
 
-	public static getClassItems(classID: string, maxItemLevel: number, amount: number) {
+	public static getClassItems(classID: string, currentLevel: number, amount: number) {
 		try {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
 
-			const filteredArmours = mapToArray(armours)
-				.filter(({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType))
-				.filter(({ level }) => maxItemLevel >= level)
-				.map(({ id }) => id);
+			const filteredArmours = mapToArray(armours).filter(
+				({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType),
+			);
 
-			const filteredWeapons = mapToArray(weapons)
-				.filter(({ weaponType }) => characterClass.weaponTypes.includes(weaponType))
-				.filter(({ level }) => maxItemLevel >= level)
-				.map(({ id }) => id);
+			const filteredWeapons = mapToArray(weapons).filter(({ weaponType }) =>
+				characterClass.weaponTypes.includes(weaponType),
+			);
 
 			const items = filteredArmours.concat(filteredWeapons);
-			return getMultipleRandom(items, amount);
+
+			const weights = LEVEL_ITEM_WEIGHT_MAP.get(currentLevel);
+
+			if (!weights) {
+				throw new Error(`Weights not found for level ${currentLevel}`);
+			}
+
+			const weightedItems = [] as string[];
+			for (let i = 0; i < amount; i++) {
+				const rarity = weightedChoice(weights);
+				const pool = items.filter(({ id, level }) => level === rarity && !weightedItems.includes(id));
+				const randomItem = getRandomElement(pool);
+				weightedItems.push(randomItem.id);
+			}
+
+			return weightedItems;
 		} catch (error) {
 			console.error(`Error getClassItems: ${error.message}`);
 			throw error;

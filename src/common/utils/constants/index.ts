@@ -1,4 +1,12 @@
-import { DamageType, EquipmentSlot, EquipmentType, HitType, Stat, WeaponType } from "@common/utils/enums/index";
+import {
+	DamageType,
+	EquipmentSlot,
+	EquipmentType,
+	HitType,
+	ItemRarity,
+	Stat,
+	WeaponType,
+} from "@common/utils/enums/index";
 
 export const GOLD_MULTIPLIER = 5;
 export const EXPERIENCE_MULTIPLIER = 20;
@@ -136,4 +144,43 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Crit, 2],
 	[HitType.Hit, 1],
 	[HitType.Miss, 0],
+]);
+
+export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>([
+	[
+		0,
+		{
+			[ItemRarity.Common]: 0.4,
+			[ItemRarity.Uncommon]: 0.3,
+			[ItemRarity.Rare]: 0.2,
+			[ItemRarity.Epic]: 0.1,
+		},
+	],
+	[
+		1,
+		{
+			[ItemRarity.Common]: 0.3,
+			[ItemRarity.Uncommon]: 0.3,
+			[ItemRarity.Rare]: 0.2,
+			[ItemRarity.Epic]: 0.2,
+		},
+	],
+	[
+		2,
+		{
+			[ItemRarity.Common]: 0.2,
+			[ItemRarity.Uncommon]: 0.3,
+			[ItemRarity.Rare]: 0.3,
+			[ItemRarity.Epic]: 0.2,
+		},
+	],
+	[
+		3,
+		{
+			[ItemRarity.Common]: 0.1,
+			[ItemRarity.Uncommon]: 0.2,
+			[ItemRarity.Rare]: 0.3,
+			[ItemRarity.Epic]: 0.4,
+		},
+	],
 ]);
