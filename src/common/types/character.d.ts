@@ -22,7 +22,7 @@ import {
 	TStats,
 } from "./gameData";
 import { IAction, ITurnData } from "./battle";
-import { IMapLocation } from "./map";
+import { IZone } from "./hero";
 
 export interface ISkill {
 	id: string;
@@ -117,7 +117,6 @@ export interface RequestCharacter extends Request {
 export interface IBuyItemInput {
 	id: string;
 	slot: EquipmentSlot;
-	location: IMapLocation;
 }
 
 export interface RequestItem extends Request {
@@ -136,9 +135,13 @@ export interface RequestLevelUp extends Request {
 export interface ITreasureInput {
 	id?: string;
 	slot?: EquipmentSlot;
-	location: IMapLocation;
+	zone: IZone;
 }
 
 export interface RequestTreasure extends Request {
 	item: ITreasureInput;
+}
+
+export interface RequestZone extends Request {
+	zone: IZone;
 }

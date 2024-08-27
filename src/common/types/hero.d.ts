@@ -4,6 +4,11 @@ import { EquipmentSlot, Stat, State } from "@common/utils";
 import { IClassDataWithID, ISkillDataWithID, TEquipmentDataWithID } from "./gameData";
 import { IReward } from "./battle";
 
+export interface IZone {
+	name: string;
+	level: number;
+}
+
 export interface ILevelUp {
 	level: number;
 	skills: Types.Array<string>;
@@ -16,7 +21,6 @@ export interface ILevelUpData {
 
 export interface IHero extends ICharacter {
 	user: Types.ObjectId;
-	map: Types.ObjectId;
 	characterClassID: string;
 	state: State;
 	experience: number;
@@ -24,6 +28,7 @@ export interface IHero extends ICharacter {
 	day: number;
 	kills: number;
 	availableItemIDs: Types.Array<string>;
+	zone: IZone;
 	levelUp?: ILevelUp;
 	slainBy?: string;
 }
@@ -48,8 +53,8 @@ export interface IHeroMethods extends ICharacterMethods {
 	equipItem(id: string, slot: EquipmentSlot): void;
 	battleWon(reward: IReward): void;
 	battleLost(name: string): void;
-
 	checkLevelUp(): void;
+	nextZone(): void;
 }
 
 // Add static methods here

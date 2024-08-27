@@ -6,6 +6,7 @@ import {
 	ItemRarity,
 	Stat,
 	WeaponType,
+	Zone,
 } from "@common/utils/enums/index";
 
 export const GOLD_MULTIPLIER = 5;
@@ -14,8 +15,6 @@ export const REST_MULTIPLIER = 20;
 
 export const SHOP_ARMOURS = 5;
 export const SHOP_WEAPONS = 5;
-
-export const NUMBER_OF_FLOORS = 3;
 
 export const MODIFIERS = new Map([
 	[1, -5],
@@ -184,3 +183,7 @@ export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>
 		},
 	],
 ]);
+
+export const ZONES = [Zone.Forest, Zone.Hills, Zone.Hell];
+
+export const NUM_OF_ZONES = ZONES.length;

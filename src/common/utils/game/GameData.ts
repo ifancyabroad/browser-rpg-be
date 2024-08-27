@@ -2,10 +2,9 @@ import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/g
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { LEVEL_ITEM_WEIGHT_MAP, NUMBER_OF_FLOORS, SKILL_LEVELS } from "@common/utils/constants";
-import { EquipmentSlot, RoomType } from "@common/utils/enums";
-import { IRoom } from "@common/types/map";
-import { Dungeon } from "@common/utils/game";
+import { LEVEL_ITEM_WEIGHT_MAP, SKILL_LEVELS, ZONES } from "@common/utils/constants";
+import { EquipmentSlot } from "@common/utils/enums";
+import { IZone } from "@common/types/hero";
 
 export class GameData {
 	public static getClasses() {
@@ -200,18 +199,21 @@ export class GameData {
 		}
 	}
 
-	public static getLevels() {
-		return Array.from({ length: NUMBER_OF_FLOORS }, (_, index) => {
-			return new Dungeon({ level: index }).createMap();
-		});
-	}
+	public static getZone(level?: number) {
+		try {
+			if (!level) {
+				return { name: ZONES[0], level: 1 };
+			}
 
-	public static getStartingLocation(maps: RoomType[][][], level = 0) {
-		let x: number, y: number;
-		y = maps[level].findIndex((row) => {
-			x = row.findIndex((type) => type === RoomType.Entrance);
-			return x > -1;
-		});
-		return { level, x, y };
+			const zone = ZONES[level - 1];
+			if (!zone) {
+				throw new Error(`Zone not found for level ${level}`);
+			}
+
+			return { name: zone, level };
+		} catch (error) {
+			console.error(`Error getZone: ${error.message}`);
+			throw error;
+		}
 	}
 }

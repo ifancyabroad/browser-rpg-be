@@ -137,50 +137,15 @@ export enum HitType {
 	Miss = "miss",
 }
 
-export enum RoomType {
-	None,
-	Empty,
-	Wall,
-	Battle,
-	Boss,
-	Shop,
-	Treasure,
-	Rest,
-	Entrance,
-	Exit,
-}
-
-export enum RoomState {
-	Idle = "idle",
-	Blocking = "blocking",
-	Complete = "complete",
-}
-
-export enum JunctionType {
-	None,
-	End,
-	Corner,
-	Straight,
-	TJunction,
-	Cross,
-}
-
-export enum Tile {
-	None,
-	WallTopSplit,
-	WallBottomEnd,
-	WallVertical,
-	WallHorizontal,
-	WallTopLeft,
-	WallTopRight,
-	WallBottomLeft,
-	WallBottomRight,
-	Ground,
-}
-
 export enum ItemRarity {
 	Common = 1,
 	Uncommon = 2,
 	Rare = 3,
 	Epic = 4,
+}
+
+export enum Zone {
+	Forest = "forest",
+	Hills = "hills",
+	Hell = "hell",
 }

@@ -4,7 +4,6 @@ import expressAsyncHandler from "express-async-handler";
 import { RequestUser } from "@common/types/user";
 import { action, getBattle, startBattle } from "@services/battle.service";
 import { RequestAction } from "@common/types/battle";
-import { RequestMove } from "@common/types/map";
 
 const battleRouter = Router();
 
@@ -13,8 +12,8 @@ const battleRouter = Router();
 battleRouter.post(
 	"/start",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const battle = await startBattle(req.body, req.session);
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const battle = await startBattle(req.session);
 		res.json(battle);
 	}),
 );

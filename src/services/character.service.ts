@@ -6,8 +6,8 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
-import MapModel from "@models/map.model";
-import { IMapLocation } from "@common/types/map";
+import { IZone } from "@common/types/hero";
+import { NUM_OF_ZONES } from "@common/utils";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -33,6 +33,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			throw createHttpError(httpStatus.BAD_REQUEST, `An active character already exists`);
 		}
 
+		const zone = GameData.getZone();
 		const classData = GameData.getCharacterClassById(characterClass);
 		const hitPoints = Game.getHitPoints();
 		const skills = classData.skills.map((id) => ({
@@ -41,14 +42,10 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getClassItems(characterClass, 0, 6);
 
-		const levels = GameData.getLevels();
-		const location = GameData.getStartingLocation(levels);
-		const map = await MapModel.create({ levels, location });
-
 		const characterRecord = await HeroModel.create({
 			user: user.id,
-			map: map.id,
 			name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
+			zone,
 			characterClassID: characterClass,
 			skillIDs: skills,
 			equipmentIDs: classData.equipment,
@@ -85,7 +82,7 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 }
 
 export async function buyItem(item: IBuyItemInput, session: Session & Partial<SessionData>) {
-	const { id, slot, location } = item;
+	const { id, slot } = item;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -97,21 +94,9 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy item");
 		}
 
-		const mapRecord = await MapModel.findById(characterRecord.map.id);
-		mapRecord.move(location);
-		if (!mapRecord.isShop) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No shop in this room");
-		}
-
 		characterRecord.checkItem(id, slot);
 		characterRecord.buyItem(id);
 		characterRecord.equipItem(id, slot);
-
-		if (!characterRecord.availableItems.length) {
-			mapRecord.completeRoom();
-		}
-
-		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return character.toJSON();
@@ -121,7 +106,7 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 	}
 }
 
-export async function rest(location: IMapLocation, session: Session & Partial<SessionData>) {
+export async function rest(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -132,15 +117,6 @@ export async function rest(location: IMapLocation, session: Session & Partial<Se
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
 		}
-
-		const mapRecord = await MapModel.findById(characterRecord.map.id);
-		mapRecord.move(location);
-		if (!mapRecord.isRest) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No campfire in this room");
-		}
-
-		mapRecord.completeRoom();
-		await mapRecord.save();
 
 		characterRecord.rest();
 		const character = await characterRecord.save();
@@ -175,32 +151,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 	}
 }
 
-export async function move(location: IMapLocation, session: Session & Partial<SessionData>) {
-	const { user } = session;
-	try {
-		const characterRecord = await HeroModel.findOne({
-			user: user.id,
-			status: Status.Alive,
-			state: State.Idle,
-		});
-		if (!characterRecord) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to move");
-		}
-
-		const mapRecord = await MapModel.findById(characterRecord.map);
-
-		mapRecord.move(location);
-		await mapRecord.save();
-		const character = await characterRecord.save();
-
-		return character.toJSON();
-	} catch (error) {
-		console.error(`Error move: ${error.message}`);
-		throw error;
-	}
-}
-
-export async function nextLevel(location: IMapLocation, session: Session & Partial<SessionData>) {
+export async function nextZone(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -212,20 +163,13 @@ export async function nextLevel(location: IMapLocation, session: Session & Parti
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
 		}
 
-		const mapRecord = await MapModel.findById(characterRecord.map);
-		mapRecord.move(location);
-		if (!mapRecord.isExit) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No exit in this room");
-		}
-
-		if (mapRecord.isFinalLevel) {
+		if (characterRecord.zone.level === NUM_OF_ZONES - 1) {
 			characterRecord.status = Status.Complete;
 		} else {
-			mapRecord.nextLevel();
-			characterRecord.restock(mapRecord.location.level);
+			characterRecord.nextZone();
+			characterRecord.restock(characterRecord.zone.level);
 		}
 
-		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return character.toJSON();
@@ -235,7 +179,7 @@ export async function nextLevel(location: IMapLocation, session: Session & Parti
 	}
 }
 
-export async function createTreasure(location: IMapLocation, session: Session & Partial<SessionData>) {
+export async function createTreasure(zone: IZone, session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -247,14 +191,7 @@ export async function createTreasure(location: IMapLocation, session: Session & 
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
 		}
 
-		const mapRecord = await MapModel.findById(characterRecord.map);
-		mapRecord.move(location);
-		if (!mapRecord.isTreasure) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No treasure in this room");
-		}
-
-		mapRecord.createTreasure(location, characterRecord.characterClassID);
-		await mapRecord.save();
+		// TODO: Add treasure creation logic
 
 		const character = await characterRecord.save();
 
@@ -266,7 +203,7 @@ export async function createTreasure(location: IMapLocation, session: Session & 
 }
 
 export async function takeTreasure(item: ITreasureInput, session: Session & Partial<SessionData>) {
-	const { id, slot, location } = item;
+	const { id, slot } = item;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -278,28 +215,16 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
 		}
 
-		const mapRecord = await MapModel.findById(characterRecord.map);
-		mapRecord.move(location);
-		if (!mapRecord.isTreasure) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No treasure in this room");
-		}
-
-		const treasure = mapRecord.getTreasure(location);
-		if (id && !treasure.itemIDs.includes(id)) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "Item is not available!");
-		}
+		// TODO: Add treasure taking logic
 
 		if (id) {
 			characterRecord.checkItem(id, slot);
 			characterRecord.equipItem(id, slot);
 		} else {
-			const goldReward = mapRecord.location.level * 25;
+			const goldReward = characterRecord.zone.level * 25;
 			characterRecord.gold += goldReward;
 		}
 
-		mapRecord.completeRoom();
-
-		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return character.toJSON();

@@ -8,16 +8,14 @@ import {
 	createTreasure,
 	getActiveCharacter,
 	levelUp,
-	move,
-	nextLevel,
+	nextZone,
 	rest,
 	retireActiveCharacter,
 	takeTreasure,
 } from "@services/character.service";
-import { RequestCharacter, RequestItem, RequestLevelUp, RequestTreasure } from "@common/types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp, RequestTreasure, RequestZone } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@common/utils/game/GameData";
-import { RequestMove } from "@common/types/map";
 
 const characterRouter = Router();
 
@@ -82,8 +80,8 @@ characterRouter.post(
 characterRouter.post(
 	"/rest",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const character = await rest(req.body, req.session);
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const character = await rest(req.session);
 		res.json({ character });
 	}),
 );
@@ -99,24 +97,13 @@ characterRouter.post(
 	}),
 );
 
-// @POST '/character/move'
-// @DEST Level up your character
+// @POST '/character/nextZone'
+// @DEST Proceed to the next zone
 characterRouter.post(
-	"/move",
+	"/nextZone",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const character = await move(req.body, req.session);
-		res.json({ character });
-	}),
-);
-
-// @POST '/character/nextLevel'
-// @DEST Proceed to the next dungeon level
-characterRouter.post(
-	"/nextLevel",
-	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestMove, res: Response) => {
-		const character = await nextLevel(req.body, req.session);
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const character = await nextZone(req.session);
 		res.json({ character });
 	}),
 );
@@ -126,7 +113,7 @@ characterRouter.post(
 characterRouter.post(
 	"/createTreasure",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestMove, res: Response) => {
+	expressAsyncHandler(async (req: RequestZone, res: Response) => {
 		const character = await createTreasure(req.body, req.session);
 		res.json({ character });
 	}),

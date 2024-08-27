@@ -8,10 +8,8 @@ import { IBattleInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
-import MapModel from "@models/map.model";
-import { IMapLocation } from "@common/types/map";
 
-export async function startBattle(location: IMapLocation, session: Session & Partial<SessionData>) {
+export async function startBattle(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -31,14 +29,9 @@ export async function startBattle(location: IMapLocation, session: Session & Par
 			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
-		const mapRecord = await MapModel.findById(characterRecord.map.id);
-		mapRecord.move(location);
-		if (!mapRecord.isBattle && !mapRecord.isBoss) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No battle in this room");
-		}
-
-		const enemyData = GameData.getEnemy(mapRecord.location.level + 1, mapRecord.isBoss);
-		const level = enemyData.challenge;
+		const isBoss = characterRecord.kills % 10 === 0;
+		const enemyData = GameData.getEnemy(characterRecord.zone.level, isBoss);
+		const level = characterRecord.day;
 		const hitPoints = Game.getHitPoints(level);
 		const skills = enemyData.skills.map((id) => ({
 			id,
@@ -67,13 +60,11 @@ export async function startBattle(location: IMapLocation, session: Session & Par
 			user: user.id,
 			hero: characterRecord.id,
 			enemy: enemy.id,
-			map: mapRecord.id,
-			location: mapRecord.location,
+			zone: characterRecord.zone,
 		});
 
 		characterRecord.state = State.Battle;
 
-		await mapRecord.save();
 		const character = await characterRecord.save();
 
 		return {
@@ -154,8 +145,6 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		battleRecord.turns.push(turn);
 
-		const mapRecord = await MapModel.findById(characterRecord.map);
-
 		if (!characterRecord.alive) {
 			battleRecord.state = BattleState.Lost;
 			characterRecord.battleLost(enemyRecord.name);
@@ -165,8 +154,6 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.handleReward(characterRecord, enemyRecord);
 			battleRecord.state = BattleState.Won;
 			characterRecord.battleWon(battleRecord.reward);
-			mapRecord.completeRoom();
-			await mapRecord.save();
 		}
 
 		const character = await characterRecord.save();

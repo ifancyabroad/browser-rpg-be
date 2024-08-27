@@ -3,9 +3,8 @@ import { Request } from "express";
 import { Model, Types } from "mongoose";
 import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
 import { ICharacter, ICharacterMethods } from "./character";
-import { IHero, IHeroMethods } from "./hero";
+import { IHero, IHeroMethods, IZone } from "./hero";
 import { IEnemy, IEnemyMethods } from "./enemy";
-import { IMapLocation } from "./map";
 
 export interface IReward {
 	gold: number;
@@ -28,8 +27,7 @@ export interface IBattle {
 	user: Types.ObjectId;
 	hero: Types.ObjectId;
 	enemy: Types.ObjectId;
-	map: Types.ObjectId;
-	location: IMapLocation;
+	zone: IZone;
 	turns: Types.DocumentArray<IAction[]>;
 	state: BattleState;
 	reward?: IReward;

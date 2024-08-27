@@ -7,17 +7,13 @@ import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@commo
 import { Game } from "@common/utils/game/Game";
 import { IReward } from "@common/types/battle";
 import mongooseAutoPopulate from "mongoose-autopopulate";
+import { zoneSchema } from "./zone.model";
 
 const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 	{
 		user: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
-		},
-		map: {
-			type: Schema.Types.ObjectId,
-			ref: "Map",
-			autopopulate: true,
 		},
 		characterClassID: {
 			type: String,
@@ -62,6 +58,10 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			skills: {
 				type: [String],
 			},
+		},
+		zone: {
+			type: zoneSchema,
+			required: true,
 		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
@@ -126,7 +126,9 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 });
 
 heroSchema.method("rest", function rest() {
+	// TODO: Exhaust rest for this zone
 	this.day++;
+	this.restock(this.zone.level);
 	this.setHitPoints(this.baseMaxHitPoints);
 	this.skillIDs.forEach((skill) => {
 		const skillData = this.skills.find((sk) => sk.id === skill.id);
@@ -134,7 +136,7 @@ heroSchema.method("rest", function rest() {
 	});
 });
 
-heroSchema.method("restock", function restock(level) {
+heroSchema.method("restock", function restock(level: number) {
 	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, level, 6));
 });
 
@@ -224,6 +226,10 @@ heroSchema.method("checkLevelUp", function checkLevelUp() {
 			: [];
 		this.levelUp = { level, skills: skills as Types.Array<string> };
 	}
+});
+
+heroSchema.method("nextZone", function nextZone() {
+	this.zone = GameData.getZone(this.zone.level + 1);
 });
 
 heroSchema.index({ user: 1, state: 1 });

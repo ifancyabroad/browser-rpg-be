@@ -12,7 +12,7 @@ import { IHero, IHeroMethods } from "@common/types/hero";
 import { IEnemy, IEnemyMethods } from "@common/types/enemy";
 import { EXPERIENCE_MULTIPLIER, GOLD_MULTIPLIER } from "@common/utils";
 import mongooseAutoPopulate from "mongoose-autopopulate";
-import { locationSchema } from "./location.model";
+import { zoneSchema } from "./zone.model";
 
 const actionSchema = new Schema<IAction, Model<IAction>>(
 	{
@@ -53,12 +53,8 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			ref: "Enemy",
 			autopopulate: true,
 		},
-		map: {
-			type: Schema.Types.ObjectId,
-			ref: "Map",
-		},
-		location: {
-			type: locationSchema,
+		zone: {
+			type: zoneSchema,
 			required: true,
 		},
 		turns: {
