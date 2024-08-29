@@ -1,9 +1,9 @@
-import { BattleState } from "@common/utils/enums/index";
+import { BattleResult, BattleState, EquipmentSlot, Zone } from "@common/utils/enums/index";
 import { Request } from "express";
 import { Model, Types } from "mongoose";
 import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
 import { ICharacter, ICharacterMethods } from "./character";
-import { IHero, IHeroMethods, IZone } from "./hero";
+import { IHero, IHeroMethods } from "./hero";
 import { IEnemy, IEnemyMethods } from "./enemy";
 
 export interface IReward {
@@ -27,10 +27,12 @@ export interface IBattle {
 	user: Types.ObjectId;
 	hero: Types.ObjectId;
 	enemy: Types.ObjectId;
-	zone: IZone;
+	zone: Zone;
 	turns: Types.DocumentArray<IAction[]>;
 	state: BattleState;
+	result?: BattleResult;
 	reward?: IReward;
+	treasureItemIDs?: string[];
 }
 
 export interface IBattleMethods {
@@ -40,6 +42,7 @@ export interface IBattleMethods {
 	handleAction(first: ITurnData, second: ITurnData): IAction[];
 	handleTurn(hero: ITurnData, enemy: ITurnData): IAction[];
 	handleReward(hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods): void;
+	handleTreasure(hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods): void;
 }
 
 // Add static methods here
@@ -59,4 +62,21 @@ export interface ITurnData {
 	self: ICharacter & ICharacterMethods;
 	enemy: ICharacter & ICharacterMethods;
 	skill: string;
+}
+
+export interface ITreasureInput {
+	id?: string;
+	slot?: EquipmentSlot;
+}
+
+export interface RequestTreasure extends Request {
+	item: ITreasureInput;
+}
+
+export interface IZoneInput {
+	zone: Zone;
+}
+
+export interface RequestZone extends Request {
+	zone: IZoneInput;
 }

@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import { BattleState, Target } from "@common/utils/enums/index";
+import { BattleResult, BattleState, Target, Zone } from "@common/utils/enums/index";
 import {
 	activeEffectSchema,
 	auxiliaryEffectSchema,
@@ -10,9 +10,8 @@ import {
 import { IAction, IBattle, IBattleMethods, IBattleModel, ITurnData } from "@common/types/battle";
 import { IHero, IHeroMethods } from "@common/types/hero";
 import { IEnemy, IEnemyMethods } from "@common/types/enemy";
-import { EXPERIENCE_MULTIPLIER, GOLD_MULTIPLIER } from "@common/utils";
+import { EXPERIENCE_MULTIPLIER, GameData, GOLD_MULTIPLIER } from "@common/utils";
 import mongooseAutoPopulate from "mongoose-autopopulate";
-import { zoneSchema } from "./zone.model";
 
 const actionSchema = new Schema<IAction, Model<IAction>>(
 	{
@@ -54,7 +53,8 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			autopopulate: true,
 		},
 		zone: {
-			type: zoneSchema,
+			type: String,
+			enum: Zone,
 			required: true,
 		},
 		turns: {
@@ -65,6 +65,10 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			enum: BattleState,
 			default: BattleState.Active,
 		},
+		result: {
+			type: String,
+			enum: BattleResult,
+		},
 		reward: {
 			gold: {
 				type: Number,
@@ -72,6 +76,9 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			experience: {
 				type: Number,
 			},
+		},
+		treasureItemIDs: {
+			type: [String],
 		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
@@ -108,6 +115,14 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 	const gold = GOLD_MULTIPLIER * (enemy.level * enemy.rating);
 	const experience = EXPERIENCE_MULTIPLIER * (enemy.level * enemy.rating);
 	this.reward = { gold: gold * hero.goldMultiplier, experience };
+});
+
+battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
+	if (enemy.boss) {
+		this.treasureItemIDs = GameData.getClassItems(hero.characterClassID, hero.zone, 2);
+	} else {
+		this.state = BattleState.Complete;
+	}
 });
 
 battleSchema.index({ hero: 1, state: 1 });

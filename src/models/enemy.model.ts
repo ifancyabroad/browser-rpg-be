@@ -22,6 +22,10 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			max: 30,
 			required: true,
 		},
+		boss: {
+			type: Boolean,
+			default: false,
+		},
 		naturalArmourClass: {
 			type: Number,
 			min: 0,

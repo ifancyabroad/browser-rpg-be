@@ -7,6 +7,7 @@ import { DamageType } from "@common/utils";
 export interface IEnemy extends ICharacter {
 	image: string;
 	challenge: number;
+	boss: boolean;
 	naturalArmourClass: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;

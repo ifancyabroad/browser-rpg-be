@@ -1,13 +1,8 @@
 import { Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
-import { EquipmentSlot, Stat, State } from "@common/utils";
+import { EquipmentSlot, Stat, State, Zone } from "@common/utils";
 import { IClassDataWithID, ISkillDataWithID, TEquipmentDataWithID } from "./gameData";
 import { IReward } from "./battle";
-
-export interface IZone {
-	name: string;
-	level: number;
-}
 
 export interface ILevelUp {
 	level: number;
@@ -23,12 +18,13 @@ export interface IHero extends ICharacter {
 	user: Types.ObjectId;
 	characterClassID: string;
 	state: State;
+	zone: Zone;
 	experience: number;
 	gold: number;
 	day: number;
 	kills: number;
+	streak: number;
 	availableItemIDs: Types.Array<string>;
-	zone: IZone;
 	levelUp?: ILevelUp;
 	slainBy?: string;
 }
@@ -47,14 +43,13 @@ export interface IHeroMethods extends ICharacterMethods {
 	addExperience(xp: number): void;
 	addLevel(stat: Stat, skill?: string): void;
 	rest(): void;
-	restock(level: number): void;
+	restock(): void;
 	buyItem(id: string): void;
 	checkItem(id: string, slot: EquipmentSlot): void;
 	equipItem(id: string, slot: EquipmentSlot): void;
 	battleWon(reward: IReward): void;
 	battleLost(name: string): void;
 	checkLevelUp(): void;
-	nextZone(): void;
 }
 
 // Add static methods here

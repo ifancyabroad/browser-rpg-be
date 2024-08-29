@@ -145,9 +145,9 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Miss, 0],
 ]);
 
-export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>([
+export const ZONE_ITEM_WEIGHT_MAP = new Map<Zone, Record<ItemRarity, number>>([
 	[
-		0,
+		Zone.Town,
 		{
 			[ItemRarity.Common]: 0.4,
 			[ItemRarity.Uncommon]: 0.3,
@@ -156,7 +156,7 @@ export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>
 		},
 	],
 	[
-		1,
+		Zone.Forest,
 		{
 			[ItemRarity.Common]: 0.3,
 			[ItemRarity.Uncommon]: 0.3,
@@ -165,7 +165,7 @@ export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>
 		},
 	],
 	[
-		2,
+		Zone.Hills,
 		{
 			[ItemRarity.Common]: 0.2,
 			[ItemRarity.Uncommon]: 0.3,
@@ -174,7 +174,7 @@ export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>
 		},
 	],
 	[
-		3,
+		Zone.Hell,
 		{
 			[ItemRarity.Common]: 0.1,
 			[ItemRarity.Uncommon]: 0.2,
@@ -184,6 +184,9 @@ export const LEVEL_ITEM_WEIGHT_MAP = new Map<number, Record<ItemRarity, number>>
 	],
 ]);
 
-export const ZONES = [Zone.Forest, Zone.Hills, Zone.Hell];
-
-export const NUM_OF_ZONES = ZONES.length;
+export const ZONE_CHALLENGE_RATING_MAP = new Map([
+	[Zone.Town, 1],
+	[Zone.Forest, 1],
+	[Zone.Hills, 2],
+	[Zone.Hell, 3],
+]);

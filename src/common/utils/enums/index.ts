@@ -33,6 +33,10 @@ export enum State {
 
 export enum BattleState {
 	Active = "active",
+	Complete = "complete",
+}
+
+export enum BattleResult {
 	Won = "won",
 	Lost = "lost",
 }
@@ -145,6 +149,7 @@ export enum ItemRarity {
 }
 
 export enum Zone {
+	Town = "town",
 	Forest = "forest",
 	Hills = "hills",
 	Hell = "hell",

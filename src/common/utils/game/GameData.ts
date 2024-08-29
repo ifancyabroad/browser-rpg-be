@@ -2,9 +2,8 @@ import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/g
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { LEVEL_ITEM_WEIGHT_MAP, SKILL_LEVELS, ZONES } from "@common/utils/constants";
-import { EquipmentSlot } from "@common/utils/enums";
-import { IZone } from "@common/types/hero";
+import { SKILL_LEVELS, ZONE_ITEM_WEIGHT_MAP } from "@common/utils/constants";
+import { EquipmentSlot, Zone } from "@common/utils/enums";
 
 export class GameData {
 	public static getClasses() {
@@ -124,7 +123,7 @@ export class GameData {
 		>;
 	}
 
-	public static getClassItems(classID: string, currentLevel: number, amount: number) {
+	public static getClassItems(classID: string, zone: Zone, amount: number) {
 		try {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
@@ -139,10 +138,10 @@ export class GameData {
 
 			const items = filteredArmours.concat(filteredWeapons);
 
-			const weights = LEVEL_ITEM_WEIGHT_MAP.get(currentLevel);
+			const weights = ZONE_ITEM_WEIGHT_MAP.get(zone);
 
 			if (!weights) {
-				throw new Error(`Weights not found for level ${currentLevel}`);
+				throw new Error(`Weights not found for ${zone} zone`);
 			}
 
 			const weightedItems = [] as string[];
@@ -195,24 +194,6 @@ export class GameData {
 			return getMultipleRandom(filteredSkills, 3);
 		} catch (error) {
 			console.error(`Error getLevelUpSkills: ${error.message}`);
-			throw error;
-		}
-	}
-
-	public static getZone(level?: number) {
-		try {
-			if (!level) {
-				return { name: ZONES[0], level: 1 };
-			}
-
-			const zone = ZONES[level - 1];
-			if (!zone) {
-				throw new Error(`Zone not found for level ${level}`);
-			}
-
-			return { name: zone, level };
-		} catch (error) {
-			console.error(`Error getZone: ${error.message}`);
 			throw error;
 		}
 	}

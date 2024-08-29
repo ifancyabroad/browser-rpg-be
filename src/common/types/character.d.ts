@@ -22,7 +22,6 @@ import {
 	TStats,
 } from "./gameData";
 import { IAction, ITurnData } from "./battle";
-import { IZone } from "./hero";
 
 export interface ISkill {
 	id: string;
@@ -130,18 +129,4 @@ export interface ILevelUpInput {
 
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
-}
-
-export interface ITreasureInput {
-	id?: string;
-	slot?: EquipmentSlot;
-	zone: IZone;
-}
-
-export interface RequestTreasure extends Request {
-	item: ITreasureInput;
-}
-
-export interface RequestZone extends Request {
-	zone: IZone;
 }

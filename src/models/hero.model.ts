@@ -1,5 +1,5 @@
 import { Schema, Types } from "mongoose";
-import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@common/utils/enums/index";
+import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize, Zone } from "@common/utils/enums/index";
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
@@ -7,7 +7,6 @@ import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@commo
 import { Game } from "@common/utils/game/Game";
 import { IReward } from "@common/types/battle";
 import mongooseAutoPopulate from "mongoose-autopopulate";
-import { zoneSchema } from "./zone.model";
 
 const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 	{
@@ -23,6 +22,11 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			type: String,
 			enum: State,
 			default: State.Idle,
+		},
+		zone: {
+			type: String,
+			enum: Zone,
+			default: Zone.Town,
 		},
 		experience: {
 			type: Number,
@@ -44,6 +48,11 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			min: 0,
 			default: 0,
 		},
+		streak: {
+			type: Number,
+			min: 0,
+			default: 0,
+		},
 		slainBy: {
 			type: String,
 		},
@@ -58,10 +67,6 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			skills: {
 				type: [String],
 			},
-		},
-		zone: {
-			type: zoneSchema,
-			required: true,
 		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
@@ -126,9 +131,8 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 });
 
 heroSchema.method("rest", function rest() {
-	// TODO: Exhaust rest for this zone
 	this.day++;
-	this.restock(this.zone.level);
+	this.restock();
 	this.setHitPoints(this.baseMaxHitPoints);
 	this.skillIDs.forEach((skill) => {
 		const skillData = this.skills.find((sk) => sk.id === skill.id);
@@ -136,8 +140,8 @@ heroSchema.method("rest", function rest() {
 	});
 });
 
-heroSchema.method("restock", function restock(level: number) {
-	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, level, 6));
+heroSchema.method("restock", function restock() {
+	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, Zone.Town, 6));
 });
 
 heroSchema.method("buyItem", function buyItem(id: string) {
@@ -209,9 +213,9 @@ heroSchema.method("battleWon", function battleWon(reward: IReward) {
 	this.addExperience(reward.experience);
 	this.gold += reward.gold;
 	this.kills++;
+	this.streak++;
 	this.set("activeStatusEffects", []);
 	this.set("activeAuxiliaryEffects", []);
-	this.state = State.Idle;
 });
 
 heroSchema.method("battleLost", function battleLost(name: string) {
@@ -226,10 +230,6 @@ heroSchema.method("checkLevelUp", function checkLevelUp() {
 			: [];
 		this.levelUp = { level, skills: skills as Types.Array<string> };
 	}
-});
-
-heroSchema.method("nextZone", function nextZone() {
-	this.zone = GameData.getZone(this.zone.level + 1);
 });
 
 heroSchema.index({ user: 1, state: 1 });
