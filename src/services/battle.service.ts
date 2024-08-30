@@ -9,6 +9,38 @@ import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import { ZONE_CHALLENGE_RATING_MAP } from "@common/utils";
+import { IHero } from "@common/types/hero";
+
+function getEnemyData(zone: Zone, characterRecord: IHero) {
+	const challengeRating = ZONE_CHALLENGE_RATING_MAP.get(zone);
+	const isBoss = characterRecord.streak % 10 === 0;
+	const enemyData = GameData.getEnemy(challengeRating, isBoss);
+	const level = characterRecord.day;
+	const hitPoints = Game.getHitPoints(level);
+	const skills = enemyData.skills.map((id) => ({
+		id,
+		remaining: GameData.getSkillById(id).maxUses,
+	}));
+	const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
+
+	return {
+		name: enemyData.name,
+		image: enemyData.portrait,
+		level,
+		challenge: enemyData.challenge,
+		boss: isBoss,
+		skillIDs: skills,
+		equipmentIDs: equipment,
+		baseStats: enemyData.stats,
+		baseResistances: enemyData.resistances,
+		baseHitPoints: hitPoints,
+		baseMaxHitPoints: hitPoints,
+		naturalArmourClass: enemyData.naturalArmourClass,
+		naturalMinDamage: enemyData.naturalMinDamage,
+		naturalMaxDamage: enemyData.naturalMaxDamage,
+		naturalDamageType: enemyData.naturalDamageType,
+	};
+}
 
 export async function startBattle(zone: Zone, session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -17,6 +49,7 @@ export async function startBattle(zone: Zone, session: Session & Partial<Session
 			user: user.id,
 			status: Status.Alive,
 			state: State.Idle,
+			zone: Zone.Town,
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
@@ -30,36 +63,9 @@ export async function startBattle(zone: Zone, session: Session & Partial<Session
 			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
-		// TODO: Add zone validation
+		const enemyData = getEnemyData(zone, characterRecord);
 
-		const challengeRating = ZONE_CHALLENGE_RATING_MAP.get(zone);
-		const isBoss = characterRecord.streak % 10 === 0;
-		const enemyData = GameData.getEnemy(challengeRating, isBoss);
-		const level = characterRecord.day;
-		const hitPoints = Game.getHitPoints(level);
-		const skills = enemyData.skills.map((id) => ({
-			id,
-			remaining: GameData.getSkillById(id).maxUses,
-		}));
-		const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
-
-		const enemy = await EnemyModel.create({
-			name: enemyData.name,
-			image: enemyData.portrait,
-			level,
-			challenge: enemyData.challenge,
-			boss: isBoss,
-			skillIDs: skills,
-			equipmentIDs: equipment,
-			baseStats: enemyData.stats,
-			baseResistances: enemyData.resistances,
-			baseHitPoints: hitPoints,
-			baseMaxHitPoints: hitPoints,
-			naturalArmourClass: enemyData.naturalArmourClass,
-			naturalMinDamage: enemyData.naturalMinDamage,
-			naturalMaxDamage: enemyData.naturalMaxDamage,
-			naturalDamageType: enemyData.naturalDamageType,
-		});
+		const enemy = await EnemyModel.create(enemyData);
 
 		const battle = await BattleModel.create({
 			user: user.id,
@@ -79,6 +85,51 @@ export async function startBattle(zone: Zone, session: Session & Partial<Session
 		};
 	} catch (error) {
 		console.error(`Error startBattle: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function nextBattle(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
+		}
+
+		const battleRecord = await BattleModel.findOne({
+			hero: characterRecord.id,
+			state: BattleState.Active,
+			result: BattleResult.Won,
+		});
+		if (!battleRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
+		}
+
+		const enemyData = getEnemyData(characterRecord.zone, characterRecord);
+
+		const enemy = await EnemyModel.create(enemyData);
+
+		battleRecord.state = BattleState.Complete;
+		await battleRecord.save();
+
+		const battle = await BattleModel.create({
+			user: user.id,
+			hero: characterRecord.id,
+			enemy: enemy.id,
+			zone: characterRecord.zone,
+		});
+
+		return {
+			battle: battle.toJSON(),
+			character: characterRecord.toJSON(),
+		};
+	} catch (error) {
+		console.error(`Error nextBattle: ${error.message}`);
 		throw error;
 	}
 }
