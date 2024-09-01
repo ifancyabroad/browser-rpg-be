@@ -304,7 +304,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			characterRecord.gold += goldReward;
 		}
 
-		battleRecord.set("treasureItemIDs", undefined);
+		battleRecord.set("treasureItemIDs", []);
 
 		const character = await characterRecord.save();
 		const battle = await battleRecord.save();

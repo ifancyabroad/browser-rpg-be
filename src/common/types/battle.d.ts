@@ -33,7 +33,7 @@ export interface IBattle {
 	state: BattleState;
 	result?: BattleResult;
 	reward?: IReward;
-	treasureItemIDs?: string[];
+	treasureItemIDs: string[];
 }
 
 export interface IBattleMethods {
