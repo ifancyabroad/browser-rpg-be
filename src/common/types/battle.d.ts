@@ -5,6 +5,7 @@ import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, I
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero, IHeroMethods } from "./hero";
 import { IEnemy, IEnemyMethods } from "./enemy";
+import { TEquipmentDataWithID } from "./gameData";
 
 export interface IReward {
 	gold: number;
@@ -37,6 +38,7 @@ export interface IBattle {
 
 export interface IBattleMethods {
 	// Add virtuals here
+	get treasure(): TEquipmentDataWithID[];
 
 	// Add methods here
 	handleAction(first: ITurnData, second: ITurnData): IAction[];

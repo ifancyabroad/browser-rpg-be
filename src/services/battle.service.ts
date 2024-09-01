@@ -4,7 +4,7 @@ import { Session, SessionData } from "express-session";
 import { BattleResult, BattleState, State, Status, Zone } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
-import { IBattleInput, ITreasureInput } from "@common/types/battle";
+import { IBattleInput, ITreasureInput, IZoneInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
@@ -42,7 +42,8 @@ function getEnemyData(zone: Zone, characterRecord: IHero) {
 	};
 }
 
-export async function startBattle(zone: Zone, session: Session & Partial<SessionData>) {
+export async function startBattle(zoneInput: IZoneInput, session: Session & Partial<SessionData>) {
+	const { zone } = zoneInput;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({

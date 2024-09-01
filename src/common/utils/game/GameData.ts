@@ -147,8 +147,13 @@ export class GameData {
 			const weightedItems = [] as string[];
 			for (let i = 0; i < amount; i++) {
 				const rarity = weightedChoice(weights);
-				const pool = items.filter(({ id, level }) => level === rarity && !weightedItems.includes(id));
+				const pool = items.filter(({ id, level }) => level === +rarity && !weightedItems.includes(id));
 				const randomItem = getRandomElement(pool);
+
+				if (!randomItem) {
+					throw new Error(`No item found for rarity ${rarity}`);
+				}
+
 				weightedItems.push(randomItem.id);
 			}
 

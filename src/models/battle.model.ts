@@ -84,6 +84,10 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 	{ timestamps: true, toJSON: { virtuals: true } },
 );
 
+battleSchema.virtual("treasure").get(function () {
+	return GameData.populateAvailableItems(this.treasureItemIDs);
+});
+
 battleSchema.method("handleAction", function handleAction(first: ITurnData, second: ITurnData) {
 	const turn: IAction[] = [];
 	[first, second].forEach((data) => {
