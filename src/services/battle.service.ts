@@ -13,7 +13,7 @@ import { IHero } from "@common/types/hero";
 
 function getEnemyData(zone: Zone, characterRecord: IHero) {
 	const challengeRating = ZONE_CHALLENGE_RATING_MAP.get(zone);
-	const isBoss = characterRecord.streak % 10 === 0;
+	const isBoss = characterRecord.streak > 0 && characterRecord.streak % 10 === 0;
 	const enemyData = GameData.getEnemy(challengeRating, isBoss);
 	const level = characterRecord.day;
 	const hitPoints = Game.getHitPoints(level);
@@ -96,7 +96,7 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
-			state: State.Idle,
+			state: State.Battle,
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
@@ -276,7 +276,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
-			state: State.Idle,
+			state: State.Battle,
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to proceed");
@@ -304,7 +304,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			characterRecord.gold += goldReward;
 		}
 
-		battleRecord.state = BattleState.Complete;
+		battleRecord.set("treasureItemIDs", undefined);
 
 		const character = await characterRecord.save();
 		const battle = await battleRecord.save();

@@ -89,7 +89,7 @@ heroSchema.virtual("nextLevelExperience").get(function () {
 });
 
 heroSchema.virtual("levelUpData").get(function () {
-	if (this.levelUp) {
+	if (this.levelUp && this.levelUp.level) {
 		return {
 			...this.levelUp,
 			skills: GameData.populateSkillsFromID(this.levelUp.skills),
@@ -127,6 +127,7 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 	const hitPoints = Game.d10;
 	this.baseMaxHitPoints += hitPoints;
 	this.baseHitPoints = this.baseMaxHitPoints;
+	this.set("levelUp", undefined);
 	this.checkLevelUp();
 });
 

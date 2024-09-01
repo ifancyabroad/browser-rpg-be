@@ -131,7 +131,6 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
-			state: State.Idle,
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to level up");

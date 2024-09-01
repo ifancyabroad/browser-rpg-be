@@ -124,8 +124,6 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
 	if (enemy.boss) {
 		this.treasureItemIDs = GameData.getClassItems(hero.characterClassID, hero.zone, 2);
-	} else {
-		this.state = BattleState.Complete;
 	}
 });
 
