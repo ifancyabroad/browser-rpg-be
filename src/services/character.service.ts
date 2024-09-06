@@ -6,6 +6,7 @@ import { State, Status, Zone } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
+import { SHOP_ITEMS, SHOP_LEVEL } from "@common/utils";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -37,7 +38,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			id,
 			remaining: GameData.getSkillById(id).maxUses,
 		}));
-		const availableItems = GameData.getClassItems(characterClass, Zone.Town, 6);
+		const availableItems = GameData.getWeightedItems(characterClass, SHOP_ITEMS, SHOP_LEVEL);
 
 		const characterRecord = await HeroModel.create({
 			user: user.id,

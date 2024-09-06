@@ -4,19 +4,18 @@ import { Session, SessionData } from "express-session";
 import { BattleResult, BattleState, State, Status, Zone } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
-import { IBattleInput, ITreasureInput, IZoneInput } from "@common/types/battle";
+import { IBattleInput, ILevelInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
-import { ZONE_CHALLENGE_RATING_MAP } from "@common/utils";
-import { IHero } from "@common/types/hero";
+import { GOLD_MULTIPLIER } from "@common/utils";
 
-function getEnemyData(zone: Zone, characterRecord: IHero) {
-	const challengeRating = ZONE_CHALLENGE_RATING_MAP.get(zone);
-	const isBoss = characterRecord.streak > 0 && characterRecord.streak % 10 === 0;
-	const enemyData = GameData.getEnemy(challengeRating, isBoss);
-	const level = characterRecord.day;
+function getEnemyData(battleLevel: number) {
+	const rating = Game.getChallengeRating(battleLevel);
+	const isBoss = Game.getIsBoss(battleLevel);
+	const level = Game.getEnemyLevel(battleLevel);
 	const hitPoints = Game.getHitPoints(level);
+	const enemyData = GameData.getEnemy(rating, isBoss);
 	const skills = enemyData.skills.map((id) => ({
 		id,
 		remaining: GameData.getSkillById(id).maxUses,
@@ -42,15 +41,14 @@ function getEnemyData(zone: Zone, characterRecord: IHero) {
 	};
 }
 
-export async function startBattle(zoneInput: IZoneInput, session: Session & Partial<SessionData>) {
-	const { zone } = zoneInput;
+export async function startBattle(levelInput: ILevelInput, session: Session & Partial<SessionData>) {
+	const { level } = levelInput;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
 			user: user.id,
 			status: Status.Alive,
 			state: State.Idle,
-			zone: Zone.Town,
 		});
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
@@ -58,13 +56,19 @@ export async function startBattle(zoneInput: IZoneInput, session: Session & Part
 
 		const battleRecord = await BattleModel.findOne({
 			hero: characterRecord.id,
-			state: BattleState.Active,
 		});
-		if (battleRecord) {
+		if (battleRecord && battleRecord.state === BattleState.Active) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
-		const enemyData = getEnemyData(zone, characterRecord);
+		if (battleRecord) {
+			await EnemyModel.findByIdAndDelete(battleRecord.enemy);
+			await battleRecord.deleteOne();
+		}
+
+		const battleLevel = level ?? 1;
+		const zone = Game.getZone(battleLevel);
+		const enemyData = getEnemyData(battleLevel);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -76,8 +80,6 @@ export async function startBattle(zoneInput: IZoneInput, session: Session & Part
 		});
 
 		characterRecord.state = State.Battle;
-		characterRecord.zone = zone;
-
 		const character = await characterRecord.save();
 
 		return {
@@ -111,19 +113,22 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 		}
 
-		const enemyData = getEnemyData(characterRecord.zone, characterRecord);
+		const level = battleRecord.level + 1;
+		const zone = Game.getZone(level);
+		const enemyData = getEnemyData(level);
 
 		const enemy = await EnemyModel.create(enemyData);
-
-		battleRecord.state = BattleState.Complete;
-		await battleRecord.save();
 
 		const battle = await BattleModel.create({
 			user: user.id,
 			hero: characterRecord.id,
 			enemy: enemy.id,
-			zone: characterRecord.zone,
+			zone,
+			level,
 		});
+
+		await EnemyModel.findByIdAndDelete(battleRecord.enemy);
+		await battleRecord.deleteOne();
 
 		return {
 			battle: battle.toJSON(),
@@ -190,7 +195,6 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 
 		characterRecord.streak = 0;
 		characterRecord.state = State.Idle;
-		characterRecord.zone = Zone.Town;
 
 		const character = await characterRecord.save();
 		const battle = await battleRecord.save();
@@ -252,7 +256,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.handleReward(characterRecord, enemyRecord);
 			battleRecord.handleTreasure(characterRecord, enemyRecord);
 			battleRecord.result = BattleResult.Won;
-			characterRecord.battleWon(battleRecord.reward);
+			characterRecord.battleWon(battleRecord);
 		}
 
 		const character = await characterRecord.save();
@@ -299,8 +303,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			characterRecord.checkItem(id, slot);
 			characterRecord.equipItem(id, slot);
 		} else {
-			const multiplier = ZONE_CHALLENGE_RATING_MAP.get(characterRecord.zone);
-			const goldReward = multiplier * 25;
+			const goldReward = battleRecord.level * GOLD_MULTIPLIER;
 			characterRecord.gold += goldReward;
 		}
 

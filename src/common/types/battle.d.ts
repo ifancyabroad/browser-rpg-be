@@ -28,6 +28,7 @@ export interface IBattle {
 	user: Types.ObjectId;
 	hero: Types.ObjectId;
 	enemy: Types.ObjectId;
+	level: number;
 	zone: Zone;
 	turns: Types.DocumentArray<IAction[]>;
 	state: BattleState;
@@ -75,10 +76,10 @@ export interface RequestTreasure extends Request {
 	item: ITreasureInput;
 }
 
-export interface IZoneInput {
-	zone: Zone;
+export interface ILevelInput {
+	level?: number;
 }
 
-export interface RequestZone extends Request {
-	zone: IZoneInput;
+export interface RequestLevel extends Request {
+	level: ILevelInput;
 }

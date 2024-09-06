@@ -1,8 +1,8 @@
 import { Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
-import { EquipmentSlot, Stat, State, Zone } from "@common/utils";
+import { EquipmentSlot, Stat, State } from "@common/utils";
 import { IClassDataWithID, ISkillDataWithID, TEquipmentDataWithID } from "./gameData";
-import { IReward } from "./battle";
+import { IBattle, IBattleMethods } from "./battle";
 
 export interface ILevelUp {
 	level: number;
@@ -18,7 +18,7 @@ export interface IHero extends ICharacter {
 	user: Types.ObjectId;
 	characterClassID: string;
 	state: State;
-	zone: Zone;
+	maxBattleLevel: number;
 	experience: number;
 	gold: number;
 	day: number;
@@ -36,7 +36,6 @@ export interface IHeroMethods extends ICharacterMethods {
 	get currentLevelExperience(): number;
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
-	get goldMultiplier(): number;
 	get discountMultiplier(): number;
 
 	// Add methods here
@@ -47,7 +46,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	buyItem(id: string): void;
 	checkItem(id: string, slot: EquipmentSlot): void;
 	equipItem(id: string, slot: EquipmentSlot): void;
-	battleWon(reward: IReward): void;
+	battleWon(battle: IBattle & IBattleMethods): void;
 	battleLost(name: string): void;
 	checkLevelUp(): void;
 }

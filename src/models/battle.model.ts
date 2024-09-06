@@ -52,6 +52,10 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			ref: "Enemy",
 			autopopulate: true,
 		},
+		level: {
+			type: Number,
+			default: 1,
+		},
 		zone: {
 			type: String,
 			enum: Zone,
@@ -118,12 +122,12 @@ battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
 battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
 	const gold = GOLD_MULTIPLIER * (enemy.level * enemy.rating);
 	const experience = EXPERIENCE_MULTIPLIER * (enemy.level * enemy.rating);
-	this.reward = { gold: gold * hero.goldMultiplier, experience };
+	this.reward = { gold, experience };
 });
 
 battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
 	if (enemy.boss) {
-		this.treasureItemIDs = GameData.getClassItems(hero.characterClassID, hero.zone, 2);
+		this.treasureItemIDs = GameData.getWeightedItems(hero.characterClassID, 2, enemy.level);
 	}
 });
 

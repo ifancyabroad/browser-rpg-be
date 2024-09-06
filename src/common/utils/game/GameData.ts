@@ -2,8 +2,8 @@ import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/g
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { SKILL_LEVELS, ZONE_ITEM_WEIGHT_MAP } from "@common/utils/constants";
-import { EquipmentSlot, Zone } from "@common/utils/enums";
+import { ITEM_WEIGHT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
+import { EquipmentSlot } from "@common/utils/enums";
 
 export class GameData {
 	public static getClasses() {
@@ -123,7 +123,7 @@ export class GameData {
 		>;
 	}
 
-	public static getClassItems(classID: string, zone: Zone, amount: number) {
+	public static getClassItems(classID: string) {
 		try {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
@@ -136,32 +136,33 @@ export class GameData {
 				characterClass.weaponTypes.includes(weaponType),
 			);
 
-			const items = filteredArmours.concat(filteredWeapons);
-
-			const weights = ZONE_ITEM_WEIGHT_MAP.get(zone);
-
-			if (!weights) {
-				throw new Error(`Weights not found for ${zone} zone`);
-			}
-
-			const weightedItems = [] as string[];
-			for (let i = 0; i < amount; i++) {
-				const rarity = weightedChoice(weights);
-				const pool = items.filter(({ id, level }) => level === +rarity && !weightedItems.includes(id));
-				const randomItem = getRandomElement(pool);
-
-				if (!randomItem) {
-					throw new Error(`No item found for rarity ${rarity}`);
-				}
-
-				weightedItems.push(randomItem.id);
-			}
-
-			return weightedItems;
+			return filteredArmours.concat(filteredWeapons);
 		} catch (error) {
 			console.error(`Error getClassItems: ${error.message}`);
 			throw error;
 		}
+	}
+
+	public static getWeightedItems(classID: string, amount: number, enemyLevel = 1) {
+		const weightLevel = Math.min(enemyLevel, ITEM_WEIGHT_LEVELS.length - 1);
+		const weights = ITEM_WEIGHT_LEVELS[weightLevel];
+
+		const items = this.getClassItems(classID);
+
+		const weightedItems = [] as string[];
+		for (let i = 0; i < amount; i++) {
+			const rarity = weightedChoice(weights);
+			const pool = items.filter(({ id, level }) => level === +rarity && !weightedItems.includes(id));
+			const randomItem = getRandomElement(pool);
+
+			if (!randomItem) {
+				throw new Error(`No item found for rarity ${rarity}`);
+			}
+
+			weightedItems.push(randomItem.id);
+		}
+
+		return weightedItems;
 	}
 
 	public static populateAvailableItems(items: string[]) {

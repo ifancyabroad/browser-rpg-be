@@ -3,8 +3,9 @@ import {
 	HIT_TYPE_MULTIPLIER_MAP,
 	MODIFIERS,
 	WEAPON_MODIFIER_MAP,
+	ZONES,
 } from "@common/utils/constants";
-import { DamageType, HitType, WeaponType } from "@common/utils/enums";
+import { DamageType, HitType, ItemRarity, WeaponType } from "@common/utils/enums";
 
 export class Game {
 	public static get d4() {
@@ -57,5 +58,22 @@ export class Game {
 			hitPoints += this.d10;
 		}
 		return hitPoints;
+	}
+
+	public static getIsBoss(battleLevel = 1) {
+		return battleLevel % 10 === 0;
+	}
+
+	public static getEnemyLevel(battleLevel = 1) {
+		return Math.ceil(battleLevel / 10);
+	}
+
+	public static getChallengeRating(battleLevel = 1) {
+		return Math.ceil((battleLevel / 10) % ZONES.length);
+	}
+
+	public static getZone(battleLevel = 1) {
+		const index = Math.floor((battleLevel / 10) % ZONES.length);
+		return ZONES[index];
 	}
 }

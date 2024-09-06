@@ -3,9 +3,9 @@ import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize, Zone } from "@co
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SKILL_LEVEL_MAP } from "@common/utils";
+import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SHOP_ITEMS, SHOP_LEVEL, SKILL_LEVEL_MAP } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
-import { IReward } from "@common/types/battle";
+import { IBattle, IBattleMethods } from "@common/types/battle";
 import mongooseAutoPopulate from "mongoose-autopopulate";
 
 const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
@@ -23,10 +23,9 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			enum: State,
 			default: State.Idle,
 		},
-		zone: {
-			type: String,
-			enum: Zone,
-			default: Zone.Town,
+		maxBattleLevel: {
+			type: Number,
+			default: 1,
 		},
 		experience: {
 			type: Number,
@@ -97,10 +96,6 @@ heroSchema.virtual("levelUpData").get(function () {
 	}
 });
 
-heroSchema.virtual("goldMultiplier").get(function () {
-	return Math.round(Game.getModifier(this.stats.charisma) / 10 + 1);
-});
-
 heroSchema.virtual("discountMultiplier").get(function () {
 	return Math.round(1 - Game.getModifier(this.stats.charisma) / 10);
 });
@@ -142,7 +137,7 @@ heroSchema.method("rest", function rest() {
 });
 
 heroSchema.method("restock", function restock() {
-	this.set("availableItemIDs", GameData.getClassItems(this.characterClassID, Zone.Town, 6));
+	this.set("availableItemIDs", GameData.getWeightedItems(this.characterClassID, SHOP_ITEMS, SHOP_LEVEL));
 });
 
 heroSchema.method("buyItem", function buyItem(id: string) {
@@ -210,7 +205,9 @@ heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlo
 	this.checkConstitution();
 });
 
-heroSchema.method("battleWon", function battleWon(reward: IReward) {
+heroSchema.method("battleWon", function battleWon(battle: IBattle & IBattleMethods) {
+	const { level, reward } = battle;
+	this.maxBattleLevel = Math.max(this.maxBattleLevel, level);
 	this.addExperience(reward.experience);
 	this.gold += reward.gold;
 	this.kills++;
