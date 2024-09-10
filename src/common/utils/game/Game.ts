@@ -5,7 +5,7 @@ import {
 	WEAPON_MODIFIER_MAP,
 	ZONES,
 } from "@common/utils/constants";
-import { DamageType, HitType, ItemRarity, WeaponType } from "@common/utils/enums";
+import { DamageType, HitType, WeaponType } from "@common/utils/enums";
 
 export class Game {
 	public static get d4() {

@@ -68,8 +68,8 @@ battleRouter.post(
 	"/takeTreasure",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestTreasure, res: Response) => {
-		const character = await takeTreasure(req.body, req.session);
-		res.json({ character });
+		const battle = await takeTreasure(req.body, req.session);
+		res.json(battle);
 	}),
 );
 
