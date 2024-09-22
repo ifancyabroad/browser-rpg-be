@@ -120,6 +120,7 @@ export async function restockItems(session: Session & Partial<SessionData>) {
 		}
 
 		characterRecord.gold -= characterRecord.restockPrice;
+		characterRecord.restockCount++;
 		characterRecord.restock();
 		const character = await characterRecord.save();
 
