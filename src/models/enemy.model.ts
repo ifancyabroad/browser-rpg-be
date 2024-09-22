@@ -108,7 +108,7 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 
 		const isBuff =
 			selfTargetEffects.includes(EffectType.Status) || selfTargetEffects.includes(EffectType.Auxiliary);
-		if (isBuff && this.activeStatusEffects.findIndex((effect) => effect.skill.id === skill.id) > -1) {
+		if (isBuff && this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1) {
 			return false;
 		}
 
@@ -117,7 +117,7 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			.map((effect) => effect.type);
 		const isDebuff =
 			enemyTargetEffects.includes(EffectType.Status) || enemyTargetEffects.includes(EffectType.Auxiliary);
-		if (isDebuff && hero.activeStatusEffects.findIndex((effect) => effect.skill.id === skill.id) > -1) {
+		if (isDebuff && hero.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1) {
 			return false;
 		}
 

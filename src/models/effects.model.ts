@@ -72,7 +72,7 @@ const propertySchema = new Schema<IProperty, Model<IProperty>>(
 
 export const statusEffectSchema = new Schema<IStatusEffect, Model<IStatusEffect>>(
 	{
-		skill: {
+		source: {
 			id: {
 				type: String,
 				required: true,
@@ -119,7 +119,7 @@ export const statusEffectSchema = new Schema<IStatusEffect, Model<IStatusEffect>
 
 export const auxiliaryEffectSchema = new Schema<IAuxiliaryEffect, Model<IAuxiliaryEffect>>(
 	{
-		skill: {
+		source: {
 			id: {
 				type: String,
 				required: true,

@@ -28,7 +28,7 @@ import {
 } from "@common/types/gameData";
 import { Game } from "@common/utils/game/Game";
 import { IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "@common/types/effect";
-import { IAction, ITurnData } from "@common/types/battle";
+import { IAction, IActionWeaponEffect, ITurnData } from "@common/types/battle";
 
 const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethods>(
 	{
@@ -481,7 +481,7 @@ characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
 	};
 });
 
-characterSchema.method("getStatus", function getStatus({ effect, effectTarget, skill }: IEffectData) {
+characterSchema.method("getStatus", function getStatus({ effect, effectTarget, source }: IEffectData) {
 	const statusEffect = effect as IStatusEffectData;
 
 	let saved = false;
@@ -492,11 +492,7 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 	}
 
 	return {
-		skill: {
-			id: skill.id,
-			name: skill.name,
-			icon: skill.icon,
-		},
+		source,
 		target: statusEffect.target,
 		properties: statusEffect.properties,
 		remaining: statusEffect.duration,
@@ -507,7 +503,7 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 	};
 });
 
-characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTarget, skill }: IEffectData) {
+characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTarget, source }: IEffectData) {
 	const auxiliaryEffect = effect as IAuxiliaryEffectData;
 
 	let saved = false;
@@ -518,11 +514,7 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	}
 
 	return {
-		skill: {
-			id: skill.id,
-			name: skill.name,
-			icon: skill.icon,
-		},
+		source,
 		target: auxiliaryEffect.target,
 		effect: auxiliaryEffect.effect,
 		remaining: auxiliaryEffect.duration,
@@ -545,15 +537,18 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 	}
 
 	const action: IAction = {
-		skill: skill.name,
 		self: data.self.name,
 		enemy: data.enemy.name,
+		skill: {
+			name: skill.name,
+			weaponDamage: new Types.DocumentArray<IDamageEffect[]>([]),
+			damage: new Types.DocumentArray<IDamageEffect>([]),
+			heal: new Types.DocumentArray<IHealEffect>([]),
+			status: new Types.DocumentArray<IStatusEffect>([]),
+			auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
+		},
+		weapon: new Types.DocumentArray<IActionWeaponEffect>([]),
 		activeEffects: data.self.activeAuxiliaryEffects,
-		weaponDamage: new Types.DocumentArray<IDamageEffect[]>([]),
-		damage: new Types.DocumentArray<IDamageEffect>([]),
-		heal: new Types.DocumentArray<IHealEffect>([]),
-		status: new Types.DocumentArray<IStatusEffect>([]),
-		auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
 	};
 
 	if (this.isStunned) {
@@ -564,28 +559,62 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		this.skillIDs.find((sk) => sk.id === data.skill).remaining--;
 	}
 
+	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon };
+
 	skill.effects.forEach((effect) => {
 		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
-		const effectData = { effect, effectTarget, skill };
+		const effectData = { effect, effectTarget, source: skillSource };
 
 		switch (effect.type) {
 			case EffectType.WeaponDamage:
-				action.weaponDamage.push(this.getWeaponsDamage(effectData));
+				action.skill.weaponDamage.push(this.getWeaponsDamage(effectData));
 				break;
 			case EffectType.Damage:
-				action.damage.push(this.getDamage(effectData));
+				action.skill.damage.push(this.getDamage(effectData));
 				break;
 			case EffectType.Heal:
-				action.heal.push(this.getHeal(effectData));
+				action.skill.heal.push(this.getHeal(effectData));
 				break;
 			case EffectType.Status:
-				action.status.push(this.getStatus(effectData));
+				action.skill.status.push(this.getStatus(effectData));
 				break;
 			case EffectType.Auxiliary:
-				action.auxiliary.push(this.getAuxiliary(effectData));
+				action.skill.auxiliary.push(this.getAuxiliary(effectData));
 				break;
 		}
 	});
+
+	for (let i = 0; i < action.skill.weaponDamage.length; i++) {
+		this.weaponsAsArray.forEach((weapon) => {
+			const weaponEffects: IActionWeaponEffect = {
+				name: weapon.name,
+				damage: new Types.DocumentArray<IDamageEffect>([]),
+				status: new Types.DocumentArray<IStatusEffect>([]),
+				auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
+			};
+
+			const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
+
+			weapon.effects?.forEach((effect) => {
+				const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+				const effectData = { effect, effectTarget, source };
+
+				switch (effect.type) {
+					case EffectType.Damage:
+						weaponEffects.damage.push(this.getDamage(effectData));
+						break;
+					case EffectType.Status:
+						weaponEffects.status.push(this.getStatus(effectData));
+						break;
+					case EffectType.Auxiliary:
+						weaponEffects.auxiliary.push(this.getAuxiliary(effectData));
+						break;
+				}
+			});
+
+			action.weapon.push(weaponEffects);
+		});
+	}
 
 	return action;
 });
@@ -608,7 +637,7 @@ characterSchema.method("handleStatus", function handleStatus(status: IStatusEffe
 		return;
 	}
 
-	const existingStatusEffect = this.activeStatusEffects.find(({ skill }) => skill.id === status.skill.id);
+	const existingStatusEffect = this.activeStatusEffects.find(({ source }) => source.id === status.source.id);
 	if (existingStatusEffect) {
 		existingStatusEffect.remaining = existingStatusEffect.duration;
 	} else {
@@ -634,31 +663,45 @@ characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IA
 });
 
 characterSchema.method("handleAction", function handleAction(action: IAction, target: Target) {
-	action.weaponDamage.forEach((effects) => {
-		effects.forEach((effect) => {
-			if (effect.target === target) {
-				this.handleDamage(effect);
-			}
-		});
-	});
-	action.damage.forEach((effect) => {
-		if (effect.target === target) {
-			this.handleDamage(effect);
+	const allEffects = [action.skill, ...action.weapon];
+
+	allEffects.forEach((effects) => {
+		if ("weaponDamage" in effects) {
+			effects.weaponDamage.forEach((effects) => {
+				effects.forEach((effect) => {
+					if (effect.target === target) {
+						this.handleDamage(effect);
+					}
+				});
+			});
 		}
-	});
-	action.heal.forEach((effect) => {
-		if (effect.target === target) {
-			this.handleHeal(effect);
+		if ("damage" in effects) {
+			effects.damage.forEach((effect) => {
+				if (effect.target === target) {
+					this.handleDamage(effect);
+				}
+			});
 		}
-	});
-	action.status.forEach((effect) => {
-		if (effect.target === target) {
-			this.handleStatus(effect);
+		if ("heal" in effects) {
+			effects.heal.forEach((effect) => {
+				if (effect.target === target) {
+					this.handleHeal(effect);
+				}
+			});
 		}
-	});
-	action.auxiliary.forEach((effect) => {
-		if (effect.target === target) {
-			this.handleAuxiliary(effect);
+		if ("status" in effects) {
+			effects.status.forEach((effect) => {
+				if (effect.target === target) {
+					this.handleStatus(effect);
+				}
+			});
+		}
+		if ("auxiliary" in effects) {
+			effects.auxiliary.forEach((effect) => {
+				if (effect.target === target) {
+					this.handleAuxiliary(effect);
+				}
+			});
 		}
 	});
 });

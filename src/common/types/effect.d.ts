@@ -19,14 +19,14 @@ export interface IProperty {
 	value: number;
 }
 
-export interface IStatusEffectSkill {
+export interface IEffectSource {
 	id: string;
 	name: string;
 	icon: string;
 }
 
 export interface IStatusEffect {
-	skill: IStatusEffectSkill;
+	source: IEffectSource;
 	target: Target;
 	properties: Types.DocumentArray<IProperty>;
 	remaining: number;
@@ -37,7 +37,7 @@ export interface IStatusEffect {
 }
 
 export interface IAuxiliaryEffect {
-	skill: IStatusEffectSkill;
+	source: IEffectSource;
 	target: Target;
 	effect: AuxiliaryEffect;
 	remaining: number;

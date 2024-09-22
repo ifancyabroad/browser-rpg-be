@@ -12,15 +12,27 @@ export interface IReward {
 	experience: number;
 }
 
-export interface IAction {
-	self: string;
-	enemy: string;
-	skill: string;
+export interface IActionWeaponEffect {
+	name: string;
+	damage: Types.DocumentArray<IDamageEffect>;
+	status: Types.DocumentArray<IStatusEffect>;
+	auxiliary: Types.DocumentArray<IAuxiliaryEffect>;
+}
+
+export interface IActionSkillEffect {
+	name: string;
 	weaponDamage: Types.DocumentArray<IDamageEffect[]>;
 	damage: Types.DocumentArray<IDamageEffect>;
 	heal: Types.DocumentArray<IHealEffect>;
 	status: Types.DocumentArray<IStatusEffect>;
 	auxiliary: Types.DocumentArray<IAuxiliaryEffect>;
+}
+
+export interface IAction {
+	self: string;
+	enemy: string;
+	skill: IActionSkillEffect;
+	weapon: Types.DocumentArray<IActionWeaponEffect>;
 	activeEffects: Types.DocumentArray<IActiveAuxiliaryEffect>;
 }
 

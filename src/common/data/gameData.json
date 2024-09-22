@@ -1939,7 +1939,7 @@
 			"armourTypes": ["light"],
 			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
 			"equipment": {
-				"body": "-NMEwPxI9DXom0AaME0Z",
+				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=50bdce94-995a-4722-95e0-7d8db9ecb1cf",
@@ -5511,6 +5511,37 @@
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
 			"description": "A classic longsword forged from sturdy steel, balanced for versatility and power.",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 15,
+					"duration": 5,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				},
+				{
+					"difficulty": 10,
+					"duration": 3,
+					"effect": "poison",
+					"modifier": "strength",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,
@@ -5865,6 +5896,134 @@
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "club"
+		},
+		"-O4a6m6kRcxAc9j7bxwQ": {
+			"damageType": "slashing",
+			"description": "This axe freezes the very air around it, cutting through armor with frozen fury.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a6m6kRcxAc9j7bxwQ?alt=media&token=5e03787f-da34-4b9d-b654-a08730f1624c",
+			"level": 4,
+			"max": 16,
+			"min": 2,
+			"name": "Axe of the Frozen Wastes",
+			"price": 920,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 50
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-O4a7oqRZJo49hIlWxgw": {
+			"damageType": "slashing",
+			"description": "An axe that drips with acid, leaving a trail of destruction in its wake.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a7oqRZJo49hIlWxgw?alt=media&token=b72cdcdb-5f01-40aa-80fb-ba8375717454",
+			"level": 4,
+			"max": 12,
+			"min": 2,
+			"name": "Acid Edge",
+			"price": 850,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-O4a8SUEJmMBAf_be87T": {
+			"damageType": "slashing",
+			"description": "A Power Axe that harnesses immense energy, smashing through anything in its path.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a8SUEJmMBAf_be87T?alt=media&token=42941e5a-b068-4c8f-9f03-f4c39c7be052",
+			"level": 3,
+			"max": 10,
+			"min": 3,
+			"name": "Power Axe",
+			"price": 550,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-O4a9NyNFTJSNN3flj0z": {
+			"damageType": "slashing",
+			"description": "An axe infused with draconic power, cleaving through armor like a dragon’s claw.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a9NyNFTJSNN3flj0z?alt=media&token=ceabf1fe-7ec5-4240-a19e-8d7b57b229a3",
+			"level": 3,
+			"max": 8,
+			"min": 3,
+			"name": "Drake's Talon",
+			"price": 610,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "axe"
+		},
+		"-O4aAUt64OLYAgUJYhxR": {
+			"damageType": "slashing",
+			"description": " A Frozen Dagger that chills foes to the core with each precise strike.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4aAUt64OLYAgUJYhxR?alt=media&token=be9ab463-405e-456f-83f4-1e74bd5ec7f7",
+			"level": 3,
+			"max": 6,
+			"min": 3,
+			"name": "Icicle",
+			"price": 420,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-O4aBRIJNPKNLTCixx0a": {
+			"damageType": "slashing",
+			"description": "A dagger that channels the void, cutting through both light and life.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4aBRIJNPKNLTCixx0a?alt=media&token=23b9bf79-ac45-436b-b963-6117b98de865",
+			"level": 4,
+			"max": 9,
+			"min": 3,
+			"name": "Voidpiercer",
+			"price": 750,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
 		}
 	}
 }

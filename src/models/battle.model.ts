@@ -7,11 +7,41 @@ import {
 	healSchema,
 	statusEffectSchema,
 } from "./effects.model";
-import { IAction, IBattle, IBattleMethods, IBattleModel, ITurnData } from "@common/types/battle";
+import {
+	IAction,
+	IActionSkillEffect,
+	IActionWeaponEffect,
+	IBattle,
+	IBattleMethods,
+	IBattleModel,
+	ITurnData,
+} from "@common/types/battle";
 import { IHero, IHeroMethods } from "@common/types/hero";
 import { IEnemy, IEnemyMethods } from "@common/types/enemy";
 import { EXPERIENCE_MULTIPLIER, GameData, GOLD_MULTIPLIER } from "@common/utils";
 import mongooseAutoPopulate from "mongoose-autopopulate";
+
+const actionEffectSchema = new Schema<IActionSkillEffect, Model<IActionSkillEffect>>(
+	{
+		name: String,
+		weaponDamage: [[damageSchema]],
+		damage: [damageSchema],
+		heal: [healSchema],
+		status: [statusEffectSchema],
+		auxiliary: [auxiliaryEffectSchema],
+	},
+	{ _id: false },
+);
+
+const weaponEffectSchema = new Schema<IActionWeaponEffect, Model<IActionWeaponEffect>>(
+	{
+		name: String,
+		damage: [damageSchema],
+		status: [statusEffectSchema],
+		auxiliary: [auxiliaryEffectSchema],
+	},
+	{ _id: false },
+);
 
 const actionSchema = new Schema<IAction, Model<IAction>>(
 	{
@@ -23,15 +53,8 @@ const actionSchema = new Schema<IAction, Model<IAction>>(
 			type: String,
 			required: true,
 		},
-		skill: {
-			type: String,
-			required: true,
-		},
-		weaponDamage: [[damageSchema]],
-		damage: [damageSchema],
-		heal: [healSchema],
-		status: [statusEffectSchema],
-		auxiliary: [auxiliaryEffectSchema],
+		skill: actionEffectSchema,
+		weapon: [weaponEffectSchema],
 		activeEffects: [activeEffectSchema],
 	},
 	{ _id: false },

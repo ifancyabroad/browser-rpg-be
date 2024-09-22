@@ -10,9 +10,15 @@ import {
 	Target,
 } from "@common/utils/enums/index";
 import { Model, Types } from "mongoose";
-import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
 import {
-	ISkillDataWithID,
+	IActiveAuxiliaryEffect,
+	IAuxiliaryEffect,
+	IDamageEffect,
+	IEffectSource,
+	IHealEffect,
+	IStatusEffect,
+} from "./effect";
+import {
 	ISkillDataWithRemaining,
 	ISkillEffect,
 	IWeaponDataWithID,
@@ -45,7 +51,7 @@ export interface ICharacter {
 export interface IEffectData {
 	effect: ISkillEffect;
 	effectTarget: ICharacter & ICharacterMethods;
-	skill: ISkillDataWithID;
+	source: IEffectSource;
 }
 
 export interface ICharacterMethods {
