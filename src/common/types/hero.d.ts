@@ -25,6 +25,7 @@ export interface IHero extends ICharacter {
 	kills: number;
 	streak: number;
 	availableItemIDs: Types.Array<string>;
+	restockCount: number;
 	levelUp?: ILevelUp;
 	slainBy?: string;
 }
@@ -37,6 +38,8 @@ export interface IHeroMethods extends ICharacterMethods {
 	get nextLevelExperience(): number;
 	get levelUpData(): ILevelUpData;
 	get discountMultiplier(): number;
+	get restockPrice(): number;
+	get restPrice(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;

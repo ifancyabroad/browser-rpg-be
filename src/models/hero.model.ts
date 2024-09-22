@@ -3,7 +3,15 @@ import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize, Zone } from "@co
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
-import { EQUIPMENT_SLOT_TYPE_MAP, EXPERIENCE_MAP, SHOP_ITEMS, SHOP_LEVEL, SKILL_LEVEL_MAP } from "@common/utils";
+import {
+	BASE_REST_PRICE,
+	BASE_RESTOCK_PRICE,
+	EQUIPMENT_SLOT_TYPE_MAP,
+	EXPERIENCE_MAP,
+	SHOP_ITEMS,
+	SHOP_LEVEL,
+	SKILL_LEVEL_MAP,
+} from "@common/utils";
 import { Game } from "@common/utils/game/Game";
 import { IBattle, IBattleMethods } from "@common/types/battle";
 import mongooseAutoPopulate from "mongoose-autopopulate";
@@ -59,6 +67,10 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			type: [String],
 			required: true,
 		},
+		restockCount: {
+			type: Number,
+			default: 0,
+		},
 		levelUp: {
 			level: {
 				type: Number,
@@ -100,6 +112,14 @@ heroSchema.virtual("discountMultiplier").get(function () {
 	return Math.round(1 - Game.getModifier(this.stats.charisma) / 10);
 });
 
+heroSchema.virtual("restockPrice").get(function () {
+	return Math.round(BASE_RESTOCK_PRICE * (this.restockCount + 1) * this.discountMultiplier);
+});
+
+heroSchema.virtual("restPrice").get(function () {
+	return Math.round(BASE_REST_PRICE * this.day * this.discountMultiplier);
+});
+
 heroSchema.method("addExperience", function addExperience(xp: number) {
 	this.experience += xp;
 	this.checkLevelUp();
@@ -129,6 +149,7 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 heroSchema.method("rest", function rest() {
 	this.day++;
 	this.restock();
+	this.restockCount = 0;
 	this.setHitPoints(this.baseMaxHitPoints);
 	this.skillIDs.forEach((skill) => {
 		const skillData = this.skills.find((sk) => sk.id === skill.id);

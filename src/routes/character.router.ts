@@ -8,6 +8,7 @@ import {
 	getActiveCharacter,
 	levelUp,
 	rest,
+	restockItems,
 	retireActiveCharacter,
 } from "@services/character.service";
 import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
@@ -68,6 +69,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestItem, res: Response) => {
 		const character = await buyItem(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/restock'
+// @DEST Restock the shop
+characterRouter.post(
+	"/restock",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+		const character = await restockItems(req.session);
 		res.json({ character });
 	}),
 );

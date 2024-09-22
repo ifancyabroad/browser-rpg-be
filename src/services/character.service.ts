@@ -103,6 +103,33 @@ export async function buyItem(item: IBuyItemInput, session: Session & Partial<Se
 	}
 }
 
+export async function restockItems(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to restock items");
+		}
+
+		if (characterRecord.gold < characterRecord.restockPrice) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold to restock items");
+		}
+
+		characterRecord.gold -= characterRecord.restockPrice;
+		characterRecord.restock();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error restockItems: ${error.message}`);
+		throw error;
+	}
+}
+
 export async function rest(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
@@ -115,6 +142,11 @@ export async function rest(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to rest");
 		}
 
+		if (characterRecord.gold < characterRecord.restPrice) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold to rest");
+		}
+
+		characterRecord.gold -= characterRecord.restPrice;
 		characterRecord.rest();
 		const character = await characterRecord.save();
 
