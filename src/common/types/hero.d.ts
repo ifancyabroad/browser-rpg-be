@@ -40,6 +40,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get discountMultiplier(): number;
 	get restockPrice(): number;
 	get restPrice(): number;
+	get startingBattleLevel(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;

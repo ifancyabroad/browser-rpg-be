@@ -87,11 +87,3 @@ export interface ITreasureInput {
 export interface RequestTreasure extends Request {
 	item: ITreasureInput;
 }
-
-export interface ILevelInput {
-	level?: number;
-}
-
-export interface RequestLevel extends Request {
-	level: ILevelInput;
-}

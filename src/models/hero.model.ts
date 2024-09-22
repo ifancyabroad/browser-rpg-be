@@ -113,11 +113,15 @@ heroSchema.virtual("discountMultiplier").get(function () {
 });
 
 heroSchema.virtual("restockPrice").get(function () {
-	return Math.round(BASE_RESTOCK_PRICE * (this.restockCount + 1) * this.discountMultiplier);
+	return Math.round(BASE_RESTOCK_PRICE * Math.pow(2, this.restockCount) * this.discountMultiplier);
 });
 
 heroSchema.virtual("restPrice").get(function () {
-	return Math.round(BASE_REST_PRICE * this.day * this.discountMultiplier);
+	return Math.round(BASE_REST_PRICE * Math.pow(2, this.day - 1) * this.discountMultiplier);
+});
+
+heroSchema.virtual("startingBattleLevel").get(function () {
+	return Math.floor((this.maxBattleLevel + 1) / 10) * 10 + 1;
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {

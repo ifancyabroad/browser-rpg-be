@@ -4,7 +4,7 @@ import { Session, SessionData } from "express-session";
 import { BattleResult, BattleState, State, Status, Zone } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
-import { IBattleInput, ILevelInput, ITreasureInput } from "@common/types/battle";
+import { IBattleInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
@@ -41,8 +41,7 @@ function getEnemyData(battleLevel: number) {
 	};
 }
 
-export async function startBattle(levelInput: ILevelInput, session: Session & Partial<SessionData>) {
-	const { level } = levelInput;
+export async function startBattle(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -66,9 +65,9 @@ export async function startBattle(levelInput: ILevelInput, session: Session & Pa
 			await battleRecord.deleteOne();
 		}
 
-		const battleLevel = level ?? 1;
-		const zone = Game.getZone(battleLevel);
-		const enemyData = getEnemyData(battleLevel);
+		const level = characterRecord.startingBattleLevel;
+		const zone = Game.getZone(level);
+		const enemyData = getEnemyData(level);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -77,6 +76,7 @@ export async function startBattle(levelInput: ILevelInput, session: Session & Pa
 			hero: characterRecord.id,
 			enemy: enemy.id,
 			zone,
+			level,
 		});
 
 		characterRecord.state = State.Battle;
