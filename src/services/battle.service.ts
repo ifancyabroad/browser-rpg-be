@@ -295,7 +295,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 		}
 
-		if (!battleRecord.treasureItemIDs.includes(id)) {
+		if (id && !battleRecord.treasureItemIDs.includes(id)) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Item not found in treasure");
 		}
 

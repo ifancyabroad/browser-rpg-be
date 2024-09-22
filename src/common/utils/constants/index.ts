@@ -15,7 +15,7 @@ export const EXPERIENCE_MULTIPLIER = 20;
 export const SHOP_ITEMS = 6;
 export const SHOP_LEVEL = 1;
 
-export const BASE_RESTOCK_PRICE = 100;
+export const BASE_RESTOCK_PRICE = 20;
 export const BASE_REST_PRICE = 10;
 
 export const MODIFIERS = new Map([
@@ -53,15 +53,15 @@ export const MODIFIERS = new Map([
 
 export const EXPERIENCE_MAP = new Map([
 	[1, 0],
-	[2, 300],
-	[3, 800],
-	[4, 1500],
-	[5, 2200],
-	[6, 3000],
-	[7, 4000],
-	[8, 5200],
-	[9, 7000],
-	[10, 10000],
+	[2, 500],
+	[3, 2000],
+	[4, 4500],
+	[5, 8000],
+	[6, 12500],
+	[7, 18000],
+	[8, 24500],
+	[9, 32000],
+	[10, 40500],
 ]);
 
 export const SKILL_LEVELS = new Map([
