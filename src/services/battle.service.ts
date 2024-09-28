@@ -8,7 +8,7 @@ import { IBattleInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
-import { GOLD_MULTIPLIER } from "@common/utils";
+import { REWARD_GOLD_MULTIPLIER } from "@common/utils";
 
 function getEnemyData(battleLevel: number) {
 	const rating = Game.getChallengeRating(battleLevel);
@@ -308,7 +308,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 			characterRecord.checkItem(id, slot);
 			characterRecord.equipItem(id, slot);
 		} else {
-			const goldReward = battleRecord.level * GOLD_MULTIPLIER;
+			const goldReward = REWARD_GOLD_MULTIPLIER * battleRecord.level;
 			characterRecord.gold += goldReward;
 		}
 

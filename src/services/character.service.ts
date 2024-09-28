@@ -74,7 +74,9 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 		}
 
 		const battleRecord = await BattleModel.findOneAndDelete({ hero: characterRecord.id });
-		await EnemyModel.findByIdAndDelete(battleRecord.enemy);
+		if (battleRecord) {
+			await EnemyModel.findByIdAndDelete(battleRecord.enemy);
+		}
 
 		return characterRecord.toJSON();
 	} catch (error) {
