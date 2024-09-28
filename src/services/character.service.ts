@@ -2,11 +2,13 @@ import { IBuyItemInput, ICharacterInput, ILevelUpInput } from "@common/types/cha
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { State, Status, Zone } from "@common/utils/enums/index";
+import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
 import { SHOP_ITEMS, SHOP_LEVEL } from "@common/utils";
+import BattleModel from "@models/battle.model";
+import EnemyModel from "@models/enemy.model";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -63,13 +65,16 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOneAndUpdate(
-			{ user: user.id, status: Status.Alive, state: State.Idle },
+			{ user: user.id, status: Status.Alive },
 			{ status: Status.Retired },
 			{ new: true },
 		);
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Character cannot be retired");
 		}
+
+		const battleRecord = await BattleModel.findOneAndDelete({ hero: characterRecord.id });
+		await EnemyModel.findByIdAndDelete(battleRecord.enemy);
 
 		return characterRecord.toJSON();
 	} catch (error) {

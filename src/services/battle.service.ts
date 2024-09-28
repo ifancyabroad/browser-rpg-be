@@ -260,8 +260,13 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		}
 
 		const character = await characterRecord.save();
-		await enemyRecord.save();
+		const enemy = await enemyRecord.save();
 		const battle = await battleRecord.save();
+
+		if (!character.alive) {
+			await battle.deleteOne();
+			await enemy.deleteOne();
+		}
 
 		return {
 			battle: battle.toJSON(),
