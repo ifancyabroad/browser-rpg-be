@@ -56,13 +56,8 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		const battleRecord = await BattleModel.findOne({
 			hero: characterRecord.id,
 		});
-		if (battleRecord && battleRecord.state === BattleState.Active) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
-		}
-
 		if (battleRecord) {
-			await EnemyModel.findByIdAndDelete(battleRecord.enemy);
-			await battleRecord.deleteOne();
+			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
 		const level = characterRecord.startingBattleLevel;
@@ -198,6 +193,9 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 
 		const character = await characterRecord.save();
 		const battle = await battleRecord.save();
+
+		await EnemyModel.findByIdAndDelete(battle.enemy);
+		await battle.deleteOne();
 
 		return {
 			battle: battle.toJSON(),
