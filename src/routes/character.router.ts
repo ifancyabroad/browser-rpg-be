@@ -1,7 +1,6 @@
-import { Response, Router } from "express";
+import { Request, Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "@common/types/user";
 import {
 	buyItem,
 	createCharacter,
@@ -22,7 +21,7 @@ const characterRouter = Router();
 characterRouter.get(
 	"/",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await getActiveCharacter(req.session);
 		res.json({ character });
 	}),
@@ -45,7 +44,7 @@ characterRouter.put(
 characterRouter.post(
 	"/retire",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await retireActiveCharacter(req.session);
 		res.json({ character });
 	}),
@@ -56,7 +55,7 @@ characterRouter.post(
 characterRouter.get(
 	"/classes",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const classes = GameData.getClasses();
 		res.json({ classes });
 	}),
@@ -78,7 +77,7 @@ characterRouter.post(
 characterRouter.post(
 	"/restock",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await restockItems(req.session);
 		res.json({ character });
 	}),
@@ -89,7 +88,7 @@ characterRouter.post(
 characterRouter.post(
 	"/rest",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await rest(req.session);
 		res.json({ character });
 	}),

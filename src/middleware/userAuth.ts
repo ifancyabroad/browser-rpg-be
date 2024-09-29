@@ -1,10 +1,9 @@
-import { Response, NextFunction, RequestHandler } from "express";
-import { RequestUser } from "@common/types/user";
+import { Response, NextFunction, RequestHandler, Request } from "express";
 import httpStatus from "http-status-codes";
 import expressAsyncHandler from "express-async-handler";
 import createError from "http-errors";
 
-const userAuth: RequestHandler = expressAsyncHandler(async (req: RequestUser, res: Response, next: NextFunction) => {
+const userAuth: RequestHandler = expressAsyncHandler(async (req: Request, res: Response, next: NextFunction) => {
 	if (req.session.user) {
 		next();
 	} else {

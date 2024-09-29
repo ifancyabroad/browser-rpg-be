@@ -1,8 +1,8 @@
-import { Response, Router } from "express";
+import { Request, Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "@common/types/user";
 import { getLeaderboard } from "@services/leaderboard.service";
+import { ILeaderboardQuery } from "@common/types/leaderboard";
 
 const leaderboardRouter = Router();
 
@@ -10,8 +10,9 @@ const leaderboardRouter = Router();
 // @DEST Get leaderboards
 leaderboardRouter.get(
 	"/",
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const leaderboard = await getLeaderboard();
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request<{}, {}, {}, ILeaderboardQuery>, res: Response) => {
+		const leaderboard = await getLeaderboard(req.query, req.session);
 		res.json(leaderboard);
 	}),
 );

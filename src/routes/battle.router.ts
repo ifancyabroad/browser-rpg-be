@@ -1,7 +1,6 @@
-import { Response, Router } from "express";
+import { Request, Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestUser } from "@common/types/user";
 import { action, getBattle, nextBattle, returnToTown, startBattle, takeTreasure } from "@services/battle.service";
 import { RequestAction, RequestTreasure } from "@common/types/battle";
 
@@ -12,7 +11,7 @@ const battleRouter = Router();
 battleRouter.post(
 	"/start",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const battle = await startBattle(req.session);
 		res.json(battle);
 	}),
@@ -23,7 +22,7 @@ battleRouter.post(
 battleRouter.post(
 	"/next",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const battle = await nextBattle(req.session);
 		res.json(battle);
 	}),
@@ -34,7 +33,7 @@ battleRouter.post(
 battleRouter.get(
 	"/",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const battle = await getBattle(req.session);
 		res.json(battle);
 	}),
@@ -45,7 +44,7 @@ battleRouter.get(
 battleRouter.post(
 	"/return",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const battle = await returnToTown(req.session);
 		res.json(battle);
 	}),

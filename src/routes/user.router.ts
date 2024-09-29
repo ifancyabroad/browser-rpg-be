@@ -1,4 +1,4 @@
-import { Response, Router } from "express";
+import { Request, Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import { RequestRequestResetPassword, RequestResetPassword, RequestUser } from "@common/types/user";
@@ -26,7 +26,7 @@ userRouter.get(
 // @DEST Get user session
 userRouter.get(
 	"/session",
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		const session = Boolean(req.session.user);
 		res.status(200).json({ session });
 	}),
@@ -49,7 +49,7 @@ userRouter.post(
 // @DES Logout user
 userRouter.delete(
 	"/logout",
-	expressAsyncHandler(async (req: RequestUser, res: Response) => {
+	expressAsyncHandler(async (req: Request, res: Response) => {
 		req.session.destroy((err) => {
 			if (err) {
 				console.error(`Error logout: ${err.message}`);
