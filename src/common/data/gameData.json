@@ -1920,7 +1920,7 @@
 				"body": "-Nc44lyRjk-mHNox3H_P",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Ficon?alt=media&token=005fdcb9-7c22-483f-aa69-6d6f2bb33eb2",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Ficon?alt=media&token=7bca006c-9465-45e4-a6dd-235d2344577e",
 			"name": "Fighter",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=ad75076d-9ab8-4336-9705-84c540f0d90c",
 			"skillClasses": ["warrior"],
@@ -1942,7 +1942,7 @@
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=50bdce94-995a-4722-95e0-7d8db9ecb1cf",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=6f6307ca-4459-4d4e-916f-a428df04a721",
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=5287ee0d-43a6-48ed-bf2e-779ae928e377",
 			"skillClasses": ["rogue"],
@@ -1955,7 +1955,7 @@
 				"strength": 9,
 				"wisdom": 10
 			},
-			"weaponTypes": ["dagger", "crossbow"]
+			"weaponTypes": ["dagger", "crossbow", "bow"]
 		},
 		"-N_P0pcakZhKbNDftKoc": {
 			"armourTypes": ["misc"],
@@ -1964,7 +1964,7 @@
 				"body": "-Nm2HibRx3V8P1isPlRf",
 				"hand1": "-Nc46CPWJz2atC_uII9i"
 			},
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Ficon?alt=media&token=11bb0e9b-b047-415c-b255-173607f7134e",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Ficon?alt=media&token=0db78c8a-5bc9-473c-90e8-0c93954bff81",
 			"name": "Mage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=665df70f-c085-4ba3-9552-7e5d8e329c0c",
 			"skillClasses": ["mage"],
@@ -1977,7 +1977,7 @@
 				"strength": 8,
 				"wisdom": 15
 			},
-			"weaponTypes": ["staff", "dagger"]
+			"weaponTypes": ["staff", "wand"]
 		}
 	},
 	"monsters": {
@@ -5413,8 +5413,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 18,
-					"min": 12,
+					"max": 12,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -5495,53 +5495,9 @@
 		}
 	},
 	"weapons": {
-		"-NMDekxBlRvJBq18KmM3": {
-			"damageType": "slashing",
-			"description": "A plain steel shortsword, swift and lethal in close combat.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMDekxBlRvJBq18KmM3?alt=media&token=147ef2cc-4ba9-4b9d-97db-50d8d6fa8f39",
-			"level": 1,
-			"max": 6,
-			"min": 1,
-			"name": "Shortsword",
-			"price": 50,
-			"size": "oneHanded",
-			"type": "weapon",
-			"weaponType": "sword"
-		},
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
 			"description": "A classic longsword forged from sturdy steel, balanced for versatility and power.",
-			"effects": [
-				{
-					"damageType": "fire",
-					"max": 6,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
-					"difficulty": 15,
-					"duration": 5,
-					"modifier": "constitution",
-					"properties": [
-						{
-							"name": "fire",
-							"type": "resistance",
-							"value": -50
-						}
-					],
-					"target": "enemy",
-					"type": "status"
-				},
-				{
-					"difficulty": 10,
-					"duration": 3,
-					"effect": "poison",
-					"modifier": "strength",
-					"target": "enemy",
-					"type": "auxiliary"
-				}
-			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,
@@ -5584,24 +5540,19 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 20,
-					"min": 10,
+					"max": 8,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwRG-llD60pf8sSKeM?alt=media&token=de76b657-3136-49fc-aaa2-b619a0a2d381",
 			"level": 4,
-			"max": 15,
-			"min": 9,
+			"max": 14,
+			"min": 4,
 			"name": "Black Blade of Doom",
-			"price": 300,
+			"price": 1200,
 			"properties": [
-				{
-					"name": "strength",
-					"type": "stat",
-					"value": 2
-				},
 				{
 					"name": "fire",
 					"type": "damage",
@@ -5701,7 +5652,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0n7aPw0NHeefOnRg?alt=media&token=6797c36e-4049-4626-b0c0-ff46100ae0fd",
 			"level": 2,
 			"max": 12,
-			"min": 6,
+			"min": 2,
 			"name": "Greatsword",
 			"price": 210,
 			"size": "twoHanded",
@@ -5782,19 +5733,6 @@
 			"min": 2,
 			"name": "Fine Longsword",
 			"price": 190,
-			"size": "oneHanded",
-			"type": "weapon",
-			"weaponType": "sword"
-		},
-		"-NgO0jyrXf6cOaoRZZ6N": {
-			"damageType": "slashing",
-			"description": "A finely crafted shortsword, gleaming with expertly honed edges.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0jyrXf6cOaoRZZ6N?alt=media&token=5e733777-144d-48bc-9658-55c2382725b3",
-			"level": 2,
-			"max": 7,
-			"min": 2,
-			"name": "Fine Shortsword",
-			"price": 170,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
@@ -5900,6 +5838,15 @@
 		"-O4a6m6kRcxAc9j7bxwQ": {
 			"damageType": "slashing",
 			"description": "This axe freezes the very air around it, cutting through armor with frozen fury.",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a6m6kRcxAc9j7bxwQ?alt=media&token=5e03787f-da34-4b9d-b654-a08730f1624c",
 			"level": 4,
 			"max": 16,
@@ -5925,6 +5872,15 @@
 		"-O4a7oqRZJo49hIlWxgw": {
 			"damageType": "slashing",
 			"description": "An axe that drips with acid, leaving a trail of destruction in its wake.",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a7oqRZJo49hIlWxgw?alt=media&token=b72cdcdb-5f01-40aa-80fb-ba8375717454",
 			"level": 4,
 			"max": 12,
@@ -5976,27 +5932,39 @@
 			"min": 3,
 			"name": "Drake's Talon",
 			"price": 610,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				}
+			],
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "axe"
 		},
 		"-O4aAUt64OLYAgUJYhxR": {
 			"damageType": "slashing",
-			"description": " A Frozen Dagger that chills foes to the core with each precise strike.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4aAUt64OLYAgUJYhxR?alt=media&token=be9ab463-405e-456f-83f4-1e74bd5ec7f7",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 14,
+					"duration": 4,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4aAUt64OLYAgUJYhxR?alt=media&token=5bf2752f-d99f-452e-b948-af4ac666ad79",
 			"level": 3,
-			"max": 6,
-			"min": 3,
-			"name": "Icicle",
+			"max": 5,
+			"min": 2,
+			"name": "Poison Edge",
 			"price": 420,
 			"properties": [
 				{
-					"name": "cold",
-					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "cold",
+					"name": "poison",
 					"type": "damage",
 					"value": 20
 				}
@@ -6008,9 +5976,18 @@
 		"-O4aBRIJNPKNLTCixx0a": {
 			"damageType": "slashing",
 			"description": "A dagger that channels the void, cutting through both light and life.",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4aBRIJNPKNLTCixx0a?alt=media&token=23b9bf79-ac45-436b-b963-6117b98de865",
 			"level": 4,
-			"max": 9,
+			"max": 6,
 			"min": 3,
 			"name": "Voidpiercer",
 			"price": 750,
@@ -6024,6 +6001,1135 @@
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
+		},
+		"-O836Y7Gx_vk9fruIwmR": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O836Y7Gx_vk9fruIwmR?alt=media&token=7ff49fc3-0afa-4a7c-8f4c-4bbde3f0fe7a",
+			"level": 2,
+			"max": 9,
+			"min": 2,
+			"name": "Fine Longbow",
+			"price": 240,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "bow"
+		},
+		"-O837-alsOZeCZ2LfXYn": {
+			"damageType": "piercing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O837-alsOZeCZ2LfXYn?alt=media&token=80415919-cad9-4c8f-99bc-ac573690bb88",
+			"level": 3,
+			"max": 9,
+			"min": 2,
+			"name": "Acid Bow",
+			"price": 540,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "bow"
+		},
+		"-O837_TaJ6HTFBsgNpzS": {
+			"damageType": "piercing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O837_TaJ6HTFBsgNpzS?alt=media&token=9c2ed3c7-e15d-46d0-a7e0-6bf2a5e37712",
+			"level": 4,
+			"max": 16,
+			"min": 2,
+			"name": "Flame Shot",
+			"price": 1200,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "bow"
+		},
+		"-O838EeKMsy_Xw7WPyND": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 12,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O838EeKMsy_Xw7WPyND?alt=media&token=12b74f85-8519-4eb3-b78f-ad018ae687eb",
+			"level": 1,
+			"max": 6,
+			"min": 1,
+			"name": "Boneclub",
+			"price": 80,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": -2
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "club"
+		},
+		"-O838oF5XDaNy0Fs4Flp": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O838oF5XDaNy0Fs4Flp?alt=media&token=b3a95965-ec39-4b46-a8bb-a39315f0107c",
+			"level": 2,
+			"max": 9,
+			"min": 2,
+			"name": "Fine Crossbow",
+			"price": 260,
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "crossbow"
+		},
+		"-O839Fwy6z4MdXojSNBz": {
+			"damageType": "piercing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O839Fwy6z4MdXojSNBz?alt=media&token=6e194bb4-0ded-4bc6-9221-f52888a19361",
+			"level": 4,
+			"max": 16,
+			"min": 2,
+			"name": "Unholy Bolter",
+			"price": 1100,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "crossbow"
+		},
+		"-O839l2OfPHKXuAb-F68": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O839l2OfPHKXuAb-F68?alt=media&token=0dde223d-ef64-496e-bc95-08caf5e8bead",
+			"level": 3,
+			"max": 10,
+			"min": 3,
+			"name": "Elven Crossbow",
+			"price": 510,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "crossbow"
+		},
+		"-O83AkiajvksrVOO9E_T": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83AkiajvksrVOO9E_T?alt=media&token=730a3e5b-1757-4cf5-868d-c2144a1f3d5b",
+			"level": 2,
+			"max": 7,
+			"min": 2,
+			"name": "Fine Hammer",
+			"price": 200,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-O83BRpUJVDVaFdO4Ji1": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83BRpUJVDVaFdO4Ji1?alt=media&token=f997f2e0-34e4-4027-8442-9f2fe7bc57d9",
+			"level": 3,
+			"max": 7,
+			"min": 2,
+			"name": "Gold Hammer",
+			"price": 460,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-O83BrerEM0juYkEM_QP": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83BrerEM0juYkEM_QP?alt=media&token=ed18597c-8651-4c53-9f5f-7e5929dc4542",
+			"level": 3,
+			"max": 10,
+			"min": 3,
+			"name": "Rune Forged Warhammer",
+			"price": 620,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-O83CckcCZNQbGuIhCwy": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "lightning",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83CckcCZNQbGuIhCwy?alt=media&token=7f94fa9c-7af4-401b-82f4-0a53766bf53c",
+			"level": 4,
+			"max": 16,
+			"min": 2,
+			"name": "Dwarven Thunder",
+			"price": 1100,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-O83DUGFC8-nlyahHmlf": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 16,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83DUGFC8-nlyahHmlf?alt=media&token=56478ba1-6d8d-4440-a0c7-ca8840e3de6b",
+			"level": 4,
+			"max": 12,
+			"min": 2,
+			"name": "Molten Crusher",
+			"price": 900,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "hammer"
+		},
+		"-O86KsKBT0jSbCjiSLm_": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86KsKBT0jSbCjiSLm_?alt=media&token=f1c08b85-9650-4428-b91b-adece827d8e7",
+			"level": 3,
+			"max": 8,
+			"min": 3,
+			"name": "Royal Mace",
+			"price": 550,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-O86LPbrpdPf46hvIISe": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "radiant",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86LPbrpdPf46hvIISe?alt=media&token=3a9f2df0-5a06-4ee6-bb33-2b058db69425",
+			"level": 4,
+			"max": 12,
+			"min": 2,
+			"name": "Holy Avenger",
+			"price": 860,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-O86LrSuGHIRtQuAJJAq": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "piercing",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86LrSuGHIRtQuAJJAq?alt=media&token=910719f5-7fc8-4fbd-aa17-761da5c9ed1b",
+			"level": 2,
+			"max": 9,
+			"min": 2,
+			"name": "Flail",
+			"price": 350,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-O86MaYcAzzh5_RPVCkD": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86MaYcAzzh5_RPVCkD?alt=media&token=b79573c9-b849-4363-9634-4491cdf3f310",
+			"level": 3,
+			"max": 10,
+			"min": 3,
+			"name": "Golden Flail",
+			"price": 670,
+			"properties": [
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-O86Njh57GkQCRerPm6K": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 3,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": -4
+						},
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86Njh57GkQCRerPm6K?alt=media&token=712959e4-0a0c-4b77-9249-bf7fff983f1b",
+			"level": 4,
+			"max": 10,
+			"min": 3,
+			"name": "Ball Drainer",
+			"price": 980,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-O86ORpmHCRvdoJix1nA": {
+			"damageType": "piercing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86ORpmHCRvdoJix1nA?alt=media&token=c4158c08-d37f-41ae-a8fc-68984f1c6d3c",
+			"level": 3,
+			"max": 8,
+			"min": 3,
+			"name": "Elven Spear",
+			"price": 350,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "spear"
+		},
+		"-O86ft0iHPkB35cl2T2l": {
+			"damageType": "piercing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "lightning",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86ft0iHPkB35cl2T2l?alt=media&token=3bcaa4f0-b2fd-4b69-8fae-236448374d9d",
+			"level": 4,
+			"max": 15,
+			"min": 5,
+			"name": "Lightning Trident",
+			"price": 710,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "spear"
+		},
+		"-O86h9XqEXUwwAyrAwNF": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86h9XqEXUwwAyrAwNF?alt=media&token=a1e8688b-98f1-4cf1-a9ac-2e0b233c56af",
+			"level": 3,
+			"max": 14,
+			"min": 4,
+			"name": "King's Claymore",
+			"price": 780,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-O86hk29tvN6eTdWSBiu": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86hk29tvN6eTdWSBiu?alt=media&token=22dcddb9-3846-4158-845c-570ec0506462",
+			"level": 3,
+			"max": 7,
+			"min": 2,
+			"name": "Frosty Blade",
+			"price": 500,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-O86i64bPy3o78ynB5JW": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86i64bPy3o78ynB5JW?alt=media&token=57ad1820-9961-49a9-816d-322c87af1f3e",
+			"level": 4,
+			"max": 8,
+			"min": 3,
+			"name": "Nightsong",
+			"price": 920,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-O86iXwrc1ccOlbTldxs": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86iXwrc1ccOlbTldxs?alt=media&token=f44cf246-c5e0-4528-a975-511505ea84f6",
+			"level": 3,
+			"max": 6,
+			"min": 1,
+			"name": "Nature's Wrath",
+			"price": 360,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O86upm1evShQs6BJMoJ": {
+			"damageType": "slashing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86upm1evShQs6BJMoJ?alt=media&token=62166ff9-9d4b-418c-8035-783746af2961",
+			"level": 3,
+			"max": 7,
+			"min": 2,
+			"name": "Gold Dagger",
+			"price": 460,
+			"properties": [
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 5
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-O86vlV1PaMbJ7A5cuUH": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 2,
+					"effect": "bleed",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86vlV1PaMbJ7A5cuUH?alt=media&token=cdf12df8-5dfa-4d3e-91e5-156d0a9addfe",
+			"level": 4,
+			"max": 6,
+			"min": 3,
+			"name": "Bloodletter",
+			"price": 720,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-O86w6i469JpHsIqXKtr": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86w6i469JpHsIqXKtr?alt=media&token=8643f1da-928f-437d-b2de-f1c2ec8d7626",
+			"level": 3,
+			"max": 5,
+			"min": 2,
+			"name": "Corroding Blade",
+			"price": 380,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-O86wneXTVhQsT7cKjoF": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 2,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "slashing",
+					"max": 2,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "slashing",
+					"max": 2,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86wneXTVhQsT7cKjoF?alt=media&token=a88b1d6b-a3c0-45a0-a941-36748000c5c1",
+			"level": 4,
+			"max": 4,
+			"min": 1,
+			"name": "Star of Vengeance",
+			"price": 800,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-O880XFcKnWhE-_xBLH5": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O880XFcKnWhE-_xBLH5?alt=media&token=01951d9c-ed50-4071-8e62-b3a41d72a602",
+			"level": 2,
+			"max": 6,
+			"min": 1,
+			"name": "Staff of the Trickster",
+			"price": 150,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O881adjBhWBB9IW_gRE": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O881adjBhWBB9IW_gRE?alt=media&token=91193af8-eb3c-418d-b78b-0425b472cda2",
+			"level": 3,
+			"max": 6,
+			"min": 1,
+			"name": "Staff of Cold",
+			"price": 400,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O8826bklHQ7fH__Egi2": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O8826bklHQ7fH__Egi2?alt=media&token=7b07954d-b9f1-4ebb-bd6c-ba7f6f735e5a",
+			"level": 4,
+			"max": 6,
+			"min": 1,
+			"name": "Staff of the Archmage",
+			"price": 1250,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O882xmUlhB07RJmbt_a": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O882xmUlhB07RJmbt_a?alt=media&token=1c0d3884-6bfb-4b63-b25b-5de584796590",
+			"level": 4,
+			"max": 6,
+			"min": 1,
+			"name": "Forked Lightning",
+			"price": 960,
+			"properties": [
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 50
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O883TxE3EKQl4pDIJkT": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883TxE3EKQl4pDIJkT?alt=media&token=d681b87d-454f-4632-a3c5-211e48542c06",
+			"level": 2,
+			"max": 6,
+			"min": 1,
+			"name": "Crystal Staff",
+			"price": 210,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 10
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 10
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 10
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O883ldvSyYlUMXKPTKl": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883ldvSyYlUMXKPTKl?alt=media&token=212e10f0-d163-4da5-9d36-1b3d5ecd597e",
+			"level": 3,
+			"max": 6,
+			"min": 1,
+			"name": "Staff of Flames",
+			"price": 410,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O884ErbLr06vlIendww": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O884ErbLr06vlIendww?alt=media&token=e491f5e8-337d-47d5-a93c-fd6c2d88fdb5",
+			"level": 4,
+			"max": 6,
+			"min": 1,
+			"name": "Staff of Warding",
+			"price": 920,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-O884md7d30ncYCBN352": {
+			"damageType": "lightning",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O884md7d30ncYCBN352?alt=media&token=f229cba4-de49-4704-ad35-46e201c6245a",
+			"level": 1,
+			"max": 4,
+			"min": 1,
+			"name": "Lightning Wand",
+			"price": 60,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O8858iCEuFLCYHw_B8r": {
+			"damageType": "fire",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O8858iCEuFLCYHw_B8r?alt=media&token=c4b6372c-c137-4609-a2e1-1fbedf1c903a",
+			"level": 1,
+			"max": 4,
+			"min": 1,
+			"name": "Fire Wand",
+			"price": 60,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O885N2_iJ4G2FzUXbNw": {
+			"damageType": "cold",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O885N2_iJ4G2FzUXbNw?alt=media&token=9a27d4ed-9e5b-4540-a423-78fafb03a05a",
+			"level": 1,
+			"max": 4,
+			"min": 1,
+			"name": "Cold Wand",
+			"price": 60,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O885kCSisaF4moiYC04": {
+			"damageType": "cold",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O885kCSisaF4moiYC04?alt=media&token=4680c62d-035c-4a0a-b183-d40e287b9241",
+			"level": 2,
+			"max": 5,
+			"min": 2,
+			"name": "Infused Cold Wand",
+			"price": 220,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O886CfafhQSLXkJEQyF": {
+			"damageType": "fire",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886CfafhQSLXkJEQyF?alt=media&token=24019a7c-44f9-466c-8cf3-f7476b7ab053",
+			"level": 2,
+			"max": 5,
+			"min": 2,
+			"name": "Infused Fire Wand",
+			"price": 220,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O886X4ak1ZP3ovLQjeF": {
+			"damageType": "lightning",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886X4ak1ZP3ovLQjeF?alt=media&token=5863ce10-3c44-4d5c-aae5-37bd250bd151",
+			"level": 2,
+			"max": 5,
+			"min": 2,
+			"name": "Infused Lightning Wand",
+			"price": 220,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O887GHDvG1vgr5D7Z1R": {
+			"damageType": "necrotic",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 14,
+					"duration": 3,
+					"modifier": "intelligence",
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": -2
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O887GHDvG1vgr5D7Z1R?alt=media&token=94784288-a258-4e21-bbde-2d594e54923c",
+			"level": 3,
+			"max": 4,
+			"min": 1,
+			"name": "Wand of Cursing",
+			"price": 560,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O887qHMJmHrl6p1Gm5h": {
+			"damageType": "fire",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 18,
+					"duration": 2,
+					"modifier": "intelligence",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O887qHMJmHrl6p1Gm5h?alt=media&token=b6fc7281-b995-4f92-adc3-f2515db2d12f",
+			"level": 4,
+			"max": 12,
+			"min": 3,
+			"name": "Dragon's Breath",
+			"price": 850,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O888JJX3_O4U2wBZ78X": {
+			"damageType": "radiant",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O888JJX3_O4U2wBZ78X?alt=media&token=a508f5a9-b4d2-48c2-ac08-2c996323ee7f",
+			"level": 3,
+			"max": 6,
+			"min": 3,
+			"name": "Holy Wand",
+			"price": 520,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O888xxIucji-VaJ0gco": {
+			"damageType": "fire",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "lightning",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O888xxIucji-VaJ0gco?alt=media&token=6edaae9a-7dc8-440e-9c0c-859f2ee84de9",
+			"level": 4,
+			"max": 4,
+			"min": 1,
+			"name": "Elementalist's Wand",
+			"price": 820,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O889_GejsGHdcZH4_ek": {
+			"damageType": "fire",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 15,
+					"duration": 4,
+					"modifier": "intelligence",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -20
+						},
+						{
+							"name": "lightning",
+							"type": "resistance",
+							"value": -20
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": -20
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O889_GejsGHdcZH4_ek?alt=media&token=f8aba8fd-15c2-45fa-b5a7-8244d091e2fe",
+			"level": 3,
+			"max": 4,
+			"min": 1,
+			"name": "Wand of Piercing",
+			"price": 480,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-O88A4_A04Uf9jAxmv0B": {
+			"damageType": "lightning",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O88A4_A04Uf9jAxmv0B?alt=media&token=ff802545-0918-4034-ab58-3562525309eb",
+			"level": 4,
+			"max": 6,
+			"min": 3,
+			"name": "Archmage's Wand",
+			"price": 780,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
 		}
 	}
 }
