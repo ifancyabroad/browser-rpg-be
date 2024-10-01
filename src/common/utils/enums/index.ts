@@ -89,6 +89,7 @@ export enum WeaponType {
 	Spear = "spear",
 	Staff = "staff",
 	Sword = "sword",
+	Wand = "wand",
 }
 
 export enum WeaponSize {

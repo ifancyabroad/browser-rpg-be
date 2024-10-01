@@ -114,6 +114,7 @@ export const WEAPON_MODIFIER_MAP = new Map([
 	[WeaponType.Spear, Stat.Strength],
 	[WeaponType.Staff, Stat.Strength],
 	[WeaponType.Sword, Stat.Strength],
+	[WeaponType.Wand, Stat.Intelligence],
 ]);
 
 export const DAMAGE_TYPE_MODIFIER_MAP = new Map([
