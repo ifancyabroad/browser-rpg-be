@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import { BattleResult, BattleState, Target, Zone } from "@common/utils/enums/index";
+import { BattleResult, BattleState, DamageType, Target, Zone } from "@common/utils/enums/index";
 import {
 	activeEffectSchema,
 	auxiliaryEffectSchema,
@@ -123,7 +123,7 @@ battleSchema.method("handleAction", function handleAction(first: ITurnData, seco
 			turn.push(action);
 			data.self.handleAction(action, Target.Self);
 			data.enemy.handleAction(action, Target.Enemy);
-			data.self.tickPoison();
+			data.self.tickPoison(data.enemy.getDamageBonus(DamageType.Poison));
 			data.self.tickEffects();
 		}
 	});

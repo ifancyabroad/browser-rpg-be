@@ -97,7 +97,7 @@ export interface ICharacterMethods {
 	handleStatus(status: IStatusEffect): void;
 	handleAuxiliary(auxiliary: IAuxiliaryEffect): void;
 	handleAction(action: IAction, target: Target): void;
-	tickPoison(): void;
+	tickPoison(damageBonus: number): void;
 	tickEffects(): void;
 
 	checkAlive(): void;

@@ -706,10 +706,11 @@ characterSchema.method("handleAction", function handleAction(action: IAction, ta
 	});
 });
 
-characterSchema.method("tickPoison", function tickPoison() {
+characterSchema.method("tickPoison", function tickPoison(damageBonus: number) {
 	if (this.isPoisoned) {
+		const bonusMultiplier = damageBonus / 100 + 1;
 		const resistance = this.getResistance(DamageType.Poison) / 100;
-		const damage = Math.round((this.maxHitPoints / 8) * (1 - resistance));
+		const damage = Math.round((this.maxHitPoints / 8) * bonusMultiplier * (1 - resistance));
 		this.setHitPoints(this.baseHitPoints - damage);
 	}
 });
