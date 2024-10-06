@@ -28,13 +28,9 @@ transporter.verify(function (error, success) {
 
 export async function sendMail(options: SendMailOptions) {
 	try {
-		transporter.once("idle", async () => {
-			if (transporter.isIdle()) {
-				const info = await transporter.sendMail(options);
-				console.info("Message sent: %s", info.messageId);
-				return info;
-			}
-		});
+		const info = await transporter.sendMail(options);
+		console.info("Message sent: %s", info.messageId);
+		return info;
 	} catch (error) {
 		console.error(error);
 	}
