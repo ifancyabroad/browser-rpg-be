@@ -1,11 +1,11 @@
 import { IsEmail, IsString, MinLength } from "class-validator";
 
 export class UserSignupDto {
-	@IsEmail()
+	@IsEmail({}, { message: "Invalid email" })
 	email: string;
 
 	@IsString()
-	@MinLength(3)
+	@MinLength(3, { message: "Password must be at least 3 characters long" })
 	password: string;
 }
 

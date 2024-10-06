@@ -34,7 +34,7 @@ function validation<T extends object>(type: ClassConstructor<T>): RequestHandler
 		const parsedBody = plainToInstance(type, req.body);
 		const errors = await validate(parsedBody);
 		if (errors.length !== 0) {
-			const message = errors.join("").trimEnd();
+			const message = errors.map((error) => Object.values(error.constraints)).join(", ");
 			next(createError(httpStatus.BAD_REQUEST, message));
 		} else {
 			req.body = parsedBody;
