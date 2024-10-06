@@ -5,9 +5,9 @@
 			"armourType": "light",
 			"description": "Lightweight and agile, the classic leather armor for nimble warriors.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NMEwPxI9DXom0AaME0Z?alt=media&token=0e80349b-df1f-484e-9378-69b698ab0d3b",
-			"level": 2,
+			"level": 1,
 			"name": "Leather Armour",
-			"price": 340,
+			"price": 120,
 			"type": "armour"
 		},
 		"-NNvLkVyFUS4L9Zio2lO": {
@@ -70,24 +70,9 @@
 					"value": 20
 				},
 				{
-					"name": "radiant",
-					"type": "resistance",
-					"value": 20
-				},
-				{
 					"name": "lightning",
 					"type": "resistance",
 					"value": 20
-				},
-				{
-					"name": "cold",
-					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "radiant",
-					"type": "damage",
-					"value": 50
 				},
 				{
 					"name": "fire",
@@ -98,13 +83,13 @@
 			"type": "armour"
 		},
 		"-Nc44lyRjk-mHNox3H_P": {
-			"armourClass": 16,
-			"armourType": "heavy",
+			"armourClass": 14,
+			"armourType": "medium",
 			"description": "Basic but sturdy, this chain mail ensures both mobility and protection.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nc44lyRjk-mHNox3H_P?alt=media&token=55ad43c3-81c9-49e9-841a-1474f3ced545",
 			"level": 1,
 			"name": "Chain Mail",
-			"price": 90,
+			"price": 140,
 			"type": "armour"
 		},
 		"-NgJxsDuymhUWq2V4ew8": {
@@ -112,9 +97,9 @@
 			"armourType": "heavy",
 			"description": "Standard plate armor, providing formidable defense on the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJxsDuymhUWq2V4ew8?alt=media&token=7c799d63-2279-4d0f-babe-670d9d560b56",
-			"level": 3,
+			"level": 1,
 			"name": "Plate Armour",
-			"price": 950,
+			"price": 940,
 			"type": "armour"
 		},
 		"-NgJyJCDG-1UEccRymvT": {
@@ -178,7 +163,7 @@
 			"type": "shield"
 		},
 		"-NgJzhkhaQDrg55F1iM1": {
-			"armourClass": 12,
+			"armourClass": 13,
 			"armourType": "medium",
 			"description": "Basic yet durable, woven from beast hides for agile wilderness warriors.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzhkhaQDrg55F1iM1?alt=media&token=c6ec17ec-274a-4206-b226-99461d705c99",
@@ -188,18 +173,18 @@
 			"type": "armour"
 		},
 		"-NgO5fUaNmJH7LpPo2LP": {
-			"armourClass": 8,
+			"armourClass": 7,
 			"armourType": "misc",
 			"description": "Simple yet durable, this robe is tailored for those who journey far and wide.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO5fUaNmJH7LpPo2LP?alt=media&token=fcb298c5-6be0-485e-a713-3333026fb385",
-			"level": 2,
+			"level": 1,
 			"name": "Traveller's Robe",
-			"price": 300,
+			"price": 60,
 			"properties": [
 				{
-					"name": "intelligence",
-					"type": "stat",
-					"value": 1
+					"name": "piercing",
+					"type": "resistance",
+					"value": 25
 				}
 			],
 			"type": "armour"
@@ -269,55 +254,50 @@
 			"armourType": "light",
 			"description": "Entry-level studded leather, balancing flexibility and protection.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2B54qxLaMzsSjGgWO?alt=media&token=a43b02ef-3a09-4946-ba29-ff406bcfb269",
-			"level": 3,
+			"level": 1,
 			"name": "Studded Leather",
-			"price": 660,
+			"price": 200,
 			"type": "armour"
 		},
 		"-Nm2Cd-d46R6iuL4782x": {
-			"armourClass": 14,
-			"armourType": "medium",
+			"armourClass": 16,
+			"armourType": "heavy",
 			"description": "Sturdy breastplate, favored by vigilant guardians for reliable protection.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2Cd-d46R6iuL4782x?alt=media&token=d8ea0126-e3f3-4aaa-a78e-01edf588b702",
-			"level": 2,
+			"level": 1,
 			"name": "Breastplate",
-			"price": 400,
+			"price": 140,
 			"type": "armour"
 		},
 		"-Nm2D2w4xiCJtkX_yQHG": {
-			"armourClass": 15,
-			"armourType": "medium",
+			"armourClass": 17,
+			"armourType": "heavy",
 			"description": "A balanced mix of protection and mobility, favored by seasoned warriors.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2D2w4xiCJtkX_yQHG?alt=media&token=19cc2580-9772-4137-8391-e0da157d1f9d",
-			"level": 3,
+			"level": 1,
 			"name": "Half Plate",
-			"price": 900,
+			"price": 560,
 			"type": "armour"
 		},
 		"-Nm2DaHdeREq1LsjfY1C": {
-			"armourClass": 17,
-			"armourType": "heavy",
+			"armourClass": 15,
+			"armourType": "medium",
 			"description": "Basic splints interwoven for reliable defense on the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2DaHdeREq1LsjfY1C?alt=media&token=38342233-938a-416c-b667-8dcea9e4dad8",
-			"level": 2,
+			"level": 1,
 			"name": "Splint Mail",
-			"price": 460,
+			"price": 220,
 			"type": "armour"
 		},
 		"-Nm2GvWJKAW8lLaCcu7n": {
-			"armourClass": 9,
+			"armourClass": 7,
 			"armourType": "misc",
 			"description": "A versatile adventurer's robe, perfect for those seeking the unknown.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2GvWJKAW8lLaCcu7n?alt=media&token=bd8faa1f-a72b-47ae-a12d-f7c7f6cc5202",
-			"level": 3,
+			"level": 1,
 			"name": "Adventurer's Robe",
-			"price": 600,
+			"price": 60,
 			"properties": [
-				{
-					"name": "intelligence",
-					"type": "stat",
-					"value": 1
-				},
 				{
 					"name": "slashing",
 					"type": "resistance",
@@ -334,6 +314,13 @@
 			"level": 1,
 			"name": "Knave's Robe",
 			"price": 60,
+			"properties": [
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 25
+				}
+			],
 			"type": "armour"
 		},
 		"-Nz9RB3OhlZP2rGnxom1": {
@@ -1910,6 +1897,477 @@
 				}
 			],
 			"type": "ring"
+		},
+		"-O8D90nWC6JFNgVjhehj": {
+			"armourClass": 12,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8D90nWC6JFNgVjhehj?alt=media&token=8b65ce52-7f33-4fe9-a94f-9df6d74fdf8f",
+			"level": 4,
+			"name": "Deathstalker Tunic",
+			"price": 1650,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 25
+				},
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 25
+				},
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 25
+				},
+				{
+					"name": "acid",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-O8D9MKSCaY6F_NwQSzW": {
+			"armourClass": 10,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8D9MKSCaY6F_NwQSzW?alt=media&token=0545e274-4fef-427f-8d9a-9a568fe9f507",
+			"level": 2,
+			"name": "Archer's Vest",
+			"price": 380,
+			"properties": [
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-O8DA_DyFLruqd708ali": {
+			"armourClass": 10,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DA_DyFLruqd708ali?alt=media&token=93b91b0d-6e5e-41e1-80a9-7f021134777c",
+			"level": 2,
+			"name": "Nobleman's Garb",
+			"price": 280,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"type": "armour"
+		},
+		"-O8DB8llPrfIqwDRaGca": {
+			"armourClass": 12,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DB8llPrfIqwDRaGca?alt=media&token=f0558ab9-d029-42a2-984f-f46c40e10257",
+			"level": 4,
+			"name": "Sacrificial Armour",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8DBTz_fMTapnW0-nOH": {
+			"armourClass": 11,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DBTz_fMTapnW0-nOH?alt=media&token=a9847a8b-f300-4e8f-9bfd-7bac90c67274",
+			"level": 3,
+			"name": "Insulated Armour",
+			"price": 550,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 50
+				}
+			],
+			"type": "armour"
+		},
+		"-O8DBv36AD0X67CEQK-t": {
+			"armourClass": 11,
+			"armourType": "light",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DBv36AD0X67CEQK-t?alt=media&token=008c4fe4-745e-4df7-aeab-8b383d17b6fa",
+			"level": 3,
+			"name": "Shadow Armour",
+			"price": 780,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8Hs3ZHXox-pIZAXvRF": {
+			"armourClass": 18,
+			"armourType": "heavy",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8Hs3ZHXox-pIZAXvRF?alt=media&token=89559693-3e4b-4ca4-851d-14a962478b7e",
+			"level": 4,
+			"name": "Unholy Plate",
+			"price": 2120,
+			"properties": [
+				{
+					"name": "crushing",
+					"type": "damage",
+					"value": 25
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-O8HsQRUtV5enlZ3MShV": {
+			"armourClass": 14,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsQRUtV5enlZ3MShV?alt=media&token=4aba9205-7169-46c9-bcae-41ce43f39c32",
+			"level": 3,
+			"name": "Flame Resistant Mail",
+			"price": 560,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-O8HsoUz7NkxyEkUN6c2": {
+			"armourClass": 15,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsoUz7NkxyEkUN6c2?alt=media&token=ad65bca3-b84d-4219-9486-4f2f3e6b5e84",
+			"level": 4,
+			"name": "Knight's Mail",
+			"price": 1250,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8Hu0onj7CWyDB2nP9R": {
+			"armourClass": 14,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8Hu0onj7CWyDB2nP9R?alt=media&token=5bf34773-111f-4d1b-8f70-f64fa0104c6b",
+			"level": 3,
+			"name": "Brigandine Armour",
+			"price": 500,
+			"properties": [
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "acid",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-O8HvrUw3XyL6BhCvVRC": {
+			"armourClass": 17,
+			"armourType": "heavy",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HvrUw3XyL6BhCvVRC?alt=media&token=a30223b2-947d-4c23-930c-70d4e01cbe86",
+			"level": 3,
+			"name": "Black Knight Cuirass",
+			"price": 1250,
+			"properties": [
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 3
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I3pIr6Cshq65nK-Y8": {
+			"armourClass": 17,
+			"armourType": "heavy",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I3pIr6Cshq65nK-Y8?alt=media&token=a011e348-e7c3-40e9-a5fb-eaaf31651e30",
+			"level": 3,
+			"name": "Molten Plate",
+			"price": 1120,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I4QK7JVSMY6p__i3L": {
+			"armourClass": 16,
+			"armourType": "heavy",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I4QK7JVSMY6p__i3L?alt=media&token=444ba759-2ff5-4f6c-bb78-df49c35f2a0b",
+			"level": 2,
+			"name": "Warchief's Breastplate",
+			"price": 850,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 1
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I4m42K8Jd2iOdVxQS": {
+			"armourClass": 16,
+			"armourType": "heavy",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I4m42K8Jd2iOdVxQS?alt=media&token=f2284381-1d33-41ab-9aeb-373418c6e990",
+			"level": 2,
+			"name": "Squire's Breastplate",
+			"price": 760,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I5jiV3i13ZaPW46M9": {
+			"armourClass": 10,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I5jiV3i13ZaPW46M9?alt=media&token=830c05d6-af02-464e-9fec-d309bf2f4557",
+			"level": 4,
+			"name": "Barbarian's Tunic",
+			"price": 1400,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 5
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 5
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I79hlYuXK4jMUcNxa": {
+			"armourClass": 13,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I79hlYuXK4jMUcNxa?alt=media&token=5ceb328d-9036-4b73-ad10-181cb099c749",
+			"level": 2,
+			"name": "Wanderer's Vest",
+			"price": 260,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-O8I8N2hC8j3lZ5p1Uyi": {
+			"armourClass": 13,
+			"armourType": "medium",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I8N2hC8j3lZ5p1Uyi?alt=media&token=98d80f45-4bc7-4770-8839-c86b6308f336",
+			"level": 2,
+			"name": "Royal Gambeson",
+			"price": 210,
+			"properties": [
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IAQSb0DFvLB-gVQ6K": {
+			"armourClass": 9,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAQSb0DFvLB-gVQ6K?alt=media&token=f336ccd2-9fab-4567-8907-ba1d360b4f28",
+			"level": 4,
+			"name": "Robe of the Fire Mage",
+			"price": 960,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IAuNHTkw0VVfFPd7b": {
+			"armourClass": 9,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAuNHTkw0VVfFPd7b?alt=media&token=2e12287a-ee54-49b7-aa03-611d11386bfd",
+			"level": 4,
+			"name": "Robe of the Ice Mage",
+			"price": 960,
+			"properties": [
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IBE_pHJnjHNYAUha-": {
+			"armourClass": 7,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IBE_pHJnjHNYAUha-?alt=media&token=48727411-1263-4a4f-93e9-37062153d931",
+			"level": 2,
+			"name": "Druid's Attire",
+			"price": 200,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "acid",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IBW2DtLpMhCINfrZL": {
+			"armourClass": 7,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IBW2DtLpMhCINfrZL?alt=media&token=50e79530-66d9-41b1-8f18-4c3122d54538",
+			"level": 2,
+			"name": "Magister's Robe",
+			"price": 310,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IE8osJo-rek1NyPIc": {
+			"armourClass": 8,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IE8osJo-rek1NyPIc?alt=media&token=4f73c8cb-440d-48cf-8945-c51bcdd27f77",
+			"level": 3,
+			"name": "Archmage's Robes",
+			"price": 700,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "damage",
+					"value": 20
+				}
+			],
+			"type": "armour"
+		},
+		"-O8IEe884qFB7RpSqQ2U": {
+			"armourClass": 8,
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IEe884qFB7RpSqQ2U?alt=media&token=58bbec93-0365-495e-8d21-d2770964f5b7",
+			"level": 3,
+			"name": "Robes of Protection",
+			"price": 650,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 25
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 25
+				}
+			],
+			"type": "armour"
 		}
 	},
 	"classes": {
@@ -2004,7 +2462,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NZMHqP01D8-tN-uBn5s"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NgTmlFYyunJA4SqDKIX"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 9,
@@ -2177,7 +2635,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NKt0W8prsXi7-54nBVz"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 17,
@@ -2249,7 +2707,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_"],
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 11,
@@ -2264,6 +2722,7 @@
 			"challenge": 1,
 			"description": "",
 			"equipment": {
+				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NgK0I2STX7An8WjEeUN"
 			},
 			"name": "Hobgoblin",
@@ -2309,7 +2768,7 @@
 				"acid": 0,
 				"cold": 0,
 				"crushing": 0,
-				"fire": 0,
+				"fire": -50,
 				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
@@ -2318,7 +2777,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-O8D3hp6-sDMDNT122yT"],
 			"stats": {
 				"charisma": 4,
 				"constitution": 10,
@@ -2387,7 +2846,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpxFRvn_sOrij-K0F"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 10,
@@ -2501,16 +2960,16 @@
 			"challenge": 3,
 			"description": "",
 			"name": "Fire Beetle",
-			"naturalArmourClass": 0,
+			"naturalArmourClass": 6,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 4,
+			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=ce094b25-e77a-47db-93c7-363cadf92ccf",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": -50,
 				"crushing": 0,
-				"fire": 0,
+				"fire": 50,
 				"lighting": 0,
 				"lightning": 0,
 				"necrotic": 0,
@@ -2519,7 +2978,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-O4VXesSYLdWh1Qf_7Io"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-O4VXesSYLdWh1Qf_7Io"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 12,
@@ -2613,7 +3072,7 @@
 				"acid": 0,
 				"cold": -50,
 				"crushing": 50,
-				"fire": 100,
+				"fire": 50,
 				"lighting": 50,
 				"lightning": 0,
 				"necrotic": 0,
@@ -2691,7 +3150,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgrvvBiejH010EI8ME"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 17,
@@ -2757,7 +3216,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3zPER2-voArWHwNy9", "-Nc4-UVARP8jFmsiuXC9"],
 			"stats": {
 				"charisma": 13,
 				"constitution": 16,
@@ -2823,7 +3282,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTZhoqeh-K00UZDd2_", "-NhkbeREMKyQCVSlZOQf"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkbeREMKyQCVSlZOQf", "-NgTOJ5N4B3V55HpTl-8"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 14,
@@ -2846,12 +3305,12 @@
 			"name": "Flame Guardian",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "fire",
-			"naturalMaxDamage": 4,
-			"naturalMinDamage": 1,
+			"naturalMaxDamage": 7,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=be2d42ae-e1e5-4c2d-a582-f4918e955119",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": -50,
 				"crushing": 25,
 				"fire": 100,
 				"lighting": 0,
@@ -2884,7 +3343,7 @@
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
 			"resistances": {
 				"acid": 50,
-				"cold": 0,
+				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
 				"lighting": 0,
@@ -2917,9 +3376,9 @@
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=a710c32c-8fec-42f1-8e3e-9b56c83999ff",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": -50,
 				"crushing": 0,
-				"fire": 100,
+				"fire": 50,
 				"lighting": 50,
 				"lightning": 0,
 				"necrotic": 0,
@@ -2928,7 +3387,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9", "-NgTZhoqeh-K00UZDd2_"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -3034,13 +3493,8 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 8,
+					"duration": 5,
 					"properties": [
-						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
-							"value": 4
-						},
 						{
 							"name": "constitution",
 							"type": "stat",
@@ -3049,7 +3503,7 @@
 						{
 							"name": "dexterity",
 							"type": "stat",
-							"value": -5
+							"value": -2
 						}
 					],
 					"target": "self",
@@ -3069,7 +3523,7 @@
 			"effects": [
 				{
 					"difficulty": 12,
-					"duration": 4,
+					"duration": 3,
 					"effect": "bleed",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -3095,7 +3549,7 @@
 				{
 					"damageType": "crushing",
 					"max": 12,
-					"min": 1,
+					"min": 2,
 					"modifier": "strength",
 					"multiplier": 2,
 					"target": "enemy",
@@ -3104,7 +3558,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 18,
-					"duration": 8,
+					"duration": 5,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -3136,7 +3590,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 22,
-					"duration": 5,
+					"duration": 3,
 					"effect": "bleed",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -3182,18 +3636,13 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"difficulty": 12,
+					"difficulty": 14,
 					"duration": 5,
 					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "dexterity",
 							"type": "stat",
-							"value": -6
-						},
-						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
 							"value": -4
 						}
 					],
@@ -3220,7 +3669,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 18,
-					"duration": 8,
+					"duration": 3,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -3256,7 +3705,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -8
+							"value": -6
 						}
 					],
 					"target": "self",
@@ -3302,7 +3751,7 @@
 				{
 					"accuracy": 75,
 					"difficulty": 16,
-					"duration": 4,
+					"duration": 3,
 					"effect": "disarm",
 					"modifier": "strength",
 					"target": "enemy",
@@ -3326,12 +3775,17 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 10
+							"value": 8
 						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 10
+							"value": 8
+						},
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -3394,14 +3848,9 @@
 					"duration": 1,
 					"properties": [
 						{
-							"name": "hitChance",
-							"type": "auxiliaryStat",
-							"value": 10
-						},
-						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 10
+							"value": 8
 						}
 					],
 					"target": "self",
@@ -3420,7 +3869,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 12,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "critChance",
@@ -3440,14 +3889,14 @@
 		},
 		"-NZq_nhusxIdvv9LFwJZ": {
 			"class": "rogue",
-			"description": "Coat your weapon in poison to increase poison type damage.",
+			"description": "Coat your weapon in corrosive acid to increase acid type damage.",
 			"effects": [
 				{
 					"accuracy": 100,
 					"duration": 8,
 					"properties": [
 						{
-							"name": "poison",
+							"name": "acid",
 							"type": "damage",
 							"value": 50
 						}
@@ -3457,9 +3906,9 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_nhusxIdvv9LFwJZ?alt=media&token=aa5812ba-62fc-4ec5-a1cc-de61023e265c",
-			"level": 2,
-			"maxUses": 3,
-			"name": "Poison Coat",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Acid Coating",
 			"price": 260
 		},
 		"-NZqaJ9QZYIpe6P1iDYy": {
@@ -3468,7 +3917,7 @@
 			"effects": [
 				{
 					"damageType": "acid",
-					"max": 4,
+					"max": 6,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
@@ -3482,7 +3931,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -5
+							"value": -2
 						}
 					],
 					"target": "enemy",
@@ -3517,14 +3966,14 @@
 			"effects": [
 				{
 					"accuracy": 75,
-					"difficulty": 12,
-					"duration": 7,
+					"difficulty": 15,
+					"duration": 5,
 					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -8
+							"value": -6
 						}
 					],
 					"target": "enemy",
@@ -3533,7 +3982,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqb8JkDlplkchg0htc?alt=media&token=d137cfde-7d00-42aa-b967-c97844037121",
 			"level": 2,
-			"maxUses": 1,
+			"maxUses": 4,
 			"name": "Go For The Eyes",
 			"price": 250
 		},
@@ -3544,13 +3993,13 @@
 				{
 					"damageType": "poison",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"accuracy": 50,
-					"difficulty": 15,
+					"difficulty": 19,
 					"duration": 4,
 					"effect": "poison",
 					"modifier": "dexterity",
@@ -3560,7 +4009,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqbgWmfMqnnjnXn-Hp?alt=media&token=7b653a63-5cb5-41f1-aafe-45beb0b53579",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Poison Bomb",
 			"price": 760
 		},
@@ -3571,7 +4020,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 20,
-					"duration": 8,
+					"duration": 6,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -3591,7 +4040,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqc6Kl781JP6QdXB-m?alt=media&token=884dd2bc-52ae-478c-a715-59e7226b817c",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Press The Advantage",
 			"price": 600
 		},
@@ -3622,7 +4071,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqcxgP5ITgFn-T8xj6?alt=media&token=2ccf3d59-a4f4-41ce-ba9b-7e9fccac6a6d",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Flurry",
 			"price": 550
 		},
@@ -3632,7 +4081,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 8,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "fire",
@@ -3656,7 +4105,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdUiFhyxCULAsWYJl?alt=media&token=ab345aab-5ea3-49ef-81e8-ed3481946db6",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 4,
 			"name": "Cloak Of Shadows",
 			"price": 1300
 		},
@@ -3727,7 +4176,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 6
+							"value": 2
 						}
 					],
 					"target": "self",
@@ -3746,7 +4195,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 12,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "slashing",
@@ -3781,13 +4230,13 @@
 				{
 					"accuracy": 100,
 					"difficulty": 18,
-					"duration": 12,
+					"duration": 8,
 					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -10
+							"value": -8
 						}
 					],
 					"target": "enemy",
@@ -3811,17 +4260,17 @@
 						{
 							"name": "fire",
 							"type": "resistance",
-							"value": 50
+							"value": 25
 						},
 						{
 							"name": "cold",
 							"type": "resistance",
-							"value": 50
+							"value": 25
 						},
 						{
 							"name": "lightning",
 							"type": "resistance",
-							"value": 50
+							"value": 25
 						}
 					],
 					"target": "self",
@@ -3841,7 +4290,7 @@
 				{
 					"damageType": "lightning",
 					"max": 18,
-					"min": 6,
+					"min": 3,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -3859,7 +4308,7 @@
 				{
 					"damageType": "fire",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -3877,7 +4326,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 20,
-					"duration": 10,
+					"duration": 6,
 					"modifier": "intelligence",
 					"properties": [
 						{
@@ -3894,16 +4343,6 @@
 							"name": "lightning",
 							"type": "resistance",
 							"value": -50
-						},
-						{
-							"name": "radiant",
-							"type": "resistance",
-							"value": -25
-						},
-						{
-							"name": "necrotic",
-							"type": "resistance",
-							"value": -25
 						}
 					],
 					"target": "enemy",
@@ -3922,27 +4361,12 @@
 			"effects": [
 				{
 					"accuracy": 50,
-					"difficulty": 15,
+					"difficulty": 20,
 					"duration": 3,
 					"effect": "stun",
 					"modifier": "intelligence",
 					"target": "enemy",
 					"type": "auxiliary"
-				},
-				{
-					"accuracy": 100,
-					"difficulty": 20,
-					"duration": 5,
-					"modifier": "intelligence",
-					"properties": [
-						{
-							"name": "dexterity",
-							"type": "stat",
-							"value": -8
-						}
-					],
-					"target": "enemy",
-					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc40XqHNv0vjMrSUhRM?alt=media&token=6d54092f-efe5-426a-910b-355f0db3c882",
@@ -3958,7 +4382,7 @@
 				{
 					"damageType": "fire",
 					"max": 32,
-					"min": 18,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -3988,9 +4412,14 @@
 							"value": 8
 						},
 						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 8
+						},
+						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 10
+							"value": 6
 						}
 					],
 					"target": "self",
@@ -4111,12 +4540,12 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 12,
+					"duration": 5,
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 5
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -4153,7 +4582,7 @@
 			"effects": [
 				{
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "self",
 					"type": "heal"
 				}
@@ -4170,7 +4599,7 @@
 			"effects": [
 				{
 					"difficulty": 15,
-					"duration": 3,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "wisdom",
 					"target": "enemy",
@@ -4188,7 +4617,7 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 20,
+					"duration": 10,
 					"properties": [
 						{
 							"name": "radiant",
@@ -4207,7 +4636,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUH0cjt_Ek0BEIgUh?alt=media&token=ac5bf6ce-f097-45f5-b974-ee6bb37de865",
 			"level": 2,
-			"maxUses": 4,
+			"maxUses": 6,
 			"name": "Prayer",
 			"price": 0
 		},
@@ -4233,7 +4662,7 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 12,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "constitution",
@@ -4258,14 +4687,14 @@
 				{
 					"damageType": "fire",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "radiant",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -4305,7 +4734,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTXdELX-HExDeZ8y6L?alt=media&token=b51b7b94-f31d-4c63-8282-a5c8adc911a1",
 			"level": 4,
-			"maxUses": 1,
+			"maxUses": 3,
 			"name": "Divine Intervention",
 			"price": 0
 		},
@@ -4315,7 +4744,7 @@
 			"effects": [
 				{
 					"max": 24,
-					"min": 16,
+					"min": 4,
 					"target": "self",
 					"type": "heal"
 				}
@@ -4331,23 +4760,9 @@
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 8,
-					"duration": 1,
-					"modifier": "wisdom",
-					"properties": [
-						{
-							"name": "hitPoints",
-							"type": "auxiliaryStat",
-							"value": -100
-						}
-					],
-					"target": "enemy",
-					"type": "status"
-				},
-				{
 					"damageType": "necrotic",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -4409,13 +4824,13 @@
 				{
 					"damageType": "necrotic",
 					"max": 18,
-					"min": 6,
+					"min": 3,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "self",
 					"type": "heal"
 				}
@@ -4432,7 +4847,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 10,
+					"duration": 5,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -4468,7 +4883,7 @@
 				{
 					"damageType": "poison",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -4493,8 +4908,8 @@
 			"effects": [
 				{
 					"damageType": "acid",
-					"max": 12,
-					"min": 6,
+					"max": 4,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -4519,7 +4934,7 @@
 				{
 					"damageType": "acid",
 					"max": 18,
-					"min": 6,
+					"min": 3,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -4570,12 +4985,12 @@
 			"description": "Amplify your strength with a resounding Battle Cry.",
 			"effects": [
 				{
-					"duration": 8,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "strength",
 							"type": "stat",
-							"value": 4
+							"value": 3
 						}
 					],
 					"target": "self",
@@ -4593,17 +5008,12 @@
 			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
 			"effects": [
 				{
-					"duration": 6,
+					"duration": 5,
 					"properties": [
-						{
-							"name": "hitChance",
-							"type": "auxiliaryStat",
-							"value": 5
-						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 5
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -4637,8 +5047,8 @@
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
-					"difficulty": 12,
-					"duration": 3,
+					"difficulty": 17,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -4647,7 +5057,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgrvvBiejH010EI8ME?alt=media&token=562118d9-90e1-4dc3-91fc-3a3ca57c6ea5",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Knock Down",
 			"price": 0
 		},
@@ -4661,7 +5071,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 6
+							"value": 5
 						}
 					],
 					"target": "self",
@@ -4735,7 +5145,7 @@
 					"type": "weaponDamage"
 				},
 				{
-					"difficulty": 15,
+					"difficulty": 16,
 					"duration": 6,
 					"effect": "poison",
 					"modifier": "constitution",
@@ -4784,7 +5194,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 12
+							"value": 10
 						}
 					],
 					"target": "self",
@@ -4792,7 +5202,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh-SuuVlmZIYSG87sp?alt=media&token=50aaef62-ac5c-4a23-8360-e7e26095a333",
-			"level": 2,
+			"level": 3,
 			"maxUses": 2,
 			"name": "Evasion",
 			"price": 0
@@ -4838,25 +5248,11 @@
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
-				},
-				{
-					"difficulty": 20,
-					"duration": 4,
-					"modifier": "constitution",
-					"properties": [
-						{
-							"name": "acid",
-							"type": "resistance",
-							"value": -50
-						}
-					],
-					"target": "enemy",
-					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh0aZeozWw6_HWDH23?alt=media&token=7b30ca2b-4a56-43db-a5b2-ce88c87c7fa2",
-			"level": 3,
-			"maxUses": 2,
+			"level": 2,
+			"maxUses": 5,
 			"name": "Acid Strike",
 			"price": 0
 		},
@@ -4878,9 +5274,9 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh16M9sVTTOKw5g6rO?alt=media&token=c934a0ad-5942-45c9-ada7-02516b04aa9b",
-			"level": 3,
+			"level": 2,
 			"maxUses": 2,
-			"name": "Deadly Poison",
+			"name": "Enhance Poison",
 			"price": 0
 		},
 		"-Nhh1jOIoeiE7yvBATmT": {
@@ -4890,13 +5286,13 @@
 				{
 					"damageType": "slashing",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"difficulty": 12,
-					"duration": 6,
+					"duration": 3,
 					"effect": "disarm",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -4904,7 +5300,7 @@
 				},
 				{
 					"difficulty": 20,
-					"duration": 6,
+					"duration": 3,
 					"effect": "bleed",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -4948,7 +5344,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh2aa9hENKmzll2Md-?alt=media&token=811b82c0-59e5-4f46-afbd-0993015d3472",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Expose Weakness",
 			"price": 0
 		},
@@ -4992,7 +5388,7 @@
 				{
 					"damageType": "cold",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -5022,17 +5418,15 @@
 			"description": "Create duplicates to bewilder and evade adversaries.",
 			"effects": [
 				{
-					"difficulty": 18,
-					"duration": 10,
-					"modifier": "intelligence",
+					"duration": 4,
 					"properties": [
 						{
-							"name": "hitChance",
+							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -5
+							"value": 5
 						}
 					],
-					"target": "enemy",
+					"target": "self",
 					"type": "status"
 				}
 			],
@@ -5067,13 +5461,13 @@
 				{
 					"damageType": "crushing",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"difficulty": 16,
-					"duration": 2,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -5093,13 +5487,13 @@
 				{
 					"damageType": "cold",
 					"max": 18,
-					"min": 6,
+					"min": 3,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"difficulty": 18,
-					"duration": 6,
+					"duration": 4,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -5125,21 +5519,21 @@
 				{
 					"damageType": "lightning",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "lightning",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "lightning",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -5155,22 +5549,22 @@
 			"description": "Summon an invincible dome, deflecting magical attacks.",
 			"effects": [
 				{
-					"duration": 6,
+					"duration": 5,
 					"properties": [
 						{
 							"name": "fire",
 							"type": "resistance",
-							"value": 100
+							"value": 50
 						},
 						{
 							"name": "cold",
 							"type": "resistance",
-							"value": 100
+							"value": 50
 						},
 						{
 							"name": "lightning",
 							"type": "resistance",
-							"value": 100
+							"value": 50
 						},
 						{
 							"name": "slashing",
@@ -5203,7 +5597,7 @@
 			"description": "Infuse divine energy, amplifying strength and resilience.",
 			"effects": [
 				{
-					"duration": 10,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "slashing",
@@ -5237,7 +5631,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 20,
+					"duration": 8,
 					"modifier": "wisdom",
 					"properties": [
 						{
@@ -5271,7 +5665,7 @@
 			"description": "Infuse yourself with divine might, bolstering physical prowess.",
 			"effects": [
 				{
-					"duration": 12,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "strength",
@@ -5285,7 +5679,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkOF38JibaTuWhFGg_?alt=media&token=18908b64-c7c2-4581-b0b6-04b48c601aaf",
 			"level": 2,
-			"maxUses": 2,
+			"maxUses": 4,
 			"name": "Divine Strength",
 			"price": 0
 		},
@@ -5385,7 +5779,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkT3OrPY0IOvzISeE0?alt=media&token=052b8155-56f6-4eb1-a650-01eaeb7fb7d8",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 1,
 			"name": "Hold Person",
 			"price": 0
 		},
@@ -5395,15 +5789,23 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 24,
-					"min": 12,
+					"max": 12,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"difficulty": 17,
+					"duration": 3,
+					"effect": "stun",
+					"modifier": "wisdom",
+					"target": "enemy",
+					"type": "auxiliary"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkZb3a3j2ykQWUtTC0?alt=media&token=068e6888-9b67-4aca-bce4-d315299e625a",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 1,
 			"name": "Wail",
 			"price": 0
 		},
@@ -5449,13 +5851,13 @@
 				{
 					"damageType": "crushing",
 					"max": 16,
-					"min": 8,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"difficulty": 15,
-					"duration": 3,
+					"difficulty": 14,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "strength",
 					"target": "enemy",
@@ -5475,14 +5877,14 @@
 				{
 					"damageType": "fire",
 					"max": 12,
-					"min": 6,
+					"min": 2,
 					"target": "self",
 					"type": "damage"
 				},
 				{
 					"damageType": "fire",
 					"max": 24,
-					"min": 12,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -5491,6 +5893,34 @@
 			"level": 3,
 			"maxUses": 2,
 			"name": "Combust",
+			"price": 0
+		},
+		"-O8D3hp6-sDMDNT122yT": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 2
+						},
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 2
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O8D3hp6-sDMDNT122yT?alt=media&token=4901860c-7d53-4de3-b85a-7d90ffc81233",
+			"level": 1,
+			"maxUses": 4,
+			"name": "Growth",
 			"price": 0
 		}
 	},
