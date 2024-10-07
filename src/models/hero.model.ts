@@ -121,7 +121,7 @@ heroSchema.virtual("restPrice").get(function () {
 });
 
 heroSchema.virtual("startingBattleLevel").get(function () {
-	return Math.floor((this.maxBattleLevel + 1) / 10) * 10 + 1;
+	return Math.floor(this.maxBattleLevel / 10) * 10 + 1;
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {
