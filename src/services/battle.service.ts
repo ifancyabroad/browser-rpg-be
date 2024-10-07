@@ -246,15 +246,15 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		battleRecord.turns.push(turn);
 
 		if (!characterRecord.alive) {
-			characterRecord.battleLost(enemyRecord.name);
 			battleRecord.result = BattleResult.Lost;
+			characterRecord.battleLost(enemyRecord.name);
 		}
 
 		if (characterRecord.alive && !enemyRecord.alive) {
-			characterRecord.battleWon(battleRecord);
-			battleRecord.result = BattleResult.Won;
 			battleRecord.handleReward(characterRecord, enemyRecord);
 			battleRecord.handleTreasure(characterRecord, enemyRecord);
+			battleRecord.result = BattleResult.Won;
+			characterRecord.battleWon(battleRecord);
 		}
 
 		const character = await characterRecord.save();
