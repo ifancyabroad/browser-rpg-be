@@ -10,6 +10,7 @@ import {
 	Target,
 	WeaponSize,
 	WeaponType,
+	Zone,
 } from "@common/utils";
 import { TProperty } from "./property";
 
@@ -19,6 +20,7 @@ export type TEquipment = Record<EquipmentSlot, string>;
 
 export interface IEnemyData {
 	challenge: number;
+	zone: Zone;
 	resistances: TDamageTypes;
 	description: string;
 	name: string;

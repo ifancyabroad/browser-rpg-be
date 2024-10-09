@@ -68,10 +68,6 @@ export class Game {
 		return Math.ceil(battleLevel / 10);
 	}
 
-	public static getChallengeRating(battleLevel = 1) {
-		return Math.ceil((battleLevel / 10) % ZONES.length);
-	}
-
 	public static getZone(battleLevel = 1) {
 		const index = Math.floor((battleLevel / 10) % ZONES.length);
 		return ZONES[index];

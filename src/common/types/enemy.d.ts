@@ -2,11 +2,12 @@ import { Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero } from "./hero";
 import { ISkillDataWithID } from "./gameData";
-import { DamageType } from "@common/utils";
+import { DamageType, Zone } from "@common/utils";
 
 export interface IEnemy extends ICharacter {
 	image: string;
 	challenge: number;
+	zone: Zone;
 	boss: boolean;
 	naturalArmourClass: number;
 	naturalMinDamage: number;
@@ -16,7 +17,6 @@ export interface IEnemy extends ICharacter {
 
 export interface IEnemyMethods extends ICharacterMethods {
 	// Add virtuals here
-	get rating(): number;
 
 	// Add methods here
 	getSkill(hero: IHero): ISkillDataWithID;

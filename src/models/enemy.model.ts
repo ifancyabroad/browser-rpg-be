@@ -2,7 +2,7 @@ import { Schema } from "mongoose";
 import CharacterModel from "./character.model";
 import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
-import { AuxiliaryStat, DamageType, EffectType, Game, Target, getRandomElement } from "@common/utils";
+import { AuxiliaryStat, DamageType, EffectType, Game, Target, Zone, getRandomElement } from "@common/utils";
 import { IEffectData } from "@common/types/character";
 import { IWeaponDamageEffectData } from "@common/types/gameData";
 
@@ -20,6 +20,11 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			type: Number,
 			min: 1,
 			max: 30,
+			required: true,
+		},
+		zone: {
+			type: String,
+			enum: Zone,
 			required: true,
 		},
 		boss: {
@@ -58,12 +63,6 @@ enemySchema.virtual("armourClass").get(function () {
 		Math.max(this.getEquipmentArmourClass(), this.naturalArmourClass) +
 		this.getAuxiliaryStat(AuxiliaryStat.ArmourClass)
 	);
-});
-
-enemySchema.virtual("rating").get(function () {
-	const attributeTotal = Object.values(this.stats).reduce((total, value) => total + value, 0);
-	const attributeAverage = attributeTotal / Object.keys(this.stats).length;
-	return Math.round(attributeAverage);
 });
 
 enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {

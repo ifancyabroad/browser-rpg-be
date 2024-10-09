@@ -10,12 +10,11 @@ import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import { REWARD_GOLD_MULTIPLIER } from "@common/utils";
 
-function getEnemyData(battleLevel: number) {
-	const rating = Game.getChallengeRating(battleLevel);
+function getEnemyData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
 	const level = Game.getEnemyLevel(battleLevel);
 	const hitPoints = Game.getHitPoints(level);
-	const enemyData = GameData.getEnemy(rating, isBoss);
+	const enemyData = GameData.getEnemy(battleZone, isBoss);
 	const skills = enemyData.skills.map((id) => ({
 		id,
 		remaining: GameData.getSkillById(id).maxUses,
@@ -27,6 +26,7 @@ function getEnemyData(battleLevel: number) {
 		image: enemyData.portrait,
 		level,
 		challenge: enemyData.challenge,
+		zone: enemyData.zone,
 		boss: isBoss,
 		skillIDs: skills,
 		equipmentIDs: equipment,
@@ -62,7 +62,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 
 		const level = characterRecord.startingBattleLevel;
 		const zone = Game.getZone(level);
-		const enemyData = getEnemyData(level);
+		const enemyData = getEnemyData(zone, level);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -110,7 +110,7 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 
 		const level = battleRecord.level + 1;
 		const zone = Game.getZone(level);
-		const enemyData = getEnemyData(level);
+		const enemyData = getEnemyData(zone, level);
 
 		const enemy = await EnemyModel.create(enemyData);
 

@@ -2441,7 +2441,7 @@
 	"monsters": {
 		"-NKsyKI9WEI82s5dZFJ_": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 4,
 			"description": "",
 			"name": "Runtling",
 			"naturalArmourClass": 9,
@@ -2470,11 +2470,12 @@
 				"intelligence": 10,
 				"strength": 8,
 				"wisdom": 8
-			}
+			},
+			"zone": "forest"
 		},
 		"-NKszEMMl4YFhX86psew": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 3,
 			"description": "",
 			"name": "Skeleton",
 			"naturalArmourClass": 0,
@@ -2503,11 +2504,12 @@
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 8
-			}
+			},
+			"zone": "hills"
 		},
 		"-NKt-VrmU-I7ve15fvwC": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 14,
 			"description": "",
 			"equipment": {
 				"hand1": "-NgK0n7aPw0NHeefOnRg"
@@ -2539,11 +2541,12 @@
 				"intelligence": 2,
 				"strength": 18,
 				"wisdom": 6
-			}
+			},
+			"zone": "hills"
 		},
 		"-NKt0FqDCM_Ms7YFjWhj": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 10,
 			"description": "",
 			"name": "Zombie Executioner",
 			"naturalArmourClass": 11,
@@ -2572,11 +2575,12 @@
 				"intelligence": 3,
 				"strength": 14,
 				"wisdom": 6
-			}
+			},
+			"zone": "hills"
 		},
 		"-NKt0uevyBhRIvkURXy4": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 9,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
@@ -2610,11 +2614,12 @@
 				"intelligence": 7,
 				"strength": 12,
 				"wisdom": 8
-			}
+			},
+			"zone": "hills"
 		},
 		"-NKt3ujmy2tXghwqSM9o": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 13,
 			"description": "",
 			"name": "Abomination",
 			"naturalArmourClass": 0,
@@ -2643,11 +2648,12 @@
 				"intelligence": 3,
 				"strength": 18,
 				"wisdom": 6
-			}
+			},
+			"zone": "hills"
 		},
 		"-NNvOKycvGLGjgkXhAwj": {
 			"boss": true,
-			"challenge": 3,
+			"challenge": 24,
 			"description": "A dragon.",
 			"name": "Dragon",
 			"naturalArmourClass": 18,
@@ -2682,11 +2688,12 @@
 				"intelligence": 12,
 				"strength": 23,
 				"wisdom": 13
-			}
+			},
+			"zone": "hell"
 		},
 		"-NZMCIuuab0gVQ5bMj6j": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 7,
 			"description": "A wolf like creatue.",
 			"name": "Worg",
 			"naturalArmourClass": 7,
@@ -2715,11 +2722,12 @@
 				"intelligence": 7,
 				"strength": 14,
 				"wisdom": 11
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgTNI7tNRD7gPFbOyq-": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 8,
 			"description": "",
 			"equipment": {
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
@@ -2752,11 +2760,12 @@
 				"intelligence": 10,
 				"strength": 13,
 				"wisdom": 10
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgTNbCiHpz6PPDP3_Qm": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 7,
 			"description": "",
 			"name": "Chomper",
 			"naturalArmourClass": 6,
@@ -2785,11 +2794,12 @@
 				"intelligence": 2,
 				"strength": 12,
 				"wisdom": 11
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgTPWvUSrJHK-FcH_R1": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 11,
 			"description": "",
 			"name": "Basilisk",
 			"naturalArmourClass": 13,
@@ -2818,11 +2828,12 @@
 				"intelligence": 2,
 				"strength": 16,
 				"wisdom": 8
-			}
+			},
+			"zone": "hell"
 		},
 		"-NgTZVlj1jll9-HF8fPh": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 5,
 			"description": "",
 			"equipment": {
 				"hand1": "-NNwPg099VI_pDe9E_Zd"
@@ -2854,11 +2865,12 @@
 				"intelligence": 6,
 				"strength": 13,
 				"wisdom": 10
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgT_UhmZUanGpfiYwvB": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 13,
 			"description": "",
 			"name": "Ghoul",
 			"naturalArmourClass": 9,
@@ -2887,11 +2899,12 @@
 				"intelligence": 7,
 				"strength": 13,
 				"wisdom": 10
-			}
+			},
+			"zone": "hills"
 		},
 		"-NgTl1sgx8KyoiRbtpyg": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 6,
 			"description": "",
 			"name": "Shrieker",
 			"naturalArmourClass": 6,
@@ -2920,11 +2933,12 @@
 				"intelligence": 2,
 				"strength": 12,
 				"wisdom": 10
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
 			"boss": false,
-			"challenge": 2,
+			"challenge": 12,
 			"description": "",
 			"name": "Dread Serpent",
 			"naturalArmourClass": 11,
@@ -2953,11 +2967,12 @@
 				"intelligence": 1,
 				"strength": 16,
 				"wisdom": 13
-			}
+			},
+			"zone": "hills"
 		},
 		"-NgTnsfQ_nzEzn_ochM3": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 12,
 			"description": "",
 			"name": "Fire Beetle",
 			"naturalArmourClass": 6,
@@ -2986,11 +3001,12 @@
 				"intelligence": 1,
 				"strength": 8,
 				"wisdom": 7
-			}
+			},
+			"zone": "hell"
 		},
 		"-NgTpSKiIRPOLlAMwvOl": {
 			"boss": true,
-			"challenge": 1,
+			"challenge": 13,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
@@ -3023,11 +3039,12 @@
 				"intelligence": 6,
 				"strength": 16,
 				"wisdom": 16
-			}
+			},
+			"zone": "forest"
 		},
 		"-NgTqLUaOc0-qU_ug8Ly": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 17,
 			"description": "",
 			"name": "Golem",
 			"naturalArmourClass": 19,
@@ -3056,11 +3073,12 @@
 				"intelligence": 3,
 				"strength": 22,
 				"wisdom": 11
-			}
+			},
+			"zone": "hell"
 		},
 		"-NgYk1uHzdomGArMmxVa": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 14,
 			"description": "",
 			"name": "Fire Snake",
 			"naturalArmourClass": 11,
@@ -3089,11 +3107,12 @@
 				"intelligence": 7,
 				"strength": 12,
 				"wisdom": 10
-			}
+			},
+			"zone": "hell"
 		},
 		"-NhkUQSsszVLO_4PrBQy": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 5,
 			"description": "",
 			"name": "Horror",
 			"naturalArmourClass": 9,
@@ -3122,11 +3141,12 @@
 				"intelligence": 8,
 				"strength": 7,
 				"wisdom": 7
-			}
+			},
+			"zone": "forest"
 		},
 		"-NhkVOZVy5W_2PPD1vjr": {
 			"boss": true,
-			"challenge": 2,
+			"challenge": 18,
 			"description": "",
 			"equipment": {
 				"hand1": "-NgO1-16PWvnT302EIO_"
@@ -3158,11 +3178,12 @@
 				"intelligence": 6,
 				"strength": 21,
 				"wisdom": 10
-			}
+			},
+			"zone": "hills"
 		},
 		"-NhkWbFFsefw7IS2Vxk0": {
-			"boss": true,
-			"challenge": 2,
+			"boss": false,
+			"challenge": 16,
 			"description": "",
 			"name": "Wight",
 			"naturalArmourClass": 13,
@@ -3191,11 +3212,12 @@
 				"intelligence": 10,
 				"strength": 15,
 				"wisdom": 13
-			}
+			},
+			"zone": "hills"
 		},
 		"-NhkXJrcYTG_XtKdj_B8": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 14,
 			"description": "",
 			"name": "Gauth",
 			"naturalArmourClass": 12,
@@ -3224,11 +3246,12 @@
 				"intelligence": 15,
 				"strength": 10,
 				"wisdom": 15
-			}
+			},
+			"zone": "hell"
 		},
 		"-NhkYK7-G0lWSQ6VxFJy": {
-			"boss": false,
-			"challenge": 2,
+			"boss": true,
+			"challenge": 19,
 			"description": "",
 			"name": "Wraith",
 			"naturalArmourClass": 13,
@@ -3257,11 +3280,12 @@
 				"intelligence": 12,
 				"strength": 6,
 				"wisdom": 14
-			}
+			},
+			"zone": "hills"
 		},
 		"-NhkbQX-i_HQ7Gt2qHgm": {
 			"boss": false,
-			"challenge": 1,
+			"challenge": 8,
 			"description": "",
 			"name": "Living Mold",
 			"naturalArmourClass": 11,
@@ -3290,11 +3314,12 @@
 				"intelligence": 5,
 				"strength": 12,
 				"wisdom": 10
-			}
+			},
+			"zone": "forest"
 		},
 		"-NhkcIl5L0eB39i3HIeJ": {
 			"boss": true,
-			"challenge": 1,
+			"challenge": 14,
 			"description": "",
 			"equipment": {
 				"body": "-Nm2Cd-d46R6iuL4782x",
@@ -3329,11 +3354,12 @@
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 10
-			}
+			},
+			"zone": "forest"
 		},
 		"-NhkcuvakLcMmPpk-jQk": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 15,
 			"description": "",
 			"name": "Fire Elemental",
 			"naturalArmourClass": 12,
@@ -3362,11 +3388,12 @@
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 10
-			}
+			},
+			"zone": "hell"
 		},
 		"-NhkeXYbGnQ67kC7gWyw": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 18,
 			"description": "",
 			"name": "Fire Drake",
 			"naturalArmourClass": 14,
@@ -3395,11 +3422,12 @@
 				"intelligence": 9,
 				"strength": 21,
 				"wisdom": 12
-			}
+			},
+			"zone": "hell"
 		},
 		"-O1g2suyagydsOiCLMPZ": {
 			"boss": false,
-			"challenge": 3,
+			"challenge": 15,
 			"description": "",
 			"name": "Flame Shrieker",
 			"naturalArmourClass": 8,
@@ -3427,11 +3455,12 @@
 				"intelligence": 2,
 				"strength": 16,
 				"wisdom": 10
-			}
+			},
+			"zone": "hell"
 		},
 		"-O1g5UbnObhA-7IMjEhj": {
 			"boss": true,
-			"challenge": 3,
+			"challenge": 22,
 			"description": "",
 			"name": "Pit Fiend",
 			"naturalArmourClass": 16,
@@ -3459,7 +3488,8 @@
 				"intelligence": 5,
 				"strength": 20,
 				"wisdom": 10
-			}
+			},
+			"zone": "hell"
 		}
 	},
 	"skills": {

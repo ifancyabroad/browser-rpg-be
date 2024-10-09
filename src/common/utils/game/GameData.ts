@@ -3,7 +3,7 @@ import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
 import { ITEM_WEIGHT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
-import { EquipmentSlot } from "@common/utils/enums";
+import { EquipmentSlot, Zone } from "@common/utils/enums";
 
 export class GameData {
 	public static getClasses() {
@@ -172,12 +172,10 @@ export class GameData {
 		}));
 	}
 
-	public static getEnemy(level: number, isBoss = false) {
+	public static getEnemy(battleZone: Zone, isBoss = false) {
 		try {
 			const { monsters } = data as IGameData;
-			const enemyPool = mapToArray(monsters).filter(
-				({ challenge, boss }) => boss === isBoss && challenge === level,
-			);
+			const enemyPool = mapToArray(monsters).filter(({ zone, boss }) => boss === isBoss && zone === battleZone);
 			return getRandomElement(enemyPool);
 		} catch (error) {
 			console.error(`Error getEnemy: ${error.message}`);
