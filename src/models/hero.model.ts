@@ -106,7 +106,7 @@ heroSchema.virtual("levelUpData").get(function () {
 });
 
 heroSchema.virtual("discountMultiplier").get(function () {
-	return Math.round(1 - Game.getModifier(this.stats.charisma) / 10);
+	return Math.round((1 - Game.getModifier(this.stats.charisma) / 10) * 100) / 100;
 });
 
 heroSchema.virtual("restockPrice").get(function () {
