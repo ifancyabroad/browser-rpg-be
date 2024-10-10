@@ -33,7 +33,7 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 		},
 		maxBattleLevel: {
 			type: Number,
-			default: 1,
+			default: 0,
 		},
 		experience: {
 			type: Number,
@@ -51,11 +51,6 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			default: 1,
 		},
 		kills: {
-			type: Number,
-			min: 0,
-			default: 0,
-		},
-		streak: {
 			type: Number,
 			min: 0,
 			default: 0,
@@ -236,7 +231,6 @@ heroSchema.method("battleWon", function battleWon(battle: IBattle & IBattleMetho
 	this.addExperience(reward.experience);
 	this.gold += reward.gold;
 	this.kills++;
-	this.streak++;
 	this.set("activeStatusEffects", []);
 	this.set("activeAuxiliaryEffects", []);
 });

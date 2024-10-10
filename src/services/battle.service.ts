@@ -8,7 +8,7 @@ import { IBattleInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
-import { REWARD_GOLD_MULTIPLIER } from "@common/utils";
+import { BATTLE_MULTIPLIER_INCREMENT, REWARD_GOLD_MULTIPLIER } from "@common/utils";
 
 function getEnemyData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
@@ -61,6 +61,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const level = characterRecord.startingBattleLevel;
+		const maxLevel = characterRecord.maxBattleLevel;
 		const zone = Game.getZone(level);
 		const enemyData = getEnemyData(zone, level);
 
@@ -72,6 +73,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			enemy: enemy.id,
 			zone,
 			level,
+			maxLevel,
 		});
 
 		characterRecord.state = State.Battle;
@@ -109,6 +111,8 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const level = battleRecord.level + 1;
+		const maxLevel = characterRecord.maxBattleLevel;
+		const multiplier = battleRecord.multiplier + BATTLE_MULTIPLIER_INCREMENT;
 		const zone = Game.getZone(level);
 		const enemyData = getEnemyData(zone, level);
 
@@ -120,6 +124,8 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 			enemy: enemy.id,
 			zone,
 			level,
+			maxLevel,
+			multiplier,
 		});
 
 		await EnemyModel.findByIdAndDelete(battleRecord.enemy);
@@ -187,8 +193,6 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 		}
 
 		battleRecord.state = BattleState.Complete;
-
-		characterRecord.streak = 0;
 		characterRecord.state = State.Idle;
 
 		const character = await characterRecord.save();

@@ -23,7 +23,6 @@ export interface IHero extends ICharacter {
 	gold: number;
 	day: number;
 	kills: number;
-	streak: number;
 	availableItemIDs: Types.Array<string>;
 	restockCount: number;
 	levelUp?: ILevelUp;

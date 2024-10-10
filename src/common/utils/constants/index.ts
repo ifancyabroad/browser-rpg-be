@@ -12,6 +12,7 @@ import {
 export const GOLD_MULTIPLIER = 5;
 export const REWARD_GOLD_MULTIPLIER = 50;
 export const EXPERIENCE_MULTIPLIER = 20;
+export const BATTLE_MULTIPLIER_INCREMENT = 0.25;
 
 export const SHOP_ITEMS = 6;
 export const SHOP_LEVEL = 1;

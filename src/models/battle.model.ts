@@ -79,6 +79,14 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			type: Number,
 			default: 1,
 		},
+		maxLevel: {
+			type: Number,
+			default: 1,
+		},
+		multiplier: {
+			type: Number,
+			default: 1,
+		},
 		zone: {
 			type: String,
 			enum: Zone,
@@ -143,8 +151,8 @@ battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
 });
 
 battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
-	const gold = GOLD_MULTIPLIER * enemy.level * enemy.challenge * (hero.streak + 1);
-	const experience = EXPERIENCE_MULTIPLIER * Math.pow(2, enemy.level) * enemy.challenge;
+	const gold = Math.round(GOLD_MULTIPLIER * enemy.level * enemy.challenge * this.multiplier);
+	const experience = Math.round(EXPERIENCE_MULTIPLIER * Math.pow(2, enemy.level) * enemy.challenge);
 	this.reward = { gold, experience };
 });
 
