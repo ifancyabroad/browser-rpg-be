@@ -17,7 +17,7 @@ import { model } from "mongoose";
 import { skillSchema } from "./skill.model";
 import { GameData } from "@common/utils/game/GameData";
 import { ICharacter, ICharacterMethods, ICharacterModel, IEffectData } from "@common/types/character";
-import { mapToArray } from "@common/utils";
+import { mapToArray, MAX_POTIONS } from "@common/utils";
 import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
@@ -100,6 +100,12 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 				type: String,
 				default: null,
 			},
+		},
+		potions: {
+			type: Number,
+			min: 0,
+			max: MAX_POTIONS,
+			default: 0,
 		},
 		baseHitPoints: {
 			type: Number,
@@ -525,7 +531,47 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	};
 });
 
+characterSchema.method("createEmptyAction", function createEmptyAction(data: ITurnData, name: string) {
+	const action: IAction = {
+		self: data.self.name,
+		enemy: data.enemy.name,
+		skill: {
+			name,
+			weaponDamage: new Types.DocumentArray<IDamageEffect[]>([]),
+			damage: new Types.DocumentArray<IDamageEffect>([]),
+			heal: new Types.DocumentArray<IHealEffect>([]),
+			status: new Types.DocumentArray<IStatusEffect>([]),
+			auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
+		},
+		weapon: new Types.DocumentArray<IActionWeaponEffect>([]),
+		activeEffects: data.self.activeAuxiliaryEffects,
+	};
+
+	return action;
+});
+
 characterSchema.method("createAction", function createAction(data: ITurnData) {
+	if (data.skill === "potion") {
+		if (this.potions <= 0) {
+			throw new Error("No potions left");
+		}
+
+		const action: IAction = this.createEmptyAction(data, "Potion");
+
+		if (this.isStunned) {
+			return action;
+		}
+
+		this.potions--;
+
+		action.skill.heal.push({
+			target: Target.Self,
+			value: Math.round(this.maxHitPoints / 2),
+		});
+
+		return action;
+	}
+
 	const skill = this.skills.find((sk) => sk.id === data.skill);
 
 	if (!skill) {
@@ -536,20 +582,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		throw new Error("No uses remaining for this skill");
 	}
 
-	const action: IAction = {
-		self: data.self.name,
-		enemy: data.enemy.name,
-		skill: {
-			name: skill.name,
-			weaponDamage: new Types.DocumentArray<IDamageEffect[]>([]),
-			damage: new Types.DocumentArray<IDamageEffect>([]),
-			heal: new Types.DocumentArray<IHealEffect>([]),
-			status: new Types.DocumentArray<IStatusEffect>([]),
-			auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
-		},
-		weapon: new Types.DocumentArray<IActionWeaponEffect>([]),
-		activeEffects: data.self.activeAuxiliaryEffects,
-	};
+	const action: IAction = this.createEmptyAction(data, skill.name);
 
 	if (this.isStunned) {
 		return action;

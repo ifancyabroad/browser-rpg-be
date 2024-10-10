@@ -3,6 +3,7 @@ import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
 import {
 	buyItem,
+	buyPotion,
 	createCharacter,
 	getActiveCharacter,
 	levelUp,
@@ -79,6 +80,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await restockItems(req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/buyPotion'
+// @DEST Buy a potion from the potion seller
+characterRouter.post(
+	"/buyPotion",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request, res: Response) => {
+		const character = await buyPotion(req.session);
 		res.json({ character });
 	}),
 );

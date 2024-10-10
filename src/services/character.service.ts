@@ -49,6 +49,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			skillIDs: skills,
 			equipmentIDs: classData.equipment,
 			availableItemIDs: availableItems,
+			potions: 1,
 			baseStats: classData.stats,
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
@@ -134,6 +135,28 @@ export async function restockItems(session: Session & Partial<SessionData>) {
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error restockItems: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function buyPotion(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy potion");
+		}
+
+		characterRecord.buyPotion();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error buyPotion: ${error.message}`);
 		throw error;
 	}
 }

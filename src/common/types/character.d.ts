@@ -42,6 +42,7 @@ export interface ICharacter {
 	activeAuxiliaryEffects: Types.DocumentArray<IActiveAuxiliaryEffect>;
 	skillIDs: Types.DocumentArray<ISkill>;
 	equipmentIDs: TEquipment;
+	potions: number;
 	baseHitPoints: number;
 	baseMaxHitPoints: number;
 	baseStats: TStats;
@@ -91,6 +92,7 @@ export interface ICharacterMethods {
 	getHeal(data: IEffectData): IHealEffect;
 	getStatus(data: IEffectData): IStatusEffect;
 	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
+	createEmptyAction(data: ITurnData, name: string): IAction;
 	createAction(data: ITurnData): IAction;
 	handleDamage(damage: IDamageEffect): void;
 	handleHeal(heal: IHealEffect): void;

@@ -20,6 +20,9 @@ export const SHOP_LEVEL = 1;
 export const BASE_RESTOCK_PRICE = 20;
 export const BASE_REST_PRICE = 10;
 
+export const POTION_PRICE = 200;
+export const MAX_POTIONS = 3;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],

@@ -8,6 +8,8 @@ import {
 	BASE_RESTOCK_PRICE,
 	EQUIPMENT_SLOT_TYPE_MAP,
 	EXPERIENCE_MAP,
+	MAX_POTIONS,
+	POTION_PRICE,
 	SHOP_ITEMS,
 	SHOP_LEVEL,
 	SKILL_LEVEL_MAP,
@@ -223,6 +225,20 @@ heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlo
 	};
 
 	this.checkConstitution();
+});
+
+heroSchema.method("buyPotion", function buyPotion() {
+	if (this.potions >= MAX_POTIONS) {
+		throw new Error("Potion limit reached");
+	}
+
+	const price = Math.round(POTION_PRICE * this.discountMultiplier);
+	if (price > this.gold) {
+		throw new Error("Not enough gold");
+	}
+
+	this.gold -= price;
+	this.potions++;
 });
 
 heroSchema.method("battleWon", function battleWon(battle: IBattle & IBattleMethods) {
