@@ -69,7 +69,7 @@ export class Game {
 	}
 
 	public static getZone(battleLevel = 1) {
-		const index = Math.floor((battleLevel / 10) % ZONES.length);
+		const index = Math.floor(((battleLevel - 1) / 10) % ZONES.length);
 		return ZONES[index];
 	}
 }
