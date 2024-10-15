@@ -3133,7 +3133,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-O9Fao6yVdkld7nZuuMv"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 9,
@@ -3479,7 +3479,7 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd", "-NZqTywT0RDubTou99c2"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 18,
@@ -4802,24 +4802,6 @@
 			"name": "Power Word: Death",
 			"price": 0
 		},
-		"-NgTZhoqeh-K00UZDd2_": {
-			"class": "common",
-			"description": "",
-			"effects": [
-				{
-					"damageType": "piercing",
-					"max": 6,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				}
-			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTZhoqeh-K00UZDd2_?alt=media&token=9d495ce4-5e69-4ab6-aa98-65fe85f8b9d2",
-			"level": 1,
-			"maxUses": 10,
-			"name": "Bite",
-			"price": 0
-		},
 		"-NgT_si0jS5qW1S5SbaJ": {
 			"class": "unique",
 			"description": "",
@@ -5950,6 +5932,24 @@
 			"level": 1,
 			"maxUses": 4,
 			"name": "Growth",
+			"price": 0
+		},
+		"-O9Fao6yVdkld7nZuuMv": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "necrotic",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9Fao6yVdkld7nZuuMv?alt=media&token=dd91773f-d1d0-4730-9dfb-cb730185be98",
+			"level": 1,
+			"maxUses": 4,
+			"name": "Spook",
 			"price": 0
 		}
 	},
