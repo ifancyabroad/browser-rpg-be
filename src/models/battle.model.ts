@@ -151,7 +151,7 @@ battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
 });
 
 battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
-	const gold = Math.round(GOLD_MULTIPLIER * enemy.level * enemy.challenge * this.multiplier);
+	const gold = Math.round(GOLD_MULTIPLIER * enemy.challenge * this.multiplier);
 	const experience = Math.round(EXPERIENCE_MULTIPLIER * Math.pow(2, enemy.level) * enemy.challenge);
 	this.reward = { gold, experience };
 });
