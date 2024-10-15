@@ -15,7 +15,7 @@ export const EXPERIENCE_MULTIPLIER = 20;
 export const BATTLE_MULTIPLIER_INCREMENT = 0.25;
 
 export const SHOP_ITEMS = 6;
-export const SHOP_LEVEL = 1;
+export const SHOP_LEVEL = 0;
 
 export const BASE_RESTOCK_PRICE = 20;
 export const BASE_REST_PRICE = 10;
@@ -144,33 +144,33 @@ export const ZONES = [Zone.Forest, Zone.Hills, Zone.Hell];
 
 export const ITEM_WEIGHT_LEVELS = [
 	{
-		[ItemRarity.Common]: 0.6,
+		[ItemRarity.Common]: 0.55,
 		[ItemRarity.Uncommon]: 0.3,
 		[ItemRarity.Rare]: 0.1,
-		[ItemRarity.Epic]: 0,
+		[ItemRarity.Epic]: 0.05,
+	},
+	{
+		[ItemRarity.Common]: 0.5,
+		[ItemRarity.Uncommon]: 0.3,
+		[ItemRarity.Rare]: 0.15,
+		[ItemRarity.Epic]: 0.05,
 	},
 	{
 		[ItemRarity.Common]: 0.4,
-		[ItemRarity.Uncommon]: 0.3,
+		[ItemRarity.Uncommon]: 0.35,
+		[ItemRarity.Rare]: 0.15,
+		[ItemRarity.Epic]: 0.1,
+	},
+	{
+		[ItemRarity.Common]: 0.3,
+		[ItemRarity.Uncommon]: 0.4,
 		[ItemRarity.Rare]: 0.2,
 		[ItemRarity.Epic]: 0.1,
 	},
 	{
 		[ItemRarity.Common]: 0.3,
-		[ItemRarity.Uncommon]: 0.3,
+		[ItemRarity.Uncommon]: 0.35,
 		[ItemRarity.Rare]: 0.2,
-		[ItemRarity.Epic]: 0.2,
-	},
-	{
-		[ItemRarity.Common]: 0.2,
-		[ItemRarity.Uncommon]: 0.3,
-		[ItemRarity.Rare]: 0.3,
-		[ItemRarity.Epic]: 0.2,
-	},
-	{
-		[ItemRarity.Common]: 0.1,
-		[ItemRarity.Uncommon]: 0.2,
-		[ItemRarity.Rare]: 0.3,
-		[ItemRarity.Epic]: 0.4,
+		[ItemRarity.Epic]: 0.15,
 	},
 ];
