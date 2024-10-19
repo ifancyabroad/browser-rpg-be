@@ -41,7 +41,6 @@ export interface IBattle {
 	hero: Types.ObjectId;
 	enemy: Types.ObjectId;
 	level: number;
-	maxLevel: number;
 	multiplier: number;
 	zone: Zone;
 	turns: Types.DocumentArray<IAction[]>;

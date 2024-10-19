@@ -60,8 +60,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Battle already exists");
 		}
 
-		const level = characterRecord.startingBattleLevel;
-		const maxLevel = characterRecord.maxBattleLevel;
+		const level = characterRecord.maxBattleLevel + 1;
 		const zone = Game.getZone(level);
 		const enemyData = getEnemyData(zone, level);
 
@@ -73,7 +72,6 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 			enemy: enemy.id,
 			zone,
 			level,
-			maxLevel,
 		});
 
 		characterRecord.state = State.Battle;
@@ -111,7 +109,6 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		}
 
 		const level = battleRecord.level + 1;
-		const maxLevel = characterRecord.maxBattleLevel;
 		const multiplier = battleRecord.multiplier + BATTLE_MULTIPLIER_INCREMENT;
 		const zone = Game.getZone(level);
 		const enemyData = getEnemyData(zone, level);
@@ -124,7 +121,6 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 			enemy: enemy.id,
 			zone,
 			level,
-			maxLevel,
 			multiplier,
 		});
 

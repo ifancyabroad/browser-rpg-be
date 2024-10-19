@@ -79,10 +79,6 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 			type: Number,
 			default: 1,
 		},
-		maxLevel: {
-			type: Number,
-			default: 1,
-		},
 		multiplier: {
 			type: Number,
 			default: 1,
