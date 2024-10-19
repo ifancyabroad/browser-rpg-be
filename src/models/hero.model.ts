@@ -1,5 +1,5 @@
 import { Schema, Types } from "mongoose";
-import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize, Zone } from "@common/utils/enums/index";
+import { EquipmentSlot, EquipmentType, Stat, State, WeaponSize } from "@common/utils/enums/index";
 import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";

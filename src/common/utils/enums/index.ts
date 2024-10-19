@@ -152,5 +152,7 @@ export enum ItemRarity {
 export enum Zone {
 	Forest = "forest",
 	Hills = "hills",
-	Hell = "hell",
+	Volcano = "volcano",
+	Desert = "desert",
+	Ocean = "ocean",
 }

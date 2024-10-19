@@ -140,7 +140,7 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Miss, 0],
 ]);
 
-export const ZONES = [Zone.Forest, Zone.Hills, Zone.Hell];
+export const ZONES = [Zone.Forest, Zone.Desert, Zone.Ocean, Zone.Hills, Zone.Volcano];
 
 export const ITEM_WEIGHT_LEVELS = [
 	{
