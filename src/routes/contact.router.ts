@@ -11,7 +11,6 @@ const contactRouter = Router();
 // @DEST POST contact form
 contactRouter.post(
 	"/",
-	middleware.userAuth,
 	middleware.validation(ContactDto),
 	expressAsyncHandler(async (req: RequestContact, res: Response) => {
 		await sendContactForm(req.body, req.session);
