@@ -2509,16 +2509,16 @@
 		},
 		"-NKt-VrmU-I7ve15fvwC": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 13,
 			"description": "",
 			"equipment": {
 				"hand1": "-NgK0n7aPw0NHeefOnRg"
 			},
 			"name": "Grotesque",
-			"naturalArmourClass": 12,
+			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 4,
-			"naturalMinDamage": 1,
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=7a794203-ee14-41e2-b34d-506c5009c3d6",
 			"resistances": {
 				"acid": 0,
@@ -2551,7 +2551,7 @@
 			"name": "Zombie Executioner",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 9,
+			"naturalMaxDamage": 7,
 			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=92953e58-8a6f-4292-83dd-f5b773fe8757",
 			"resistances": {
@@ -2619,13 +2619,13 @@
 		},
 		"-NKt3ujmy2tXghwqSM9o": {
 			"boss": false,
-			"challenge": 13,
+			"challenge": 12,
 			"description": "",
 			"name": "Abomination",
-			"naturalArmourClass": 0,
+			"naturalArmourClass": 12,
 			"naturalDamageType": "crushing",
-			"naturalMaxDamage": 4,
-			"naturalMinDamage": 1,
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=1da27a17-de16-4a5d-bc89-87a2b8680003",
 			"resistances": {
 				"acid": 0,
@@ -2655,41 +2655,35 @@
 			"boss": true,
 			"challenge": 24,
 			"description": "A dragon.",
-			"name": "Dragon",
-			"naturalArmourClass": 18,
+			"name": "Drakus the Awakened",
+			"naturalArmourClass": 20,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 12,
-			"naturalMinDamage": 6,
+			"naturalMaxDamage": 14,
+			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=5bc0274e-8091-4718-8c92-bc6e4c941eb9",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
-				"crushing": 25,
-				"fire": 50,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 100,
 				"lighting": 50,
 				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 0,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
-			"skills": [
-				"-NfROP8bobODCeEQFrpd",
-				"-Nc41TbX58HmCh6nednT",
-				"-Nc4-UVARP8jFmsiuXC9",
-				"-Nhgy1Vmh0FTTPCWBory",
-				"-NZqUWZDeys5x3n8eLNA"
-			],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhgy1Vmh0FTTPCWBory", "-NZqUWZDeys5x3n8eLNA", "-O9ePhvfJJr-bhi0Iial"],
 			"stats": {
-				"charisma": 12,
-				"constitution": 19,
+				"charisma": 23,
+				"constitution": 29,
 				"dexterity": 10,
-				"intelligence": 12,
-				"strength": 23,
-				"wisdom": 13
+				"intelligence": 18,
+				"strength": 30,
+				"wisdom": 15
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NZMCIuuab0gVQ5bMj6j": {
 			"boss": false,
@@ -2802,7 +2796,7 @@
 			"challenge": 11,
 			"description": "",
 			"name": "Basilisk",
-			"naturalArmourClass": 13,
+			"naturalArmourClass": 11,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
@@ -2826,10 +2820,10 @@
 				"constitution": 15,
 				"dexterity": 8,
 				"intelligence": 2,
-				"strength": 16,
+				"strength": 12,
 				"wisdom": 8
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NgTZVlj1jll9-HF8fPh": {
 			"boss": false,
@@ -2839,7 +2833,7 @@
 				"hand1": "-NNwPg099VI_pDe9E_Zd"
 			},
 			"name": "Pygmy",
-			"naturalArmourClass": 0,
+			"naturalArmourClass": 6,
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
@@ -2938,7 +2932,7 @@
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
 			"boss": false,
-			"challenge": 12,
+			"challenge": 10,
 			"description": "",
 			"name": "Dread Serpent",
 			"naturalArmourClass": 11,
@@ -3002,20 +2996,20 @@
 				"strength": 8,
 				"wisdom": 7
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NgTpSKiIRPOLlAMwvOl": {
 			"boss": true,
-			"challenge": 13,
+			"challenge": 15,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"hand1": "-NgK-mAaFXHeapzVbWAb"
+				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
-			"name": "Minotaur",
-			"naturalArmourClass": 6,
+			"name": "Greyhorn the Caged",
+			"naturalArmourClass": 11,
 			"naturalDamageType": "crushing",
-			"naturalMaxDamage": 6,
+			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=c99cae76-ef53-4d1e-b513-ca4914ce3534",
 			"resistances": {
@@ -3031,13 +3025,13 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NJLRtY1B4JdDuOGq2sd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJLRtY1B4JdDuOGq2sd", "-O9eSRJIY86RZLdUWrd8", "-O9eQinII0AhDAXshQjR"],
 			"stats": {
 				"charisma": 9,
-				"constitution": 14,
-				"dexterity": 9,
+				"constitution": 16,
+				"dexterity": 11,
 				"intelligence": 6,
-				"strength": 16,
+				"strength": 18,
 				"wisdom": 16
 			},
 			"zone": "forest"
@@ -3065,7 +3059,7 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NhgrvvBiejH010EI8ME", "-NhgyQeYWKGMfv97Ojh0"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NhgyQeYWKGMfv97Ojh0", "-O9eRbMQ_TW85fhd_iC_"],
 			"stats": {
 				"charisma": 1,
 				"constitution": 20,
@@ -3074,11 +3068,11 @@
 				"strength": 22,
 				"wisdom": 11
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NgYk1uHzdomGArMmxVa": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 9,
 			"description": "",
 			"name": "Fire Snake",
 			"naturalArmourClass": 11,
@@ -3108,7 +3102,7 @@
 				"strength": 12,
 				"wisdom": 10
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NhkUQSsszVLO_4PrBQy": {
 			"boss": false,
@@ -3133,7 +3127,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-O9Fao6yVdkld7nZuuMv"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 9,
@@ -3151,11 +3145,11 @@
 			"equipment": {
 				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
-			"name": "Bone Guardian",
-			"naturalArmourClass": 11,
+			"name": "The Bone Guardian",
+			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalMaxDamage": 4,
-			"naturalMinDamage": 1,
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=a756bd84-93f3-4841-b46b-f9f100df1164",
 			"resistances": {
 				"acid": 0,
@@ -3174,7 +3168,7 @@
 			"stats": {
 				"charisma": 8,
 				"constitution": 17,
-				"dexterity": 8,
+				"dexterity": 10,
 				"intelligence": 6,
 				"strength": 21,
 				"wisdom": 10
@@ -3217,7 +3211,7 @@
 		},
 		"-NhkXJrcYTG_XtKdj_B8": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 13,
 			"description": "",
 			"name": "Gauth",
 			"naturalArmourClass": 12,
@@ -3247,17 +3241,17 @@
 				"strength": 10,
 				"wisdom": 15
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NhkYK7-G0lWSQ6VxFJy": {
 			"boss": true,
 			"challenge": 19,
 			"description": "",
-			"name": "Wraith",
+			"name": "Wraith Lord Malakar",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "necrotic",
-			"naturalMaxDamage": 7,
-			"naturalMinDamage": 2,
+			"naturalMaxDamage": 8,
+			"naturalMinDamage": 3,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=e1ce4930-4dbb-47de-a5a2-b9abb8fa4919",
 			"resistances": {
 				"acid": 50,
@@ -3326,7 +3320,7 @@
 				"hand2": "-NZMqz87pcH6a1OgycJ9",
 				"head": "-NgJyJCDG-1UEccRymvT"
 			},
-			"name": "Flame Guardian",
+			"name": "The Forest Guardian",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "fire",
 			"naturalMaxDamage": 7,
@@ -3349,7 +3343,7 @@
 			"stats": {
 				"charisma": 7,
 				"constitution": 15,
-				"dexterity": 16,
+				"dexterity": 14,
 				"intelligence": 6,
 				"strength": 10,
 				"wisdom": 10
@@ -3363,8 +3357,8 @@
 			"name": "Fire Elemental",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "fire",
-			"naturalMaxDamage": 6,
-			"naturalMinDamage": 1,
+			"naturalMaxDamage": 7,
+			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
 			"resistances": {
 				"acid": 50,
@@ -3388,16 +3382,16 @@
 				"strength": 10,
 				"wisdom": 10
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-NhkeXYbGnQ67kC7gWyw": {
 			"boss": false,
-			"challenge": 18,
+			"challenge": 16,
 			"description": "",
 			"name": "Fire Drake",
-			"naturalArmourClass": 14,
+			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 9,
+			"naturalMaxDamage": 12,
 			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=a710c32c-8fec-42f1-8e3e-9b56c83999ff",
 			"resistances": {
@@ -3413,7 +3407,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc4-UVARP8jFmsiuXC9"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-O9ePhvfJJr-bhi0Iial", "-NhgrvvBiejH010EI8ME"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -3422,14 +3416,14 @@
 				"strength": 21,
 				"wisdom": 12
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-O1g2suyagydsOiCLMPZ": {
 			"boss": false,
-			"challenge": 15,
+			"challenge": 12,
 			"description": "",
 			"name": "Flame Shrieker",
-			"naturalArmourClass": 8,
+			"naturalArmourClass": 11,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
@@ -3455,17 +3449,17 @@
 				"strength": 16,
 				"wisdom": 10
 			},
-			"zone": "hell"
+			"zone": "volcano"
 		},
 		"-O1g5UbnObhA-7IMjEhj": {
 			"boss": true,
 			"challenge": 22,
 			"description": "",
-			"name": "Pit Fiend",
-			"naturalArmourClass": 16,
+			"name": "Pit Fiend Yagamon",
+			"naturalArmourClass": 19,
 			"naturalDamageType": "crushing",
-			"naturalMaxDamage": 10,
-			"naturalMinDamage": 3,
+			"naturalMaxDamage": 14,
+			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=a4bd8a27-c914-4418-9565-a96290517d39",
 			"resistances": {
 				"acid": 0,
@@ -3479,16 +3473,739 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd", "-NZqTywT0RDubTou99c2"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NZqXb0gVgqwcQmz5Kty",
+				"-NgTnzsxBYgTye5lFfkd",
+				"-Nc4-UVARP8jFmsiuXC9",
+				"-Nhh6cp8cTNG_6h4WvSN"
+			],
+			"stats": {
+				"charisma": 24,
+				"constitution": 24,
+				"dexterity": 14,
+				"intelligence": 22,
+				"strength": 26,
+				"wisdom": 18
+			},
+			"zone": "volcano"
+		},
+		"-O9_O3wKJO9Pu6brBV24": {
+			"boss": false,
+			"challenge": 6,
+			"description": "",
+			"name": "Ratman Slave",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_O3wKJO9Pu6brBV24?alt=media&token=1637f7a5-527c-43d5-8562-0199f8c3d9b1",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 10,
+				"dexterity": 16,
+				"intelligence": 6,
+				"strength": 8,
+				"wisdom": 10
+			},
+			"zone": "desert"
+		},
+		"-O9_P6i6e4r31C74MN_B": {
+			"boss": false,
+			"challenge": 9,
+			"description": "",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"hand1": "-NgK0I2STX7An8WjEeUN"
+			},
+			"name": "Ratman Archer",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_P6i6e4r31C74MN_B?alt=media&token=d341e05a-b8ba-43c5-a72f-f0c896f61412",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgzTUnXwX4Iw8JGJev"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 12,
+				"dexterity": 18,
+				"intelligence": 8,
+				"strength": 8,
+				"wisdom": 10
+			},
+			"zone": "desert"
+		},
+		"-O9_R3NOnT3i1DLiEKnd": {
+			"boss": false,
+			"challenge": 17,
+			"description": "",
+			"equipment": {
+				"body": "-Nm2B54qxLaMzsSjGgWO",
+				"hand1": "-NgO0Km6wNCpoHt51Smw",
+				"hand2": "-NgO0Km6wNCpoHt51Smw"
+			},
+			"name": "Assassin of Rit Chi",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_R3NOnT3i1DLiEKnd?alt=media&token=6125e9a9-eb93-4251-9f89-91d488d1c028",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqZdRYK5clYyJxqQKi", "-Nhh-SuuVlmZIYSG87sp", "-NKt5eqAEIJYZFNbvK8f"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 18,
+				"dexterity": 26,
+				"intelligence": 14,
+				"strength": 14,
+				"wisdom": 16
+			},
+			"zone": "desert"
+		},
+		"-O9_V4rlMkRjOWIDQarx": {
+			"boss": false,
+			"challenge": 11,
+			"description": "",
+			"equipment": {
+				"body": "-NMEwPxI9DXom0AaME0Z",
+				"hand1": "-NgK0TICJLv1vVaBGrbT"
+			},
+			"name": "Ratman Shaman",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTRk0hkXBsKEHMEWD2", "-NgTUH0cjt_Ek0BEIgUh"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 16,
+				"dexterity": 18,
+				"intelligence": 8,
+				"strength": 10,
+				"wisdom": 14
+			},
+			"zone": "desert"
+		},
+		"-O9_WjPXKCDzDO9idJPs": {
+			"boss": false,
+			"challenge": 16,
+			"description": "",
+			"equipment": {
+				"body": "-NgJxsDuymhUWq2V4ew8",
+				"hand1": "-NgO0_TN42Pqrd5WQENu",
+				"hand2": "-NZMqz87pcH6a1OgycJ9",
+				"head": "-NgJyJCDG-1UEccRymvT"
+			},
+			"name": "Ratman Champion",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_WjPXKCDzDO9idJPs?alt=media&token=3ad228cf-642f-417c-95ee-c162448084a0",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhgx8gnKSMnxB7h9F60", "-NZqUxJ5hBOkYc_e-wuG", "-NJQ2hml_9m6iHzAfES5"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 14,
+				"dexterity": 16,
+				"intelligence": 10,
+				"strength": 16,
+				"wisdom": 12
+			},
+			"zone": "desert"
+		},
+		"-O9_YM1vo2Mdr-Q-wHc3": {
+			"boss": false,
+			"challenge": 14,
+			"description": "",
+			"equipment": {
+				"body": "-NgO5fUaNmJH7LpPo2LP",
+				"hand1": "-O880XFcKnWhE-_xBLH5"
+			},
+			"name": "Ratman Warlock",
+			"naturalArmourClass": 8,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_YM1vo2Mdr-Q-wHc3?alt=media&token=0c1cf9ac-a8b9-4237-be02-d204cefff047",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-Nc3zPER2-voArWHwNy9",
+				"-Nhh4hPWuWx_NN1YApGU",
+				"-NhkGRRiaTZa0Q2JeWOd",
+				"-Nc3vvlL3y_va4dkw6_B"
+			],
+			"stats": {
+				"charisma": 12,
+				"constitution": 16,
+				"dexterity": 18,
+				"intelligence": 20,
+				"strength": 13,
+				"wisdom": 16
+			},
+			"zone": "desert"
+		},
+		"-O9_Zt9uUjy8pye9AGEZ": {
+			"boss": true,
+			"challenge": 19,
+			"description": "",
+			"name": "Avatar of Rit Chi",
+			"naturalArmourClass": 17,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 13,
+			"naturalMinDamage": 3,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_Zt9uUjy8pye9AGEZ?alt=media&token=98be2f4e-4396-42cf-b55b-a70089a3c707",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": -50,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NgTbtbVc3qk03XQO0GP", "-O9__YsYeJoI_hGpg6Ba"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 20,
+				"dexterity": 16,
+				"intelligence": 4,
+				"strength": 19,
+				"wisdom": 10
+			},
+			"zone": "desert"
+		},
+		"-O9_aLIP0OdTe0rGO9QY": {
+			"boss": false,
+			"challenge": 14,
+			"description": "",
+			"name": "Rat Ogre",
+			"naturalArmourClass": 12,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_aLIP0OdTe0rGO9QY?alt=media&token=c59386c3-ebc0-4c82-8e7c-83e8d2ae85f8",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpG6pLRAqTW1AU0Eg", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 20,
+				"dexterity": 14,
+				"intelligence": 3,
+				"strength": 18,
+				"wisdom": 8
+			},
+			"zone": "desert"
+		},
+		"-O9_bEIXK4OQRQ8b5pzp": {
+			"boss": true,
+			"challenge": 18,
+			"description": "",
+			"name": "The Hellfire Catapult",
+			"naturalArmourClass": 16,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 18,
+			"naturalMinDamage": 3,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_bEIXK4OQRQ8b5pzp?alt=media&token=94be096c-79cf-4f59-b9bd-ccb80244fb4b",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": -50,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 100,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-O9_dP0Qn57Vq0CTiSVO", "-O9_bwdIr8BegxbOjPip", "-O9_cea1qIQBNQ3ncod_"],
+			"stats": {
+				"charisma": 5,
+				"constitution": 16,
+				"dexterity": 14,
+				"intelligence": 10,
+				"strength": 18,
+				"wisdom": 10
+			},
+			"zone": "desert"
+		},
+		"-O9_elmg901ZBWKAxrfB": {
+			"boss": false,
+			"challenge": 12,
+			"description": "",
+			"equipment": {
+				"hand1": "-NgK0TICJLv1vVaBGrbT"
+			},
+			"name": "Mounted Ratman",
+			"naturalArmourClass": 12,
+			"naturalDamageType": "slashing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_elmg901ZBWKAxrfB?alt=media&token=ae611b91-9ee7-4ee4-8f07-171fc4e58179",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NZMIV5OGOr4bChwrNEE"],
+			"stats": {
+				"charisma": 12,
+				"constitution": 18,
+				"dexterity": 16,
+				"intelligence": 8,
+				"strength": 14,
+				"wisdom": 14
+			},
+			"zone": "desert"
+		},
+		"-O9dIirSbCPjrRRGen8U": {
+			"boss": false,
+			"challenge": 7,
+			"description": "",
+			"equipment": {
+				"hand1": "-Nc46CPWJz2atC_uII9i"
+			},
+			"name": "Squib Bell Ringer",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dIirSbCPjrRRGen8U?alt=media&token=0d358957-54d2-48b0-860c-791ed31fc9f1",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 8,
-				"constitution": 18,
+				"constitution": 11,
 				"dexterity": 10,
-				"intelligence": 5,
+				"intelligence": 11,
+				"strength": 13,
+				"wisdom": 10
+			},
+			"zone": "ocean"
+		},
+		"-O9dLuxaOA1hXh3U7Mnv": {
+			"boss": false,
+			"challenge": 10,
+			"description": "",
+			"name": "Munchling",
+			"naturalArmourClass": 13,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dLuxaOA1hXh3U7Mnv?alt=media&token=41366520-ac52-47f9-ab3e-7075fe30ee06",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqb8JkDlplkchg0htc", "-O9eOvYZWqjCOQtT8moN"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 14,
+				"dexterity": 17,
+				"intelligence": 6,
+				"strength": 14,
+				"wisdom": 10
+			},
+			"zone": "ocean"
+		},
+		"-O9dMUJn3WZ9o8aQlNnb": {
+			"boss": false,
+			"challenge": 10,
+			"description": "",
+			"name": "Sharkman",
+			"naturalArmourClass": 15,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dMUJn3WZ9o8aQlNnb?alt=media&token=142fe49a-f11e-4037-8aa1-3339ef1434d0",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 16,
+				"dexterity": 15,
+				"intelligence": 6,
+				"strength": 16,
+				"wisdom": 10
+			},
+			"zone": "ocean"
+		},
+		"-O9dNPoAEQhZpCpSnOye": {
+			"boss": false,
+			"challenge": 16,
+			"description": "",
+			"name": "Void Creeper",
+			"naturalArmourClass": 16,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dNPoAEQhZpCpSnOye?alt=media&token=b0ea23aa-e5df-4db6-95b0-624fb7f82d82",
+			"resistances": {
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-Nhh5vG7znDT-6DBan2F",
+				"-Nhh7BnVOa0W7OdE_0YR",
+				"-NgTbEHpokQy-0H5xsHh",
+				"-NhkGRRiaTZa0Q2JeWOd"
+			],
+			"stats": {
+				"charisma": 13,
+				"constitution": 17,
+				"dexterity": 14,
+				"intelligence": 21,
+				"strength": 9,
+				"wisdom": 18
+			},
+			"zone": "ocean"
+		},
+		"-O9dO9Hor_-bf7V_xgzs": {
+			"boss": false,
+			"challenge": 15,
+			"description": "",
+			"name": "Crabomination",
+			"naturalArmourClass": 18,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dO9Hor_-bf7V_xgzs?alt=media&token=5c92c111-b3f6-427e-90e5-4169ff2945c9",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz", "-NgTnzsxBYgTye5lFfkd", "-NhgyQeYWKGMfv97Ojh0"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 22,
+				"dexterity": 10,
+				"intelligence": 6,
 				"strength": 20,
 				"wisdom": 10
 			},
-			"zone": "hell"
+			"zone": "ocean"
+		},
+		"-O9dQ6Mfco5z_8Yt4o-t": {
+			"boss": false,
+			"challenge": 15,
+			"description": "",
+			"equipment": {
+				"hand1": "-NgO2xYEe4Kzg3ST0JW2"
+			},
+			"name": "Damp High Priestess",
+			"naturalArmourClass": 13,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 4,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dQ6Mfco5z_8Yt4o-t?alt=media&token=9d034c1f-8605-4aff-b632-fb7370b9704e",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NgTUsnh4THCA3EXJQn2",
+				"-NgTUQdooGB1fZa6Q-pv",
+				"-NhkOF38JibaTuWhFGg_",
+				"-NhkP4BW6tSXQG6EoCJq"
+			],
+			"stats": {
+				"charisma": 14,
+				"constitution": 17,
+				"dexterity": 14,
+				"intelligence": 16,
+				"strength": 11,
+				"wisdom": 18
+			},
+			"zone": "ocean"
+		},
+		"-O9dSO4fdChwx6OrOCx5": {
+			"boss": true,
+			"challenge": 21,
+			"description": "",
+			"name": "The Elder Squid",
+			"naturalArmourClass": 17,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dSO4fdChwx6OrOCx5?alt=media&token=7c323783-6590-4aeb-a3d0-500faaf282db",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-Nhh7BnVOa0W7OdE_0YR",
+				"-NgTbEHpokQy-0H5xsHh",
+				"-NgTYFhLYpX2p1ZbdUfj",
+				"-NhkT3OrPY0IOvzISeE0",
+				"-NgTbtbVc3qk03XQO0GP"
+			],
+			"stats": {
+				"charisma": 18,
+				"constitution": 18,
+				"dexterity": 15,
+				"intelligence": 25,
+				"strength": 18,
+				"wisdom": 22
+			},
+			"zone": "ocean"
+		},
+		"-O9dTVcQaMf3ZBV8IQ40": {
+			"boss": false,
+			"challenge": 13,
+			"description": "",
+			"name": "Piranhasaur",
+			"naturalArmourClass": 11,
+			"naturalDamageType": "piercing",
+			"naturalMaxDamage": 6,
+			"naturalMinDamage": 1,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dTVcQaMf3ZBV8IQ40?alt=media&token=6db6d3f4-5cd5-423e-8d40-237f7c5d23b1",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-O9eOvYZWqjCOQtT8moN"],
+			"stats": {
+				"charisma": 5,
+				"constitution": 17,
+				"dexterity": 13,
+				"intelligence": 6,
+				"strength": 19,
+				"wisdom": 12
+			},
+			"zone": "ocean"
+		},
+		"-O9dU8gwThi8fYltU0PV": {
+			"boss": false,
+			"challenge": 16,
+			"description": "",
+			"name": "Colossal Piranhasaur",
+			"naturalArmourClass": 16,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 12,
+			"naturalMinDamage": 2,
+			"portrait": "",
+			"resistances": {
+				"acid": 0,
+				"cold": 50,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NgTnzsxBYgTye5lFfkd", "-O9eOvYZWqjCOQtT8moN"],
+			"stats": {
+				"charisma": 6,
+				"constitution": 20,
+				"dexterity": 10,
+				"intelligence": 6,
+				"strength": 22,
+				"wisdom": 10
+			},
+			"zone": "ocean"
+		},
+		"-O9dX2YZzneMSoTiBmYu": {
+			"boss": true,
+			"challenge": 20,
+			"description": "",
+			"name": "Hydra of the Deep",
+			"naturalArmourClass": 18,
+			"naturalDamageType": "crushing",
+			"naturalMaxDamage": 14,
+			"naturalMinDamage": 4,
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dX2YZzneMSoTiBmYu?alt=media&token=7e876eac-0a2d-46c6-bd7d-2265a68f5830",
+			"resistances": {
+				"acid": 0,
+				"cold": 100,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
+				"necrotic": 0,
+				"piercing": 0,
+				"poison": 0,
+				"radiant": 0,
+				"slashing": 0
+			},
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-O9ePSaBG2zG4hDp5rdf", "-Nhgy1Vmh0FTTPCWBory"],
+			"stats": {
+				"charisma": 21,
+				"constitution": 25,
+				"dexterity": 10,
+				"intelligence": 16,
+				"strength": 27,
+				"wisdom": 13
+			},
+			"zone": "ocean"
 		}
 	},
 	"skills": {
@@ -4934,7 +5651,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTmlFYyunJA4SqDKIX?alt=media&token=195bfdc0-a900-4a6e-ad26-a9bca0f2072d",
 			"level": 1,
-			"maxUses": 3,
+			"maxUses": 6,
 			"name": "Acid Bite",
 			"price": 0
 		},
@@ -5950,6 +6667,320 @@
 			"level": 1,
 			"maxUses": 4,
 			"name": "Spook",
+			"price": 0
+		},
+		"-O9__YsYeJoI_hGpg6Ba": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 6,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 4
+						},
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": 4
+						},
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 4
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9__YsYeJoI_hGpg6Ba?alt=media&token=9df26944-5d84-4818-a6eb-1284025422dc",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Call Upon Rit Chi",
+			"price": 0
+		},
+		"-O9_bwdIr8BegxbOjPip": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"multiplier": 0.4,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 0.4,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"multiplier": 0.4,
+					"target": "enemy",
+					"type": "weaponDamage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9_bwdIr8BegxbOjPip?alt=media&token=9ac6a519-98ab-479d-9c80-e2d90fafb13a",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Make it Rain",
+			"price": 0
+		},
+		"-O9_cea1qIQBNQ3ncod_": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 3,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 5
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9_cea1qIQBNQ3ncod_?alt=media&token=0b715183-560d-4152-a792-aba05400eff2",
+			"level": 3,
+			"maxUses": 4,
+			"name": "Reposition",
+			"price": 0
+		},
+		"-O9_dP0Qn57Vq0CTiSVO": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "poison",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 19,
+					"duration": 4,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9_dP0Qn57Vq0CTiSVO?alt=media&token=586dc311-85ef-4c5d-88b3-93a36aaf845b",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Disease Shot",
+			"price": 0
+		},
+		"-O9eOvYZWqjCOQtT8moN": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "cold",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eOvYZWqjCOQtT8moN?alt=media&token=59011bc9-ed31-49ca-8527-6de3d783ba2c",
+			"level": 1,
+			"maxUses": 6,
+			"name": "Ice Strike",
+			"price": 0
+		},
+		"-O9ePSaBG2zG4hDp5rdf": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 24,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9ePSaBG2zG4hDp5rdf?alt=media&token=3863bc82-210a-4655-99ba-1a74fb919075",
+			"level": 4,
+			"maxUses": 2,
+			"name": "Frost Breath",
+			"price": 0
+		},
+		"-O9ePhvfJJr-bhi0Iial": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 24,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9ePhvfJJr-bhi0Iial?alt=media&token=e696471d-3bbd-45a5-a596-e9c20de5956f",
+			"level": 4,
+			"maxUses": 2,
+			"name": "Fire Breath",
+			"price": 0
+		},
+		"-O9eQinII0AhDAXshQjR": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "damage",
+							"value": 40
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": 40
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": 40
+						},
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 4
+						},
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -4
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eQinII0AhDAXshQjR?alt=media&token=d363d059-dc53-4296-9320-e15b90b39722",
+			"level": 3,
+			"maxUses": 1,
+			"name": "Frenzy",
+			"price": 0
+		},
+		"-O9eQx8AckjJR4EGe9i3": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "poison",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eQx8AckjJR4EGe9i3?alt=media&token=30cb17bb-8570-4a33-bd25-58c19d54a370",
+			"level": 1,
+			"maxUses": 6,
+			"name": "Poison Claw",
+			"price": 0
+		},
+		"-O9eRbMQ_TW85fhd_iC_": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"max": 12,
+					"min": 2,
+					"target": "self",
+					"type": "heal"
+				},
+				{
+					"duration": 3,
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": 40
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 40
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 40
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eRbMQ_TW85fhd_iC_?alt=media&token=37961e33-b999-4f09-82e2-f6fa760630a8",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Reconstruct",
+			"price": 0
+		},
+		"-O9eSRJIY86RZLdUWrd8": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 17,
+					"duration": 2,
+					"effect": "stun",
+					"modifier": "dexterity",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"damageType": "piercing",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"duration": 3,
+					"properties": [
+						{
+							"name": "strength",
+							"type": "stat",
+							"value": 3
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eSRJIY86RZLdUWrd8?alt=media&token=dd7c5e27-3d52-4755-b538-5c7c5b4bb164",
+			"level": 2,
+			"maxUses": 1,
+			"name": "Minotaur Charge",
 			"price": 0
 		}
 	},
