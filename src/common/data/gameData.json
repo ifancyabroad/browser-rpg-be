@@ -2385,10 +2385,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
 			"stats": {
 				"charisma": 12,
-				"constitution": 14,
-				"dexterity": 13,
+				"constitution": 16,
+				"dexterity": 14,
 				"intelligence": 10,
-				"strength": 17,
+				"strength": 18,
 				"wisdom": 9
 			},
 			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
@@ -2407,10 +2407,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
 			"stats": {
 				"charisma": 15,
-				"constitution": 13,
-				"dexterity": 17,
-				"intelligence": 11,
-				"strength": 9,
+				"constitution": 14,
+				"dexterity": 18,
+				"intelligence": 12,
+				"strength": 10,
 				"wisdom": 10
 			},
 			"weaponTypes": ["dagger", "crossbow", "bow"]
@@ -2429,9 +2429,9 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
 				"charisma": 12,
-				"constitution": 13,
-				"dexterity": 10,
-				"intelligence": 17,
+				"constitution": 14,
+				"dexterity": 12,
+				"intelligence": 18,
 				"strength": 8,
 				"wisdom": 15
 			},
@@ -2548,7 +2548,7 @@
 			"boss": false,
 			"challenge": 10,
 			"description": "",
-			"name": "Zombie Executioner",
+			"name": "Stitched Ogre",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 7,
@@ -3145,7 +3145,7 @@
 			"equipment": {
 				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
-			"name": "The Bone Guardian",
+			"name": "The Executioner",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 12,
@@ -3164,7 +3164,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NJLRtY1B4JdDuOGq2sd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NJLRtY1B4JdDuOGq2sd", "-O9eoWCYJQSO0rbXfU9J"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 17,
@@ -3339,7 +3339,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgpG6pLRAqTW1AU0Eg"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgpG6pLRAqTW1AU0Eg", "-OA7zdXDv3eGxenwra8y"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 15,
@@ -3562,12 +3562,12 @@
 		},
 		"-O9_R3NOnT3i1DLiEKnd": {
 			"boss": false,
-			"challenge": 17,
+			"challenge": 15,
 			"description": "",
 			"equipment": {
 				"body": "-Nm2B54qxLaMzsSjGgWO",
-				"hand1": "-NgO0Km6wNCpoHt51Smw",
-				"hand2": "-NgO0Km6wNCpoHt51Smw"
+				"hand1": "-NNwMy0q-XKUT-EUvxFF",
+				"hand2": "-NNwMy0q-XKUT-EUvxFF"
 			},
 			"name": "Assassin of Rit Chi",
 			"naturalArmourClass": 8,
@@ -3587,14 +3587,14 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqZdRYK5clYyJxqQKi", "-Nhh-SuuVlmZIYSG87sp", "-NKt5eqAEIJYZFNbvK8f"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqZdRYK5clYyJxqQKi", "-Nhh-SuuVlmZIYSG87sp", "-NZqa_ZuZcAZCuzTr5c3"],
 			"stats": {
-				"charisma": 12,
-				"constitution": 18,
-				"dexterity": 26,
-				"intelligence": 14,
+				"charisma": 10,
+				"constitution": 16,
+				"dexterity": 24,
+				"intelligence": 12,
 				"strength": 14,
-				"wisdom": 16
+				"wisdom": 14
 			},
 			"zone": "desert"
 		},
@@ -3611,7 +3611,7 @@
 			"naturalDamageType": "slashing",
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_V4rlMkRjOWIDQarx?alt=media&token=55aa0f27-f889-4edc-8558-22a7920e9b47",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3757,8 +3757,8 @@
 			"name": "Rat Ogre",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 12,
-			"naturalMinDamage": 2,
+			"naturalMaxDamage": 8,
+			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_aLIP0OdTe0rGO9QY?alt=media&token=c59386c3-ebc0-4c82-8e7c-83e8d2ae85f8",
 			"resistances": {
 				"acid": 0,
@@ -3772,7 +3772,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpG6pLRAqTW1AU0Eg", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 20,
@@ -3877,7 +3877,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-O9enw-PYC96nmN7s5Sh"],
 			"stats": {
 				"charisma": 8,
 				"constitution": 11,
@@ -4150,7 +4150,7 @@
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 2,
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dU8gwThi8fYltU0PV?alt=media&token=1e0cea1c-38f5-4252-b0fe-6921d56eef76",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -6981,6 +6981,78 @@
 			"level": 2,
 			"maxUses": 1,
 			"name": "Minotaur Charge",
+			"price": 0
+		},
+		"-O9enw-PYC96nmN7s5Sh": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 5,
+					"properties": [
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": 4
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9enw-PYC96nmN7s5Sh?alt=media&token=9b911c40-20eb-47f8-b556-dacaadec84e7",
+			"level": 1,
+			"maxUses": 1,
+			"name": "Ring the Bell",
+			"price": 0
+		},
+		"-O9eoWCYJQSO0rbXfU9J": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "slashing",
+					"max": 24,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 19,
+					"duration": 5,
+					"effect": "bleed",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eoWCYJQSO0rbXfU9J?alt=media&token=8876c24f-0392-49c5-93eb-d0f618fe1476",
+			"level": 3,
+			"maxUses": 1,
+			"name": "Execute",
+			"price": 0
+		},
+		"-OA7zdXDv3eGxenwra8y": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "fire",
+							"type": "damage",
+							"value": 40
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OA7zdXDv3eGxenwra8y?alt=media&token=d0758678-8c24-457e-a357-e3c3221df9d5",
+			"level": 2,
+			"maxUses": 1,
+			"name": "Stoke the Flames",
 			"price": 0
 		}
 	},

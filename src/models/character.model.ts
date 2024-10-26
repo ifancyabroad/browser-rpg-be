@@ -497,11 +497,14 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 		saved = roll >= statusEffect.difficulty;
 	}
 
+	// Add 1 for self-targeted effects to account for the current turn
+	const remaining = statusEffect.target === Target.Self ? statusEffect.duration + 1 : statusEffect.duration;
+
 	return {
 		source,
 		target: statusEffect.target,
 		properties: statusEffect.properties,
-		remaining: statusEffect.duration,
+		remaining,
 		duration: statusEffect.duration,
 		saved,
 		modifier: statusEffect.modifier,
@@ -519,11 +522,14 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 		saved = roll >= auxiliaryEffect.difficulty;
 	}
 
+	// Add 1 for self-targeted effects to account for the current turn
+	const remaining = auxiliaryEffect.target === Target.Self ? auxiliaryEffect.duration + 1 : auxiliaryEffect.duration;
+
 	return {
 		source,
 		target: auxiliaryEffect.target,
 		effect: auxiliaryEffect.effect,
-		remaining: auxiliaryEffect.duration,
+		remaining,
 		duration: auxiliaryEffect.duration,
 		saved,
 		modifier: auxiliaryEffect.modifier,
@@ -750,11 +756,11 @@ characterSchema.method("tickPoison", function tickPoison(damageBonus: number) {
 
 characterSchema.method("tickEffects", function tickEffects() {
 	const updatedStatusEffects = this.activeStatusEffects
-		.filter((effect) => effect.remaining > 0)
-		.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
+		.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }))
+		.filter((effect) => effect.remaining > 0);
 	const updatedAuxiliaryEffects = this.activeAuxiliaryEffects
-		.filter((effect) => effect.remaining > 0)
-		.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }));
+		.map((effect) => ({ ...effect, remaining: effect.remaining - 1 }))
+		.filter((effect) => effect.remaining > 0);
 
 	this.set("activeStatusEffects", updatedStatusEffects);
 	this.set("activeAuxiliaryEffects", updatedAuxiliaryEffects);

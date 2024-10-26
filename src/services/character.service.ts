@@ -50,7 +50,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			equipmentIDs: classData.equipment,
 			availableItemIDs: availableItems,
 			gold: 100,
-			potions: 1,
+			potions: 3,
 			baseStats: classData.stats,
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
