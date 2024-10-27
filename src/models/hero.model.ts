@@ -93,7 +93,7 @@ heroSchema.virtual("currentLevelExperience").get(function () {
 });
 
 heroSchema.virtual("nextLevelExperience").get(function () {
-	return EXPERIENCE_MAP.get(this.level + 1);
+	return EXPERIENCE_MAP.get(this.level + 1) ?? null;
 });
 
 heroSchema.virtual("levelUpData").get(function () {

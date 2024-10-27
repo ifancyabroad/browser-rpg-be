@@ -9,8 +9,8 @@ import {
 	Zone,
 } from "@common/utils/enums/index";
 
-export const GOLD_MULTIPLIER = 5;
-export const REWARD_GOLD_MULTIPLIER = 50;
+export const GOLD_MULTIPLIER = 4;
+export const REWARD_GOLD_MULTIPLIER = 20;
 export const EXPERIENCE_MULTIPLIER = 20;
 export const BATTLE_MULTIPLIER_INCREMENT = 0.25;
 

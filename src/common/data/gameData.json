@@ -7011,11 +7011,9 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "slashing",
-					"max": 24,
-					"min": 4,
+					"multiplier": 2,
 					"target": "enemy",
-					"type": "damage"
+					"type": "weaponDamage"
 				},
 				{
 					"difficulty": 19,
@@ -8219,21 +8217,21 @@
 			"effects": [
 				{
 					"damageType": "slashing",
-					"max": 2,
+					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "slashing",
-					"max": 2,
+					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "slashing",
-					"max": 2,
+					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
