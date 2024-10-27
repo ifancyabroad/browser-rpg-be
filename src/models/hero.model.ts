@@ -211,11 +211,15 @@ heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlo
 		throw new Error("Item not found");
 	}
 
+	const isTwoHandedWeaponEquipped =
+		"size" in this.equipment.hand1 && this.equipment.hand1.size === WeaponSize.TwoHanded;
+	const mainHand = isTwoHandedWeaponEquipped && slot === EquipmentSlot.Hand2 ? null : this.equipmentIDs.hand1;
 	const isTwoHandedWeapon = "size" in item && item.size === WeaponSize.TwoHanded;
 	const offHand = isTwoHandedWeapon ? null : this.equipmentIDs.hand2;
 
 	this.equipmentIDs = {
 		...this.equipmentIDs,
+		[EquipmentSlot.Hand1]: mainHand,
 		[EquipmentSlot.Hand2]: offHand,
 		[slot]: id,
 	};
