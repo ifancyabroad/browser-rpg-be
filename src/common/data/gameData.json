@@ -15,7 +15,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLkVyFUS4L9Zio2lO?alt=media&token=a7399be8-2084-424e-ba6c-c90cafd7b831",
 			"level": 1,
 			"name": "Insulated Gloves",
-			"price": 80,
+			"price": 90,
 			"properties": [
 				{
 					"name": "cold",
@@ -30,7 +30,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NNvLx5iIM_zb3YGnsNC?alt=media&token=00cbdf99-29c4-4e7f-94da-da8f256e1722",
 			"level": 1,
 			"name": "Hood of the Fox",
-			"price": 70,
+			"price": 120,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -62,7 +62,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=65f41764-04fb-45e4-b574-b4c9dde99b5c",
 			"level": 4,
 			"name": "Gold Armour",
-			"price": 2200,
+			"price": 1380,
 			"properties": [
 				{
 					"name": "cold",
@@ -122,7 +122,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJyz3yv_isH2ozl7vj?alt=media&token=bda92907-6815-4c01-89ec-301c4b803d0f",
 			"level": 1,
 			"name": "Ring of Fire Resistance",
-			"price": 100,
+			"price": 90,
 			"properties": [
 				{
 					"name": "fire",
@@ -194,7 +194,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO6sAjD4s9LSirM2lr?alt=media&token=12e9a21e-abc3-4b12-820d-bc3f060ab6e0",
 			"level": 1,
 			"name": "Girdle of Ogre Strength",
-			"price": 250,
+			"price": 160,
 			"properties": [
 				{
 					"name": "strength",
@@ -224,7 +224,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=d2b492d4-b97c-44fb-aeb1-6d527f3ee539",
 			"level": 2,
 			"name": "Shaman's Belt",
-			"price": 450,
+			"price": 370,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -266,7 +266,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2Cd-d46R6iuL4782x?alt=media&token=d8ea0126-e3f3-4aaa-a78e-01edf588b702",
 			"level": 1,
 			"name": "Breastplate",
-			"price": 140,
+			"price": 300,
 			"type": "armour"
 		},
 		"-Nm2D2w4xiCJtkX_yQHG": {
@@ -443,7 +443,7 @@
 				{
 					"name": "hitChance",
 					"type": "auxiliaryStat",
-					"value": 5
+					"value": 4
 				}
 			],
 			"type": "amulet"
@@ -518,7 +518,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ZrGaIiOBuE0sHpR1?alt=media&token=ab576227-488d-4a84-bf72-8ccd81b04e32",
 			"level": 4,
 			"name": "Elemental Locket",
-			"price": 1900,
+			"price": 1280,
 			"properties": [
 				{
 					"name": "fire",
@@ -558,7 +558,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9a4lxlrxNlApNH_Qr?alt=media&token=fae14538-8000-4580-b2b7-aa556a92ce83",
 			"level": 1,
 			"name": "Wizard's Sash",
-			"price": 210,
+			"price": 160,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -573,7 +573,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9arODYaOWV5QYzw7E?alt=media&token=cae9f210-efe1-4bc2-8a10-7f413f21b511",
 			"level": 3,
 			"name": "Belt of Shadows",
-			"price": 950,
+			"price": 880,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -593,7 +593,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9beTp8W_WSoAQrD_H?alt=media&token=9d5534eb-2c62-4094-91af-f3a6420e22fb",
 			"level": 2,
 			"name": "Belt of Acidic Protection",
-			"price": 300,
+			"price": 250,
 			"properties": [
 				{
 					"name": "acid",
@@ -613,7 +613,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9c8HKy-DBVWCITHWn?alt=media&token=40c07237-e892-4fb5-b217-afb551e5a4cd",
 			"level": 2,
 			"name": "Warrior's Chain",
-			"price": 440,
+			"price": 220,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -633,7 +633,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9cb1_qfK3xtaJ9le1?alt=media&token=c4613651-96d1-42c2-903d-2edc5a520d09",
 			"level": 3,
 			"name": "Electric Cinch",
-			"price": 710,
+			"price": 680,
 			"properties": [
 				{
 					"name": "lightning",
@@ -648,7 +648,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dCPBfsmrmF7finXd?alt=media&token=096d0b9b-50fe-40db-9d13-f48298c2db4f",
 			"level": 4,
 			"name": "Jack's Belt",
-			"price": 1550,
+			"price": 900,
 			"properties": [
 				{
 					"name": "strength",
@@ -688,7 +688,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dXl3iLqpcbPi2vDZ?alt=media&token=f375b628-b83c-47a8-b251-900f406b2bca",
 			"level": 3,
 			"name": "Girdle of Death",
-			"price": 800,
+			"price": 510,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -708,7 +708,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dpRJB6wpOfSUAF24?alt=media&token=b60b1863-c5be-4f18-b30f-d731bcba7c5b",
 			"level": 4,
 			"name": "Archmage's Belt",
-			"price": 2400,
+			"price": 1390,
 			"properties": [
 				{
 					"name": "fire",
@@ -717,12 +717,12 @@
 				},
 				{
 					"name": "lightning",
-					"type": "resistance",
+					"type": "damage",
 					"value": 20
 				},
 				{
 					"name": "cold",
-					"type": "resistance",
+					"type": "damage",
 					"value": 20
 				}
 			],
@@ -813,7 +813,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDM2ApQWMggqJzd1Oj?alt=media&token=14c5b834-aaa3-4d82-8cf9-460aec1a16d5",
 			"level": 2,
 			"name": "Warlock's Striders",
-			"price": 190,
+			"price": 200,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -833,7 +833,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDMcHFa0GCkFUel8IG?alt=media&token=6f062817-3d72-420c-b1bd-7c9c238a293e",
 			"level": 3,
 			"name": "Boots of the Black Knight",
-			"price": 740,
+			"price": 760,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -853,7 +853,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDNGm-hePKbzQpkGR_?alt=media&token=d73fa61a-2287-4f19-9b24-57730fd26df3",
 			"level": 3,
 			"name": "Gold Plated Treads",
-			"price": 700,
+			"price": 800,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -878,7 +878,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDNmAFnZcDHdtAbyd1?alt=media&token=8bc8d829-9062-491a-a733-6199ae968d7f",
 			"level": 4,
 			"name": "Arcane Boots",
-			"price": 1860,
+			"price": 1150,
 			"properties": [
 				{
 					"name": "lightning",
@@ -898,7 +898,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDOAnwyIZqnaKvgDbO?alt=media&token=6af4b127-989a-4b95-9cda-79d6dd858438",
 			"level": 2,
 			"name": "Red Slippers",
-			"price": 300,
+			"price": 350,
 			"properties": [
 				{
 					"name": "fire",
@@ -918,7 +918,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDP9ajYLLxtvR7c6Qf?alt=media&token=83d1f308-ed45-43ec-898c-110f3ec38625",
 			"level": 4,
 			"name": "Boots of Insulation",
-			"price": 1650,
+			"price": 1250,
 			"properties": [
 				{
 					"name": "slashing",
@@ -948,7 +948,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDQAibdQUg6f9NfaKV?alt=media&token=a726ad0d-42bb-4ce8-87f1-6b52406631be",
 			"level": 4,
 			"name": "Ebonstride Footwear",
-			"price": 1720,
+			"price": 1580,
 			"properties": [
 				{
 					"name": "strength",
@@ -973,7 +973,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDQeyjdV8Lf92YkIdR?alt=media&token=e5ac25a8-4756-47e0-8d96-33ebfe021c9f",
 			"level": 3,
 			"name": "Shadow Striders",
-			"price": 950,
+			"price": 790,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -1033,7 +1033,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDS1M26zspCTVVGUnu?alt=media&token=c606a9e3-8b1e-498b-95cb-bebcbc09018f",
 			"level": 2,
 			"name": "Plate Gauntlets",
-			"price": 450,
+			"price": 380,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1048,7 +1048,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDTAMUcHrAa-EWCFeo?alt=media&token=a7436878-28c1-4326-b133-c004c832c2d8",
 			"level": 2,
 			"name": "Cold Mitts",
-			"price": 350,
+			"price": 290,
 			"properties": [
 				{
 					"name": "cold",
@@ -1063,7 +1063,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDTm9T7VzIuKsvXgM6?alt=media&token=fdbc0e31-725f-421a-8c45-dd3f2ab49aae",
 			"level": 4,
 			"name": "Death Knight Gauntlets",
-			"price": 1890,
+			"price": 1300,
 			"properties": [
 				{
 					"name": "strength",
@@ -1088,7 +1088,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUFkHJg969i8Fdv_B?alt=media&token=fc0ea003-8434-4a9c-9e2c-6a00ecc7c459",
 			"level": 2,
 			"name": "Gloves of Weapon Skill",
-			"price": 370,
+			"price": 350,
 			"properties": [
 				{
 					"name": "hitChance",
@@ -1103,7 +1103,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUyOXsz_CWrqQKtx3?alt=media&token=737405c6-b663-44bf-b747-b608006b35e6",
 			"level": 3,
 			"name": "Cursed Bracers",
-			"price": 500,
+			"price": 300,
 			"properties": [
 				{
 					"name": "constitution",
@@ -1123,7 +1123,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDVvTxuDLvTj0HU7Fq?alt=media&token=7a842ba9-5ecc-4a43-8965-c6a0890a8643",
 			"level": 4,
 			"name": "Beast Hands",
-			"price": 1770,
+			"price": 1550,
 			"properties": [
 				{
 					"name": "slashing",
@@ -1148,7 +1148,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDWVyxvBUSN2fJhVNb?alt=media&token=19380ca9-003d-4319-a1ba-db40e083687e",
 			"level": 3,
 			"name": "Giant's Gauntlets",
-			"price": 920,
+			"price": 850,
 			"properties": [
 				{
 					"name": "strength",
@@ -1218,7 +1218,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDYFP4JZdQ4KT3WfiB?alt=media&token=5060ad42-fc80-4398-9e04-16c277b7beff",
 			"level": 1,
 			"name": "Novice Hood",
-			"price": 80,
+			"price": 120,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -1233,7 +1233,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEJs3RCx4H78EqaGTc?alt=media&token=50f252da-83d7-4134-ac19-c32c1abb5950",
 			"level": 2,
 			"name": "Full Helm",
-			"price": 250,
+			"price": 260,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1248,7 +1248,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEKX0v1PxgPkrsuGkt?alt=media&token=208de36b-748f-4453-ac0a-1ed388d33540",
 			"level": 2,
 			"name": "Plague Doctor's Mask",
-			"price": 330,
+			"price": 240,
 			"properties": [
 				{
 					"name": "charisma",
@@ -1288,7 +1288,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzELsGuv2GQ6PDoLFTQ?alt=media&token=2357c8a5-1553-4729-abe2-fe2342a0a26d",
 			"level": 3,
 			"name": "Circlet of Power",
-			"price": 890,
+			"price": 780,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -1308,7 +1308,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEMdeX59k0__7Q0g8z?alt=media&token=eaa53a09-0f76-43c4-b485-f44b16353a52",
 			"level": 4,
 			"name": "Horrifying Mask",
-			"price": 1920,
+			"price": 1450,
 			"properties": [
 				{
 					"name": "charisma",
@@ -1338,7 +1338,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEN4ov5P7JEqbkdb4A?alt=media&token=81347577-2c67-40e1-a8d1-036065d518d0",
 			"level": 4,
 			"name": "Gold Helm",
-			"price": 1750,
+			"price": 1740,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1368,7 +1368,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzENaEY9B6T05UFmdx3?alt=media&token=2d52238c-0bbd-46a7-8348-841c9b01bc12",
 			"level": 3,
 			"name": "Wanderer's Guise",
-			"price": 660,
+			"price": 750,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1413,7 +1413,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQK4lqKJ7YcxpVgbR?alt=media&token=d7f24651-2e98-4d79-8a6c-3f3c6aab152e",
 			"level": 4,
 			"name": "Gladiator's Visor",
-			"price": 1520,
+			"price": 1700,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1443,7 +1443,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQlT7a5v8nuldO2WS?alt=media&token=b6e08ced-2d2e-4709-9929-f0868687d916",
 			"level": 1,
 			"name": "Ring of Poison Resistance",
-			"price": 110,
+			"price": 70,
 			"properties": [
 				{
 					"name": "poison",
@@ -1458,7 +1458,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEcPdzcDO_PG86-m7P?alt=media&token=a609b946-9e57-4e4d-9f7f-692be2d31dfe",
 			"level": 2,
 			"name": "Fire Ward",
-			"price": 460,
+			"price": 300,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1478,7 +1478,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEciDFUuzY6cG9UEia?alt=media&token=a08121c7-f9e5-4fa8-a348-79220e3bc85b",
 			"level": 1,
 			"name": "Tower Shield",
-			"price": 150,
+			"price": 90,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1493,7 +1493,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEdBv-UWjlNRRjd8Gv?alt=media&token=748f3207-a3c5-4f77-9cc9-884376588f59",
 			"level": 3,
 			"name": "Gold Buckler",
-			"price": 620,
+			"price": 560,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1523,7 +1523,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEd_Qa8Ppnwn6WL86V?alt=media&token=11d6e357-627b-45cb-89c4-6f51dec4aee8",
 			"level": 2,
 			"name": "Ice Guard",
-			"price": 550,
+			"price": 350,
 			"properties": [
 				{
 					"name": "cold",
@@ -1543,7 +1543,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEeCnEpU0OsAmw_Ewj?alt=media&token=9f06009e-be49-49a3-a249-2c75a8a1e088",
 			"level": 4,
 			"name": "Heavy Bulwark",
-			"price": 2050,
+			"price": 1280,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1568,7 +1568,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEewgzTHrzKERJX1Mj?alt=media&token=981ffb08-96e7-4603-8d48-bb2f2c1eece0",
 			"level": 4,
 			"name": "Dragon Shield",
-			"price": 1810,
+			"price": 1440,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1623,7 +1623,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=5ddcc14a-c8fe-4089-8f3a-069b287812b8",
 			"level": 3,
 			"name": "Knight's Shield",
-			"price": 680,
+			"price": 600,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1648,7 +1648,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgBl4DzwpCf-EQ7W1?alt=media&token=392e7209-e5d8-49d0-88f0-872dc9be45eb",
 			"level": 3,
 			"name": "Gold Plated Shield",
-			"price": 890,
+			"price": 750,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1678,7 +1678,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
 			"level": 4,
 			"name": "Gold Wing",
-			"price": 1750,
+			"price": 960,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1708,7 +1708,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEh4OLfUakfi5pWjf2?alt=media&token=767354c1-2018-45a0-9e08-34c9f768575c",
 			"level": 3,
 			"name": "Snake Coil",
-			"price": 530,
+			"price": 540,
 			"properties": [
 				{
 					"name": "poison",
@@ -1723,7 +1723,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhK5Irt3URTvs3ztw?alt=media&token=ffc28e5f-85d6-4e07-9856-9ec1333fd136",
 			"level": 3,
 			"name": "Lightning Master's Ring",
-			"price": 650,
+			"price": 710,
 			"properties": [
 				{
 					"name": "lightning",
@@ -1758,7 +1758,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhzNuCPqOh5YK7fk9?alt=media&token=384cce8e-9aba-41d6-91c0-05305fde9979",
 			"level": 2,
 			"name": "Ring of War",
-			"price": 350,
+			"price": 360,
 			"properties": [
 				{
 					"name": "strength",
@@ -1773,7 +1773,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEiKLauj-s86ubKuGI?alt=media&token=2fe3517b-1a31-43dd-ab5d-f019b490c932",
 			"level": 4,
 			"name": "Lion's Courage",
-			"price": 1650,
+			"price": 1480,
 			"properties": [
 				{
 					"name": "strength",
@@ -1813,7 +1813,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEihz88uE1-KftrLns?alt=media&token=2255a077-ce05-46af-a5f8-ee537d3117a9",
 			"level": 2,
 			"name": "Tundra Charm",
-			"price": 310,
+			"price": 330,
 			"properties": [
 				{
 					"name": "cold",
@@ -1828,7 +1828,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEj39PbQX8tVy6BGOU?alt=media&token=3e03031d-7e39-4865-b30c-4f4eace7e766",
 			"level": 4,
 			"name": "Ring of Shadows",
-			"price": 1430,
+			"price": 1530,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1853,7 +1853,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEjbVx4iDWd8myQ-1O?alt=media&token=fea5ac09-3bd2-40f9-aabf-606e94a1ee10",
 			"level": 3,
 			"name": "Ring of Natural Defense",
-			"price": 810,
+			"price": 850,
 			"properties": [
 				{
 					"name": "slashing",
@@ -1878,7 +1878,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEkYmCcJMY3uyCVbHm?alt=media&token=4cf48342-af39-48ee-aadb-97df113e7437",
 			"level": 4,
 			"name": "Dragon's Gem",
-			"price": 1950,
+			"price": 1600,
 			"properties": [
 				{
 					"name": "fire",
@@ -1937,7 +1937,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8D9MKSCaY6F_NwQSzW?alt=media&token=0545e274-4fef-427f-8d9a-9a568fe9f507",
 			"level": 2,
 			"name": "Archer's Vest",
-			"price": 380,
+			"price": 290,
 			"properties": [
 				{
 					"name": "piercing",
@@ -1954,7 +1954,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DA_DyFLruqd708ali?alt=media&token=93b91b0d-6e5e-41e1-80a9-7f021134777c",
 			"level": 2,
 			"name": "Nobleman's Garb",
-			"price": 280,
+			"price": 250,
 			"properties": [
 				{
 					"name": "charisma",
@@ -2010,7 +2010,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DBv36AD0X67CEQK-t?alt=media&token=008c4fe4-745e-4df7-aeab-8b383d17b6fa",
 			"level": 3,
 			"name": "Shadow Armour",
-			"price": 780,
+			"price": 800,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -2027,7 +2027,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8Hs3ZHXox-pIZAXvRF?alt=media&token=89559693-3e4b-4ca4-851d-14a962478b7e",
 			"level": 4,
 			"name": "Unholy Plate",
-			"price": 2120,
+			"price": 1570,
 			"properties": [
 				{
 					"name": "crushing",
@@ -2110,7 +2110,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HvrUw3XyL6BhCvVRC?alt=media&token=a30223b2-947d-4c23-930c-70d4e01cbe86",
 			"level": 3,
 			"name": "Black Knight Cuirass",
-			"price": 1250,
+			"price": 880,
 			"properties": [
 				{
 					"name": "critChance",
@@ -2127,7 +2127,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I3pIr6Cshq65nK-Y8?alt=media&token=a011e348-e7c3-40e9-a5fb-eaaf31651e30",
 			"level": 3,
 			"name": "Molten Plate",
-			"price": 1120,
+			"price": 730,
 			"properties": [
 				{
 					"name": "fire",
@@ -2149,7 +2149,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I4QK7JVSMY6p__i3L?alt=media&token=444ba759-2ff5-4f6c-bb78-df49c35f2a0b",
 			"level": 2,
 			"name": "Warchief's Breastplate",
-			"price": 850,
+			"price": 550,
 			"properties": [
 				{
 					"name": "strength",
@@ -2171,7 +2171,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I4m42K8Jd2iOdVxQS?alt=media&token=f2284381-1d33-41ab-9aeb-373418c6e990",
 			"level": 2,
 			"name": "Squire's Breastplate",
-			"price": 760,
+			"price": 380,
 			"properties": [
 				{
 					"name": "charisma",
@@ -2188,7 +2188,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I5jiV3i13ZaPW46M9?alt=media&token=830c05d6-af02-464e-9fec-d309bf2f4557",
 			"level": 4,
 			"name": "Barbarian's Tunic",
-			"price": 1400,
+			"price": 950,
 			"properties": [
 				{
 					"name": "strength",
@@ -2244,7 +2244,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAQSb0DFvLB-gVQ6K?alt=media&token=f336ccd2-9fab-4567-8907-ba1d360b4f28",
 			"level": 4,
 			"name": "Robe of the Fire Mage",
-			"price": 960,
+			"price": 1050,
 			"properties": [
 				{
 					"name": "fire",
@@ -2261,7 +2261,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAuNHTkw0VVfFPd7b?alt=media&token=2e12287a-ee54-49b7-aa03-611d11386bfd",
 			"level": 4,
 			"name": "Robe of the Ice Mage",
-			"price": 960,
+			"price": 1050,
 			"properties": [
 				{
 					"name": "cold",
@@ -2278,7 +2278,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IBE_pHJnjHNYAUha-?alt=media&token=48727411-1263-4a4f-93e9-37062153d931",
 			"level": 2,
 			"name": "Druid's Attire",
-			"price": 200,
+			"price": 330,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -2305,7 +2305,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IBW2DtLpMhCINfrZL?alt=media&token=50e79530-66d9-41b1-8f18-4c3122d54538",
 			"level": 2,
 			"name": "Magister's Robe",
-			"price": 310,
+			"price": 350,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -2322,7 +2322,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IE8osJo-rek1NyPIc?alt=media&token=4f73c8cb-440d-48cf-8945-c51bcdd27f77",
 			"level": 3,
 			"name": "Archmage's Robes",
-			"price": 700,
+			"price": 860,
 			"properties": [
 				{
 					"name": "fire",
@@ -2349,7 +2349,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IEe884qFB7RpSqQ2U?alt=media&token=58bbec93-0365-495e-8d21-d2770964f5b7",
 			"level": 3,
 			"name": "Robes of Protection",
-			"price": 650,
+			"price": 730,
 			"properties": [
 				{
 					"name": "slashing",
@@ -3589,12 +3589,12 @@
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqZdRYK5clYyJxqQKi", "-Nhh-SuuVlmZIYSG87sp", "-NZqa_ZuZcAZCuzTr5c3"],
 			"stats": {
-				"charisma": 10,
-				"constitution": 16,
-				"dexterity": 24,
-				"intelligence": 12,
-				"strength": 14,
-				"wisdom": 14
+				"charisma": 6,
+				"constitution": 14,
+				"dexterity": 20,
+				"intelligence": 10,
+				"strength": 12,
+				"wisdom": 12
 			},
 			"zone": "desert"
 		},
@@ -7059,20 +7059,20 @@
 	"weapons": {
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
-			"description": "A classic longsword forged from sturdy steel, balanced for versatility and power.",
+			"description": "The Longsword is a balanced, double-edged blade with a crossguard, ideal for versatile combat. Its length allows for both slashing and thrusting attacks, making it a favorite among knights and warriors. Commonly used, it combines elegance with practicality in a variety of battle scenarios.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,
 			"min": 1,
 			"name": "Longsword",
-			"price": 60,
+			"price": 50,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
 		},
 		"-NNwMy0q-XKUT-EUvxFF": {
 			"damageType": "slashing",
-			"description": "Wielded by rogues, this dagger leaves foes bleeding and incapacitated.",
+			"description": "The Dagger is a short, sharp blade with a simple hilt, designed for quick, close-range strikes. Lightweight and easy to conceal, it’s ideal for swift, precise attacks or as a last-resort weapon. Common among rogues and adventurers, it’s both versatile and easy to wield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwMy0q-XKUT-EUvxFF?alt=media&token=a9fdd8a5-341c-423a-8ef5-a92726e15605",
 			"level": 1,
 			"max": 4,
@@ -7085,7 +7085,7 @@
 		},
 		"-NNwPg099VI_pDe9E_Zd": {
 			"damageType": "crushing",
-			"description": "A sturdy tool for shaping metal and driving nails.",
+			"description": "The Hammer is a heavy, blunt weapon with a flat striking surface, typically made of metal or stone. Its straightforward design delivers powerful blows, making it effective against both foes and obstacles. Favored by warriors and craftsmen alike, it’s a reliable choice in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NNwPg099VI_pDe9E_Zd?alt=media&token=6a1a583c-8f1f-47d9-8105-e7a0af2ed7c6",
 			"level": 1,
 			"max": 6,
@@ -7098,7 +7098,7 @@
 		},
 		"-NNwRG-llD60pf8sSKeM": {
 			"damageType": "slashing",
-			"description": "An evil sword of doom.",
+			"description": "The Black Blade of Doom is a dark, menacing sword with a jet-black blade that seems to absorb light. Infused with malevolent energy, it curses those it strikes, sowing despair among enemies. This blade is favored by dark warriors and necromancers seeking to unleash chaos and destruction.",
 			"effects": [
 				{
 					"damageType": "fire",
@@ -7113,7 +7113,7 @@
 			"max": 14,
 			"min": 4,
 			"name": "Black Blade of Doom",
-			"price": 1200,
+			"price": 1250,
 			"properties": [
 				{
 					"name": "fire",
@@ -7132,7 +7132,7 @@
 		},
 		"-Nc46CPWJz2atC_uII9i": {
 			"damageType": "crushing",
-			"description": "A stout wooden quarterstaff, versatile for defense and offense.",
+			"description": "The Quarterstaff is a long, sturdy wooden pole, usually six to eight feet in length. Its simple design allows for versatile use in both offense and defense. Lightweight and easy to maneuver, it’s a reliable weapon favored by travelers and those skilled in staff combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-Nc46CPWJz2atC_uII9i?alt=media&token=3bbe8a10-42ee-4987-8c65-aa9bd79730fa",
 			"level": 1,
 			"max": 6,
@@ -7145,7 +7145,7 @@
 		},
 		"-NgK-VVeMfZnyRzNuNyK": {
 			"damageType": "slashing",
-			"description": "This handaxe is quick and deadly, perfect for agile warriors.",
+			"description": "The Handaxe is a versatile, one-handed weapon with a sharp, curved blade and a sturdy handle. Lightweight and easy to wield, it excels in both melee combat and as a throwing weapon. Common among adventurers, it serves well for both combat and practical tasks like chopping wood.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK-VVeMfZnyRzNuNyK?alt=media&token=1860a772-2dba-423c-a98e-c72a50f4a751",
 			"level": 1,
 			"max": 6,
@@ -7158,46 +7158,46 @@
 		},
 		"-NgK-mAaFXHeapzVbWAb": {
 			"damageType": "slashing",
-			"description": "A battleaxe crafted for strength and precision in combat.",
+			"description": "The Battleaxe is a sturdy, double-bladed weapon with a heavy head designed for powerful swings. Its wooden handle is wrapped in leather for grip, making it a reliable choice for warriors who favor brute strength. Though common, it’s known for delivering devastating blows in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK-mAaFXHeapzVbWAb?alt=media&token=9844fb54-3d24-47d6-be21-4a488771e2f1",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Battleaxe",
-			"price": 60,
+			"price": 70,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "axe"
 		},
 		"-NgK07SpTQiVML_pBgQ4": {
 			"damageType": "crushing",
-			"description": "Wielded by seasoned fighters, shattering armor and bone.",
+			"description": "The Warhammer is a heavy, blunt weapon with a broad, flat head for powerful strikes. Its sturdy handle allows for strong blows, making it effective against armored foes and a favorite among warriors for its devastating impact in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK07SpTQiVML_pBgQ4?alt=media&token=28026b31-3cf7-4b80-a9c0-3f5a1560f120",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Warhammer",
-			"price": 60,
+			"price": 80,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "hammer"
 		},
 		"-NgK0I2STX7An8WjEeUN": {
 			"damageType": "piercing",
-			"description": "A longbow favored by marksmen for its precision and range.",
+			"description": "The Longbow is a tall, flexible weapon crafted from sturdy wood, designed for long-range accuracy. Its simple design allows skilled archers to deliver powerful, precise shots. ",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0I2STX7An8WjEeUN?alt=media&token=1a253ef1-574f-4cca-b064-848f5c57bb90",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Longbow",
-			"price": 50,
+			"price": 70,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "bow"
 		},
 		"-NgK0TICJLv1vVaBGrbT": {
 			"damageType": "piercing",
-			"description": "A standard wooden spear, balanced for thrusting or throwing.",
+			"description": "The Spear is a long weapon with a sharp metal tip attached to a sturdy wooden shaft. Designed for thrusting and throwing, it’s effective in both melee and ranged combat. Common among soldiers and hunters, the spear offers reach and versatility in various battle situations.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0TICJLv1vVaBGrbT?alt=media&token=aacd81c0-2d15-4023-8702-6c4d1140d26e",
 			"level": 1,
 			"max": 6,
@@ -7210,33 +7210,33 @@
 		},
 		"-NgK0n7aPw0NHeefOnRg": {
 			"damageType": "slashing",
-			"description": "A massive two-handed greatsword, ideal for cleaving through enemies with brute force.",
+			"description": "The Greatsword is a massive, double-edged blade designed for powerful, sweeping strikes. With a long grip for two-handed use, it offers excellent reach and devastating damage in combat. This sword is favored by formidable warriors who seek to dominate their foes with sheer strength and skill.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgK0n7aPw0NHeefOnRg?alt=media&token=6797c36e-4049-4626-b0c0-ff46100ae0fd",
 			"level": 2,
 			"max": 12,
 			"min": 2,
 			"name": "Greatsword",
-			"price": 210,
+			"price": 280,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "sword"
 		},
 		"-NgNzkZJ0nG0Iep0uzOb": {
 			"damageType": "piercing",
-			"description": "A crossbow renowned for its accuracy and deadly precision.",
+			"description": "The Crossbow is a sturdy ranged weapon made of polished wood and steel, designed for precise, powerful shots. Its mechanical draw allows even novice users to deliver bolts with deadly accuracy. Reliable and easy to load, it’s favored by hunters and soldiers alike for mid-range engagements.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgNzkZJ0nG0Iep0uzOb?alt=media&token=0e1a7fc6-e4c8-4bf9-aed3-12d65deccbd4",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Crossbow",
-			"price": 60,
+			"price": 80,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "crossbow"
 		},
 		"-NgNzsJrS-5TLLJ5aZCn": {
 			"damageType": "crushing",
-			"description": "A rugged club designed to shatter bones and crush armor.",
+			"description": "The Club is a simple, blunt weapon made from a solid piece of hardwood. Its thick, rounded head is designed for close-range strikes, delivering powerful blows with minimal finesse. Common among novice fighters, it’s a reliable tool for straightforward combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgNzsJrS-5TLLJ5aZCn?alt=media&token=9e00ec05-fc8f-45d1-a46e-09a4b653fe32",
 			"level": 1,
 			"max": 4,
@@ -7249,7 +7249,7 @@
 		},
 		"-NgO--jUsGrVSzpmk0lB": {
 			"damageType": "crushing",
-			"description": "A sturdy iron mace, reliable in close-quarters battles.",
+			"description": "The Mace is a blunt weapon with a heavy head attached to a sturdy handle, designed for delivering crushing blows. Its simple design makes it effective against armored foes. Common among foot soldiers, it excels at breaking defenses and inflicting serious damage in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO--jUsGrVSzpmk0lB?alt=media&token=03bd826e-b171-415c-b3b9-817a68ca3053",
 			"level": 1,
 			"max": 6,
@@ -7262,20 +7262,20 @@
 		},
 		"-NgO-8McFOtJ7gLrS1UI": {
 			"damageType": "piercing",
-			"description": "A simple spiked iron morningstar, effective against armored foes.",
+			"description": "The Morningstar is a spiked weapon with a heavy, spiked ball attached to a sturdy handle by a chain. This design allows for powerful swinging strikes that can penetrate armor. Favored by knights, it combines lethality with elegance, making it effective in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO-8McFOtJ7gLrS1UI?alt=media&token=cce7f1c9-5fe2-4728-ac2c-a666dda298b3",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Morningstar",
-			"price": 70,
+			"price": 100,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "mace"
 		},
 		"-NgO0Km6wNCpoHt51Smw": {
 			"damageType": "slashing",
-			"description": "A sleek dagger favored by assassins for its deadly precision.",
+			"description": "The Fine Dagger is a sleek, elegantly designed blade with a polished hilt and intricate details. Lightweight and perfectly balanced, it allows for swift, precise strikes. Favored by assassins and nobles alike, it combines beauty with deadly efficiency in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0Km6wNCpoHt51Smw?alt=media&token=d285dfe0-2e3d-4659-aeb5-ea040a2f02a4",
 			"level": 2,
 			"max": 5,
@@ -7288,25 +7288,25 @@
 		},
 		"-NgO0_TN42Pqrd5WQENu": {
 			"damageType": "slashing",
-			"description": "A masterfully crafted longsword, imbued with both elegance and deadly precision.",
+			"description": "The Fine Longsword is a masterfully crafted blade with a polished, gleaming surface and intricate hilt designs. Its balanced weight allows for swift, precise strikes in combat. Favored by knights and nobles, this longsword combines elegance with deadly effectiveness on the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO0_TN42Pqrd5WQENu?alt=media&token=33d9061b-5b71-4a86-a4fe-cb9f8edc7fe3",
 			"level": 2,
 			"max": 7,
 			"min": 2,
 			"name": "Fine Longsword",
-			"price": 190,
+			"price": 200,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
 		},
 		"-NgO1-16PWvnT302EIO_": {
 			"damageType": "slashing",
-			"description": "This battleaxe strikes with devastating force, sundering armor and bone.",
+			"description": "The Fine Battleaxe is a beautifully crafted weapon with a polished blade and intricate engravings. Designed for both elegance and function, it delivers powerful strikes, making it a favorite among elite warriors who value both style and effectiveness in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1-16PWvnT302EIO_?alt=media&token=dff6894b-be2c-4506-92c9-6e92e6228c6c",
 			"level": 2,
 			"max": 9,
 			"min": 2,
-			"name": "FIne Battleaxe",
+			"name": "Fine Battleaxe",
 			"price": 240,
 			"size": "twoHanded",
 			"type": "weapon",
@@ -7314,7 +7314,7 @@
 		},
 		"-NgO1IZu27jgUnBZOesh": {
 			"damageType": "slashing",
-			"description": "Crafted for precision, this handaxe cleaves through armor and flesh alike.",
+			"description": "The Fine Handaxe is a beautifully crafted weapon with a sharp, polished blade and an elegantly designed handle. Its lightweight and balanced build allows for swift, precise strikes. This handaxe is favored by adventurers who appreciate both aesthetics and functionality in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1IZu27jgUnBZOesh?alt=media&token=5ba7ac52-5c76-40da-9cdf-133b085bf997",
 			"level": 2,
 			"max": 7,
@@ -7327,39 +7327,39 @@
 		},
 		"-NgO1hZuxcjitw8l7yjz": {
 			"damageType": "crushing",
-			"description": "Honed in the arena, it crushes foes with brutal efficiency.",
+			"description": "The Fine Warhammer is a beautifully crafted weapon with a polished head and intricate engravings on the handle. Designed for both strength and aesthetics, it delivers powerful blows with precision. This warhammer is favored by warriors who appreciate elegance and effectiveness in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1hZuxcjitw8l7yjz?alt=media&token=9fce3516-784c-4a9f-9d78-debcf7dcf48e",
 			"level": 2,
 			"max": 9,
 			"min": 2,
 			"name": "Fine Warhammer",
-			"price": 230,
+			"price": 240,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "hammer"
 		},
 		"-NgO1zYRL8NINq5O1XvX": {
 			"damageType": "crushing",
-			"description": "A finely crafted mace adorned with ornate engravings, both elegant and lethal.",
+			"description": "The Fine Mace features a polished, heavy head with ornate details, designed for powerful strikes. Its sturdy handle ensures a strong grip, making it effective in combat. This mace combines elegance and functionality, appealing to warriors who value craftsmanship.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO1zYRL8NINq5O1XvX?alt=media&token=18afa312-c74c-46d1-acaf-afe3d88ca214",
 			"level": 2,
 			"max": 7,
 			"min": 2,
 			"name": "Fine Mace",
-			"price": 180,
+			"price": 200,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "mace"
 		},
 		"-NgO2__1WpZ52xfbNJx_": {
 			"damageType": "crushing",
-			"description": "A weathered oak staff, etched with runes for protection on long journeys.",
+			"description": "The Traveller's Staff is a sturdy, wooden rod designed for both support and defense on long journeys. Lightweight and easily maneuverable, it features a simple design with a few carved symbols for good luck. This staff is favored by adventurers for its practicality and versatility in the wild.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO2__1WpZ52xfbNJx_?alt=media&token=a0aeb719-1576-41f7-9948-a878524cd3b4",
 			"level": 2,
 			"max": 6,
 			"min": 1,
 			"name": "Traveller's Staff",
-			"price": 220,
+			"price": 230,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -7373,7 +7373,7 @@
 		},
 		"-NgO2xYEe4Kzg3ST0JW2": {
 			"damageType": "piercing",
-			"description": "A polished steel spear with a razor-sharp tip, expertly crafted for precision strikes.",
+			"description": "The Fine Spear is an exquisitely crafted weapon with a sharp, polished tip and an elegantly designed shaft. Its balanced construction allows for powerful thrusts and precise throws. This spear blends beauty with practicality, making it a favored choice among skilled fighters.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO2xYEe4Kzg3ST0JW2?alt=media&token=bd8a4cfb-20e8-4374-b9a1-22b50751d2cc",
 			"level": 2,
 			"max": 7,
@@ -7386,20 +7386,20 @@
 		},
 		"-NgToUYVTRc1av-QcBA2": {
 			"damageType": "crushing",
-			"description": "Crafted from dense stone, this club delivers devastating impact.",
+			"description": "The Greatclub is a massive, blunt weapon crafted from a sturdy tree trunk, often stripped of bark for a smoother grip. Its sheer size and weight deliver devastating blows, making it a favored choice for powerful warriors.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgToUYVTRc1av-QcBA2?alt=media&token=5c1df0e7-d3fe-457f-b32b-1b29d9d16903",
 			"level": 1,
 			"max": 8,
 			"min": 1,
 			"name": "Greatclub",
-			"price": 100,
+			"price": 70,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "club"
 		},
 		"-O4a6m6kRcxAc9j7bxwQ": {
 			"damageType": "slashing",
-			"description": "This axe freezes the very air around it, cutting through armor with frozen fury.",
+			"description": "The Axe of the Frozen Wastes features a shimmering blade adorned with frost patterns. Designed for powerful swings, it delivers chilling damage, freezing foes in their tracks. Favored by northern warriors, this axe embodies the strength and harshness of winter.",
 			"effects": [
 				{
 					"damageType": "cold",
@@ -7433,7 +7433,7 @@
 		},
 		"-O4a7oqRZJo49hIlWxgw": {
 			"damageType": "slashing",
-			"description": "An axe that drips with acid, leaving a trail of destruction in its wake.",
+			"description": "The Acid Edge is a wickedly curved blade coated with a corrosive substance that glows faintly green. Designed for swift strikes, it can melt through armor and inflict lingering damage. Favored by assassins and alchemists, this weapon combines lethality with a sinister touch.",
 			"effects": [
 				{
 					"damageType": "acid",
@@ -7448,7 +7448,7 @@
 			"max": 12,
 			"min": 2,
 			"name": "Acid Edge",
-			"price": 850,
+			"price": 840,
 			"properties": [
 				{
 					"name": "acid",
@@ -7462,13 +7462,13 @@
 		},
 		"-O4a8SUEJmMBAf_be87T": {
 			"damageType": "slashing",
-			"description": "A Power Axe that harnesses immense energy, smashing through anything in its path.",
+			"description": "The Power Axe is a formidable weapon with a broad, heavy head for devastating strikes. Its sturdy handle ensures a strong grip, allowing for powerful swings. Favored by warriors, this axe embodies strength and effectiveness, making it a force to be reckoned with in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a8SUEJmMBAf_be87T?alt=media&token=42941e5a-b068-4c8f-9f03-f4c39c7be052",
 			"level": 3,
 			"max": 10,
 			"min": 3,
 			"name": "Power Axe",
-			"price": 550,
+			"price": 580,
 			"properties": [
 				{
 					"name": "strength",
@@ -7487,13 +7487,13 @@
 		},
 		"-O4a9NyNFTJSNN3flj0z": {
 			"damageType": "slashing",
-			"description": "An axe infused with draconic power, cleaving through armor like a dragon’s claw.",
+			"description": "Drake's Talon is a razor-sharp weapon made from a drake's claw, featuring a curved blade that glimmers with an otherworldly sheen. Lightweight and balanced, it allows for swift strikes, making it a favored choice for hunters and warriors seeking deadly precision.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a9NyNFTJSNN3flj0z?alt=media&token=ceabf1fe-7ec5-4240-a19e-8d7b57b229a3",
 			"level": 3,
 			"max": 8,
 			"min": 3,
 			"name": "Drake's Talon",
-			"price": 610,
+			"price": 650,
 			"properties": [
 				{
 					"name": "fire",
@@ -7507,7 +7507,7 @@
 		},
 		"-O4aAUt64OLYAgUJYhxR": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The Poison Edge is a sleek, dark blade with a subtle green hue, designed to deliver swift, deadly strikes. Coated in a potent toxin, each cut can inflict lingering damage on foes. Favored by assassins, this weapon combines elegance with a lethal touch, perfect for stealthy eliminations.",
 			"effects": [
 				{
 					"difficulty": 14,
@@ -7537,7 +7537,7 @@
 		},
 		"-O4aBRIJNPKNLTCixx0a": {
 			"damageType": "slashing",
-			"description": "A dagger that channels the void, cutting through both light and life.",
+			"description": "The Voidpiercer is a sleek, obsidian dagger that seems to absorb light, with a blade that glimmers with otherworldly energy. Designed for swift, lethal strikes, it can bypass armor and defenses. Favored by shadowy assassins, this dagger embodies the essence of darkness and death.",
 			"effects": [
 				{
 					"damageType": "necrotic",
@@ -7552,7 +7552,7 @@
 			"max": 6,
 			"min": 3,
 			"name": "Voidpiercer",
-			"price": 750,
+			"price": 800,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -7566,7 +7566,7 @@
 		},
 		"-O836Y7Gx_vk9fruIwmR": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Fine Longbow is an elegantly crafted weapon made from polished wood, featuring intricate designs along the limbs. It offers exceptional flexibility and power, allowing skilled archers to shoot arrows with remarkable accuracy. This longbow combines beauty and performance for elite marksmen.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O836Y7Gx_vk9fruIwmR?alt=media&token=7ff49fc3-0afa-4a7c-8f4c-4bbde3f0fe7a",
 			"level": 2,
 			"max": 9,
@@ -7579,7 +7579,7 @@
 		},
 		"-O837-alsOZeCZ2LfXYn": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Acid Bow is a sleek, dark weapon that fires arrows tipped with corrosive acid. Its smooth draw and precision allow for swift shots that can melt armor and flesh alike. Favored by rogues and alchemists, this bow is a deadly choice for those who want to inflict lingering damage on their foes.",
 			"effects": [
 				{
 					"damageType": "acid",
@@ -7601,7 +7601,7 @@
 		},
 		"-O837_TaJ6HTFBsgNpzS": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "Flame Shot is a beautifully crafted bow with fiery engravings along its limbs. When drawn, it ignites arrows in a blaze of fire, unleashing scorching shots that can engulf targets in flames. Favored by skilled archers, this bow is perfect for delivering both precision and destruction.",
 			"effects": [
 				{
 					"damageType": "fire",
@@ -7616,7 +7616,7 @@
 			"max": 16,
 			"min": 2,
 			"name": "Flame Shot",
-			"price": 1200,
+			"price": 1150,
 			"properties": [
 				{
 					"name": "fire",
@@ -7630,7 +7630,7 @@
 		},
 		"-O838EeKMsy_Xw7WPyND": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Boneclub is a crude weapon crafted from a single large bone, often from a beast of considerable size. Its surface is rough and jagged, adding to its blunt force when swung. Primitive but effective, it’s favored by those who embrace a raw, untamed fighting style.",
 			"effects": [
 				{
 					"difficulty": 12,
@@ -7652,7 +7652,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Boneclub",
-			"price": 80,
+			"price": 40,
 			"properties": [
 				{
 					"name": "charisma",
@@ -7666,20 +7666,20 @@
 		},
 		"-O838oF5XDaNy0Fs4Flp": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Fine Crossbow is a meticulously crafted ranged weapon made of polished wood and adorned with intricate carvings. Its powerful draw and precise mechanism ensure accurate shots, making it a favorite among skilled marksmen seeking both beauty and reliability in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O838oF5XDaNy0Fs4Flp?alt=media&token=b3a95965-ec39-4b46-a8bb-a39315f0107c",
 			"level": 2,
 			"max": 9,
 			"min": 2,
 			"name": "Fine Crossbow",
-			"price": 260,
+			"price": 250,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "crossbow"
 		},
 		"-O839Fwy6z4MdXojSNBz": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Unholy Bolter is a sinister crossbow adorned with dark symbols and a blackened finish. It fires cursed bolts that deal extra damage and drain vitality. Favored by dark sorcerers, this weapon embodies malevolence and relentless power in battle.",
 			"effects": [
 				{
 					"damageType": "necrotic",
@@ -7694,7 +7694,7 @@
 			"max": 16,
 			"min": 2,
 			"name": "Unholy Bolter",
-			"price": 1100,
+			"price": 1120,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -7708,13 +7708,13 @@
 		},
 		"-O839l2OfPHKXuAb-F68": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Elven Crossbow is a finely crafted weapon made from lightweight wood, featuring elegant leaf patterns. Its design allows for quick loading and precise shots, making it a favorite among skilled elven marksmen for stealthy, effective strikes from a distance.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O839l2OfPHKXuAb-F68?alt=media&token=0dde223d-ef64-496e-bc95-08caf5e8bead",
 			"level": 3,
 			"max": 10,
 			"min": 3,
 			"name": "Elven Crossbow",
-			"price": 510,
+			"price": 530,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -7728,7 +7728,7 @@
 		},
 		"-O83AkiajvksrVOO9E_T": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Fine Hammer is a meticulously crafted weapon featuring a polished head and an intricately designed handle. Its balanced weight allows for powerful, precise strikes, making it effective in combat. Favored by skilled craftsmen and warriors, it combines elegance with practical strength.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83AkiajvksrVOO9E_T?alt=media&token=730a3e5b-1757-4cf5-868d-c2144a1f3d5b",
 			"level": 2,
 			"max": 7,
@@ -7741,13 +7741,13 @@
 		},
 		"-O83BRpUJVDVaFdO4Ji1": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Gold Hammer is a striking weapon with a heavy, gleaming head made of solid gold and an intricately designed handle. While it exudes elegance, its solid construction allows for powerful strikes. Favored by wealthy warriors, it blends opulence with the effectiveness of a formidable weapon.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83BRpUJVDVaFdO4Ji1?alt=media&token=f997f2e0-34e4-4027-8442-9f2fe7bc57d9",
 			"level": 3,
 			"max": 7,
 			"min": 2,
 			"name": "Gold Hammer",
-			"price": 460,
+			"price": 510,
 			"properties": [
 				{
 					"name": "strength",
@@ -7766,13 +7766,13 @@
 		},
 		"-O83BrerEM0juYkEM_QP": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Rune Forged Warhammer is a powerful weapon intricately engraved with ancient runes that glow faintly. Designed for devastating strikes, it combines heavy weight with exceptional balance. Favored by seasoned warriors, this warhammer channels magical energy, enhancing its impact in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O83BrerEM0juYkEM_QP?alt=media&token=ed18597c-8651-4c53-9f5f-7e5929dc4542",
 			"level": 3,
 			"max": 10,
 			"min": 3,
 			"name": "Rune Forged Warhammer",
-			"price": 620,
+			"price": 560,
 			"properties": [
 				{
 					"name": "fire",
@@ -7796,7 +7796,7 @@
 		},
 		"-O83CckcCZNQbGuIhCwy": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "Dwarven Thunder is a sturdy warhammer with a heavy head that resonates with a deep sound upon impact. Crafted by skilled dwarven smiths, it delivers devastating blows, often stunning foes. This weapon embodies the strength and craftsmanship of dwarven warriors.",
 			"effects": [
 				{
 					"damageType": "lightning",
@@ -7830,7 +7830,7 @@
 		},
 		"-O83DUGFC8-nlyahHmlf": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Molten Crusher is a heavy hammer with a glowing, lava-like head that radiates intense heat. Designed for devastating strikes, it can crush armor and ignite foes upon contact. Favored by fire-infused warriors, this hammer embodies the fury of molten rock in battle.",
 			"effects": [
 				{
 					"damageType": "fire",
@@ -7866,13 +7866,13 @@
 		},
 		"-O86KsKBT0jSbCjiSLm_": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Royal Mace is an ornate weapon with a heavy, jewel-adorned head and intricate designs. Built for power and style, it delivers crushing blows while showcasing regal craftsmanship. Favored by nobles, this mace symbolizes authority and strength in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86KsKBT0jSbCjiSLm_?alt=media&token=f1c08b85-9650-4428-b91b-adece827d8e7",
 			"level": 3,
 			"max": 8,
 			"min": 3,
 			"name": "Royal Mace",
-			"price": 550,
+			"price": 620,
 			"properties": [
 				{
 					"name": "strength",
@@ -7886,7 +7886,7 @@
 		},
 		"-O86LPbrpdPf46hvIISe": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Holy Avenger is an ornate mace featuring a radiant head and intricate engravings of celestial symbols. Infused with divine energy, it delivers powerful strikes that smite evil and bolster allies. Favored by paladins, this mace embodies righteousness and the relentless fight against darkness.",
 			"effects": [
 				{
 					"damageType": "radiant",
@@ -7915,7 +7915,7 @@
 		},
 		"-O86LrSuGHIRtQuAJJAq": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Flail is a unique weapon consisting of a spiked ball attached to a sturdy chain, allowing for unpredictable strikes. Its design enables powerful, swinging attacks that can bypass shields and armor. Favored by agile fighters, this weapon combines versatility with a distinct flair in combat.",
 			"effects": [
 				{
 					"damageType": "piercing",
@@ -7930,20 +7930,20 @@
 			"max": 9,
 			"min": 2,
 			"name": "Flail",
-			"price": 350,
+			"price": 520,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "mace"
 		},
 		"-O86MaYcAzzh5_RPVCkD": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Golden Flail features a spiked, gleaming ball attached to a sturdy chain, all crafted from shimmering gold. Its unique design allows for powerful, unpredictable strikes, making it effective in combat. Favored by flamboyant warriors, this flail combines elegance with brutal effectiveness.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86MaYcAzzh5_RPVCkD?alt=media&token=b79573c9-b849-4363-9634-4491cdf3f310",
 			"level": 3,
 			"max": 10,
 			"min": 3,
 			"name": "Golden Flail",
-			"price": 670,
+			"price": 700,
 			"properties": [
 				{
 					"name": "constitution",
@@ -7967,7 +7967,7 @@
 		},
 		"-O86Njh57GkQCRerPm6K": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Ball Drainer is a unique, spiked weapon designed for devastating impact. Its heavy head and jagged edges are made to crush and incapacitate foes, inflicting pain with each strike. Favored by ruthless fighters, this weapon emphasizes brute strength and intimidation on the battlefield.",
 			"effects": [
 				{
 					"difficulty": 18,
@@ -8001,13 +8001,13 @@
 		},
 		"-O86ORpmHCRvdoJix1nA": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Elven Spear is a beautifully crafted weapon made from lightweight wood and adorned with intricate carvings. Its long, slender shaft allows for quick thrusts and precise throws. Favored by elven warriors, it combines elegance and effectiveness for both hunting and combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86ORpmHCRvdoJix1nA?alt=media&token=c4158c08-d37f-41ae-a8fc-68984f1c6d3c",
 			"level": 3,
 			"max": 8,
 			"min": 3,
 			"name": "Elven Spear",
-			"price": 350,
+			"price": 360,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -8021,7 +8021,7 @@
 		},
 		"-O86ft0iHPkB35cl2T2l": {
 			"damageType": "piercing",
-			"description": "",
+			"description": "The Lightning Trident is a formidable weapon with three sharp prongs that shimmer with electric energy. Designed for both melee combat and throwing, it can unleash arcs of lightning upon impact. Favored by storm warriors, this trident embodies the raw power of thunderstorms in battle.",
 			"effects": [
 				{
 					"damageType": "lightning",
@@ -8036,7 +8036,7 @@
 			"max": 15,
 			"min": 5,
 			"name": "Lightning Trident",
-			"price": 710,
+			"price": 750,
 			"properties": [
 				{
 					"name": "lightning",
@@ -8050,13 +8050,13 @@
 		},
 		"-O86h9XqEXUwwAyrAwNF": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The King's Claymore is a magnificent two-handed sword with a broad, gleaming blade engraved with regal symbols. Designed for powerful strikes, it offers both reach and balance. Favored by royalty and knights alike, this claymore symbolizes authority and strength on the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86h9XqEXUwwAyrAwNF?alt=media&token=a1e8688b-98f1-4cf1-a9ac-2e0b233c56af",
 			"level": 3,
 			"max": 14,
 			"min": 4,
 			"name": "King's Claymore",
-			"price": 780,
+			"price": 720,
 			"properties": [
 				{
 					"name": "strength",
@@ -8070,7 +8070,7 @@
 		},
 		"-O86hk29tvN6eTdWSBiu": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The Frosty Blade is a shimmering sword with a blue-tinted edge that emanates a chilling aura. Designed to freeze foes on contact, it deals both slashing damage and frost damage. This blade is favored by frost mages and warriors alike, bringing the bite of winter to the battlefield.",
 			"effects": [
 				{
 					"damageType": "cold",
@@ -8085,14 +8085,14 @@
 			"max": 7,
 			"min": 2,
 			"name": "Frosty Blade",
-			"price": 500,
+			"price": 490,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
 		},
 		"-O86i64bPy3o78ynB5JW": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "Nightsong is an elegant sword with a sleek, dark blade that shimmers in low light. Infused with shadow magic, it grants its wielder enhanced stealth and agility. Favored by assassins and rogue warriors, this sword embodies the silent beauty and deadly precision of the night.",
 			"effects": [
 				{
 					"damageType": "necrotic",
@@ -8107,7 +8107,7 @@
 			"max": 8,
 			"min": 3,
 			"name": "Nightsong",
-			"price": 920,
+			"price": 870,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -8121,7 +8121,7 @@
 		},
 		"-O86iXwrc1ccOlbTldxs": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "Nature's Wrath is a beautifully crafted staff adorned with twisting vines and vibrant leaves. It channels the power of the natural world, allowing the wielder to summon roots and vines to ensnare foes. Favored by druids, this staff embodies the raw fury and beauty of nature in battle.",
 			"effects": [
 				{
 					"damageType": "acid",
@@ -8136,7 +8136,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Nature's Wrath",
-			"price": 360,
+			"price": 350,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -8150,13 +8150,13 @@
 		},
 		"-O86upm1evShQs6BJMoJ": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The Gold Dagger features a gleaming golden blade with an ornate hilt, combining beauty and functionality. Its design allows for swift, precise strikes, making it a favored choice among nobles and skilled assassins who appreciate both luxury and lethality.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86upm1evShQs6BJMoJ?alt=media&token=62166ff9-9d4b-418c-8035-783746af2961",
 			"level": 3,
 			"max": 7,
 			"min": 2,
 			"name": "Gold Dagger",
-			"price": 460,
+			"price": 500,
 			"properties": [
 				{
 					"name": "critChance",
@@ -8170,7 +8170,7 @@
 		},
 		"-O86vlV1PaMbJ7A5cuUH": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "Bloodletter is a sinister dagger with a jagged, crimson blade that gleams ominously. Designed for stealthy strikes, it inflicts deep wounds that bleed profusely, weakening foes over time. Favored by assassins, this weapon embodies the art of death and the thirst for blood in battle.",
 			"effects": [
 				{
 					"difficulty": 15,
@@ -8186,14 +8186,14 @@
 			"max": 6,
 			"min": 3,
 			"name": "Bloodletter",
-			"price": 720,
+			"price": 880,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
 		},
 		"-O86w6i469JpHsIqXKtr": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The Corroding Blade is a sinister weapon with a jagged edge that emits a faint green glow. Coated in a potent acid, it can eat through armor and flesh with each strike. This blade is favored by ruthless assassins, designed to inflict devastating damage that lingers long after the blow.",
 			"effects": [
 				{
 					"damageType": "acid",
@@ -8215,7 +8215,7 @@
 		},
 		"-O86wneXTVhQsT7cKjoF": {
 			"damageType": "slashing",
-			"description": "",
+			"description": "The Star of Vengeance is a unique, star-shaped dagger with four sharp blades radiating from a central point. Designed for swift, multidirectional strikes, it delivers devastating damage with precision. Favored by skilled assassins, this dagger embodies the art of stealth and deadly retribution.",
 			"effects": [
 				{
 					"damageType": "slashing",
@@ -8244,20 +8244,20 @@
 			"max": 4,
 			"min": 1,
 			"name": "Star of Vengeance",
-			"price": 800,
+			"price": 950,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
 		},
 		"-O880XFcKnWhE-_xBLH5": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Staff of the Trickster is a slender rod adorned with playful symbols and a shimmering gemstone. It enhances illusion spells, allowing the wielder to confuse foes. Favored by cunning spellcasters, this staff is perfect for those who thrive on deception in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O880XFcKnWhE-_xBLH5?alt=media&token=01951d9c-ed50-4071-8e62-b3a41d72a602",
 			"level": 2,
 			"max": 6,
 			"min": 1,
 			"name": "Staff of the Trickster",
-			"price": 150,
+			"price": 120,
 			"properties": [
 				{
 					"name": "charisma",
@@ -8271,7 +8271,7 @@
 		},
 		"-O881adjBhWBB9IW_gRE": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Staff of Cold is a sleek, icy blue rod adorned with frost motifs and a shimmering crystal at its tip. This staff channels chilling magic, allowing the wielder to cast powerful ice spells. Favored by frost mages, it embodies the essence of winter and the power of the frozen elements.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O881adjBhWBB9IW_gRE?alt=media&token=91193af8-eb3c-418d-b78b-0425b472cda2",
 			"level": 3,
 			"max": 6,
@@ -8291,13 +8291,13 @@
 		},
 		"-O8826bklHQ7fH__Egi2": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Staff of the Archmage is an ornate rod made from dark wood, crowned with a radiant crystal that glimmers with arcane energy. It enhances spellcasting abilities, allowing the wielder to manipulate powerful spells with ease. This staff is a symbol of mastery, favored by the most powerful mages.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O8826bklHQ7fH__Egi2?alt=media&token=7b07954d-b9f1-4ebb-bd6c-ba7f6f735e5a",
 			"level": 4,
 			"max": 6,
 			"min": 1,
 			"name": "Staff of the Archmage",
-			"price": 1250,
+			"price": 1320,
 			"properties": [
 				{
 					"name": "cold",
@@ -8326,7 +8326,7 @@
 		},
 		"-O882xmUlhB07RJmbt_a": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "Forked Lightning is a striking staff adorned with two jagged tips that crackle with electric energy. Designed to channel powerful lightning spells, it allows the wielder to unleash devastating bolts of electricity. Favored by storm mages, this staff embodies the raw fury of a thunderstorm.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O882xmUlhB07RJmbt_a?alt=media&token=1c0d3884-6bfb-4b63-b25b-5de584796590",
 			"level": 4,
 			"max": 6,
@@ -8351,7 +8351,7 @@
 		},
 		"-O883TxE3EKQl4pDIJkT": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Crystal Staff is an elegant, tall rod adorned with a large, luminous crystal at its tip. This staff channels magical energies, allowing spellcasters to enhance their spells and harness elemental forces. Often sought after by wizards, its beauty is matched by its potent magical capabilities.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883TxE3EKQl4pDIJkT?alt=media&token=d681b87d-454f-4632-a3c5-211e48542c06",
 			"level": 2,
 			"max": 6,
@@ -8381,13 +8381,13 @@
 		},
 		"-O883ldvSyYlUMXKPTKl": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Staff of Flames is a fiery red rod intricately carved with flame motifs and topped with a glowing ember. This staff channels intense fire magic, enabling the wielder to unleash powerful fire spells. Favored by fire mages, it embodies the raw energy and destructive potential of flames.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883ldvSyYlUMXKPTKl?alt=media&token=212e10f0-d163-4da5-9d36-1b3d5ecd597e",
 			"level": 3,
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Flames",
-			"price": 410,
+			"price": 400,
 			"properties": [
 				{
 					"name": "fire",
@@ -8401,13 +8401,13 @@
 		},
 		"-O884ErbLr06vlIendww": {
 			"damageType": "crushing",
-			"description": "",
+			"description": "The Staff of Warding is a sturdy rod adorned with protective runes and a glowing crystal. Designed to enhance defensive spells, it creates barriers against magical attacks. Favored by guardians, this staff embodies safety and vigilance in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O884ErbLr06vlIendww?alt=media&token=e491f5e8-337d-47d5-a93c-fd6c2d88fdb5",
 			"level": 4,
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Warding",
-			"price": 920,
+			"price": 820,
 			"properties": [
 				{
 					"name": "slashing",
@@ -8431,7 +8431,7 @@
 		},
 		"-O884md7d30ncYCBN352": {
 			"damageType": "lightning",
-			"description": "",
+			"description": "The Lightning Wand is a sleek, silver rod that crackles with electrical energy. When wielded, it releases arcs of lightning, stunning foes or igniting flammable objects. Favored by storm mages, it feels charged to the touch, hinting at the powerful spells ready to be unleashed.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O884md7d30ncYCBN352?alt=media&token=f229cba4-de49-4704-ad35-46e201c6245a",
 			"level": 1,
 			"max": 4,
@@ -8444,7 +8444,7 @@
 		},
 		"-O8858iCEuFLCYHw_B8r": {
 			"damageType": "fire",
-			"description": "",
+			"description": "The Fire Wand is a slender, crimson rod, warm to the touch and inscribed with glowing ember runes. It unleashes bursts of flame, igniting targets from a distance. Favored by fire mages, it crackles softly, hinting at the intense heat it can unleash in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O8858iCEuFLCYHw_B8r?alt=media&token=c4b6372c-c137-4609-a2e1-1fbedf1c903a",
 			"level": 1,
 			"max": 4,
@@ -8457,7 +8457,7 @@
 		},
 		"-O885N2_iJ4G2FzUXbNw": {
 			"damageType": "cold",
-			"description": "",
+			"description": "The Cold Wand is a slender, ice-blue rod imbued with frost magic, chilling the air around it. When activated, it releases blasts of freezing energy, capable of slowing enemies or encasing them in ice.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O885N2_iJ4G2FzUXbNw?alt=media&token=9a27d4ed-9e5b-4540-a423-78fafb03a05a",
 			"level": 1,
 			"max": 4,
@@ -8470,7 +8470,7 @@
 		},
 		"-O885kCSisaF4moiYC04": {
 			"damageType": "cold",
-			"description": "",
+			"description": "The Infused Cold Wand is a sleek, blue rod charged with frost magic. When wielded, it releases blasts of icy energy, freezing targets on contact. Favored by cold mages, it enhances their ability to control the battlefield with chilling precision.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O885kCSisaF4moiYC04?alt=media&token=4680c62d-035c-4a0a-b183-d40e287b9241",
 			"level": 2,
 			"max": 5,
@@ -8483,7 +8483,7 @@
 		},
 		"-O886CfafhQSLXkJEQyF": {
 			"damageType": "fire",
-			"description": "",
+			"description": "The Infused Fire Wand is a slender, red rod crackling with flame magic. When wielded, it unleashes bursts of fire, igniting targets and dealing damage. This wand is favored by fire mages, enhancing their spellcasting with powerful flames to dominate the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886CfafhQSLXkJEQyF?alt=media&token=24019a7c-44f9-466c-8cf3-f7476b7ab053",
 			"level": 2,
 			"max": 5,
@@ -8496,7 +8496,7 @@
 		},
 		"-O886X4ak1ZP3ovLQjeF": {
 			"damageType": "lightning",
-			"description": "",
+			"description": "The Infused Lightning Wand is a sleek, silver rod pulsating with electric energy. When wielded, it releases arcs of lightning that can stun foes and deal damage. This wand is favored by storm mages, enhancing their ability to unleash powerful lightning spells in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886X4ak1ZP3ovLQjeF?alt=media&token=5863ce10-3c44-4d5c-aae5-37bd250bd151",
 			"level": 2,
 			"max": 5,
@@ -8509,7 +8509,7 @@
 		},
 		"-O887GHDvG1vgr5D7Z1R": {
 			"damageType": "necrotic",
-			"description": "",
+			"description": "The Wand of Cursing is a slender, dark wand etched with sinister symbols that pulse with ominous energy. When wielded, it can unleash debilitating hexes and curses on foes, sowing chaos and confusion. Favored by dark sorcerers, this wand is a potent tool for those who wield malevolent magic.",
 			"effects": [
 				{
 					"difficulty": 14,
@@ -8531,14 +8531,14 @@
 			"max": 4,
 			"min": 1,
 			"name": "Wand of Cursing",
-			"price": 560,
+			"price": 530,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
 		},
 		"-O887qHMJmHrl6p1Gm5h": {
 			"damageType": "fire",
-			"description": "",
+			"description": "Dragon's Breath is an ornate wand crafted from dark wood and adorned with dragon motifs. When wielded, it channels fiery magic to unleash powerful bursts of flame. Favored by elemental mages, this wand embodies the fierce spirit of dragons, allowing spellcasters to command fire with precision.",
 			"effects": [
 				{
 					"difficulty": 18,
@@ -8567,7 +8567,7 @@
 		},
 		"-O888JJX3_O4U2wBZ78X": {
 			"damageType": "radiant",
-			"description": "",
+			"description": "The Holy Wand is a slender, elegantly carved rod, often adorned with symbols of light and protection. Infused with divine energy, it allows the wielder to cast healing spells and ward off evil. This wand is favored by clerics and paladins, embodying hope and righteousness in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O888JJX3_O4U2wBZ78X?alt=media&token=a508f5a9-b4d2-48c2-ac08-2c996323ee7f",
 			"level": 3,
 			"max": 6,
@@ -8592,7 +8592,7 @@
 		},
 		"-O888xxIucji-VaJ0gco": {
 			"damageType": "fire",
-			"description": "",
+			"description": "The Elementalist's Wand is a beautifully crafted rod adorned with symbols of fire, water, earth, and air. This wand allows the wielder to channel elemental magic, casting powerful spells of all four elements. Favored by versatile mages, it embodies the balance of nature’s forces in battle.",
 			"effects": [
 				{
 					"damageType": "cold",
@@ -8614,14 +8614,14 @@
 			"max": 4,
 			"min": 1,
 			"name": "Elementalist's Wand",
-			"price": 820,
+			"price": 810,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
 		},
 		"-O889_GejsGHdcZH4_ek": {
 			"damageType": "fire",
-			"description": "",
+			"description": "The Wand of Piercing is a sleek, metallic wand designed for precision and power. It enhances spellcasters' piercing spells, allowing them to bypass defenses and strike directly at their targets. Favored by skilled mages, this wand is an essential tool for delivering powerful, targeted attacks.",
 			"effects": [
 				{
 					"difficulty": 15,
@@ -8660,13 +8660,13 @@
 		},
 		"-O88A4_A04Uf9jAxmv0B": {
 			"damageType": "lightning",
-			"description": "",
+			"description": "The Archmage's Wand is a finely crafted, elegantly carved rod imbued with immense magical power. Adorned with shimmering gemstones, it enhances spellcasting abilities, allowing for the manipulation of potent spells. This wand is a symbol of mastery, favored by the most skilled and learned mages.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O88A4_A04Uf9jAxmv0B?alt=media&token=ff802545-0918-4034-ab58-3562525309eb",
 			"level": 4,
 			"max": 6,
 			"min": 3,
 			"name": "Archmage's Wand",
-			"price": 780,
+			"price": 1000,
 			"properties": [
 				{
 					"name": "intelligence",
