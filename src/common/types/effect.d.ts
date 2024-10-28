@@ -1,4 +1,4 @@
-import { AuxiliaryEffect, HitType, PropertyType, Stat, Target } from "@common/utils/enums";
+import { AuxiliaryEffect, HitType, PropertyType, SkillClass, Stat, Target } from "@common/utils/enums";
 import { Types } from "mongoose";
 
 export interface IDamageEffect {
@@ -23,6 +23,7 @@ export interface IEffectSource {
 	id: string;
 	name: string;
 	icon: string;
+	skillClass?: SkillClass;
 }
 
 export interface IStatusEffect {

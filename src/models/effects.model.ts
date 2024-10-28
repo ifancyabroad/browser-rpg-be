@@ -6,7 +6,7 @@ import {
 	IProperty,
 	IStatusEffect,
 } from "@common/types/effect";
-import { AuxiliaryEffect, HitType, PropertyType, Stat, Target } from "@common/utils";
+import { AuxiliaryEffect, HitType, PropertyType, SkillClass, Stat, Target } from "@common/utils";
 import { Model, Schema } from "mongoose";
 
 // Allow empty strings to pass `required` check
@@ -85,6 +85,10 @@ export const statusEffectSchema = new Schema<IStatusEffect, Model<IStatusEffect>
 				type: String,
 				required: true,
 			},
+			skillClass: {
+				type: String,
+				enum: SkillClass,
+			},
 		},
 		target: {
 			type: String,
@@ -131,6 +135,10 @@ export const auxiliaryEffectSchema = new Schema<IAuxiliaryEffect, Model<IAuxilia
 			icon: {
 				type: String,
 				required: true,
+			},
+			skillClass: {
+				type: String,
+				enum: SkillClass,
 			},
 		},
 		target: {

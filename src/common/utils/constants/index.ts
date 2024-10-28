@@ -4,6 +4,7 @@ import {
 	EquipmentType,
 	HitType,
 	ItemRarity,
+	SkillClass,
 	Stat,
 	WeaponType,
 	Zone,
@@ -111,7 +112,7 @@ export const WEAPON_MODIFIER_MAP = new Map([
 	[WeaponType.Axe, Stat.Strength],
 	[WeaponType.Bow, Stat.Dexterity],
 	[WeaponType.Club, Stat.Strength],
-	[WeaponType.Crossbow, Stat.Strength],
+	[WeaponType.Crossbow, Stat.Dexterity],
 	[WeaponType.Dagger, Stat.Dexterity],
 	[WeaponType.Hammer, Stat.Strength],
 	[WeaponType.Mace, Stat.Strength],
@@ -121,17 +122,13 @@ export const WEAPON_MODIFIER_MAP = new Map([
 	[WeaponType.Wand, Stat.Intelligence],
 ]);
 
-export const DAMAGE_TYPE_MODIFIER_MAP = new Map([
-	[DamageType.Crushing, null],
-	[DamageType.Piercing, null],
-	[DamageType.Slashing, null],
-	[DamageType.Cold, Stat.Intelligence],
-	[DamageType.Fire, Stat.Intelligence],
-	[DamageType.Lightning, Stat.Intelligence],
-	[DamageType.Necrotic, Stat.Wisdom],
-	[DamageType.Radiant, Stat.Wisdom],
-	[DamageType.Acid, null],
-	[DamageType.Poison, null],
+export const SKILL_CLASS_MODIFIER_MAP = new Map([
+	[SkillClass.Mage, Stat.Intelligence],
+	[SkillClass.Cleric, Stat.Wisdom],
+	[SkillClass.Warrior, null],
+	[SkillClass.Rogue, null],
+	[SkillClass.Common, null],
+	[SkillClass.Unique, null],
 ]);
 
 export const HIT_TYPE_MULTIPLIER_MAP = new Map([

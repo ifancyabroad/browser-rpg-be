@@ -460,10 +460,10 @@ characterSchema.method("getWeaponsDamage", function getWeaponsDamage(data: IEffe
 	return [this.getUnarmedDamage(data)];
 });
 
-characterSchema.method("getDamage", function getDamage({ effect, effectTarget }: IEffectData) {
+characterSchema.method("getDamage", function getDamage({ effect, effectTarget, source }: IEffectData) {
 	const damageEffect = effect as IDamageEffectData;
 	const damage = Game.dx(damageEffect.min, damageEffect.max);
-	const stat = Game.getDamageStat(damageEffect.damageType);
+	const stat = source.skillClass ? Game.getDamageStat(source.skillClass) : null;
 	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 	const bonusMultiplier = this.getDamageBonus(damageEffect.damageType) / 100 + 1;
 	const resistance = effectTarget.getResistance(damageEffect.damageType) / 100;
@@ -598,7 +598,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		this.skillIDs.find((sk) => sk.id === data.skill).remaining--;
 	}
 
-	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon };
+	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon, skillClass: skill.class };
 
 	skill.effects.forEach((effect) => {
 		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
