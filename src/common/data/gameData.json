@@ -3515,8 +3515,8 @@
 			"skills": ["-NfROP8bobODCeEQFrpd"],
 			"stats": {
 				"charisma": 6,
-				"constitution": 10,
-				"dexterity": 16,
+				"constitution": 8,
+				"dexterity": 14,
 				"intelligence": 6,
 				"strength": 8,
 				"wisdom": 10
@@ -3553,7 +3553,7 @@
 			"stats": {
 				"charisma": 6,
 				"constitution": 12,
-				"dexterity": 18,
+				"dexterity": 16,
 				"intelligence": 8,
 				"strength": 8,
 				"wisdom": 10
@@ -3591,7 +3591,7 @@
 			"stats": {
 				"charisma": 6,
 				"constitution": 14,
-				"dexterity": 20,
+				"dexterity": 18,
 				"intelligence": 10,
 				"strength": 12,
 				"wisdom": 12
@@ -3600,7 +3600,7 @@
 		},
 		"-O9_V4rlMkRjOWIDQarx": {
 			"boss": false,
-			"challenge": 11,
+			"challenge": 10,
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
@@ -3626,9 +3626,9 @@
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTRk0hkXBsKEHMEWD2", "-NgTUH0cjt_Ek0BEIgUh"],
 			"stats": {
-				"charisma": 6,
-				"constitution": 16,
-				"dexterity": 18,
+				"charisma": 10,
+				"constitution": 14,
+				"dexterity": 16,
 				"intelligence": 8,
 				"strength": 10,
 				"wisdom": 14
@@ -3676,7 +3676,7 @@
 		},
 		"-O9_YM1vo2Mdr-Q-wHc3": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 13,
 			"description": "",
 			"equipment": {
 				"body": "-NgO5fUaNmJH7LpPo2LP",
@@ -3709,10 +3709,10 @@
 			],
 			"stats": {
 				"charisma": 12,
-				"constitution": 16,
-				"dexterity": 18,
-				"intelligence": 20,
-				"strength": 13,
+				"constitution": 14,
+				"dexterity": 16,
+				"intelligence": 18,
+				"strength": 10,
 				"wisdom": 16
 			},
 			"zone": "desert"
@@ -3843,12 +3843,12 @@
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-NZMIV5OGOr4bChwrNEE"],
 			"stats": {
-				"charisma": 12,
+				"charisma": 6,
 				"constitution": 18,
-				"dexterity": 16,
+				"dexterity": 14,
 				"intelligence": 8,
 				"strength": 14,
-				"wisdom": 14
+				"wisdom": 10
 			},
 			"zone": "desert"
 		},

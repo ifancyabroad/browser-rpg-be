@@ -59,9 +59,9 @@ export const MODIFIERS = new Map([
 
 export const EXPERIENCE_MAP = new Map([
 	[1, 0],
-	[2, 500],
-	[3, 2000],
-	[4, 4500],
+	[2, 200],
+	[3, 1000],
+	[4, 4000],
 	[5, 8000],
 	[6, 12500],
 	[7, 18000],
@@ -137,7 +137,7 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Miss, 0],
 ]);
 
-export const ZONES = [Zone.Forest, Zone.Desert, Zone.Ocean, Zone.Hills, Zone.Volcano];
+export const ZONES = [Zone.Forest, Zone.Hills, Zone.Desert, Zone.Ocean, Zone.Volcano];
 
 export const ITEM_WEIGHT_LEVELS = [
 	{
