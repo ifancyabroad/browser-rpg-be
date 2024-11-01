@@ -477,10 +477,11 @@ characterSchema.method("getDamage", function getDamage({ effect, effectTarget, s
 	};
 });
 
-characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
+characterSchema.method("getHeal", function getHeal({ effect, source }: IEffectData) {
 	const healEffect = effect as IHealEffectData;
 	const heal = Game.dx(healEffect.min, healEffect.max);
-	const modifier = Game.getModifier(this.stats[Stat.Wisdom]);
+	const stat = source.skillClass ? Game.getDamageStat(source.skillClass) : null;
+	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 	return {
 		target: healEffect.target,
 		value: heal + modifier,

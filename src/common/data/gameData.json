@@ -2533,7 +2533,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-NhgpxFRvn_sOrij-K0F"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgyQeYWKGMfv97Ojh0", "-OAc58blrXjj8BuSCn6r"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 14,
@@ -2546,10 +2546,10 @@
 		},
 		"-NKt0FqDCM_Ms7YFjWhj": {
 			"boss": false,
-			"challenge": 10,
+			"challenge": 15,
 			"description": "",
 			"name": "Stitched Ogre",
-			"naturalArmourClass": 11,
+			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 7,
 			"naturalMinDamage": 2,
@@ -2567,13 +2567,13 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqcxgP5ITgFn-T8xj6", "-Nhh2aa9hENKmzll2Md-"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 15,
-				"dexterity": 13,
+				"dexterity": 14,
 				"intelligence": 3,
-				"strength": 14,
+				"strength": 18,
 				"wisdom": 6
 			},
 			"zone": "hills"
@@ -2619,10 +2619,10 @@
 		},
 		"-NKt3ujmy2tXghwqSM9o": {
 			"boss": false,
-			"challenge": 12,
+			"challenge": 14,
 			"description": "",
 			"name": "Abomination",
-			"naturalArmourClass": 12,
+			"naturalArmourClass": 15,
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 2,
@@ -2640,7 +2640,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NKt0W8prsXi7-54nBVz"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NKt0W8prsXi7-54nBVz", "-OAbsKzhDKZyqRhK5IJZ"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 17,
@@ -2864,7 +2864,7 @@
 		},
 		"-NgT_UhmZUanGpfiYwvB": {
 			"boss": false,
-			"challenge": 13,
+			"challenge": 11,
 			"description": "",
 			"name": "Ghoul",
 			"naturalArmourClass": 9,
@@ -2932,10 +2932,10 @@
 		},
 		"-NgTmEuMs3XJu8TMDs9P": {
 			"boss": false,
-			"challenge": 10,
+			"challenge": 12,
 			"description": "",
 			"name": "Dread Serpent",
-			"naturalArmourClass": 11,
+			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
@@ -2956,8 +2956,8 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTmlFYyunJA4SqDKIX", "-NgTn5gefrbm_w1g4ocL"],
 			"stats": {
 				"charisma": 6,
-				"constitution": 13,
-				"dexterity": 11,
+				"constitution": 14,
+				"dexterity": 16,
 				"intelligence": 1,
 				"strength": 16,
 				"wisdom": 13
@@ -3562,10 +3562,10 @@
 		},
 		"-O9_R3NOnT3i1DLiEKnd": {
 			"boss": false,
-			"challenge": 15,
+			"challenge": 16,
 			"description": "",
 			"equipment": {
-				"body": "-Nm2B54qxLaMzsSjGgWO",
+				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF",
 				"hand2": "-NNwMy0q-XKUT-EUvxFF"
 			},
@@ -3637,11 +3637,11 @@
 		},
 		"-O9_WjPXKCDzDO9idJPs": {
 			"boss": false,
-			"challenge": 16,
+			"challenge": 17,
 			"description": "",
 			"equipment": {
-				"body": "-NgJxsDuymhUWq2V4ew8",
-				"hand1": "-NgO0_TN42Pqrd5WQENu",
+				"body": "-Nm2D2w4xiCJtkX_yQHG",
+				"hand1": "-NMmvhpTgBUrely_XRJ7",
 				"hand2": "-NZMqz87pcH6a1OgycJ9",
 				"head": "-NgJyJCDG-1UEccRymvT"
 			},
@@ -3772,10 +3772,10 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqTywT0RDubTou99c2", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqTywT0RDubTou99c2", "-NhgpxFRvn_sOrij-K0F"],
 			"stats": {
 				"charisma": 6,
-				"constitution": 20,
+				"constitution": 18,
 				"dexterity": 14,
 				"intelligence": 3,
 				"strength": 18,
@@ -3818,7 +3818,7 @@
 		},
 		"-O9_elmg901ZBWKAxrfB": {
 			"boss": false,
-			"challenge": 12,
+			"challenge": 11,
 			"description": "",
 			"equipment": {
 				"hand1": "-NgK0TICJLv1vVaBGrbT"
@@ -3923,7 +3923,7 @@
 		},
 		"-O9dMUJn3WZ9o8aQlNnb": {
 			"boss": false,
-			"challenge": 10,
+			"challenge": 13,
 			"description": "",
 			"name": "Sharkman",
 			"naturalArmourClass": 15,
@@ -3943,7 +3943,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMHqP01D8-tN-uBn5s", "-OAcJx5Xs5BJproNtWrj"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 16,
@@ -4015,7 +4015,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz", "-NgTnzsxBYgTye5lFfkd", "-NhgyQeYWKGMfv97Ojh0"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NKt0W8prsXi7-54nBVz", "-NhgyQeYWKGMfv97Ojh0", "-OAcIecu1k5j83kgrT_R"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 22,
@@ -4110,7 +4110,7 @@
 		},
 		"-O9dTVcQaMf3ZBV8IQ40": {
 			"boss": false,
-			"challenge": 13,
+			"challenge": 12,
 			"description": "",
 			"name": "Piranhasaur",
 			"naturalArmourClass": 11,
@@ -4163,7 +4163,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NgTnzsxBYgTye5lFfkd", "-O9eOvYZWqjCOQtT8moN"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NgTnzsxBYgTye5lFfkd", "-NhgyQeYWKGMfv97Ojh0"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 20,
@@ -6543,10 +6543,24 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 12,
-					"min": 2,
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"difficulty": 18,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "constitution",
+							"type": "stat",
+							"value": -3
+						}
+					],
+					"target": "enemy",
+					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkZtl6i7THVGIaWaQR?alt=media&token=196c494d-dcca-4687-9f79-92d97c171f04",
@@ -6782,18 +6796,16 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "slashing",
-					"max": 6,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "cold",
 					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eOvYZWqjCOQtT8moN?alt=media&token=59011bc9-ed31-49ca-8527-6de3d783ba2c",
@@ -7051,6 +7063,156 @@
 			"level": 2,
 			"maxUses": 1,
 			"name": "Stoke the Flames",
+			"price": 0
+		},
+		"-OAbsKzhDKZyqRhK5IJZ": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "necrotic",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 19,
+					"duration": 4,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -6
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAbsKzhDKZyqRhK5IJZ?alt=media&token=5c3048c0-b15a-4e5e-9179-723d025c206f",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Corrupted Arm",
+			"price": 0
+		},
+		"-OAc58blrXjj8BuSCn6r": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "acid",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "crushing",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 16,
+					"duration": 4,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -8
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAc58blrXjj8BuSCn6r?alt=media&token=4bcc1ca7-a2a9-4b6c-ad2c-17cd91337f6d",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Into the Grinder",
+			"price": 0
+		},
+		"-OAcIecu1k5j83kgrT_R": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "cold",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 22,
+					"duration": 4,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -6
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAcIecu1k5j83kgrT_R?alt=media&token=a6d9fba5-4cf9-49d1-a000-b6bbb3c5b945",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Crab Hammer",
+			"price": 0
+		},
+		"-OAcJx5Xs5BJproNtWrj": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "piercing",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "cold",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 17,
+					"duration": 2,
+					"effect": "bleed",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAcJx5Xs5BJproNtWrj?alt=media&token=f042f62d-bcbb-4606-9a9a-fa979d37b271",
+			"level": 3,
+			"maxUses": 5,
+			"name": "Shark Bite",
 			"price": 0
 		}
 	},

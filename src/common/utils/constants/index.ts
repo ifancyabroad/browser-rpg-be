@@ -61,13 +61,13 @@ export const EXPERIENCE_MAP = new Map([
 	[1, 0],
 	[2, 200],
 	[3, 1000],
-	[4, 4000],
-	[5, 8000],
-	[6, 12500],
-	[7, 18000],
-	[8, 24500],
-	[9, 32000],
-	[10, 40500],
+	[4, 5000],
+	[5, 12000],
+	[6, 20000],
+	[7, 30000],
+	[8, 45000],
+	[9, 60000],
+	[10, 80000],
 ]);
 
 export const SKILL_LEVELS = new Map([
@@ -75,10 +75,10 @@ export const SKILL_LEVELS = new Map([
 	[2, 1],
 	[3, 2],
 	[4, 2],
-	[5, 2],
+	[5, 3],
 	[6, 3],
-	[7, 3],
-	[8, 3],
+	[7, 4],
+	[8, 4],
 	[9, 4],
 	[10, 4],
 ]);
@@ -137,7 +137,7 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Miss, 0],
 ]);
 
-export const ZONES = [Zone.Forest, Zone.Hills, Zone.Desert, Zone.Ocean, Zone.Volcano];
+export const ZONES = [Zone.Forest, Zone.Desert, Zone.Hills, Zone.Ocean, Zone.Volcano];
 
 export const ITEM_WEIGHT_LEVELS = [
 	{
