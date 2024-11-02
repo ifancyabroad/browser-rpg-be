@@ -35,7 +35,7 @@ export async function loginUser(userInput: IUserInput) {
 }
 
 export async function registerUser(userInput: IUserInput) {
-	const { email, password } = userInput;
+	const { username, email, password } = userInput;
 	try {
 		const userCheck = await UserModel.findOne({ email });
 		if (userCheck) {
@@ -45,6 +45,7 @@ export async function registerUser(userInput: IUserInput) {
 		const salt = await bcrypt.genSalt(10);
 		const encryptPass = await bcrypt.hash(password, salt);
 		const userRecord = await UserModel.create({
+			username: username,
 			email: email,
 			password: encryptPass,
 		});
@@ -52,6 +53,7 @@ export async function registerUser(userInput: IUserInput) {
 		// Remove password
 		const payload = {
 			id: userRecord.id,
+			username: userRecord.username,
 			email: userRecord.email,
 		};
 
@@ -62,6 +64,7 @@ export async function registerUser(userInput: IUserInput) {
 	}
 }
 
+// Not implemented as we don't store email in the user model
 export async function requestResetPassword(requestResetPasswordInput: IRequestResetPasswordInput) {
 	const { email } = requestResetPasswordInput;
 	try {

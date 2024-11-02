@@ -3,6 +3,7 @@ import httpStatus from "http-status-codes";
 import HeroModel from "@models/hero.model";
 import { Session, SessionData } from "express-session";
 import { ILeaderboardQuery } from "@common/types/leaderboard";
+import { IUser } from "@common/types/user";
 
 export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, session: Session & Partial<SessionData>) {
 	const { showUserCharacters } = leaderboardQuery;
@@ -14,6 +15,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 		const leaderboard = await HeroModel.find(filter)
 			.sort({ maxBattleLevel: "desc", name: "asc" })
 			.limit(10)
+			.populate<{ user: IUser }>("user", "username")
 			.transform((res) =>
 				res.map((hero) => ({
 					name: hero.name,
@@ -26,7 +28,8 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 					status: hero.status,
 					kills: hero.kills,
 					maxBattleLevel: hero.maxBattleLevel,
-					isUser: hero.user.toString() === user.id.toString(),
+					username: hero.user.username,
+					isUser: hero.user.id === user.id.toString(),
 				})),
 			);
 		if (!leaderboard) {

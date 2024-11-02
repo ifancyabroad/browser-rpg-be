@@ -2,6 +2,7 @@ import { Model, model } from "mongoose";
 import { Schema } from "mongoose";
 
 interface IUser {
+	username: string;
 	email: string;
 	password: string;
 }
@@ -18,6 +19,11 @@ interface IUserModel extends Model<IUser, {}, IUserMethods> {
 
 const userSchema = new Schema<IUser, IUserModel, IUserMethods>(
 	{
+		username: {
+			type: String,
+			unique: true,
+			required: [true, "Please enter a username"],
+		},
 		email: {
 			type: String,
 			lowercase: true,
