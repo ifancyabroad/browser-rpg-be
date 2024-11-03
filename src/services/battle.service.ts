@@ -1,7 +1,7 @@
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
-import { BattleResult, BattleState, State, Status, Zone } from "@common/utils/enums/index";
+import { BattleResult, BattleState, DamageType, State, Status, Zone } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import { IBattleInput, ITreasureInput } from "@common/types/battle";
@@ -9,11 +9,48 @@ import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import { BATTLE_MULTIPLIER_INCREMENT, REWARD_GOLD_MULTIPLIER } from "@common/utils";
+import { IHero } from "@common/types/hero";
 
-function getEnemyData(battleZone: Zone, battleLevel: number) {
+async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
-	const level = Game.getEnemyLevel(battleLevel);
-	const hitPoints = Game.getHitPoints(level);
+	const enemyLevel = Game.getEnemyLevel(battleLevel);
+	const heroes = await HeroModel.aggregate<IHero>([
+		{ $match: { status: Status.Dead, level: enemyLevel } },
+		{ $sample: { size: 1 } },
+	]);
+	const hero = heroes[0];
+
+	if (!hero) {
+		return null;
+	}
+
+	const classData = GameData.getCharacterClassById(hero.characterClassID);
+
+	return {
+		name: `Fallen ${classData.name} ${hero.name}`,
+		image: classData.fallenImage,
+		level: hero.level,
+		challenge: 15,
+		zone: battleZone,
+		boss: isBoss,
+		hero: true,
+		skillIDs: hero.skillIDs,
+		equipmentIDs: hero.equipmentIDs,
+		baseStats: hero.baseStats,
+		baseResistances: hero.baseResistances,
+		baseHitPoints: hero.baseMaxHitPoints,
+		baseMaxHitPoints: hero.baseMaxHitPoints,
+		naturalArmourClass: 0,
+		naturalMinDamage: 1,
+		naturalMaxDamage: 4,
+		naturalDamageType: DamageType.Crushing,
+	};
+}
+
+function getMonsterData(battleZone: Zone, battleLevel: number) {
+	const isBoss = Game.getIsBoss(battleLevel);
+	const enemyLevel = Game.getEnemyLevel(battleLevel);
+	const hitPoints = Game.getHitPoints(enemyLevel);
 	const enemyData = GameData.getEnemy(battleZone, isBoss);
 	const skills = enemyData.skills.map((id) => ({
 		id,
@@ -24,10 +61,11 @@ function getEnemyData(battleZone: Zone, battleLevel: number) {
 	return {
 		name: enemyData.name,
 		image: enemyData.portrait,
-		level,
+		level: enemyLevel,
 		challenge: enemyData.challenge,
 		zone: enemyData.zone,
 		boss: isBoss,
+		hero: false,
 		skillIDs: skills,
 		equipmentIDs: equipment,
 		baseStats: enemyData.stats,
@@ -39,6 +77,26 @@ function getEnemyData(battleZone: Zone, battleLevel: number) {
 		naturalMaxDamage: enemyData.naturalMaxDamage,
 		naturalDamageType: enemyData.naturalDamageType,
 	};
+}
+
+async function getEnemyData(battleZone: Zone, battleLevel: number) {
+	const isBoss = Game.getIsBoss(battleLevel);
+
+	if (isBoss) {
+		return getMonsterData(battleZone, battleLevel);
+	}
+
+	const roll = Game.d20;
+	if (roll > 1) {
+		return getMonsterData(battleZone, battleLevel);
+	}
+
+	const hero = await getFallenHeroData(battleZone, battleLevel);
+	if (hero) {
+		return hero;
+	}
+
+	return getMonsterData(battleZone, battleLevel);
 }
 
 export async function startBattle(session: Session & Partial<SessionData>) {
@@ -62,7 +120,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 
 		const level = characterRecord.maxBattleLevel + 1;
 		const zone = Game.getZone(level);
-		const enemyData = getEnemyData(zone, level);
+		const enemyData = await getEnemyData(zone, level);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -111,7 +169,7 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		const level = battleRecord.level + 1;
 		const multiplier = battleRecord.multiplier + BATTLE_MULTIPLIER_INCREMENT;
 		const zone = Game.getZone(level);
-		const enemyData = getEnemyData(zone, level);
+		const enemyData = await getEnemyData(zone, level);
 
 		const enemy = await EnemyModel.create(enemyData);
 

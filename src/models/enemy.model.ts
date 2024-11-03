@@ -31,6 +31,10 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			type: Boolean,
 			default: false,
 		},
+		hero: {
+			type: Boolean,
+			default: false,
+		},
 		naturalArmourClass: {
 			type: Number,
 			min: 0,

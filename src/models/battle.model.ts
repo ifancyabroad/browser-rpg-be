@@ -156,6 +156,9 @@ battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enem
 	if (enemy.boss) {
 		this.treasureItemIDs = GameData.getWeightedItems(hero.characterClassID, 2, enemy.level);
 	}
+	if (enemy.hero) {
+		this.treasureItemIDs = GameData.getWeightedItems(hero.characterClassID, 2, 0);
+	}
 });
 
 battleSchema.index({ hero: 1, state: 1 });

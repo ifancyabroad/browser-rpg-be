@@ -2378,6 +2378,7 @@
 				"body": "-Nc44lyRjk-mHNox3H_P",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2FfallenImage?alt=media&token=1d836bd4-8d8c-4233-9774-8155ea7a5401",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Ficon?alt=media&token=7bca006c-9465-45e4-a6dd-235d2344577e",
 			"name": "Fighter",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=ad75076d-9ab8-4336-9705-84c540f0d90c",
@@ -2391,7 +2392,7 @@
 				"strength": 18,
 				"wisdom": 9
 			},
-			"weaponTypes": ["sword", "axe", "club", "hammer", "mace"]
+			"weaponTypes": ["sword", "axe", "club", "hammer", "mace", "spear"]
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
 			"armourTypes": ["light"],
@@ -2400,6 +2401,7 @@
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2FfallenImage?alt=media&token=a8376f9d-7b34-485f-9494-65896d52aa49",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=6f6307ca-4459-4d4e-916f-a428df04a721",
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=5287ee0d-43a6-48ed-bf2e-779ae928e377",
@@ -2422,11 +2424,12 @@
 				"body": "-Nm2HibRx3V8P1isPlRf",
 				"hand1": "-Nc46CPWJz2atC_uII9i"
 			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2FfallenImage?alt=media&token=033d19d1-bd33-418e-8c86-b7f31374ea12",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Ficon?alt=media&token=0db78c8a-5bc9-473c-90e8-0c93954bff81",
 			"name": "Mage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=665df70f-c085-4ba3-9552-7e5d8e329c0c",
 			"skillClasses": ["mage"],
-			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh50tlZXmwsJcskPE8"],
 			"stats": {
 				"charisma": 12,
 				"constitution": 14,
@@ -4889,7 +4892,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3vvlL3y_va4dkw6_B?alt=media&token=93233ba3-b47e-48c4-9978-1bc145f4a2cb",
 			"level": 1,
-			"maxUses": 7,
+			"maxUses": 12,
 			"name": "Flame Arrow",
 			"price": 60
 		},
@@ -4907,7 +4910,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3xGd_-Cawo2Zo0ipP?alt=media&token=4890dfe4-70f3-459d-b6f1-bce3c3ab7daf",
 			"level": 1,
-			"maxUses": 7,
+			"maxUses": 12,
 			"name": "Frost Arrow",
 			"price": 120
 		},
@@ -5043,7 +5046,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3zPER2-voArWHwNy9?alt=media&token=6edea4db-a6d1-4951-8d0a-a67acfb4e788",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Lighting Bolt",
 			"price": 280
 		},
@@ -5061,7 +5064,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc4-UVARP8jFmsiuXC9?alt=media&token=07349932-ea92-4da5-abf5-892cb4b16ba4",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Fireball",
 			"price": 1000
 		},
@@ -5135,7 +5138,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc41TbX58HmCh6nednT?alt=media&token=a93e95c5-514e-4268-b3b2-db3268545b35",
 			"level": 4,
-			"maxUses": 1,
+			"maxUses": 2,
 			"name": "Dragon Breath",
 			"price": 1550
 		},
@@ -6178,7 +6181,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh50tlZXmwsJcskPE8?alt=media&token=f0c44bf4-c4c5-4cf2-b8d5-30203a07ecc6",
 			"level": 1,
-			"maxUses": 7,
+			"maxUses": 12,
 			"name": "Sparks",
 			"price": 0
 		},

@@ -11,7 +11,7 @@ import {
 } from "@common/utils/enums/index";
 
 export const GOLD_MULTIPLIER = 4;
-export const REWARD_GOLD_MULTIPLIER = 20;
+export const REWARD_GOLD_MULTIPLIER = 10;
 export const EXPERIENCE_MULTIPLIER = 20;
 export const BATTLE_MULTIPLIER_INCREMENT = 0.25;
 
@@ -141,10 +141,10 @@ export const ZONES = [Zone.Forest, Zone.Desert, Zone.Hills, Zone.Ocean, Zone.Vol
 
 export const ITEM_WEIGHT_LEVELS = [
 	{
-		[ItemRarity.Common]: 0.55,
+		[ItemRarity.Common]: 0.59,
 		[ItemRarity.Uncommon]: 0.3,
 		[ItemRarity.Rare]: 0.1,
-		[ItemRarity.Epic]: 0.05,
+		[ItemRarity.Epic]: 0.01,
 	},
 	{
 		[ItemRarity.Common]: 0.5,
@@ -154,9 +154,9 @@ export const ITEM_WEIGHT_LEVELS = [
 	},
 	{
 		[ItemRarity.Common]: 0.4,
-		[ItemRarity.Uncommon]: 0.35,
+		[ItemRarity.Uncommon]: 0.4,
 		[ItemRarity.Rare]: 0.15,
-		[ItemRarity.Epic]: 0.1,
+		[ItemRarity.Epic]: 0.05,
 	},
 	{
 		[ItemRarity.Common]: 0.3,
@@ -167,7 +167,7 @@ export const ITEM_WEIGHT_LEVELS = [
 	{
 		[ItemRarity.Common]: 0.3,
 		[ItemRarity.Uncommon]: 0.35,
-		[ItemRarity.Rare]: 0.2,
-		[ItemRarity.Epic]: 0.15,
+		[ItemRarity.Rare]: 0.25,
+		[ItemRarity.Epic]: 0.1,
 	},
 ];

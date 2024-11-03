@@ -416,7 +416,7 @@ characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, e
 	return {
 		target: effect.target,
 		type: DamageType.Crushing,
-		value,
+		value: Math.max(value, 0),
 		hitType,
 	};
 });
@@ -426,8 +426,9 @@ characterSchema.method(
 	function getWeaponDamage({ effect, effectTarget }: IEffectData, weapon: IWeaponDataWithID) {
 		const weaponEffect = effect as IWeaponDamageEffectData;
 		const damage = Game.dx(weapon.min, weapon.max);
-		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
-		const modifier = Game.getModifier(this.stats[stat]);
+		const isMainhand = this.equipmentIDs.hand1 === weapon.id;
+		const stat = isMainhand ? Game.getWeaponStat(weapon.weaponType as WeaponType) : null;
+		const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
 		const hitType = this.getHitType(effectTarget.armourClass);
 		const hitMultiplier = Game.getHitMultiplier(hitType);
@@ -445,7 +446,7 @@ characterSchema.method(
 		return {
 			target: effect.target,
 			type: weapon.damageType,
-			value,
+			value: Math.max(value, 0),
 			hitType,
 		};
 	},
@@ -472,7 +473,7 @@ characterSchema.method("getDamage", function getDamage({ effect, effectTarget, s
 	return {
 		target: effect.target,
 		type: damageEffect.damageType,
-		value,
+		value: Math.max(value, 0),
 		hitType: HitType.Hit,
 	};
 });
@@ -482,9 +483,10 @@ characterSchema.method("getHeal", function getHeal({ effect, source }: IEffectDa
 	const heal = Game.dx(healEffect.min, healEffect.max);
 	const stat = source.skillClass ? Game.getDamageStat(source.skillClass) : null;
 	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
+	const value = heal + modifier;
 	return {
 		target: healEffect.target,
-		value: heal + modifier,
+		value: Math.max(value, 0),
 	};
 });
 
@@ -750,7 +752,8 @@ characterSchema.method("tickPoison", function tickPoison(damageBonus: number) {
 	if (this.isPoisoned) {
 		const bonusMultiplier = damageBonus / 100 + 1;
 		const resistance = this.getResistance(DamageType.Poison) / 100;
-		const damage = Math.round((this.maxHitPoints / 8) * bonusMultiplier * (1 - resistance));
+		const value = Math.round((this.maxHitPoints / 8) * bonusMultiplier * (1 - resistance));
+		const damage = Math.max(value, 0);
 		this.setHitPoints(this.baseHitPoints - damage);
 	}
 });

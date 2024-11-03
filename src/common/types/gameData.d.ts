@@ -39,6 +39,7 @@ export interface IClassData {
 	description: string;
 	name: string;
 	portrait: string;
+	fallenImage: string;
 	icon: string;
 	skillClasses: SkillClass[];
 	armourTypes: ArmourType[];
