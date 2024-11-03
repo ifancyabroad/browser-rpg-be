@@ -17,7 +17,7 @@ import { model } from "mongoose";
 import { skillSchema } from "./skill.model";
 import { GameData } from "@common/utils/game/GameData";
 import { ICharacter, ICharacterMethods, ICharacterModel, IEffectData } from "@common/types/character";
-import { mapToArray, MAX_POTIONS } from "@common/utils";
+import { MAX_POTIONS } from "@common/utils";
 import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
@@ -273,7 +273,9 @@ characterSchema.virtual("equipment").get(function () {
 });
 
 characterSchema.virtual("equipmentAsArray").get(function () {
-	return mapToArray(this.equipment);
+	return Object.keys(this.equipment)
+		.map((id) => this.equipment[id as keyof typeof this.equipment])
+		.filter((item) => item);
 });
 
 characterSchema.virtual("weaponsAsArray").get(function () {
@@ -319,13 +321,13 @@ characterSchema.virtual("isBleeding").get(function () {
 });
 
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
-	return mapToArray(this.equipmentAsArray)
+	return this.equipmentAsArray
 		.map((item) => "armourClass" in item && item.armourClass)
 		.reduce((n, value) => n + value, 0);
 });
 
 characterSchema.method("getEquipmentBonus", function getEquipmentBonus(type: PropertyType, name: string) {
-	return mapToArray(this.equipmentAsArray)
+	return this.equipmentAsArray
 		.flatMap((item) => ("properties" in item ? item.properties : []))
 		.filter((property) => property.type === type && property.name === name)
 		.reduce((n, { value }) => n + value, 0);
