@@ -628,35 +628,41 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		}
 	});
 
-	for (let i = 0; i < action.skill.weaponDamage.length; i++) {
-		this.weaponsAsArray.forEach((weapon) => {
-			const weaponEffects: IActionWeaponEffect = {
-				name: weapon.name,
-				damage: new Types.DocumentArray<IDamageEffect>([]),
-				status: new Types.DocumentArray<IStatusEffect>([]),
-				auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
-			};
+	for (const effects of action.skill.weaponDamage) {
+		effects.forEach((effect) => {
+			if (effect.hitType === HitType.Miss) {
+				return;
+			}
 
-			const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
+			this.weaponsAsArray.forEach((weapon) => {
+				const weaponEffects: IActionWeaponEffect = {
+					name: weapon.name,
+					damage: new Types.DocumentArray<IDamageEffect>([]),
+					status: new Types.DocumentArray<IStatusEffect>([]),
+					auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
+				};
 
-			weapon.effects?.forEach((effect) => {
-				const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
-				const effectData = { effect, effectTarget, source };
+				const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
 
-				switch (effect.type) {
-					case EffectType.Damage:
-						weaponEffects.damage.push(this.getDamage(effectData));
-						break;
-					case EffectType.Status:
-						weaponEffects.status.push(this.getStatus(effectData));
-						break;
-					case EffectType.Auxiliary:
-						weaponEffects.auxiliary.push(this.getAuxiliary(effectData));
-						break;
-				}
+				weapon.effects?.forEach((effect) => {
+					const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+					const effectData = { effect, effectTarget, source };
+
+					switch (effect.type) {
+						case EffectType.Damage:
+							weaponEffects.damage.push(this.getDamage(effectData));
+							break;
+						case EffectType.Status:
+							weaponEffects.status.push(this.getStatus(effectData));
+							break;
+						case EffectType.Auxiliary:
+							weaponEffects.auxiliary.push(this.getAuxiliary(effectData));
+							break;
+					}
+				});
+
+				action.weapon.push(weaponEffects);
 			});
-
-			action.weapon.push(weaponEffects);
 		});
 	}
 

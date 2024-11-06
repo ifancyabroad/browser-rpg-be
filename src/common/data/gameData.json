@@ -2821,7 +2821,7 @@
 			"name": "Thief",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=5287ee0d-43a6-48ed-bf2e-779ae928e377",
 			"skillClasses": ["rogue"],
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZq_C6vPLiGUFkYHy3u"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqbgWmfMqnnjnXn-Hp"],
 			"stats": {
 				"charisma": 15,
 				"constitution": 14,
@@ -3666,7 +3666,7 @@
 			"challenge": 19,
 			"description": "",
 			"name": "Wraith Lord Malakar",
-			"naturalArmourClass": 13,
+			"naturalArmourClass": 16,
 			"naturalDamageType": "necrotic",
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 3,
@@ -3773,13 +3773,13 @@
 			"challenge": 15,
 			"description": "",
 			"name": "Fire Elemental",
-			"naturalArmourClass": 12,
+			"naturalArmourClass": 14,
 			"naturalDamageType": "fire",
 			"naturalMaxDamage": 7,
 			"naturalMinDamage": 2,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
 			"resistances": {
-				"acid": 50,
+				"acid": 0,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
@@ -3794,11 +3794,11 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 7,
-				"constitution": 16,
-				"dexterity": 17,
-				"intelligence": 6,
-				"strength": 10,
-				"wisdom": 10
+				"constitution": 18,
+				"dexterity": 19,
+				"intelligence": 8,
+				"strength": 12,
+				"wisdom": 12
 			},
 			"zone": "volcano"
 		},
@@ -4140,7 +4140,7 @@
 			"challenge": 19,
 			"description": "",
 			"name": "Avatar of Rit Chi",
-			"naturalArmourClass": 17,
+			"naturalArmourClass": 15,
 			"naturalDamageType": "slashing",
 			"naturalMaxDamage": 13,
 			"naturalMinDamage": 3,
@@ -4638,7 +4638,7 @@
 				},
 				{
 					"damageType": "slashing",
-					"max": 4,
+					"max": 6,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
@@ -4646,7 +4646,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJLRtY1B4JdDuOGq2sd?alt=media&token=23f9149d-b849-48df-a3b7-bbbfe6bdc20a",
 			"level": 1,
-			"maxUses": 4,
+			"maxUses": 5,
 			"name": "Cleave",
 			"price": 20,
 			"target": "enemy"
@@ -4657,7 +4657,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 5,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "constitution",
@@ -4674,9 +4674,9 @@
 					"type": "status"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJPxBkEam2oJZtHIBgY?alt=media&token=ec4c5f5f-5144-49cf-90fe-e2575309b0bf",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NJPxBkEam2oJZtHIBgY?alt=media&token=b7cdb6a8-bff3-4b1a-bac6-5ef4d8717f27",
 			"level": 1,
-			"maxUses": 2,
+			"maxUses": 8,
 			"name": "Stand Ground",
 			"price": 70,
 			"target": "enemy"
@@ -4686,8 +4686,8 @@
 			"description": "Strike the enemy to pierce the skin and cause them to bleed.",
 			"effects": [
 				{
-					"difficulty": 12,
-					"duration": 3,
+					"difficulty": 16,
+					"duration": 2,
 					"effect": "bleed",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -4722,7 +4722,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 18,
-					"duration": 5,
+					"duration": 2,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -4754,7 +4754,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 22,
-					"duration": 3,
+					"duration": 2,
 					"effect": "bleed",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -4763,7 +4763,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NKt5eqAEIJYZFNbvK8f?alt=media&token=f17cf62c-3d35-4604-989c-a00f557e328f",
 			"level": 3,
-			"maxUses": 1,
+			"maxUses": 2,
 			"name": "Slit Throat",
 			"price": 1300,
 			"target": "enemy"
@@ -4796,28 +4796,35 @@
 		},
 		"-NZMIV5OGOr4bChwrNEE": {
 			"class": "warrior",
-			"description": "Force the enemy back, lowering their dexterity.",
+			"description": "Break the opponents armour with a powerful blow.",
 			"effects": [
 				{
 					"accuracy": 100,
-					"difficulty": 14,
-					"duration": 5,
-					"modifier": "dexterity",
+					"difficulty": 17,
+					"duration": 3,
+					"modifier": "strength",
 					"properties": [
 						{
-							"name": "dexterity",
-							"type": "stat",
+							"name": "armourClass",
+							"type": "auxiliaryStat",
 							"value": -4
 						}
 					],
 					"target": "enemy",
 					"type": "status"
+				},
+				{
+					"damageType": "crushing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMIV5OGOr4bChwrNEE?alt=media&token=238644e4-a4dd-4615-92da-23a215207e37",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMIV5OGOr4bChwrNEE?alt=media&token=34d14684-6c64-4822-b3e6-36161dedd07a",
 			"level": 1,
-			"maxUses": 5,
-			"name": "Brutal Advance",
+			"maxUses": 8,
+			"name": "Armour Break",
 			"price": 160,
 			"target": "enemy"
 		},
@@ -4839,7 +4846,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -5
+							"value": -2
 						}
 					],
 					"target": "enemy",
@@ -4848,7 +4855,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZMJ9LGQM22pDRl_EYc?alt=media&token=dd67132b-eb38-458e-bf40-54b90c7c15c1",
 			"level": 3,
-			"maxUses": 1,
+			"maxUses": 3,
 			"name": "Lunging Strike",
 			"price": 420,
 			"target": "enemy"
@@ -4869,7 +4876,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -6
+							"value": -5
 						}
 					],
 					"target": "self",
@@ -4914,7 +4921,7 @@
 			"effects": [
 				{
 					"accuracy": 75,
-					"difficulty": 16,
+					"difficulty": 18,
 					"duration": 3,
 					"effect": "disarm",
 					"modifier": "strength",
@@ -4924,7 +4931,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqUxJ5hBOkYc_e-wuG?alt=media&token=0a58571b-84fa-4b18-9ae1-ef62ca3bdd2d",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Disarm",
 			"price": 400
 		},
@@ -4934,17 +4941,17 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 3,
+					"duration": 2,
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 8
+							"value": 5
 						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": 8
+							"value": 5
 						},
 						{
 							"name": "armourClass",
@@ -4958,7 +4965,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqWi-RbH2vwtAawttY?alt=media&token=b906457e-c916-43b2-957d-036855d70eb9",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Dancing Defense",
 			"price": 1090
 		},
@@ -4968,7 +4975,7 @@
 			"effects": [
 				{
 					"accuracy": 50,
-					"difficulty": 24,
+					"difficulty": 22,
 					"duration": 5,
 					"modifier": "constitution",
 					"properties": [
@@ -5047,7 +5054,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_C6vPLiGUFkYHy3u?alt=media&token=95e81572-3538-4686-bde3-70eaa9eeb15d",
 			"level": 1,
-			"maxUses": 4,
+			"maxUses": 8,
 			"name": "Quick Fingers",
 			"price": 60
 		},
@@ -5071,7 +5078,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_nhusxIdvv9LFwJZ?alt=media&token=aa5812ba-62fc-4ec5-a1cc-de61023e265c",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 8,
 			"name": "Acid Coating",
 			"price": 260
 		},
@@ -5081,21 +5088,21 @@
 			"effects": [
 				{
 					"damageType": "acid",
-					"max": 6,
+					"max": 8,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"accuracy": 50,
-					"difficulty": 15,
+					"difficulty": 17,
 					"duration": 3,
 					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -2
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -5103,8 +5110,8 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqaJ9QZYIpe6P1iDYy?alt=media&token=a61f4af5-9abf-4e8c-b41c-2cabd76120a1",
-			"level": 1,
-			"maxUses": 4,
+			"level": 2,
+			"maxUses": 6,
 			"name": "Acid Burn",
 			"price": 120
 		},
@@ -5130,8 +5137,8 @@
 			"effects": [
 				{
 					"accuracy": 75,
-					"difficulty": 15,
-					"duration": 5,
+					"difficulty": 19,
+					"duration": 1,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -5142,6 +5149,11 @@
 					],
 					"target": "enemy",
 					"type": "status"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqb8JkDlplkchg0htc?alt=media&token=d137cfde-7d00-42aa-b967-c97844037121",
@@ -5156,8 +5168,8 @@
 			"effects": [
 				{
 					"damageType": "poison",
-					"max": 12,
-					"min": 2,
+					"max": 8,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -5172,40 +5184,34 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqbgWmfMqnnjnXn-Hp?alt=media&token=7b653a63-5cb5-41f1-aafe-45beb0b53579",
-			"level": 3,
-			"maxUses": 4,
+			"level": 1,
+			"maxUses": 6,
 			"name": "Poison Bomb",
 			"price": 760
 		},
 		"-NZqc6Kl781JP6QdXB-m": {
 			"class": "rogue",
-			"description": "Corner the opponent reducing their defenses.",
+			"description": "Throw a bomb of corrosive acid at the enemy.",
 			"effects": [
 				{
-					"accuracy": 100,
-					"difficulty": 20,
-					"duration": 6,
-					"modifier": "dexterity",
-					"properties": [
-						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
-							"value": -4
-						},
-						{
-							"name": "dexterity",
-							"type": "stat",
-							"value": -4
-						}
-					],
+					"damageType": "fire",
+					"max": 18,
+					"min": 3,
 					"target": "enemy",
-					"type": "status"
+					"type": "damage"
+				},
+				{
+					"damageType": "acid",
+					"max": 18,
+					"min": 3,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqc6Kl781JP6QdXB-m?alt=media&token=884dd2bc-52ae-478c-a715-59e7226b817c",
-			"level": 3,
-			"maxUses": 4,
-			"name": "Press The Advantage",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqc6Kl781JP6QdXB-m?alt=media&token=f946c220-9eb8-446a-be8b-62798aec2e29",
+			"level": 4,
+			"maxUses": 2,
+			"name": "Acid Bomb",
 			"price": 600
 		},
 		"-NZqcxgP5ITgFn-T8xj6": {
@@ -5269,7 +5275,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdUiFhyxCULAsWYJl?alt=media&token=ab345aab-5ea3-49ef-81e8-ed3481946db6",
 			"level": 4,
-			"maxUses": 4,
+			"maxUses": 5,
 			"name": "Cloak Of Shadows",
 			"price": 1300
 		},
@@ -5279,7 +5285,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"difficulty": 18,
+					"difficulty": 19,
 					"duration": 3,
 					"effect": "stun",
 					"modifier": "dexterity",
@@ -5694,7 +5700,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTQlY-RMpBaNkunfb7?alt=media&token=cdc6656e-ac5c-4366-a65f-6c4025c17ac0",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 4,
 			"name": "Cure Minor Wounds",
 			"price": 0
 		},
@@ -5703,12 +5709,22 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 8,
 					"properties": [
 						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
-							"value": 4
+							"name": "slashing",
+							"type": "resistance",
+							"value": 20
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": 20
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": 20
 						}
 					],
 					"target": "self",
@@ -5717,7 +5733,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRA6CoAdH4tX5ht_3?alt=media&token=47263956-7149-46fd-9133-8a7827a6b68c",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 8,
 			"name": "Power Word: Shield",
 			"price": 0
 		},
@@ -5735,7 +5751,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRbewhOgSp1zw1Uu7?alt=media&token=dca7c698-b44a-4c75-932c-b2291934e4cf",
 			"level": 1,
-			"maxUses": 4,
+			"maxUses": 8,
 			"name": "Holy Bolt",
 			"price": 0
 		},
@@ -5752,7 +5768,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRk0hkXBsKEHMEWD2?alt=media&token=5601f4d5-0951-42a2-b8bc-b41b17629772",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 3,
 			"name": "Cure Medium Wounds",
 			"price": 0
 		},
@@ -5761,7 +5777,7 @@
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 15,
+					"difficulty": 17,
 					"duration": 2,
 					"effect": "stun",
 					"modifier": "wisdom",
@@ -5780,11 +5796,11 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 10,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "radiant",
-							"type": "resistance",
+							"type": "damage",
 							"value": 50
 						},
 						{
@@ -5799,7 +5815,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUH0cjt_Ek0BEIgUh?alt=media&token=ac5bf6ce-f097-45f5-b974-ee6bb37de865",
 			"level": 2,
-			"maxUses": 6,
+			"maxUses": 8,
 			"name": "Prayer",
 			"price": 0
 		},
@@ -5816,7 +5832,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUQdooGB1fZa6Q-pv?alt=media&token=98005b9d-49d9-4a20-a366-91a1d99852c5",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Cure Major Wounds",
 			"price": 0
 		},
@@ -5839,7 +5855,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUsnh4THCA3EXJQn2?alt=media&token=182ef9a7-eb29-4876-b743-e017a3694bda",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 8,
 			"name": "Power Word: Fortitude",
 			"price": 0
 		},
@@ -5897,7 +5913,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTXdELX-HExDeZ8y6L?alt=media&token=b51b7b94-f31d-4c63-8282-a5c8adc911a1",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 6,
 			"name": "Divine Intervention",
 			"price": 0
 		},
@@ -5914,7 +5930,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTXoshOPa5Fo9AGlh2?alt=media&token=10c7904c-62ec-42d7-bb36-97ba9f9007cd",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 1,
 			"name": "Cure Critical Wounds",
 			"price": 0
 		},
@@ -5992,7 +6008,7 @@
 			"effects": [
 				{
 					"difficulty": 18,
-					"duration": 5,
+					"duration": 4,
 					"modifier": "constitution",
 					"properties": [
 						{
@@ -6017,7 +6033,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTbtbVc3qk03XQO0GP?alt=media&token=d7bd191c-11cc-486a-bec4-aba3d27306fb",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 4,
 			"name": "Drain Energy",
 			"price": 0
 		},
@@ -6130,7 +6146,7 @@
 			"description": "Amplify your strength with a resounding Battle Cry.",
 			"effects": [
 				{
-					"duration": 6,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "strength",
@@ -6144,7 +6160,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhggr8CtVaNEZYVBilF?alt=media&token=a574eb3a-0e7e-4582-ac8b-a8fa654ff4a0",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 8,
 			"name": "Battle Cry",
 			"price": 0
 		},
@@ -6153,10 +6169,10 @@
 			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 6,
 					"properties": [
 						{
-							"name": "critChance",
+							"name": "hitChance",
 							"type": "auxiliaryStat",
 							"value": 4
 						}
@@ -6167,7 +6183,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgpG6pLRAqTW1AU0Eg?alt=media&token=049464de-0935-4c27-9f76-c3be3474a194",
 			"level": 2,
-			"maxUses": 5,
+			"maxUses": 6,
 			"name": "Focus Energy",
 			"price": 0
 		},
@@ -6183,7 +6199,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgpxFRvn_sOrij-K0F?alt=media&token=92063fcb-0f0c-4f6c-aec9-4c6d205bc431",
 			"level": 2,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Heavy Strike",
 			"price": 0
 		},
@@ -6192,7 +6208,7 @@
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
-					"difficulty": 17,
+					"difficulty": 20,
 					"duration": 2,
 					"effect": "stun",
 					"modifier": "constitution",
@@ -6211,12 +6227,12 @@
 			"description": "Stand resolute with Shield Wall, shielding yourself from harm and repelling enemy assaults with unwavering defense.",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 5
+							"value": 3
 						}
 					],
 					"target": "self",
@@ -6225,7 +6241,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgx8gnKSMnxB7h9F60?alt=media&token=eb3b73bb-3dd1-4891-9ce8-94920b18ee74",
 			"level": 2,
-			"maxUses": 2,
+			"maxUses": 5,
 			"name": "Shield Wall",
 			"price": 0
 		},
@@ -6236,7 +6252,7 @@
 				{
 					"difficulty": 20,
 					"duration": 4,
-					"modifier": "constitution",
+					"modifier": "wisdom",
 					"properties": [
 						{
 							"name": "constitution",
@@ -6276,13 +6292,13 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgyQeYWKGMfv97Ojh0?alt=media&token=07293fa5-d503-491b-85a6-f683d04279bf",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Mighty Blow",
 			"price": 0
 		},
 		"-Nhgyxj9aTH40MK_MCPF": {
 			"class": "rogue",
-			"description": "Inflict lethal venom with Poison Jab, debilitating foes and gradually sapping their strength in the midst of battle.",
+			"description": "Inflict lethal venom with Poison Strike, debilitating foes and gradually sapping their strength in the midst of battle.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -6290,18 +6306,25 @@
 					"type": "weaponDamage"
 				},
 				{
-					"difficulty": 16,
+					"difficulty": 19,
 					"duration": 6,
 					"effect": "poison",
 					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"damageType": "poison",
+					"max": 8,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgyxj9aTH40MK_MCPF?alt=media&token=ed4f5378-03ef-4011-9a54-01da6bb758f3",
-			"level": 1,
-			"maxUses": 5,
-			"name": "Poison Jab",
+			"level": 3,
+			"maxUses": 7,
+			"name": "Poison Strike",
 			"price": 0
 		},
 		"-NhgzTUnXwX4Iw8JGJev": {
@@ -6309,8 +6332,8 @@
 			"description": "Inflict debilitating injury with Cripple, weakening enemies and hindering their movements in the throes of battle.",
 			"effects": [
 				{
-					"difficulty": 15,
-					"duration": 8,
+					"difficulty": 19,
+					"duration": 6,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -6325,7 +6348,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgzTUnXwX4Iw8JGJev?alt=media&token=0e42a7f5-dee5-4f7a-8366-3563b162943f",
 			"level": 1,
-			"maxUses": 5,
+			"maxUses": 6,
 			"name": "Cripple",
 			"price": 0
 		},
@@ -6334,7 +6357,7 @@
 			"description": "Master nimble footwork with Evasion, dodging attacks and maneuvering through the chaos of battle unscathed and agile.",
 			"effects": [
 				{
-					"duration": 2,
+					"duration": 3,
 					"properties": [
 						{
 							"name": "armourClass",
@@ -6348,7 +6371,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh-SuuVlmZIYSG87sp?alt=media&token=50aaef62-ac5c-4a23-8360-e7e26095a333",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Evasion",
 			"price": 0
 		},
@@ -6364,8 +6387,8 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 10,
-					"duration": 1,
+					"difficulty": 17,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -6396,8 +6419,8 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh0aZeozWw6_HWDH23?alt=media&token=7b30ca2b-4a56-43db-a5b2-ce88c87c7fa2",
-			"level": 2,
-			"maxUses": 5,
+			"level": 1,
+			"maxUses": 7,
 			"name": "Acid Strike",
 			"price": 0
 		},
@@ -6406,7 +6429,7 @@
 			"description": "Inflict fatal venom with Deadly Poison, sowing insidious decay and weakening adversaries.",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 8,
 					"properties": [
 						{
 							"name": "poison",
@@ -6420,7 +6443,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh16M9sVTTOKw5g6rO?alt=media&token=c934a0ad-5942-45c9-ada7-02516b04aa9b",
 			"level": 2,
-			"maxUses": 2,
+			"maxUses": 4,
 			"name": "Enhance Poison",
 			"price": 0
 		},
@@ -6436,7 +6459,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 12,
+					"difficulty": 16,
 					"duration": 3,
 					"effect": "disarm",
 					"modifier": "constitution",
@@ -6454,7 +6477,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh1jOIoeiE7yvBATmT?alt=media&token=dbbe9c2e-7fc1-497e-87c2-471bb5d948df",
 			"level": 4,
-			"maxUses": 4,
+			"maxUses": 3,
 			"name": "Maim",
 			"price": 0
 		},
@@ -6463,24 +6486,14 @@
 			"description": "Exploit weaknesses to maximize the impact of attacks.",
 			"effects": [
 				{
-					"difficulty": 18,
-					"duration": 5,
+					"difficulty": 19,
+					"duration": 3,
 					"modifier": "constitution",
 					"properties": [
 						{
-							"name": "slashing",
-							"type": "resistance",
-							"value": -75
-						},
-						{
-							"name": "crushing",
-							"type": "resistance",
-							"value": -75
-						},
-						{
-							"name": "piercing",
-							"type": "resistance",
-							"value": -75
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -8
 						}
 					],
 					"target": "enemy",
@@ -6488,8 +6501,8 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh2aa9hENKmzll2Md-?alt=media&token=811b82c0-59e5-4f46-afbd-0993015d3472",
-			"level": 4,
-			"maxUses": 2,
+			"level": 3,
+			"maxUses": 4,
 			"name": "Expose Weakness",
 			"price": 0
 		},
@@ -6750,19 +6763,9 @@
 					"duration": 8,
 					"properties": [
 						{
-							"name": "slashing",
-							"type": "damage",
-							"value": 25
-						},
-						{
-							"name": "crushing",
-							"type": "damage",
-							"value": 25
-						},
-						{
-							"name": "piercing",
-							"type": "damage",
-							"value": 25
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -6771,7 +6774,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkFjgyu0pTYRw3DVD-?alt=media&token=a19ceedb-9e70-46fb-a0b1-34a68b122a7d",
 			"level": 1,
-			"maxUses": 6,
+			"maxUses": 8,
 			"name": "Bless",
 			"price": 0
 		},
@@ -6780,24 +6783,14 @@
 			"description": "Invoke a malignant hex, plaguing adversaries with misfortune.",
 			"effects": [
 				{
-					"difficulty": 18,
+					"difficulty": 17,
 					"duration": 8,
 					"modifier": "wisdom",
 					"properties": [
 						{
-							"name": "slashing",
-							"type": "damage",
-							"value": -25
-						},
-						{
-							"name": "crushing",
-							"type": "damage",
-							"value": -25
-						},
-						{
-							"name": "piercing",
-							"type": "damage",
-							"value": -25
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -6806,7 +6799,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkGRRiaTZa0Q2JeWOd?alt=media&token=3cc333c5-9195-4969-9a08-eb4ab974bc34",
 			"level": 1,
-			"maxUses": 6,
+			"maxUses": 8,
 			"name": "Curse",
 			"price": 0
 		},
@@ -6829,7 +6822,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkOF38JibaTuWhFGg_?alt=media&token=18908b64-c7c2-4581-b0b6-04b48c601aaf",
 			"level": 2,
-			"maxUses": 4,
+			"maxUses": 6,
 			"name": "Divine Strength",
 			"price": 0
 		},
@@ -6852,7 +6845,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkP4BW6tSXQG6EoCJq?alt=media&token=1cc90227-b3e3-4e44-bd0c-c35455a2cc97",
 			"level": 2,
-			"maxUses": 8,
+			"maxUses": 7,
 			"name": "Holy Strike",
 			"price": 0
 		},
@@ -6910,7 +6903,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkR-olGXWxxR9Poqo3?alt=media&token=2aa203c7-fff6-4998-b777-bd847ae0773e",
 			"level": 3,
-			"maxUses": 4,
+			"maxUses": 6,
 			"name": "Divine Protection",
 			"price": 0
 		},
@@ -6920,7 +6913,7 @@
 			"effects": [
 				{
 					"difficulty": 22,
-					"duration": 4,
+					"duration": 3,
 					"effect": "stun",
 					"modifier": "wisdom",
 					"target": "enemy",
