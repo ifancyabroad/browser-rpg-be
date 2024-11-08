@@ -6,6 +6,7 @@ export interface IDamageEffect {
 	value: number;
 	hitType: HitType;
 	target: Target;
+	weapon?: string;
 }
 
 export interface IHealEffect {
