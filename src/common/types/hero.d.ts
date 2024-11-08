@@ -39,6 +39,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get discountMultiplier(): number;
 	get restockPrice(): number;
 	get restPrice(): number;
+	get potionPrice(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;

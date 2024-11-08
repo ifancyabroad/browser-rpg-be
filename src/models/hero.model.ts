@@ -117,6 +117,10 @@ heroSchema.virtual("restPrice").get(function () {
 	return Math.round(BASE_REST_PRICE * Math.pow(1.5, this.day - 1) * this.discountMultiplier);
 });
 
+heroSchema.virtual("potionPrice").get(function () {
+	return Math.round(BASE_POTION_PRICE * this.level * this.discountMultiplier);
+});
+
 heroSchema.method("addExperience", function addExperience(xp: number) {
 	this.experience += xp;
 	this.checkLevelUp();
@@ -232,12 +236,11 @@ heroSchema.method("buyPotion", function buyPotion() {
 		throw new Error("Potion limit reached");
 	}
 
-	const price = Math.round(BASE_POTION_PRICE * this.level * this.discountMultiplier);
-	if (price > this.gold) {
+	if (this.potionPrice > this.gold) {
 		throw new Error("Not enough gold");
 	}
 
-	this.gold -= price;
+	this.gold -= this.potionPrice;
 	this.potions++;
 });
 
