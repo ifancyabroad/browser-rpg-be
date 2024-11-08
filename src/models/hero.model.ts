@@ -4,12 +4,12 @@ import CharacterModel from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
 import {
+	BASE_POTION_PRICE,
 	BASE_REST_PRICE,
 	BASE_RESTOCK_PRICE,
 	EQUIPMENT_SLOT_TYPE_MAP,
 	EXPERIENCE_MAP,
 	MAX_POTIONS,
-	POTION_PRICE,
 	SHOP_ITEMS,
 	SHOP_LEVEL,
 	SKILL_LEVEL_MAP,
@@ -232,7 +232,7 @@ heroSchema.method("buyPotion", function buyPotion() {
 		throw new Error("Potion limit reached");
 	}
 
-	const price = Math.round(POTION_PRICE * this.discountMultiplier);
+	const price = Math.round(BASE_POTION_PRICE * this.level * this.discountMultiplier);
 	if (price > this.gold) {
 		throw new Error("Not enough gold");
 	}
