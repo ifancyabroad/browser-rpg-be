@@ -114,7 +114,7 @@ heroSchema.virtual("restockPrice").get(function () {
 });
 
 heroSchema.virtual("restPrice").get(function () {
-	return Math.round(BASE_REST_PRICE * Math.pow(2, this.day - 1) * this.discountMultiplier);
+	return Math.round(BASE_REST_PRICE * Math.pow(1.5, this.day - 1) * this.discountMultiplier);
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {

@@ -19,7 +19,7 @@ export const SHOP_ITEMS = 6;
 export const SHOP_LEVEL = 0;
 
 export const BASE_RESTOCK_PRICE = 20;
-export const BASE_REST_PRICE = 10;
+export const BASE_REST_PRICE = 20;
 
 export const POTION_PRICE = 200;
 export const MAX_POTIONS = 3;
