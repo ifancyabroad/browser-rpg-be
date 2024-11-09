@@ -10,6 +10,7 @@ import {
 	EQUIPMENT_SLOT_TYPE_MAP,
 	EXPERIENCE_MAP,
 	MAX_POTIONS,
+	REST_MULTIPLIER,
 	SHOP_ITEMS,
 	SHOP_LEVEL,
 	SKILL_LEVEL_MAP,
@@ -114,7 +115,7 @@ heroSchema.virtual("restockPrice").get(function () {
 });
 
 heroSchema.virtual("restPrice").get(function () {
-	return Math.round(BASE_REST_PRICE * Math.pow(1.5, this.day - 1) * this.discountMultiplier);
+	return Math.round(BASE_REST_PRICE * Math.pow(REST_MULTIPLIER, this.day - 1) * this.discountMultiplier);
 });
 
 heroSchema.virtual("potionPrice").get(function () {
