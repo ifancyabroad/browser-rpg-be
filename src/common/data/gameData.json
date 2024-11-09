@@ -3337,7 +3337,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh-SuuVlmZIYSG87sp"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh-SuuVlmZIYSG87sp", "-OBGO_dOy08BrKDH_l3L"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 10,
@@ -3477,7 +3477,13 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgrvvBiejH010EI8ME", "-NhgyQeYWKGMfv97Ojh0", "-O9eRbMQ_TW85fhd_iC_"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NhgrvvBiejH010EI8ME",
+				"-NhgyQeYWKGMfv97Ojh0",
+				"-O9eRbMQ_TW85fhd_iC_",
+				"-OBGS9HEr6Mb0wEKjYLh"
+			],
 			"stats": {
 				"charisma": 1,
 				"constitution": 20,
@@ -3526,7 +3532,7 @@
 			"boss": false,
 			"challenge": 5,
 			"description": "",
-			"name": "Horror",
+			"name": "Glompling",
 			"naturalArmourClass": 9,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
@@ -3791,7 +3797,7 @@
 				"radiant": 0,
 				"slashing": 50
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OBGREObRlRFCR7M2Ni4"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 18,
@@ -3858,7 +3864,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqWi-RbH2vwtAawttY", "-NZMJ9LGQM22pDRl_EYc"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqWi-RbH2vwtAawttY", "-NZMJ9LGQM22pDRl_EYc", "-OBGO_dOy08BrKDH_l3L"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 14,
@@ -4512,9 +4518,8 @@
 				"-NfROP8bobODCeEQFrpd",
 				"-Nhh7BnVOa0W7OdE_0YR",
 				"-NgTbEHpokQy-0H5xsHh",
-				"-NgTYFhLYpX2p1ZbdUfj",
-				"-NhkT3OrPY0IOvzISeE0",
-				"-NgTbtbVc3qk03XQO0GP"
+				"-NgTbtbVc3qk03XQO0GP",
+				"-OBGPUhNeKidpE71VeJ3"
 			],
 			"stats": {
 				"charisma": 18,
@@ -7136,19 +7141,25 @@
 			"description": "",
 			"effects": [
 				{
-					"multiplier": 0.4,
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
-					"type": "weaponDamage"
+					"type": "damage"
 				},
 				{
-					"multiplier": 0.4,
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
-					"type": "weaponDamage"
+					"type": "damage"
 				},
 				{
-					"multiplier": 0.4,
+					"damageType": "fire",
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
-					"type": "weaponDamage"
+					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9_bwdIr8BegxbOjPip?alt=media&token=9ac6a519-98ab-479d-9c80-e2d90fafb13a",
@@ -7628,6 +7639,117 @@
 			"level": 3,
 			"maxUses": 5,
 			"name": "Shark Bite",
+			"price": 0
+		},
+		"-OBGO_dOy08BrKDH_l3L": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 17,
+					"duration": 4,
+					"modifier": "wisdom",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGO_dOy08BrKDH_l3L?alt=media&token=c76110b7-e7e0-471a-9e07-9eb1c14e743e",
+			"level": 2,
+			"maxUses": 6,
+			"name": "Deafening Screech",
+			"price": 0
+		},
+		"-OBGPUhNeKidpE71VeJ3": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "crushing",
+					"max": 24,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 18,
+					"duration": 2,
+					"effect": "stun",
+					"modifier": "strength",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGPUhNeKidpE71VeJ3?alt=media&token=2bfccf37-afd1-4916-81bf-03a20675d15f",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Tentacle Wrap",
+			"price": 0
+		},
+		"-OBGREObRlRFCR7M2Ni4": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "fire",
+					"max": 12,
+					"min": 2,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 19,
+					"duration": 3,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "dexterity",
+							"type": "stat",
+							"value": -4
+						},
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGREObRlRFCR7M2Ni4?alt=media&token=a9d9314a-5813-4428-ac32-a6e8724f9222",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Engulf",
+			"price": 0
+		},
+		"-OBGS9HEr6Mb0wEKjYLh": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 6
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGS9HEr6Mb0wEKjYLh?alt=media&token=a0a2a938-e0a7-4952-96f9-957691195c98",
+			"level": 2,
+			"maxUses": 6,
+			"name": "Acquire Target",
 			"price": 0
 		}
 	},
