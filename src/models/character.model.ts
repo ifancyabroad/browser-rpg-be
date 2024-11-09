@@ -369,11 +369,12 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 
 characterSchema.method("getHitType", function getHitType(armourClass: number) {
 	const modifier = Game.getModifier(this.stats.dexterity);
-	const hitRoll = Math.round(Game.d20 + modifier + this.hitBonus);
-	const critRoll = Math.round(Game.d20 + modifier + this.critBonus);
-	if (hitRoll >= armourClass && critRoll >= 20) {
+	const roll = Game.d20;
+	const hitValue = Math.round(roll + modifier + this.hitBonus);
+	const critValue = Math.round(roll + this.critBonus);
+	if (critValue >= 20) {
 		return HitType.Crit;
-	} else if (hitRoll >= armourClass) {
+	} else if (hitValue >= armourClass) {
 		return HitType.Hit;
 	} else {
 		return HitType.Miss;
