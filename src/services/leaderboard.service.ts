@@ -10,7 +10,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 	const { user } = session;
 
 	try {
-		const filter = showUserCharacters ? { user: user.id } : {};
+		const filter = JSON.parse(showUserCharacters) ? { user: user.id } : {};
 
 		const leaderboard = await HeroModel.find(filter)
 			.sort({ maxBattleLevel: "desc", name: "asc" })
