@@ -90,7 +90,7 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 	return {
 		target: effect.target,
 		type: this.naturalDamageType,
-		value,
+		value: Math.max(value, 0),
 		hitType,
 	};
 });
