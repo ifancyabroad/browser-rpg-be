@@ -6,7 +6,7 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
-import { SHOP_ITEMS, SHOP_LEVEL } from "@common/utils";
+import { FINAL_LEVEL, SHOP_ITEMS, SHOP_LEVEL } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 
@@ -207,6 +207,49 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error levelUp: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function getProgress(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecords = await HeroModel.find({ user: user.id }).sort({ kills: "desc" });
+		if (!characterRecords.length) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No characters found");
+		}
+
+		const characterClasses = GameData.getClasses();
+
+		const progress = characterClasses.map(({ id, name, portrait }) => {
+			const characters = characterRecords.filter((character) => character.characterClassID === id);
+			const topHero = characters[0];
+			const hero = topHero
+				? {
+						name: topHero.name,
+						kills: topHero.kills,
+						level: topHero.level,
+						status: topHero.status,
+						slainBy: topHero.slainBy,
+				  }
+				: null;
+			const kills = characters.reduce((acc, character) => acc + character.kills, 0);
+			const deaths = characters.filter((character) => character.status === Status.Dead).length;
+			const victories = characters.filter((character) => character.kills >= FINAL_LEVEL).length;
+
+			return {
+				name,
+				portrait,
+				victories,
+				hero,
+				kills,
+				deaths,
+			};
+		});
+
+		return progress;
+	} catch (error) {
+		console.error(`Error getProgress: ${error.message}`);
 		throw error;
 	}
 }

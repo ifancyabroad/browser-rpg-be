@@ -6,6 +6,7 @@ import {
 	buyPotion,
 	createCharacter,
 	getActiveCharacter,
+	getProgress,
 	levelUp,
 	rest,
 	restockItems,
@@ -114,6 +115,17 @@ characterRouter.post(
 	expressAsyncHandler(async (req: RequestLevelUp, res: Response) => {
 		const character = await levelUp(req.body, req.session);
 		res.json({ character });
+	}),
+);
+
+// @GET '/character/progress'
+// @DEST Get character progress
+characterRouter.get(
+	"/progress",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request, res: Response) => {
+		const progress = await getProgress(req.session);
+		res.json({ progress });
 	}),
 );
 
