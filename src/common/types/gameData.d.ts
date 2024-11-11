@@ -163,10 +163,12 @@ export interface IClassDataWithID extends IClassData {
 
 export interface IWeaponDataWithID extends IWeaponData {
 	id: string;
+	slot: EquipmentSlot;
 }
 
 export interface IArmourDataWithID extends IArmourData {
 	id: string;
+	slot: EquipmentSlot;
 }
 
 export type TEquipmentDataWithID = IWeaponDataWithID | IArmourDataWithID;

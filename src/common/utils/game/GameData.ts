@@ -1,4 +1,4 @@
-import { IArmourData, IGameData, IWeaponData, TEquipment } from "@common/types/gameData";
+import { IGameData, TEquipment, TEquipmentDataWithID } from "@common/types/gameData";
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
@@ -115,12 +115,9 @@ export class GameData {
 
 	public static populateEquipment(equipment: Partial<TEquipment>) {
 		const equipmentArray = Object.entries(equipment).map(([k, v]) =>
-			v ? [k, { id: v, ...this.getEquipmentById(v) }] : [k, v],
+			v ? [k, { id: v, slot: k, ...this.getEquipmentById(v) }] : [k, v],
 		);
-		return Object.fromEntries(equipmentArray) as Record<
-			EquipmentSlot,
-			(IWeaponData & { id: string }) | (IArmourData & { id: string })
-		>;
+		return Object.fromEntries(equipmentArray) as Record<EquipmentSlot, TEquipmentDataWithID>;
 	}
 
 	public static getClassItems(classID: string) {

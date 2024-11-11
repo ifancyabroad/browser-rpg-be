@@ -4,6 +4,7 @@ import {
 	AuxiliaryStat,
 	DamageType,
 	EffectType,
+	EquipmentSlot,
 	EquipmentType,
 	HitType,
 	PropertyType,
@@ -429,7 +430,7 @@ characterSchema.method(
 	function getWeaponDamage({ effect, effectTarget }: IEffectData, weapon: IWeaponDataWithID) {
 		const weaponEffect = effect as IWeaponDamageEffectData;
 		const damage = Game.dx(weapon.min, weapon.max);
-		const isMainhand = this.equipmentIDs.hand1 === weapon.id;
+		const isMainhand = weapon.slot === EquipmentSlot.Hand1;
 		const stat = isMainhand ? Game.getWeaponStat(weapon.weaponType as WeaponType) : null;
 		const modifier = Game.getModifier(this.stats[stat]) ?? 0;
 		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
