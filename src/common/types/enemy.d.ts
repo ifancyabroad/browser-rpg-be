@@ -10,6 +10,7 @@ export interface IEnemy extends ICharacter {
 	zone: Zone;
 	boss: boolean;
 	hero: boolean;
+	username?: string;
 	naturalArmourClass: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;

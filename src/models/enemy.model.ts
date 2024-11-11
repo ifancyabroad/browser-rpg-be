@@ -35,6 +35,9 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			type: Boolean,
 			default: false,
 		},
+		username: {
+			type: String,
+		},
 		naturalArmourClass: {
 			type: Number,
 			min: 0,

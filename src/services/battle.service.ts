@@ -8,6 +8,7 @@ import { IBattleInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
 import HeroModel from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
+import UserModel from "@models/user.model";
 import { BATTLE_MULTIPLIER_INCREMENT, REWARD_GOLD_MULTIPLIER } from "@common/utils";
 import { IHero } from "@common/types/hero";
 
@@ -24,6 +25,9 @@ async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 		return null;
 	}
 
+	const user = await UserModel.findById(hero.user);
+	const username = user?.username ?? "Unknown";
+
 	const classData = GameData.getCharacterClassById(hero.characterClassID);
 
 	return {
@@ -34,6 +38,7 @@ async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 		zone: battleZone,
 		boss: isBoss,
 		hero: true,
+		username,
 		skillIDs: hero.skillIDs,
 		equipmentIDs: hero.equipmentIDs,
 		baseStats: hero.baseStats,
