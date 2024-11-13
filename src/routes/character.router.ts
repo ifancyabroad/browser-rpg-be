@@ -11,6 +11,7 @@ import {
 	rest,
 	restockItems,
 	retireActiveCharacter,
+	swapWeapons,
 } from "@services/character.service";
 import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
@@ -114,6 +115,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: RequestLevelUp, res: Response) => {
 		const character = await levelUp(req.body, req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/swapWeapons'
+// @DEST Swap weapons in your character's hands
+characterRouter.post(
+	"/swapWeapons",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request, res: Response) => {
+		const character = await swapWeapons(req.session);
 		res.json({ character });
 	}),
 );

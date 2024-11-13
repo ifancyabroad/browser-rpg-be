@@ -50,6 +50,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	checkItem(id: string, slot: EquipmentSlot): void;
 	equipItem(id: string, slot: EquipmentSlot): void;
 	buyPotion(): void;
+	swapWeapons(): void;
 	battleWon(battle: IBattle & IBattleMethods): void;
 	battleLost(name: string): void;
 	checkLevelUp(): void;

@@ -211,6 +211,28 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 	}
 }
 
+export async function swapWeapons(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to swap weapons");
+		}
+
+		characterRecord.swapWeapons();
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error swapWeapons: ${error.message}`);
+		throw error;
+	}
+}
+
 export async function getProgress(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {

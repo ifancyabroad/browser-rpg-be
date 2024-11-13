@@ -245,6 +245,28 @@ heroSchema.method("buyPotion", function buyPotion() {
 	this.potions++;
 });
 
+heroSchema.method("swapWeapons", function swapWeapons() {
+	const mainHand = this.equipment.hand1;
+	const offHand = this.equipment.hand2;
+
+	if (!mainHand || !offHand) {
+		throw new Error("No weapons to swap");
+	}
+
+	const isHand1OneHanded = "size" in mainHand && mainHand.size !== WeaponSize.TwoHanded;
+	const isHand2OneHanded = "size" in offHand && offHand.size !== WeaponSize.TwoHanded;
+
+	if (!isHand1OneHanded && !isHand2OneHanded) {
+		throw new Error("Cannot swap two-handed weapons");
+	}
+
+	this.equipmentIDs = {
+		...this.equipmentIDs,
+		[EquipmentSlot.Hand1]: offHand.id,
+		[EquipmentSlot.Hand2]: mainHand.id,
+	};
+});
+
 heroSchema.method("battleWon", function battleWon(battle: IBattle & IBattleMethods) {
 	const { level, reward } = battle;
 	this.maxBattleLevel = Math.max(this.maxBattleLevel, level);
