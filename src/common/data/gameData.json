@@ -20,7 +20,7 @@
 				{
 					"name": "cold",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "gloves"
@@ -62,7 +62,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZN-pDbqOJ2N6bjuW-2?alt=media&token=65f41764-04fb-45e4-b574-b4c9dde99b5c",
 			"level": 4,
 			"name": "Gold Armour",
-			"price": 1380,
+			"price": 1820,
 			"properties": [
 				{
 					"name": "cold",
@@ -99,7 +99,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJxsDuymhUWq2V4ew8?alt=media&token=7c799d63-2279-4d0f-babe-670d9d560b56",
 			"level": 1,
 			"name": "Plate Armour",
-			"price": 940,
+			"price": 720,
 			"type": "armour"
 		},
 		"-NgJyJCDG-1UEccRymvT": {
@@ -127,7 +127,7 @@
 				{
 					"name": "fire",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "ring"
@@ -142,7 +142,7 @@
 				{
 					"name": "cold",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "ring"
@@ -194,7 +194,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO6sAjD4s9LSirM2lr?alt=media&token=12e9a21e-abc3-4b12-820d-bc3f060ab6e0",
 			"level": 1,
 			"name": "Girdle of Ogre Strength",
-			"price": 160,
+			"price": 140,
 			"properties": [
 				{
 					"name": "strength",
@@ -214,7 +214,7 @@
 				{
 					"name": "radiant",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "amulet"
@@ -224,7 +224,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=d2b492d4-b97c-44fb-aeb1-6d527f3ee539",
 			"level": 2,
 			"name": "Shaman's Belt",
-			"price": 370,
+			"price": 280,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -276,7 +276,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nm2D2w4xiCJtkX_yQHG?alt=media&token=19cc2580-9772-4137-8391-e0da157d1f9d",
 			"level": 1,
 			"name": "Half Plate",
-			"price": 560,
+			"price": 510,
 			"type": "armour"
 		},
 		"-Nm2DaHdeREq1LsjfY1C": {
@@ -328,12 +328,12 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9RB3OhlZP2rGnxom1?alt=media&token=07407f45-1c6e-4fdb-8ec4-9ab6799671f8",
 			"level": 1,
 			"name": "Warding Necklace",
-			"price": 90,
+			"price": 80,
 			"properties": [
 				{
 					"name": "necrotic",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "amulet"
@@ -343,7 +343,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9SWjFRnu58szE_T-J?alt=media&token=e81fa74d-fb48-4a21-83fb-e12ed100f319",
 			"level": 1,
 			"name": "Amulet of Strength",
-			"price": 140,
+			"price": 130,
 			"properties": [
 				{
 					"name": "strength",
@@ -358,17 +358,17 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9T7n-ofuYXGZbdLuo?alt=media&token=72e6f662-055a-441a-bd37-385c7c2fdbff",
 			"level": 2,
 			"name": "Shaman's Necklace",
-			"price": 240,
+			"price": 320,
 			"properties": [
 				{
 					"name": "lightning",
-					"type": "resistance",
-					"value": 25
+					"type": "damage",
+					"value": 20
 				},
 				{
-					"name": "lightning",
-					"type": "damage",
-					"value": 25
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"type": "amulet"
@@ -378,7 +378,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Tzv71IsVm5tRJuxU?alt=media&token=cb2a63a2-2398-42ee-9068-978e654a6345",
 			"level": 2,
 			"name": "Heart Pendant",
-			"price": 250,
+			"price": 280,
 			"properties": [
 				{
 					"name": "constitution",
@@ -393,17 +393,17 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Ue6ryYmCcBTwKlt_?alt=media&token=b5b63707-2bc7-4040-96ea-ea4ce1dae8bd",
 			"level": 2,
 			"name": "Frostbinder Charm",
-			"price": 220,
+			"price": 340,
 			"properties": [
 				{
 					"name": "fire",
 					"type": "resistance",
-					"value": 25
+					"value": 20
 				},
 				{
 					"name": "cold",
 					"type": "damage",
-					"value": 25
+					"value": 20
 				}
 			],
 			"type": "amulet"
@@ -438,7 +438,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9XWPqjT0yKB9xwlRp?alt=media&token=ab4394f9-b8cb-4413-9667-8ff647675bff",
 			"level": 3,
 			"name": "Accuracy Charm",
-			"price": 740,
+			"price": 690,
 			"properties": [
 				{
 					"name": "hitChance",
@@ -453,7 +453,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9Y9q53Z1Bfpt1UeVf?alt=media&token=6ebf052d-76d4-4bd0-8848-42209f28f097",
 			"level": 3,
 			"name": "Burnt Chain",
-			"price": 620,
+			"price": 600,
 			"properties": [
 				{
 					"name": "fire",
@@ -498,7 +498,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ZE3_8GkLUJ5oYCw7?alt=media&token=f9feca84-47e0-4e62-92d6-1cd34c6af964",
 			"level": 3,
 			"name": "Voodoo Charm",
-			"price": 540,
+			"price": 570,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -558,7 +558,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9a4lxlrxNlApNH_Qr?alt=media&token=fae14538-8000-4580-b2b7-aa556a92ce83",
 			"level": 1,
 			"name": "Wizard's Sash",
-			"price": 160,
+			"price": 140,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -573,7 +573,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9arODYaOWV5QYzw7E?alt=media&token=cae9f210-efe1-4bc2-8a10-7f413f21b511",
 			"level": 3,
 			"name": "Belt of Shadows",
-			"price": 880,
+			"price": 820,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -688,7 +688,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dXl3iLqpcbPi2vDZ?alt=media&token=f375b628-b83c-47a8-b251-900f406b2bca",
 			"level": 3,
 			"name": "Girdle of Death",
-			"price": 510,
+			"price": 540,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -708,7 +708,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dpRJB6wpOfSUAF24?alt=media&token=b60b1863-c5be-4f18-b30f-d731bcba7c5b",
 			"level": 4,
 			"name": "Archmage's Belt",
-			"price": 1390,
+			"price": 1400,
 			"properties": [
 				{
 					"name": "fire",
@@ -733,17 +733,17 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9ewWW6AAZOa6anIU5?alt=media&token=bd2f43f9-48e9-4b6e-ab7d-8edd766a1a3f",
 			"level": 4,
 			"name": "Poison Master Sash",
-			"price": 1650,
+			"price": 1480,
 			"properties": [
 				{
 					"name": "acid",
 					"type": "damage",
-					"value": 100
+					"value": 40
 				},
 				{
 					"name": "poison",
 					"type": "damage",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "belt"
@@ -768,7 +768,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDJ6_qoM0y7Sg2iTnL?alt=media&token=74369f33-f38b-4ad7-8256-b5af57ac4b68",
 			"level": 1,
 			"name": "Fancy Boots",
-			"price": 90,
+			"price": 110,
 			"properties": [
 				{
 					"name": "charisma",
@@ -788,7 +788,7 @@
 				{
 					"name": "acid",
 					"type": "resistance",
-					"value": 25
+					"value": 40
 				}
 			],
 			"type": "boots"
@@ -813,7 +813,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDM2ApQWMggqJzd1Oj?alt=media&token=14c5b834-aaa3-4d82-8cf9-460aec1a16d5",
 			"level": 2,
 			"name": "Warlock's Striders",
-			"price": 200,
+			"price": 230,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -878,7 +878,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDNmAFnZcDHdtAbyd1?alt=media&token=8bc8d829-9062-491a-a733-6199ae968d7f",
 			"level": 4,
 			"name": "Arcane Boots",
-			"price": 1150,
+			"price": 1300,
 			"properties": [
 				{
 					"name": "lightning",
@@ -948,7 +948,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDQAibdQUg6f9NfaKV?alt=media&token=a726ad0d-42bb-4ce8-87f1-6b52406631be",
 			"level": 4,
 			"name": "Ebonstride Footwear",
-			"price": 1580,
+			"price": 1480,
 			"properties": [
 				{
 					"name": "strength",
@@ -1013,7 +1013,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDRlC-CERpPff66SUo?alt=media&token=0179bd87-fa5b-4dc0-86fd-68d878976a03",
 			"level": 1,
 			"name": "Cleric's Gloves",
-			"price": 120,
+			"price": 150,
 			"properties": [
 				{
 					"name": "radiant",
@@ -1053,7 +1053,7 @@
 				{
 					"name": "cold",
 					"type": "damage",
-					"value": 20
+					"value": 25
 				}
 			],
 			"type": "gloves"
@@ -1103,7 +1103,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUyOXsz_CWrqQKtx3?alt=media&token=737405c6-b663-44bf-b747-b608006b35e6",
 			"level": 3,
 			"name": "Cursed Bracers",
-			"price": 520,
+			"price": 580,
 			"properties": [
 				{
 					"name": "constitution",
@@ -1293,7 +1293,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzELsGuv2GQ6PDoLFTQ?alt=media&token=2357c8a5-1553-4729-abe2-fe2342a0a26d",
 			"level": 3,
 			"name": "Circlet of Power",
-			"price": 780,
+			"price": 770,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -1313,7 +1313,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEMdeX59k0__7Q0g8z?alt=media&token=eaa53a09-0f76-43c4-b485-f44b16353a52",
 			"level": 4,
 			"name": "Horrifying Mask",
-			"price": 1450,
+			"price": 1120,
 			"properties": [
 				{
 					"name": "charisma",
@@ -1343,7 +1343,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEN4ov5P7JEqbkdb4A?alt=media&token=81347577-2c67-40e1-a8d1-036065d518d0",
 			"level": 4,
 			"name": "Gold Helm",
-			"price": 1740,
+			"price": 1420,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1418,7 +1418,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQK4lqKJ7YcxpVgbR?alt=media&token=d7f24651-2e98-4d79-8a6c-3f3c6aab152e",
 			"level": 4,
 			"name": "Gladiator's Visor",
-			"price": 1700,
+			"price": 1450,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1448,12 +1448,12 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQlT7a5v8nuldO2WS?alt=media&token=b6e08ced-2d2e-4709-9929-f0868687d916",
 			"level": 1,
 			"name": "Ring of Poison Resistance",
-			"price": 70,
+			"price": 80,
 			"properties": [
 				{
 					"name": "poison",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "ring"
@@ -1498,7 +1498,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEdBv-UWjlNRRjd8Gv?alt=media&token=748f3207-a3c5-4f77-9cc9-884376588f59",
 			"level": 3,
 			"name": "Gold Buckler",
-			"price": 560,
+			"price": 650,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1628,7 +1628,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=5ddcc14a-c8fe-4089-8f3a-069b287812b8",
 			"level": 3,
 			"name": "Knight's Shield",
-			"price": 600,
+			"price": 730,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1653,7 +1653,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgBl4DzwpCf-EQ7W1?alt=media&token=392e7209-e5d8-49d0-88f0-872dc9be45eb",
 			"level": 3,
 			"name": "Gold Plated Shield",
-			"price": 750,
+			"price": 840,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1683,7 +1683,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
 			"level": 4,
 			"name": "Gold Wing",
-			"price": 960,
+			"price": 1320,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1713,12 +1713,12 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEh4OLfUakfi5pWjf2?alt=media&token=767354c1-2018-45a0-9e08-34c9f768575c",
 			"level": 3,
 			"name": "Snake Coil",
-			"price": 540,
+			"price": 620,
 			"properties": [
 				{
 					"name": "poison",
 					"type": "damage",
-					"value": 60
+					"value": 50
 				}
 			],
 			"type": "ring"
@@ -1733,7 +1733,7 @@
 				{
 					"name": "lightning",
 					"type": "damage",
-					"value": 50
+					"value": 40
 				}
 			],
 			"type": "ring"
@@ -1743,7 +1743,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEhe4hPN0nCGqfx5Mm?alt=media&token=75289b31-bd0e-4d91-bbc7-46d4edcd4cb4",
 			"level": 2,
 			"name": "Holy Band",
-			"price": 260,
+			"price": 350,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -1778,7 +1778,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEiKLauj-s86ubKuGI?alt=media&token=2fe3517b-1a31-43dd-ab5d-f019b490c932",
 			"level": 4,
 			"name": "Lion's Courage",
-			"price": 1480,
+			"price": 1040,
 			"properties": [
 				{
 					"name": "strength",
@@ -1823,7 +1823,7 @@
 				{
 					"name": "cold",
 					"type": "damage",
-					"value": 30
+					"value": 25
 				}
 			],
 			"type": "ring"
@@ -1863,17 +1863,17 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				},
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				},
 				{
 					"name": "piercing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				}
 			],
 			"type": "ring"
@@ -1883,7 +1883,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEkYmCcJMY3uyCVbHm?alt=media&token=4cf48342-af39-48ee-aadb-97df113e7437",
 			"level": 4,
 			"name": "Dragon's Gem",
-			"price": 1600,
+			"price": 1650,
 			"properties": [
 				{
 					"name": "fire",
@@ -1910,7 +1910,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8D90nWC6JFNgVjhehj?alt=media&token=8b65ce52-7f33-4fe9-a94f-9df6d74fdf8f",
 			"level": 4,
 			"name": "Deathstalker Tunic",
-			"price": 1650,
+			"price": 1800,
 			"properties": [
 				{
 					"name": "slashing",
@@ -1964,7 +1964,7 @@
 				{
 					"name": "charisma",
 					"type": "stat",
-					"value": 4
+					"value": 3
 				}
 			],
 			"type": "armour"
@@ -1976,7 +1976,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8DB8llPrfIqwDRaGca?alt=media&token=f0558ab9-d029-42a2-984f-f46c40e10257",
 			"level": 4,
 			"name": "Sacrificial Armour",
-			"price": 1600,
+			"price": 1740,
 			"properties": [
 				{
 					"name": "hitChance",
@@ -2032,7 +2032,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8Hs3ZHXox-pIZAXvRF?alt=media&token=89559693-3e4b-4ca4-851d-14a962478b7e",
 			"level": 4,
 			"name": "Unholy Plate",
-			"price": 1570,
+			"price": 1760,
 			"properties": [
 				{
 					"name": "crushing",
@@ -2054,7 +2054,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsQRUtV5enlZ3MShV?alt=media&token=4aba9205-7169-46c9-bcae-41ce43f39c32",
 			"level": 3,
 			"name": "Flame Resistant Mail",
-			"price": 560,
+			"price": 590,
 			"properties": [
 				{
 					"name": "fire",
@@ -2071,7 +2071,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsoUz7NkxyEkUN6c2?alt=media&token=ad65bca3-b84d-4219-9486-4f2f3e6b5e84",
 			"level": 4,
 			"name": "Knight's Mail",
-			"price": 1250,
+			"price": 1520,
 			"properties": [
 				{
 					"name": "strength",
@@ -2132,7 +2132,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I3pIr6Cshq65nK-Y8?alt=media&token=a011e348-e7c3-40e9-a5fb-eaaf31651e30",
 			"level": 3,
 			"name": "Molten Plate",
-			"price": 730,
+			"price": 800,
 			"properties": [
 				{
 					"name": "fire",
@@ -2193,7 +2193,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I5jiV3i13ZaPW46M9?alt=media&token=830c05d6-af02-464e-9fec-d309bf2f4557",
 			"level": 4,
 			"name": "Barbarian's Tunic",
-			"price": 950,
+			"price": 1100,
 			"properties": [
 				{
 					"name": "strength",
@@ -2232,7 +2232,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I8N2hC8j3lZ5p1Uyi?alt=media&token=98d80f45-4bc7-4770-8839-c86b6308f336",
 			"level": 2,
 			"name": "Royal Gambeson",
-			"price": 210,
+			"price": 250,
 			"properties": [
 				{
 					"name": "charisma",
@@ -2249,11 +2249,16 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAQSb0DFvLB-gVQ6K?alt=media&token=f336ccd2-9fab-4567-8907-ba1d360b4f28",
 			"level": 4,
 			"name": "Robe of the Fire Mage",
-			"price": 1050,
+			"price": 1640,
 			"properties": [
 				{
 					"name": "fire",
 					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
 					"value": 40
 				}
 			],
@@ -2266,11 +2271,16 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IAuNHTkw0VVfFPd7b?alt=media&token=2e12287a-ee54-49b7-aa03-611d11386bfd",
 			"level": 4,
 			"name": "Robe of the Ice Mage",
-			"price": 1050,
+			"price": 1640,
 			"properties": [
 				{
 					"name": "cold",
 					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
 					"value": 40
 				}
 			],
@@ -2283,7 +2293,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IBE_pHJnjHNYAUha-?alt=media&token=48727411-1263-4a4f-93e9-37062153d931",
 			"level": 2,
 			"name": "Druid's Attire",
-			"price": 330,
+			"price": 300,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -2354,7 +2364,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8IEe884qFB7RpSqQ2U?alt=media&token=58bbec93-0365-495e-8d21-d2770964f5b7",
 			"level": 3,
 			"name": "Robes of Protection",
-			"price": 730,
+			"price": 830,
 			"properties": [
 				{
 					"name": "slashing",
@@ -2394,7 +2404,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsDmNL0hFSSAeriHAg?alt=media&token=e9a76574-79b3-4f08-9c03-b2deaa6d4eab",
 			"level": 1,
 			"name": "Skull Charm",
-			"price": 120,
+			"price": 100,
 			"properties": [
 				{
 					"name": "critChance",
@@ -2409,7 +2419,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsEMSIhwdegYpPMl5V?alt=media&token=d9b83a90-9adf-40e7-9c89-0be51cb18d6b",
 			"level": 1,
 			"name": "Rogue's Belt",
-			"price": 140,
+			"price": 150,
 			"properties": [
 				{
 					"name": "slashing",
@@ -2429,7 +2439,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsEgnK2l9v3OvcBAzM?alt=media&token=ec12d5db-b3ba-455a-acbf-9866089499a8",
 			"level": 1,
 			"name": "Nobleman's Belt",
-			"price": 90,
+			"price": 100,
 			"properties": [
 				{
 					"name": "charisma",
@@ -2459,7 +2469,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsFohigq1kIFfgS3Ro?alt=media&token=bfecd754-1415-4158-a4aa-b8052900f3ba",
 			"level": 1,
 			"name": "Ruffian Boots",
-			"price": 150,
+			"price": 130,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -2474,7 +2484,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsGMnBGV7N7SeeXHe5?alt=media&token=b4dc4e5e-4b52-4217-9e3a-c46d3dfccb6d",
 			"level": 1,
 			"name": "Archer's Mitts",
-			"price": 150,
+			"price": 140,
 			"properties": [
 				{
 					"name": "piercing",
@@ -2504,7 +2514,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsHfOgKkqkCGlUZpJ0?alt=media&token=09a8d7db-05bd-4d1f-867f-cf0f01b06a76",
 			"level": 1,
 			"name": "Farmer's Hat",
-			"price": 60,
+			"price": 100,
 			"properties": [
 				{
 					"name": "constitution",
@@ -2534,7 +2544,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsIE3Q4T6mcVx7TslH?alt=media&token=8f167d60-0897-4ebd-a26f-7af404474b1e",
 			"level": 1,
 			"name": "Shield Ring",
-			"price": 140,
+			"price": 150,
 			"properties": [
 				{
 					"name": "slashing",
@@ -2579,7 +2589,7 @@
 				{
 					"name": "poison",
 					"type": "damage",
-					"value": 40
+					"value": 20
 				}
 			],
 			"type": "amulet"
@@ -2589,7 +2599,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsUXsy69ii40yOql8k?alt=media&token=81c58c24-8030-4be2-b85a-a9f50faad7ff",
 			"level": 2,
 			"name": "Claw Necklace",
-			"price": 210,
+			"price": 270,
 			"properties": [
 				{
 					"name": "slashing",
@@ -2709,7 +2719,7 @@
 				{
 					"name": "fire",
 					"type": "damage",
-					"value": 20
+					"value": 25
 				}
 			],
 			"type": "gloves"
@@ -2724,7 +2734,7 @@
 				{
 					"name": "lightning",
 					"type": "damage",
-					"value": 20
+					"value": 25
 				}
 			],
 			"type": "helmet"
@@ -2769,7 +2779,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsaZUhz3Xe2DxxPSB1?alt=media&token=64910295-e52c-4467-81ab-5be37aba514a",
 			"level": 2,
 			"name": "Warlock's Band",
-			"price": 250,
+			"price": 300,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -4806,7 +4816,7 @@
 				{
 					"accuracy": 100,
 					"difficulty": 17,
-					"duration": 3,
+					"duration": 4,
 					"modifier": "strength",
 					"properties": [
 						{
@@ -7810,7 +7820,7 @@
 			"max": 14,
 			"min": 4,
 			"name": "Black Blade of Doom",
-			"price": 1250,
+			"price": 1720,
 			"properties": [
 				{
 					"name": "fire",
@@ -7913,7 +7923,7 @@
 			"max": 12,
 			"min": 2,
 			"name": "Greatsword",
-			"price": 280,
+			"price": 300,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "sword"
@@ -8111,7 +8121,7 @@
 			"max": 16,
 			"min": 2,
 			"name": "Axe of the Frozen Wastes",
-			"price": 920,
+			"price": 1440,
 			"properties": [
 				{
 					"name": "cold",
@@ -8145,7 +8155,7 @@
 			"max": 12,
 			"min": 2,
 			"name": "Acid Edge",
-			"price": 840,
+			"price": 1020,
 			"properties": [
 				{
 					"name": "acid",
@@ -8165,7 +8175,7 @@
 			"max": 10,
 			"min": 3,
 			"name": "Power Axe",
-			"price": 580,
+			"price": 720,
 			"properties": [
 				{
 					"name": "strength",
@@ -8190,7 +8200,7 @@
 			"max": 8,
 			"min": 3,
 			"name": "Drake's Talon",
-			"price": 650,
+			"price": 750,
 			"properties": [
 				{
 					"name": "fire",
@@ -8220,7 +8230,7 @@
 			"max": 5,
 			"min": 2,
 			"name": "Poison Edge",
-			"price": 420,
+			"price": 700,
 			"properties": [
 				{
 					"name": "poison",
@@ -8249,7 +8259,7 @@
 			"max": 6,
 			"min": 3,
 			"name": "Voidpiercer",
-			"price": 800,
+			"price": 1000,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -8291,7 +8301,7 @@
 			"max": 9,
 			"min": 2,
 			"name": "Acid Bow",
-			"price": 540,
+			"price": 620,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "bow"
@@ -8313,7 +8323,7 @@
 			"max": 16,
 			"min": 2,
 			"name": "Flame Shot",
-			"price": 1150,
+			"price": 1280,
 			"properties": [
 				{
 					"name": "fire",
@@ -8391,7 +8401,7 @@
 			"max": 16,
 			"min": 2,
 			"name": "Unholy Bolter",
-			"price": 1120,
+			"price": 1200,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -8411,7 +8421,7 @@
 			"max": 10,
 			"min": 3,
 			"name": "Elven Crossbow",
-			"price": 530,
+			"price": 680,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -8444,7 +8454,7 @@
 			"max": 7,
 			"min": 2,
 			"name": "Gold Hammer",
-			"price": 510,
+			"price": 680,
 			"properties": [
 				{
 					"name": "strength",
@@ -8469,7 +8479,7 @@
 			"max": 10,
 			"min": 3,
 			"name": "Rune Forged Warhammer",
-			"price": 560,
+			"price": 700,
 			"properties": [
 				{
 					"name": "fire",
@@ -8508,17 +8518,17 @@
 			"max": 16,
 			"min": 2,
 			"name": "Dwarven Thunder",
-			"price": 1100,
+			"price": 1440,
 			"properties": [
 				{
 					"name": "lightning",
 					"type": "resistance",
-					"value": 20
+					"value": 50
 				},
 				{
 					"name": "lightning",
 					"type": "damage",
-					"value": 20
+					"value": 50
 				}
 			],
 			"size": "twoHanded",
@@ -8537,7 +8547,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 16,
+					"difficulty": 17,
 					"duration": 4,
 					"modifier": "constitution",
 					"properties": [
@@ -8556,7 +8566,7 @@
 			"max": 12,
 			"min": 2,
 			"name": "Molten Crusher",
-			"price": 900,
+			"price": 1120,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "hammer"
@@ -8569,7 +8579,7 @@
 			"max": 8,
 			"min": 3,
 			"name": "Royal Mace",
-			"price": 620,
+			"price": 780,
 			"properties": [
 				{
 					"name": "strength",
@@ -8598,11 +8608,16 @@
 			"max": 12,
 			"min": 2,
 			"name": "Holy Avenger",
-			"price": 860,
+			"price": 1080,
 			"properties": [
 				{
 					"name": "necrotic",
 					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "radiant",
+					"type": "damage",
 					"value": 40
 				}
 			],
@@ -8627,7 +8642,7 @@
 			"max": 9,
 			"min": 2,
 			"name": "Flail",
-			"price": 520,
+			"price": 480,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "mace"
@@ -8640,7 +8655,7 @@
 			"max": 10,
 			"min": 3,
 			"name": "Golden Flail",
-			"price": 700,
+			"price": 850,
 			"properties": [
 				{
 					"name": "constitution",
@@ -8691,7 +8706,7 @@
 			"max": 10,
 			"min": 3,
 			"name": "Ball Drainer",
-			"price": 980,
+			"price": 1380,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "mace"
@@ -8704,7 +8719,7 @@
 			"max": 8,
 			"min": 3,
 			"name": "Elven Spear",
-			"price": 360,
+			"price": 480,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -8733,7 +8748,7 @@
 			"max": 15,
 			"min": 5,
 			"name": "Lightning Trident",
-			"price": 750,
+			"price": 1260,
 			"properties": [
 				{
 					"name": "lightning",
@@ -8753,7 +8768,7 @@
 			"max": 14,
 			"min": 4,
 			"name": "King's Claymore",
-			"price": 720,
+			"price": 880,
 			"properties": [
 				{
 					"name": "strength",
@@ -8782,7 +8797,7 @@
 			"max": 7,
 			"min": 2,
 			"name": "Frosty Blade",
-			"price": 490,
+			"price": 520,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "sword"
@@ -8804,7 +8819,7 @@
 			"max": 8,
 			"min": 3,
 			"name": "Nightsong",
-			"price": 870,
+			"price": 1050,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -8824,7 +8839,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Nature's Wrath",
-			"price": 350,
+			"price": 450,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -8854,7 +8869,7 @@
 			"max": 7,
 			"min": 2,
 			"name": "Gold Dagger",
-			"price": 500,
+			"price": 580,
 			"properties": [
 				{
 					"name": "critChance",
@@ -8871,7 +8886,7 @@
 			"description": "Bloodletter is a sinister dagger with a jagged, crimson blade that gleams ominously. Designed for stealthy strikes, it inflicts deep wounds that bleed profusely, weakening foes over time. Favored by assassins, this weapon embodies the art of death and the thirst for blood in battle.",
 			"effects": [
 				{
-					"difficulty": 15,
+					"difficulty": 16,
 					"duration": 2,
 					"effect": "bleed",
 					"modifier": "constitution",
@@ -8884,7 +8899,7 @@
 			"max": 6,
 			"min": 3,
 			"name": "Bloodletter",
-			"price": 880,
+			"price": 1300,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
@@ -8906,7 +8921,7 @@
 			"max": 5,
 			"min": 2,
 			"name": "Corroding Blade",
-			"price": 380,
+			"price": 500,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
@@ -8917,22 +8932,22 @@
 			"effects": [
 				{
 					"damageType": "slashing",
-					"max": 4,
-					"min": 1,
+					"max": 5,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "slashing",
-					"max": 4,
-					"min": 1,
+					"max": 5,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "slashing",
-					"max": 4,
-					"min": 1,
+					"max": 5,
+					"min": 2,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -8942,7 +8957,7 @@
 			"max": 5,
 			"min": 2,
 			"name": "Star of Vengeance",
-			"price": 950,
+			"price": 1100,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "dagger"
@@ -8975,7 +8990,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Cold",
-			"price": 400,
+			"price": 540,
 			"properties": [
 				{
 					"name": "cold",
@@ -8995,7 +9010,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of the Archmage",
-			"price": 1320,
+			"price": 1800,
 			"properties": [
 				{
 					"name": "cold",
@@ -9030,7 +9045,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Forked Lightning",
-			"price": 960,
+			"price": 1450,
 			"properties": [
 				{
 					"name": "lightning",
@@ -9085,7 +9100,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Flames",
-			"price": 400,
+			"price": 540,
 			"properties": [
 				{
 					"name": "fire",
@@ -9105,7 +9120,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Warding",
-			"price": 820,
+			"price": 1400,
 			"properties": [
 				{
 					"name": "slashing",
@@ -9229,7 +9244,7 @@
 			"max": 4,
 			"min": 1,
 			"name": "Wand of Cursing",
-			"price": 530,
+			"price": 550,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -9258,7 +9273,7 @@
 			"max": 12,
 			"min": 3,
 			"name": "Dragon's Breath",
-			"price": 850,
+			"price": 1040,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -9271,7 +9286,7 @@
 			"max": 6,
 			"min": 3,
 			"name": "Holy Wand",
-			"price": 520,
+			"price": 600,
 			"properties": [
 				{
 					"name": "wisdom",
@@ -9312,7 +9327,7 @@
 			"max": 8,
 			"min": 2,
 			"name": "Elementalist's Wand",
-			"price": 810,
+			"price": 1060,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -9351,7 +9366,7 @@
 			"max": 4,
 			"min": 1,
 			"name": "Wand of Piercing",
-			"price": 480,
+			"price": 580,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -9364,7 +9379,7 @@
 			"max": 6,
 			"min": 3,
 			"name": "Archmage's Wand",
-			"price": 1000,
+			"price": 1650,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -9430,7 +9445,7 @@
 			"max": 8,
 			"min": 1,
 			"name": "Flame Axe",
-			"price": 320,
+			"price": 280,
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "axe"
@@ -9443,7 +9458,7 @@
 			"max": 8,
 			"min": 1,
 			"name": "Bow of the Fox",
-			"price": 210,
+			"price": 230,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -9600,7 +9615,7 @@
 			"max": 6,
 			"min": 1,
 			"name": "Protective Mace",
-			"price": 240,
+			"price": 260,
 			"properties": [
 				{
 					"name": "fire",
@@ -9774,7 +9789,7 @@
 			"max": 4,
 			"min": 1,
 			"name": "Wand of Missiles",
-			"price": 320,
+			"price": 290,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
