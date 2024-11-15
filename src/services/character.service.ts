@@ -6,7 +6,7 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel from "@models/hero.model";
-import { FINAL_LEVEL, SHOP_ITEMS, SHOP_LEVEL } from "@common/utils";
+import { FINAL_LEVEL, SHOP_ITEMS, SHOP_LEVEL, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 
@@ -49,8 +49,8 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			skillIDs: skills,
 			equipmentIDs: classData.equipment,
 			availableItemIDs: availableItems,
-			gold: 100,
-			potions: 3,
+			gold: STARTING_GOLD,
+			potions: STARTING_POTIONS,
 			baseStats: classData.stats,
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,

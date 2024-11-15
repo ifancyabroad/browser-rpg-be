@@ -2858,10 +2858,10 @@
 			"stats": {
 				"charisma": 12,
 				"constitution": 14,
-				"dexterity": 12,
+				"dexterity": 14,
 				"intelligence": 18,
 				"strength": 8,
-				"wisdom": 15
+				"wisdom": 13
 			},
 			"weaponTypes": ["staff", "wand"]
 		}
@@ -2872,7 +2872,7 @@
 			"challenge": 4,
 			"description": "",
 			"name": "Runtling",
-			"naturalArmourClass": 9,
+			"naturalArmourClass": 7,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
@@ -3156,7 +3156,7 @@
 				"hand1": "-NgK0I2STX7An8WjEeUN"
 			},
 			"name": "Hobgoblin",
-			"naturalArmourClass": 0,
+			"naturalArmourClass": 6,
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
@@ -3543,7 +3543,7 @@
 			"challenge": 5,
 			"description": "",
 			"name": "Glompling",
-			"naturalArmourClass": 9,
+			"naturalArmourClass": 7,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
@@ -3716,7 +3716,7 @@
 			"challenge": 8,
 			"description": "",
 			"name": "Living Mold",
-			"naturalArmourClass": 11,
+			"naturalArmourClass": 9,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
@@ -4136,10 +4136,10 @@
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
-				"-Nc3zPER2-voArWHwNy9",
 				"-Nhh4hPWuWx_NN1YApGU",
 				"-NhkGRRiaTZa0Q2JeWOd",
-				"-Nc3vvlL3y_va4dkw6_B"
+				"-Nc3vvlL3y_va4dkw6_B",
+				"-Nhh3v9mXEeAJhlsZfwB"
 			],
 			"stats": {
 				"charisma": 12,
@@ -4189,7 +4189,7 @@
 			"challenge": 14,
 			"description": "",
 			"name": "Rat Ogre",
-			"naturalArmourClass": 12,
+			"naturalArmourClass": 10,
 			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,

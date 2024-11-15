@@ -10,6 +10,11 @@ import {
 	Zone,
 } from "@common/utils/enums/index";
 
+export const STARTING_GOLD = 200;
+export const STARTING_POTIONS = 2;
+
+export const MAX_STAT_VALUE = 22;
+
 export const GOLD_MULTIPLIER = 4;
 export const REWARD_GOLD_MULTIPLIER = 10;
 export const EXPERIENCE_MULTIPLIER = 20;
@@ -22,8 +27,8 @@ export const BASE_RESTOCK_PRICE = 20;
 export const BASE_REST_PRICE = 20;
 export const REST_MULTIPLIER = 1.25;
 
-export const BASE_POTION_PRICE = 40;
-export const MAX_POTIONS = 3;
+export const BASE_POTION_PRICE = 30;
+export const MAX_POTIONS = 2;
 export const FINAL_LEVEL = 50;
 
 export const MODIFIERS = new Map([
@@ -61,7 +66,7 @@ export const MODIFIERS = new Map([
 
 export const EXPERIENCE_MAP = new Map([
 	[1, 0],
-	[2, 200],
+	[2, 50],
 	[3, 1000],
 	[4, 5000],
 	[5, 12000],

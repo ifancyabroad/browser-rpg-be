@@ -10,6 +10,7 @@ import {
 	EQUIPMENT_SLOT_TYPE_MAP,
 	EXPERIENCE_MAP,
 	MAX_POTIONS,
+	MAX_STAT_VALUE,
 	REST_MULTIPLIER,
 	SHOP_ITEMS,
 	SHOP_LEVEL,
@@ -131,7 +132,7 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 	if (!this.levelUp) {
 		throw new Error("No level up available");
 	}
-	if (this.baseStats[stat] + 1 > 25) {
+	if (this.baseStats[stat] + 1 > MAX_STAT_VALUE) {
 		throw new Error("Attribute is already at maximum level");
 	}
 	if (skill && this.levelUp.skills.includes(skill)) {
