@@ -5,7 +5,7 @@ import { Session, SessionData } from "express-session";
 import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
-import HeroModel from "@models/hero.model";
+import HeroModel, { HeroArchive } from "@models/hero.model";
 import { FINAL_LEVEL, SHOP_ITEMS, SHOP_LEVEL, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
@@ -79,6 +79,19 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 		if (battleRecord) {
 			await EnemyModel.findByIdAndDelete(battleRecord.enemy);
 		}
+
+		await HeroArchive.create(
+			characterRecord.toJSON({
+				virtuals: false,
+				depopulate: true,
+				versionKey: false,
+				transform: (doc, ret) => {
+					delete ret.__t;
+					return ret;
+				},
+			}),
+		);
+		await characterRecord.deleteOne();
 
 		return characterRecord.toJSON();
 	} catch (error) {
@@ -236,7 +249,7 @@ export async function swapWeapons(session: Session & Partial<SessionData>) {
 export async function getProgress(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const characterRecords = await HeroModel.find({ user: user.id }).sort({ kills: "desc" });
+		const characterRecords = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" });
 		if (!characterRecords.length) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No characters found");
 		}

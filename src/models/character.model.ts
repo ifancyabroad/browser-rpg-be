@@ -788,6 +788,7 @@ characterSchema.method("tickEffects", function tickEffects() {
 });
 
 const CharacterModel = model<ICharacter, ICharacterModel>("Character", characterSchema);
+const CharacterArchive = model<ICharacter, ICharacterModel>("CharacterArchive", characterSchema);
 
-export { CharacterModel };
+export { CharacterModel, CharacterArchive };
 export default CharacterModel;

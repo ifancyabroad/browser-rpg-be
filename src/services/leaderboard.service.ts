@@ -1,6 +1,6 @@
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
-import HeroModel from "@models/hero.model";
+import { HeroArchive } from "@models/hero.model";
 import { Session, SessionData } from "express-session";
 import { ILeaderboardQuery } from "@common/types/leaderboard";
 import { IUser } from "@common/types/user";
@@ -12,7 +12,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 	try {
 		const filter = JSON.parse(showUserCharacters) ? { user: user.id } : {};
 
-		const leaderboard = await HeroModel.find(filter)
+		const leaderboard = await HeroArchive.find(filter)
 			.sort({ maxBattleLevel: "desc", name: "asc" })
 			.limit(10)
 			.populate<{ user: IUser }>("user", "username")

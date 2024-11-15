@@ -6,7 +6,7 @@ import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import { IBattleInput, ITreasureInput } from "@common/types/battle";
 import BattleModel from "@models/battle.model";
-import HeroModel from "@models/hero.model";
+import HeroModel, { HeroArchive } from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import UserModel from "@models/user.model";
 import { BATTLE_MULTIPLIER_INCREMENT, REWARD_GOLD_MULTIPLIER } from "@common/utils";
@@ -15,7 +15,7 @@ import { IHero } from "@common/types/hero";
 async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
 	const enemyLevel = Game.getEnemyLevel(battleLevel);
-	const heroes = await HeroModel.aggregate<IHero>([
+	const heroes = await HeroArchive.aggregate<IHero>([
 		{ $match: { status: Status.Dead, level: enemyLevel } },
 		{ $sample: { size: 1 } },
 	]);
@@ -327,6 +327,18 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		if (!character.alive) {
 			await battle.deleteOne();
 			await enemy.deleteOne();
+			await HeroArchive.create(
+				character.toJSON({
+					virtuals: false,
+					depopulate: true,
+					versionKey: false,
+					transform: (doc, ret) => {
+						delete ret.__t;
+						return ret;
+					},
+				}),
+			);
+			await character.deleteOne();
 		}
 
 		return {
