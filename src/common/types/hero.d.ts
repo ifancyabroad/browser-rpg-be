@@ -40,6 +40,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get restockPrice(): number;
 	get restPrice(): number;
 	get potionPrice(): number;
+	get isTwoHandedWeaponEquipped(): boolean;
 
 	// Add methods here
 	addExperience(xp: number): void;

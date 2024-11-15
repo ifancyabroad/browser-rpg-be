@@ -123,6 +123,13 @@ heroSchema.virtual("potionPrice").get(function () {
 	return Math.round(BASE_POTION_PRICE * this.level * this.discountMultiplier);
 });
 
+heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
+	if (!this.equipment.hand1) {
+		return false;
+	}
+	return "size" in this.equipment.hand1 && this.equipment.hand1.size === WeaponSize.TwoHanded;
+});
+
 heroSchema.method("addExperience", function addExperience(xp: number) {
 	this.experience += xp;
 	this.checkLevelUp();
@@ -217,9 +224,7 @@ heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlo
 		throw new Error("Item not found");
 	}
 
-	const isTwoHandedWeaponEquipped =
-		"size" in this.equipment.hand1 && this.equipment.hand1.size === WeaponSize.TwoHanded;
-	const mainHand = isTwoHandedWeaponEquipped && slot === EquipmentSlot.Hand2 ? null : this.equipmentIDs.hand1;
+	const mainHand = this.isTwoHandedWeaponEquipped && slot === EquipmentSlot.Hand2 ? null : this.equipmentIDs.hand1;
 	const isTwoHandedWeapon = "size" in item && item.size === WeaponSize.TwoHanded;
 	const offHand = isTwoHandedWeapon ? null : this.equipmentIDs.hand2;
 
