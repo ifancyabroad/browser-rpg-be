@@ -252,60 +252,48 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 	try {
 		const characterClasses = GameData.getClasses();
 
-		const classes = characterClasses.map(({ id }) => id);
+		const allCharacters = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" });
 
-		const promises = classes.map((id) =>
-			HeroArchive.find({ user: user.id, characterClassID: id }).sort({ kills: "desc" }),
-		);
-
-		const data = await Promise.all(promises);
-		if (!data) {
+		if (!allCharacters) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible characters to get progress");
 		}
 
-		const progress = Promise.all(
-			characterClasses.map(async ({ name, portrait }, index) => {
-				const characters = data[index];
+		const topCharacter = allCharacters[0];
+
+		let rank = null;
+
+		if (topCharacter) {
+			rank = (await HeroArchive.find({ kills: { $gt: topCharacter.kills } }).countDocuments()) + 1;
+		}
+
+		const victories = allCharacters.filter((character) => character.kills >= FINAL_LEVEL).length;
+		const kills = allCharacters.reduce((acc, character) => acc + character.kills, 0);
+		const deaths = allCharacters.filter((character) => character.status === Status.Dead).length;
+		const days = allCharacters.reduce((acc, character) => acc + character.day, 0);
+
+		const overallProgress = allCharacters.slice(0, 3).map((character) => character.toJSON());
+
+		const classProgress = characterClasses
+			.map(({ id }) => {
+				const characters = allCharacters.filter((character) => character.characterClassID === id);
 
 				if (!characters.length) {
-					return {
-						name,
-						portrait,
-						victories: 0,
-						days: 0,
-						hero: null,
-						kills: 0,
-						deaths: 0,
-						rank: null,
-					};
+					return null;
 				}
 
-				const hero = characters[0].toJSON();
+				return characters[0].toJSON();
+			})
+			.filter((character) => character);
 
-				const rank =
-					(await HeroArchive.countDocuments({
-						maxBattleLevel: { $gt: hero.maxBattleLevel },
-					})) + 1;
-
-				const kills = characters.reduce((acc, character) => acc + character.kills, 0);
-				const deaths = characters.filter((character) => character.status === Status.Dead).length;
-				const victories = characters.filter((character) => character.kills >= FINAL_LEVEL).length;
-				const days = characters.reduce((acc, character) => acc + character.day, 0);
-
-				return {
-					name,
-					portrait,
-					victories,
-					hero,
-					kills,
-					deaths,
-					days,
-					rank,
-				};
-			}),
-		);
-
-		return progress;
+		return {
+			overallProgress,
+			classProgress,
+			rank,
+			victories,
+			kills,
+			deaths,
+			days,
+		};
 	} catch (error) {
 		console.error(`Error getProgress: ${error.message}`);
 		throw error;
