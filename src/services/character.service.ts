@@ -6,7 +6,7 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel, { HeroArchive } from "@models/hero.model";
-import { FINAL_LEVEL, SHOP_ITEMS, SHOP_LEVEL, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
+import { FINAL_LEVEL, SHOP_ITEMS, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 
@@ -40,7 +40,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			id,
 			remaining: GameData.getSkillById(id).maxUses,
 		}));
-		const availableItems = GameData.getWeightedItems(characterClass, SHOP_ITEMS, SHOP_LEVEL);
+		const availableItems = GameData.getWeightedItems(characterClass, SHOP_ITEMS, 0);
 
 		const characterRecord = await HeroModel.create({
 			user: user.id,

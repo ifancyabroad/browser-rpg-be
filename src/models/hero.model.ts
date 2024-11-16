@@ -13,7 +13,6 @@ import {
 	MAX_STAT_VALUE,
 	REST_MULTIPLIER,
 	SHOP_ITEMS,
-	SHOP_LEVEL,
 	SKILL_LEVEL_MAP,
 } from "@common/utils";
 import { Game } from "@common/utils/game/Game";
@@ -130,6 +129,10 @@ heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
 	return "size" in this.equipment.hand1 && this.equipment.hand1.size === WeaponSize.TwoHanded;
 });
 
+heroSchema.virtual("shopLevel").get(function () {
+	return Math.floor(this.kills / 10);
+});
+
 heroSchema.method("addExperience", function addExperience(xp: number) {
 	this.experience += xp;
 	this.checkLevelUp();
@@ -168,7 +171,7 @@ heroSchema.method("rest", function rest() {
 });
 
 heroSchema.method("restock", function restock() {
-	this.set("availableItemIDs", GameData.getWeightedItems(this.characterClassID, SHOP_ITEMS, SHOP_LEVEL));
+	this.set("availableItemIDs", GameData.getWeightedItems(this.characterClassID, SHOP_ITEMS, this.shopLevel));
 });
 
 heroSchema.method("buyItem", function buyItem(id: string) {
