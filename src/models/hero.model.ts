@@ -119,7 +119,8 @@ heroSchema.virtual("restPrice").get(function () {
 });
 
 heroSchema.virtual("potionPrice").get(function () {
-	return Math.round(BASE_POTION_PRICE * this.level * this.discountMultiplier);
+	const zoneLevel = Math.ceil((this.maxBattleLevel + 1) / 10);
+	return Math.round(BASE_POTION_PRICE * zoneLevel * this.discountMultiplier);
 });
 
 heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
@@ -130,7 +131,7 @@ heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
 });
 
 heroSchema.virtual("shopLevel").get(function () {
-	return Math.floor(this.kills / 10);
+	return Math.floor(this.maxBattleLevel / 10);
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {
