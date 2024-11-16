@@ -2961,7 +2961,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgyQeYWKGMfv97Ojh0", "-OAc58blrXjj8BuSCn6r"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OAc58blrXjj8BuSCn6r", "-NhgpxFRvn_sOrij-K0F"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 14,
@@ -5481,7 +5481,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3zPER2-voArWHwNy9?alt=media&token=6edea4db-a6d1-4951-8d0a-a67acfb4e788",
 			"level": 2,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Lighting Bolt",
 			"price": 280
 		},
@@ -5499,7 +5499,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc4-UVARP8jFmsiuXC9?alt=media&token=07349932-ea92-4da5-abf5-892cb4b16ba4",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Fireball",
 			"price": 1000
 		},
@@ -6654,7 +6654,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh5ROOn89jDWYu49HW?alt=media&token=f5d32b27-11b4-4518-8392-d649d50bdf81",
 			"level": 3,
-			"maxUses": 5,
+			"maxUses": 4,
 			"name": "Crushing Fist",
 			"price": 0
 		},
@@ -6718,7 +6718,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh6cp8cTNG_6h4WvSN?alt=media&token=f9448ffc-e20a-4c5b-8ccc-a19020ea2999",
 			"level": 4,
-			"maxUses": 5,
+			"maxUses": 2,
 			"name": "Chain Lightning",
 			"price": 0
 		},
