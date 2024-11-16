@@ -342,12 +342,11 @@ characterSchema.method("getActiveEffectBonus", function getActiveEffectBonus(typ
 });
 
 characterSchema.method("getAttribute", function getAttribute(stat: Stat) {
-	return Math.min(
+	const value =
 		this.baseStats[stat] +
-			this.getEquipmentBonus(PropertyType.Stat, stat) +
-			this.getActiveEffectBonus(PropertyType.Stat, stat),
-		30,
-	);
+		this.getEquipmentBonus(PropertyType.Stat, stat) +
+		this.getActiveEffectBonus(PropertyType.Stat, stat);
+	return Math.min(Math.max(value, 0), 30);
 });
 
 characterSchema.method("getDamageBonus", function getDamageBonus(type: DamageType) {
