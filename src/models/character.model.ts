@@ -342,10 +342,11 @@ characterSchema.method("getActiveEffectBonus", function getActiveEffectBonus(typ
 });
 
 characterSchema.method("getAttribute", function getAttribute(stat: Stat) {
-	return (
+	return Math.min(
 		this.baseStats[stat] +
-		this.getEquipmentBonus(PropertyType.Stat, stat) +
-		this.getActiveEffectBonus(PropertyType.Stat, stat)
+			this.getEquipmentBonus(PropertyType.Stat, stat) +
+			this.getActiveEffectBonus(PropertyType.Stat, stat),
+		30,
 	);
 });
 
@@ -402,7 +403,7 @@ characterSchema.method("checkConstitution", function checkConstitution() {
 characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
 	const weaponEffect = effect as IWeaponDamageEffectData;
 	const damage = Game.d4;
-	const modifier = Game.getModifier(this.stats.strength);
+	const modifier = Game.getModifier(this.stats.strength) ?? 0;
 	const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
 	const hitType = this.getHitType(effectTarget.armourClass);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
