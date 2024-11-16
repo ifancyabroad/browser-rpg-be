@@ -9,14 +9,15 @@ import BattleModel from "@models/battle.model";
 import HeroModel, { HeroArchive } from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import UserModel from "@models/user.model";
-import { BATTLE_MULTIPLIER_INCREMENT, REWARD_GOLD_MULTIPLIER } from "@common/utils";
+import { BATTLE_MULTIPLIER_INCREMENT, MAX_CHARACTER_LEVEL, REWARD_GOLD_MULTIPLIER } from "@common/utils";
 import { IHero } from "@common/types/hero";
 
 async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
 	const enemyLevel = Game.getEnemyLevel(battleLevel);
+	const level = enemyLevel > MAX_CHARACTER_LEVEL ? MAX_CHARACTER_LEVEL : enemyLevel;
 	const heroes = await HeroArchive.aggregate<IHero>([
-		{ $match: { status: Status.Dead, level: enemyLevel } },
+		{ $match: { status: Status.Dead, level } },
 		{ $sample: { size: 1 } },
 	]);
 	const hero = heroes[0];

@@ -30,6 +30,8 @@ export const BASE_POTION_PRICE = 30;
 export const MAX_POTIONS = 3;
 export const FINAL_LEVEL = 50;
 
+export const MAX_CHARACTER_LEVEL = 10;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],
