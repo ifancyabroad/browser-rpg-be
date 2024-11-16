@@ -13,7 +13,7 @@ import {
 	retireActiveCharacter,
 	swapWeapons,
 } from "@services/character.service";
-import { RequestCharacter, RequestItem, RequestLevelUp } from "@common/types/character";
+import { RequestCharacter, RequestItem, RequestLevelUp, RequestPotion } from "@common/types/character";
 import { CharacterCreateDto } from "@common/validation/character";
 import { GameData } from "@common/utils/game/GameData";
 
@@ -91,8 +91,8 @@ characterRouter.post(
 characterRouter.post(
 	"/buyPotion",
 	middleware.userAuth,
-	expressAsyncHandler(async (req: Request, res: Response) => {
-		const character = await buyPotion(req.session);
+	expressAsyncHandler(async (req: RequestPotion, res: Response) => {
+		const character = await buyPotion(req.body, req.session);
 		res.json({ character });
 	}),
 );

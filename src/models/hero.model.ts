@@ -238,17 +238,19 @@ heroSchema.method("equipItem", function equipItem(id: string, slot: EquipmentSlo
 	this.checkConstitution();
 });
 
-heroSchema.method("buyPotion", function buyPotion() {
-	if (this.potions >= MAX_POTIONS) {
+heroSchema.method("buyPotion", function buyPotion(quantity: number) {
+	if (this.potions + quantity > MAX_POTIONS) {
 		throw new Error("Potion limit reached");
 	}
 
-	if (this.potionPrice > this.gold) {
+	const price = this.potionPrice * quantity;
+
+	if (price > this.gold) {
 		throw new Error("Not enough gold");
 	}
 
-	this.gold -= this.potionPrice;
-	this.potions++;
+	this.gold -= price;
+	this.potions += quantity;
 });
 
 heroSchema.method("swapWeapons", function swapWeapons() {

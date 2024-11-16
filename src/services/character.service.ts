@@ -1,4 +1,4 @@
-import { IBuyItemInput, ICharacterInput, ILevelUpInput } from "@common/types/character";
+import { IBuyItemInput, IBuyPotionInput, ICharacterInput, ILevelUpInput } from "@common/types/character";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import { Session, SessionData } from "express-session";
@@ -153,7 +153,8 @@ export async function restockItems(session: Session & Partial<SessionData>) {
 	}
 }
 
-export async function buyPotion(session: Session & Partial<SessionData>) {
+export async function buyPotion(potion: IBuyPotionInput, session: Session & Partial<SessionData>) {
+	const { quantity } = potion;
 	const { user } = session;
 	try {
 		const characterRecord = await HeroModel.findOne({
@@ -165,7 +166,7 @@ export async function buyPotion(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to buy potion");
 		}
 
-		characterRecord.buyPotion();
+		characterRecord.buyPotion(quantity);
 		const character = await characterRecord.save();
 
 		return character.toJSON();

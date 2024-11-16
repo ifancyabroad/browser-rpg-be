@@ -138,3 +138,11 @@ export interface ILevelUpInput {
 export interface RequestLevelUp extends Request {
 	levelUp: ILevelUpInput;
 }
+
+export interface IBuyPotionInput {
+	quantity: number;
+}
+
+export interface RequestPotion extends Request {
+	potion: IBuyPotionInput;
+}

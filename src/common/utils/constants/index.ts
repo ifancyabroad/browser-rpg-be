@@ -28,7 +28,7 @@ export const BASE_REST_PRICE = 20;
 export const REST_MULTIPLIER = 1.25;
 
 export const BASE_POTION_PRICE = 30;
-export const MAX_POTIONS = 2;
+export const MAX_POTIONS = 3;
 export const FINAL_LEVEL = 50;
 
 export const MODIFIERS = new Map([
