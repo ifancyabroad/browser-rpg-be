@@ -11,7 +11,7 @@ import {
 } from "@common/utils/enums/index";
 
 export const STARTING_GOLD = 200;
-export const STARTING_POTIONS = 2;
+export const STARTING_POTIONS = 3;
 
 export const MAX_STAT_VALUE = 22;
 
