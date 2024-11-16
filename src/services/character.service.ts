@@ -250,38 +250,60 @@ export async function swapWeapons(session: Session & Partial<SessionData>) {
 export async function getProgress(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const characterRecords = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" });
-		if (!characterRecords.length) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No characters found");
-		}
-
 		const characterClasses = GameData.getClasses();
 
-		const progress = characterClasses.map(({ id, name, portrait }) => {
-			const characters = characterRecords.filter((character) => character.characterClassID === id);
-			const topHero = characters[0];
-			const hero = topHero
-				? {
-						name: topHero.name,
-						kills: topHero.kills,
-						level: topHero.level,
-						status: topHero.status,
-						slainBy: topHero.slainBy,
-				  }
-				: null;
-			const kills = characters.reduce((acc, character) => acc + character.kills, 0);
-			const deaths = characters.filter((character) => character.status === Status.Dead).length;
-			const victories = characters.filter((character) => character.kills >= FINAL_LEVEL).length;
+		const classes = characterClasses.map(({ id }) => id);
 
-			return {
-				name,
-				portrait,
-				victories,
-				hero,
-				kills,
-				deaths,
-			};
-		});
+		const promises = classes.map((id) =>
+			HeroArchive.find({ user: user.id, characterClassID: id }).sort({ kills: "desc" }),
+		);
+
+		const data = await Promise.all(promises);
+		if (!data) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible characters to get progress");
+		}
+
+		const progress = Promise.all(
+			characterClasses.map(async ({ name, portrait }, index) => {
+				const characters = data[index];
+
+				if (!characters.length) {
+					return {
+						name,
+						portrait,
+						victories: 0,
+						days: 0,
+						hero: null,
+						kills: 0,
+						deaths: 0,
+						rank: null,
+					};
+				}
+
+				const hero = characters[0].toJSON();
+
+				const rank =
+					(await HeroArchive.countDocuments({
+						maxBattleLevel: { $gt: hero.maxBattleLevel },
+					})) + 1;
+
+				const kills = characters.reduce((acc, character) => acc + character.kills, 0);
+				const deaths = characters.filter((character) => character.status === Status.Dead).length;
+				const victories = characters.filter((character) => character.kills >= FINAL_LEVEL).length;
+				const days = characters.reduce((acc, character) => acc + character.day, 0);
+
+				return {
+					name,
+					portrait,
+					victories,
+					hero,
+					kills,
+					deaths,
+					days,
+					rank,
+				};
+			}),
+		);
 
 		return progress;
 	} catch (error) {
