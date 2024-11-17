@@ -271,17 +271,44 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 		const deaths = allCharacters.filter((character) => character.status === Status.Dead).length;
 		const days = allCharacters.reduce((acc, character) => acc + character.day, 0);
 
-		const overallProgress = allCharacters.slice(0, 3).map((character) => HeroArchive.hydrate(character).toJSON());
+		const overallProgress = allCharacters.slice(0, 3).map((character) => {
+			const characterClass = characterClasses.find(({ id }) => id === character.characterClassID);
+			return {
+				id: character._id,
+				name: character.name,
+				level: character.kills,
+				kills: character.kills,
+				day: character.day,
+				status: character.status,
+				maxBattleLevel: character.maxBattleLevel,
+				characterClass,
+				slainBy: character.slainBy,
+			};
+		});
 
 		const classProgress = characterClasses
-			.map(({ id }) => {
-				const characters = allCharacters.filter((character) => character.characterClassID === id);
+			.map((characterClass) => {
+				const characters = allCharacters.filter(
+					(character) => character.characterClassID === characterClass.id,
+				);
 
 				if (!characters.length) {
 					return null;
 				}
 
-				return HeroArchive.hydrate(characters[0]).toJSON();
+				const character = characters[0];
+
+				return {
+					id: character._id,
+					name: character.name,
+					level: character.kills,
+					kills: character.kills,
+					day: character.day,
+					status: character.status,
+					maxBattleLevel: character.maxBattleLevel,
+					characterClass,
+					slainBy: character.slainBy,
+				};
 			})
 			.filter((character) => character);
 
@@ -296,6 +323,24 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 		};
 	} catch (error) {
 		console.error(`Error getProgress: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function getCharacterByID(session: Session & Partial<SessionData>, id: string) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroArchive.findById(id);
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Character not found");
+		}
+		if (characterRecord.user.toString() !== user.id) {
+			throw createHttpError(httpStatus.FORBIDDEN, "Forbidden");
+		}
+
+		return characterRecord.toJSON();
+	} catch (error) {
+		console.error(`Error getCharacterByID: ${error.message}`);
 		throw error;
 	}
 }
