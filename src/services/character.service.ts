@@ -252,7 +252,7 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 	try {
 		const characterClasses = GameData.getClasses();
 
-		const allCharacters = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" });
+		const allCharacters = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" }).lean();
 
 		if (!allCharacters) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible characters to get progress");
@@ -263,7 +263,7 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 		let rank = null;
 
 		if (topCharacter) {
-			rank = (await HeroArchive.find({ kills: { $gt: topCharacter.kills } }).countDocuments()) + 1;
+			rank = (await HeroArchive.countDocuments({ kills: { $gt: topCharacter.kills } })) + 1;
 		}
 
 		const victories = allCharacters.filter((character) => character.kills >= FINAL_LEVEL).length;
@@ -271,7 +271,7 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 		const deaths = allCharacters.filter((character) => character.status === Status.Dead).length;
 		const days = allCharacters.reduce((acc, character) => acc + character.day, 0);
 
-		const overallProgress = allCharacters.slice(0, 3).map((character) => character.toJSON());
+		const overallProgress = allCharacters.slice(0, 3).map((character) => HeroArchive.hydrate(character).toJSON());
 
 		const classProgress = characterClasses
 			.map(({ id }) => {
@@ -281,7 +281,7 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 					return null;
 				}
 
-				return characters[0].toJSON();
+				return HeroArchive.hydrate(characters[0]).toJSON();
 			})
 			.filter((character) => character);
 
