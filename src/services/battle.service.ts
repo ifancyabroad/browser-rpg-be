@@ -255,8 +255,7 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 		battleRecord.state = BattleState.Complete;
 		characterRecord.state = State.Idle;
 
-		const character = await characterRecord.save();
-		const battle = await battleRecord.save();
+		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
 		await EnemyModel.findByIdAndDelete(battle.enemy);
 		await battle.deleteOne();
@@ -321,13 +320,15 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			characterRecord.battleWon(battleRecord);
 		}
 
-		const character = await characterRecord.save();
-		const enemy = await enemyRecord.save();
-		const battle = await battleRecord.save();
+		const [character, enemy, battle] = await Promise.all([
+			characterRecord.save(),
+			enemyRecord.save(),
+			battleRecord.save(),
+		]);
 
 		if (!character.alive) {
-			await battle.deleteOne();
-			await enemy.deleteOne();
+			await Promise.all([battle.deleteOne(), enemy.deleteOne(), character.deleteOne()]);
+
 			await HeroArchive.create(
 				character.toJSON({
 					virtuals: false,
@@ -339,7 +340,6 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 					},
 				}),
 			);
-			await character.deleteOne();
 		}
 
 		return {
@@ -388,8 +388,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 
 		battleRecord.set("treasureItemIDs", []);
 
-		const character = await characterRecord.save();
-		const battle = await battleRecord.save();
+		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
 		return {
 			battle: battle.toJSON(),
