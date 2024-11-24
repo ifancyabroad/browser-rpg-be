@@ -153,11 +153,8 @@ battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy:
 });
 
 battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
-	if (enemy.boss) {
+	if (enemy.boss || enemy.hero) {
 		this.treasureItemIDs = GameData.getWeightedItems(hero.characterClassID, 2, enemy.level);
-	}
-	if (enemy.hero) {
-		this.treasureItemIDs = GameData.getWeightedItems(hero.characterClassID, 2);
 	}
 });
 

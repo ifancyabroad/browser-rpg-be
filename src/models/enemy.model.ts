@@ -146,7 +146,8 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 	});
 
 	if (skills.length > 1 && this.tactics === Tactics.Caster) {
-		return getRandomElement(skills.filter((skill) => skill.name === "Attack"));
+		const filteredSkills = skills.filter((skill) => skill.name !== "Attack");
+		return getRandomElement(filteredSkills);
 	}
 
 	return getRandomElement(skills);
