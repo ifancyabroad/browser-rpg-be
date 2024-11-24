@@ -13,7 +13,6 @@ export interface IEnemy extends ICharacter {
 	username?: string;
 	tactics: Tactics;
 	naturalArmourClass: number;
-	naturalHitChance: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;
 	naturalDamageType: DamageType;

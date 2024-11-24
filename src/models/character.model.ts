@@ -1,5 +1,6 @@
 import { Schema, Types } from "mongoose";
 import {
+	ArmourType,
 	AuxiliaryEffect,
 	AuxiliaryStat,
 	DamageType,
@@ -322,9 +323,19 @@ characterSchema.virtual("isBleeding").get(function () {
 });
 
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
-	return this.equipmentAsArray
-		.map((item) => "armourClass" in item && item.armourClass)
-		.reduce((n, value) => n + value, 0);
+	const armour = this.equipment.body;
+	const modifier = Game.getModifier(this.stats.dexterity) ?? 0;
+	const defaultArmourClass = 10;
+
+	if (!armour || !("armourType" in armour)) {
+		return defaultArmourClass + modifier;
+	} else if (armour.armourType === ArmourType.Heavy) {
+		return armour.armourClass;
+	} else if (armour.armourType === ArmourType.Medium) {
+		return armour.armourClass + Math.min(2, modifier);
+	} else {
+		return armour.armourClass + modifier;
+	}
 });
 
 characterSchema.method("getEquipmentBonus", function getEquipmentBonus(type: PropertyType, name: string) {
@@ -368,8 +379,7 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 	);
 });
 
-characterSchema.method("getHitType", function getHitType(armourClass: number) {
-	const modifier = Game.getModifier(this.stats.dexterity);
+characterSchema.method("getHitType", function getHitType(armourClass: number, modifier: number) {
 	const roll = Game.d20;
 	const hitValue = Math.round(roll + modifier + this.hitBonus);
 	const critValue = Math.round(roll + this.critBonus);
@@ -404,7 +414,7 @@ characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, e
 	const damage = Game.d4;
 	const modifier = Game.getModifier(this.stats.strength) ?? 0;
 	const bonusMultiplier = this.getDamageBonus(DamageType.Crushing) / 100 + 1;
-	const hitType = this.getHitType(effectTarget.armourClass);
+	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
 	const resistance = effectTarget.getResistance(DamageType.Crushing) / 100;
 	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
@@ -430,16 +440,17 @@ characterSchema.method(
 	function getWeaponDamage({ effect, effectTarget }: IEffectData, weapon: IWeaponDataWithID) {
 		const weaponEffect = effect as IWeaponDamageEffectData;
 		const damage = Game.dx(weapon.min, weapon.max);
-		const isMainhand = weapon.slot === EquipmentSlot.Hand1;
-		const stat = isMainhand ? Game.getWeaponStat(weapon.weaponType as WeaponType) : null;
+		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
 		const modifier = Game.getModifier(this.stats[stat]) ?? 0;
+		const isMainhand = weapon.slot === EquipmentSlot.Hand1;
+		const damageModifier = isMainhand ? modifier : 0;
 		const bonusMultiplier = this.getDamageBonus(weapon.damageType as DamageType) / 100 + 1;
-		const hitType = this.getHitType(effectTarget.armourClass);
+		const hitType = this.getHitType(effectTarget.armourClass, modifier);
 		const hitMultiplier = Game.getHitMultiplier(hitType);
 		const resistance = effectTarget.getResistance(weapon.damageType) / 100;
 		const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
 		const value = Math.round(
-			(damage + modifier) *
+			(damage + damageModifier) *
 				weaponEffect.multiplier *
 				bonusMultiplier *
 				hitMultiplier *

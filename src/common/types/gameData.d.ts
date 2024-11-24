@@ -31,7 +31,6 @@ export interface IEnemyData {
 	stats: TStats;
 	tactics: Tactics;
 	naturalArmourClass: number;
-	naturalHitChance: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;
 	naturalDamageType: DamageType;

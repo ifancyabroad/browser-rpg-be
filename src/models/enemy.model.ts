@@ -49,12 +49,6 @@ const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 			max: 30,
 			required: true,
 		},
-		naturalHitChance: {
-			type: Number,
-			min: 0,
-			max: 30,
-			required: true,
-		},
 		naturalMinDamage: {
 			type: Number,
 			min: 0,
@@ -83,16 +77,12 @@ enemySchema.virtual("armourClass").get(function () {
 	);
 });
 
-enemySchema.virtual("hitBonus").get(function () {
-	return this.naturalHitChance + this.getAuxiliaryStat(AuxiliaryStat.HitChance);
-});
-
 enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
 	const weaponEffect = effect as IWeaponDamageEffectData;
 	const damage = Game.dx(this.naturalMinDamage, this.naturalMaxDamage);
 	const modifier = Game.getModifier(this.stats.strength);
 	const bonusMultiplier = this.getDamageBonus(this.naturalDamageType) / 100 + 1;
-	const hitType = this.getHitType(effectTarget.armourClass);
+	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
 	const resistance = effectTarget.getResistance(this.naturalDamageType) / 100;
 	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;

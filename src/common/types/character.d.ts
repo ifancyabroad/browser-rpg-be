@@ -83,7 +83,7 @@ export interface ICharacterMethods {
 	getDamageBonus(type: DamageType): number;
 	getResistance(type: DamageType): number;
 	getAuxiliaryStat(type: AuxiliaryStat): number;
-	getHitType(armourClass: number): HitType;
+	getHitType(armourClass: number, modifier: number): HitType;
 	setHitPoints(value: number): void;
 	getUnarmedDamage(data: IEffectData): number;
 	getWeaponDamage(data: IEffectData, weapon: IWeaponDataWithID): IDamageEffect;
