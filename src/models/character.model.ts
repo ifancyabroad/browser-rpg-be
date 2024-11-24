@@ -325,10 +325,9 @@ characterSchema.virtual("isBleeding").get(function () {
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
 	const armour = this.equipment.body;
 	const modifier = Game.getModifier(this.stats.dexterity) ?? 0;
-	const defaultArmourClass = 10;
 
 	if (!armour || !("armourType" in armour)) {
-		return defaultArmourClass + modifier;
+		return 0; // Make sure monsters don't get a bonus from not having armour
 	} else if (armour.armourType === ArmourType.Heavy) {
 		return armour.armourClass;
 	} else if (armour.armourType === ArmourType.Medium) {
