@@ -7,6 +7,7 @@ import {
 	EquipmentType,
 	SkillClass,
 	Stat,
+	Tactics,
 	Target,
 	WeaponSize,
 	WeaponType,
@@ -28,7 +29,9 @@ export interface IEnemyData {
 	boss: boolean;
 	skills: string[];
 	stats: TStats;
+	tactics: Tactics;
 	naturalArmourClass: number;
+	naturalHitChance: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;
 	naturalDamageType: DamageType;

@@ -28,7 +28,7 @@ export const REST_MULTIPLIER = 1.25;
 
 export const BASE_POTION_PRICE = 40;
 export const MAX_POTIONS = 3;
-export const FINAL_LEVEL = 50;
+export const FINAL_LEVEL = 100;
 
 export const MAX_CHARACTER_LEVEL = 10;
 
@@ -72,10 +72,10 @@ export const EXPERIENCE_MAP = new Map([
 	[4, 5000],
 	[5, 12000],
 	[6, 20000],
-	[7, 30000],
-	[8, 45000],
-	[9, 60000],
-	[10, 80000],
+	[7, 35000],
+	[8, 55000],
+	[9, 80000],
+	[10, 100000],
 ]);
 
 export const SKILL_LEVELS = new Map([
@@ -145,7 +145,18 @@ export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Miss, 0],
 ]);
 
-export const ZONES = [Zone.Forest, Zone.Desert, Zone.Hills, Zone.Ocean, Zone.Volcano];
+export const ZONES = [
+	Zone.Forest,
+	Zone.Castle,
+	Zone.Desert,
+	Zone.Plains,
+	Zone.Hills,
+	Zone.Ocean,
+	Zone.Volcano,
+	Zone.Mountain,
+	Zone.Dungeon,
+	Zone.Tower,
+];
 
 export const ITEM_WEIGHT_LEVELS = [
 	{

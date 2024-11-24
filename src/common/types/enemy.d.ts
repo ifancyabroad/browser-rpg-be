@@ -2,7 +2,7 @@ import { Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero } from "./hero";
 import { ISkillDataWithID } from "./gameData";
-import { DamageType, Zone } from "@common/utils";
+import { DamageType, Tactics, Zone } from "@common/utils";
 
 export interface IEnemy extends ICharacter {
 	image: string;
@@ -11,7 +11,9 @@ export interface IEnemy extends ICharacter {
 	boss: boolean;
 	hero: boolean;
 	username?: string;
+	tactics: Tactics;
 	naturalArmourClass: number;
+	naturalHitChance: number;
 	naturalMinDamage: number;
 	naturalMaxDamage: number;
 	naturalDamageType: DamageType;
