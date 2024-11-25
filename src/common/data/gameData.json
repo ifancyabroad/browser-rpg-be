@@ -50,7 +50,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				}
 			],
 			"type": "shield"
@@ -115,9 +115,9 @@
 			"price": 20,
 			"properties": [
 				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 1
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
 				}
 			],
 			"type": "helmet"
@@ -162,7 +162,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 2
+					"value": 1
 				}
 			],
 			"type": "shield"
@@ -468,7 +468,7 @@
 				{
 					"name": "fire",
 					"type": "damage",
-					"value": 50
+					"value": 100
 				}
 			],
 			"type": "amulet"
@@ -551,9 +551,9 @@
 			"price": 70,
 			"properties": [
 				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 1
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
 				}
 			],
 			"type": "belt"
@@ -628,7 +628,7 @@
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 3
+					"value": 4
 				}
 			],
 			"type": "belt"
@@ -758,7 +758,7 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 10
+					"value": 20
 				}
 			],
 			"type": "boots"
@@ -1236,9 +1236,14 @@
 			"price": 260,
 			"properties": [
 				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 2
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
 				}
 			],
 			"type": "helmet"
@@ -1308,7 +1313,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEMdeX59k0__7Q0g8z?alt=media&token=eaa53a09-0f76-43c4-b485-f44b16353a52",
 			"level": 4,
 			"name": "Horrifying Mask",
-			"price": 1220,
+			"price": 1320,
 			"properties": [
 				{
 					"name": "charisma",
@@ -1328,7 +1333,7 @@
 				{
 					"name": "necrotic",
 					"type": "damage",
-					"value": 20
+					"value": 40
 				}
 			],
 			"type": "helmet"
@@ -1338,7 +1343,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEN4ov5P7JEqbkdb4A?alt=media&token=81347577-2c67-40e1-a8d1-036065d518d0",
 			"level": 4,
 			"name": "Gold Helm",
-			"price": 1620,
+			"price": 1520,
 			"properties": [
 				{
 					"name": "fire",
@@ -1358,11 +1363,6 @@
 				{
 					"name": "constitution",
 					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
 					"value": 2
 				}
 			],
@@ -1384,11 +1384,6 @@
 					"name": "dexterity",
 					"type": "stat",
 					"value": 2
-				},
-				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 2
 				}
 			],
 			"type": "helmet"
@@ -1409,11 +1404,6 @@
 					"name": "charisma",
 					"type": "stat",
 					"value": 2
-				},
-				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 2
 				}
 			],
 			"type": "helmet"
@@ -1423,7 +1413,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEQK4lqKJ7YcxpVgbR?alt=media&token=d7f24651-2e98-4d79-8a6c-3f3c6aab152e",
 			"level": 4,
 			"name": "Gladiator's Visor",
-			"price": 1650,
+			"price": 1620,
 			"properties": [
 				{
 					"name": "slashing",
@@ -1443,11 +1433,6 @@
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
 					"value": 2
 				}
 			],
@@ -1478,7 +1463,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				},
 				{
 					"name": "fire",
@@ -1498,7 +1483,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 4
+					"value": 3
 				}
 			],
 			"type": "shield"
@@ -1513,7 +1498,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 2
+					"value": 1
 				},
 				{
 					"name": "cold",
@@ -1548,7 +1533,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 4
+					"value": 3
 				}
 			],
 			"type": "shield"
@@ -1563,7 +1548,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 5
+					"value": 4
 				},
 				{
 					"name": "dexterity",
@@ -1588,7 +1573,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				},
 				{
 					"name": "slashing",
@@ -1623,7 +1608,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 2
+					"value": 1
 				},
 				{
 					"name": "lightning",
@@ -1643,7 +1628,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				},
 				{
 					"name": "strength",
@@ -1668,7 +1653,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 4
+					"value": 3
 				},
 				{
 					"name": "cold",
@@ -1698,7 +1683,7 @@
 				{
 					"name": "armourClass",
 					"type": "auxiliaryStat",
-					"value": 2
+					"value": 1
 				},
 				{
 					"name": "strength",
@@ -1818,7 +1803,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEj39PbQX8tVy6BGOU?alt=media&token=3e03031d-7e39-4865-b30c-4f4eace7e766",
 			"level": 4,
 			"name": "Ring of Shadows",
-			"price": 1530,
+			"price": 1700,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -2772,7 +2757,7 @@
 					"value": 1
 				},
 				{
-					"name": "armourClass",
+					"name": "critChance",
 					"type": "auxiliaryStat",
 					"value": 1
 				}
@@ -2823,10 +2808,10 @@
 				"body": "-Nc44lyRjk-mHNox3H_P",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
-			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2FfallenImage?alt=media&token=1d836bd4-8d8c-4233-9774-8155ea7a5401",
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2FfallenImage?alt=media&token=6cb8b2c3-1472-4e0a-afaa-f8117f518617",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Ficon?alt=media&token=7bca006c-9465-45e4-a6dd-235d2344577e",
 			"name": "Fighter",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=3b650172-1211-4011-a7df-8093686b6f03",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2Fportrait?alt=media&token=9d4a4f8d-bc47-4fd0-9a62-764155472341",
 			"skillClasses": ["warrior"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE"],
 			"stats": {
@@ -2846,10 +2831,10 @@
 				"body": "-NMEwPxI9DXom0AaME0Z",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
-			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2FfallenImage?alt=media&token=a8376f9d-7b34-485f-9494-65896d52aa49",
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2FfallenImage?alt=media&token=7cfc636a-f564-426c-9349-cb2882dff972",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Ficon?alt=media&token=17a65949-4a70-4c8a-9c6a-398da73a2806",
 			"name": "Thief",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=f1af6fcd-4b1b-4307-80a9-b8d0e3fe223f",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2Fportrait?alt=media&token=de94ca09-ad4c-475c-90e1-4a366208dcfd",
 			"skillClasses": ["rogue"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqbgWmfMqnnjnXn-Hp"],
 			"stats": {
@@ -2869,10 +2854,10 @@
 				"body": "-Nm2HibRx3V8P1isPlRf",
 				"hand1": "-Nc46CPWJz2atC_uII9i"
 			},
-			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2FfallenImage?alt=media&token=033d19d1-bd33-418e-8c86-b7f31374ea12",
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2FfallenImage?alt=media&token=98d7f254-0e73-44af-9005-456b035ff8bc",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Ficon?alt=media&token=0db78c8a-5bc9-473c-90e8-0c93954bff81",
 			"name": "Mage",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=3fc6cef2-f677-429e-989c-2ba880130402",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_P0pcakZhKbNDftKoc%2Fportrait?alt=media&token=1d85af91-3177-4f6f-99eb-c2a96c88810e",
 			"skillClasses": ["mage"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nhh50tlZXmwsJcskPE8"],
 			"stats": {
@@ -2894,10 +2879,9 @@
 			"name": "Runtling",
 			"naturalArmourClass": 7,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=bedc756e-9c3f-4345-989d-ef622a8efbfd",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKsyKI9WEI82s5dZFJ_?alt=media&token=45711dab-2627-4d69-9314-5ebe9d443818",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2930,10 +2914,9 @@
 			"name": "Skeleton",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=b320253c-e6f2-4352-9845-9faf861d0147",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKszEMMl4YFhX86psew?alt=media&token=31bf00b9-f9c9-4d51-84d5-a1cec41c5392",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -2969,10 +2952,9 @@
 			"name": "Grotesque",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 2,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=7a794203-ee14-41e2-b34d-506c5009c3d6",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt-VrmU-I7ve15fvwC?alt=media&token=a6fea0d8-4d7a-4b4d-88e9-e61124c5bbf4",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3005,10 +2987,9 @@
 			"name": "Stitched Ogre",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=92953e58-8a6f-4292-83dd-f5b773fe8757",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0FqDCM_Ms7YFjWhj?alt=media&token=3eadfc3b-9be7-46d3-ae83-2e76394cd478",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3046,10 +3027,9 @@
 			"name": "Skeleton Warrior",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=db6a2a45-e0cf-4625-a667-45eff18f3dc5",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt0uevyBhRIvkURXy4?alt=media&token=0bfa0d86-13d7-40b7-abae-50214d4ed2ee",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3063,7 +3043,7 @@
 				"radiant": -50,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NJQ2hml_9m6iHzAfES5", "-NJLRtY1B4JdDuOGq2sd"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 15,
@@ -3082,10 +3062,9 @@
 			"name": "Abomination",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 2,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=1da27a17-de16-4a5d-bc89-87a2b8680003",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NKt3ujmy2tXghwqSM9o?alt=media&token=523b97cb-dd08-4c3c-a1dd-e44f82e0fc54",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3118,29 +3097,28 @@
 			"name": "Drakus the Awakened",
 			"naturalArmourClass": 22,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 6,
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 6,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=5bc0274e-8091-4718-8c92-bc6e4c941eb9",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=c2519452-b55a-4e83-8e7f-cc06ec866d16",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
+				"cold": 25,
+				"crushing": 25,
 				"fire": 100,
 				"lighting": 50,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 50,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
 				"-Nhgy1Vmh0FTTPCWBory",
-				"-NZqUWZDeys5x3n8eLNA",
 				"-O9ePhvfJJr-bhi0Iial",
-				"-OCIBl5fB-L23FChaK9-"
+				"-OCIBl5fB-L23FChaK9-",
+				"-OCJ653IrMrMC4NtDiZ0"
 			],
 			"stats": {
 				"charisma": 21,
@@ -3160,10 +3138,9 @@
 			"name": "Worg",
 			"naturalArmourClass": 8,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=903a2553-899d-4a18-b085-102073bdc281",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NZMCIuuab0gVQ5bMj6j?alt=media&token=79233684-7c04-4e93-8ecb-d2c46fa45b07",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3200,10 +3177,9 @@
 			"name": "Hobgoblin",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=e0b102b0-3e75-421e-9731-84df2f6b3c8e",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNI7tNRD7gPFbOyq-?alt=media&token=4b588556-067e-4192-919e-3f097f498307",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3236,10 +3212,9 @@
 			"name": "Chomper",
 			"naturalArmourClass": 6,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=d1404b6d-eb58-432b-b6e4-6914b35deda5",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTNbCiHpz6PPDP3_Qm?alt=media&token=779abe20-411d-4a21-820f-7692aa8dfceb",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3272,10 +3247,9 @@
 			"name": "Basilisk",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=126adbe6-efbb-4881-b36d-1fc189ea8620",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTPWvUSrJHK-FcH_R1?alt=media&token=922dafba-7a03-44fe-99c6-68631296b765",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3311,10 +3285,9 @@
 			"name": "Pygmy",
 			"naturalArmourClass": 6,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=164ccea4-a2d9-49bb-8406-4790b57dd727",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTZVlj1jll9-HF8fPh?alt=media&token=b633df2e-a7a4-4a31-a60d-b2e81fb622e3",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3347,10 +3320,9 @@
 			"name": "Ghoul",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=3f9719e2-7393-4f3a-a0ad-b43610fb54b4",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgT_UhmZUanGpfiYwvB?alt=media&token=1382fd96-b9af-43da-ba47-cf0bfc802347",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3383,10 +3355,9 @@
 			"name": "Shrieker",
 			"naturalArmourClass": 6,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=480bb546-a818-4634-8d7d-44186344a4bc",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTl1sgx8KyoiRbtpyg?alt=media&token=98536318-247f-4573-9955-b9e4219d9614",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3419,10 +3390,9 @@
 			"name": "Dread Serpent",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=d5fa2385-7273-49fe-ae4b-9c4121e442d9",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=25a7cb23-8592-4476-b64f-325c4f6aeb4d",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3455,10 +3425,9 @@
 			"name": "Fire Beetle",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=ce094b25-e77a-47db-93c7-363cadf92ccf",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTnsfQ_nzEzn_ochM3?alt=media&token=fd6e145d-18ef-4869-88b7-d35fd0d9d1bb",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
@@ -3495,10 +3464,9 @@
 			"name": "Greyhorn the Caged",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=c99cae76-ef53-4d1e-b513-ca4914ce3534",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTpSKiIRPOLlAMwvOl?alt=media&token=5d394a14-cf9a-4dc5-8469-c095a7701a74",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3531,10 +3499,9 @@
 			"name": "Golem",
 			"naturalArmourClass": 19,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=72b5d7e6-2db0-47ad-836a-2a5fb27371ba",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTqLUaOc0-qU_ug8Ly?alt=media&token=6f22be7b-9965-4091-abb4-725b0592f1ee",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3573,10 +3540,9 @@
 			"name": "Fire Snake",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=685a244d-2609-49e2-a7ea-f0b7be07e48e",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=d0825833-28ae-4445-8dcb-a31f457517a1",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
@@ -3609,10 +3575,9 @@
 			"name": "Glompling",
 			"naturalArmourClass": 7,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=0b1dc5be-0b04-426e-bb6c-2b8482acfb2a",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkUQSsszVLO_4PrBQy?alt=media&token=1bfab329-0a88-42a0-99e2-c0fd7e915fed",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3648,10 +3613,9 @@
 			"name": "The Executioner",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=a756bd84-93f3-4841-b46b-f9f100df1164",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkVOZVy5W_2PPD1vjr?alt=media&token=89a6ef6d-e141-4b2c-b6cf-f5fe2f0ae051",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3684,10 +3648,9 @@
 			"name": "Wight",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "necrotic",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=319c6b24-dfbb-4e5b-baea-a38cdfe7e706",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkWbFFsefw7IS2Vxk0?alt=media&token=ed7c16f1-fc4f-475f-85dd-55e16c3da147",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3720,10 +3683,9 @@
 			"name": "Beholder",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=07293199-2086-4512-9ebe-8f4ff31217af",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=34267405-ae1a-4b8d-a314-b9d0178207a4",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3746,7 +3708,7 @@
 				"strength": 10,
 				"wisdom": 15
 			},
-			"tactics": "default",
+			"tactics": "caster",
 			"zone": "volcano"
 		},
 		"-NhkYK7-G0lWSQ6VxFJy": {
@@ -3756,10 +3718,9 @@
 			"name": "Wraith Lord Malakar",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "necrotic",
-			"naturalHitChance": 2,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=e1ce4930-4dbb-47de-a5a2-b9abb8fa4919",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkYK7-G0lWSQ6VxFJy?alt=media&token=b67f50e4-ec95-44e3-b32d-b76baa23a53e",
 			"resistances": {
 				"acid": 50,
 				"cold": 50,
@@ -3782,7 +3743,7 @@
 				"strength": 6,
 				"wisdom": 14
 			},
-			"tactics": "default",
+			"tactics": "caster",
 			"zone": "hills"
 		},
 		"-NhkbQX-i_HQ7Gt2qHgm": {
@@ -3792,10 +3753,9 @@
 			"name": "Living Mold",
 			"naturalArmourClass": 8,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=f35ef8ba-6735-4fa8-9c66-f438ee8cb920",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkbQX-i_HQ7Gt2qHgm?alt=media&token=a269a32a-249f-494f-9674-f0eddcdaa190",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3833,10 +3793,9 @@
 			"name": "The Forest Guardian",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "fire",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=be2d42ae-e1e5-4c2d-a582-f4918e955119",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcIl5L0eB39i3HIeJ?alt=media&token=7d74ca0b-c140-4b1e-a79f-aa7b639d0b86",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
@@ -3869,10 +3828,9 @@
 			"name": "Living Flame",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "fire",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=2f8cc9b0-a47a-4cdc-89b3-2abe32095877",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=f3e0a550-50df-44ed-afea-cc7783541eca",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
@@ -3911,10 +3869,9 @@
 			"name": "Fire Drake",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=a710c32c-8fec-42f1-8e3e-9b56c83999ff",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=e1a3bff8-36b5-4df4-abef-870060c3b0aa",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
@@ -3947,10 +3904,9 @@
 			"name": "Flame Shrieker",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g2suyagydsOiCLMPZ?alt=media&token=9a1bf9c6-3c1b-45b9-93c8-435c3e182ebd",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g2suyagydsOiCLMPZ?alt=media&token=2220862d-2939-4c71-a1b7-c0c9635fabfd",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -3982,30 +3938,35 @@
 			"name": "Pit Fiend Yagamon",
 			"naturalArmourClass": 20,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 5,
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 6,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=a4bd8a27-c914-4418-9565-a96290517d39",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=607165fd-970a-42c7-909c-0c366825351e",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
-				"crushing": 50,
+				"cold": 25,
+				"crushing": 25,
 				"fire": 100,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 50,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd", "-Nhh6cp8cTNG_6h4WvSN"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NgTnzsxBYgTye5lFfkd",
+				"-Nc4-UVARP8jFmsiuXC9",
+				"-NKt0W8prsXi7-54nBVz",
+				"-OCZHaFOopyGcTKt8Pva"
+			],
 			"stats": {
-				"charisma": 22,
-				"constitution": 22,
-				"dexterity": 12,
-				"intelligence": 20,
-				"strength": 24,
-				"wisdom": 16
+				"charisma": 24,
+				"constitution": 24,
+				"dexterity": 14,
+				"intelligence": 22,
+				"strength": 26,
+				"wisdom": 18
 			},
 			"tactics": "default",
 			"zone": "volcano"
@@ -4017,10 +3978,9 @@
 			"name": "Ratman Slave",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_O3wKJO9Pu6brBV24?alt=media&token=1637f7a5-527c-43d5-8562-0199f8c3d9b1",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_O3wKJO9Pu6brBV24?alt=media&token=fd08e60c-fa58-4942-805a-a14d5ad55a28",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4056,10 +4016,9 @@
 			"name": "Ratman Archer",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_P6i6e4r31C74MN_B?alt=media&token=d341e05a-b8ba-43c5-a72f-f0c896f61412",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_P6i6e4r31C74MN_B?alt=media&token=35159584-c7d9-4f43-a46e-c5cef815e5f6",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4096,10 +4055,9 @@
 			"name": "Assassin of Rit Chi",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_R3NOnT3i1DLiEKnd?alt=media&token=6125e9a9-eb93-4251-9f89-91d488d1c028",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_R3NOnT3i1DLiEKnd?alt=media&token=f15f0ecf-a296-4c06-a5db-5035e7701b32",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4135,10 +4093,9 @@
 			"name": "Ratman Shaman",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_V4rlMkRjOWIDQarx?alt=media&token=55aa0f27-f889-4edc-8558-22a7920e9b47",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_V4rlMkRjOWIDQarx?alt=media&token=c97fd8ce-bd9c-4f2a-9778-aa3567bfb6d1",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4176,10 +4133,9 @@
 			"name": "Ratman Champion",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_WjPXKCDzDO9idJPs?alt=media&token=3ad228cf-642f-417c-95ee-c162448084a0",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_WjPXKCDzDO9idJPs?alt=media&token=0ac491ce-0402-4a7c-b7ba-05758f70dc21",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4215,10 +4171,9 @@
 			"name": "Ratman Warlock",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_YM1vo2Mdr-Q-wHc3?alt=media&token=0c1cf9ac-a8b9-4237-be02-d204cefff047",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_YM1vo2Mdr-Q-wHc3?alt=media&token=ff71c971-06c5-44ea-a248-d741781dc108",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4256,10 +4211,9 @@
 			"name": "Avatar of Rit Chi",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 6,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_Zt9uUjy8pye9AGEZ?alt=media&token=98be2f4e-4396-42cf-b55b-a70089a3c707",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_Zt9uUjy8pye9AGEZ?alt=media&token=a14ca262-c02b-4ed2-8e47-ba9591710189",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4291,10 +4245,9 @@
 			"name": "Rat Ogre",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_aLIP0OdTe0rGO9QY?alt=media&token=c59386c3-ebc0-4c82-8e7c-83e8d2ae85f8",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_aLIP0OdTe0rGO9QY?alt=media&token=b126fffb-7453-47d4-9f1a-1459344c8036",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4326,10 +4279,9 @@
 			"name": "The Hellfire Catapult",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_bEIXK4OQRQ8b5pzp?alt=media&token=94be096c-79cf-4f59-b9bd-ccb80244fb4b",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_bEIXK4OQRQ8b5pzp?alt=media&token=ea071f73-d09d-4c29-97ab-951f39a9a806",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4365,10 +4317,9 @@
 			"name": "Mounted Ratman",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_elmg901ZBWKAxrfB?alt=media&token=ae611b91-9ee7-4ee4-8f07-171fc4e58179",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9_elmg901ZBWKAxrfB?alt=media&token=8a2a0ee3-9f67-4fab-87ea-eb217820803e",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4403,10 +4354,9 @@
 			"name": "Squib",
 			"naturalArmourClass": 11,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dIirSbCPjrRRGen8U?alt=media&token=0d358957-54d2-48b0-860c-791ed31fc9f1",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dIirSbCPjrRRGen8U?alt=media&token=916c42e0-7972-46a7-b065-8a1bd5ec88b8",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4437,11 +4387,10 @@
 			"description": "",
 			"name": "Munchling",
 			"naturalArmourClass": 13,
-			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
+			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dLuxaOA1hXh3U7Mnv?alt=media&token=41366520-ac52-47f9-ab3e-7075fe30ee06",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dLuxaOA1hXh3U7Mnv?alt=media&token=96b4d19f-9b3b-47ca-8f58-a654fea15e5f",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4473,10 +4422,9 @@
 			"name": "Sharkman",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dMUJn3WZ9o8aQlNnb?alt=media&token=142fe49a-f11e-4037-8aa1-3339ef1434d0",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dMUJn3WZ9o8aQlNnb?alt=media&token=f60c8ec6-02cc-4617-bff1-cdc8f210dd83",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4514,10 +4462,9 @@
 			"name": "Void Creeper",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dNPoAEQhZpCpSnOye?alt=media&token=b0ea23aa-e5df-4db6-95b0-624fb7f82d82",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dNPoAEQhZpCpSnOye?alt=media&token=3aef2883-32c4-48ac-9eeb-b27138ccb665",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4549,10 +4496,9 @@
 			"name": "Crabomination",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dO9Hor_-bf7V_xgzs?alt=media&token=5c92c111-b3f6-427e-90e5-4169ff2945c9",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dO9Hor_-bf7V_xgzs?alt=media&token=db1ccc0d-5411-4124-af9b-9af25e3f4cfc",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4587,10 +4533,9 @@
 			"name": "Damp High Priestess",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dQ6Mfco5z_8Yt4o-t?alt=media&token=9d034c1f-8605-4aff-b632-fb7370b9704e",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dQ6Mfco5z_8Yt4o-t?alt=media&token=37e454c3-4137-43e9-b96a-ebffe5d12d31",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4628,21 +4573,20 @@
 			"name": "The Elder Squid",
 			"naturalArmourClass": 17,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 2,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dSO4fdChwx6OrOCx5?alt=media&token=7c323783-6590-4aeb-a3d0-500faaf282db",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dSO4fdChwx6OrOCx5?alt=media&token=6fda1fb4-5d7e-4f7a-b4e0-f4678f13a835",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
-				"crushing": 0,
-				"fire": 0,
-				"lightning": 0,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
+				"piercing": 25,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -4670,10 +4614,9 @@
 			"name": "Piranhasaur",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dTVcQaMf3ZBV8IQ40?alt=media&token=6db6d3f4-5cd5-423e-8d40-237f7c5d23b1",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dTVcQaMf3ZBV8IQ40?alt=media&token=ae9f6c63-2f57-4338-a164-c0ee72e356a3",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4705,10 +4648,9 @@
 			"name": "Colossal Piranhasaur",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dU8gwThi8fYltU0PV?alt=media&token=1e0cea1c-38f5-4252-b0fe-6921d56eef76",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dU8gwThi8fYltU0PV?alt=media&token=4a2a8b62-d2a5-4acc-8b5c-674d2f1c9fca",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
@@ -4739,22 +4681,21 @@
 			"description": "",
 			"name": "Hydra of the Deep",
 			"naturalArmourClass": 18,
-			"naturalDamageType": "crushing",
-			"naturalHitChance": 4,
+			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 12,
 			"naturalMinDamage": 6,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dX2YZzneMSoTiBmYu?alt=media&token=7e876eac-0a2d-46c6-bd7d-2265a68f5830",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O9dX2YZzneMSoTiBmYu?alt=media&token=16286262-5f50-4b25-ae8d-9eaefaa136f1",
 			"resistances": {
 				"acid": 0,
 				"cold": 100,
-				"crushing": 0,
-				"fire": 0,
-				"lightning": 0,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 50,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -4785,10 +4726,9 @@
 			"name": "Berserker",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-GX-m_V2DTyU-_-ss?alt=media&token=47cd22e3-b024-4143-b958-f97b9f96b625",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-GX-m_V2DTyU-_-ss?alt=media&token=99a36d53-e9a8-4511-a28c-76fe9530cd37",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4825,10 +4765,9 @@
 			"name": "Guard",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-HCKu2YgmZ2jK6vJM?alt=media&token=8fed9926-8157-4059-96d1-f3ced54d97c9",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-HCKu2YgmZ2jK6vJM?alt=media&token=b2b4c1e6-b61b-4d69-b57d-a4da75e1b65a",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4866,10 +4805,9 @@
 			"name": "Brute",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-InhmXpZQgctzSV16?alt=media&token=38e5cadb-8e81-4c12-ac79-2d46f5a4ea7e",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4906,10 +4844,9 @@
 			"name": "Guard Captain",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-KDRuLZZFywpQQzVs?alt=media&token=40b18d01-986c-4cce-b780-5f1f7f4d681a",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-KDRuLZZFywpQQzVs?alt=media&token=9e410478-e066-4f14-9d0c-5ead734171d5",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4944,10 +4881,9 @@
 			"name": "Monk",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-LxGYypbHdVUhSGrE?alt=media&token=a81d85c6-84c6-4ec4-9805-8b43bfeb188c",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-LxGYypbHdVUhSGrE?alt=media&token=2310ff06-75eb-4c03-b754-e6f6527a219b",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -4984,10 +4920,9 @@
 			"name": "Footman",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-RxyAdleyrS9bRXq_?alt=media&token=535fa4ec-efe1-44f3-84a1-37237e9807e5",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-RxyAdleyrS9bRXq_?alt=media&token=b43a5b79-274b-4db9-9a18-6379051fefc4",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5023,10 +4958,9 @@
 			"name": "Wizard",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-St-RJHnBQ5soLbo2?alt=media&token=af6efe62-e8c0-4146-8b81-12a0d212b5e1",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-St-RJHnBQ5soLbo2?alt=media&token=73766717-d4b9-47a6-864e-7570896ec861",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5070,10 +5004,9 @@
 			"name": "Knight",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-TgKSeZTRHhQWIyIs?alt=media&token=31cb429d-78aa-4c47-ad8e-eb769ad161a8",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-TgKSeZTRHhQWIyIs?alt=media&token=eb6eacf8-48c4-4f7f-8242-a737045ed309",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5105,10 +5038,9 @@
 			"name": "The Royal Ballista",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-V5qou-xrOAQnh3Qm?alt=media&token=7358b276-a413-4d01-bcd8-a4de4cd1c8a0",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-V5qou-xrOAQnh3Qm?alt=media&token=bbf8f1c8-9e5a-4df0-aa9f-71dba245b771",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5138,18 +5070,16 @@
 			"challenge": 14,
 			"description": "",
 			"equipment": {
-				"body": "-Nm2D2w4xiCJtkX_yQHG",
-				"hand1": "-NMmvhpTgBUrely_XRJ7",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
+				"body": "-NgJxsDuymhUWq2V4ew8",
+				"hand1": "-NgK0TICJLv1vVaBGrbT",
 				"head": "-NzEJs3RCx4H78EqaGTc"
 			},
 			"name": "Sir Michael the Conceder",
 			"naturalArmourClass": 10,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-aHa_lmK0ULBAQ4z3?alt=media&token=1da188eb-0ca3-43e9-a399-7ffb82e9b790",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-aHa_lmK0ULBAQ4z3?alt=media&token=83dc0e92-a720-44e0-a04c-405badd818f2",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5184,10 +5114,9 @@
 			"name": "Peon",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-fMuqrOuFGLmOM7kj?alt=media&token=282e74a5-69ae-494c-a24c-58badcad8fcb",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-fMuqrOuFGLmOM7kj?alt=media&token=0020019a-77c4-43ea-bf02-350d5abcdb86",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5223,10 +5152,9 @@
 			"name": "Orc Grunt",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-gF7y0QsH82eTrh7n?alt=media&token=1cf1b2af-7db1-4a36-9062-6d86febd93a2",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-gF7y0QsH82eTrh7n?alt=media&token=3b725386-b016-4347-bdfe-64f4f64d8b21",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5261,10 +5189,9 @@
 			"name": "Orc Tracker",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-hCT0lQo-TZeq1pL2?alt=media&token=7875976a-0c56-41db-a4e4-335549879c42",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-hCT0lQo-TZeq1pL2?alt=media&token=3000f79b-487e-473b-90a0-9cf3606dd08d",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5299,10 +5226,9 @@
 			"name": "Half Ogre",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-j9uq1e7GXuE-jJOV?alt=media&token=7a735078-709b-4a24-a000-cd4b0673e5cc",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-j9uq1e7GXuE-jJOV?alt=media&token=f449bfa4-ef90-4f5e-a2e0-5f683a4f6ef9",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5338,10 +5264,9 @@
 			"name": "Orc Soldier",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-lBa51MudTHTCLF5t?alt=media&token=8a01624a-88ff-4003-9b32-c2dd61bd1ae0",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-lBa51MudTHTCLF5t?alt=media&token=85410942-b208-4a70-91d1-e00dd54e15cc",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5354,7 +5279,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpG6pLRAqTW1AU0Eg", "-NhgpxFRvn_sOrij-K0F", "-NJQ2hml_9m6iHzAfES5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhgpxFRvn_sOrij-K0F", "-NJQ2hml_9m6iHzAfES5", "-NZMIV5OGOr4bChwrNEE"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 16,
@@ -5377,10 +5302,9 @@
 			"name": "Orc Warlock",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-mYiqLTBYHHTIpxuO?alt=media&token=61f6f302-e0a6-45cc-b99d-b446e4dda49e",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-mYiqLTBYHHTIpxuO?alt=media&token=30a31701-e47a-4b63-a934-08850c3cb20a",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5418,10 +5342,9 @@
 			"name": "Orc Catapult",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-nWLztbFpJO85EUGY?alt=media&token=13571168-394a-4561-958e-5855633a8606",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-nWLztbFpJO85EUGY?alt=media&token=f1fb0a85-0153-424f-98b5-cfcacb9173da",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5458,10 +5381,9 @@
 			"name": "Orc Wardog",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-qmwsnK79o4q1bnpz?alt=media&token=f688bbc0-69ac-436c-822c-692954870d27",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-qmwsnK79o4q1bnpz?alt=media&token=02dfb855-a10f-4e34-b880-39ce3cded52b",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5497,10 +5419,9 @@
 			"name": "Urzul the Ascended",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-scXzx5GqPoZZcDX_?alt=media&token=3f65ff41-5027-4cf8-94fe-53283d075dce",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-scXzx5GqPoZZcDX_?alt=media&token=2b04abb9-87ce-492a-89f9-ef0e87361574",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5543,10 +5464,9 @@
 			"name": "Orc Warchief Zog",
 			"naturalArmourClass": 13,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-xKrcqlLxbc3dyPP_?alt=media&token=68b71c8d-d8cf-4877-8912-325245841b84",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC-xKrcqlLxbc3dyPP_?alt=media&token=d7ecd1dc-2a03-4bba-89c5-3d1c598e07ed",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5579,15 +5499,14 @@
 		},
 		"-OC4Oe8U0xBhi76jwF3P": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 13,
 			"description": "",
 			"name": "Carrion Stalker",
 			"naturalArmourClass": 13,
-			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
+			"naturalDamageType": "piercing",
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4Oe8U0xBhi76jwF3P?alt=media&token=1b92e0bd-1e79-4a33-a546-e4d89a1e27df",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4Oe8U0xBhi76jwF3P?alt=media&token=98d5fb0b-49e6-4a89-9f1c-0d9936b2728e",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5604,13 +5523,13 @@
 			"stats": {
 				"charisma": 7,
 				"constitution": 14,
-				"dexterity": 17,
+				"dexterity": 16,
 				"intelligence": 5,
-				"strength": 16,
+				"strength": 14,
 				"wisdom": 12
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4PtHUmQIZX6B7gfXs": {
 			"boss": false,
@@ -5622,10 +5541,9 @@
 			"name": "Goblin Engineer",
 			"naturalArmourClass": 12,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4PtHUmQIZX6B7gfXs?alt=media&token=ff62168e-8061-46e6-b7a4-32e2c45e100a",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4PtHUmQIZX6B7gfXs?alt=media&token=e4fbcd11-2c14-4df7-a6e1-c2c65f497abf",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5648,7 +5566,7 @@
 				"wisdom": 8
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4WTNNAtwspArSOQjX": {
 			"boss": false,
@@ -5660,16 +5578,15 @@
 			"name": "Abyss Rider",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4WTNNAtwspArSOQjX?alt=media&token=b2daeffe-5693-4adc-bbe1-f9478a81f0ab",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4WTNNAtwspArSOQjX?alt=media&token=488c44be-c89e-4501-bd74-6e1f9132ea10",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -5685,14 +5602,14 @@
 			],
 			"stats": {
 				"charisma": 18,
-				"constitution": 15,
+				"constitution": 16,
 				"dexterity": 16,
 				"intelligence": 12,
 				"strength": 18,
 				"wisdom": 14
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4XNLlQk-tb-D9BMAJ": {
 			"boss": false,
@@ -5704,10 +5621,9 @@
 			"name": "Cyclops",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4XNLlQk-tb-D9BMAJ?alt=media&token=5f2c0ffc-33d4-4d45-a36d-29f486f8c585",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4XNLlQk-tb-D9BMAJ?alt=media&token=e1e9e459-1a43-4c74-8c41-57c817289468",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -5730,7 +5646,7 @@
 				"wisdom": 6
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4_cpdJr5yvR4b9FM4": {
 			"boss": false,
@@ -5745,16 +5661,15 @@
 			"name": "Abyss Armour",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4_cpdJr5yvR4b9FM4?alt=media&token=b9a60b74-1a0a-4113-b0ce-90710b150c90",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4_cpdJr5yvR4b9FM4?alt=media&token=73d7fb9b-114e-4373-b327-6e8c0dfa74d9",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -5764,14 +5679,14 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZMIV5OGOr4bChwrNEE", "-NZqUxJ5hBOkYc_e-wuG", "-OC4aGSePG9PEzPMvMY-"],
 			"stats": {
 				"charisma": 10,
-				"constitution": 19,
-				"dexterity": 11,
+				"constitution": 18,
+				"dexterity": 10,
 				"intelligence": 10,
 				"strength": 18,
 				"wisdom": 12
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4d8dm_1E4j77WgLI5": {
 			"boss": false,
@@ -5780,16 +5695,15 @@
 			"name": "Lurker",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4d8dm_1E4j77WgLI5?alt=media&token=800f5850-243b-41cd-aaa1-7670922bebdf",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4d8dm_1E4j77WgLI5?alt=media&token=5172fe78-33df-4243-81cb-5f2697d2a3a7",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -5806,7 +5720,7 @@
 				"wisdom": 12
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4gpGHT8virE-rpPW4": {
 			"boss": false,
@@ -5815,16 +5729,15 @@
 			"name": "Cursed Guardian",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4gpGHT8virE-rpPW4?alt=media&token=5f391290-f853-42f3-96ec-0a9a0c447a07",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4gpGHT8virE-rpPW4?alt=media&token=4dcf99f3-4ca3-4f9d-9535-b32dd956908c",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -5841,7 +5754,7 @@
 				"wisdom": 10
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4ktfHDKaMkQPE_pHx": {
 			"boss": false,
@@ -5853,16 +5766,15 @@
 			"name": "Winged Nightmare",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4ktfHDKaMkQPE_pHx?alt=media&token=0ee05bbf-4e34-40eb-ba02-73314fecbd3f",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4ktfHDKaMkQPE_pHx?alt=media&token=5fcad994-cc82-4111-b9b4-57009dd40514",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -5873,13 +5785,13 @@
 			"stats": {
 				"charisma": 12,
 				"constitution": 18,
-				"dexterity": 20,
+				"dexterity": 22,
 				"intelligence": 10,
-				"strength": 16,
+				"strength": 18,
 				"wisdom": 14
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC4s3cRf4Z7obD_VqTQ": {
 			"boss": true,
@@ -5888,21 +5800,20 @@
 			"name": "Dunzarak the Deceived",
 			"naturalArmourClass": 22,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 16,
 			"naturalMinDamage": 10,
-			"portrait": "",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4s3cRf4Z7obD_VqTQ?alt=media&token=f96721a3-ca4e-40a7-b67c-7039a7f1cee9",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
+				"cold": 25,
+				"crushing": 25,
 				"fire": 100,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 50,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -5921,7 +5832,7 @@
 				"wisdom": 15
 			},
 			"tactics": "default",
-			"zone": "mountain"
+			"zone": "abyss"
 		},
 		"-OC7opH8h6jHe_KfFoND": {
 			"boss": true,
@@ -5930,16 +5841,15 @@
 			"name": "Accursed Brother McInnes",
 			"naturalArmourClass": 20,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC7opH8h6jHe_KfFoND?alt=media&token=a6bc35af-8862-40c1-aaca-e606f3b0d314",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC7opH8h6jHe_KfFoND?alt=media&token=011f1cb2-db44-4353-a6b5-1ac6de62e142",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 100,
 				"piercing": 50,
 				"poison": 0,
@@ -5954,15 +5864,15 @@
 				"-OC8_KrCSlLCSAitJUg6"
 			],
 			"stats": {
-				"charisma": 20,
-				"constitution": 18,
-				"dexterity": 12,
-				"intelligence": 16,
-				"strength": 14,
+				"charisma": 18,
+				"constitution": 22,
+				"dexterity": 14,
+				"intelligence": 20,
+				"strength": 12,
 				"wisdom": 26
 			},
-			"tactics": "default",
-			"zone": "mountain"
+			"tactics": "caster",
+			"zone": "abyss"
 		},
 		"-OC8t-vypjdsgapZvwLp": {
 			"boss": false,
@@ -5971,21 +5881,20 @@
 			"name": "Vilespawn",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8t-vypjdsgapZvwLp?alt=media&token=41cff80f-43dd-4e8d-9149-c93f992a5e8f",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8t-vypjdsgapZvwLp?alt=media&token=8c989f52-8ee5-4001-b092-043015e7448a",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
-				"fire": 0,
-				"lightning": 0,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
+				"piercing": 25,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3_Ea2wZ_5cHuPGwB5", "-OC0BnBNFGwHwz1CugLe", "-NgTOJ5N4B3V55HpTl-8"],
 			"stats": {
@@ -6011,16 +5920,15 @@
 			"name": "Chaos Mauler",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tEGD00w4BfIFf7hV?alt=media&token=9dce7eae-b6cd-4c83-9cc1-c8f9aa35e770",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tEGD00w4BfIFf7hV?alt=media&token=665ddd4f-b11c-424f-b563-fe646fc75542",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -6030,10 +5938,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NhgyQeYWKGMfv97Ojh0", "-OC0BnBNFGwHwz1CugLe"],
 			"stats": {
 				"charisma": 14,
-				"constitution": 16,
+				"constitution": 18,
 				"dexterity": 12,
 				"intelligence": 10,
-				"strength": 20,
+				"strength": 22,
 				"wisdom": 14
 			},
 			"tactics": "default",
@@ -6051,29 +5959,28 @@
 			"name": "Chaos Knight",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tNczeWUPU9bCX5o4?alt=media&token=b0394a98-9afe-4308-872d-aa262ff1edcc",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tNczeWUPU9bCX5o4?alt=media&token=49c6b657-5da0-4639-931b-12b9dd50d725",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqUxJ5hBOkYc_e-wuG", "-NhgpG6pLRAqTW1AU0Eg", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqUxJ5hBOkYc_e-wuG", "-NhgpG6pLRAqTW1AU0Eg", "-NZqUWZDeys5x3n8eLNA"],
 			"stats": {
 				"charisma": 14,
-				"constitution": 16,
+				"constitution": 18,
 				"dexterity": 16,
 				"intelligence": 10,
-				"strength": 18,
+				"strength": 20,
 				"wisdom": 14
 			},
 			"tactics": "default",
@@ -6086,21 +5993,20 @@
 			"name": "Giant Yeti",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tbRx4aU1NA7LfKlE?alt=media&token=8283d6a5-771b-486c-878e-3135416f312a",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tbRx4aU1NA7LfKlE?alt=media&token=0b801580-197c-4c4d-b3ca-62a10fe6d8d2",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
-				"crushing": 0,
+				"crushing": 25,
 				"fire": -50,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
+				"piercing": 25,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgrvvBiejH010EI8ME", "-Nhgy1Vmh0FTTPCWBory"],
 			"stats": {
@@ -6108,7 +6014,7 @@
 				"constitution": 20,
 				"dexterity": 14,
 				"intelligence": 6,
-				"strength": 22,
+				"strength": 24,
 				"wisdom": 14
 			},
 			"tactics": "default",
@@ -6125,16 +6031,15 @@
 			"name": "Binkus the All Knowing",
 			"naturalArmourClass": 21,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tx6bQo9WPm4r_qrW?alt=media&token=7d966df4-e868-45b8-8b40-d54b550fc23b",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tx6bQo9WPm4r_qrW?alt=media&token=dd7d49ee-c291-4f2f-a4b0-ea21397b3b1c",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 0,
@@ -6169,10 +6074,9 @@
 			"name": "Wretch",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 6,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8uEK4XtBh_Py9ba4-?alt=media&token=23c548af-eb0e-4eb7-87f2-9d1eac7c5c1c",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8uEK4XtBh_Py9ba4-?alt=media&token=07baeee7-7023-4e42-ac14-627dd5139d2e",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
@@ -6191,7 +6095,7 @@
 				"constitution": 12,
 				"dexterity": 16,
 				"intelligence": 6,
-				"strength": 8,
+				"strength": 12,
 				"wisdom": 12
 			},
 			"tactics": "default",
@@ -6204,21 +6108,20 @@
 			"name": "Dracolich",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OF2HqGp-rpiUO0C6?alt=media&token=d117c277-a50f-4e03-9794-545c2f6fb6c2",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OF2HqGp-rpiUO0C6?alt=media&token=9049c523-27b1-440e-9787-d1b62f46a859",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 25,
 				"crushing": -50,
-				"fire": 0,
-				"lightning": 0,
-				"necrotic": 0,
-				"piercing": 0,
+				"fire": 25,
+				"lightning": 25,
+				"necrotic": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": -50,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -6248,16 +6151,15 @@
 			"name": "Hell Guard",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OdqzOPN2-Z14tnxO?alt=media&token=b69c71cb-5d11-490e-a3fd-8639fa5cf900",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OdqzOPN2-Z14tnxO?alt=media&token=37d332a9-9861-4c88-85ca-6c9ff2a0796c",
 			"resistances": {
 				"acid": 0,
-				"cold": 50,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 50,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 0,
@@ -6268,7 +6170,7 @@
 			"stats": {
 				"charisma": 14,
 				"constitution": 18,
-				"dexterity": 20,
+				"dexterity": 22,
 				"intelligence": 10,
 				"strength": 16,
 				"wisdom": 12
@@ -6278,7 +6180,7 @@
 		},
 		"-OC9PwVr22rd-Chw1ykw": {
 			"boss": false,
-			"challenge": 13,
+			"challenge": 14,
 			"description": "",
 			"equipment": {
 				"hand1": "-Nc46CPWJz2atC_uII9i"
@@ -6286,21 +6188,20 @@
 			"name": "Gremlin Cultist",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 4,
 			"naturalMinDamage": 1,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9PwVr22rd-Chw1ykw?alt=media&token=7fa74350-f751-46b6-b13a-399bf5727893",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9PwVr22rd-Chw1ykw?alt=media&token=1812558e-0bdc-49e0-8074-1ad8680833b4",
 			"resistances": {
 				"acid": 0,
 				"cold": 0,
-				"crushing": 0,
+				"crushing": 25,
 				"fire": 0,
 				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 0,
+				"piercing": 25,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkGRRiaTZa0Q2JeWOd", "-OCIzZAWoMILIUtWYjFz", "-NgTbEHpokQy-0H5xsHh"],
 			"stats": {
@@ -6321,16 +6222,15 @@
 			"name": "The Nameless One",
 			"naturalArmourClass": 22,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 16,
 			"naturalMinDamage": 10,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9QhTULKTqA4_qMU3E?alt=media&token=1ea7762d-0a2b-456c-9ad7-e13adbefd9ad",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9QhTULKTqA4_qMU3E?alt=media&token=e08c09f2-dc55-4058-bf13-7c9badedfc7c",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 0,
@@ -6362,16 +6262,15 @@
 			"name": "Fire Elemental",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "fire",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R-HzyJPG_LQJmkym?alt=media&token=01b99585-5aa4-41ae-be6d-600520d0e84f",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R-HzyJPG_LQJmkym?alt=media&token=2a7ee4c5-a919-44f8-80e8-ca931bb2e545",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6397,16 +6296,15 @@
 			"name": "Water Elemental",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R4bc-LU3XAlwo921?alt=media&token=40ca7901-6765-4e08-8125-66dc075f86da",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R4bc-LU3XAlwo921?alt=media&token=ec97df23-e33f-4e06-9aca-46dd9da7495b",
 			"resistances": {
 				"acid": 50,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6432,15 +6330,14 @@
 			"name": "Earth Elemental",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R9WELrlP_t9usp1Q?alt=media&token=c8ced10a-c835-44ab-985a-d1539cdcafa0",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R9WELrlP_t9usp1Q?alt=media&token=b107eb8c-6272-43d7-80d3-b6fa6b1ba0d8",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
+				"fire": 50,
 				"lightning": -50,
 				"necrotic": 0,
 				"piercing": 50,
@@ -6467,15 +6364,14 @@
 			"name": "Air Elemental",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "lightning",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RF0Uh1Wq-FI2kBWZ?alt=media&token=8df9e92d-c5c8-4158-b21f-f22e3b56686f",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RF0Uh1Wq-FI2kBWZ?alt=media&token=7d2f484c-bf48-4e3f-9c1e-7911fee6bf0e",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
+				"fire": 50,
 				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
@@ -6502,16 +6398,15 @@
 			"name": "Ice Elemental",
 			"naturalArmourClass": 20,
 			"naturalDamageType": "cold",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RSTcdzO5pmuTfjSM?alt=media&token=547157b6-c2ac-4630-a12b-6429d58cf41d",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RSTcdzO5pmuTfjSM?alt=media&token=e7f747be-4aeb-4e67-ba18-2cbde44ffdb5",
 			"resistances": {
 				"acid": 0,
 				"cold": 100,
 				"crushing": 50,
 				"fire": -50,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6537,16 +6432,15 @@
 			"name": "Nature Elemental",
 			"naturalArmourClass": 16,
 			"naturalDamageType": "poison",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9S8vQ1mIwHqZ4JlBC?alt=media&token=9083c1fb-0747-450c-ba61-f86b96e90433",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9S8vQ1mIwHqZ4JlBC?alt=media&token=c663ee31-ab03-453f-8cd0-97d15e750740",
 			"resistances": {
 				"acid": 50,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
 				"fire": -50,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6572,16 +6466,15 @@
 			"name": "Necromental",
 			"naturalArmourClass": 17,
 			"naturalDamageType": "slashing",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SIL6W0nRljBdyt11?alt=media&token=65ddbcbc-e283-4943-88b6-043222e6b841",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SIL6W0nRljBdyt11?alt=media&token=5dd8e3eb-aa6d-447d-9617-ed0acccbe512",
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
-				"crushing": 0,
-				"fire": -50,
-				"lightning": 0,
+				"crushing": -50,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6607,16 +6500,15 @@
 			"name": "Power Elemental",
 			"naturalArmourClass": 18,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SlQ66CiMGqEk6_Mn?alt=media&token=b1966d22-6335-4917-9181-1ecd7c995ed3",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SlQ66CiMGqEk6_Mn?alt=media&token=47fb381e-08d2-45fa-8068-a25dda97b2ca",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 50,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6642,16 +6534,15 @@
 			"name": "Darkness Elemental",
 			"naturalArmourClass": 17,
 			"naturalDamageType": "necrotic",
-			"naturalHitChance": 0,
 			"naturalMaxDamage": 10,
 			"naturalMinDamage": 4,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SvOUA7FI47i-QlDd?alt=media&token=e8accd2c-a76e-4b28-9ae6-64c8f7c33ffc",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SvOUA7FI47i-QlDd?alt=media&token=159bc302-3d14-4cf3-811c-fdd6077b2131",
 			"resistances": {
 				"acid": 0,
-				"cold": 0,
+				"cold": 50,
 				"crushing": 50,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 50,
+				"lightning": 50,
 				"necrotic": 50,
 				"piercing": 50,
 				"poison": 100,
@@ -6677,16 +6568,15 @@
 			"name": "Magma Elemental",
 			"naturalArmourClass": 19,
 			"naturalDamageType": "crushing",
-			"naturalHitChance": 3,
 			"naturalMaxDamage": 14,
 			"naturalMinDamage": 7,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9T0NsJFrfYHqxt1nI?alt=media&token=13e9861f-5caa-4ec1-9412-98e42a720350",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9T0NsJFrfYHqxt1nI?alt=media&token=4218dd9a-94df-4def-a67c-fc3378c273f9",
 			"resistances": {
 				"acid": 0,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
-				"lightning": 0,
+				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
 				"poison": 100,
@@ -6712,10 +6602,9 @@
 			"name": "Aetheris the Dawnflame",
 			"naturalArmourClass": 24,
 			"naturalDamageType": "piercing",
-			"naturalHitChance": 7,
 			"naturalMaxDamage": 28,
 			"naturalMinDamage": 14,
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OCK8vFseTxxM0LU2Ok7?alt=media&token=09ea48d5-67c0-4036-a35d-699ac81daf27",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OCK8vFseTxxM0LU2Ok7?alt=media&token=e0099aa3-ac12-46b8-95cd-9aaa4cf0a2ee",
 			"resistances": {
 				"acid": 50,
 				"cold": 50,
@@ -6926,7 +6815,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -4
+							"value": -3
 						}
 					],
 					"target": "enemy",
@@ -8497,7 +8386,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh-SuuVlmZIYSG87sp?alt=media&token=50aaef62-ac5c-4a23-8360-e7e26095a333",
 			"level": 3,
-			"maxUses": 4,
+			"maxUses": 3,
 			"name": "Evasion",
 			"price": 0
 		},
@@ -8612,14 +8501,14 @@
 			"description": "Exploit weaknesses to maximize the impact of attacks.",
 			"effects": [
 				{
-					"difficulty": 19,
+					"difficulty": 21,
 					"duration": 3,
-					"modifier": "constitution",
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -8
+							"value": -6
 						}
 					],
 					"target": "enemy",
@@ -8704,25 +8593,25 @@
 		},
 		"-Nhh4hPWuWx_NN1YApGU": {
 			"class": "mage",
-			"description": "Empower the user with great speed.",
+			"description": "Imbue yourself with necrotic energy to improve spell power.",
 			"effects": [
 				{
 					"duration": 6,
 					"properties": [
 						{
-							"name": "dexterity",
-							"type": "stat",
-							"value": 6
+							"name": "necrotic",
+							"type": "damage",
+							"value": 40
 						}
 					],
 					"target": "self",
 					"type": "status"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh4hPWuWx_NN1YApGU?alt=media&token=68b8e656-e618-4c88-9f45-ee761e9009e4",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh4hPWuWx_NN1YApGU?alt=media&token=deb4a7d0-86c8-4750-afea-79b9730efece",
 			"level": 2,
 			"maxUses": 4,
-			"name": "Haste",
+			"name": "Embrace Shadows",
 			"price": 0
 		},
 		"-Nhh50tlZXmwsJcskPE8": {
@@ -9090,14 +8979,14 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 18,
+					"difficulty": 17,
 					"duration": 2,
-					"modifier": "constitution",
+					"modifier": "wisdom",
 					"properties": [
 						{
-							"name": "constitution",
-							"type": "stat",
-							"value": -4
+							"name": "necrotic",
+							"type": "resistance",
+							"value": -20
 						}
 					],
 					"target": "enemy",
@@ -9106,7 +8995,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkZtl6i7THVGIaWaQR?alt=media&token=196c494d-dcca-4687-9f79-92d97c171f04",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 6,
 			"name": "Corrupting Touch",
 			"price": 0
 		},
@@ -9693,7 +9582,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -6
+							"value": -3
 						}
 					],
 					"target": "enemy",
@@ -9871,12 +9760,12 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 4,
+					"duration": 3,
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 6
+							"value": 5
 						}
 					],
 					"target": "self",
@@ -9884,7 +9773,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGS9HEr6Mb0wEKjYLh?alt=media&token=a0a2a938-e0a7-4952-96f9-957691195c98",
-			"level": 3,
+			"level": 2,
 			"maxUses": 6,
 			"name": "Acquire Target",
 			"price": 0
@@ -10113,7 +10002,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -6
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -10234,6 +10123,11 @@
 							"name": "dexterity",
 							"type": "stat",
 							"value": 8
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": 20
 						}
 					],
 					"target": "self",
@@ -10678,7 +10572,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -5
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -11137,6 +11031,34 @@
 			"level": 2,
 			"maxUses": 7,
 			"name": "Shadow Strike",
+			"price": 0
+		},
+		"-OCZHaFOopyGcTKt8Pva": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": 50
+						},
+						{
+							"name": "fire",
+							"type": "damage",
+							"value": 50
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCZHaFOopyGcTKt8Pva?alt=media&token=b85e09f9-35c8-4273-9e7b-e1d481defdfe",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Yagamon's Revenge",
 			"price": 0
 		}
 	},
