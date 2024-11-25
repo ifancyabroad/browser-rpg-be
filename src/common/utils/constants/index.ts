@@ -153,7 +153,7 @@ export const ZONES = [
 	Zone.Hills,
 	Zone.Ocean,
 	Zone.Volcano,
-	Zone.Mountain,
+	Zone.Abyss,
 	Zone.Dungeon,
 	Zone.Tower,
 ];
