@@ -48,6 +48,7 @@ export interface IClassData {
 	weaponTypes: WeaponType[];
 	skills: string[];
 	stats: TStats;
+	tactics: Tactics;
 	equipment?: Partial<TEquipment>;
 }
 

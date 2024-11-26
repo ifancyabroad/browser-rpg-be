@@ -42,6 +42,7 @@ async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 		username,
 		skillIDs: hero.skillIDs,
 		equipmentIDs: hero.equipmentIDs,
+		tactics: classData.tactics,
 		baseStats: hero.baseStats,
 		baseResistances: hero.baseResistances,
 		baseHitPoints: hero.baseMaxHitPoints,
