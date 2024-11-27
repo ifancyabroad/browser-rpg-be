@@ -41,6 +41,7 @@
 			"type": "helmet"
 		},
 		"-NZMqz87pcH6a1OgycJ9": {
+			"armourType": "medium",
 			"description": "A sturdy, basic shield for versatile defense in close combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NZMqz87pcH6a1OgycJ9?alt=media&token=cd077d23-39d2-4c95-8a6e-65fe676b3b30",
 			"level": 1,
@@ -117,7 +118,7 @@
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				}
 			],
 			"type": "helmet"
@@ -153,6 +154,7 @@
 			"type": "ring"
 		},
 		"-NgJzNDx7O2sLwCLS8rd": {
+			"armourType": "light",
 			"description": "Basic yet dependable, an essential companion for any aspiring adventurer.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzNDx7O2sLwCLS8rd?alt=media&token=5896ce43-f035-4706-b700-1b59b1b2cdc9",
 			"level": 1,
@@ -813,7 +815,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDM2ApQWMggqJzd1Oj?alt=media&token=14c5b834-aaa3-4d82-8cf9-460aec1a16d5",
 			"level": 2,
 			"name": "Warlock's Striders",
-			"price": 230,
+			"price": 280,
 			"properties": [
 				{
 					"name": "necrotic",
@@ -1021,7 +1023,7 @@
 					"value": 20
 				},
 				{
-					"name": "radiant",
+					"name": "necrotic",
 					"type": "resistance",
 					"value": 20
 				}
@@ -1032,13 +1034,18 @@
 			"description": "Sturdy Plate Gauntlets offering unparalleled protection.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDS1M26zspCTVVGUnu?alt=media&token=c606a9e3-8b1e-498b-95cb-bebcbc09018f",
 			"level": 2,
-			"name": "Plate Gauntlets",
+			"name": "Knight's Gauntlets",
 			"price": 380,
 			"properties": [
 				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 2
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 1
 				}
 			],
 			"type": "gloves"
@@ -1063,7 +1070,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDTm9T7VzIuKsvXgM6?alt=media&token=fdbc0e31-725f-421a-8c45-dd3f2ab49aae",
 			"level": 4,
 			"name": "Death Knight Gauntlets",
-			"price": 1300,
+			"price": 1580,
 			"properties": [
 				{
 					"name": "strength",
@@ -1103,7 +1110,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDUyOXsz_CWrqQKtx3?alt=media&token=737405c6-b663-44bf-b747-b608006b35e6",
 			"level": 3,
 			"name": "Cursed Bracers",
-			"price": 580,
+			"price": 680,
 			"properties": [
 				{
 					"name": "constitution",
@@ -1111,14 +1118,14 @@
 					"value": -4
 				},
 				{
-					"name": "strength",
-					"type": "stat",
-					"value": 4
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
 				},
 				{
-					"name": "dexterity",
-					"type": "stat",
-					"value": 4
+					"name": "poison",
+					"type": "damage",
+					"value": 40
 				}
 			],
 			"type": "gloves"
@@ -1203,12 +1210,12 @@
 				{
 					"name": "critChance",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				},
 				{
 					"name": "hitChance",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
 				}
 			],
 			"type": "gloves"
@@ -1238,12 +1245,12 @@
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				},
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				}
 			],
 			"type": "helmet"
@@ -1454,6 +1461,7 @@
 			"type": "ring"
 		},
 		"-NzEcPdzcDO_PG86-m7P": {
+			"armourType": "medium",
 			"description": "A shield emanating a protective aura of fire, shielding its wielder from harm.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEcPdzcDO_PG86-m7P?alt=media&token=a609b946-9e57-4e4d-9f7f-692be2d31dfe",
 			"level": 2,
@@ -1474,6 +1482,7 @@
 			"type": "shield"
 		},
 		"-NzEciDFUuzY6cG9UEia": {
+			"armourType": "heavy",
 			"description": "A hefty tower shield, providing ample cover in the heat of battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEciDFUuzY6cG9UEia?alt=media&token=a08121c7-f9e5-4fa8-a348-79220e3bc85b",
 			"level": 1,
@@ -1489,6 +1498,7 @@
 			"type": "shield"
 		},
 		"-NzEdBv-UWjlNRRjd8Gv": {
+			"armourType": "light",
 			"description": "A small but sturdy buckler plated with gleaming gold, offering both defense and prestige.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEdBv-UWjlNRRjd8Gv?alt=media&token=748f3207-a3c5-4f77-9cc9-884376588f59",
 			"level": 3,
@@ -1519,6 +1529,7 @@
 			"type": "shield"
 		},
 		"-NzEd_Qa8Ppnwn6WL86V": {
+			"armourType": "heavy",
 			"description": "A shield encased in icy enchantments, warding off attacks.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEd_Qa8Ppnwn6WL86V?alt=media&token=11d6e357-627b-45cb-89c4-6f51dec4aee8",
 			"level": 2,
@@ -1539,6 +1550,7 @@
 			"type": "shield"
 		},
 		"-NzEeCnEpU0OsAmw_Ewj": {
+			"armourType": "heavy",
 			"description": "A massive bulwark of reinforced steel, providing unparalleled defense in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEeCnEpU0OsAmw_Ewj?alt=media&token=9f06009e-be49-49a3-a249-2c75a8a1e088",
 			"level": 4,
@@ -1564,6 +1576,7 @@
 			"type": "shield"
 		},
 		"-NzEewgzTHrzKERJX1Mj": {
+			"armourType": "medium",
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEewgzTHrzKERJX1Mj?alt=media&token=981ffb08-96e7-4603-8d48-bb2f2c1eece0",
 			"level": 4,
@@ -1599,6 +1612,7 @@
 			"type": "shield"
 		},
 		"-NzEfJdAyhMkjgDYnm8R": {
+			"armourType": "light",
 			"description": "A shield imbued with lightning magic, deflecting attacks.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEfJdAyhMkjgDYnm8R?alt=media&token=3da49619-7acd-48ef-9f25-efea603393a6",
 			"level": 2,
@@ -1619,6 +1633,7 @@
 			"type": "shield"
 		},
 		"-NzEffxrjZ2Fu9zSmWW9": {
+			"armourType": "medium",
 			"description": "A shield adorned with the crest of a noble house, symbolizing valor and protection on the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=5ddcc14a-c8fe-4089-8f3a-069b287812b8",
 			"level": 3,
@@ -1644,6 +1659,7 @@
 			"type": "shield"
 		},
 		"-NzEgBl4DzwpCf-EQ7W1": {
+			"armourType": "heavy",
 			"description": "A shield plated in gleaming gold, both opulent and resilient in defense.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgBl4DzwpCf-EQ7W1?alt=media&token=392e7209-e5d8-49d0-88f0-872dc9be45eb",
 			"level": 3,
@@ -1674,6 +1690,7 @@
 			"type": "shield"
 		},
 		"-NzEgcZaaw2oFUsF7NBm": {
+			"armourType": "light",
 			"description": "A shield crafted with golden wings, symbolizing protection and swift defense.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
 			"level": 4,
@@ -1833,17 +1850,17 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				},
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				},
 				{
 					"name": "piercing",
 					"type": "resistance",
-					"value": 20
+					"value": 15
 				}
 			],
 			"type": "ring"
@@ -1858,12 +1875,12 @@
 				{
 					"name": "fire",
 					"type": "damage",
-					"value": 50
+					"value": 40
 				},
 				{
 					"name": "fire",
 					"type": "resistance",
-					"value": 50
+					"value": 40
 				},
 				{
 					"name": "constitution",
@@ -2384,17 +2401,17 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 25
+					"value": 15
 				},
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 25
+					"value": 15
 				},
 				{
 					"name": "piercing",
 					"type": "resistance",
-					"value": 25
+					"value": 15
 				}
 			],
 			"type": "armour"
@@ -2562,19 +2579,9 @@
 			"price": 150,
 			"properties": [
 				{
-					"name": "slashing",
-					"type": "resistance",
-					"value": 10
-				},
-				{
-					"name": "crushing",
-					"type": "resistance",
-					"value": 10
-				},
-				{
-					"name": "piercing",
-					"type": "resistance",
-					"value": 10
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
 				}
 			],
 			"type": "ring"
@@ -2699,17 +2706,17 @@
 				{
 					"name": "cold",
 					"type": "resistance",
-					"value": 15
+					"value": 10
 				},
 				{
 					"name": "fire",
 					"type": "resistance",
-					"value": 15
+					"value": 10
 				},
 				{
 					"name": "lightning",
 					"type": "resistance",
-					"value": 15
+					"value": 10
 				}
 			],
 			"type": "gloves"
@@ -2805,7 +2812,7 @@
 			"armourTypes": ["heavy", "medium"],
 			"description": "Proud and honorable, specialising in brute strength. Primary stats are strength and constitution.",
 			"equipment": {
-				"body": "-Nc44lyRjk-mHNox3H_P",
+				"body": "-NgJzhkhaQDrg55F1iM1",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
 			},
 			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_Ot99GWjYjrv9Gs-fP%2FfallenImage?alt=media&token=6cb8b2c3-1472-4e0a-afaa-f8117f518617",
@@ -2818,17 +2825,18 @@
 				"charisma": 12,
 				"constitution": 16,
 				"dexterity": 14,
-				"intelligence": 10,
+				"intelligence": 9,
 				"strength": 18,
-				"wisdom": 9
+				"wisdom": 10
 			},
+			"tactics": "default",
 			"weaponTypes": ["sword", "axe", "club", "hammer", "mace", "spear"]
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
 			"armourTypes": ["light"],
 			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stats are dexterity and charisma.",
 			"equipment": {
-				"body": "-NMEwPxI9DXom0AaME0Z",
+				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
 			},
 			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-N_OzueqvUwAUNXnlWpb%2FfallenImage?alt=media&token=7cfc636a-f564-426c-9349-cb2882dff972",
@@ -2845,6 +2853,7 @@
 				"strength": 10,
 				"wisdom": 10
 			},
+			"tactics": "default",
 			"weaponTypes": ["dagger", "crossbow", "bow"]
 		},
 		"-N_P0pcakZhKbNDftKoc": {
@@ -2868,6 +2877,7 @@
 				"strength": 8,
 				"wisdom": 13
 			},
+			"tactics": "caster",
 			"weaponTypes": ["staff", "wand"]
 		}
 	},
@@ -3101,17 +3111,17 @@
 			"naturalMinDamage": 6,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NNvOKycvGLGjgkXhAwj?alt=media&token=c2519452-b55a-4e83-8e7f-cc06ec866d16",
 			"resistances": {
-				"acid": 0,
-				"cold": 25,
-				"crushing": 25,
+				"acid": 50,
+				"cold": 50,
+				"crushing": 50,
 				"fire": 100,
 				"lighting": 50,
-				"lightning": 25,
+				"lightning": 50,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 50,
 				"poison": 50,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 50
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -3544,15 +3554,15 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=d0825833-28ae-4445-8dcb-a31f457517a1",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": -50,
 				"crushing": 25,
 				"fire": 50,
 				"lighting": 50,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -3687,17 +3697,17 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=34267405-ae1a-4b8d-a314-b9d0178207a4",
 			"resistances": {
-				"acid": 0,
-				"cold": 0,
-				"crushing": 0,
-				"fire": 0,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
 				"lighting": 0,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 25,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3fgWvaJhBd1_Ar0AK"],
 			"stats": {
@@ -3832,12 +3842,12 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=f3e0a550-50df-44ed-afea-cc7783541eca",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": -50,
 				"crushing": 25,
 				"fire": 100,
 				"lighting": 0,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
 				"poison": 100,
@@ -3873,17 +3883,17 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=e1a3bff8-36b5-4df4-abef-870060c3b0aa",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": -50,
-				"crushing": 0,
+				"crushing": 25,
 				"fire": 50,
 				"lighting": 50,
-				"lightning": 0,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 0,
-				"poison": 0,
+				"piercing": 25,
+				"poison": 25,
 				"radiant": 0,
-				"slashing": 0
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-O9ePhvfJJr-bhi0Iial", "-OC4o-B22zajLRPINRfV"],
 			"stats": {
@@ -3942,16 +3952,16 @@
 			"naturalMinDamage": 6,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-O1g5UbnObhA-7IMjEhj?alt=media&token=607165fd-970a-42c7-909c-0c366825351e",
 			"resistances": {
-				"acid": 0,
-				"cold": 25,
-				"crushing": 25,
+				"acid": 50,
+				"cold": 50,
+				"crushing": 50,
 				"fire": 100,
-				"lightning": 25,
+				"lightning": 50,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 50,
 				"poison": 50,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 50
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -5582,14 +5592,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4WTNNAtwspArSOQjX?alt=media&token=488c44be-c89e-4501-bd74-6e1f9132ea10",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5665,14 +5675,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4_cpdJr5yvR4b9FM4?alt=media&token=73d7fb9b-114e-4373-b327-6e8c0dfa74d9",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5699,14 +5709,14 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4d8dm_1E4j77WgLI5?alt=media&token=5172fe78-33df-4243-81cb-5f2697d2a3a7",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5733,14 +5743,14 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4gpGHT8virE-rpPW4?alt=media&token=4dcf99f3-4ca3-4f9d-9535-b32dd956908c",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5770,14 +5780,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4ktfHDKaMkQPE_pHx?alt=media&token=5fcad994-cc82-4111-b9b4-57009dd40514",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5804,16 +5814,16 @@
 			"naturalMinDamage": 10,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC4s3cRf4Z7obD_VqTQ?alt=media&token=f96721a3-ca4e-40a7-b67c-7039a7f1cee9",
 			"resistances": {
-				"acid": 0,
-				"cold": 25,
-				"crushing": 25,
+				"acid": 50,
+				"cold": 50,
+				"crushing": 50,
 				"fire": 100,
-				"lightning": 25,
+				"lightning": 50,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 50,
 				"poison": 50,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 50
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -5845,14 +5855,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC7opH8h6jHe_KfFoND?alt=media&token=011f1cb2-db44-4353-a6b5-1ac6de62e142",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
 				"lightning": 50,
 				"necrotic": 100,
 				"piercing": 50,
-				"poison": 0,
+				"poison": 50,
 				"radiant": -50,
 				"slashing": 50
 			},
@@ -5885,14 +5895,14 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8t-vypjdsgapZvwLp?alt=media&token=8c989f52-8ee5-4001-b092-043015e7448a",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -5924,21 +5934,21 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tEGD00w4BfIFf7hV?alt=media&token=665ddd4f-b11c-424f-b563-fe646fc75542",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NhgyQeYWKGMfv97Ojh0", "-OC0BnBNFGwHwz1CugLe"],
 			"stats": {
 				"charisma": 14,
-				"constitution": 18,
+				"constitution": 20,
 				"dexterity": 12,
 				"intelligence": 10,
 				"strength": 22,
@@ -5963,22 +5973,22 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tNczeWUPU9bCX5o4?alt=media&token=49c6b657-5da0-4639-931b-12b9dd50d725",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqUxJ5hBOkYc_e-wuG", "-NhgpG6pLRAqTW1AU0Eg", "-NZqUWZDeys5x3n8eLNA"],
 			"stats": {
 				"charisma": 14,
-				"constitution": 18,
-				"dexterity": 16,
+				"constitution": 20,
+				"dexterity": 18,
 				"intelligence": 10,
 				"strength": 20,
 				"wisdom": 14
@@ -5997,21 +6007,21 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tbRx4aU1NA7LfKlE?alt=media&token=0b801580-197c-4c4d-b3ca-62a10fe6d8d2",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 50,
 				"crushing": 25,
 				"fire": -50,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgrvvBiejH010EI8ME", "-Nhgy1Vmh0FTTPCWBory"],
 			"stats": {
 				"charisma": 10,
-				"constitution": 20,
+				"constitution": 22,
 				"dexterity": 14,
 				"intelligence": 6,
 				"strength": 24,
@@ -6035,14 +6045,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tx6bQo9WPm4r_qrW?alt=media&token=dd7d49ee-c291-4f2f-a4b0-ea21397b3b1c",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
 				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
-				"poison": 0,
+				"poison": 50,
 				"radiant": 0,
 				"slashing": 50
 			},
@@ -6112,7 +6122,7 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OF2HqGp-rpiUO0C6?alt=media&token=9049c523-27b1-440e-9787-d1b62f46a859",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": -50,
 				"fire": 25,
@@ -6155,14 +6165,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9OdqzOPN2-Z14tnxO?alt=media&token=37d332a9-9861-4c88-85ca-6c9ff2a0796c",
 			"resistances": {
-				"acid": 0,
+				"acid": 25,
 				"cold": 25,
 				"crushing": 25,
 				"fire": 25,
 				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -6192,14 +6202,14 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9PwVr22rd-Chw1ykw?alt=media&token=1812558e-0bdc-49e0-8074-1ad8680833b4",
 			"resistances": {
-				"acid": 0,
-				"cold": 0,
+				"acid": 25,
+				"cold": 25,
 				"crushing": 25,
-				"fire": 0,
-				"lightning": 0,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
 				"piercing": 25,
-				"poison": 0,
+				"poison": 25,
 				"radiant": 0,
 				"slashing": 25
 			},
@@ -6226,14 +6236,14 @@
 			"naturalMinDamage": 10,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9QhTULKTqA4_qMU3E?alt=media&token=e08c09f2-dc55-4058-bf13-7c9badedfc7c",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
 				"lightning": 50,
 				"necrotic": 0,
 				"piercing": 50,
-				"poison": 0,
+				"poison": 50,
 				"radiant": 0,
 				"slashing": 50
 			},
@@ -6266,7 +6276,7 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R-HzyJPG_LQJmkym?alt=media&token=2a7ee4c5-a919-44f8-80e8-ca931bb2e545",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
@@ -6334,7 +6344,7 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R9WELrlP_t9usp1Q?alt=media&token=b107eb8c-6272-43d7-80d3-b6fa6b1ba0d8",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
@@ -6368,7 +6378,7 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RF0Uh1Wq-FI2kBWZ?alt=media&token=7d2f484c-bf48-4e3f-9c1e-7911fee6bf0e",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
@@ -6402,7 +6412,7 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RSTcdzO5pmuTfjSM?alt=media&token=e7f747be-4aeb-4e67-ba18-2cbde44ffdb5",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 100,
 				"crushing": 50,
 				"fire": -50,
@@ -6470,7 +6480,7 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SIL6W0nRljBdyt11?alt=media&token=5dd8e3eb-aa6d-447d-9617-ed0acccbe512",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": -50,
 				"fire": 50,
@@ -6504,7 +6514,7 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SlQ66CiMGqEk6_Mn?alt=media&token=47fb381e-08d2-45fa-8068-a25dda97b2ca",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 50,
@@ -6538,7 +6548,7 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SvOUA7FI47i-QlDd?alt=media&token=159bc302-3d14-4cf3-811c-fdd6077b2131",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": 50,
 				"crushing": 50,
 				"fire": 50,
@@ -6572,7 +6582,7 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9T0NsJFrfYHqxt1nI?alt=media&token=4218dd9a-94df-4def-a67c-fc3378c273f9",
 			"resistances": {
-				"acid": 0,
+				"acid": 50,
 				"cold": -50,
 				"crushing": 50,
 				"fire": 100,
@@ -6606,16 +6616,16 @@
 			"naturalMinDamage": 14,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OCK8vFseTxxM0LU2Ok7?alt=media&token=e0099aa3-ac12-46b8-95cd-9aaa4cf0a2ee",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
+				"acid": 75,
+				"cold": 75,
+				"crushing": 75,
 				"fire": 100,
-				"lightning": 50,
+				"lightning": 75,
 				"necrotic": 50,
-				"piercing": 50,
-				"poison": 50,
-				"radiant": 50,
-				"slashing": 50
+				"piercing": 75,
+				"poison": 75,
+				"radiant": 75,
+				"slashing": 75
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -6752,27 +6762,44 @@
 		},
 		"-NKt5eqAEIJYZFNbvK8f": {
 			"class": "rogue",
-			"description": "Slice the enemies throat open causing them to bleed.",
+			"description": "Deliver a precise and devastating strike that disrupts the enemy's defenses, reducing their resistance to physical attacks.",
 			"effects": [
 				{
-					"multiplier": 1.5,
+					"difficulty": 22,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -40
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": -40
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
 					"target": "enemy",
-					"type": "weaponDamage"
+					"type": "status"
 				},
 				{
-					"accuracy": 100,
-					"difficulty": 22,
-					"duration": 2,
-					"effect": "bleed",
-					"modifier": "constitution",
+					"damageType": "crushing",
+					"max": 30,
+					"min": 18,
 					"target": "enemy",
-					"type": "auxiliary"
+					"type": "damage"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NKt5eqAEIJYZFNbvK8f?alt=media&token=f17cf62c-3d35-4604-989c-a00f557e328f",
-			"level": 3,
-			"maxUses": 2,
-			"name": "Slit Throat",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NKt5eqAEIJYZFNbvK8f?alt=media&token=ec2639b6-7611-42a2-b954-f6bd5a35962c",
+			"level": 4,
+			"maxUses": 3,
+			"name": "Fracture",
 			"price": 1300,
 			"target": "enemy"
 		},
@@ -6892,7 +6919,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -5
+							"value": -4
 						}
 					],
 					"target": "self",
@@ -6998,17 +7025,17 @@
 						{
 							"name": "slashing",
 							"type": "resistance",
-							"value": -75
+							"value": -50
 						},
 						{
 							"name": "crushing",
 							"type": "resistance",
-							"value": -75
+							"value": -50
 						},
 						{
 							"name": "piercing",
 							"type": "resistance",
-							"value": -75
+							"value": -50
 						}
 					],
 					"target": "enemy",
@@ -7225,8 +7252,8 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqc6Kl781JP6QdXB-m?alt=media&token=f946c220-9eb8-446a-be8b-62798aec2e29",
-			"level": 4,
-			"maxUses": 2,
+			"level": 3,
+			"maxUses": 4,
 			"name": "Acid Bomb",
 			"price": 600
 		},
@@ -7267,7 +7294,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"duration": 6,
+					"duration": 5,
 					"properties": [
 						{
 							"name": "fire",
@@ -7291,28 +7318,47 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdUiFhyxCULAsWYJl?alt=media&token=ab345aab-5ea3-49ef-81e8-ed3481946db6",
 			"level": 4,
-			"maxUses": 4,
+			"maxUses": 3,
 			"name": "Cloak Of Shadows",
 			"price": 1300
 		},
 		"-NZqdkxMP9wTCz81_T4e": {
 			"class": "rogue",
-			"description": "Trap your enemy to incapacitate them.",
+			"description": "Trap your enemy to incapacitate them and reduce their defenses.",
 			"effects": [
 				{
 					"accuracy": 100,
 					"difficulty": 22,
-					"duration": 3,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "dexterity",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"difficulty": 22,
+					"duration": 5,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "acid",
+							"type": "resistance",
+							"value": -40
+						},
+						{
+							"name": "poison",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdkxMP9wTCz81_T4e?alt=media&token=3cf9e91e-ff15-44c3-9a6d-695f68947779",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqdkxMP9wTCz81_T4e?alt=media&token=ff085bdf-6540-4975-9837-bbf5a6d3a5bc",
 			"level": 4,
-			"maxUses": 1,
-			"name": "Spring The Trap",
+			"maxUses": 3,
+			"name": "Acid Trap",
 			"price": 1380
 		},
 		"-Nc3vvlL3y_va4dkw6_B": {
@@ -7370,7 +7416,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3xhpxzM4iz55_jXYj?alt=media&token=671e90b7-e472-4ad0-b5aa-47febe8bf8bb",
-			"level": 1,
+			"level": 2,
 			"maxUses": 8,
 			"name": "Armour",
 			"price": 90
@@ -7422,7 +7468,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -6
+							"value": -5
 						}
 					],
 					"target": "enemy",
@@ -7474,8 +7520,8 @@
 			"effects": [
 				{
 					"damageType": "lightning",
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -7492,8 +7538,8 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 18,
-					"min": 10,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -7546,8 +7592,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -7578,8 +7624,8 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -7596,8 +7642,8 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 18,
-					"min": 10,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -7646,8 +7692,8 @@
 				},
 				{
 					"damageType": "piercing",
-					"max": 8,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -7839,8 +7885,8 @@
 			"description": "",
 			"effects": [
 				{
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "self",
 					"type": "heal"
 				}
@@ -7937,8 +7983,8 @@
 			"description": "",
 			"effects": [
 				{
-					"max": 18,
-					"min": 10,
+					"max": 20,
+					"min": 8,
 					"target": "self",
 					"type": "heal"
 				}
@@ -7955,8 +8001,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -7973,8 +8019,8 @@
 			"effects": [
 				{
 					"damageType": "slashing",
-					"max": 8,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -7999,14 +8045,14 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "self",
 					"type": "heal"
 				}
@@ -8058,13 +8104,13 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"difficulty": 12,
+					"difficulty": 17,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "dexterity",
@@ -8109,8 +8155,8 @@
 			"effects": [
 				{
 					"damageType": "acid",
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8467,11 +8513,9 @@
 			"description": "Mangle adversaries with brutal precision, ensuring incapacitation.",
 			"effects": [
 				{
-					"damageType": "slashing",
-					"max": 18,
-					"min": 10,
+					"multiplier": 2,
 					"target": "enemy",
-					"type": "damage"
+					"type": "weaponDamage"
 				},
 				{
 					"difficulty": 16,
@@ -8490,7 +8534,7 @@
 					"type": "auxiliary"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh1jOIoeiE7yvBATmT?alt=media&token=dbbe9c2e-7fc1-497e-87c2-471bb5d948df",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh1jOIoeiE7yvBATmT?alt=media&token=dc543036-974a-4187-9dd1-c2a6fced5ef0",
 			"level": 4,
 			"maxUses": 2,
 			"name": "Maim",
@@ -8561,7 +8605,7 @@
 				{
 					"damageType": "necrotic",
 					"max": 10,
-					"min": 4,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8573,12 +8617,12 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -3
+							"value": -2
 						},
 						{
 							"name": "critChance",
 							"type": "auxiliaryStat",
-							"value": -3
+							"value": -2
 						}
 					],
 					"target": "enemy",
@@ -8586,7 +8630,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh3v9mXEeAJhlsZfwB?alt=media&token=3ac3e157-3f26-4716-b546-4ce5f00ef032",
-			"level": 2,
+			"level": 1,
 			"maxUses": 7,
 			"name": "Shadow Bolt",
 			"price": 0
@@ -8638,8 +8682,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8664,8 +8708,8 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 14,
-					"min": 7,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8775,12 +8819,12 @@
 			"description": "Infuse divine energy, amplifying strength and resilience.",
 			"effects": [
 				{
-					"duration": 8,
+					"duration": 6,
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 4
+							"value": 3
 						}
 					],
 					"target": "self",
@@ -8799,13 +8843,13 @@
 			"effects": [
 				{
 					"difficulty": 17,
-					"duration": 8,
+					"duration": 6,
 					"modifier": "wisdom",
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -4
+							"value": -3
 						}
 					],
 					"target": "enemy",
@@ -8852,7 +8896,7 @@
 				},
 				{
 					"damageType": "radiant",
-					"max": 6,
+					"max": 8,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
@@ -8947,8 +8991,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 10,
-					"min": 4,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8973,8 +9017,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 14,
-					"min": 7,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9022,8 +9066,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 12,
-					"min": 6,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9037,14 +9081,14 @@
 				},
 				{
 					"damageType": "cold",
-					"max": 12,
-					"min": 6,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhkdJeDGDat6H-Mf7WV?alt=media&token=93885d69-aadb-48d2-a9ab-0ffd677cc36b",
-			"level": 3,
+			"level": 4,
 			"maxUses": 2,
 			"name": "Whelm",
 			"price": 0
@@ -9062,8 +9106,8 @@
 				},
 				{
 					"damageType": "fire",
-					"max": 50,
-					"min": 20,
+					"max": 60,
+					"min": 30,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -9159,22 +9203,22 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 6,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "fire",
-					"max": 6,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "fire",
-					"max": 6,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -9214,8 +9258,8 @@
 			"effects": [
 				{
 					"damageType": "poison",
-					"max": 14,
-					"min": 7,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9240,15 +9284,15 @@
 			"effects": [
 				{
 					"damageType": "piercing",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "cold",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -9368,8 +9412,8 @@
 			"description": "",
 			"effects": [
 				{
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "self",
 					"type": "heal"
 				},
@@ -9523,15 +9567,15 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 10,
-					"min": 4,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "necrotic",
-					"max": 10,
-					"min": 4,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9562,15 +9606,15 @@
 			"effects": [
 				{
 					"damageType": "acid",
-					"max": 10,
-					"min": 4,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "crushing",
-					"max": 10,
-					"min": 4,
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9601,15 +9645,15 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "cold",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9640,15 +9684,15 @@
 			"effects": [
 				{
 					"damageType": "piercing",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "cold",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9698,8 +9742,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9724,8 +9768,8 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9750,7 +9794,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGREObRlRFCR7M2Ni4?alt=media&token=a9d9314a-5813-4428-ac32-a6e8724f9222",
-			"level": 2,
+			"level": 3,
 			"maxUses": 7,
 			"name": "Engulf",
 			"price": 0
@@ -9838,8 +9882,8 @@
 				},
 				{
 					"damageType": "fire",
-					"max": 8,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -9947,7 +9991,7 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 4,
+					"duration": 5,
 					"properties": [
 						{
 							"name": "slashing",
@@ -10010,8 +10054,8 @@
 				},
 				{
 					"damageType": "crushing",
-					"max": 14,
-					"min": 7,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10028,8 +10072,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10092,8 +10136,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 28,
-					"min": 14,
+					"max": 40,
+					"min": 16,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10162,8 +10206,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10221,8 +10265,8 @@
 				},
 				{
 					"damageType": "lightning",
-					"max": 14,
-					"min": 7,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10239,20 +10283,30 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 28,
-					"min": 14,
+					"max": 40,
+					"min": 16,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"difficulty": 19,
-					"duration": 4,
+					"duration": 3,
 					"modifier": "constitution",
 					"properties": [
 						{
-							"name": "armourClass",
-							"type": "auxiliaryStat",
-							"value": -4
+							"name": "slashing",
+							"type": "resistance",
+							"value": -50
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -50
+						},
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": -50
 						}
 					],
 					"target": "enemy",
@@ -10262,7 +10316,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OC4ec48-KD77fXEGDx8?alt=media&token=10218c46-11e1-4597-ae2d-545151ea8879",
 			"level": 4,
 			"maxUses": 2,
-			"name": "Skull Crush",
+			"name": "Obliterate",
 			"price": 0
 		},
 		"-OC4o-B22zajLRPINRfV": {
@@ -10271,8 +10325,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10314,22 +10368,22 @@
 			"description": "",
 			"effects": [
 				{
-					"duration": 3,
+					"duration": 4,
 					"properties": [
 						{
 							"name": "slashing",
 							"type": "resistance",
-							"value": 75
+							"value": 50
 						},
 						{
 							"name": "crushing",
 							"type": "resistance",
-							"value": 75
+							"value": 50
 						},
 						{
 							"name": "piercing",
 							"type": "resistance",
-							"value": 75
+							"value": 50
 						}
 					],
 					"target": "self",
@@ -10559,8 +10613,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 28,
-					"min": 14,
+					"max": 40,
+					"min": 16,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10581,7 +10635,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCJ9MXut2odMwmv0r95?alt=media&token=560f5896-0d54-4197-a3af-8db72115b0f9",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 4,
 			"name": "Tentacle Crush",
 			"price": 0
 		},
@@ -10591,8 +10645,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 28,
-					"min": 14,
+					"max": 40,
+					"min": 16,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10617,15 +10671,15 @@
 			"effects": [
 				{
 					"damageType": "lightning",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "crushing",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10703,8 +10757,8 @@
 			"effects": [
 				{
 					"damageType": "poison",
-					"max": 18,
-					"min": 10,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10718,7 +10772,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCJmYRSklNylLGbF7-N?alt=media&token=65d2ecf0-8545-44fd-8796-f1d728430e2b",
-			"level": 3,
+			"level": 4,
 			"maxUses": 4,
 			"name": "Poison Cloud",
 			"price": 0
@@ -10729,8 +10783,8 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 28,
-					"min": 14,
+					"max": 40,
+					"min": 16,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10766,8 +10820,8 @@
 				},
 				{
 					"damageType": "cold",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10787,7 +10841,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCJp6wp3bVLggUSeffg?alt=media&token=ce450c96-e4f7-4181-bf0f-62c1eb67d2be",
-			"level": 3,
+			"level": 4,
 			"maxUses": 6,
 			"name": "Ice Punch",
 			"price": 0
@@ -10815,15 +10869,15 @@
 			"effects": [
 				{
 					"damageType": "fire",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "radiant",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10840,15 +10894,15 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "fire",
-					"max": 28,
-					"min": 14,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10867,11 +10921,6 @@
 					"duration": 6,
 					"properties": [
 						{
-							"name": "strength",
-							"type": "stat",
-							"value": 4
-						},
-						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
 							"value": 4
@@ -10880,6 +10929,11 @@
 							"name": "critChance",
 							"type": "auxiliaryStat",
 							"value": 4
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": 50
 						}
 					],
 					"target": "self",
@@ -11417,8 +11471,8 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O4a6m6kRcxAc9j7bxwQ?alt=media&token=5e03787f-da34-4b9d-b654-a08730f1624c",
 			"level": 4,
-			"max": 15,
-			"min": 4,
+			"max": 14,
+			"min": 5,
 			"name": "Axe of the Frozen Wastes",
 			"price": 1440,
 			"properties": [
