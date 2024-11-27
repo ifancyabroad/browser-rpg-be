@@ -5853,7 +5853,7 @@
 			"boss": true,
 			"challenge": 23,
 			"description": "",
-			"name": "Accursed Brother McInnes",
+			"name": "Forsaken Brother McInnes",
 			"naturalArmourClass": 20,
 			"naturalDamageType": "crushing",
 			"naturalMaxDamage": 4,
@@ -11176,14 +11176,6 @@
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
 			"description": "The Longsword is a balanced, double-edged blade with a crossguard, ideal for versatile combat. Its length allows for both slashing and thrusting attacks, making it a favorite among knights and warriors. Commonly used, it combines elegance with practicality in a variety of battle scenarios.",
-			"effects": [
-				{
-					"max": 6,
-					"min": 1,
-					"target": "self",
-					"type": "heal"
-				}
-			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,
@@ -13200,6 +13192,119 @@
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
+		},
+		"-OCjb2zwjZOd3F8wf8Xa": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"max": 6,
+					"min": 1,
+					"target": "self",
+					"type": "heal"
+				},
+				{
+					"difficulty": 24,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCjb2zwjZOd3F8wf8Xa?alt=media&token=760f02f1-a8fd-456c-8903-aad88daba274",
+			"level": 4,
+			"max": 9,
+			"min": 6,
+			"name": "Vorshak's Embrace",
+			"price": 1850,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-OCjclL2ykXga6TDYLQX": {
+			"damageType": "crushing",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 24,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -6
+						},
+						{
+							"name": "crushing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCjclL2ykXga6TDYLQX?alt=media&token=63e7045d-ac70-42a6-a88d-93c96a13975d",
+			"level": 4,
+			"max": 15,
+			"min": 9,
+			"name": "Naalvad's Bonecrusher",
+			"price": 2040,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "mace"
+		},
+		"-OCje5NY8tvXxytEERmn": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCje5NY8tvXxytEERmn?alt=media&token=e349508a-e35a-4b0b-bc67-697db8e39ed9",
+			"level": 4,
+			"max": 6,
+			"min": 1,
+			"name": "Will of Galorin",
+			"price": 1960,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 4
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 4
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 80
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
 		}
 	}
 }
