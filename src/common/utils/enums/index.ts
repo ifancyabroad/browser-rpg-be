@@ -165,4 +165,5 @@ export enum Zone {
 export enum Tactics {
 	Default = "default",
 	Caster = "caster",
+	Concede = "concede",
 }

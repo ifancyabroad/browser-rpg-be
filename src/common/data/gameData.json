@@ -2023,6 +2023,11 @@
 					"name": "dexterity",
 					"type": "stat",
 					"value": 2
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"type": "armour"
@@ -2039,12 +2044,12 @@
 				{
 					"name": "crushing",
 					"type": "damage",
-					"value": 25
+					"value": 40
 				},
 				{
 					"name": "slashing",
 					"type": "damage",
-					"value": 25
+					"value": 40
 				},
 				{
 					"name": "strength",
@@ -2061,7 +2066,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsQRUtV5enlZ3MShV?alt=media&token=4aba9205-7169-46c9-bcae-41ce43f39c32",
 			"level": 3,
 			"name": "Flame Attuned Mail",
-			"price": 590,
+			"price": 690,
 			"properties": [
 				{
 					"name": "fire",
@@ -2083,7 +2088,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsoUz7NkxyEkUN6c2?alt=media&token=ad65bca3-b84d-4219-9486-4f2f3e6b5e84",
 			"level": 4,
 			"name": "Knight's Mail",
-			"price": 1520,
+			"price": 1720,
 			"properties": [
 				{
 					"name": "strength",
@@ -2110,7 +2115,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8Hu0onj7CWyDB2nP9R?alt=media&token=5bf34773-111f-4d1b-8f70-f64fa0104c6b",
 			"level": 3,
 			"name": "Brigandine Armour",
-			"price": 500,
+			"price": 740,
 			"properties": [
 				{
 					"name": "slashing",
@@ -2142,7 +2147,7 @@
 				{
 					"name": "critChance",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 4
 				}
 			],
 			"type": "armour"
@@ -2215,7 +2220,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I5jiV3i13ZaPW46M9?alt=media&token=830c05d6-af02-464e-9fec-d309bf2f4557",
 			"level": 4,
 			"name": "Barbarian's Tunic",
-			"price": 1100,
+			"price": 1400,
 			"properties": [
 				{
 					"name": "strength",
@@ -2237,7 +2242,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I79hlYuXK4jMUcNxa?alt=media&token=5ceb328d-9036-4b73-ad10-181cb099c749",
 			"level": 2,
 			"name": "Wanderer's Vest",
-			"price": 260,
+			"price": 220,
 			"properties": [
 				{
 					"name": "cold",
@@ -2254,7 +2259,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8I8N2hC8j3lZ5p1Uyi?alt=media&token=98d80f45-4bc7-4770-8839-c86b6308f336",
 			"level": 2,
 			"name": "Royal Gambeson",
-			"price": 250,
+			"price": 280,
 			"properties": [
 				{
 					"name": "charisma",
@@ -2663,14 +2668,14 @@
 		},
 		"-OAsWani7hbdIXmjGJ2u": {
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsWani7hbdIXmjGJ2u?alt=media&token=13763eed-8960-4a2b-9b21-89f59a12e828",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsWani7hbdIXmjGJ2u?alt=media&token=c5a3fe24-feb1-40d0-9cc2-ab6597213927",
 			"level": 2,
-			"name": "Gold Plated Boots",
+			"name": "Archer's Boots",
 			"price": 240,
 			"properties": [
 				{
-					"name": "cold",
-					"type": "resistance",
+					"name": "piercing",
+					"type": "damage",
 					"value": 20
 				}
 			],
@@ -3416,7 +3421,7 @@
 				"radiant": -50,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0IqVe3gyJes08fYye", "-OC0KVp8uW27MHyrOLUj", "-NgTOJ5N4B3V55HpTl-8"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0IqVe3gyJes08fYye", "-OC0KVp8uW27MHyrOLUj", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 14,
@@ -3566,7 +3571,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTOJ5N4B3V55HpTl-8", "-OC0KVp8uW27MHyrOLUj"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0KVp8uW27MHyrOLUj", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 12,
@@ -5111,7 +5116,7 @@
 				"strength": 18,
 				"wisdom": 16
 			},
-			"tactics": "default",
+			"tactics": "concede",
 			"zone": "castle"
 		},
 		"-OC-fMuqrOuFGLmOM7kj": {
@@ -5906,7 +5911,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3_Ea2wZ_5cHuPGwB5", "-OC0BnBNFGwHwz1CugLe", "-NgTOJ5N4B3V55HpTl-8"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3_Ea2wZ_5cHuPGwB5", "-OC0BnBNFGwHwz1CugLe", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
 				"charisma": 7,
 				"constitution": 16,
@@ -7139,7 +7144,7 @@
 				{
 					"accuracy": 50,
 					"difficulty": 19,
-					"duration": 3,
+					"duration": 4,
 					"modifier": "dexterity",
 					"properties": [
 						{
@@ -7692,14 +7697,14 @@
 				},
 				{
 					"damageType": "piercing",
-					"max": 10,
-					"min": 4,
+					"max": 8,
+					"min": 1,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTOJ5N4B3V55HpTl-8?alt=media&token=9e866550-b99b-4c0f-b146-d98d34634113",
-			"level": 2,
+			"level": 1,
 			"maxUses": 4,
 			"name": "Poison Bite",
 			"price": 0
@@ -11113,6 +11118,39 @@
 			"level": 4,
 			"maxUses": 1,
 			"name": "Yagamon's Revenge",
+			"price": 0
+		},
+		"-OCiu-f5bl8zaJxDA2ji": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "poison",
+					"max": 20,
+					"min": 8,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "poison",
+					"max": 20,
+					"min": 8,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 19,
+					"duration": 6,
+					"effect": "poison",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCiu-f5bl8zaJxDA2ji?alt=media&token=96da30c0-726e-4617-b0f7-cc2a6b62ac38",
+			"level": 3,
+			"maxUses": 4,
+			"name": "Toxic Bite",
 			"price": 0
 		}
 	},
