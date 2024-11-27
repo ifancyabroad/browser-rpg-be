@@ -4,7 +4,7 @@ import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
 import { AuxiliaryStat, DamageType, EffectType, Game, Tactics, Target, Zone, getRandomElement } from "@common/utils";
 import { IEffectData } from "@common/types/character";
-import { IWeaponDamageEffectData } from "@common/types/gameData";
+import { ISkillDataWithRemaining, IWeaponDamageEffectData } from "@common/types/gameData";
 
 const enemySchema = new Schema<IEnemy, IEnemyModel, IEnemyMethods>(
 	{
@@ -104,41 +104,75 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
-	const skills = this.skills.filter((skill) => {
+	const priorities: ISkillDataWithRemaining[][] = [
+		[], // Priority 1: Heal
+		[], // Priority 2: Attack, Debuff, Buff
+		[], // Priority 3: Default
+	];
+
+	this.skills.forEach((skill) => {
 		if (skill.maxUses > 0 && skill.remaining <= 0) {
-			return false;
+			return;
 		}
 
 		const selfTargetEffects = skill.effects
 			.filter((effect) => effect.target === Target.Self)
 			.map((effect) => effect.type);
-		const isHeal = selfTargetEffects.includes(EffectType.Heal);
-		if (isHeal && this.hitPoints >= this.maxHitPoints) {
-			return false;
-		}
-
-		const isBuff =
-			selfTargetEffects.includes(EffectType.Status) || selfTargetEffects.includes(EffectType.Auxiliary);
-		if (isBuff && this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1) {
-			return false;
-		}
 
 		const enemyTargetEffects = skill.effects
 			.filter((effect) => effect.target === Target.Enemy)
 			.map((effect) => effect.type);
-		const isDebuff =
+
+		const hasWeaponAttack = selfTargetEffects.includes(EffectType.WeaponDamage);
+		const hasAttack = selfTargetEffects.includes(EffectType.Damage);
+		const isCaster = this.tactics === Tactics.Caster;
+		const isBaseAttack = skill.maxUses === 0;
+		const hasHeal = selfTargetEffects.includes(EffectType.Heal);
+		const isDamaged = this.hitPoints < this.maxHitPoints / 2;
+		const hasBuff =
+			selfTargetEffects.includes(EffectType.Status) || selfTargetEffects.includes(EffectType.Auxiliary);
+		const isActiveBuff = this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
+		const hasDebuff =
 			enemyTargetEffects.includes(EffectType.Status) || enemyTargetEffects.includes(EffectType.Auxiliary);
-		if (isDebuff && hero.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1) {
-			return false;
+		const isActiveDebuff = hero.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
+
+		if (hasHeal && isDamaged) {
+			priorities[0].push(skill);
+			return;
 		}
 
-		return true;
+		if (hasWeaponAttack && !isBaseAttack) {
+			priorities[1].push(skill);
+			return;
+		}
+
+		if (hasAttack && isCaster) {
+			priorities[1].push(skill);
+			return;
+		}
+
+		if (hasDebuff && !isActiveDebuff) {
+			priorities[1].push(skill);
+			return;
+		}
+
+		if (hasBuff && !isActiveBuff) {
+			priorities[1].push(skill);
+			return;
+		}
+
+		if (isBaseAttack) {
+			priorities[2].push(skill);
+			return;
+		}
+
+		if (hasAttack) {
+			priorities[2].push(skill);
+			return;
+		}
 	});
 
-	if (skills.length > 1 && this.tactics === Tactics.Caster) {
-		const filteredSkills = skills.filter((skill) => skill.name !== "Attack");
-		return getRandomElement(filteredSkills);
-	}
+	const skills = priorities.find((priority) => priority.length > 0);
 
 	return getRandomElement(skills);
 });
