@@ -656,6 +656,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 			const weaponEffects: IActionWeaponEffect = {
 				name: weapon.name,
 				damage: new Types.DocumentArray<IDamageEffect>([]),
+				heal: new Types.DocumentArray<IHealEffect>([]),
 				status: new Types.DocumentArray<IStatusEffect>([]),
 				auxiliary: new Types.DocumentArray<IAuxiliaryEffect>([]),
 			};
@@ -669,6 +670,9 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 				switch (effect.type) {
 					case EffectType.Damage:
 						weaponEffects.damage.push(this.getDamage(effectData));
+						break;
+					case EffectType.Heal:
+						weaponEffects.heal.push(this.getHeal(effectData));
 						break;
 					case EffectType.Status:
 						weaponEffects.status.push(this.getStatus(effectData));

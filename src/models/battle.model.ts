@@ -37,6 +37,7 @@ const weaponEffectSchema = new Schema<IActionWeaponEffect, Model<IActionWeaponEf
 	{
 		name: String,
 		damage: [damageSchema],
+		heal: [healSchema],
 		status: [statusEffectSchema],
 		auxiliary: [auxiliaryEffectSchema],
 	},

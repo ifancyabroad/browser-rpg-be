@@ -6637,7 +6637,8 @@
 				"-OCIBl5fB-L23FChaK9-",
 				"-OCJ653IrMrMC4NtDiZ0",
 				"-OCKA2eOBOjwhJeBr4Ou",
-				"-OCKBZQcW3cNIj2iVasE"
+				"-OCKBZQcW3cNIj2iVasE",
+				"-OCjRoh79ZTFYmagQ6I1"
 			],
 			"stats": {
 				"charisma": 28,
@@ -11152,12 +11153,37 @@
 			"maxUses": 4,
 			"name": "Toxic Bite",
 			"price": 0
+		},
+		"-OCjRoh79ZTFYmagQ6I1": {
+			"class": "unique",
+			"description": "",
+			"effects": [
+				{
+					"max": 100,
+					"min": 100,
+					"target": "self",
+					"type": "heal"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCjRoh79ZTFYmagQ6I1?alt=media&token=fd1da8c1-de4c-4272-8474-4cbb77a5b9a0",
+			"level": 4,
+			"maxUses": 1,
+			"name": "Rebirth",
+			"price": 0
 		}
 	},
 	"weapons": {
 		"-NMmvhpTgBUrely_XRJ7": {
 			"damageType": "slashing",
 			"description": "The Longsword is a balanced, double-edged blade with a crossguard, ideal for versatile combat. Its length allows for both slashing and thrusting attacks, making it a favorite among knights and warriors. Commonly used, it combines elegance with practicality in a variety of battle scenarios.",
+			"effects": [
+				{
+					"max": 6,
+					"min": 1,
+					"target": "self",
+					"type": "heal"
+				}
+			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NMmvhpTgBUrely_XRJ7?alt=media&token=566098e0-cf7d-4431-a066-928fbe833c0f",
 			"level": 1,
 			"max": 6,

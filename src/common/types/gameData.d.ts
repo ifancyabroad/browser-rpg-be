@@ -98,7 +98,7 @@ export type ISkillEffect =
 	| IStatusEffectData
 	| IAuxiliaryEffectData;
 
-export type IWeaponEffect = IDamageEffectData | IStatusEffectData | IAuxiliaryEffectData;
+export type IWeaponEffect = IDamageEffectData | IHealEffectData | IStatusEffectData | IAuxiliaryEffectData;
 
 export interface ISkillData {
 	class: SkillClass;

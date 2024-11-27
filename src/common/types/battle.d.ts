@@ -15,6 +15,7 @@ export interface IReward {
 export interface IActionWeaponEffect {
 	name: string;
 	damage: Types.DocumentArray<IDamageEffect>;
+	heal: Types.DocumentArray<IHealEffect>;
 	status: Types.DocumentArray<IStatusEffect>;
 	auxiliary: Types.DocumentArray<IAuxiliaryEffect>;
 }
