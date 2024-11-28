@@ -147,6 +147,7 @@ export enum ItemRarity {
 	Uncommon = 2,
 	Rare = 3,
 	Epic = 4,
+	Legendary = 5,
 }
 
 export enum Zone {
