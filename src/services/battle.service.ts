@@ -64,6 +64,19 @@ function getMonsterData(battleZone: Zone, battleLevel: number) {
 		remaining: GameData.getSkillById(id).maxUses,
 	}));
 	const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
+	const gameLevel = Game.getGameLevel(battleLevel);
+	let { stats, resistances, naturalArmourClass, naturalMinDamage, naturalMaxDamage } = enemyData;
+
+	if (gameLevel > 0) {
+		stats = Game.getEnemyStats(gameLevel, enemyData.stats);
+		resistances = Game.getEnemyResistances(gameLevel, enemyData.resistances);
+		naturalArmourClass = Game.getEnemyArmourClass(gameLevel, enemyData.naturalArmourClass);
+		[naturalMinDamage, naturalMaxDamage] = Game.getEnemyDamage(
+			gameLevel,
+			enemyData.naturalMinDamage,
+			enemyData.naturalMaxDamage,
+		);
+	}
 
 	return {
 		name: enemyData.name,
@@ -76,13 +89,13 @@ function getMonsterData(battleZone: Zone, battleLevel: number) {
 		skillIDs: skills,
 		equipmentIDs: equipment,
 		tactics: enemyData.tactics,
-		baseStats: enemyData.stats,
-		baseResistances: enemyData.resistances,
+		baseStats: stats,
+		baseResistances: resistances,
 		baseHitPoints: hitPoints,
 		baseMaxHitPoints: hitPoints,
-		naturalArmourClass: enemyData.naturalArmourClass,
-		naturalMinDamage: enemyData.naturalMinDamage,
-		naturalMaxDamage: enemyData.naturalMaxDamage,
+		naturalArmourClass,
+		naturalMinDamage,
+		naturalMaxDamage,
 		naturalDamageType: enemyData.naturalDamageType,
 	};
 }
@@ -190,8 +203,7 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 			multiplier,
 		});
 
-		await EnemyModel.findByIdAndDelete(battleRecord.enemy);
-		await battleRecord.deleteOne();
+		await Promise.all([EnemyModel.findByIdAndDelete(battleRecord.enemy), battleRecord.deleteOne()]);
 
 		return {
 			battle: battle.toJSON(),
@@ -259,8 +271,7 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 
 		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
-		await EnemyModel.findByIdAndDelete(battle.enemy);
-		await battle.deleteOne();
+		await Promise.all([EnemyModel.findByIdAndDelete(battle.enemy), battle.deleteOne()]);
 
 		return {
 			battle: battle.toJSON(),

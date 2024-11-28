@@ -1,9 +1,15 @@
+import { TDamageTypes, TStats } from "@common/types/gameData";
 import {
 	HIT_TYPE_MULTIPLIER_MAP,
+	FINAL_LEVEL,
 	MODIFIERS,
 	SKILL_CLASS_MODIFIER_MAP,
 	WEAPON_MODIFIER_MAP,
 	ZONES,
+	NEW_GAME_RESISTANCE_BONUS,
+	NEW_GAME_STAT_BONUS,
+	MAX_STAT_LEVEL,
+	MAX_ENEMY_LEVEL,
 } from "@common/utils/constants";
 import { HitType, SkillClass, WeaponType } from "@common/utils/enums";
 
@@ -60,16 +66,54 @@ export class Game {
 		return hitPoints;
 	}
 
-	public static getIsBoss(battleLevel = 1) {
+	public static getIsBoss(battleLevel: number) {
 		return battleLevel % 10 === 0;
 	}
 
-	public static getEnemyLevel(battleLevel = 1) {
-		return Math.ceil(battleLevel / 10);
+	public static getEnemyLevel(battleLevel: number) {
+		const level = Math.ceil(battleLevel / 10);
+		return Math.min(level, MAX_ENEMY_LEVEL);
 	}
 
-	public static getZone(battleLevel = 1) {
+	public static getZone(battleLevel: number) {
 		const index = Math.floor(((battleLevel - 1) / 10) % ZONES.length);
 		return ZONES[index];
+	}
+
+	public static getGameLevel(battleLevel: number) {
+		return Math.ceil(battleLevel / FINAL_LEVEL) - 1;
+	}
+
+	public static getEnemyResistances(gameLevel: number, resistances: TDamageTypes) {
+		const bonus = gameLevel * NEW_GAME_RESISTANCE_BONUS;
+		const newResistances = {} as TDamageTypes;
+		for (const key of Object.keys(resistances) as (keyof TDamageTypes)[]) {
+			const value = resistances[key] + bonus;
+			newResistances[key] = Math.min(value, 100);
+		}
+		return newResistances;
+	}
+
+	public static getEnemyStats(gameLevel: number, stats: TStats) {
+		const bonus = gameLevel * NEW_GAME_STAT_BONUS;
+		const newStats = {} as TStats;
+		for (const key of Object.keys(stats) as (keyof TStats)[]) {
+			const value = stats[key] + bonus;
+			newStats[key] = Math.min(value, MAX_STAT_LEVEL);
+		}
+		return newStats;
+	}
+
+	public static getEnemyArmourClass(gameLevel: number, armourClass: number) {
+		const bonus = gameLevel * NEW_GAME_STAT_BONUS;
+		const value = armourClass + bonus;
+		return Math.min(value, MAX_STAT_LEVEL);
+	}
+
+	public static getEnemyDamage(gameLevel: number, minDamage: number, maxDamage: number) {
+		const bonus = gameLevel * NEW_GAME_STAT_BONUS;
+		const newMinDamage = minDamage + bonus;
+		const newMaxDamage = maxDamage + bonus;
+		return [newMinDamage, newMaxDamage];
 	}
 }

@@ -31,6 +31,11 @@ export const MAX_POTIONS = 3;
 export const FINAL_LEVEL = 100;
 
 export const MAX_CHARACTER_LEVEL = 10;
+export const MAX_ENEMY_LEVEL = 100;
+export const MAX_STAT_LEVEL = 30;
+
+export const NEW_GAME_STAT_BONUS = 2;
+export const NEW_GAME_RESISTANCE_BONUS = 25;
 
 export const MODIFIERS = new Map([
 	[1, -5],

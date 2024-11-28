@@ -49,7 +49,7 @@ const characterSchema = new Schema<ICharacter, ICharacterModel, ICharacterMethod
 		level: {
 			type: Number,
 			min: 1,
-			max: 30,
+			max: 100,
 			default: 1,
 		},
 		activeStatusEffects: {
