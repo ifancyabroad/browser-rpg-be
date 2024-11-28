@@ -118,7 +118,7 @@
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 15
+					"value": 20
 				}
 			],
 			"type": "helmet"
@@ -1245,17 +1245,17 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEJs3RCx4H78EqaGTc?alt=media&token=50f252da-83d7-4134-ac19-c32c1abb5950",
 			"level": 2,
 			"name": "Full Helm",
-			"price": 260,
+			"price": 300,
 			"properties": [
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 15
+					"value": 20
 				},
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 15
+					"value": 20
 				}
 			],
 			"type": "helmet"
@@ -1594,24 +1594,19 @@
 					"value": 2
 				},
 				{
-					"name": "slashing",
-					"type": "damage",
-					"value": 20
+					"name": "strength",
+					"type": "stat",
+					"value": 2
 				},
 				{
-					"name": "slashing",
-					"type": "resistance",
-					"value": 20
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
 				},
 				{
-					"name": "crushing",
-					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "piercing",
-					"type": "resistance",
-					"value": 20
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"type": "shield"
@@ -1700,7 +1695,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
 			"level": 4,
 			"name": "Gold Wing",
-			"price": 1320,
+			"price": 1420,
 			"properties": [
 				{
 					"name": "armourClass",
@@ -1708,19 +1703,24 @@
 					"value": 1
 				},
 				{
-					"name": "strength",
-					"type": "stat",
-					"value": 2
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
 				},
 				{
-					"name": "dexterity",
-					"type": "stat",
-					"value": 2
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
 				},
 				{
-					"name": "constitution",
-					"type": "stat",
-					"value": 2
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"type": "shield"
@@ -2194,9 +2194,9 @@
 					"value": 1
 				},
 				{
-					"name": "dexterity",
-					"type": "stat",
-					"value": 1
+					"name": "crushing",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"type": "armour"
@@ -2250,9 +2250,14 @@
 			"price": 220,
 			"properties": [
 				{
-					"name": "cold",
-					"type": "resistance",
-					"value": 40
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
 				}
 			],
 			"type": "armour"
@@ -2466,12 +2471,7 @@
 				{
 					"name": "slashing",
 					"type": "damage",
-					"value": 15
-				},
-				{
-					"name": "piercing",
-					"type": "damage",
-					"value": 15
+					"value": 20
 				}
 			],
 			"type": "belt"
@@ -2598,15 +2598,15 @@
 		},
 		"-OAsIblfA-f9wC2IECtw": {
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsIblfA-f9wC2IECtw?alt=media&token=845f4160-9bcd-4827-b3eb-1768de8c4005",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OAsIblfA-f9wC2IECtw?alt=media&token=db750ac1-1764-4e14-a95f-cfded7aeaaf4",
 			"level": 1,
-			"name": "Electric Charm",
+			"name": "Health Charm",
 			"price": 120,
 			"properties": [
 				{
-					"name": "lightning",
-					"type": "damage",
-					"value": 20
+					"name": "constitution",
+					"type": "stat",
+					"value": 1
 				}
 			],
 			"type": "ring"
@@ -2774,9 +2774,9 @@
 					"value": 1
 				},
 				{
-					"name": "critChance",
-					"type": "auxiliaryStat",
-					"value": 1
+					"name": "crushing",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"type": "helmet"
@@ -3564,17 +3564,17 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=d0825833-28ae-4445-8dcb-a31f457517a1",
 			"resistances": {
-				"acid": 25,
+				"acid": 0,
 				"cold": -50,
-				"crushing": 25,
+				"crushing": 0,
 				"fire": 50,
 				"lighting": 50,
-				"lightning": 25,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
-				"poison": 25,
+				"piercing": 0,
+				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0KVp8uW27MHyrOLUj", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
@@ -3707,17 +3707,17 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkXJrcYTG_XtKdj_B8?alt=media&token=34267405-ae1a-4b8d-a314-b9d0178207a4",
 			"resistances": {
-				"acid": 25,
-				"cold": 25,
-				"crushing": 25,
-				"fire": 25,
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
 				"lighting": 0,
-				"lightning": 25,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
-				"poison": 25,
+				"piercing": 0,
+				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3fgWvaJhBd1_Ar0AK"],
 			"stats": {
@@ -3852,17 +3852,17 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkcuvakLcMmPpk-jQk?alt=media&token=f3e0a550-50df-44ed-afea-cc7783541eca",
 			"resistances": {
-				"acid": 25,
+				"acid": 0,
 				"cold": -50,
-				"crushing": 25,
+				"crushing": 0,
 				"fire": 100,
 				"lighting": 0,
-				"lightning": 25,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 0,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -3893,17 +3893,17 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NhkeXYbGnQ67kC7gWyw?alt=media&token=e1a3bff8-36b5-4df4-abef-870060c3b0aa",
 			"resistances": {
-				"acid": 25,
+				"acid": 0,
 				"cold": -50,
-				"crushing": 25,
+				"crushing": 0,
 				"fire": 50,
 				"lighting": 50,
-				"lightning": 25,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
-				"poison": 25,
+				"piercing": 0,
+				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-O9ePhvfJJr-bhi0Iial", "-OC4o-B22zajLRPINRfV"],
 			"stats": {
@@ -4599,14 +4599,14 @@
 			"resistances": {
 				"acid": 0,
 				"cold": 50,
-				"crushing": 25,
-				"fire": 25,
-				"lightning": 25,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 0,
 				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -4708,14 +4708,14 @@
 			"resistances": {
 				"acid": 0,
 				"cold": 100,
-				"crushing": 25,
-				"fire": 25,
-				"lightning": 25,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
+				"piercing": 0,
 				"poison": 50,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -5865,16 +5865,16 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC7opH8h6jHe_KfFoND?alt=media&token=011f1cb2-db44-4353-a6b5-1ac6de62e142",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 100,
-				"piercing": 50,
-				"poison": 50,
+				"piercing": 25,
+				"poison": 25,
 				"radiant": -50,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -5905,16 +5905,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8t-vypjdsgapZvwLp?alt=media&token=8c989f52-8ee5-4001-b092-043015e7448a",
 			"resistances": {
-				"acid": 25,
-				"cold": 25,
-				"crushing": 25,
-				"fire": 25,
-				"lightning": 25,
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
-				"poison": 25,
+				"piercing": 0,
+				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OC3_Ea2wZ_5cHuPGwB5", "-OC0BnBNFGwHwz1CugLe", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
@@ -6055,16 +6055,16 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC8tx6bQo9WPm4r_qrW?alt=media&token=dd7d49ee-c291-4f2f-a4b0-ea21397b3b1c",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
-				"poison": 50,
+				"piercing": 25,
+				"poison": 25,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
@@ -6212,16 +6212,16 @@
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9PwVr22rd-Chw1ykw?alt=media&token=1812558e-0bdc-49e0-8074-1ad8680833b4",
 			"resistances": {
-				"acid": 25,
-				"cold": 25,
-				"crushing": 25,
-				"fire": 25,
-				"lightning": 25,
+				"acid": 0,
+				"cold": 0,
+				"crushing": 0,
+				"fire": 0,
+				"lightning": 0,
 				"necrotic": 0,
-				"piercing": 25,
-				"poison": 25,
+				"piercing": 0,
+				"poison": 0,
 				"radiant": 0,
-				"slashing": 25
+				"slashing": 0
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkGRRiaTZa0Q2JeWOd", "-OCIzZAWoMILIUtWYjFz", "-NgTbEHpokQy-0H5xsHh"],
 			"stats": {
@@ -6286,16 +6286,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R-HzyJPG_LQJmkym?alt=media&token=2a7ee4c5-a919-44f8-80e8-ca931bb2e545",
 			"resistances": {
-				"acid": 50,
+				"acid": 25,
 				"cold": -50,
-				"crushing": 50,
+				"crushing": 25,
 				"fire": 100,
-				"lightning": 50,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NZMJ9LGQM22pDRl_EYc"],
 			"stats": {
@@ -6320,16 +6320,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R4bc-LU3XAlwo921?alt=media&token=ec97df23-e33f-4e06-9aca-46dd9da7495b",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhkdJeDGDat6H-Mf7WV"],
 			"stats": {
@@ -6354,16 +6354,16 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9R9WELrlP_t9usp1Q?alt=media&token=b107eb8c-6272-43d7-80d3-b6fa6b1ba0d8",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
 				"lightning": -50,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCJgE_UIN33YF5ZKfZD", "-OC4ec48-KD77fXEGDx8"],
 			"stats": {
@@ -6388,16 +6388,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RF0Uh1Wq-FI2kBWZ?alt=media&token=7d2f484c-bf48-4e3f-9c1e-7911fee6bf0e",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCJhiIp9tX3XVE1ycOM"],
 			"stats": {
@@ -6422,16 +6422,16 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9RSTcdzO5pmuTfjSM?alt=media&token=e7f747be-4aeb-4e67-ba18-2cbde44ffdb5",
 			"resistances": {
-				"acid": 50,
+				"acid": 25,
 				"cold": 100,
-				"crushing": 50,
+				"crushing": 25,
 				"fire": -50,
-				"lightning": 50,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCJp6wp3bVLggUSeffg"],
 			"stats": {
@@ -6456,16 +6456,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9S8vQ1mIwHqZ4JlBC?alt=media&token=c663ee31-ab03-453f-8cd0-97d15e750740",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
 				"fire": -50,
-				"lightning": 50,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OCJm2T4y5k9f0MN-4kj", "-OCJmYRSklNylLGbF7-N"],
 			"stats": {
@@ -6490,16 +6490,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SIL6W0nRljBdyt11?alt=media&token=5dd8e3eb-aa6d-447d-9617-ed0acccbe512",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
+				"acid": 25,
+				"cold": 25,
 				"crushing": -50,
-				"fire": 50,
-				"lightning": 50,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": -50,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCJvsz-cgkVxZDlPuMY", "-OC0IqVe3gyJes08fYye"],
 			"stats": {
@@ -6524,16 +6524,16 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SlQ66CiMGqEk6_Mn?alt=media&token=47fb381e-08d2-45fa-8068-a25dda97b2ca",
 			"resistances": {
-				"acid": 50,
+				"acid": 25,
 				"cold": -50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCJykYbURtCWS-6Ljqx", "-OC4ec48-KD77fXEGDx8"],
 			"stats": {
@@ -6558,16 +6558,16 @@
 			"naturalMinDamage": 4,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9SvOUA7FI47i-QlDd?alt=media&token=159bc302-3d14-4cf3-811c-fdd6077b2131",
 			"resistances": {
-				"acid": 50,
-				"cold": 50,
-				"crushing": 50,
-				"fire": 50,
-				"lightning": 50,
-				"necrotic": 50,
-				"piercing": 50,
+				"acid": 25,
+				"cold": 25,
+				"crushing": 25,
+				"fire": 25,
+				"lightning": 25,
+				"necrotic": 25,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": -50,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-OCJnc4CZuCdQbrJEZKt", "-OCJlQdMjqgglotq5k6C"],
 			"stats": {
@@ -6592,16 +6592,16 @@
 			"naturalMinDamage": 7,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OC9T0NsJFrfYHqxt1nI?alt=media&token=4218dd9a-94df-4def-a67c-fc3378c273f9",
 			"resistances": {
-				"acid": 50,
+				"acid": 25,
 				"cold": -50,
-				"crushing": 50,
+				"crushing": 25,
 				"fire": 100,
-				"lightning": 50,
+				"lightning": 25,
 				"necrotic": 0,
-				"piercing": 50,
+				"piercing": 25,
 				"poison": 100,
 				"radiant": 0,
-				"slashing": 50
+				"slashing": 25
 			},
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OCK1lVEhQnzlaTAST3j", "-OCK-_ujmbDbdHYgCnl_"],
 			"stats": {
@@ -6626,16 +6626,16 @@
 			"naturalMinDamage": 14,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-OCK8vFseTxxM0LU2Ok7?alt=media&token=e0099aa3-ac12-46b8-95cd-9aaa4cf0a2ee",
 			"resistances": {
-				"acid": 75,
-				"cold": 75,
-				"crushing": 75,
+				"acid": 50,
+				"cold": 50,
+				"crushing": 50,
 				"fire": 100,
-				"lightning": 75,
-				"necrotic": 50,
-				"piercing": 75,
-				"poison": 75,
-				"radiant": 75,
-				"slashing": 75
+				"lightning": 50,
+				"necrotic": 25,
+				"piercing": 50,
+				"poison": 50,
+				"radiant": 50,
+				"slashing": 50
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
