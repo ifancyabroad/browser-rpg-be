@@ -134,7 +134,9 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 		const isCaster = this.tactics === Tactics.Caster;
 		const isConcede = this.tactics === Tactics.Concede;
 		const isBaseAttack = skill.maxUses === 0;
-		const isAttackOnly = skill.effects.every((effect) => effect.type === EffectType.Damage);
+		const isAttackOnly = skill.effects.every(
+			(effect) => effect.type === EffectType.Damage && effect.target === Target.Enemy,
+		);
 		const isDamaged = this.hitPoints < this.maxHitPoints / 2;
 		const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;
 		const isActiveBuff = this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
@@ -145,12 +147,12 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			return;
 		}
 
-		if (hasHeal && isDamaged) {
-			priorities[1].push(skill);
+		if (hasSelfAttack && isConcede && isBadlyDamaged) {
+			priorities[0].push(skill);
 			return;
 		}
 
-		if (hasSelfAttack && isConcede && isBadlyDamaged) {
+		if (hasHeal && isDamaged) {
 			priorities[1].push(skill);
 			return;
 		}

@@ -485,17 +485,22 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 25
+					"value": 20
 				},
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 25
+					"value": 20
 				},
 				{
 					"name": "piercing",
 					"type": "resistance",
-					"value": 25
+					"value": 20
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
 				}
 			],
 			"type": "amulet"
@@ -2147,7 +2152,7 @@
 				{
 					"name": "critChance",
 					"type": "auxiliaryStat",
-					"value": 4
+					"value": 3
 				}
 			],
 			"type": "armour"
@@ -9448,7 +9453,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eRbMQ_TW85fhd_iC_?alt=media&token=37961e33-b999-4f09-82e2-f6fa760630a8",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 1,
 			"name": "Reconstruct",
 			"price": 0
 		},
@@ -9906,15 +9911,15 @@
 			"effects": [
 				{
 					"damageType": "radiant",
-					"max": 10,
-					"min": 10,
+					"max": 20,
+					"min": 20,
 					"target": "self",
 					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OC-cCZyaJMimX-Com7R?alt=media&token=67620207-c2bb-4090-808d-9035194397c5",
 			"level": 1,
-			"maxUses": 2,
+			"maxUses": 5,
 			"name": "Thou Hast Bested Me",
 			"price": 0
 		},
@@ -10232,7 +10237,7 @@
 					"type": "status"
 				},
 				{
-					"difficulty": 12,
+					"difficulty": 10,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
