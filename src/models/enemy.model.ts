@@ -125,18 +125,19 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 
 		const hasWeaponAttack = enemyTargetEffects.includes(EffectType.WeaponDamage);
 		const hasAttack = enemyTargetEffects.includes(EffectType.Damage);
-		const isCaster = this.tactics === Tactics.Caster;
 		const hasSelfAttack = selfTargetEffects.includes(EffectType.Damage);
-		const isConcede = this.tactics === Tactics.Concede;
-		const isBaseAttack = skill.maxUses === 0;
 		const hasHeal = selfTargetEffects.includes(EffectType.Heal);
-		const isDamaged = this.hitPoints < this.maxHitPoints / 2;
-		const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;
 		const hasBuff =
 			selfTargetEffects.includes(EffectType.Status) || selfTargetEffects.includes(EffectType.Auxiliary);
-		const isActiveBuff = this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
 		const hasDebuff =
 			enemyTargetEffects.includes(EffectType.Status) || enemyTargetEffects.includes(EffectType.Auxiliary);
+		const isCaster = this.tactics === Tactics.Caster;
+		const isConcede = this.tactics === Tactics.Concede;
+		const isBaseAttack = skill.maxUses === 0;
+		const isAttackOnly = skill.effects.every((effect) => effect.type === EffectType.Damage);
+		const isDamaged = this.hitPoints < this.maxHitPoints / 2;
+		const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;
+		const isActiveBuff = this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
 		const isActiveDebuff = hero.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
 
 		if (hasHeal && isBadlyDamaged) {
@@ -160,6 +161,11 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 		}
 
 		if (hasAttack && isCaster) {
+			priorities[1].push(skill);
+			return;
+		}
+
+		if (isAttackOnly) {
 			priorities[1].push(skill);
 			return;
 		}
