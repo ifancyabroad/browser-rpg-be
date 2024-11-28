@@ -65,17 +65,11 @@ function getMonsterData(battleZone: Zone, battleLevel: number) {
 	}));
 	const equipment = "equipment" in enemyData ? enemyData.equipment : undefined;
 	const gameLevel = Game.getGameLevel(battleLevel);
-	let { stats, resistances, naturalArmourClass, naturalMinDamage, naturalMaxDamage } = enemyData;
+	let { stats, resistances } = enemyData;
 
 	if (gameLevel > 0) {
 		stats = Game.getEnemyStats(gameLevel, enemyData.stats);
 		resistances = Game.getEnemyResistances(gameLevel, enemyData.resistances);
-		naturalArmourClass = Game.getEnemyArmourClass(gameLevel, enemyData.naturalArmourClass);
-		[naturalMinDamage, naturalMaxDamage] = Game.getEnemyDamage(
-			gameLevel,
-			enemyData.naturalMinDamage,
-			enemyData.naturalMaxDamage,
-		);
 	}
 
 	return {
@@ -93,9 +87,9 @@ function getMonsterData(battleZone: Zone, battleLevel: number) {
 		baseResistances: resistances,
 		baseHitPoints: hitPoints,
 		baseMaxHitPoints: hitPoints,
-		naturalArmourClass,
-		naturalMinDamage,
-		naturalMaxDamage,
+		naturalArmourClass: enemyData.naturalArmourClass,
+		naturalMinDamage: enemyData.naturalMinDamage,
+		naturalMaxDamage: enemyData.naturalMaxDamage,
 		naturalDamageType: enemyData.naturalDamageType,
 	};
 }

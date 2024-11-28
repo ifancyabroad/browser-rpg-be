@@ -103,17 +103,4 @@ export class Game {
 		}
 		return newStats;
 	}
-
-	public static getEnemyArmourClass(gameLevel: number, armourClass: number) {
-		const bonus = gameLevel * NEW_GAME_STAT_BONUS;
-		const value = armourClass + bonus;
-		return Math.min(value, MAX_STAT_LEVEL);
-	}
-
-	public static getEnemyDamage(gameLevel: number, minDamage: number, maxDamage: number) {
-		const bonus = gameLevel * NEW_GAME_STAT_BONUS;
-		const newMinDamage = minDamage + bonus;
-		const newMaxDamage = maxDamage + bonus;
-		return [newMinDamage, newMaxDamage];
-	}
 }
