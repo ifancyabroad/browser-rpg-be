@@ -11863,12 +11863,12 @@
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 2
+					"value": 1
 				},
 				{
 					"name": "constitution",
 					"type": "stat",
-					"value": 2
+					"value": 1
 				}
 			],
 			"size": "oneHanded",
@@ -11883,7 +11883,7 @@
 			"max": 12,
 			"min": 3,
 			"name": "Rune Forged Warhammer",
-			"price": 700,
+			"price": 800,
 			"properties": [
 				{
 					"name": "fire",
@@ -13103,7 +13103,7 @@
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 14,
+					"difficulty": 16,
 					"duration": 2,
 					"effect": "poison",
 					"modifier": "constitution",
@@ -13219,11 +13219,11 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCjb2zwjZOd3F8wf8Xa?alt=media&token=760f02f1-a8fd-456c-8903-aad88daba274",
-			"level": 4,
+			"level": 5,
 			"max": 9,
 			"min": 6,
 			"name": "Vorshak's Embrace",
-			"price": 1850,
+			"price": 2250,
 			"properties": [
 				{
 					"name": "dexterity",
@@ -13260,11 +13260,11 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCjclL2ykXga6TDYLQX?alt=media&token=63e7045d-ac70-42a6-a88d-93c96a13975d",
-			"level": 4,
+			"level": 5,
 			"max": 15,
 			"min": 9,
 			"name": "Naalvad's Bonecrusher",
-			"price": 2040,
+			"price": 2540,
 			"properties": [
 				{
 					"name": "strength",
@@ -13280,11 +13280,11 @@
 			"damageType": "crushing",
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCje5NY8tvXxytEERmn?alt=media&token=e349508a-e35a-4b0b-bc67-697db8e39ed9",
-			"level": 4,
+			"level": 5,
 			"max": 6,
 			"min": 1,
 			"name": "Will of Galorin",
-			"price": 1960,
+			"price": 2500,
 			"properties": [
 				{
 					"name": "intelligence",
@@ -13305,6 +13305,50 @@
 			"size": "twoHanded",
 			"type": "weapon",
 			"weaponType": "staff"
+		},
+		"-OCn-7fbuTczpdGL51Ob": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 24,
+					"duration": 6,
+					"effect": "bleed",
+					"modifier": "constitution",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"difficulty": 24,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCn-7fbuTczpdGL51Ob?alt=media&token=3215d999-1642-442d-8739-aaad4b503759",
+			"level": 5,
+			"max": 15,
+			"min": 9,
+			"name": "Rat God's Decapitator",
+			"price": 2600,
+			"properties": [
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 4
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "axe"
 		}
 	}
 }
