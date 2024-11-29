@@ -10229,7 +10229,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 16,
+					"difficulty": 10,
 					"duration": 3,
 					"modifier": "dexterity",
 					"properties": [
@@ -10243,7 +10243,7 @@
 					"type": "status"
 				},
 				{
-					"difficulty": 10,
+					"difficulty": 6,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
@@ -10251,7 +10251,7 @@
 					"type": "auxiliary"
 				},
 				{
-					"difficulty": 16,
+					"difficulty": 10,
 					"duration": 3,
 					"modifier": "dexterity",
 					"properties": [
@@ -11137,16 +11137,16 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "poison",
-					"max": 20,
-					"min": 8,
+					"damageType": "piercing",
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "poison",
-					"max": 20,
-					"min": 8,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
