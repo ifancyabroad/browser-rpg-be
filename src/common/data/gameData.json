@@ -5339,10 +5339,10 @@
 			},
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
-				"-Nc3yZ_5d4QQI4y90Inu",
 				"-Nhh3v9mXEeAJhlsZfwB",
 				"-Nc4-UVARP8jFmsiuXC9",
-				"-Nc3yE_BOq5Xmhy4LvbI"
+				"-Nc3yE_BOq5Xmhy4LvbI",
+				"-Nhh4hPWuWx_NN1YApGU"
 			],
 			"stats": {
 				"charisma": 10,
@@ -6965,7 +6965,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqUWZDeys5x3n8eLNA?alt=media&token=74ce578b-3e45-44d2-8565-ccd0187437d0",
 			"level": 4,
-			"maxUses": 1,
+			"maxUses": 2,
 			"name": "Whirlwind Strike",
 			"price": 1260
 		},
@@ -7468,28 +7468,34 @@
 		},
 		"-Nc3yZ_5d4QQI4y90Inu": {
 			"class": "mage",
-			"description": "Blind the enemy with a basic enchantment.",
+			"description": "Summon three piercing projectiles to launch at the enemy.",
 			"effects": [
 				{
-					"accuracy": 100,
-					"difficulty": 18,
-					"duration": 5,
-					"modifier": "intelligence",
-					"properties": [
-						{
-							"name": "hitChance",
-							"type": "auxiliaryStat",
-							"value": -5
-						}
-					],
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
 					"target": "enemy",
-					"type": "status"
+					"type": "damage"
+				},
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"damageType": "piercing",
+					"max": 6,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3yZ_5d4QQI4y90Inu?alt=media&token=2d61b596-9a2c-47a8-99c4-0897a813dde6",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3yZ_5d4QQI4y90Inu?alt=media&token=494feabb-a251-4b55-afb0-0194a5b4000a",
 			"level": 2,
-			"maxUses": 4,
-			"name": "Blind",
+			"maxUses": 7,
+			"name": "Magic Missiles",
 			"price": 280
 		},
 		"-Nc3z5D4In6VQLtKZxrV": {
@@ -8209,7 +8215,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTnzsxBYgTye5lFfkd?alt=media&token=51004322-ba78-44c5-9f60-332eefbdffec",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Double Strike",
 			"price": 0
 		},
