@@ -6,11 +6,16 @@ import { ILeaderboardQuery } from "@common/types/leaderboard";
 import { IUser } from "@common/types/user";
 
 export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, session: Session & Partial<SessionData>) {
-	const { showUserCharacters } = leaderboardQuery;
+	const { type, showUserCharacters } = leaderboardQuery;
 	const { user } = session;
 
 	try {
-		const filter = JSON.parse(showUserCharacters) ? { user: user.id } : {};
+		let filter = {};
+
+		// Backwards compatibility
+		if (type === "user" || showUserCharacters === "true") {
+			filter = { user: user.id };
+		}
 
 		const leaderboard = await HeroArchive.find(filter)
 			.sort({ maxBattleLevel: "desc", name: "asc" })
