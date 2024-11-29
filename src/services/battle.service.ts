@@ -327,11 +327,8 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			characterRecord.battleWon(battleRecord);
 		}
 
-		const [character, enemy, battle] = await Promise.all([
-			characterRecord.save(),
-			enemyRecord.save(),
-			battleRecord.save(),
-		]);
+		const enemy = await enemyRecord.save();
+		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
 		if (!character.alive) {
 			await Promise.all([battle.deleteOne(), enemy.deleteOne(), character.deleteOne()]);

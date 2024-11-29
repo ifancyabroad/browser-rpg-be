@@ -66,6 +66,7 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 		user: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
+			index: true,
 		},
 		hero: {
 			type: Schema.Types.ObjectId,
@@ -160,6 +161,7 @@ battleSchema.method("handleTreasure", function (hero: IHero & IHeroMethods, enem
 });
 
 battleSchema.index({ hero: 1, state: 1 });
+battleSchema.index({ user: 1, state: 1, result: 1 });
 
 battleSchema.plugin(mongooseAutoPopulate);
 

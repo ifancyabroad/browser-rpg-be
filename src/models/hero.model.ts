@@ -303,6 +303,7 @@ heroSchema.method("checkLevelUp", function checkLevelUp() {
 	}
 });
 
+heroSchema.index({ user: 1, state: 1, status: 1 });
 heroSchema.index({ user: 1, state: 1 });
 
 heroSchema.plugin(mongooseAutoPopulate);

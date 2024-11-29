@@ -104,92 +104,56 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
-	const priorities: ISkillDataWithRemaining[][] = [
-		[], // Priority 1: Heal
-		[], // Priority 2: Attack, Debuff, Buff
-		[], // Priority 3: Default
-	];
+	const priorities: ISkillDataWithRemaining[][] = [[], [], []];
+
+	const isDamaged = this.hitPoints < this.maxHitPoints / 2;
+	const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;
+	const isCaster = this.tactics === Tactics.Caster;
+	const isConcede = this.tactics === Tactics.Concede;
 
 	this.skills.forEach((skill) => {
-		if (skill.maxUses > 0 && skill.remaining <= 0) {
-			return;
-		}
+		if (skill.maxUses > 0 && skill.remaining <= 0) return;
 
-		const selfTargetEffects = skill.effects
-			.filter((effect) => effect.target === Target.Self)
-			.map((effect) => effect.type);
+		const selfTargetEffects = skill.effects.filter((effect) => effect.target === Target.Self);
+		const enemyTargetEffects = skill.effects.filter((effect) => effect.target === Target.Enemy);
 
-		const enemyTargetEffects = skill.effects
-			.filter((effect) => effect.target === Target.Enemy)
-			.map((effect) => effect.type);
-
-		const hasWeaponAttack = enemyTargetEffects.includes(EffectType.WeaponDamage);
-		const hasAttack = enemyTargetEffects.includes(EffectType.Damage);
-		const hasSelfAttack = selfTargetEffects.includes(EffectType.Damage);
-		const hasHeal = selfTargetEffects.includes(EffectType.Heal);
-		const hasBuff =
-			selfTargetEffects.includes(EffectType.Status) || selfTargetEffects.includes(EffectType.Auxiliary);
-		const hasDebuff =
-			enemyTargetEffects.includes(EffectType.Status) || enemyTargetEffects.includes(EffectType.Auxiliary);
-		const isCaster = this.tactics === Tactics.Caster;
-		const isConcede = this.tactics === Tactics.Concede;
+		const hasWeaponAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.WeaponDamage);
+		const hasAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.Damage);
+		const hasSelfAttack = selfTargetEffects.some((effect) => effect.type === EffectType.Damage);
+		const hasHeal = selfTargetEffects.some((effect) => effect.type === EffectType.Heal);
+		const hasBuff = selfTargetEffects.some(
+			(effect) => effect.type === EffectType.Status || effect.type === EffectType.Auxiliary,
+		);
+		const hasDebuff = enemyTargetEffects.some(
+			(effect) => effect.type === EffectType.Status || effect.type === EffectType.Auxiliary,
+		);
 		const isBaseAttack = skill.maxUses === 0;
 		const isAttackOnly = skill.effects.every(
 			(effect) => effect.type === EffectType.Damage && effect.target === Target.Enemy,
 		);
-		const isDamaged = this.hitPoints < this.maxHitPoints / 2;
-		const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;
-		const isActiveBuff = this.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
-		const isActiveDebuff = hero.activeStatusEffects.findIndex((effect) => effect.source.id === skill.id) > -1;
+		const isActiveBuff = this.activeStatusEffects.some((effect) => effect.source.id === skill.id);
+		const isActiveDebuff = hero.activeStatusEffects.some((effect) => effect.source.id === skill.id);
 
 		if (hasHeal && isBadlyDamaged) {
 			priorities[0].push(skill);
-			return;
-		}
-
-		if (hasSelfAttack && isConcede && isBadlyDamaged) {
+		} else if (hasSelfAttack && isConcede && isBadlyDamaged) {
 			priorities[0].push(skill);
-			return;
-		}
-
-		if (hasHeal && isDamaged) {
+		} else if (hasHeal && isDamaged) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (hasWeaponAttack && !isBaseAttack) {
+		} else if (hasWeaponAttack && !isBaseAttack) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (hasAttack && isCaster) {
+		} else if (hasAttack && isCaster) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (isAttackOnly) {
+		} else if (isAttackOnly) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (hasDebuff && !isActiveDebuff) {
+		} else if (hasDebuff && !isActiveDebuff) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (hasBuff && !isActiveBuff) {
+		} else if (hasBuff && !isActiveBuff) {
 			priorities[1].push(skill);
-			return;
-		}
-
-		if (isBaseAttack) {
+		} else if (isBaseAttack) {
 			priorities[2].push(skill);
-			return;
-		}
-
-		if (hasAttack) {
+		} else if (hasAttack) {
 			priorities[2].push(skill);
-			return;
 		}
 	});
 
