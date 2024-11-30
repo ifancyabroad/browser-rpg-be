@@ -485,22 +485,17 @@
 				{
 					"name": "slashing",
 					"type": "resistance",
-					"value": 20
+					"value": 25
 				},
 				{
 					"name": "crushing",
 					"type": "resistance",
-					"value": 20
+					"value": 25
 				},
 				{
 					"name": "piercing",
 					"type": "resistance",
-					"value": 20
-				},
-				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 1
+					"value": 25
 				}
 			],
 			"type": "amulet"
@@ -558,7 +553,7 @@
 			"price": 70,
 			"properties": [
 				{
-					"name": "slashing",
+					"name": "piercing",
 					"type": "resistance",
 					"value": 20
 				}
@@ -786,14 +781,14 @@
 			"type": "boots"
 		},
 		"-NzDJkRq2hFzUkbrhgnp": {
-			"description": "These boots shield the wearer from acid, ensuring safe traversal.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDJkRq2hFzUkbrhgnp?alt=media&token=70ae1ade-349c-45f2-b967-25bb2638fd8f",
+			"description": "These boots shield the wearer from poison.",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDJkRq2hFzUkbrhgnp?alt=media&token=14effb20-a458-4ea8-93a6-fa976e1f4519",
 			"level": 1,
-			"name": "Boots of Acid Protection",
+			"name": "Poison Resistant Boots",
 			"price": 70,
 			"properties": [
 				{
-					"name": "acid",
+					"name": "poison",
 					"type": "resistance",
 					"value": 40
 				}
@@ -1036,21 +1031,16 @@
 			"type": "gloves"
 		},
 		"-NzDS1M26zspCTVVGUnu": {
-			"description": "Sturdy Plate Gauntlets offering unparalleled protection.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDS1M26zspCTVVGUnu?alt=media&token=c606a9e3-8b1e-498b-95cb-bebcbc09018f",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzDS1M26zspCTVVGUnu?alt=media&token=79f6e859-1d6f-4d01-a573-27a035b4a5e2",
 			"level": 2,
-			"name": "Knight's Gauntlets",
-			"price": 380,
+			"name": "Barbarian's Bracers",
+			"price": 320,
 			"properties": [
 				{
-					"name": "constitution",
-					"type": "stat",
-					"value": 1
-				},
-				{
-					"name": "charisma",
-					"type": "stat",
-					"value": 1
+					"name": "crushing",
+					"type": "damage",
+					"value": 25
 				}
 			],
 			"type": "gloves"
@@ -1241,10 +1231,10 @@
 			"type": "helmet"
 		},
 		"-NzEJs3RCx4H78EqaGTc": {
-			"description": "A sturdy full helm offering complete protection for the head.",
+			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEJs3RCx4H78EqaGTc?alt=media&token=50f252da-83d7-4134-ac19-c32c1abb5950",
 			"level": 2,
-			"name": "Full Helm",
+			"name": "Bascinet",
 			"price": 300,
 			"properties": [
 				{
@@ -1295,7 +1285,7 @@
 				{
 					"name": "piercing",
 					"type": "damage",
-					"value": 20
+					"value": 25
 				}
 			],
 			"type": "helmet"
@@ -1846,26 +1836,21 @@
 			"type": "ring"
 		},
 		"-NzEjbVx4iDWd8myQ-1O": {
-			"description": "A ring attuned to nature's essence, offering protection against physical forces.",
+			"description": "A ring attuned to nature's essence, offering protection against natural forces.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEjbVx4iDWd8myQ-1O?alt=media&token=fea5ac09-3bd2-40f9-aabf-606e94a1ee10",
 			"level": 3,
 			"name": "Ring of Natural Defense",
-			"price": 850,
+			"price": 650,
 			"properties": [
 				{
-					"name": "slashing",
+					"name": "poison",
 					"type": "resistance",
-					"value": 15
+					"value": 40
 				},
 				{
-					"name": "crushing",
+					"name": "acid",
 					"type": "resistance",
-					"value": 15
-				},
-				{
-					"name": "piercing",
-					"type": "resistance",
-					"value": 15
+					"value": 40
 				}
 			],
 			"type": "ring"
@@ -2152,7 +2137,12 @@
 				{
 					"name": "critChance",
 					"type": "auxiliaryStat",
-					"value": 3
+					"value": 2
+				},
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 2
 				}
 			],
 			"type": "armour"
@@ -3426,7 +3416,7 @@
 				"radiant": -50,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0IqVe3gyJes08fYye", "-OC0KVp8uW27MHyrOLUj", "-OCiu-f5bl8zaJxDA2ji"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OCiu-f5bl8zaJxDA2ji", "-NgTn5gefrbm_w1g4ocL"],
 			"stats": {
 				"charisma": 6,
 				"constitution": 14,
@@ -3807,8 +3797,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-Nm2Cd-d46R6iuL4782x",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
 			},
 			"name": "The Forest Guardian",
 			"naturalArmourClass": 11,
@@ -4779,8 +4768,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
-				"hand1": "-NgK0I2STX7An8WjEeUN",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand1": "-NgK0I2STX7An8WjEeUN"
 			},
 			"name": "Guard",
 			"naturalArmourClass": 10,
@@ -4819,8 +4807,7 @@
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
 				"hand1": "-O86LrSuGHIRtQuAJJAq",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
 			},
 			"name": "Brute",
 			"naturalArmourClass": 10,
@@ -4858,8 +4845,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-NMEwPxI9DXom0AaME0Z",
-				"hand1": "-NgNzkZJ0nG0Iep0uzOb",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand1": "-NgNzkZJ0nG0Iep0uzOb"
 			},
 			"name": "Guard Captain",
 			"naturalArmourClass": 10,
@@ -4934,8 +4920,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-Nm2B54qxLaMzsSjGgWO",
-				"hand1": "-NgK-mAaFXHeapzVbWAb",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand1": "-NgK-mAaFXHeapzVbWAb"
 			},
 			"name": "Footman",
 			"naturalArmourClass": 10,
@@ -5018,8 +5003,7 @@
 			"equipment": {
 				"body": "-Nm2Cd-d46R6iuL4782x",
 				"hand1": "-NMmvhpTgBUrely_XRJ7",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
 			},
 			"name": "Knight",
 			"naturalArmourClass": 10,
@@ -5091,8 +5075,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-NgJxsDuymhUWq2V4ew8",
-				"hand1": "-NgK0TICJLv1vVaBGrbT",
-				"head": "-NzEJs3RCx4H78EqaGTc"
+				"hand1": "-NgK0TICJLv1vVaBGrbT"
 			},
 			"name": "Sir Michael the Conceder",
 			"naturalArmourClass": 10,
@@ -5478,8 +5461,7 @@
 			"description": "",
 			"equipment": {
 				"body": "-NgJxsDuymhUWq2V4ew8",
-				"hand1": "-NgO1-16PWvnT302EIO_",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand1": "-NgO1-16PWvnT302EIO_"
 			},
 			"name": "Orc Warchief Zog",
 			"naturalArmourClass": 13,
@@ -5656,7 +5638,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NhgrvvBiejH010EI8ME", "-NgTnzsxBYgTye5lFfkd"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqXb0gVgqwcQmz5Kty", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 20,
@@ -5675,8 +5657,7 @@
 			"equipment": {
 				"body": "-NgJxsDuymhUWq2V4ew8",
 				"hand1": "-NgO0_TN42Pqrd5WQENu",
-				"hand2": "-NZMqz87pcH6a1OgycJ9",
-				"head": "-NgJyJCDG-1UEccRymvT"
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
 			},
 			"name": "Abyss Armour",
 			"naturalArmourClass": 18,
@@ -5730,7 +5711,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OC4ec48-KD77fXEGDx8"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-OC4ec48-KD77fXEGDx8", "-OCIBB22KHcvQGE6xUN7"],
 			"stats": {
 				"charisma": 13,
 				"constitution": 20,
@@ -5764,7 +5745,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC4ec48-KD77fXEGDx8", "-NhgrvvBiejH010EI8ME", "-OC0IqVe3gyJes08fYye"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC4ec48-KD77fXEGDx8", "-OC0IqVe3gyJes08fYye", "-NgTnzsxBYgTye5lFfkd"],
 			"stats": {
 				"charisma": 13,
 				"constitution": 21,
@@ -6028,7 +6009,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-NhgrvvBiejH010EI8ME", "-Nhgy1Vmh0FTTPCWBory"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTnzsxBYgTye5lFfkd", "-Nhgy1Vmh0FTTPCWBory", "-NZqXb0gVgqwcQmz5Kty"],
 			"stats": {
 				"charisma": 10,
 				"constitution": 22,
@@ -6186,7 +6167,7 @@
 				"radiant": 0,
 				"slashing": 25
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC-KtM9y-zKPmVbOwsO", "-OC4o-B22zajLRPINRfV"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC-KtM9y-zKPmVbOwsO", "-OC4o-B22zajLRPINRfV", "-OCyGQhU_sx4-m68ZoQs"],
 			"stats": {
 				"charisma": 14,
 				"constitution": 18,
@@ -6749,7 +6730,7 @@
 		},
 		"-NKt0W8prsXi7-54nBVz": {
 			"class": "warrior",
-			"description": "Crushes the enemies head like a melon.",
+			"description": "Infuse your attack with searing flames to scorch your target.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -6758,8 +6739,8 @@
 				},
 				{
 					"damageType": "fire",
-					"max": 10,
-					"min": 4,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -6842,7 +6823,7 @@
 		},
 		"-NZMIV5OGOr4bChwrNEE": {
 			"class": "warrior",
-			"description": "Break the opponents armour with a powerful blow.",
+			"description": "A powerful blow that weakens an enemy's defenses.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -6853,7 +6834,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -3
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -6945,7 +6926,7 @@
 		},
 		"-NZqUWZDeys5x3n8eLNA": {
 			"class": "warrior",
-			"description": "Attack three times in quick succession.",
+			"description": "Unleash a flurry of attacks in a spinning motion, hitting your foe three times in quick succession.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -6991,7 +6972,7 @@
 		},
 		"-NZqWi-RbH2vwtAawttY": {
 			"class": "warrior",
-			"description": "Greatly increases chance for a critical strike with rhythmic movement.",
+			"description": "Greatly increases defense and chance for a critical strike with rhythmic movement.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -7090,7 +7071,7 @@
 		},
 		"-NZq_C6vPLiGUFkYHy3u": {
 			"class": "rogue",
-			"description": "Prepare to attack with great speed.",
+			"description": "Prepare to attack with great speed, increasing critical strike chance.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -7132,7 +7113,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZq_nhusxIdvv9LFwJZ?alt=media&token=aa5812ba-62fc-4ec5-a1cc-de61023e265c",
 			"level": 3,
-			"maxUses": 8,
+			"maxUses": 6,
 			"name": "Acid Coating",
 			"price": 260
 		},
@@ -7270,7 +7251,7 @@
 		},
 		"-NZqcxgP5ITgFn-T8xj6": {
 			"class": "rogue",
-			"description": "A flurry of attacks in quick succession.",
+			"description": "Unleash a rapid series of strikes, overwhelming your enemy with speed and force.",
 			"effects": [
 				{
 					"multiplier": 0.5,
@@ -7301,7 +7282,7 @@
 		},
 		"-NZqdUiFhyxCULAsWYJl": {
 			"class": "rogue",
-			"description": "Use your cloak to increase elemental resistances.",
+			"description": "Shroud yourself in dark energy, enhancing resistance to elemental attacks.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -7419,7 +7400,7 @@
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": 4
+							"value": 5
 						}
 					],
 					"target": "self",
@@ -7434,7 +7415,7 @@
 		},
 		"-Nc3yE_BOq5Xmhy4LvbI": {
 			"class": "mage",
-			"description": "Harden the skin to greatly increase armour.",
+			"description": "Harden the skin to greatly increase physical resistance.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -7500,7 +7481,7 @@
 		},
 		"-Nc3z5D4In6VQLtKZxrV": {
 			"class": "mage",
-			"description": "Bring down corrosive acid from the skies.",
+			"description": "Summon corrosive acid from the skies.",
 			"effects": [
 				{
 					"accuracy": 100,
@@ -7631,13 +7612,13 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc40XqHNv0vjMrSUhRM?alt=media&token=dabb826c-2381-4766-92e9-36c52dcda625",
 			"level": 4,
-			"maxUses": 2,
+			"maxUses": 3,
 			"name": "Finger of Death",
 			"price": 1450
 		},
 		"-Nc41TbX58HmCh6nednT": {
 			"class": "mage",
-			"description": "You summon draconic power to gain a breath weapon.",
+			"description": "Unleash a cone of fiery devastation, scorching everything in its path.",
 			"effects": [
 				{
 					"damageType": "fire",
@@ -8178,14 +8159,14 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 12,
+					"difficulty": 17,
 					"duration": 6,
-					"modifier": "constitution",
+					"modifier": "dexterity",
 					"properties": [
 						{
 							"name": "armourClass",
 							"type": "auxiliaryStat",
-							"value": -3
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -8200,7 +8181,7 @@
 		},
 		"-NgTnzsxBYgTye5lFfkd": {
 			"class": "warrior",
-			"description": "Become a whirlwind of steel, striking twice in rapid succession with the deadly finesse of the Double Strike technique in combat.",
+			"description": "Execute two rapid attacks in quick succession against a single target.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -8229,7 +8210,7 @@
 						{
 							"name": "strength",
 							"type": "stat",
-							"value": 3
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -8244,7 +8225,7 @@
 		},
 		"-NhgpG6pLRAqTW1AU0Eg": {
 			"class": "warrior",
-			"description": "Enhance your combat prowess with Focus Energy, channeling unwavering determination and precision into every strike.",
+			"description": "Channel your concentration to sharpen precision and increase hit accuracy.",
 			"effects": [
 				{
 					"duration": 6,
@@ -8267,7 +8248,7 @@
 		},
 		"-NhgpxFRvn_sOrij-K0F": {
 			"class": "warrior",
-			"description": "Unleash devastating force with Heavy Strike, crushing enemies under the weight of your mighty blows in battle.",
+			"description": "Deliver a powerful blow designed to deal significant damage to a single target.",
 			"effects": [
 				{
 					"multiplier": 1.5,
@@ -8282,26 +8263,33 @@
 			"price": 0
 		},
 		"-NhgrvvBiejH010EI8ME": {
-			"class": "warrior",
+			"class": "common",
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
 					"difficulty": 20,
 					"duration": 2,
 					"effect": "stun",
-					"modifier": "constitution",
+					"modifier": "strength",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"damageType": "crushing",
+					"max": 20,
+					"min": 8,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NhgrvvBiejH010EI8ME?alt=media&token=562118d9-90e1-4dc3-91fc-3a3ca57c6ea5",
 			"level": 3,
-			"maxUses": 2,
+			"maxUses": 1,
 			"name": "Knock Down",
 			"price": 0
 		},
 		"-Nhgx8gnKSMnxB7h9F60": {
-			"class": "warrior",
+			"class": "common",
 			"description": "Stand resolute with Shield Wall, shielding yourself from harm and repelling enemy assaults with unwavering defense.",
 			"effects": [
 				{
@@ -8325,7 +8313,7 @@
 		},
 		"-Nhgy1Vmh0FTTPCWBory": {
 			"class": "warrior",
-			"description": "Instill fear with Deafening Roar, disrupting enemies with a reverberating surge of primal power in combat.",
+			"description": "Unleash a crippling roar that weakens and disorients nearby enemies.",
 			"effects": [
 				{
 					"difficulty": 20,
@@ -8338,7 +8326,7 @@
 							"value": -6
 						},
 						{
-							"name": "constitution",
+							"name": "dexterity",
 							"type": "stat",
 							"value": -6
 						},
@@ -8360,7 +8348,7 @@
 		},
 		"-NhgyQeYWKGMfv97Ojh0": {
 			"class": "warrior",
-			"description": "Channel immense strength with Mighty Blow, striking with earth-shattering force that overwhelms adversaries in combat.",
+			"description": "A devastating strike that delivers heavy damage with overwhelming force.",
 			"effects": [
 				{
 					"multiplier": 3,
@@ -8376,7 +8364,7 @@
 		},
 		"-Nhgyxj9aTH40MK_MCPF": {
 			"class": "rogue",
-			"description": "Inflict lethal venom with Poison Strike, debilitating foes and gradually sapping their strength in the midst of battle.",
+			"description": "Coat your weapon with venom, delivering a toxic blow that poisons your target.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -8432,7 +8420,7 @@
 		},
 		"-Nhh-SuuVlmZIYSG87sp": {
 			"class": "rogue",
-			"description": "Master nimble footwork with Evasion, dodging attacks and maneuvering through the chaos of battle unscathed and agile.",
+			"description": "Swiftly dodge incoming attacks, greatly reducing the chance of being hit.",
 			"effects": [
 				{
 					"duration": 3,
@@ -8455,7 +8443,7 @@
 		},
 		"-Nhh0AreyuN6wco1X_6B": {
 			"class": "rogue",
-			"description": "Master the art of close-quarters combat, employing the Kick skill to swiftly stagger foes.",
+			"description": "Deliver a swift kick with a chance to knock your opponent off balance and stun them.",
 			"effects": [
 				{
 					"damageType": "crushing",
@@ -8481,7 +8469,7 @@
 		},
 		"-Nhh0aZeozWw6_HWDH23": {
 			"class": "rogue",
-			"description": "Corrode defenses with Acid Strike, inflicting lingering damage and weakening foes with a potent toxic assault in combat.",
+			"description": "Infuse your attack with corrosive acid, eating away at flesh.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -8504,7 +8492,7 @@
 		},
 		"-Nhh16M9sVTTOKw5g6rO": {
 			"class": "rogue",
-			"description": "Inflict fatal venom with Deadly Poison, sowing insidious decay and weakening adversaries.",
+			"description": "Amplify the potency of your poison, causing it to inflict greater, lingering damage.",
 			"effects": [
 				{
 					"duration": 8,
@@ -8521,13 +8509,13 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh16M9sVTTOKw5g6rO?alt=media&token=c934a0ad-5942-45c9-ada7-02516b04aa9b",
 			"level": 2,
-			"maxUses": 4,
+			"maxUses": 6,
 			"name": "Enhance Poison",
 			"price": 0
 		},
 		"-Nhh1jOIoeiE7yvBATmT": {
 			"class": "rogue",
-			"description": "Mangle adversaries with brutal precision, ensuring incapacitation.",
+			"description": "Strike with brutal force, causing bleeding and a chance to disarm your opponent.",
 			"effects": [
 				{
 					"multiplier": 2,
@@ -8559,7 +8547,7 @@
 		},
 		"-Nhh2aa9hENKmzll2Md-": {
 			"class": "rogue",
-			"description": "Exploit weaknesses to maximize the impact of attacks.",
+			"description": "Exploit armour weaknesses to maximize the impact of attacks.",
 			"effects": [
 				{
 					"difficulty": 21,
@@ -8617,7 +8605,7 @@
 		},
 		"-Nhh3v9mXEeAJhlsZfwB": {
 			"class": "mage",
-			"description": "Cast a bolt of dark energy, spiralling enemies into a pit of despair.",
+			"description": "Hurl a bolt of shadow energy at your target.",
 			"effects": [
 				{
 					"damageType": "necrotic",
@@ -8785,7 +8773,7 @@
 		},
 		"-Nhh7BnVOa0W7OdE_0YR": {
 			"class": "mage",
-			"description": "Summon an invincible dome, deflecting magical attacks.",
+			"description": "Summon an invincible dome, absorbing all manner of attacks.",
 			"effects": [
 				{
 					"duration": 5,
@@ -8841,7 +8829,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": 3
+							"value": 4
 						}
 					],
 					"target": "self",
@@ -8866,7 +8854,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -3
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -9308,8 +9296,8 @@
 				},
 				{
 					"damageType": "cold",
-					"max": 20,
-					"min": 8,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10159,7 +10147,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 17,
+					"difficulty": 12,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
@@ -10349,7 +10337,7 @@
 				},
 				{
 					"difficulty": 19,
-					"duration": 2,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -11018,7 +11006,7 @@
 		},
 		"-OCUBEkE8QnAlklRcUe4": {
 			"class": "warrior",
-			"description": "A fiery burst of wrath ignites the warrior’s spirit, boosting their power and enabling devastating attacks.",
+			"description": "Tap into raw fury to amplify physical power and deal greater damage.",
 			"effects": [
 				{
 					"duration": 4,
@@ -11083,7 +11071,7 @@
 		},
 		"-OCUEy6k5HuRL-oXw1-y": {
 			"class": "rogue",
-			"description": "A spectral dash through the shadows allows the user to strike unseen, dealing extra damage to vulnerable foes.",
+			"description": "Deliver a swift strike imbued with shadowy energy, dealing necrotic damage to your target.",
 			"effects": [
 				{
 					"multiplier": 1,
@@ -11092,8 +11080,8 @@
 				},
 				{
 					"damageType": "necrotic",
-					"max": 8,
-					"min": 1,
+					"max": 10,
+					"min": 4,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -11180,6 +11168,102 @@
 			"level": 4,
 			"maxUses": 1,
 			"name": "Rebirth",
+			"price": 0
+		},
+		"-OCyDgXDjHjrqD_5UViJ": {
+			"class": "warrior",
+			"description": "A powerful upward strike with a chance to daze and stun your opponent.",
+			"effects": [
+				{
+					"difficulty": 20,
+					"duration": 2,
+					"effect": "stun",
+					"modifier": "strength",
+					"target": "enemy",
+					"type": "auxiliary"
+				},
+				{
+					"damageType": "crushing",
+					"max": 20,
+					"min": 8,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCyDgXDjHjrqD_5UViJ?alt=media&token=94e20229-12c4-465c-9504-925219a87cfe",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Uppercut",
+			"price": 0
+		},
+		"-OCyGQhU_sx4-m68ZoQs": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"duration": 4,
+					"properties": [
+						{
+							"name": "hitChance",
+							"type": "auxiliaryStat",
+							"value": 5
+						}
+					],
+					"target": "self",
+					"type": "status"
+				},
+				{
+					"difficulty": 20,
+					"duration": 4,
+					"modifier": "dexterity",
+					"properties": [
+						{
+							"name": "piercing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCyGQhU_sx4-m68ZoQs?alt=media&token=28c9604f-8d09-4c21-afe1-ebc6b258c750",
+			"level": 3,
+			"maxUses": 2,
+			"name": "Hunters's Mark",
+			"price": 0
+		},
+		"-OCz3gjt9HaaTCJh2XIS": {
+			"class": "warrior",
+			"description": "Summon a protective barrier infused with elemental energy to guard against attacks.",
+			"effects": [
+				{
+					"duration": 6,
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": 40
+						},
+						{
+							"name": "cold",
+							"type": "resistance",
+							"value": 40
+						},
+						{
+							"name": "lightning",
+							"type": "resistance",
+							"value": 40
+						}
+					],
+					"target": "self",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCz3gjt9HaaTCJh2XIS?alt=media&token=32b231dd-9a2e-4b5d-997c-4647a8fcb717",
+			"level": 2,
+			"maxUses": 4,
+			"name": "Elemental Shield",
 			"price": 0
 		}
 	},
