@@ -235,3 +235,15 @@ export const ITEM_WEIGHT_LEVELS = [
 		[ItemRarity.Legendary]: 0.01,
 	},
 ];
+
+export const ITEM_TYPE_WEIGHT_LEVELS = {
+	[EquipmentType.Amulet]: 0.1,
+	[EquipmentType.Armour]: 0.1,
+	[EquipmentType.Belt]: 0.1,
+	[EquipmentType.Boots]: 0.1,
+	[EquipmentType.Gloves]: 0.1,
+	[EquipmentType.Helmet]: 0.1,
+	[EquipmentType.Ring]: 0.15,
+	[EquipmentType.Shield]: 0.05,
+	[EquipmentType.Weapon]: 0.2,
+};

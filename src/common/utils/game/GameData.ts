@@ -2,7 +2,7 @@ import { IGameData, TEquipment, TEquipmentDataWithID } from "@common/types/gameD
 import data from "@common/data/gameData.json";
 import { getMultipleRandom, getRandomElement, mapToArray, weightedChoice } from "@common/utils/helpers";
 import { ISkill } from "@common/types/character";
-import { ITEM_WEIGHT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
+import { ITEM_TYPE_WEIGHT_LEVELS, ITEM_WEIGHT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, Zone } from "@common/utils/enums";
 
 export class GameData {
@@ -149,11 +149,17 @@ export class GameData {
 		const weightedItems = [] as string[];
 		for (let i = 0; i < amount; i++) {
 			const rarity = weightedChoice(weights);
-			const pool = items.filter(({ id, level }) => level === +rarity && !weightedItems.includes(id));
-			const randomItem = getRandomElement(pool);
+			const equipmentType = weightedChoice(ITEM_TYPE_WEIGHT_LEVELS);
+			const rarityPool = items.filter(({ id, level }) => level === +rarity && !weightedItems.includes(id));
+			const typePool = rarityPool.filter(({ type }) => type === equipmentType);
+			let randomItem = getRandomElement(typePool);
 
 			if (!randomItem) {
-				throw new Error(`No item found for rarity ${rarity}`);
+				randomItem = getRandomElement(rarityPool);
+			}
+
+			if (!randomItem) {
+				throw new Error(`No item found for rarity ${rarity} and type ${equipmentType}`);
 			}
 
 			weightedItems.push(randomItem.id);
