@@ -125,15 +125,15 @@ export class GameData {
 			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
 
-			const filteredArmours = mapToArray(armours).filter(
-				({ armourType }) => !armourType || characterClass.armourTypes.includes(armourType),
+			const filteredArmours = mapToArray(armours).filter(({ armourType }) =>
+				characterClass.armourTypes.includes(armourType),
 			);
 
 			const filteredWeapons = mapToArray(weapons).filter(({ weaponType }) =>
 				characterClass.weaponTypes.includes(weaponType),
 			);
 
-			return filteredArmours.concat(filteredWeapons);
+			return [...filteredArmours, ...filteredWeapons];
 		} catch (error) {
 			console.error(`Error getClassItems: ${error.message}`);
 			throw error;
@@ -159,7 +159,11 @@ export class GameData {
 			}
 
 			if (!randomItem) {
-				throw new Error(`No item found for rarity ${rarity} and type ${equipmentType}`);
+				randomItem = getRandomElement(items);
+			}
+
+			if (!randomItem) {
+				throw new Error("No item found");
 			}
 
 			weightedItems.push(randomItem.id);

@@ -204,12 +204,8 @@ heroSchema.method("checkItem", function checkItem(id: string, slot: EquipmentSlo
 
 	const { armourTypes, weaponTypes } = this.characterClass;
 
-	let validArmourType,
-		validWeaponType = true;
-	if ([EquipmentType.Armour, EquipmentType.Weapon].includes(item.type)) {
-		validArmourType = "armourType" in item && armourTypes.includes(item.armourType);
-		validWeaponType = "weaponType" in item && weaponTypes.includes(item.weaponType);
-	}
+	const validArmourType = "armourType" in item && armourTypes.includes(item.armourType);
+	const validWeaponType = "weaponType" in item && weaponTypes.includes(item.weaponType);
 
 	if (!validArmourType && !validWeaponType) {
 		throw new Error("Class cannot use this item");

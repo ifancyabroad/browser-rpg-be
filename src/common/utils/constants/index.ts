@@ -243,7 +243,7 @@ export const ITEM_TYPE_WEIGHT_LEVELS = {
 	[EquipmentType.Boots]: 0.1,
 	[EquipmentType.Gloves]: 0.1,
 	[EquipmentType.Helmet]: 0.1,
-	[EquipmentType.Ring]: 0.15,
-	[EquipmentType.Shield]: 0.05,
+	[EquipmentType.Ring]: 0.1,
+	[EquipmentType.Shield]: 0.1,
 	[EquipmentType.Weapon]: 0.2,
 };

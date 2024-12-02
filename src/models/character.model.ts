@@ -326,7 +326,7 @@ characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourCla
 	const armour = this.equipment.body;
 	const modifier = Game.getModifier(this.stats.dexterity) ?? 0;
 
-	if (!armour || !("armourType" in armour)) {
+	if (!armour || !("armourClass" in armour)) {
 		return 0; // Make sure monsters don't get a bonus from not having armour
 	} else if (armour.armourType === ArmourType.Heavy) {
 		return armour.armourClass;
