@@ -1727,10 +1727,10 @@
 		},
 		"-NzEffxrjZ2Fu9zSmWW9": {
 			"armourType": "medium",
-			"description": "A shield adorned with the crest of a noble house, symbolizing valor and protection on the battlefield.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=5ddcc14a-c8fe-4089-8f3a-069b287812b8",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEffxrjZ2Fu9zSmWW9?alt=media&token=b9663a5f-69a9-411a-b872-21adf66a0e07",
 			"level": 3,
-			"name": "Knight's Shield",
+			"name": "Death Ward",
 			"price": 730,
 			"properties": [
 				{
@@ -1739,14 +1739,14 @@
 					"value": 2
 				},
 				{
-					"name": "strength",
-					"type": "stat",
-					"value": 1
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
 				},
 				{
-					"name": "charisma",
-					"type": "stat",
-					"value": 1
+					"name": "poison",
+					"type": "resistance",
+					"value": 40
 				}
 			],
 			"type": "shield"
