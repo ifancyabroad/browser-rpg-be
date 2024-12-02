@@ -235,21 +235,16 @@
 		},
 		"-NgO9yRhdOivFSL6xkCK": {
 			"armourType": "misc",
-			"description": "Infused with primal energy, the shaman's belt links to the natural world.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=d2b492d4-b97c-44fb-aeb1-6d527f3ee539",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgO9yRhdOivFSL6xkCK?alt=media&token=25014e51-d215-4da2-9275-9c473d5d7b0b",
 			"level": 2,
-			"name": "Shaman's Belt",
+			"name": "Belt of Precision",
 			"price": 280,
 			"properties": [
 				{
-					"name": "wisdom",
-					"type": "stat",
-					"value": 1
-				},
-				{
-					"name": "lightning",
-					"type": "damage",
-					"value": 20
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 2
 				}
 			],
 			"type": "belt"
