@@ -413,12 +413,12 @@
 				{
 					"name": "fire",
 					"type": "resistance",
-					"value": 25
+					"value": 20
 				},
 				{
 					"name": "cold",
 					"type": "damage",
-					"value": 25
+					"value": 40
 				}
 			],
 			"type": "amulet"
@@ -2160,20 +2160,20 @@
 			"armourClass": 14,
 			"armourType": "medium",
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsQRUtV5enlZ3MShV?alt=media&token=4aba9205-7169-46c9-bcae-41ce43f39c32",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsQRUtV5enlZ3MShV?alt=media&token=66eb7b95-29a9-4b0d-a1e2-1f222cfdb9fd",
 			"level": 3,
-			"name": "Flame Attuned Mail",
-			"price": 690,
+			"name": "Crusader's Mail",
+			"price": 620,
 			"properties": [
 				{
-					"name": "fire",
+					"name": "necrotic",
 					"type": "resistance",
 					"value": 40
 				},
 				{
-					"name": "fire",
-					"type": "damage",
-					"value": 40
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"type": "armour"
@@ -2185,7 +2185,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-O8HsoUz7NkxyEkUN6c2?alt=media&token=ad65bca3-b84d-4219-9486-4f2f3e6b5e84",
 			"level": 4,
 			"name": "Knight's Mail",
-			"price": 1460,
+			"price": 1560,
 			"properties": [
 				{
 					"name": "strength",
@@ -2201,6 +2201,11 @@
 					"name": "charisma",
 					"type": "stat",
 					"value": 2
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"type": "armour"
@@ -7372,7 +7377,7 @@
 			"target": "enemy"
 		},
 		"-NZMHqP01D8-tN-uBn5s": {
-			"class": "warrior",
+			"class": "common",
 			"description": "Sprint towards the enemy catching them off guard with a chance to stun.",
 			"effects": [
 				{
@@ -7403,7 +7408,7 @@
 			"effects": [
 				{
 					"accuracy": 100,
-					"difficulty": 19,
+					"difficulty": 22,
 					"duration": 4,
 					"modifier": "strength",
 					"properties": [
@@ -7472,7 +7477,7 @@
 			"target": "enemy"
 		},
 		"-NZqTywT0RDubTou99c2": {
-			"class": "warrior",
+			"class": "common",
 			"description": "Become enraged, greatly increasing strength but lowering defenses.",
 			"effects": [
 				{
@@ -8918,7 +8923,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhgy1Vmh0FTTPCWBory?alt=media&token=9f2b03e8-b95d-403d-86e0-acd4e362468e",
 			"level": 4,
-			"maxUses": 4,
+			"maxUses": 6,
 			"name": "Deafening Roar",
 			"price": 0
 		},
@@ -10311,7 +10316,7 @@
 					"type": "status"
 				}
 			],
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGO_dOy08BrKDH_l3L?alt=media&token=c76110b7-e7e0-471a-9e07-9eb1c14e743e",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OBGO_dOy08BrKDH_l3L?alt=media&token=c0825b48-2dc2-4d61-ae5d-8a16b4a4a13c",
 			"level": 2,
 			"maxUses": 6,
 			"name": "Deafening Screech",
@@ -11754,7 +11759,7 @@
 					"difficulty": 20,
 					"duration": 2,
 					"effect": "stun",
-					"modifier": "strength",
+					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
 				},
@@ -11840,6 +11845,64 @@
 			"level": 2,
 			"maxUses": 4,
 			"name": "Elemental Shield",
+			"price": 0
+		},
+		"-ODAw3gDINrvjsnEE52L": {
+			"class": "warrior",
+			"description": "",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"damageType": "crushing",
+					"max": 10,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-ODAw3gDINrvjsnEE52L?alt=media&token=583e5483-a891-4f18-a897-0bc2f4781577",
+			"level": 2,
+			"maxUses": 7,
+			"name": "Crushing Blow",
+			"price": 0
+		},
+		"-ODDidCmcQZoicnvq99Q": {
+			"class": "warrior",
+			"description": "Release a fearsome bellow that shakes enemies, reducing their physical damage output.",
+			"effects": [
+				{
+					"difficulty": 19,
+					"duration": 4,
+					"modifier": "wisdom",
+					"properties": [
+						{
+							"name": "slashing",
+							"type": "damage",
+							"value": -50
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": -50
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-ODDidCmcQZoicnvq99Q?alt=media&token=3cc7e953-5373-4cb2-9f48-9d71cba0c175",
+			"level": 3,
+			"maxUses": 4,
+			"name": "Intimidating Shout",
 			"price": 0
 		}
 	},
