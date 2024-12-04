@@ -6635,7 +6635,6 @@
 				"-Nhh6cp8cTNG_6h4WvSN",
 				"-Nc41TbX58HmCh6nednT",
 				"-Nc404KHFQ3zZaHpCbe2",
-				"-Nhh5ROOn89jDWYu49HW",
 				"-OCIAJrIHwRDdKdzqtlj"
 			],
 			"stats": {
@@ -9584,7 +9583,7 @@
 				},
 				{
 					"difficulty": 17,
-					"duration": 3,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "wisdom",
 					"target": "enemy",
@@ -10812,7 +10811,7 @@
 					"type": "status"
 				},
 				{
-					"difficulty": 6,
+					"difficulty": 4,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
