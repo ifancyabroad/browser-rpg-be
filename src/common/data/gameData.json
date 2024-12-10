@@ -1134,19 +1134,14 @@
 			"price": 1600,
 			"properties": [
 				{
-					"name": "fire",
-					"type": "damage",
-					"value": 40
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 4
 				},
 				{
 					"name": "slashing",
 					"type": "damage",
 					"value": 40
-				},
-				{
-					"name": "slashing",
-					"type": "resistance",
-					"value": 20
 				}
 			],
 			"type": "gloves"
@@ -2118,6 +2113,11 @@
 				},
 				{
 					"name": "necrotic",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "slashing",
 					"type": "damage",
 					"value": 20
 				}
@@ -3347,9 +3347,14 @@
 					"value": 2
 				},
 				{
-					"name": "crushing",
+					"name": "fire",
 					"type": "resistance",
 					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 40
 				}
 			],
 			"type": "boots"
@@ -8120,6 +8125,20 @@
 					"min": 8,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"difficulty": 18,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -25
+						}
+					],
+					"target": "enemy",
+					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc4-UVARP8jFmsiuXC9?alt=media&token=07349932-ea92-4da5-abf5-892cb4b16ba4",
@@ -8176,14 +8195,24 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 21,
+					"difficulty": 18,
 					"duration": 4,
 					"modifier": "wisdom",
 					"properties": [
 						{
-							"name": "necrotic",
-							"type": "resistance",
-							"value": -50
+							"name": "slashing",
+							"type": "damage",
+							"value": -20
+						},
+						{
+							"name": "crushing",
+							"type": "damage",
+							"value": -20
+						},
+						{
+							"name": "piercing",
+							"type": "damage",
+							"value": -20
 						}
 					],
 					"target": "enemy",
@@ -8192,7 +8221,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc40XqHNv0vjMrSUhRM?alt=media&token=dabb826c-2381-4766-92e9-36c52dcda625",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 4,
 			"name": "Finger of Death",
 			"price": 1450
 		},
@@ -8206,11 +8235,25 @@
 					"min": 12,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"difficulty": 22,
+					"duration": 4,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "fire",
+							"type": "resistance",
+							"value": -50
+						}
+					],
+					"target": "enemy",
+					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc41TbX58HmCh6nednT?alt=media&token=a93e95c5-514e-4268-b3b2-db3268545b35",
 			"level": 4,
-			"maxUses": 4,
+			"maxUses": 3,
 			"name": "Dragon Breath",
 			"price": 1550
 		},
@@ -8220,8 +8263,8 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 20,
-					"min": 8,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -8847,7 +8890,7 @@
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
-					"difficulty": 20,
+					"difficulty": 17,
 					"duration": 2,
 					"effect": "stun",
 					"modifier": "strength",
@@ -9267,8 +9310,8 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 15,
-					"min": 6,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -9293,8 +9336,8 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 15,
-					"min": 6,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -10727,7 +10770,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 12,
+					"difficulty": 10,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
@@ -11237,7 +11280,7 @@
 				},
 				{
 					"difficulty": 15,
-					"duration": 3,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "dexterity",
 					"target": "enemy",

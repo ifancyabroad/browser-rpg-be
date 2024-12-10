@@ -12,6 +12,7 @@ import {
 	MAX_POTIONS,
 	MAX_STAT_VALUE,
 	REST_MULTIPLIER,
+	RESTOCK_MULTIPLIER,
 	SHOP_ITEMS,
 	SKILL_LEVEL_MAP,
 } from "@common/utils";
@@ -111,7 +112,7 @@ heroSchema.virtual("discountMultiplier").get(function () {
 });
 
 heroSchema.virtual("restockPrice").get(function () {
-	return Math.round(BASE_RESTOCK_PRICE * Math.pow(2, this.restockCount) * this.discountMultiplier);
+	return Math.round(BASE_RESTOCK_PRICE * Math.pow(RESTOCK_MULTIPLIER, this.restockCount) * this.discountMultiplier);
 });
 
 heroSchema.virtual("restPrice").get(function () {

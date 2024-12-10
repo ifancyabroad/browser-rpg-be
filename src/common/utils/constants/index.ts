@@ -23,6 +23,7 @@ export const BATTLE_MULTIPLIER_INCREMENT = 0.25;
 export const SHOP_ITEMS = 6;
 
 export const BASE_RESTOCK_PRICE = 20;
+export const RESTOCK_MULTIPLIER = 1.5;
 export const BASE_REST_PRICE = 20;
 export const REST_MULTIPLIER = 1.25;
 
