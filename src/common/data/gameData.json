@@ -9245,12 +9245,7 @@
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -2
-						},
-						{
-							"name": "critChance",
-							"type": "auxiliaryStat",
-							"value": -2
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -13445,14 +13440,14 @@
 			"description": "The Wand of Cursing is a slender, dark wand etched with sinister symbols that pulse with ominous energy. When wielded, it can unleash debilitating hexes and curses on foes, sowing chaos and confusion. Favored by dark sorcerers, this wand is a potent tool for those who wield malevolent magic.",
 			"effects": [
 				{
-					"difficulty": 14,
-					"duration": 3,
+					"difficulty": 15,
+					"duration": 2,
 					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "hitChance",
 							"type": "auxiliaryStat",
-							"value": -2
+							"value": -4
 						}
 					],
 					"target": "enemy",
@@ -13481,7 +13476,7 @@
 						{
 							"name": "fire",
 							"type": "resistance",
-							"value": -20
+							"value": -40
 						}
 					],
 					"target": "enemy",
@@ -13493,7 +13488,7 @@
 			"max": 8,
 			"min": 5,
 			"name": "Dragon's Breath",
-			"price": 1040,
+			"price": 1240,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
