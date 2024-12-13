@@ -9198,22 +9198,22 @@
 			"description": "Fuse with elements, amplifying prowess in elemental warfare.",
 			"effects": [
 				{
-					"duration": 5,
+					"duration": 4,
 					"properties": [
 						{
 							"name": "cold",
 							"type": "damage",
-							"value": 25
+							"value": 40
 						},
 						{
 							"name": "fire",
 							"type": "damage",
-							"value": 25
+							"value": 40
 						},
 						{
 							"name": "lightning",
 							"type": "damage",
-							"value": 25
+							"value": 40
 						}
 					],
 					"target": "self",
@@ -9222,7 +9222,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh3D7-ihgBpi0AbfB5?alt=media&token=7a3eb5c6-1571-4e5d-8945-9efb3875f991",
 			"level": 2,
-			"maxUses": 6,
+			"maxUses": 4,
 			"name": "Embrace Elements",
 			"price": 0
 		},
