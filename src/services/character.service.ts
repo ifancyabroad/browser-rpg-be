@@ -276,7 +276,7 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 			return {
 				id: character._id,
 				name: character.name,
-				level: character.kills,
+				level: character.level,
 				kills: character.kills,
 				day: character.day,
 				status: character.status,
