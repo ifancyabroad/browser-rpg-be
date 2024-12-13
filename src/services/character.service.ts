@@ -328,14 +328,10 @@ export async function getProgress(session: Session & Partial<SessionData>) {
 }
 
 export async function getCharacterByID(session: Session & Partial<SessionData>, id: string) {
-	const { user } = session;
 	try {
 		const characterRecord = await HeroArchive.findById(id);
 		if (!characterRecord) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "Character not found");
-		}
-		if (characterRecord.user.toString() !== user.id) {
-			throw createHttpError(httpStatus.FORBIDDEN, "Forbidden");
 		}
 
 		return characterRecord.toJSON();

@@ -23,6 +23,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 			.populate<{ user: IUser }>("user", "username")
 			.transform((res) =>
 				res.map((hero) => ({
+					id: hero.id,
 					name: hero.name,
 					level: hero.level,
 					characterClass: {
