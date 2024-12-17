@@ -4441,7 +4441,7 @@
 			],
 			"stats": {
 				"charisma": 14,
-				"constitution": 15,
+				"constitution": 16,
 				"dexterity": 14,
 				"intelligence": 20,
 				"strength": 9,
@@ -5197,7 +5197,7 @@
 		},
 		"-O9dTVcQaMf3ZBV8IQ40": {
 			"boss": false,
-			"challenge": 14,
+			"challenge": 12,
 			"description": "",
 			"name": "Piranhasaur",
 			"naturalArmourClass": 13,
@@ -5220,10 +5220,10 @@
 			"skills": ["-NfROP8bobODCeEQFrpd", "-O9eOvYZWqjCOQtT8moN", "-OC3XVsmOpd2YZFCQP6r"],
 			"stats": {
 				"charisma": 5,
-				"constitution": 17,
-				"dexterity": 13,
+				"constitution": 14,
+				"dexterity": 14,
 				"intelligence": 6,
-				"strength": 19,
+				"strength": 16,
 				"wisdom": 12
 			},
 			"tactics": "default",
@@ -6448,7 +6448,8 @@
 				"-NgTYFhLYpX2p1ZbdUfj",
 				"-NgTbEHpokQy-0H5xsHh",
 				"-OC8YYxJjpDUyJWCV-HR",
-				"-OC8_KrCSlLCSAitJUg6"
+				"-OC8_KrCSlLCSAitJUg6",
+				"-NgTXoshOPa5Fo9AGlh2"
 			],
 			"stats": {
 				"charisma": 18,
@@ -7391,7 +7392,7 @@
 				},
 				{
 					"accuracy": 50,
-					"difficulty": 19,
+					"difficulty": 10,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "strength",
@@ -8313,7 +8314,7 @@
 				},
 				{
 					"damageType": "piercing",
-					"max": 8,
+					"max": 6,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
@@ -8731,7 +8732,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 17,
+					"difficulty": 14,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "dexterity",
@@ -8890,7 +8891,7 @@
 			"description": "Topple adversaries with the forceful Knock Down skill, sending enemies crashing to the ground in a stunning display of power.",
 			"effects": [
 				{
-					"difficulty": 17,
+					"difficulty": 14,
 					"duration": 2,
 					"effect": "stun",
 					"modifier": "strength",
@@ -9646,7 +9647,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 17,
+					"difficulty": 12,
 					"duration": 2,
 					"modifier": "wisdom",
 					"properties": [
@@ -9815,7 +9816,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9__YsYeJoI_hGpg6Ba?alt=media&token=9df26944-5d84-4818-a6eb-1284025422dc",
-			"level": 4,
+			"level": 3,
 			"maxUses": 1,
 			"name": "Call Upon Rit Chi",
 			"price": 0
@@ -9887,7 +9888,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 19,
+					"difficulty": 16,
 					"duration": 4,
 					"effect": "poison",
 					"modifier": "constitution",
@@ -9907,15 +9908,15 @@
 			"effects": [
 				{
 					"damageType": "piercing",
-					"max": 20,
-					"min": 8,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
 					"damageType": "cold",
-					"max": 10,
-					"min": 4,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -10074,8 +10075,8 @@
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 17,
-					"duration": 2,
+					"difficulty": 12,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "dexterity",
 					"target": "enemy",
@@ -10087,18 +10088,6 @@
 					"min": 4,
 					"target": "enemy",
 					"type": "damage"
-				},
-				{
-					"duration": 3,
-					"properties": [
-						{
-							"name": "strength",
-							"type": "stat",
-							"value": 3
-						}
-					],
-					"target": "self",
-					"type": "status"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eSRJIY86RZLdUWrd8?alt=media&token=dd7c5e27-3d52-4755-b538-5c7c5b4bb164",
@@ -10205,7 +10194,7 @@
 				{
 					"difficulty": 19,
 					"duration": 4,
-					"modifier": "dexterity",
+					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "armourClass",
@@ -10283,7 +10272,7 @@
 				{
 					"difficulty": 22,
 					"duration": 4,
-					"modifier": "dexterity",
+					"modifier": "constitution",
 					"properties": [
 						{
 							"name": "armourClass",
@@ -10371,7 +10360,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 18,
+					"difficulty": 14,
 					"duration": 2,
 					"effect": "stun",
 					"modifier": "strength",
@@ -10564,8 +10553,8 @@
 					"type": "weaponDamage"
 				},
 				{
-					"difficulty": 14,
-					"duration": 2,
+					"difficulty": 10,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -10595,7 +10584,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 14,
+					"difficulty": 10,
 					"duration": 3,
 					"effect": "poison",
 					"modifier": "constitution",
@@ -10701,7 +10690,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 19,
+					"difficulty": 17,
 					"duration": 6,
 					"modifier": "wisdom",
 					"properties": [
@@ -10727,13 +10716,13 @@
 			"effects": [
 				{
 					"damageType": "crushing",
-					"max": 10,
-					"min": 4,
+					"max": 20,
+					"min": 8,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"difficulty": 17,
+					"difficulty": 19,
 					"duration": 4,
 					"modifier": "strength",
 					"properties": [
@@ -10748,7 +10737,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OC0KVp8uW27MHyrOLUj?alt=media&token=d7857ebc-fff4-4729-a859-0b359f9af9ea",
-			"level": 2,
+			"level": 3,
 			"maxUses": 5,
 			"name": "Constrict",
 			"price": 0
@@ -10759,13 +10748,13 @@
 			"effects": [
 				{
 					"damageType": "necrotic",
-					"max": 40,
-					"min": 16,
+					"max": 30,
+					"min": 12,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"difficulty": 10,
+					"difficulty": 8,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "wisdom",
@@ -10774,7 +10763,7 @@
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OC3JZltm890qLBu0MtB?alt=media&token=004fdcea-3a31-425c-9f87-c9050ac4cb2b",
-			"level": 4,
+			"level": 3,
 			"maxUses": 2,
 			"name": "Psionic Blast",
 			"price": 0
@@ -10954,7 +10943,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 19,
+					"difficulty": 16,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "constitution",
@@ -11005,6 +10994,16 @@
 						},
 						{
 							"name": "piercing",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "poison",
+							"type": "resistance",
+							"value": 50
+						},
+						{
+							"name": "acid",
 							"type": "resistance",
 							"value": 50
 						}
@@ -11757,7 +11756,7 @@
 					"type": "damage"
 				},
 				{
-					"difficulty": 19,
+					"difficulty": 14,
 					"duration": 6,
 					"effect": "poison",
 					"modifier": "constitution",
