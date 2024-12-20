@@ -6,7 +6,7 @@ import { State, Status } from "@common/utils/enums/index";
 import { GameData } from "@common/utils/game/GameData";
 import { Game } from "@common/utils/game/Game";
 import HeroModel, { HeroArchive } from "@models/hero.model";
-import { FINAL_LEVEL, SHOP_ITEMS, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
+import { FINAL_LEVEL, SALVAGE_MULTIPLIER, SHOP_ITEMS, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 
@@ -42,6 +42,15 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getWeightedItems(characterClass, SHOP_ITEMS, 0);
 
+		let salvage = 0;
+
+		const lastCharacter = await HeroArchive.findOne({ user: user.id }).sort({ createdAt: "desc" }).lean();
+		if (lastCharacter) {
+			const equipment = GameData.populateEquipment(classData.equipment);
+			const equipmentValue = Object.values(equipment).reduce((acc, item) => acc + item.price, 0);
+			salvage = Math.round((lastCharacter.gold + equipmentValue) * SALVAGE_MULTIPLIER);
+		}
+
 		const characterRecord = await HeroModel.create({
 			user: user.id,
 			name: name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
@@ -54,6 +63,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			baseStats: classData.stats,
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
+			salvage,
 		});
 
 		return characterRecord.toJSON();
@@ -243,6 +253,34 @@ export async function swapWeapons(session: Session & Partial<SessionData>) {
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error swapWeapons: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function salvage(session: Session & Partial<SessionData>) {
+	const { user } = session;
+	try {
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
+		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to salvage");
+		}
+
+		if (!characterRecord.salvage) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No gold to salvage");
+		}
+
+		const gold = characterRecord.salvage;
+		characterRecord.salvage = 0;
+		characterRecord.gold += gold;
+		const character = await characterRecord.save();
+
+		return character.toJSON();
+	} catch (error) {
+		console.error(`Error salvage: ${error.message}`);
 		throw error;
 	}
 }

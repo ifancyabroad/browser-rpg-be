@@ -38,6 +38,8 @@ export const MAX_STAT_LEVEL = 30;
 export const NEW_GAME_STAT_BONUS = 2;
 export const NEW_GAME_RESISTANCE_BONUS = 25;
 
+export const SALVAGE_MULTIPLIER = 0.5;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],

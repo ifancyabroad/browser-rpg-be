@@ -12,6 +12,7 @@ import {
 	rest,
 	restockItems,
 	retireActiveCharacter,
+	salvage,
 	swapWeapons,
 } from "@services/character.service";
 import { RequestCharacter, RequestItem, RequestLevelUp, RequestPotion } from "@common/types/character";
@@ -127,6 +128,17 @@ characterRouter.post(
 	middleware.userAuth,
 	expressAsyncHandler(async (req: Request, res: Response) => {
 		const character = await swapWeapons(req.session);
+		res.json({ character });
+	}),
+);
+
+// @POST '/character/salvage'
+// @DEST Salvage gold from your last character
+characterRouter.post(
+	"/salvage",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request, res: Response) => {
+		const character = await salvage(req.session);
 		res.json({ character });
 	}),
 );

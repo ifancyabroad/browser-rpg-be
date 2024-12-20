@@ -78,6 +78,10 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 				type: [String],
 			},
 		},
+		salvage: {
+			type: Number,
+			default: 0,
+		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
 );
@@ -133,6 +137,11 @@ heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
 
 heroSchema.virtual("shopLevel").get(function () {
 	return Math.floor(this.maxBattleLevel / 10);
+});
+
+heroSchema.virtual("goldValue").get(function () {
+	const equipmentValue = this.equipmentAsArray.reduce((acc, item) => acc + item.price, 0);
+	return this.gold + equipmentValue;
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {
