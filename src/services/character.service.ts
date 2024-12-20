@@ -46,9 +46,9 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 
 		const lastCharacter = await HeroArchive.findOne({ user: user.id }).sort({ createdAt: "desc" }).lean();
 		if (lastCharacter) {
-			const equipment = GameData.populateEquipment(classData.equipment);
-			const equipmentValue = Object.values(equipment).reduce((acc, item) => acc + item.price, 0);
-			salvage = Math.round((lastCharacter.gold + equipmentValue) * SALVAGE_MULTIPLIER);
+			const equipment = GameData.populateEquipment(lastCharacter.equipmentIDs);
+			const equipmentValue = Object.values(equipment).reduce((acc, item) => acc + (item?.price ?? 0), 0);
+			salvage = Math.round(equipmentValue * SALVAGE_MULTIPLIER);
 		}
 
 		const characterRecord = await HeroModel.create({

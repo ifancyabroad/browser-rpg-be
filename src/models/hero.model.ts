@@ -140,8 +140,7 @@ heroSchema.virtual("shopLevel").get(function () {
 });
 
 heroSchema.virtual("goldValue").get(function () {
-	const equipmentValue = this.equipmentAsArray.reduce((acc, item) => acc + item.price, 0);
-	return this.gold + equipmentValue;
+	return this.equipmentAsArray.reduce((acc, item) => acc + item.price, 0);
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {
