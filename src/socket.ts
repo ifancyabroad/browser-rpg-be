@@ -22,6 +22,10 @@ export class Socket {
 			console.log("Socket connected");
 			console.log(socket.id);
 		});
+
+		io.on("error", (error) => {
+			console.error("Socket error:", error);
+		});
 	}
 
 	emit(event: string, data: any) {
