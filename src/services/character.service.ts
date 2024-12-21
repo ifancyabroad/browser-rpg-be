@@ -69,7 +69,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 
 		const connection = socket.connection();
 
-		connection.emit("message", {
+		connection?.emit("message", {
 			color: "info.light",
 			message: `${characterRecord.name} the ${classData.name} is ready for adventure!`,
 		});
@@ -238,7 +238,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 
 		const connection = socket.connection();
 
-		connection.emit("message", {
+		connection?.emit("message", {
 			color: "text.secondary",
 			message: `${character.name} has reached level ${character.level}!`,
 		});

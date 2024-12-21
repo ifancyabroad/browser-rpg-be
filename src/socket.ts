@@ -19,6 +19,8 @@ export class Socket {
 
 		io.on("connection", (socket) => {
 			this.socket = socket;
+			console.log("Socket connected");
+			console.log(socket.id);
 		});
 	}
 
