@@ -9,6 +9,7 @@ import HeroModel, { HeroArchive } from "@models/hero.model";
 import { FINAL_LEVEL, SALVAGE_MULTIPLIER, SHOP_ITEMS, STARTING_GOLD, STARTING_POTIONS } from "@common/utils";
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
+import socket from "socket";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -64,6 +65,13 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 			baseHitPoints: hitPoints,
 			baseMaxHitPoints: hitPoints,
 			salvage,
+		});
+
+		const connection = socket.connection();
+
+		connection.emit("message", {
+			color: "info.light",
+			message: `${characterRecord.name} the ${classData.name} is ready for adventure!`,
 		});
 
 		return characterRecord.toJSON();
@@ -227,6 +235,13 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 
 		characterRecord.addLevel(stat, skill);
 		const character = await characterRecord.save();
+
+		const connection = socket.connection();
+
+		connection.emit("message", {
+			color: "text.secondary",
+			message: `${character.name} has reached level ${character.level}!`,
+		});
 
 		return character.toJSON();
 	} catch (error) {

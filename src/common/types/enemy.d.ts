@@ -20,6 +20,7 @@ export interface IEnemy extends ICharacter {
 
 export interface IEnemyMethods extends ICharacterMethods {
 	// Add virtuals here
+	nameWithDeterminer: string;
 
 	// Add methods here
 	getSkill(hero: IHero): ISkillDataWithID;

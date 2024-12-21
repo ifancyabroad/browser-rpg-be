@@ -30,3 +30,5 @@ export const weightedChoice = <T extends string | number | symbol>(source: Recor
 	// number is out of bounds
 	return undefined;
 };
+
+export const getDeterminer = (name: string) => (name.match(/^[aeiou]/i) ? "an" : "a");

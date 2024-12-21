@@ -7,6 +7,8 @@ import MongoStore from "connect-mongo";
 import { middleware } from "./middleware";
 import appRouter from "./routes";
 import dotenv from "dotenv";
+import { createServer } from "http";
+import socket from "socket";
 
 const envFound = dotenv.config();
 if (envFound.error) {
@@ -66,12 +68,17 @@ const startServer = async () => {
 
 	console.debug(`MODE ENV ${process.env.NODE_ENV}`);
 
-	app.listen(port, () => {
-		console.info(`Server listening on port: ${port}`);
-	}).on("error", (err) => {
-		console.error(err);
-		process.exit(1);
-	});
+	const httpServer = createServer(app);
+	socket.connect(httpServer);
+
+	httpServer
+		.listen(port, () => {
+			console.info(`Server listening on port: ${port}`);
+		})
+		.on("error", (err) => {
+			console.error(err);
+			process.exit(1);
+		});
 };
 
 startServer();

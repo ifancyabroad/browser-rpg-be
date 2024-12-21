@@ -11,6 +11,7 @@ import EnemyModel from "@models/enemy.model";
 import UserModel from "@models/user.model";
 import { BATTLE_MULTIPLIER_INCREMENT, FINAL_LEVEL, MAX_CHARACTER_LEVEL, REWARD_GOLD_MULTIPLIER } from "@common/utils";
 import { IHero } from "@common/types/hero";
+import socket from "socket";
 
 async function getFallenHeroData(battleZone: Zone, battleLevel: number) {
 	const isBoss = Game.getIsBoss(battleLevel);
@@ -316,9 +317,15 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		battleRecord.turns.push(turn);
 
+		const connection = socket.connection();
+
 		if (!characterRecord.alive) {
 			battleRecord.result = BattleResult.Lost;
 			characterRecord.battleLost(enemyRecord.name);
+			connection.emit("message", {
+				color: "error.main",
+				message: `${characterRecord.name} has been slain by ${enemyRecord.nameWithDeterminer}`,
+			});
 		}
 
 		if (characterRecord.alive && !enemyRecord.alive) {
@@ -326,6 +333,18 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.handleTreasure(characterRecord, enemyRecord);
 			battleRecord.result = BattleResult.Won;
 			characterRecord.battleWon(battleRecord);
+
+			connection.emit("message", {
+				color: "text.primary",
+				message: `${characterRecord.name} has defeated ${enemyRecord.nameWithDeterminer}`,
+			});
+
+			if (battleRecord.level === FINAL_LEVEL) {
+				connection.emit("message", {
+					color: "success.main",
+					message: `${characterRecord.name} has defeated the defeated the monsters and saved the townsfolk. Congratulations!`,
+				});
+			}
 		}
 
 		const enemy = await enemyRecord.save();

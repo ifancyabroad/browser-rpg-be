@@ -2,7 +2,17 @@ import { Schema } from "mongoose";
 import CharacterModel from "./character.model";
 import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
-import { AuxiliaryStat, DamageType, EffectType, Game, Tactics, Target, Zone, getRandomElement } from "@common/utils";
+import {
+	AuxiliaryStat,
+	DamageType,
+	EffectType,
+	Game,
+	Tactics,
+	Target,
+	Zone,
+	getDeterminer,
+	getRandomElement,
+} from "@common/utils";
 import { IEffectData } from "@common/types/character";
 import { ISkillDataWithRemaining, IWeaponDamageEffectData } from "@common/types/gameData";
 
@@ -75,6 +85,14 @@ enemySchema.virtual("armourClass").get(function () {
 		Math.max(this.getEquipmentArmourClass(), this.naturalArmourClass) +
 		this.getAuxiliaryStat(AuxiliaryStat.ArmourClass)
 	);
+});
+
+enemySchema.virtual("nameWithDeterminer").get(function () {
+	if (this.boss || this.hero) {
+		return this.name;
+	}
+	const determiner = getDeterminer(this.name);
+	return `${determiner} ${this.name}`;
 });
 
 enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
