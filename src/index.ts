@@ -9,6 +9,7 @@ import appRouter from "./routes";
 import dotenv from "dotenv";
 import { createServer } from "http";
 import socket from "socket";
+import { Server } from "socket.io";
 
 const envFound = dotenv.config();
 if (envFound.error) {
@@ -70,6 +71,19 @@ const startServer = async () => {
 
 	const httpServer = createServer(app);
 	socket.connect(httpServer);
+
+	const io = new Server(httpServer, {
+		cors: {
+			origin: "https://browserheroes.com",
+		},
+	});
+
+	console.log("Socket.connect 2");
+
+	io.on("connection", (socket) => {
+		console.log("Socket connected");
+		console.log(socket.id);
+	});
 
 	httpServer
 		.listen(port, () => {
