@@ -17,21 +17,13 @@ export class Socket {
 			},
 		});
 
-		console.log("Socket.connect");
-
 		io.on("connection", (socket) => {
-			console.log("Socket connected");
-			console.log(socket.id);
+			console.log("User connected", socket.id);
 			this.socket = socket;
-		});
-
-		io.on("error", (error) => {
-			console.error("Socket error:", error);
 		});
 	}
 
 	emit(event: string, data: any) {
-		console.log("Emitting", this.socket, event, data);
 		this.socket?.emit(event, data);
 	}
 
