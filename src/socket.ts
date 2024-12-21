@@ -17,10 +17,12 @@ export class Socket {
 			},
 		});
 
+		console.log("Socket.connect");
+
 		io.on("connection", (socket) => {
-			this.socket = socket;
 			console.log("Socket connected");
 			console.log(socket.id);
+			this.socket = socket;
 		});
 
 		io.on("error", (error) => {
