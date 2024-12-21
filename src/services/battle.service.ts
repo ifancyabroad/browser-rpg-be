@@ -323,6 +323,8 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			battleRecord.result = BattleResult.Lost;
 			characterRecord.battleLost(enemyRecord.name);
 
+			console.log("connection", connection);
+
 			connection?.emit("message", {
 				color: "error.main",
 				message: `${characterRecord.name} the level ${characterRecord.level} ${characterRecord.characterClass.name} has been slain by ${enemyRecord.nameWithDeterminer}`,

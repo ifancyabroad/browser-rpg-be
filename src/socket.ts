@@ -17,9 +17,6 @@ export class Socket {
 			},
 		});
 
-		console.log("io", io);
-		console.log("server", server);
-
 		io.on("connection", (socket) => {
 			this.socket = socket;
 			console.log("Socket connected");
@@ -28,7 +25,8 @@ export class Socket {
 	}
 
 	emit(event: string, data: any) {
-		this.socket.emit(event, data);
+		console.log("Emitting", this.socket, event, data);
+		this.socket?.emit(event, data);
 	}
 
 	static init(server: HttpServer) {
