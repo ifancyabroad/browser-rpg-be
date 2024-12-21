@@ -4,6 +4,7 @@ import { Server as HttpServer } from "http";
 let connection: Socket = null;
 
 export class Socket {
+	server: Server;
 	socket: IOSocket;
 
 	constructor() {
@@ -11,20 +12,20 @@ export class Socket {
 	}
 
 	connect(server: HttpServer) {
-		const io = new Server(server, {
+		this.server = new Server(server, {
 			cors: {
 				origin: "https://browserheroes.com",
 			},
 		});
 
-		io.on("connection", (socket) => {
+		this.server.on("connection", (socket) => {
 			console.log("User connected", socket.id);
 			this.socket = socket;
 		});
 	}
 
 	emit(event: string, data: any) {
-		this.socket?.emit(event, data);
+		this.server?.sockets.emit(event, data);
 	}
 
 	static init(server: HttpServer) {
