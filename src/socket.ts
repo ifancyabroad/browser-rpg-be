@@ -13,7 +13,7 @@ export class Socket {
 	connect(server: HttpServer) {
 		const io = new Server(server, {
 			cors: {
-				origin: "http://localhost:8080",
+				origin: "https://browserheroes.com",
 			},
 		});
 

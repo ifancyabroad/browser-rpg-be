@@ -70,7 +70,6 @@ const startServer = async () => {
 
 	const httpServer = createServer(app);
 	socket.connect(httpServer);
-	console.log("socket", socket);
 
 	httpServer
 		.listen(port, () => {
