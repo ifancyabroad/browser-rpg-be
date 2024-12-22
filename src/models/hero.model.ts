@@ -13,6 +13,7 @@ import {
 	MAX_STAT_VALUE,
 	REST_MULTIPLIER,
 	RESTOCK_MULTIPLIER,
+	SALVAGE_MULTIPLIER,
 	SHOP_ITEMS,
 	SKILL_LEVEL_MAP,
 } from "@common/utils";
@@ -141,6 +142,10 @@ heroSchema.virtual("shopLevel").get(function () {
 
 heroSchema.virtual("goldValue").get(function () {
 	return this.equipmentAsArray.reduce((acc, item) => acc + item.price, 0);
+});
+
+heroSchema.virtual("salvageValue").get(function () {
+	return Math.round(this.goldValue * SALVAGE_MULTIPLIER);
 });
 
 heroSchema.method("addExperience", function addExperience(xp: number) {

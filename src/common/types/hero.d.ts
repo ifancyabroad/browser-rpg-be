@@ -44,6 +44,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get isTwoHandedWeaponEquipped(): boolean;
 	get shopLevel(): number;
 	get goldValue(): number;
+	get salvageValue(): number;
 
 	// Add methods here
 	addExperience(xp: number): void;
