@@ -43,13 +43,16 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 		}));
 		const availableItems = GameData.getWeightedItems(characterClass, SHOP_ITEMS, 0);
 
-		let salvage = 0;
+		const salvage = {
+			value: 0,
+			claimed: false,
+		};
 
 		const lastCharacter = await HeroArchive.findOne({ user: user.id }).sort({ createdAt: "desc" }).lean();
 		if (lastCharacter) {
 			const equipment = GameData.populateEquipment(lastCharacter.equipmentIDs);
 			const equipmentValue = Object.values(equipment).reduce((acc, item) => acc + (item?.price ?? 0), 0);
-			salvage = Math.round(equipmentValue * SALVAGE_MULTIPLIER);
+			salvage.value = Math.round(equipmentValue * SALVAGE_MULTIPLIER);
 		}
 
 		const characterRecord = await HeroModel.create({
@@ -290,9 +293,12 @@ export async function salvage(session: Session & Partial<SessionData>) {
 			throw createHttpError(httpStatus.BAD_REQUEST, "No gold to salvage");
 		}
 
-		const gold = characterRecord.salvage;
-		characterRecord.salvage = 0;
-		characterRecord.gold += gold;
+		if (characterRecord.salvage.claimed) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Salvage already claimed");
+		}
+
+		characterRecord.salvage.claimed = true;
+		characterRecord.gold += characterRecord.salvage.value;
 		const character = await characterRecord.save();
 
 		return character.toJSON();

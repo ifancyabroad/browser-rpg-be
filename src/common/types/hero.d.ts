@@ -14,6 +14,11 @@ export interface ILevelUpData {
 	skills: Types.Array<ISkillDataWithID>;
 }
 
+export interface ISalvage {
+	value: number;
+	claimed: boolean;
+}
+
 export interface IHero extends ICharacter {
 	user: Types.ObjectId;
 	characterClassID: string;
@@ -27,7 +32,7 @@ export interface IHero extends ICharacter {
 	restockCount: number;
 	levelUp?: ILevelUp;
 	slainBy?: string;
-	salvage?: number;
+	salvage?: ISalvage;
 }
 
 export interface IHeroMethods extends ICharacterMethods {

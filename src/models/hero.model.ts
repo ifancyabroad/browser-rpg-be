@@ -80,8 +80,14 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 			},
 		},
 		salvage: {
-			type: Number,
-			default: 0,
+			value: {
+				type: Number,
+				default: 0,
+			},
+			claimed: {
+				type: Boolean,
+				default: false,
+			},
 		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
