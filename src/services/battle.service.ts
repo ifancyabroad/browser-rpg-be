@@ -346,7 +346,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 				connection?.emit("message", {
 					color: "success.main",
 					username: user.username,
-					message: `${characterRecord.name} the ${characterRecord.characterClass.name} has defeated the defeated the monsters and saved the townsfolk. Congratulations!`,
+					message: `${characterRecord.name} the ${characterRecord.characterClass.name} has defeated the monsters and saved the townsfolk. Congratulations!`,
 				});
 			}
 		}
