@@ -24,6 +24,7 @@ export async function loginUser(userInput: IUserInput) {
 		// Remove password
 		const payload = {
 			id: userCheck.id,
+			username: userCheck.username,
 			email: userCheck.email,
 		};
 

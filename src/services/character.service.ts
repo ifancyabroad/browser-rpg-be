@@ -71,6 +71,7 @@ export async function createCharacter(characterInput: ICharacterInput, session: 
 
 		connection?.emit("message", {
 			color: "info.light",
+			username: user.username,
 			message: `${characterRecord.name} the ${classData.name} is ready for adventure!`,
 		});
 
@@ -240,6 +241,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 
 		connection?.emit("message", {
 			color: "text.secondary",
+			username: user.username,
 			message: `${character.name} has reached level ${character.level}!`,
 		});
 

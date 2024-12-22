@@ -325,6 +325,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 			connection?.emit("message", {
 				color: "error.main",
+				username: user.username,
 				message: `${characterRecord.name} the level ${characterRecord.level} ${characterRecord.characterClass.name} has been slain by ${enemyRecord.nameWithDeterminer}`,
 			});
 		}
@@ -337,12 +338,14 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 			connection?.emit("message", {
 				color: "text.primary",
+				username: user.username,
 				message: `${characterRecord.name} the ${characterRecord.characterClass.name} has defeated ${enemyRecord.nameWithDeterminer}`,
 			});
 
 			if (battleRecord.level === FINAL_LEVEL) {
 				connection?.emit("message", {
 					color: "success.main",
+					username: user.username,
 					message: `${characterRecord.name} the ${characterRecord.characterClass.name} has defeated the defeated the monsters and saved the townsfolk. Congratulations!`,
 				});
 			}
