@@ -115,6 +115,14 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 		);
 		await characterRecord.deleteOne();
 
+		const connection = socket.connection();
+
+		connection?.emit("message", {
+			color: "info.light",
+			username: user.username,
+			message: `${characterRecord.name} the ${characterRecord.characterClass.name} has retired after slaying ${characterRecord.kills} enemies!`,
+		});
+
 		return characterRecord.toJSON();
 	} catch (error) {
 		console.error(`Error retireActiveCharacter: ${error.message}`);

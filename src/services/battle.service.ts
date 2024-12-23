@@ -152,6 +152,14 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		characterRecord.state = State.Battle;
 		const character = await characterRecord.save();
 
+		const connection = socket.connection();
+
+		connection?.emit("message", {
+			color: "text.primary",
+			username: user.username,
+			message: `${character.name} the ${character.characterClass.name} has left town to enter the ${zone}`,
+		});
+
 		return {
 			battle: battle.toJSON(),
 			character: character.toJSON(),
@@ -268,6 +276,14 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
 		await Promise.all([EnemyModel.findByIdAndDelete(battle.enemy), battle.deleteOne()]);
+
+		const connection = socket.connection();
+
+		connection?.emit("message", {
+			color: "text.primary",
+			username: user.username,
+			message: `${character.name} the ${character.characterClass.name} has returned to town`,
+		});
 
 		return {
 			battle: battle.toJSON(),
