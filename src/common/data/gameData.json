@@ -8094,7 +8094,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nc3z5D4In6VQLtKZxrV?alt=media&token=88adbc86-f012-43b3-b304-45ba2281e9fe",
 			"level": 1,
-			"maxUses": 7,
+			"maxUses": 12,
 			"name": "Acid Rain",
 			"price": 350
 		},
@@ -9255,7 +9255,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-Nhh3v9mXEeAJhlsZfwB?alt=media&token=3ac3e157-3f26-4716-b546-4ce5f00ef032",
 			"level": 1,
-			"maxUses": 7,
+			"maxUses": 12,
 			"name": "Shadow Bolt",
 			"price": 0
 		},
@@ -9923,7 +9923,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eOvYZWqjCOQtT8moN?alt=media&token=dd7a00ee-354d-42bb-b663-12671198f43f",
 			"level": 3,
-			"maxUses": 6,
+			"maxUses": 4,
 			"name": "Cold Bite",
 			"price": 0
 		},
@@ -11108,7 +11108,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCIBB22KHcvQGE6xUN7?alt=media&token=70828828-a2ed-43f7-b2b8-c4687df8a467",
 			"level": 3,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Powerful Blow",
 			"price": 0
 		},
