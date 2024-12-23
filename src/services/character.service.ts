@@ -231,7 +231,7 @@ export async function rest(session: Session & Partial<SessionData>) {
 		connection?.emit("message", {
 			color: "text.primary",
 			username: user.username,
-			message: `${character.name} has rested at the tavern to begin day ${character.day}`,
+			message: `${character.name} the ${character.characterClass.name} has rested at the tavern to begin day ${character.day}`,
 		});
 
 		return character.toJSON();
@@ -261,7 +261,7 @@ export async function levelUp(levelUp: ILevelUpInput, session: Session & Partial
 		connection?.emit("message", {
 			color: "text.secondary",
 			username: user.username,
-			message: `${character.name} has reached level ${character.level}!`,
+			message: `${character.name} the ${character.characterClass.name} has reached level ${character.level}!`,
 		});
 
 		return character.toJSON();
