@@ -226,6 +226,14 @@ export async function rest(session: Session & Partial<SessionData>) {
 		characterRecord.rest();
 		const character = await characterRecord.save();
 
+		const connection = socket.connection();
+
+		connection?.emit("message", {
+			color: "text.primary",
+			username: user.username,
+			message: `${character.name} has rested at the tavern to begin day ${character.day}`,
+		});
+
 		return character.toJSON();
 	} catch (error) {
 		console.error(`Error rest: ${error.message}`);
