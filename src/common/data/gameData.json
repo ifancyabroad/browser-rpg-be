@@ -10361,7 +10361,7 @@
 				},
 				{
 					"difficulty": 14,
-					"duration": 2,
+					"duration": 1,
 					"effect": "stun",
 					"modifier": "strength",
 					"target": "enemy",
