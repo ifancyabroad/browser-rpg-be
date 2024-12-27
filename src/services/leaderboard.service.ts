@@ -4,17 +4,27 @@ import { HeroArchive } from "@models/hero.model";
 import { Session, SessionData } from "express-session";
 import { ILeaderboardQuery } from "@common/types/leaderboard";
 import { IUser } from "@common/types/user";
+import { GameData } from "@common/utils";
 
 export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, session: Session & Partial<SessionData>) {
-	const { type, showUserCharacters } = leaderboardQuery;
+	const { type, characterClass, showUserCharacters } = leaderboardQuery;
 	const { user } = session;
 
 	try {
-		let filter = {};
+		let filter: Record<string, unknown> = {};
 
 		// Backwards compatibility
 		if (type === "user" || showUserCharacters === "true") {
-			filter = { user: user.id };
+			filter.user = user.id;
+		}
+
+		if (characterClass && characterClass !== "all") {
+			const classes = GameData.getClasses();
+			const classData = classes.find((c) => c.name.toLowerCase() === characterClass);
+			if (!classData) {
+				throw createHttpError(httpStatus.BAD_REQUEST, `Character class not found: ${characterClass}`);
+			}
+			filter.characterClassID = classData.id;
 		}
 
 		const leaderboard = await HeroArchive.find(filter)
