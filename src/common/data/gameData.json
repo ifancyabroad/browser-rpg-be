@@ -12250,7 +12250,12 @@
 				{
 					"name": "intelligence",
 					"type": "stat",
-					"value": 1
+					"value": 2
+				},
+				{
+					"name": "cold",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"size": "twoHanded",
@@ -13035,17 +13040,12 @@
 			"damageType": "crushing",
 			"description": "Nature's Wrath is a beautifully crafted staff adorned with twisting vines and vibrant leaves. It channels the power of the natural world, allowing the wielder to summon roots and vines to ensnare foes. Favored by druids, this staff embodies the raw fury and beauty of nature in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86iXwrc1ccOlbTldxs?alt=media&token=f44cf246-c5e0-4528-a975-511505ea84f6",
-			"level": 3,
+			"level": 2,
 			"max": 6,
 			"min": 1,
 			"name": "Nature's Wrath",
-			"price": 450,
+			"price": 240,
 			"properties": [
-				{
-					"name": "intelligence",
-					"type": "stat",
-					"value": 1
-				},
 				{
 					"name": "acid",
 					"type": "damage",
@@ -13184,12 +13184,17 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of the Trickster",
-			"price": 120,
+			"price": 220,
 			"properties": [
 				{
 					"name": "charisma",
 					"type": "stat",
-					"value": 1
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"size": "twoHanded",
@@ -13204,12 +13209,17 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Cold",
-			"price": 540,
+			"price": 640,
 			"properties": [
 				{
 					"name": "cold",
 					"type": "damage",
 					"value": 40
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"size": "twoHanded",
@@ -13284,22 +13294,22 @@
 			"max": 6,
 			"min": 1,
 			"name": "Crystal Staff",
-			"price": 210,
+			"price": 280,
 			"properties": [
 				{
 					"name": "cold",
-					"type": "resistance",
-					"value": 10
+					"type": "damage",
+					"value": 20
 				},
 				{
 					"name": "fire",
-					"type": "resistance",
-					"value": 10
+					"type": "damage",
+					"value": 20
 				},
 				{
 					"name": "lightning",
-					"type": "resistance",
-					"value": 10
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"size": "twoHanded",
@@ -13314,12 +13324,17 @@
 			"max": 6,
 			"min": 1,
 			"name": "Staff of Flames",
-			"price": 540,
+			"price": 640,
 			"properties": [
 				{
 					"name": "fire",
 					"type": "damage",
 					"value": 40
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"size": "twoHanded",
@@ -13399,11 +13414,11 @@
 			"damageType": "cold",
 			"description": "The Infused Cold Wand is a sleek, blue rod charged with frost magic. When wielded, it releases blasts of icy energy, freezing targets on contact. Favored by cold mages, it enhances their ability to control the battlefield with chilling precision.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O885kCSisaF4moiYC04?alt=media&token=4680c62d-035c-4a0a-b183-d40e287b9241",
-			"level": 2,
+			"level": 1,
 			"max": 5,
 			"min": 2,
 			"name": "Infused Cold Wand",
-			"price": 220,
+			"price": 120,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -13412,11 +13427,11 @@
 			"damageType": "fire",
 			"description": "The Infused Fire Wand is a slender, red rod crackling with flame magic. When wielded, it unleashes bursts of fire, igniting targets and dealing damage. This wand is favored by fire mages, enhancing their spellcasting with powerful flames to dominate the battlefield.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886CfafhQSLXkJEQyF?alt=media&token=24019a7c-44f9-466c-8cf3-f7476b7ab053",
-			"level": 2,
+			"level": 1,
 			"max": 5,
 			"min": 2,
 			"name": "Infused Fire Wand",
-			"price": 220,
+			"price": 120,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -13425,11 +13440,11 @@
 			"damageType": "lightning",
 			"description": "The Infused Lightning Wand is a sleek, silver rod pulsating with electric energy. When wielded, it releases arcs of lightning that can stun foes and deal damage. This wand is favored by storm mages, enhancing their ability to unleash powerful lightning spells in combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O886X4ak1ZP3ovLQjeF?alt=media&token=5863ce10-3c44-4d5c-aae5-37bd250bd151",
-			"level": 2,
+			"level": 1,
 			"max": 5,
 			"min": 2,
 			"name": "Infused Lightning Wand",
-			"price": 220,
+			"price": 120,
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -13459,6 +13474,13 @@
 			"min": 3,
 			"name": "Wand of Cursing",
 			"price": 550,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 20
+				}
+			],
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -13488,6 +13510,18 @@
 			"min": 5,
 			"name": "Dragon's Breath",
 			"price": 1240,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 20
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				}
+			],
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -13551,24 +13585,24 @@
 			"description": "The Wand of Piercing is a sleek, metallic wand designed for precision and power. It enhances spellcasters' piercing spells, allowing them to bypass defenses and strike directly at their targets. Favored by skilled mages, this wand is an essential tool for delivering powerful, targeted attacks.",
 			"effects": [
 				{
-					"difficulty": 17,
+					"difficulty": 19,
 					"duration": 4,
 					"modifier": "intelligence",
 					"properties": [
 						{
 							"name": "fire",
 							"type": "resistance",
-							"value": -20
+							"value": -25
 						},
 						{
 							"name": "lightning",
 							"type": "resistance",
-							"value": -20
+							"value": -25
 						},
 						{
 							"name": "cold",
 							"type": "resistance",
-							"value": -20
+							"value": -25
 						}
 					],
 					"target": "enemy",
@@ -13609,6 +13643,11 @@
 					"name": "lightning",
 					"type": "damage",
 					"value": 20
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"size": "oneHanded",
@@ -13876,12 +13915,17 @@
 			"max": 6,
 			"min": 1,
 			"name": "Warlock's Staff",
-			"price": 190,
+			"price": 720,
 			"properties": [
 				{
 					"name": "necrotic",
 					"type": "damage",
-					"value": 20
+					"value": 50
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"size": "twoHanded",
@@ -13901,7 +13945,12 @@
 				{
 					"name": "lightning",
 					"type": "damage",
-					"value": 20
+					"value": 25
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 25
 				}
 			],
 			"size": "twoHanded",
@@ -13952,11 +14001,11 @@
 			"weaponType": "sword"
 		},
 		"-OAt06i5FZejZc6JogoT": {
-			"damageType": "acid",
+			"damageType": "poison",
 			"description": "",
 			"effects": [
 				{
-					"difficulty": 14,
+					"difficulty": 16,
 					"duration": 2,
 					"effect": "poison",
 					"modifier": "constitution",
@@ -13969,7 +14018,14 @@
 			"max": 5,
 			"min": 2,
 			"name": "Snake Tongue",
-			"price": 240,
+			"price": 220,
+			"properties": [
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 20
+				}
+			],
 			"size": "oneHanded",
 			"type": "weapon",
 			"weaponType": "wand"
@@ -14255,6 +14311,42 @@
 					"name": "necrotic",
 					"type": "damage",
 					"value": 40
+				}
+			],
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "wand"
+		},
+		"-OF7k8J8rp5dofXywACI": {
+			"damageType": "acid",
+			"description": "",
+			"effects": [
+				{
+					"difficulty": 19,
+					"duration": 3,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "armourClass",
+							"type": "auxiliaryStat",
+							"value": -4
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OF7k8J8rp5dofXywACI?alt=media&token=7ceabef1-aebc-4753-a7b2-60585b11553c",
+			"level": 2,
+			"max": 5,
+			"min": 2,
+			"name": "Wand of Corrosion",
+			"price": 200,
+			"properties": [
+				{
+					"name": "acid",
+					"type": "damage",
+					"value": 20
 				}
 			],
 			"size": "oneHanded",
