@@ -14080,11 +14080,6 @@
 					"name": "strength",
 					"type": "stat",
 					"value": 4
-				},
-				{
-					"name": "constitution",
-					"type": "stat",
-					"value": 4
 				}
 			],
 			"size": "twoHanded",
@@ -14114,7 +14109,7 @@
 				{
 					"name": "fire",
 					"type": "damage",
-					"value": 100
+					"value": 80
 				}
 			],
 			"size": "twoHanded",
@@ -14157,11 +14152,6 @@
 			"properties": [
 				{
 					"name": "critChance",
-					"type": "auxiliaryStat",
-					"value": 4
-				},
-				{
-					"name": "hitChance",
 					"type": "auxiliaryStat",
 					"value": 4
 				}
