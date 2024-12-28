@@ -3852,7 +3852,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTPv9FLqVI9cJXml2R", "-OC3_Ea2wZ_5cHuPGwB5"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTPv9FLqVI9cJXml2R", "-OC3_Ea2wZ_5cHuPGwB5", "-OCiu-f5bl8zaJxDA2ji"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 11,
@@ -3979,7 +3979,7 @@
 			"name": "Dread Serpent",
 			"naturalArmourClass": 15,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 6,
+			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgTmEuMs3XJu8TMDs9P?alt=media&token=25a7cb23-8592-4476-b64f-325c4f6aeb4d",
 			"resistances": {
@@ -4129,7 +4129,7 @@
 			"name": "Fire Snake",
 			"naturalArmourClass": 14,
 			"naturalDamageType": "piercing",
-			"naturalMaxDamage": 6,
+			"naturalMaxDamage": 8,
 			"naturalMinDamage": 1,
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fmonsters%2F-NgYk1uHzdomGArMmxVa?alt=media&token=d0825833-28ae-4445-8dcb-a31f457517a1",
 			"resistances": {
@@ -4145,7 +4145,7 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0KVp8uW27MHyrOLUj", "-OCiu-f5bl8zaJxDA2ji"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OC0KVp8uW27MHyrOLUj", "-OFEZCfd9D55StQEZpFP"],
 			"stats": {
 				"charisma": 3,
 				"constitution": 12,
@@ -8313,11 +8313,9 @@
 					"type": "auxiliary"
 				},
 				{
-					"damageType": "piercing",
-					"max": 6,
-					"min": 1,
+					"multiplier": 1,
 					"target": "enemy",
-					"type": "damage"
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTOJ5N4B3V55HpTl-8?alt=media&token=9e866550-b99b-4c0f-b146-d98d34634113",
@@ -8357,7 +8355,7 @@
 			"effects": [
 				{
 					"difficulty": 19,
-					"duration": 3,
+					"duration": 2,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
@@ -8640,19 +8638,17 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "slashing",
-					"max": 10,
-					"min": 4,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"difficulty": 12,
 					"duration": 1,
 					"effect": "stun",
 					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgT_si0jS5qW1S5SbaJ?alt=media&token=e9f6910b-b610-407e-8484-3a2bebcc5308",
@@ -8758,11 +8754,9 @@
 					"type": "damage"
 				},
 				{
-					"damageType": "piercing",
-					"max": 6,
-					"min": 1,
+					"multiplier": 1,
 					"target": "enemy",
-					"type": "damage"
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTmlFYyunJA4SqDKIX?alt=media&token=195bfdc0-a900-4a6e-ad26-a9bca0f2072d",
@@ -9907,18 +9901,16 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "piercing",
+					"damageType": "cold",
 					"max": 15,
 					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"damageType": "cold",
-					"max": 15,
-					"min": 6,
+					"multiplier": 1,
 					"target": "enemy",
-					"type": "damage"
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eOvYZWqjCOQtT8moN?alt=media&token=dd7a00ee-354d-42bb-b663-12671198f43f",
@@ -10011,18 +10003,16 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "slashing",
-					"max": 6,
-					"min": 1,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "poison",
 					"max": 4,
 					"min": 1,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-O9eQx8AckjJR4EGe9i3?alt=media&token=30cb17bb-8570-4a33-bd25-58c19d54a370",
@@ -10178,13 +10168,6 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "crushing",
-					"max": 12,
-					"min": 6,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "necrotic",
 					"max": 12,
 					"min": 6,
@@ -10204,6 +10187,11 @@
 					],
 					"target": "enemy",
 					"type": "status"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAbsKzhDKZyqRhK5IJZ?alt=media&token=5c3048c0-b15a-4e5e-9179-723d025c206f",
@@ -10256,13 +10244,6 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "crushing",
-					"max": 20,
-					"min": 8,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "cold",
 					"max": 20,
 					"min": 8,
@@ -10282,6 +10263,11 @@
 					],
 					"target": "enemy",
 					"type": "status"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAcIecu1k5j83kgrT_R?alt=media&token=a6d9fba5-4cf9-49d1-a000-b6bbb3c5b945",
@@ -10294,13 +10280,6 @@
 			"class": "unique",
 			"description": "",
 			"effects": [
-				{
-					"damageType": "piercing",
-					"max": 20,
-					"min": 8,
-					"target": "enemy",
-					"type": "damage"
-				},
 				{
 					"damageType": "cold",
 					"max": 20,
@@ -10315,6 +10294,11 @@
 					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAcJx5Xs5BJproNtWrj?alt=media&token=f042f62d-bcbb-4606-9a9a-fa979d37b271",
@@ -11659,13 +11643,6 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "crushing",
-					"max": 10,
-					"min": 4,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"difficulty": 18,
 					"duration": 5,
 					"modifier": "constitution",
@@ -11678,6 +11655,13 @@
 					],
 					"target": "enemy",
 					"type": "status"
+				},
+				{
+					"damageType": "crushing",
+					"max": 10,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCUDaUsTx_tLKhlQzc6?alt=media&token=65159a77-f38c-4e64-be8f-589968f22505",
@@ -11742,13 +11726,6 @@
 			"description": "",
 			"effects": [
 				{
-					"damageType": "piercing",
-					"max": 15,
-					"min": 6,
-					"target": "enemy",
-					"type": "damage"
-				},
-				{
 					"damageType": "poison",
 					"max": 15,
 					"min": 6,
@@ -11762,6 +11739,11 @@
 					"modifier": "constitution",
 					"target": "enemy",
 					"type": "auxiliary"
+				},
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OCiu-f5bl8zaJxDA2ji?alt=media&token=96da30c0-726e-4617-b0f7-cc2a6b62ac38",
@@ -11939,6 +11921,29 @@
 			"level": 3,
 			"maxUses": 4,
 			"name": "Intimidating Shout",
+			"price": 0
+		},
+		"-OFEZCfd9D55StQEZpFP": {
+			"class": "common",
+			"description": "",
+			"effects": [
+				{
+					"multiplier": 1,
+					"target": "enemy",
+					"type": "weaponDamage"
+				},
+				{
+					"damageType": "fire",
+					"max": 15,
+					"min": 6,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OFEZCfd9D55StQEZpFP?alt=media&token=215eafa2-0cf5-48b3-a9cd-350afcbf6ba2",
+			"level": 3,
+			"maxUses": 4,
+			"name": "Flame Bite",
 			"price": 0
 		}
 	},
