@@ -333,7 +333,7 @@ characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourCla
 	} else if (armour.armourType === ArmourType.Medium) {
 		return armour.armourClass + Math.min(2, modifier);
 	} else {
-		return armour.armourClass + modifier;
+		return armour.armourClass + Math.min(5, modifier);
 	}
 });
 
