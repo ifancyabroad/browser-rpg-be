@@ -1,4 +1,3 @@
-import { ObjectId } from "mongoose";
 import { IGuestInput, IRequestResetPasswordInput, IResetPasswordInput, IUserInput } from "@common/types/user";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
@@ -47,11 +46,32 @@ export async function registerUser(userInput: IUserInput, session: Session & Par
 		// Encrypting password
 		const salt = await bcrypt.genSalt(10);
 		const encryptPass = await bcrypt.hash(password, salt);
-		const userRecord = await UserModel.findOneAndUpdate(
-			{ _id: user?.id },
-			{ username, email, password: encryptPass },
-			{ new: true, upsert: true, runValidators: true },
-		);
+
+		// Convert guest to user
+		if (user && user.id) {
+			const userRecord = await UserModel.findById(user.id);
+
+			if (!userRecord) {
+				throw createHttpError(httpStatus.CONFLICT, "Valid user not found");
+			}
+
+			if (userRecord.email) {
+				throw createHttpError(httpStatus.CONFLICT, "User already has an email");
+			}
+
+			const newRecord = await userRecord.set({ username, email, password: encryptPass }).save();
+
+			// Remove password
+			const payload = {
+				id: newRecord.id,
+				username: newRecord.username,
+				email: newRecord.email,
+			};
+
+			return payload;
+		}
+
+		const userRecord = await UserModel.create({ username, email, password: encryptPass });
 
 		// Remove password
 		const payload = {
