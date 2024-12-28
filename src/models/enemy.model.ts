@@ -98,7 +98,8 @@ enemySchema.virtual("nameWithDeterminer").get(function () {
 enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
 	const weaponEffect = effect as IWeaponDamageEffectData;
 	const damage = Game.dx(this.naturalMinDamage, this.naturalMaxDamage);
-	const modifier = Game.getModifier(this.stats.strength);
+	const statValue = Math.max(this.stats.strength, this.stats.dexterity);
+	const modifier = Game.getModifier(statValue);
 	const bonusMultiplier = this.getDamageBonus(this.naturalDamageType) / 100 + 1;
 	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
