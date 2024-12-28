@@ -18,6 +18,13 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 			filter.user = user.id;
 		}
 
+		if (type === "daily") {
+			const now = new Date();
+			const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+
+			filter.createdAt = { $gte: startOfDay };
+		}
+
 		if (characterClass && characterClass !== "all") {
 			const classes = GameData.getClasses();
 			const classData = classes.find((c) => c.name.toLowerCase() === characterClass);
