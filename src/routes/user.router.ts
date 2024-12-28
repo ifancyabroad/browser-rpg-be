@@ -1,9 +1,10 @@
 import { Request, Response, Router } from "express";
 import { middleware } from "middleware";
 import expressAsyncHandler from "express-async-handler";
-import { RequestRequestResetPassword, RequestResetPassword, RequestUser } from "@common/types/user";
-import { loginUser, registerUser, requestResetPassword, resetPassword } from "@services/user.service";
+import { RequestGuest, RequestRequestResetPassword, RequestResetPassword, RequestUser } from "@common/types/user";
+import { loginUser, registerGuest, registerUser, requestResetPassword, resetPassword } from "@services/user.service";
 import {
+	GuestSignupDto,
 	UserRequestResetPasswordDto,
 	UserResetPasswordDto,
 	UserSigninDto,
@@ -27,8 +28,7 @@ userRouter.get(
 userRouter.get(
 	"/session",
 	expressAsyncHandler(async (req: Request, res: Response) => {
-		const session = Boolean(req.session.user);
-		res.status(200).json({ session });
+		res.status(200).json({ user: req.session.user });
 	}),
 );
 
@@ -67,7 +67,20 @@ userRouter.put(
 	"/register",
 	middleware.validation(UserSignupDto),
 	expressAsyncHandler(async (req: RequestUser, res: Response) => {
-		const user = await registerUser(req.body);
+		const user = await registerUser(req.body, req.session);
+		req.session.user = user;
+		req.session.save();
+		res.json({ user });
+	}),
+);
+
+// @PUT '/auth/registerGuest'
+// @DES Register guest
+userRouter.put(
+	"/registerGuest",
+	middleware.validation(GuestSignupDto),
+	expressAsyncHandler(async (req: RequestGuest, res: Response) => {
+		const user = await registerGuest(req.body);
 		req.session.user = user;
 		req.session.save();
 		res.json({ user });

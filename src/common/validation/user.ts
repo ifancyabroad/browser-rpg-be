@@ -22,6 +22,13 @@ export class UserSigninDto {
 	password: string;
 }
 
+export class GuestSignupDto {
+	@IsString()
+	@MinLength(2, { message: "Username must be at least 2 characters long" })
+	@MaxLength(20, { message: "Username must be at most 20 characters long" })
+	username: string;
+}
+
 export class UserRequestResetPasswordDto {
 	@IsEmail()
 	email: string;

@@ -20,6 +20,11 @@ export interface IUserInput {
 	password: string;
 }
 
+export interface IGuestInput {
+	id?: string;
+	username: string;
+}
+
 export interface IRequestResetPasswordInput {
 	email: string;
 }
@@ -32,6 +37,10 @@ export interface IResetPasswordInput {
 
 export interface RequestUser extends Request {
 	user?: IUserInput;
+}
+
+export interface RequestGuest extends Request {
+	guest?: IGuestInput;
 }
 
 export interface RequestRequestResetPassword extends Request {

@@ -3,8 +3,8 @@ import { Schema } from "mongoose";
 
 interface IUser {
 	username: string;
-	email: string;
-	password: string;
+	email?: string;
+	password?: string;
 }
 
 // Add methods here
@@ -28,11 +28,10 @@ const userSchema = new Schema<IUser, IUserModel, IUserMethods>(
 			type: String,
 			lowercase: true,
 			unique: true,
-			required: [true, "Please enter an email"],
+			sparse: true,
 		},
 		password: {
 			type: String,
-			required: true,
 		},
 	},
 	{ timestamps: true },

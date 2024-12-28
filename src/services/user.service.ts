@@ -1,5 +1,5 @@
 import { ObjectId } from "mongoose";
-import { IRequestResetPasswordInput, IResetPasswordInput, IUserInput } from "@common/types/user";
+import { IGuestInput, IRequestResetPasswordInput, IResetPasswordInput, IUserInput } from "@common/types/user";
 import createHttpError from "http-errors";
 import httpStatus from "http-status-codes";
 import bcrypt from "bcrypt";
@@ -7,6 +7,7 @@ import * as crypto from "crypto";
 import { UserModel } from "@models/user.model";
 import TokenModel from "@models/token.model";
 import { sendMail } from "./mailer.service";
+import { Session, SessionData } from "express-session";
 
 export async function loginUser(userInput: IUserInput) {
 	try {
@@ -35,8 +36,9 @@ export async function loginUser(userInput: IUserInput) {
 	}
 }
 
-export async function registerUser(userInput: IUserInput) {
+export async function registerUser(userInput: IUserInput, session: Session & Partial<SessionData>) {
 	const { username, email, password } = userInput;
+	const { user } = session;
 	try {
 		const userCheck = await UserModel.findOne({ email });
 		if (userCheck) {
@@ -45,11 +47,11 @@ export async function registerUser(userInput: IUserInput) {
 		// Encrypting password
 		const salt = await bcrypt.genSalt(10);
 		const encryptPass = await bcrypt.hash(password, salt);
-		const userRecord = await UserModel.create({
-			username: username,
-			email: email,
-			password: encryptPass,
-		});
+		const userRecord = await UserModel.findOneAndUpdate(
+			{ _id: user?.id },
+			{ username, email, password: encryptPass },
+			{ new: true, upsert: true, runValidators: true },
+		);
 
 		// Remove password
 		const payload = {
@@ -61,6 +63,30 @@ export async function registerUser(userInput: IUserInput) {
 		return payload;
 	} catch (error) {
 		console.error(`Error registerUser: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function registerGuest(guestInput: IGuestInput) {
+	const { username } = guestInput;
+	try {
+		const guestCheck = await UserModel.findOne({
+			username,
+			email: { $exists: false },
+		});
+		if (guestCheck) {
+			throw createHttpError(httpStatus.CONFLICT, `A guest with username ${username} already exists`);
+		}
+
+		const guestRecord = await UserModel.create({ username });
+		const payload = {
+			id: guestRecord.id,
+			username: guestRecord.username,
+		};
+
+		return payload;
+	} catch (error) {
+		console.error(`Error registerGuest: ${error.message}`);
 		throw error;
 	}
 }
