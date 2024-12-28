@@ -10245,13 +10245,13 @@
 			"effects": [
 				{
 					"damageType": "cold",
-					"max": 20,
-					"min": 8,
+					"max": 15,
+					"min": 6,
 					"target": "enemy",
 					"type": "damage"
 				},
 				{
-					"difficulty": 22,
+					"difficulty": 19,
 					"duration": 4,
 					"modifier": "constitution",
 					"properties": [
