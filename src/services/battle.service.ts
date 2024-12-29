@@ -373,17 +373,19 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		if (!character.alive) {
 			await Promise.all([battle.deleteOne(), enemy.deleteOne(), character.deleteOne()]);
 
-			await HeroArchive.create(
-				character.toJSON({
-					virtuals: false,
-					depopulate: true,
-					versionKey: false,
-					transform: (doc, ret) => {
-						delete ret.__t;
-						return ret;
-					},
-				}),
-			);
+			const characterData = character.toJSON({
+				virtuals: false,
+				depopulate: true,
+				versionKey: false,
+				transform: (doc, ret) => {
+					delete ret.__t;
+					return ret;
+				},
+			});
+
+			await HeroArchive.create([characterData], {
+				timestamps: false,
+			});
 		}
 
 		return {
