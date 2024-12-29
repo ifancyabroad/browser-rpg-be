@@ -22,7 +22,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 			const now = new Date();
 			const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
 
-			filter.updatedAt = { $gte: startOfDay };
+			filter.createdAt = { $gte: startOfDay };
 		}
 
 		if (characterClass && characterClass !== "all") {
