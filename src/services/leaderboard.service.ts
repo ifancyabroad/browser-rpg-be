@@ -35,7 +35,7 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 		}
 
 		const leaderboard = await HeroArchive.find(filter)
-			.sort({ maxBattleLevel: "desc", name: "asc" })
+			.sort({ maxBattleLevel: "desc", day: "asc", gold: "desc" })
 			.limit(10)
 			.populate<{ user: IUser }>("user", "username")
 			.transform((res) =>

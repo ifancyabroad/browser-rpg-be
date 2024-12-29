@@ -10,6 +10,7 @@ import { FINAL_LEVEL, SALVAGE_MULTIPLIER, SHOP_ITEMS, STARTING_GOLD, STARTING_PO
 import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 import socket from "socket";
+import { IUser } from "@common/types/user";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -414,6 +415,48 @@ export async function getCharacterByID(session: Session & Partial<SessionData>, 
 		return characterRecord.toJSON();
 	} catch (error) {
 		console.error(`Error getCharacterByID: ${error.message}`);
+		throw error;
+	}
+}
+
+export async function getDailyWinner(session: Session & Partial<SessionData>) {
+	try {
+		const startDate = new Date();
+		startDate.setUTCDate(startDate.getUTCDate() - 1);
+		startDate.setUTCHours(0, 0, 0, 0);
+
+		const endDate = new Date();
+		endDate.setUTCDate(endDate.getUTCDate() - 1);
+		endDate.setUTCHours(23, 59, 59, 999);
+
+		const topHero = await HeroArchive.findOne({ createdAt: { $gte: startDate, $lte: endDate } })
+			.sort({
+				maxBattleLevel: "desc",
+				day: "asc",
+				gold: "desc",
+			})
+			.populate<{ user: IUser }>("user", "username")
+			.lean();
+
+		if (!topHero) {
+			return null;
+		}
+
+		const characterClass = GameData.getClasses().find(({ id }) => id === topHero.characterClassID);
+
+		if (!characterClass) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Character class not found");
+		}
+
+		return {
+			id: topHero._id,
+			username: topHero.user.username,
+			name: topHero.name,
+			characterClass: characterClass.name,
+			maxBattleLevel: topHero.maxBattleLevel,
+		};
+	} catch (error) {
+		console.error(`Error getDailyWinner: ${error.message}`);
 		throw error;
 	}
 }

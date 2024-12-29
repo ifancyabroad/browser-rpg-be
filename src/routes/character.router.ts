@@ -7,6 +7,7 @@ import {
 	createCharacter,
 	getActiveCharacter,
 	getCharacterByID,
+	getDailyWinner,
 	getProgress,
 	levelUp,
 	rest,
@@ -151,6 +152,17 @@ characterRouter.get(
 	expressAsyncHandler(async (req: Request, res: Response) => {
 		const progress = await getProgress(req.session);
 		res.json({ progress });
+	}),
+);
+
+// @GET '/character/dailyWinner'
+// @DEST Get the daily winner
+characterRouter.get(
+	"/dailyWinner",
+	middleware.userAuth,
+	expressAsyncHandler(async (req: Request, res: Response) => {
+		const character = await getDailyWinner(req.session);
+		res.json({ character });
 	}),
 );
 
