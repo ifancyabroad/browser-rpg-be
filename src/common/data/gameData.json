@@ -753,17 +753,17 @@
 				{
 					"name": "fire",
 					"type": "damage",
-					"value": 20
+					"value": 40
 				},
 				{
 					"name": "lightning",
 					"type": "damage",
-					"value": 20
+					"value": 40
 				},
 				{
 					"name": "cold",
 					"type": "damage",
-					"value": 20
+					"value": 40
 				},
 				{
 					"name": "intelligence",
@@ -2168,6 +2168,11 @@
 				{
 					"name": "necrotic",
 					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "radiant",
+					"type": "damage",
 					"value": 40
 				},
 				{
@@ -10189,9 +10194,11 @@
 					"type": "status"
 				},
 				{
-					"multiplier": 1,
+					"damageType": "crushing",
+					"max": 12,
+					"min": 6,
 					"target": "enemy",
-					"type": "weaponDamage"
+					"type": "damage"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OAbsKzhDKZyqRhK5IJZ?alt=media&token=5c3048c0-b15a-4e5e-9179-723d025c206f",
@@ -13285,6 +13292,11 @@
 					"name": "lightning",
 					"type": "resistance",
 					"value": 50
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"size": "twoHanded",
@@ -13916,7 +13928,7 @@
 			"damageType": "crushing",
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OAsxyHjQ-ZKF19tCLPX?alt=media&token=3e2dc877-ed7a-4eb8-8bb3-a833f05d8077",
-			"level": 2,
+			"level": 3,
 			"max": 6,
 			"min": 1,
 			"name": "Warlock's Staff",
