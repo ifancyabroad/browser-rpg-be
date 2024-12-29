@@ -432,19 +432,19 @@
 			"price": 1200,
 			"properties": [
 				{
-					"name": "strength",
+					"name": "charisma",
 					"type": "stat",
-					"value": 2
+					"value": 3
 				},
 				{
 					"name": "constitution",
 					"type": "stat",
-					"value": 2
+					"value": 3
 				},
 				{
 					"name": "wisdom",
 					"type": "stat",
-					"value": 2
+					"value": 3
 				}
 			],
 			"type": "amulet"
