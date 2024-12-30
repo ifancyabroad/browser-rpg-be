@@ -28,7 +28,7 @@ userRouter.get(
 userRouter.get(
 	"/session",
 	expressAsyncHandler(async (req: Request, res: Response) => {
-		res.status(200).json({ user: req.session.user });
+		res.status(200).json({ user: req.session.user ?? null });
 	}),
 );
 
