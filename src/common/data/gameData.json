@@ -681,37 +681,37 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dCPBfsmrmF7finXd?alt=media&token=096d0b9b-50fe-40db-9d13-f48298c2db4f",
 			"level": 4,
 			"name": "Jack's Belt",
-			"price": 900,
+			"price": 1420,
 			"properties": [
 				{
 					"name": "strength",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				},
 				{
 					"name": "dexterity",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				},
 				{
 					"name": "constitution",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				},
 				{
 					"name": "intelligence",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				},
 				{
 					"name": "wisdom",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				},
 				{
 					"name": "charisma",
 					"type": "stat",
-					"value": 1
+					"value": 2
 				}
 			],
 			"type": "belt"
