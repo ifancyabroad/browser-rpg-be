@@ -1,5 +1,5 @@
 {
 	"watch": ["src", ".env"],
 	"ext": "js,ts,json",
-	"exec": "ts-node --files -r tsconfig-paths/register ./src/index.ts"
+	"exec": "ts-node --files -r newrelic -r tsconfig-paths/register ./src/index.ts"
 }

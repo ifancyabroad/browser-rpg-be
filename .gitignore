@@ -7,3 +7,6 @@ dist/**/*
 
 # Ignore .env file as it holds secrets
 .env
+
+# Ignore New Relic logs
+newrelic_agent.log
