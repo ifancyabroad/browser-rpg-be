@@ -15,6 +15,8 @@ export class Socket {
 		this.server = new Server(server, {
 			cors: {
 				origin: "https://browserheroes.com",
+				methods: ["GET", "POST"],
+				credentials: true,
 			},
 		});
 
