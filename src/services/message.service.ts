@@ -17,7 +17,7 @@ export async function postUserMessage(messageInput: IMessageInput, session: Sess
 		endDate.setUTCDate(endDate.getUTCDate() - 1);
 		endDate.setUTCHours(23, 59, 59, 999);
 
-		const topHero = await HeroArchive.findOne({ createdAt: { $gte: startDate, $lte: endDate } })
+		const topHero = await HeroArchive.findOne({ updatedAt: { $gte: startDate, $lte: endDate } })
 			.sort({
 				maxBattleLevel: "desc",
 				day: "asc",
