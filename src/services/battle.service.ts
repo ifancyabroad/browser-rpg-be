@@ -355,6 +355,12 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 			cache.set(`character_${user.id}`, characterRecord.toObject());
 			cache.set(`battle_${user.id}`, battleRecord.toObject());
 			cache.set(`enemy_${user.id}`, enemyRecord.toObject());
+		} else {
+			await Promise.all([
+				HeroModel.updateOne({ _id: characterRecord.id }, { $set: characterRecord }).exec(),
+				BattleModel.updateOne({ _id: battleRecord.id }, { $set: battleRecord }).exec(),
+				EnemyModel.updateOne({ _id: enemyRecord.id }, { $set: enemyRecord }).exec(),
+			]);
 		}
 
 		const connection = socket.connection();
