@@ -9,7 +9,13 @@ import BattleModel from "@models/battle.model";
 import HeroModel, { HeroArchive } from "@models/hero.model";
 import EnemyModel from "@models/enemy.model";
 import UserModel from "@models/user.model";
-import { BATTLE_MULTIPLIER_INCREMENT, FINAL_LEVEL, MAX_CHARACTER_LEVEL, REWARD_GOLD_MULTIPLIER } from "@common/utils";
+import {
+	BATTLE_MULTIPLIER_INCREMENT,
+	CACHE_ENABLED,
+	FINAL_LEVEL,
+	MAX_CHARACTER_LEVEL,
+	REWARD_GOLD_MULTIPLIER,
+} from "@common/utils";
 import { IHero, THeroDocument } from "@common/types/hero";
 import socket from "socket";
 import cache from "cache";
@@ -154,9 +160,11 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		characterRecord.state = State.Battle;
 		const character = await characterRecord.save();
 
-		cache.set(`character_${user.id}`, character.toObject());
-		cache.set(`battle_${user.id}`, battle.toObject());
-		cache.set(`enemy_${user.id}`, enemy.toObject());
+		if (CACHE_ENABLED) {
+			cache.set(`character_${user.id}`, character.toObject());
+			cache.set(`battle_${user.id}`, battle.toObject());
+			cache.set(`enemy_${user.id}`, enemy.toObject());
+		}
 
 		const connection = socket.connection();
 
@@ -220,9 +228,11 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 
 		await Promise.all([EnemyModel.findByIdAndDelete(battleRecord.enemy), battleRecord.deleteOne()]);
 
-		cache.set(`character_${user.id}`, characterRecord.toObject());
-		cache.set(`battle_${user.id}`, battle.toObject());
-		cache.set(`enemy_${user.id}`, enemy.toObject());
+		if (CACHE_ENABLED) {
+			cache.set(`character_${user.id}`, characterRecord.toObject());
+			cache.set(`battle_${user.id}`, battle.toObject());
+			cache.set(`enemy_${user.id}`, enemy.toObject());
+		}
 
 		return {
 			// Backward compatibility
@@ -240,7 +250,15 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 }
 
 async function getActiveBattleData(userId: string) {
-	let characterRecord = cache.get<THeroDocument>(`character_${userId}`);
+	let characterRecord: THeroDocument;
+	let battleRecord: TBattleDocument;
+	let enemyRecord: TEnemyDocument;
+
+	if (CACHE_ENABLED) {
+		characterRecord = cache.get<THeroDocument>(`character_${userId}`);
+		battleRecord = cache.get<TBattleDocument>(`battle_${userId}`);
+		enemyRecord = cache.get<TEnemyDocument>(`enemy_${userId}`);
+	}
 
 	if (!characterRecord) {
 		characterRecord = await HeroModel.findOne({
@@ -256,8 +274,6 @@ async function getActiveBattleData(userId: string) {
 		throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character found");
 	}
 
-	let battleRecord = cache.get<TBattleDocument>(`battle_${userId}`);
-
 	if (!battleRecord) {
 		battleRecord = await BattleModel.findOne({
 			hero: characterRecord.id,
@@ -270,8 +286,6 @@ async function getActiveBattleData(userId: string) {
 	if (!battleRecord) {
 		throw createHttpError(httpStatus.BAD_REQUEST, "No active battle found");
 	}
-
-	let enemyRecord = cache.get<TEnemyDocument>(`enemy_${userId}`);
 
 	if (!enemyRecord) {
 		enemyRecord = await EnemyModel.findById(battleRecord.enemy);
@@ -295,9 +309,11 @@ export async function getBattle(session: Session & Partial<SessionData>) {
 	try {
 		const { battleRecord, characterRecord, enemyRecord } = await getActiveBattleData(user.id);
 
-		cache.set(`character_${user.id}`, characterRecord.toObject());
-		cache.set(`battle_${user.id}`, battleRecord.toObject());
-		cache.set(`enemy_${user.id}`, enemyRecord.toObject());
+		if (CACHE_ENABLED) {
+			cache.set(`character_${user.id}`, characterRecord.toObject());
+			cache.set(`battle_${user.id}`, battleRecord.toObject());
+			cache.set(`enemy_${user.id}`, enemyRecord.toObject());
+		}
 
 		return {
 			// Backward compatibility
@@ -335,9 +351,11 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 
 		battleRecord.turns.push(turn);
 
-		cache.set(`character_${user.id}`, characterRecord.toObject());
-		cache.set(`battle_${user.id}`, battleRecord.toObject());
-		cache.set(`enemy_${user.id}`, enemyRecord.toObject());
+		if (CACHE_ENABLED) {
+			cache.set(`character_${user.id}`, characterRecord.toObject());
+			cache.set(`battle_${user.id}`, battleRecord.toObject());
+			cache.set(`enemy_${user.id}`, enemyRecord.toObject());
+		}
 
 		const connection = socket.connection();
 

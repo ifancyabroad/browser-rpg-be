@@ -10,6 +10,8 @@ import {
 	Zone,
 } from "@common/utils/enums/index";
 
+export const CACHE_ENABLED = process.env.CACHE_ENABLED === "true";
+
 export const STARTING_GOLD = 200;
 export const STARTING_POTIONS = 3;
 
