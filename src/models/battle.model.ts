@@ -75,7 +75,6 @@ const battleSchema = new Schema<IBattle, IBattleModel, IBattleMethods>(
 		enemy: {
 			type: Schema.Types.ObjectId,
 			ref: "Enemy",
-			autopopulate: true,
 		},
 		level: {
 			type: Number,

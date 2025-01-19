@@ -11,6 +11,7 @@ import BattleModel from "@models/battle.model";
 import EnemyModel from "@models/enemy.model";
 import socket from "socket";
 import { IUser } from "@common/types/user";
+import cache from "cache";
 
 export async function getActiveCharacter(session: Session & Partial<SessionData>) {
 	const { user } = session;
@@ -115,6 +116,10 @@ export async function retireActiveCharacter(session: Session & Partial<SessionDa
 			}),
 		);
 		await characterRecord.deleteOne();
+
+		cache.del(`character_${user.id}`);
+		cache.del(`battle_${user.id}`);
+		cache.del(`enemy_${user.id}`);
 
 		const connection = socket.connection();
 

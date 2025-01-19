@@ -44,6 +44,7 @@
 		"mongoose": "^8.0.0",
 		"mongoose-autopopulate": "^1.1.0",
 		"newrelic": "^12.9.0",
+		"node-cache": "^5.1.2",
 		"nodemailer": "^6.9.7",
 		"socket.io": "^4.8.1",
 		"tsconfig-paths": "^4.2.0"

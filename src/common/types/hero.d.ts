@@ -1,4 +1,4 @@
-import { Model, Types } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
 import { EquipmentSlot, Stat, State } from "@common/utils";
 import { IClassDataWithID, ISkillDataWithID, TEquipmentDataWithID } from "./gameData";
@@ -70,3 +70,12 @@ export interface IHeroMethods extends ICharacterMethods {
 export interface IHeroModel extends Model<IHero, {}, IHeroMethods> {
 	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
 }
+
+export type THeroDocument = Document<unknown, {}, IHero> &
+	Omit<
+		IHero & {
+			_id: Types.ObjectId;
+		},
+		keyof IHeroMethods
+	> &
+	IHeroMethods;

@@ -1,6 +1,6 @@
 import { BattleResult, BattleState, EquipmentSlot, Zone } from "@common/utils/enums/index";
 import { Request } from "express";
-import { Model, Types } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 import { IActiveAuxiliaryEffect, IAuxiliaryEffect, IDamageEffect, IHealEffect, IStatusEffect } from "./effect";
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero, IHeroMethods } from "./hero";
@@ -66,6 +66,15 @@ export interface IBattleMethods {
 export interface IBattleModel extends Model<IBattle, {}, IBattleMethods> {
 	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
 }
+
+export type TBattleDocument = Document<unknown, {}, IBattle> &
+	Omit<
+		IBattle & {
+			_id: Types.ObjectId;
+		},
+		keyof IBattleMethods
+	> &
+	IBattleMethods;
 
 export interface IBattleInput {
 	id: string;

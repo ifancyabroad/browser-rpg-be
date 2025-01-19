@@ -1,4 +1,4 @@
-import { Model, Types } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 import { ICharacter, ICharacterMethods } from "./character";
 import { IHero } from "./hero";
 import { ISkillDataWithID } from "./gameData";
@@ -30,3 +30,12 @@ export interface IEnemyMethods extends ICharacterMethods {
 export interface IEnemyModel extends Model<IEnemy, {}, IEnemyMethods> {
 	// createWithFullName(name: string): Promise<HydratedDocument<IUser, IUserMethods>>;
 }
+
+export type TEnemyDocument = Document<unknown, {}, IEnemy> &
+	Omit<
+		IEnemy & {
+			_id: Types.ObjectId;
+		},
+		keyof IEnemyMethods
+	> &
+	IEnemyMethods;
