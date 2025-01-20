@@ -5,11 +5,19 @@ import { ISkill } from "@common/types/character";
 import { ITEM_TYPE_WEIGHT_LEVELS, ITEM_WEIGHT_LEVELS, SKILL_LEVELS } from "@common/utils/constants";
 import { EquipmentSlot, Zone } from "@common/utils/enums";
 
+const { armours, classes, monsters, skills, weapons } = data as IGameData;
+const equipment = { ...armours, ...weapons };
+
+const classesArray = mapToArray(classes);
+const skillsArray = mapToArray(skills);
+const weaponsArray = mapToArray(weapons);
+const armoursArray = mapToArray(armours);
+const monstersArray = mapToArray(monsters);
+
 export class GameData {
 	public static getClasses() {
 		try {
-			const { classes } = data as IGameData;
-			return mapToArray(classes).map((characterClass) => ({
+			return classesArray.map((characterClass) => ({
 				...characterClass,
 				skills: this.populateSkillsFromID(characterClass.skills),
 				equipment: this.populateEquipment(characterClass.equipment),
@@ -22,7 +30,6 @@ export class GameData {
 
 	public static getCharacterClassById(id: string) {
 		try {
-			const { classes } = data as IGameData;
 			const classData = classes[id as keyof typeof classes];
 			if (!classData) {
 				throw new Error(`Class Data not found for ${id}`);
@@ -43,7 +50,6 @@ export class GameData {
 
 	public static getSkillById(id: string) {
 		try {
-			const { skills } = data as IGameData;
 			const skillData = skills[id as keyof typeof skills];
 			if (!skillData) {
 				throw new Error(`Skill Data not found for ${id}`);
@@ -72,7 +78,6 @@ export class GameData {
 
 	public static getWeaponById(id: string) {
 		try {
-			const { weapons } = data as IGameData;
 			const weaponData = weapons[id as keyof typeof weapons];
 			if (!weaponData) {
 				throw new Error(`Weapon Data not found for ${id}`);
@@ -86,7 +91,6 @@ export class GameData {
 
 	public static getArmourById(id: string) {
 		try {
-			const { armours } = data as IGameData;
 			const armourData = armours[id as keyof typeof armours];
 			if (!armourData) {
 				throw new Error(`Armour Data not found for ${id}`);
@@ -100,8 +104,6 @@ export class GameData {
 
 	public static getEquipmentById(id: string) {
 		try {
-			const { armours, weapons } = data as IGameData;
-			const equipment = { ...armours, ...weapons };
 			const equipmentData = equipment[id as keyof typeof equipment];
 			if (!equipmentData) {
 				throw new Error(`Equipment Data not found for ${id}`);
@@ -122,14 +124,13 @@ export class GameData {
 
 	public static getClassItems(classID: string) {
 		try {
-			const { armours, weapons } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
 
-			const filteredArmours = mapToArray(armours).filter(({ armourType }) =>
+			const filteredArmours = armoursArray.filter(({ armourType }) =>
 				characterClass.armourTypes.includes(armourType),
 			);
 
-			const filteredWeapons = mapToArray(weapons).filter(({ weaponType }) =>
+			const filteredWeapons = weaponsArray.filter(({ weaponType }) =>
 				characterClass.weaponTypes.includes(weaponType),
 			);
 
@@ -181,8 +182,7 @@ export class GameData {
 
 	public static getEnemy(battleZone: Zone, isBoss = false) {
 		try {
-			const { monsters } = data as IGameData;
-			const enemyPool = mapToArray(monsters).filter(({ zone, boss }) => boss === isBoss && zone === battleZone);
+			const enemyPool = monstersArray.filter(({ zone, boss }) => boss === isBoss && zone === battleZone);
 			return getRandomElement(enemyPool);
 		} catch (error) {
 			console.error(`Error getEnemy: ${error.message}`);
@@ -192,11 +192,10 @@ export class GameData {
 
 	public static getLevelUpSkills(classID: string, level: number, currentSkills: ISkill[]) {
 		try {
-			const { skills } = data as IGameData;
 			const characterClass = this.getCharacterClassById(classID);
 			const skillLevel = SKILL_LEVELS.get(level);
 
-			const filteredSkills = mapToArray(skills)
+			const filteredSkills = skillsArray
 				.filter((skill) => currentSkills.findIndex((sk) => sk.id === skill.id) === -1)
 				.filter((skill) => characterClass.skillClasses.includes(skill.class))
 				.filter(({ level }) => skillLevel === level)
