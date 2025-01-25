@@ -330,6 +330,7 @@ export async function salvage(session: Session & Partial<SessionData>) {
 	}
 }
 
+// Old API endpoint no longer in use
 export async function getProgress(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {

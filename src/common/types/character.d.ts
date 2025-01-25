@@ -47,6 +47,8 @@ export interface ICharacter {
 	baseMaxHitPoints: number;
 	baseStats: TStats;
 	baseResistances: TDamageTypes;
+	createdAt: Date;
+	updatedAt: Date;
 }
 
 export interface IEffectData {
