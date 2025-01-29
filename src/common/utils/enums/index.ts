@@ -50,6 +50,13 @@ export enum SkillClass {
 	Cleric = "cleric",
 }
 
+export enum CharacterClass {
+	Warrior = "warrior",
+	Rogue = "rogue",
+	Mage = "mage",
+	Cleric = "cleric",
+}
+
 export enum Stat {
 	Strength = "strength",
 	Dexterity = "dexterity",

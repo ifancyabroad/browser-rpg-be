@@ -3,7 +3,6 @@ import {
 	HIT_TYPE_MULTIPLIER_MAP,
 	FINAL_LEVEL,
 	MODIFIERS,
-	SKILL_CLASS_MODIFIER_MAP,
 	WEAPON_MODIFIER_MAP,
 	ZONES,
 	NEW_GAME_RESISTANCE_BONUS,
@@ -48,10 +47,6 @@ export class Game {
 
 	public static getWeaponStat(type: WeaponType) {
 		return WEAPON_MODIFIER_MAP.get(type);
-	}
-
-	public static getDamageStat(type: SkillClass) {
-		return SKILL_CLASS_MODIFIER_MAP.get(type);
 	}
 
 	public static getHitMultiplier(hitType: HitType) {

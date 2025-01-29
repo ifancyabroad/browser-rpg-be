@@ -476,11 +476,10 @@ characterSchema.method("getWeaponsDamage", function getWeaponsDamage(data: IEffe
 	return [this.getUnarmedDamage(data)];
 });
 
-characterSchema.method("getDamage", function getDamage({ effect, effectTarget, source }: IEffectData) {
+characterSchema.method("getDamage", function getDamage({ effect, effectTarget }: IEffectData) {
 	const damageEffect = effect as IDamageEffectData;
 	const damage = Game.dx(damageEffect.min, damageEffect.max);
-	const stat = source.skillClass ? Game.getDamageStat(source.skillClass) : null;
-	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
+	const modifier = damageEffect.modifier ? Game.getModifier(this.stats[damageEffect.modifier]) : 0;
 	const bonusMultiplier = this.getDamageBonus(damageEffect.damageType) / 100 + 1;
 	const resistance = effectTarget.getResistance(damageEffect.damageType) / 100;
 	const value = Math.round((damage + modifier) * bonusMultiplier * (1 - resistance));
@@ -493,11 +492,10 @@ characterSchema.method("getDamage", function getDamage({ effect, effectTarget, s
 	};
 });
 
-characterSchema.method("getHeal", function getHeal({ effect, source }: IEffectData) {
+characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
 	const healEffect = effect as IHealEffectData;
 	const heal = Game.dx(healEffect.min, healEffect.max);
-	const stat = source.skillClass ? Game.getDamageStat(source.skillClass) : null;
-	const modifier = Game.getModifier(this.stats[stat]) ?? 0;
+	const modifier = healEffect.modifier ? Game.getModifier(this.stats[healEffect.modifier]) : 0;
 	const value = heal + modifier;
 	return {
 		target: healEffect.target,

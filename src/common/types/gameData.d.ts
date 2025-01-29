@@ -1,6 +1,7 @@
 import {
 	ArmourType,
 	AuxiliaryEffect,
+	CharacterClass,
 	DamageType,
 	EffectType,
 	EquipmentSlot,
@@ -64,6 +65,7 @@ export interface IDamageEffectData {
 	damageType: DamageType;
 	min: number;
 	max: number;
+	modifier?: Stat;
 }
 
 export interface IHealEffectData {
@@ -71,6 +73,7 @@ export interface IHealEffectData {
 	target: Target;
 	min: number;
 	max: number;
+	modifier?: Stat;
 }
 
 export interface IStatusEffectData {
@@ -123,6 +126,7 @@ export interface IWeaponData {
 	damageType: DamageType;
 	min: number;
 	max: number;
+	characterClass?: CharacterClass;
 	effects?: IWeaponEffect[];
 	properties?: TProperty[];
 }
@@ -136,6 +140,7 @@ export interface IArmourData {
 	level: number;
 	armourType: ArmourType;
 	armourClass?: number;
+	characterClass?: CharacterClass;
 	properties?: TProperty[];
 }
 

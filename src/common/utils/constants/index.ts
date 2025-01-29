@@ -140,15 +140,6 @@ export const WEAPON_MODIFIER_MAP = new Map([
 	[WeaponType.Wand, Stat.Intelligence],
 ]);
 
-export const SKILL_CLASS_MODIFIER_MAP = new Map([
-	[SkillClass.Mage, Stat.Intelligence],
-	[SkillClass.Cleric, Stat.Wisdom],
-	[SkillClass.Warrior, null],
-	[SkillClass.Rogue, null],
-	[SkillClass.Common, null],
-	[SkillClass.Unique, null],
-]);
-
 export const HIT_TYPE_MULTIPLIER_MAP = new Map([
 	[HitType.Crit, 2],
 	[HitType.Hit, 1],
