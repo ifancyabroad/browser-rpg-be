@@ -1,14 +1,4 @@
-import {
-	DamageType,
-	EquipmentSlot,
-	EquipmentType,
-	HitType,
-	ItemRarity,
-	SkillClass,
-	Stat,
-	WeaponType,
-	Zone,
-} from "@common/utils/enums/index";
+import { EquipmentSlot, EquipmentType, HitType, ItemRarity, Stat, WeaponType, Zone } from "@common/utils/enums/index";
 
 export const CACHE_ENABLED = process.env.CACHE_ENABLED === "true";
 

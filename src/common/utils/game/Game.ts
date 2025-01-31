@@ -10,7 +10,7 @@ import {
 	MAX_STAT_LEVEL,
 	MAX_ENEMY_LEVEL,
 } from "@common/utils/constants";
-import { HitType, SkillClass, WeaponType } from "@common/utils/enums";
+import { HitType, WeaponType } from "@common/utils/enums";
 
 export class Game {
 	public static get d4() {
