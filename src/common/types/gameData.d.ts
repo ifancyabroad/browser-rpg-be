@@ -1,7 +1,6 @@
 import {
 	ArmourType,
 	AuxiliaryEffect,
-	CharacterClass,
 	DamageType,
 	EffectType,
 	EquipmentSlot,
@@ -126,7 +125,7 @@ export interface IWeaponData {
 	damageType: DamageType;
 	min: number;
 	max: number;
-	characterClass?: CharacterClass;
+	characterClass?: string;
 	effects?: IWeaponEffect[];
 	properties?: TProperty[];
 }
@@ -140,7 +139,7 @@ export interface IArmourData {
 	level: number;
 	armourType: ArmourType;
 	armourClass?: number;
-	characterClass?: CharacterClass;
+	characterClass?: string;
 	properties?: TProperty[];
 }
 

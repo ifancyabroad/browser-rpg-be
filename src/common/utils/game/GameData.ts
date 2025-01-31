@@ -124,15 +124,19 @@ export class GameData {
 
 	public static getClassItems(classID: string) {
 		try {
-			const characterClass = this.getCharacterClassById(classID);
+			const characterClassData = this.getCharacterClassById(classID);
 
-			const filteredArmours = armoursArray.filter(({ armourType }) =>
-				characterClass.armourTypes.includes(armourType),
-			);
+			const filteredArmours = armoursArray.filter(({ armourType, characterClass }) => {
+				const isClassValid = !characterClass || characterClass === classID;
+				const isTypeValid = characterClassData.armourTypes.includes(armourType);
+				return isClassValid && isTypeValid;
+			});
 
-			const filteredWeapons = weaponsArray.filter(({ weaponType }) =>
-				characterClass.weaponTypes.includes(weaponType),
-			);
+			const filteredWeapons = weaponsArray.filter(({ weaponType, characterClass }) => {
+				const isClassValid = !characterClass || characterClass === classID;
+				const isTypeValid = characterClassData.weaponTypes.includes(weaponType);
+				return isClassValid && isTypeValid;
+			});
 
 			return [...filteredArmours, ...filteredWeapons];
 		} catch (error) {
