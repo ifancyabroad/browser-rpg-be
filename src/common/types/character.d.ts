@@ -76,6 +76,7 @@ export interface ICharacterMethods {
 	get isPoisoned(): boolean;
 	get isDisarmed(): boolean;
 	get isBleeding(): boolean;
+	get isSilenced(): boolean;
 
 	// Add methods here
 	getEquipmentArmourClass(): number;

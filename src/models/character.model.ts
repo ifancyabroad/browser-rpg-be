@@ -322,6 +322,10 @@ characterSchema.virtual("isBleeding").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Bleed);
 });
 
+characterSchema.virtual("isSilenced").get(function () {
+	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Silence);
+});
+
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
 	const armour = this.equipment.body;
 	const modifier = Game.getModifier(this.stats.dexterity) ?? 0;
@@ -602,6 +606,10 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 	if (skill.maxUses > 0 && skill.remaining <= 0) {
 		throw new Error("No uses remaining for this skill");
+	}
+
+	if (skill.maxUses > 0 && this.isSilenced) {
+		throw new Error("Silenced characters can only use basic attacks");
 	}
 
 	const action: IAction = this.createEmptyAction(data, skill.name);
