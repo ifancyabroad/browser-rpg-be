@@ -72,11 +72,16 @@ export interface ICharacterMethods {
 	get armourClass(): number;
 	get hitBonus(): number;
 	get critBonus(): number;
+	get frenzyMultiplier(): number;
 	get isStunned(): boolean;
 	get isPoisoned(): boolean;
 	get isDisarmed(): boolean;
 	get isBleeding(): boolean;
 	get isSilenced(): boolean;
+	get isBlinded(): boolean;
+	get isFrenzied(): boolean;
+	get isCharmed(): boolean;
+	get isCrippled(): boolean;
 
 	// Add methods here
 	getEquipmentArmourClass(): number;
@@ -95,6 +100,7 @@ export interface ICharacterMethods {
 	getHeal(data: IEffectData): IHealEffect;
 	getStatus(data: IEffectData): IStatusEffect;
 	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
+	getEffectTarget(data: ITurnData, effect: ISkillEffect): ICharacter & ICharacterMethods;
 	createEmptyAction(data: ITurnData, name: string): IAction;
 	createAction(data: ITurnData): IAction;
 	handleDamage(damage: IDamageEffect): void;

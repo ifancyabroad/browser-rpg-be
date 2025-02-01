@@ -123,10 +123,6 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
-	if (this.isSilenced) {
-		return this.skills.find((skill) => skill.maxUses === 0);
-	}
-
 	const priorities: ISkillDataWithRemaining[][] = [[], [], []];
 
 	const isDamaged = this.hitPoints < this.maxHitPoints / 2;
@@ -142,6 +138,9 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 
 		const hasWeaponAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.WeaponDamage);
 		const hasAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.Damage);
+
+		if (this.isCharmed && (hasAttack || hasWeaponAttack)) return;
+
 		const hasSelfAttack = selfTargetEffects.some((effect) => effect.type === EffectType.Damage);
 		const hasHeal = selfTargetEffects.some((effect) => effect.type === EffectType.Heal);
 		const hasBuff = selfTargetEffects.some(
@@ -182,7 +181,11 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 
 	const skills = priorities.find((priority) => priority.length > 0);
 
-	return getRandomElement(skills);
+	if (skills.length) {
+		return getRandomElement(skills);
+	} else {
+		return getRandomElement(this.skills);
+	}
 });
 
 const EnemyModel = CharacterModel.discriminator<IEnemy, IEnemyModel>("Enemy", enemySchema);

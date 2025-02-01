@@ -57,6 +57,7 @@ export interface IBattleMethods {
 
 	// Add methods here
 	handleAction(first: ITurnData, second: ITurnData): IAction[];
+	getTurnOrder(hero: ITurnData, enemy: ITurnData): ITurnData[];
 	handleTurn(hero: ITurnData, enemy: ITurnData): IAction[];
 	handleReward(hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods): void;
 	handleTreasure(hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods): void;

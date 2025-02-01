@@ -24,6 +24,7 @@ import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
 	IHealEffectData,
+	ISkillEffect,
 	IStatusEffectData,
 	IWeaponDamageEffectData,
 	IWeaponDataWithID,
@@ -306,6 +307,11 @@ characterSchema.virtual("critBonus").get(function () {
 	return this.getAuxiliaryStat(AuxiliaryStat.CritChance);
 });
 
+characterSchema.virtual("frenzyMultiplier").get(function () {
+	const healthPercentage = this.hitPoints / this.maxHitPoints;
+	return 1 + Math.min(1, 1 - healthPercentage);
+});
+
 characterSchema.virtual("isStunned").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Stun);
 });
@@ -324,6 +330,18 @@ characterSchema.virtual("isBleeding").get(function () {
 
 characterSchema.virtual("isSilenced").get(function () {
 	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Silence);
+});
+
+characterSchema.virtual("isBlinded").get(function () {
+	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Blind);
+});
+
+characterSchema.virtual("isFrenzied").get(function () {
+	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Frenzy);
+});
+
+characterSchema.virtual("isCharmed").get(function () {
+	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Charm);
 });
 
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
@@ -384,6 +402,11 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 
 characterSchema.method("getHitType", function getHitType(armourClass: number, modifier: number) {
 	const roll = Game.d20;
+
+	if (this.isBlinded && roll <= 10) {
+		return HitType.Miss;
+	}
+
 	const hitValue = Math.round(roll + modifier + this.hitBonus);
 	const critValue = Math.round(roll + this.critBonus);
 	if (critValue >= 20) {
@@ -420,12 +443,14 @@ characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, e
 	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
 	const resistance = effectTarget.getResistance(DamageType.Crushing) / 100;
+	const frenzyMultiplier = this.isFrenzied ? this.frenzyMultiplier : 1;
 	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
 	const value = Math.round(
 		(damage + modifier) *
 			weaponEffect.multiplier *
 			bonusMultiplier *
 			hitMultiplier *
+			frenzyMultiplier *
 			bleedMuliplier *
 			(1 - resistance),
 	);
@@ -451,12 +476,14 @@ characterSchema.method(
 		const hitType = this.getHitType(effectTarget.armourClass, modifier);
 		const hitMultiplier = Game.getHitMultiplier(hitType);
 		const resistance = effectTarget.getResistance(weapon.damageType) / 100;
+		const frenzyMultiplier = this.isFrenzied ? this.frenzyMultiplier : 1;
 		const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
 		const value = Math.round(
 			(damage + damageModifier) *
 				weaponEffect.multiplier *
 				bonusMultiplier *
 				hitMultiplier *
+				frenzyMultiplier *
 				bleedMuliplier *
 				(1 - resistance),
 		);
@@ -557,6 +584,15 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	};
 });
 
+characterSchema.method("getEffectTarget", function getEffectTarget(data: ITurnData, effect: ISkillEffect) {
+	const { target, type } = effect;
+	const isAttack = [EffectType.Damage, EffectType.WeaponDamage].includes(type);
+	if (this.isCharmed && isAttack && Game.d20 <= 10) {
+		return target === Target.Self ? data.enemy : data.self;
+	}
+	return target === Target.Self ? data.self : data.enemy;
+});
+
 characterSchema.method("createEmptyAction", function createEmptyAction(data: ITurnData, name: string) {
 	const action: IAction = {
 		self: data.self.name,
@@ -608,10 +644,6 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 		throw new Error("No uses remaining for this skill");
 	}
 
-	if (skill.maxUses > 0 && this.isSilenced) {
-		throw new Error("Silenced characters can only use basic attacks");
-	}
-
 	const action: IAction = this.createEmptyAction(data, skill.name);
 
 	if (this.isStunned) {
@@ -625,7 +657,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon, skillClass: skill.class };
 
 	skill.effects.forEach((effect) => {
-		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+		const effectTarget = this.getEffectTarget(data, effect);
 		const effectData = { effect, effectTarget, source: skillSource };
 
 		switch (effect.type) {
@@ -670,7 +702,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 			const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
 
 			weapon.effects?.forEach((effect) => {
-				const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+				const effectTarget = this.getEffectTarget(data, effect);
 				const effectData = { effect, effectTarget, source };
 
 				switch (effect.type) {

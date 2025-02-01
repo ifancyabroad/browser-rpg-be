@@ -135,16 +135,18 @@ battleSchema.method("handleAction", function handleAction(first: ITurnData, seco
 	return turn;
 });
 
+battleSchema.method("getTurnOrder", function (hero: ITurnData, enemy: ITurnData) {
+	return [hero, enemy].sort((a, b) => {
+		if (a.self.isCrippled !== b.self.isCrippled) {
+			return a.self.isCrippled ? 1 : -1;
+		}
+		return b.self.stats.dexterity - a.self.stats.dexterity;
+	});
+});
+
 battleSchema.method("handleTurn", function (hero: ITurnData, enemy: ITurnData) {
-	let turn: IAction[];
-
-	if (hero.self.stats.dexterity >= enemy.self.stats.dexterity) {
-		turn = this.handleAction(hero, enemy);
-	} else {
-		turn = this.handleAction(enemy, hero);
-	}
-
-	return turn;
+	const [first, second] = this.getTurnOrder(hero, enemy);
+	return this.handleAction(first, second);
 });
 
 battleSchema.method("handleReward", function (hero: IHero & IHeroMethods, enemy: IEnemy & IEnemyMethods) {
