@@ -157,8 +157,6 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			priorities[0].push(skill);
 		} else if (hasSelfAttack && isConcede && isBadlyDamaged) {
 			priorities[0].push(skill);
-		} else if (this.isCharmed && !hasAttack && !hasWeaponAttack) {
-			priorities[0].push(skill);
 		} else if (hasHeal && isDamaged) {
 			priorities[1].push(skill);
 		} else if (hasWeaponAttack && !isBaseAttack) {
