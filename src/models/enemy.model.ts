@@ -138,9 +138,6 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 
 		const hasWeaponAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.WeaponDamage);
 		const hasAttack = enemyTargetEffects.some((effect) => effect.type === EffectType.Damage);
-
-		if (this.isCharmed && (hasAttack || hasWeaponAttack)) return;
-
 		const hasSelfAttack = selfTargetEffects.some((effect) => effect.type === EffectType.Damage);
 		const hasHeal = selfTargetEffects.some((effect) => effect.type === EffectType.Heal);
 		const hasBuff = selfTargetEffects.some(
@@ -160,6 +157,8 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			priorities[0].push(skill);
 		} else if (hasSelfAttack && isConcede && isBadlyDamaged) {
 			priorities[0].push(skill);
+		} else if (this.isCharmed && !hasAttack && !hasWeaponAttack) {
+			priorities[0].push(skill);
 		} else if (hasHeal && isDamaged) {
 			priorities[1].push(skill);
 		} else if (hasWeaponAttack && !isBaseAttack) {
@@ -176,6 +175,8 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			priorities[2].push(skill);
 		} else if (hasAttack) {
 			priorities[2].push(skill);
+		} else {
+			priorities[3].push(skill);
 		}
 	});
 
