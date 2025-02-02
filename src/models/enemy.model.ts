@@ -3,6 +3,7 @@ import CharacterModel from "./character.model";
 import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
 import { IHero } from "@common/types/hero";
 import {
+	AuxiliaryEffect,
 	AuxiliaryStat,
 	DamageType,
 	EffectType,
@@ -104,7 +105,7 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
 	const resistance = effectTarget.getResistance(this.naturalDamageType) / 100;
-	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+	const bleedMuliplier = effectTarget.auxiliaryEffects[AuxiliaryEffect.Bleed] ? 1.5 : 1;
 	const value = Math.round(
 		(damage + modifier) *
 			weaponEffect.multiplier *

@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import { BattleResult, BattleState, DamageType, Target, Zone } from "@common/utils/enums/index";
+import { AuxiliaryEffect, BattleResult, BattleState, DamageType, Target, Zone } from "@common/utils/enums/index";
 import {
 	activeEffectSchema,
 	auxiliaryEffectSchema,
@@ -137,8 +137,11 @@ battleSchema.method("handleAction", function handleAction(first: ITurnData, seco
 
 battleSchema.method("getTurnOrder", function (hero: ITurnData, enemy: ITurnData) {
 	return [hero, enemy].sort((a, b) => {
-		if (a.self.isCrippled !== b.self.isCrippled) {
-			return a.self.isCrippled ? 1 : -1;
+		if (a.self.auxiliaryEffects[AuxiliaryEffect.Haste] !== b.self.auxiliaryEffects[AuxiliaryEffect.Haste]) {
+			return a.self.auxiliaryEffects[AuxiliaryEffect.Haste] ? -1 : 1;
+		}
+		if (a.self.auxiliaryEffects[AuxiliaryEffect.Cripple] !== b.self.auxiliaryEffects[AuxiliaryEffect.Cripple]) {
+			return a.self.auxiliaryEffects[AuxiliaryEffect.Cripple] ? 1 : -1;
 		}
 		return b.self.stats.dexterity - a.self.stats.dexterity;
 	});

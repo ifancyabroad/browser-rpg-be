@@ -1,5 +1,6 @@
 import { Request } from "express";
 import {
+	AuxiliaryEffect,
 	AuxiliaryStat,
 	DamageType,
 	EquipmentSlot,
@@ -73,6 +74,9 @@ export interface ICharacterMethods {
 	get hitBonus(): number;
 	get critBonus(): number;
 	get frenzyMultiplier(): number;
+	get auxiliaryEffects(): Record<AuxiliaryEffect, boolean>;
+
+	// Backwards compatibility
 	get isStunned(): boolean;
 	get isPoisoned(): boolean;
 	get isDisarmed(): boolean;
@@ -81,13 +85,17 @@ export interface ICharacterMethods {
 	get isBlinded(): boolean;
 	get isFrenzied(): boolean;
 	get isCharmed(): boolean;
+	get isHasted(): boolean;
 	get isCrippled(): boolean;
+	get isBlessed(): boolean;
+	get isCursed(): boolean;
 
 	// Add methods here
 	getEquipmentArmourClass(): number;
 	getEquipmentBonus(type: PropertyType, name: string): number;
 	getActiveEffectBonus(type: string, name: string): number;
 	getAttribute(stat: Stat): number;
+	getActiveAuxiliaryEffect(type: AuxiliaryEffect): boolean;
 	getDamageBonus(type: DamageType): number;
 	getResistance(type: DamageType): number;
 	getAuxiliaryStat(type: AuxiliaryStat): number;

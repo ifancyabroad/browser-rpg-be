@@ -21,7 +21,10 @@ export enum AuxiliaryEffect {
 	Blind = "blind",
 	Frenzy = "frenzy",
 	Charm = "charm",
+	Haste = "haste",
 	Cripple = "cripple",
+	Bless = "bless",
+	Curse = "curse",
 }
 
 export enum Status {

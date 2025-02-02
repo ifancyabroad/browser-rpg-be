@@ -1,4 +1,13 @@
-import { EquipmentSlot, EquipmentType, HitType, ItemRarity, Stat, WeaponType, Zone } from "@common/utils/enums/index";
+import {
+	AuxiliaryEffect,
+	EquipmentSlot,
+	EquipmentType,
+	HitType,
+	ItemRarity,
+	Stat,
+	WeaponType,
+	Zone,
+} from "@common/utils/enums/index";
 
 export const CACHE_ENABLED = process.env.CACHE_ENABLED === "true";
 
@@ -233,3 +242,10 @@ export const ITEM_TYPE_WEIGHT_LEVELS = {
 	[EquipmentType.Shield]: 0.1,
 	[EquipmentType.Weapon]: 0.2,
 };
+
+export const AUXILIARY_EFFECT_OPPOSITES = new Map([
+	[AuxiliaryEffect.Bless, AuxiliaryEffect.Curse],
+	[AuxiliaryEffect.Curse, AuxiliaryEffect.Bless],
+	[AuxiliaryEffect.Haste, AuxiliaryEffect.Cripple],
+	[AuxiliaryEffect.Cripple, AuxiliaryEffect.Haste],
+]);

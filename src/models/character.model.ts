@@ -19,7 +19,7 @@ import { model } from "mongoose";
 import { skillSchema } from "./skill.model";
 import { GameData } from "@common/utils/game/GameData";
 import { ICharacter, ICharacterMethods, ICharacterModel, IEffectData } from "@common/types/character";
-import { MAX_POTIONS } from "@common/utils";
+import { AUXILIARY_EFFECT_OPPOSITES, MAX_POTIONS } from "@common/utils";
 import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
@@ -312,36 +312,69 @@ characterSchema.virtual("frenzyMultiplier").get(function () {
 	return 1 + Math.min(1, 1 - healthPercentage);
 });
 
+characterSchema.virtual("auxiliaryEffects").get(function () {
+	return {
+		[AuxiliaryEffect.Stun]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Stun),
+		[AuxiliaryEffect.Poison]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Poison),
+		[AuxiliaryEffect.Disarm]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Disarm),
+		[AuxiliaryEffect.Bleed]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Bleed),
+		[AuxiliaryEffect.Silence]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Silence),
+		[AuxiliaryEffect.Blind]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Blind),
+		[AuxiliaryEffect.Frenzy]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Frenzy),
+		[AuxiliaryEffect.Charm]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Charm),
+		[AuxiliaryEffect.Haste]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Haste),
+		[AuxiliaryEffect.Cripple]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Cripple),
+		[AuxiliaryEffect.Bless]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Bless),
+		[AuxiliaryEffect.Curse]: this.getActiveAuxiliaryEffect(AuxiliaryEffect.Curse),
+	};
+});
+
 characterSchema.virtual("isStunned").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Stun);
+	return this.auxiliaryEffects[AuxiliaryEffect.Stun];
 });
 
 characterSchema.virtual("isPoisoned").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Poison);
+	return this.auxiliaryEffects[AuxiliaryEffect.Poison];
 });
 
 characterSchema.virtual("isDisarmed").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Disarm);
+	return this.auxiliaryEffects[AuxiliaryEffect.Disarm];
 });
 
 characterSchema.virtual("isBleeding").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Bleed);
+	return this.auxiliaryEffects[AuxiliaryEffect.Bleed];
 });
 
 characterSchema.virtual("isSilenced").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Silence);
+	return this.auxiliaryEffects[AuxiliaryEffect.Silence];
 });
 
 characterSchema.virtual("isBlinded").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Blind);
+	return this.auxiliaryEffects[AuxiliaryEffect.Blind];
 });
 
 characterSchema.virtual("isFrenzied").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Frenzy);
+	return this.auxiliaryEffects[AuxiliaryEffect.Frenzy];
 });
 
 characterSchema.virtual("isCharmed").get(function () {
-	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(AuxiliaryEffect.Charm);
+	return this.auxiliaryEffects[AuxiliaryEffect.Charm];
+});
+
+characterSchema.virtual("isHasted").get(function () {
+	return this.auxiliaryEffects[AuxiliaryEffect.Haste];
+});
+
+characterSchema.virtual("isCrippled").get(function () {
+	return this.auxiliaryEffects[AuxiliaryEffect.Cripple];
+});
+
+characterSchema.virtual("isBlessed").get(function () {
+	return this.auxiliaryEffects[AuxiliaryEffect.Bless];
+});
+
+characterSchema.virtual("isCursed").get(function () {
+	return this.auxiliaryEffects[AuxiliaryEffect.Curse];
 });
 
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
@@ -381,6 +414,10 @@ characterSchema.method("getAttribute", function getAttribute(stat: Stat) {
 	return Math.min(Math.max(value, 0), 30);
 });
 
+characterSchema.method("getActiveAuxiliaryEffect", function getActiveAuxiliaryEffect(type: AuxiliaryEffect) {
+	return this.activeAuxiliaryEffects.map((effect) => effect.effect).includes(type);
+});
+
 characterSchema.method("getDamageBonus", function getDamageBonus(type: DamageType) {
 	return this.getEquipmentBonus(PropertyType.Damage, type) + this.getActiveEffectBonus(PropertyType.Damage, type);
 });
@@ -403,7 +440,7 @@ characterSchema.method("getAuxiliaryStat", function getAuxiliaryStat(type: Auxil
 characterSchema.method("getHitType", function getHitType(armourClass: number, modifier: number) {
 	const roll = Game.d20;
 
-	if (this.isBlinded && roll <= 10) {
+	if (this.auxiliaryEffects[AuxiliaryEffect.Blind] && roll <= 10) {
 		return HitType.Miss;
 	}
 
@@ -443,8 +480,8 @@ characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, e
 	const hitType = this.getHitType(effectTarget.armourClass, modifier);
 	const hitMultiplier = Game.getHitMultiplier(hitType);
 	const resistance = effectTarget.getResistance(DamageType.Crushing) / 100;
-	const frenzyMultiplier = this.isFrenzied ? this.frenzyMultiplier : 1;
-	const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+	const frenzyMultiplier = this.auxiliaryEffects[AuxiliaryEffect.Frenzy] ? this.frenzyMultiplier : 1;
+	const bleedMuliplier = effectTarget.auxiliaryEffects[AuxiliaryEffect.Bleed] ? 1.5 : 1;
 	const value = Math.round(
 		(damage + modifier) *
 			weaponEffect.multiplier *
@@ -476,8 +513,8 @@ characterSchema.method(
 		const hitType = this.getHitType(effectTarget.armourClass, modifier);
 		const hitMultiplier = Game.getHitMultiplier(hitType);
 		const resistance = effectTarget.getResistance(weapon.damageType) / 100;
-		const frenzyMultiplier = this.isFrenzied ? this.frenzyMultiplier : 1;
-		const bleedMuliplier = effectTarget.isBleeding ? 1.5 : 1;
+		const frenzyMultiplier = this.auxiliaryEffects[AuxiliaryEffect.Frenzy] ? this.frenzyMultiplier : 1;
+		const bleedMuliplier = effectTarget.auxiliaryEffects[AuxiliaryEffect.Bleed] ? 1.5 : 1;
 		const value = Math.round(
 			(damage + damageModifier) *
 				weaponEffect.multiplier *
@@ -499,7 +536,7 @@ characterSchema.method(
 );
 
 characterSchema.method("getWeaponsDamage", function getWeaponsDamage(data: IEffectData) {
-	if (this.weaponsAsArray.length > 0 && !this.isDisarmed) {
+	if (this.weaponsAsArray.length > 0 && !this.auxiliaryEffects[AuxiliaryEffect.Disarm]) {
 		return this.weaponsAsArray.map((weapon) => {
 			return this.getWeaponDamage(data, weapon);
 		});
@@ -538,7 +575,16 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 	const statusEffect = effect as IStatusEffectData;
 
 	let saved = false;
-	if (statusEffect.modifier && statusEffect.difficulty) {
+	const isTargetEnemy = statusEffect.target === Target.Enemy;
+	const isSavingThrowRequired = statusEffect.modifier && statusEffect.difficulty;
+
+	if (!isSavingThrowRequired) {
+		saved = false;
+	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
+		saved = true;
+	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
+		saved = false;
+	} else {
 		const modifier = Game.getModifier(effectTarget.stats[statusEffect.modifier]);
 		const roll = Game.d20 + modifier;
 		saved = roll >= statusEffect.difficulty;
@@ -587,7 +633,7 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 characterSchema.method("getEffectTarget", function getEffectTarget(data: ITurnData, effect: ISkillEffect) {
 	const { target, type } = effect;
 	const isAttack = [EffectType.Damage, EffectType.WeaponDamage].includes(type);
-	if (this.isCharmed && isAttack && Game.d20 <= 10) {
+	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isAttack && Game.d20 <= 10) {
 		return target === Target.Self ? data.enemy : data.self;
 	}
 	return target === Target.Self ? data.self : data.enemy;
@@ -620,7 +666,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 		const action: IAction = this.createEmptyAction(data, "Potion");
 
-		if (this.isStunned) {
+		if (this.auxiliaryEffects[AuxiliaryEffect.Stun]) {
 			return action;
 		}
 
@@ -646,7 +692,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 	const action: IAction = this.createEmptyAction(data, skill.name);
 
-	if (this.isStunned) {
+	if (this.auxiliaryEffects[AuxiliaryEffect.Stun]) {
 		return action;
 	}
 
@@ -769,6 +815,18 @@ characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IA
 			remaining: auxiliary.duration,
 		});
 	}
+
+	const oppositeEffect = AUXILIARY_EFFECT_OPPOSITES.get(auxiliary.effect);
+
+	if (!oppositeEffect) {
+		return;
+	}
+
+	const hasOppositeEffect = this.auxiliaryEffects[oppositeEffect];
+	if (hasOppositeEffect) {
+		const updatedAuxiliaryEffects = this.activeAuxiliaryEffects.filter(({ effect }) => effect !== oppositeEffect);
+		this.set("activeAuxiliaryEffects", updatedAuxiliaryEffects);
+	}
 });
 
 characterSchema.method("handleAction", function handleAction(action: IAction, target: Target) {
@@ -816,7 +874,7 @@ characterSchema.method("handleAction", function handleAction(action: IAction, ta
 });
 
 characterSchema.method("tickPoison", function tickPoison(damageBonus: number) {
-	if (this.isPoisoned) {
+	if (this.auxiliaryEffects[AuxiliaryEffect.Poison]) {
 		const bonusMultiplier = damageBonus / 100 + 1;
 		const resistance = this.getResistance(DamageType.Poison) / 100;
 		const value = Math.round((this.maxHitPoints / 8) * bonusMultiplier * (1 - resistance));
