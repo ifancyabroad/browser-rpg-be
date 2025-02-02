@@ -124,7 +124,7 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 });
 
 enemySchema.method("getSkill", function getSkill(hero: IHero) {
-	const priorities: ISkillDataWithRemaining[][] = [[], [], []];
+	const priorities: ISkillDataWithRemaining[][] = [[], [], [], []];
 
 	const isDamaged = this.hitPoints < this.maxHitPoints / 2;
 	const isBadlyDamaged = this.hitPoints < this.maxHitPoints / 3;

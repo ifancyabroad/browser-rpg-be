@@ -3705,7 +3705,7 @@
 		},
 		"-OHcffU4_J4vJV5nPD1l": {
 			"armourTypes": ["cloth", "misc"],
-			"description": "",
+			"description": "Dedicated to the Gods, wielding both shadow and holy energy. Primary stat is wisdom.",
 			"equipment": {
 				"body": "-NgO5fUaNmJH7LpPo2LP",
 				"hand1": "-NgO--jUsGrVSzpmk0lB"
@@ -3713,7 +3713,7 @@
 			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OHcffU4_J4vJV5nPD1l%2FfallenImage?alt=media&token=fa15529a-7dfa-48c1-9e61-3e4d928a7910",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OHcffU4_J4vJV5nPD1l%2Ficon?alt=media&token=5a190297-3ee0-4e43-afb7-f59c86c339c8",
 			"name": "Priest",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OHcffU4_J4vJV5nPD1l%2Fportrait?alt=media&token=3ac10e8a-5998-47f8-8d3f-a79adfe8bd23",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OHcffU4_J4vJV5nPD1l%2Fportrait?alt=media&token=5706e514-d9c2-4b14-b6cc-7c4ba2098b66",
 			"skillClasses": ["cleric", "occultist"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NgTRbewhOgSp1zw1Uu7"],
 			"stats": {
@@ -3726,6 +3726,79 @@
 			},
 			"tactics": "default",
 			"weaponTypes": ["mace", "hammer", "club", "staff"]
+		},
+		"-OI71oq4C31il2XnXrif": {
+			"armourTypes": ["heavy", "medium", "misc"],
+			"description": "A noble warrior bound by divine oath, the paladin wields both sword and faith to protect the innocent. Primary stats are strength and wisdom",
+			"equipment": {
+				"body": "-Nm2Cd-d46R6iuL4782x",
+				"hand1": "-NgO--jUsGrVSzpmk0lB",
+				"hand2": "-NZMqz87pcH6a1OgycJ9"
+			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI71oq4C31il2XnXrif%2FfallenImage?alt=media&token=74e4f354-5a01-4e0e-84a0-8c7fcf6d97ba",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI71oq4C31il2XnXrif%2Ficon?alt=media&token=e85e8965-f963-4c09-bff5-5185c0982692",
+			"name": "Paladin",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI71oq4C31il2XnXrif%2Fportrait?alt=media&token=bc8324a5-4ef8-41cb-a87d-754e8aace59e",
+			"skillClasses": ["warrior", "cleric"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkP4BW6tSXQG6EoCJq"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 16,
+				"dexterity": 12,
+				"intelligence": 10,
+				"strength": 16,
+				"wisdom": 16
+			},
+			"tactics": "default",
+			"weaponTypes": ["sword", "axe", "club", "mace", "hammer", "spear"]
+		},
+		"-OI74eayTZduv3tnmUwr": {
+			"armourTypes": ["light", "medium", "misc"],
+			"description": "A master of both arcane arts and combat, the battlemage channels destructive magic while wielding weapons with deadly precision. Primary stats are intelligence and strength.",
+			"equipment": {
+				"body": "-NgJzhkhaQDrg55F1iM1",
+				"hand1": "-NgK-mAaFXHeapzVbWAb"
+			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2FfallenImage?alt=media&token=62ba1bd5-97e7-459e-aae8-4888a50d8906",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Ficon?alt=media&token=a7f89a36-06f8-443a-9d52-aa758408b634",
+			"name": "Battlemage",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Fportrait?alt=media&token=f9512ca5-5e07-4a63-b491-260b0885bb17",
+			"skillClasses": ["barbarian", "warlock"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 14,
+				"dexterity": 14,
+				"intelligence": 16,
+				"strength": 16,
+				"wisdom": 10
+			},
+			"tactics": "default",
+			"weaponTypes": ["sword", "axe", "spear", "mace", "hammer", "club"]
+		},
+		"-OI76C9UljPe-6hnDUcP": {
+			"armourTypes": ["light", "misc"],
+			"description": "A stealthy assassin forged in darkness, blending magic and steel to silence foes with lethal precision. Primary stats are dexterity and wisdom.",
+			"equipment": {
+				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
+				"hand1": "-NMmvhpTgBUrely_XRJ7"
+			},
+			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI76C9UljPe-6hnDUcP%2FfallenImage?alt=media&token=c28b6f8c-226c-4a42-a4a8-6e401bb0f19d",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI76C9UljPe-6hnDUcP%2Ficon?alt=media&token=79b84c2f-6204-49ef-87e4-99eb50cc736b",
+			"name": "Shadowblade",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI76C9UljPe-6hnDUcP%2Fportrait?alt=media&token=983dc552-318e-4a5c-802b-29681430c044",
+			"skillClasses": ["assassin", "occultist"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-OI6NWgjfh9IAA7mMhg-"],
+			"stats": {
+				"charisma": 10,
+				"constitution": 14,
+				"dexterity": 16,
+				"intelligence": 10,
+				"strength": 14,
+				"wisdom": 16
+			},
+			"tactics": "default",
+			"weaponTypes": ["dagger", "sword", "axe", "bow", "crossbow"]
 		}
 	},
 	"monsters": {
@@ -3860,7 +3933,7 @@
 				"radiant": -50,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqcxgP5ITgFn-T8xj6", "-Nhh2aa9hENKmzll2Md-"],
+			"skills": ["-NfROP8bobODCeEQFrpd", "-NZqcxgP5ITgFn-T8xj6", "-Nhh2aa9hENKmzll2Md-", "-OCUEy6k5HuRL-oXw1-y"],
 			"stats": {
 				"charisma": 5,
 				"constitution": 16,
@@ -5045,9 +5118,9 @@
 			"skills": [
 				"-NfROP8bobODCeEQFrpd",
 				"-Nhh4hPWuWx_NN1YApGU",
-				"-NhkGRRiaTZa0Q2JeWOd",
 				"-Nc3vvlL3y_va4dkw6_B",
-				"-Nhh3v9mXEeAJhlsZfwB"
+				"-Nhh3v9mXEeAJhlsZfwB",
+				"-OI69Ynmtt7mlCy4Zmvt"
 			],
 			"stats": {
 				"charisma": 12,
@@ -7058,7 +7131,13 @@
 				"radiant": 0,
 				"slashing": 0
 			},
-			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkGRRiaTZa0Q2JeWOd", "-OCIzZAWoMILIUtWYjFz", "-NgTbEHpokQy-0H5xsHh"],
+			"skills": [
+				"-NfROP8bobODCeEQFrpd",
+				"-NhkGRRiaTZa0Q2JeWOd",
+				"-OCIzZAWoMILIUtWYjFz",
+				"-NgTbEHpokQy-0H5xsHh",
+				"-OI6P21THAWT0E0VgnjP"
+			],
 			"stats": {
 				"charisma": 12,
 				"constitution": 12,
@@ -8695,7 +8774,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTRbewhOgSp1zw1Uu7?alt=media&token=dca7c698-b44a-4c75-932c-b2291934e4cf",
 			"level": 1,
-			"maxUses": 8,
+			"maxUses": 12,
 			"name": "Holy Bolt",
 			"price": 0
 		},
@@ -8738,7 +8817,7 @@
 		},
 		"-NgTUH0cjt_Ek0BEIgUh": {
 			"class": "cleric",
-			"description": "Call upon divine favor to boost radiant damage while providing resistance to necrotic attacks.",
+			"description": "Call upon divine favor to boost radiant damage and to provide protection from harmful effects.",
 			"effects": [
 				{
 					"duration": 8,
@@ -8747,15 +8826,16 @@
 							"name": "radiant",
 							"type": "damage",
 							"value": 50
-						},
-						{
-							"name": "necrotic",
-							"type": "resistance",
-							"value": 50
 						}
 					],
 					"target": "self",
 					"type": "status"
+				},
+				{
+					"duration": 8,
+					"effect": "bless",
+					"target": "self",
+					"type": "auxiliary"
 				}
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NgTUH0cjt_Ek0BEIgUh?alt=media&token=ac5bf6ce-f097-45f5-b974-ee6bb37de865",
@@ -9707,7 +9787,7 @@
 			"price": 0
 		},
 		"-NhkFjgyu0pTYRw3DVD-": {
-			"class": "cleric",
+			"class": "common",
 			"description": "Invoke a sacred boon that grants the blessed effect, ensuring all saving throws succeed.",
 			"effects": [
 				{
