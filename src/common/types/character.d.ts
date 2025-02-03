@@ -56,6 +56,7 @@ export interface IEffectData {
 	effect: ISkillEffect;
 	effectTarget: ICharacter & ICharacterMethods;
 	source: IEffectSource;
+	target: Target;
 }
 
 export interface ICharacterMethods {
@@ -108,7 +109,7 @@ export interface ICharacterMethods {
 	getHeal(data: IEffectData): IHealEffect;
 	getStatus(data: IEffectData): IStatusEffect;
 	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
-	getEffectTarget(data: ITurnData, effect: ISkillEffect): ICharacter & ICharacterMethods;
+	getEffectTarget(effect: ISkillEffect): Target;
 	createEmptyAction(data: ITurnData, name: string): IAction;
 	createAction(data: ITurnData): IAction;
 	handleDamage(damage: IDamageEffect): void;

@@ -329,54 +329,6 @@ characterSchema.virtual("auxiliaryEffects").get(function () {
 	};
 });
 
-characterSchema.virtual("isStunned").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Stun];
-});
-
-characterSchema.virtual("isPoisoned").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Poison];
-});
-
-characterSchema.virtual("isDisarmed").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Disarm];
-});
-
-characterSchema.virtual("isBleeding").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Bleed];
-});
-
-characterSchema.virtual("isSilenced").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Silence];
-});
-
-characterSchema.virtual("isBlinded").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Blind];
-});
-
-characterSchema.virtual("isFrenzied").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Frenzy];
-});
-
-characterSchema.virtual("isCharmed").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Charm];
-});
-
-characterSchema.virtual("isHasted").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Haste];
-});
-
-characterSchema.virtual("isCrippled").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Cripple];
-});
-
-characterSchema.virtual("isBlessed").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Bless];
-});
-
-characterSchema.virtual("isCursed").get(function () {
-	return this.auxiliaryEffects[AuxiliaryEffect.Curse];
-});
-
 characterSchema.method("getEquipmentArmourClass", function getEquipmentArmourClass() {
 	const armour = this.equipment.body;
 	const modifier = Game.getModifier(this.stats.dexterity) ?? 0;
@@ -502,7 +454,7 @@ characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, e
 
 characterSchema.method(
 	"getWeaponDamage",
-	function getWeaponDamage({ effect, effectTarget }: IEffectData, weapon: IWeaponDataWithID) {
+	function getWeaponDamage({ effect, effectTarget, target }: IEffectData, weapon: IWeaponDataWithID) {
 		const weaponEffect = effect as IWeaponDamageEffectData;
 		const damage = Game.dx(weapon.min, weapon.max);
 		const stat = Game.getWeaponStat(weapon.weaponType as WeaponType);
@@ -526,7 +478,7 @@ characterSchema.method(
 		);
 
 		return {
-			target: effect.target,
+			target,
 			type: weapon.damageType,
 			value: Math.max(value, 0),
 			hitType,
@@ -544,7 +496,7 @@ characterSchema.method("getWeaponsDamage", function getWeaponsDamage(data: IEffe
 	return [this.getUnarmedDamage(data)];
 });
 
-characterSchema.method("getDamage", function getDamage({ effect, effectTarget }: IEffectData) {
+characterSchema.method("getDamage", function getDamage({ effect, effectTarget, target }: IEffectData) {
 	const damageEffect = effect as IDamageEffectData;
 	const damage = Game.dx(damageEffect.min, damageEffect.max);
 	const modifier = damageEffect.modifier ? Game.getModifier(this.stats[damageEffect.modifier]) : 0;
@@ -553,7 +505,7 @@ characterSchema.method("getDamage", function getDamage({ effect, effectTarget }:
 	const value = Math.round((damage + modifier) * bonusMultiplier * (1 - resistance));
 
 	return {
-		target: effect.target,
+		target,
 		type: damageEffect.damageType,
 		value: Math.max(value, 0),
 		hitType: HitType.Hit,
@@ -609,7 +561,16 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	const auxiliaryEffect = effect as IAuxiliaryEffectData;
 
 	let saved = false;
-	if (auxiliaryEffect.modifier && auxiliaryEffect.difficulty) {
+	const isTargetEnemy = auxiliaryEffect.target === Target.Enemy;
+	const isSavingThrowRequired = auxiliaryEffect.modifier && auxiliaryEffect.difficulty;
+
+	if (!isSavingThrowRequired) {
+		saved = false;
+	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
+		saved = true;
+	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
+		saved = false;
+	} else {
 		const modifier = Game.getModifier(effectTarget.stats[auxiliaryEffect.modifier]);
 		const roll = Game.d20 + modifier;
 		saved = roll >= auxiliaryEffect.difficulty;
@@ -630,13 +591,13 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	};
 });
 
-characterSchema.method("getEffectTarget", function getEffectTarget(data: ITurnData, effect: ISkillEffect) {
+characterSchema.method("getEffectTarget", function getEffectTarget(effect: ISkillEffect) {
 	const { target, type } = effect;
 	const isAttack = [EffectType.Damage, EffectType.WeaponDamage].includes(type);
 	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isAttack && Game.d20 <= 10) {
-		return target === Target.Self ? data.enemy : data.self;
+		return target === Target.Self ? Target.Enemy : Target.Self;
 	}
-	return target === Target.Self ? data.self : data.enemy;
+	return target === Target.Self ? Target.Self : Target.Enemy;
 });
 
 characterSchema.method("createEmptyAction", function createEmptyAction(data: ITurnData, name: string) {
@@ -703,8 +664,9 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon, skillClass: skill.class };
 
 	skill.effects.forEach((effect) => {
-		const effectTarget = this.getEffectTarget(data, effect);
-		const effectData = { effect, effectTarget, source: skillSource };
+		const target = this.getEffectTarget(effect);
+		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+		const effectData = { effect, effectTarget, source: skillSource, target };
 
 		switch (effect.type) {
 			case EffectType.WeaponDamage:
@@ -748,8 +710,9 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 			const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
 
 			weapon.effects?.forEach((effect) => {
-				const effectTarget = this.getEffectTarget(data, effect);
-				const effectData = { effect, effectTarget, source };
+				const target = this.getEffectTarget(effect);
+				const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+				const effectData = { effect, effectTarget, source, target };
 
 				switch (effect.type) {
 					case EffectType.Damage:
@@ -812,7 +775,7 @@ characterSchema.method("handleAuxiliary", function handleAuxiliary(auxiliary: IA
 	} else {
 		this.activeAuxiliaryEffects.push({
 			effect: auxiliary.effect,
-			remaining: auxiliary.duration,
+			remaining: auxiliary.remaining,
 		});
 	}
 

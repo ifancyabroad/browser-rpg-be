@@ -3633,7 +3633,7 @@
 	"classes": {
 		"-N_Ot99GWjYjrv9Gs-fP": {
 			"armourTypes": ["heavy", "medium", "misc"],
-			"description": "Proud and honorable, specialising in brute strength. Primary stat is strength.",
+			"description": "Proud and honorable, specialising in brute strength. ",
 			"equipment": {
 				"body": "-NgJzhkhaQDrg55F1iM1",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
@@ -3657,7 +3657,7 @@
 		},
 		"-N_OzueqvUwAUNXnlWpb": {
 			"armourTypes": ["light", "misc"],
-			"description": "Unscrupulous and underhanded, strikes from the shadows. Primary stat is dexterity.",
+			"description": "Unscrupulous and underhanded, strikes from the shadows.",
 			"equipment": {
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NNwMy0q-XKUT-EUvxFF"
@@ -3681,7 +3681,7 @@
 		},
 		"-N_P0pcakZhKbNDftKoc": {
 			"armourTypes": ["misc", "cloth"],
-			"description": "Trained in the arcane arts and proficient with all forms of magic. Primary stat is intelligence.",
+			"description": "Master of the arcane arts and proficient with all forms of magic.",
 			"equipment": {
 				"body": "-Nm2HibRx3V8P1isPlRf",
 				"hand1": "-Nc46CPWJz2atC_uII9i"
@@ -3697,15 +3697,15 @@
 				"constitution": 14,
 				"dexterity": 14,
 				"intelligence": 18,
-				"strength": 8,
-				"wisdom": 14
+				"strength": 10,
+				"wisdom": 12
 			},
 			"tactics": "caster",
 			"weaponTypes": ["staff", "wand"]
 		},
 		"-OHcffU4_J4vJV5nPD1l": {
 			"armourTypes": ["cloth", "misc"],
-			"description": "Dedicated to the Gods, wielding both shadow and holy energy. Primary stat is wisdom.",
+			"description": "Dedicated to the Gods, wielding both shadow and holy energy.",
 			"equipment": {
 				"body": "-NgO5fUaNmJH7LpPo2LP",
 				"hand1": "-NgO--jUsGrVSzpmk0lB"
@@ -3729,7 +3729,7 @@
 		},
 		"-OI71oq4C31il2XnXrif": {
 			"armourTypes": ["heavy", "medium", "misc"],
-			"description": "A noble warrior bound by divine oath, the paladin wields both sword and faith to protect the innocent. Primary stats are strength and wisdom",
+			"description": "A noble warrior bound by divine oath, wielding both sword and faith.",
 			"equipment": {
 				"body": "-Nm2Cd-d46R6iuL4782x",
 				"hand1": "-NgO--jUsGrVSzpmk0lB",
@@ -3742,8 +3742,8 @@
 			"skillClasses": ["warrior", "cleric"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-NhkP4BW6tSXQG6EoCJq"],
 			"stats": {
-				"charisma": 10,
-				"constitution": 16,
+				"charisma": 12,
+				"constitution": 14,
 				"dexterity": 12,
 				"intelligence": 10,
 				"strength": 16,
@@ -3754,15 +3754,15 @@
 		},
 		"-OI74eayTZduv3tnmUwr": {
 			"armourTypes": ["light", "medium", "misc"],
-			"description": "A master of both arcane arts and combat, the battlemage channels destructive magic while wielding weapons with deadly precision. Primary stats are intelligence and strength.",
+			"description": "Proficient in both the arcane arts and melee combat.",
 			"equipment": {
 				"body": "-NgJzhkhaQDrg55F1iM1",
 				"hand1": "-NgK-mAaFXHeapzVbWAb"
 			},
 			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2FfallenImage?alt=media&token=62ba1bd5-97e7-459e-aae8-4888a50d8906",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Ficon?alt=media&token=a7f89a36-06f8-443a-9d52-aa758408b634",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Ficon?alt=media&token=27828c41-3a58-41ed-b0da-824fc9650e6a",
 			"name": "Battlemage",
-			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Fportrait?alt=media&token=f9512ca5-5e07-4a63-b491-260b0885bb17",
+			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Fportrait?alt=media&token=ee81b607-5af5-4126-9c1e-2ab9d8eb56ea",
 			"skillClasses": ["barbarian", "warlock"],
 			"skills": ["-NfROP8bobODCeEQFrpd", "-Nc3vvlL3y_va4dkw6_B"],
 			"stats": {
@@ -3774,11 +3774,11 @@
 				"wisdom": 10
 			},
 			"tactics": "default",
-			"weaponTypes": ["sword", "axe", "spear", "mace", "hammer", "club"]
+			"weaponTypes": ["sword", "axe", "spear", "mace", "hammer", "club", "staff"]
 		},
 		"-OI76C9UljPe-6hnDUcP": {
 			"armourTypes": ["light", "misc"],
-			"description": "A stealthy assassin forged in darkness, blending magic and steel to silence foes with lethal precision. Primary stats are dexterity and wisdom.",
+			"description": "Assassin forged in darkness, blending magic and steel to silence foes.",
 			"equipment": {
 				"body": "-Nm2AhkGYoZ3Qw0JaJfd",
 				"hand1": "-NMmvhpTgBUrely_XRJ7"
@@ -9856,7 +9856,7 @@
 					"damageType": "radiant",
 					"max": 8,
 					"min": 1,
-					"modifier": "wisdom",
+					"modifier": "",
 					"target": "enemy",
 					"type": "damage"
 				}
@@ -12868,7 +12868,7 @@
 			"description": "The Quarterstaff is a long, sturdy wooden pole, usually six to eight feet in length. Its simple design allows for versatile use in both offense and defense. Lightweight and easy to maneuver, it’s a reliable weapon favored by travelers and those skilled in staff combat.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-Nc46CPWJz2atC_uII9i?alt=media&token=3bbe8a10-42ee-4987-8c65-aa9bd79730fa",
 			"level": 1,
-			"max": 6,
+			"max": 8,
 			"min": 1,
 			"name": "Quarterstaff",
 			"price": 30,
@@ -13089,8 +13089,8 @@
 			"description": "The Traveller's Staff is a sturdy, wooden rod designed for both support and defense on long journeys. Lightweight and easily maneuverable, it features a simple design with a few carved symbols for good luck. This staff is favored by adventurers for its practicality and versatility in the wild.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-NgO2__1WpZ52xfbNJx_?alt=media&token=a0aeb719-1576-41f7-9948-a878524cd3b4",
 			"level": 2,
-			"max": 6,
-			"min": 1,
+			"max": 9,
+			"min": 2,
 			"name": "Traveller's Staff",
 			"price": 230,
 			"properties": [
@@ -13888,8 +13888,8 @@
 			"description": "Nature's Wrath is a beautifully crafted staff adorned with twisting vines and vibrant leaves. It channels the power of the natural world, allowing the wielder to summon roots and vines to ensnare foes. Favored by druids, this staff embodies the raw fury and beauty of nature in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O86iXwrc1ccOlbTldxs?alt=media&token=f44cf246-c5e0-4528-a975-511505ea84f6",
 			"level": 2,
-			"max": 6,
-			"min": 1,
+			"max": 9,
+			"min": 2,
 			"name": "Nature's Wrath",
 			"price": 240,
 			"properties": [
@@ -14028,8 +14028,8 @@
 			"description": "The Staff of the Trickster is a slender rod adorned with playful symbols and a shimmering gemstone. It enhances illusion spells, allowing the wielder to confuse foes. Favored by cunning spellcasters, this staff is perfect for those who thrive on deception in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O880XFcKnWhE-_xBLH5?alt=media&token=01951d9c-ed50-4071-8e62-b3a41d72a602",
 			"level": 2,
-			"max": 6,
-			"min": 1,
+			"max": 9,
+			"min": 2,
 			"name": "Staff of the Trickster",
 			"price": 220,
 			"properties": [
@@ -14053,8 +14053,8 @@
 			"description": "The Staff of Cold is a sleek, icy blue rod adorned with frost motifs and a shimmering crystal at its tip. This staff channels chilling magic, allowing the wielder to cast powerful ice spells. Favored by frost mages, it embodies the essence of winter and the power of the frozen elements.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O881adjBhWBB9IW_gRE?alt=media&token=91193af8-eb3c-418d-b78b-0425b472cda2",
 			"level": 3,
-			"max": 6,
-			"min": 1,
+			"max": 10,
+			"min": 3,
 			"name": "Staff of Cold",
 			"price": 640,
 			"properties": [
@@ -14078,8 +14078,8 @@
 			"description": "The Staff of the Archmage is an ornate rod made from dark wood, crowned with a radiant crystal that glimmers with arcane energy. It enhances spellcasting abilities, allowing the wielder to manipulate powerful spells with ease. This staff is a symbol of mastery, favored by the most powerful mages.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O8826bklHQ7fH__Egi2?alt=media&token=7b07954d-b9f1-4ebb-bd6c-ba7f6f735e5a",
 			"level": 4,
-			"max": 6,
-			"min": 1,
+			"max": 11,
+			"min": 4,
 			"name": "Staff of the Archmage",
 			"price": 1800,
 			"properties": [
@@ -14113,8 +14113,8 @@
 			"description": "Forked Lightning is a striking staff adorned with two jagged tips that crackle with electric energy. Designed to channel powerful lightning spells, it allows the wielder to unleash devastating bolts of electricity. Favored by storm mages, this staff embodies the raw fury of a thunderstorm.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O882xmUlhB07RJmbt_a?alt=media&token=1c0d3884-6bfb-4b63-b25b-5de584796590",
 			"level": 4,
-			"max": 6,
-			"min": 1,
+			"max": 11,
+			"min": 4,
 			"name": "Forked Lightning",
 			"price": 1450,
 			"properties": [
@@ -14143,8 +14143,8 @@
 			"description": "The Crystal Staff is an elegant, tall rod adorned with a large, luminous crystal at its tip. This staff channels magical energies, allowing spellcasters to enhance their spells and harness elemental forces. Often sought after by wizards, its beauty is matched by its potent magical capabilities.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883TxE3EKQl4pDIJkT?alt=media&token=d681b87d-454f-4632-a3c5-211e48542c06",
 			"level": 2,
-			"max": 6,
-			"min": 1,
+			"max": 9,
+			"min": 2,
 			"name": "Crystal Staff",
 			"price": 280,
 			"properties": [
@@ -14173,8 +14173,8 @@
 			"description": "The Staff of Flames is a fiery red rod intricately carved with flame motifs and topped with a glowing ember. This staff channels intense fire magic, enabling the wielder to unleash powerful fire spells. Favored by fire mages, it embodies the raw energy and destructive potential of flames.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O883ldvSyYlUMXKPTKl?alt=media&token=212e10f0-d163-4da5-9d36-1b3d5ecd597e",
 			"level": 3,
-			"max": 6,
-			"min": 1,
+			"max": 10,
+			"min": 3,
 			"name": "Staff of Flames",
 			"price": 640,
 			"properties": [
@@ -14198,8 +14198,8 @@
 			"description": "The Staff of Warding is a sturdy rod adorned with protective runes and a glowing crystal. Designed to enhance defensive spells, it creates barriers against magical attacks. Favored by guardians, this staff embodies safety and vigilance in battle.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-O884ErbLr06vlIendww?alt=media&token=e491f5e8-337d-47d5-a93c-fd6c2d88fdb5",
 			"level": 4,
-			"max": 6,
-			"min": 1,
+			"max": 11,
+			"min": 4,
 			"name": "Staff of Warding",
 			"price": 1400,
 			"properties": [
@@ -14758,8 +14758,8 @@
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OAsxyHjQ-ZKF19tCLPX?alt=media&token=3e2dc877-ed7a-4eb8-8bb3-a833f05d8077",
 			"level": 3,
-			"max": 6,
-			"min": 1,
+			"max": 10,
+			"min": 3,
 			"name": "Warlock's Staff",
 			"price": 720,
 			"properties": [
@@ -14783,8 +14783,8 @@
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OAsyMrMxiREAP6TWo4s?alt=media&token=57c1fe4c-86b6-4f3a-ad24-ea9a802def71",
 			"level": 2,
-			"max": 6,
-			"min": 1,
+			"max": 9,
+			"min": 2,
 			"name": "Staff of Lightning",
 			"price": 260,
 			"properties": [
@@ -14993,8 +14993,8 @@
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OCje5NY8tvXxytEERmn?alt=media&token=e349508a-e35a-4b0b-bc67-697db8e39ed9",
 			"level": 5,
-			"max": 6,
-			"min": 1,
+			"max": 12,
+			"min": 5,
 			"name": "Will of Galorin",
 			"price": 2500,
 			"properties": [
@@ -15204,8 +15204,8 @@
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OI6WPS67ruK5CEZybAn?alt=media&token=45716640-c088-42a7-9e6c-d91a6e29e8bc",
 			"level": 4,
-			"max": 6,
-			"min": 1,
+			"max": 11,
+			"min": 4,
 			"name": "Divine Radiance",
 			"price": 1460,
 			"properties": [
