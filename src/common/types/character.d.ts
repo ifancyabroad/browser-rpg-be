@@ -98,6 +98,7 @@ export interface ICharacterMethods {
 	getAttribute(stat: Stat): number;
 	getActiveAuxiliaryEffect(type: AuxiliaryEffect): boolean;
 	getDamageBonus(type: DamageType): number;
+	getHealBonus(): number;
 	getResistance(type: DamageType): number;
 	getAuxiliaryStat(type: AuxiliaryStat): number;
 	getHitType(armourClass: number, modifier: number): HitType;
@@ -109,7 +110,7 @@ export interface ICharacterMethods {
 	getHeal(data: IEffectData): IHealEffect;
 	getStatus(data: IEffectData): IStatusEffect;
 	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
-	getEffectTarget(effect: ISkillEffect): Target;
+	getEffectTarget(target: Target): Target;
 	createEmptyAction(data: ITurnData, name: string): IAction;
 	createAction(data: ITurnData): IAction;
 	handleDamage(damage: IDamageEffect): void;

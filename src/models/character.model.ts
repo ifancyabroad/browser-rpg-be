@@ -24,7 +24,6 @@ import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
 	IHealEffectData,
-	ISkillEffect,
 	IStatusEffectData,
 	IWeaponDamageEffectData,
 	IWeaponDataWithID,
@@ -374,6 +373,10 @@ characterSchema.method("getDamageBonus", function getDamageBonus(type: DamageTyp
 	return this.getEquipmentBonus(PropertyType.Damage, type) + this.getActiveEffectBonus(PropertyType.Damage, type);
 });
 
+characterSchema.method("getHealBonus", function getHealBonus() {
+	return this.getEquipmentBonus(PropertyType.Heal, "heal") + this.getActiveEffectBonus(PropertyType.Heal, "heal");
+});
+
 characterSchema.method("getResistance", function getResistance(type: DamageType) {
 	return (
 		this.baseResistances[type] +
@@ -516,7 +519,8 @@ characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
 	const healEffect = effect as IHealEffectData;
 	const heal = Game.dx(healEffect.min, healEffect.max);
 	const modifier = healEffect.modifier ? Game.getModifier(this.stats[healEffect.modifier]) : 0;
-	const value = heal + modifier;
+	const bonusMultiplier = this.getHealBonus() / 100 + 1;
+	const value = Math.round((heal + modifier) * bonusMultiplier);
 	return {
 		target: healEffect.target,
 		value: Math.max(value, 0),
@@ -591,13 +595,16 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	};
 });
 
-characterSchema.method("getEffectTarget", function getEffectTarget(effect: ISkillEffect) {
-	const { target, type } = effect;
-	const isAttack = [EffectType.Damage, EffectType.WeaponDamage].includes(type);
-	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isAttack && Game.d20 <= 10) {
-		return target === Target.Self ? Target.Enemy : Target.Self;
+characterSchema.method("getEffectTarget", function getEffectTarget(target: Target) {
+	const isTargetEnemy = target === Target.Enemy;
+	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isTargetEnemy) {
+		const roll = Game.d20;
+
+		if (roll <= 10) {
+			return Target.Self;
+		}
 	}
-	return target === Target.Self ? Target.Self : Target.Enemy;
+	return target;
 });
 
 characterSchema.method("createEmptyAction", function createEmptyAction(data: ITurnData, name: string) {
@@ -633,9 +640,11 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 		this.potions--;
 
+		const bonusMultiplier = this.getHealBonus() / 100 + 1;
+		const value = Math.round((this.maxHitPoints / 2) * bonusMultiplier);
 		action.skill.heal.push({
 			target: Target.Self,
-			value: Math.round(this.maxHitPoints / 2),
+			value,
 		});
 
 		return action;
@@ -663,8 +672,12 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon, skillClass: skill.class };
 
+	const isAttack = skill.effects.some(
+		(effect) => effect.type === EffectType.Damage || effect.type === EffectType.WeaponDamage,
+	);
+
 	skill.effects.forEach((effect) => {
-		const target = this.getEffectTarget(effect);
+		const target = isAttack ? this.getEffectTarget(effect.target) : effect.target;
 		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
 		const effectData = { effect, effectTarget, source: skillSource, target };
 
@@ -710,9 +723,8 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 			const source = { id: weapon.id, name: weapon.name, icon: weapon.icon };
 
 			weapon.effects?.forEach((effect) => {
-				const target = this.getEffectTarget(effect);
 				const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
-				const effectData = { effect, effectTarget, source, target };
+				const effectData = { effect, effectTarget, source, target: effect.target };
 
 				switch (effect.type) {
 					case EffectType.Damage:

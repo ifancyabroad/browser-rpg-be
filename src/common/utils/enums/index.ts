@@ -146,6 +146,7 @@ export enum PropertyType {
 	AuxiliaryStat = "auxiliaryStat",
 	Resistance = "resistance",
 	Damage = "damage",
+	Heal = "heal",
 }
 
 export enum ArmourType {

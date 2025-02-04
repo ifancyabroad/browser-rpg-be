@@ -159,7 +159,7 @@
 			"type": "ring"
 		},
 		"-NgJzNDx7O2sLwCLS8rd": {
-			"armourType": "light",
+			"armourType": "misc",
 			"description": "Basic yet dependable, an essential companion for any aspiring adventurer.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NgJzNDx7O2sLwCLS8rd?alt=media&token=5896ce43-f035-4706-b700-1b59b1b2cdc9",
 			"level": 1,
@@ -730,14 +730,14 @@
 					"value": 40
 				},
 				{
-					"name": "radiant",
+					"name": "poison",
 					"type": "resistance",
 					"value": 40
 				},
 				{
 					"name": "constitution",
 					"type": "stat",
-					"value": 2
+					"value": 4
 				}
 			],
 			"type": "belt"
@@ -1587,7 +1587,7 @@
 			"type": "shield"
 		},
 		"-NzEdBv-UWjlNRRjd8Gv": {
-			"armourType": "light",
+			"armourType": "misc",
 			"description": "A small but sturdy buckler plated with gleaming gold, offering both defense and prestige.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEdBv-UWjlNRRjd8Gv?alt=media&token=748f3207-a3c5-4f77-9cc9-884376588f59",
 			"level": 3,
@@ -1696,7 +1696,7 @@
 			"type": "shield"
 		},
 		"-NzEfJdAyhMkjgDYnm8R": {
-			"armourType": "light",
+			"armourType": "misc",
 			"description": "A shield imbued with lightning magic, deflecting attacks.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEfJdAyhMkjgDYnm8R?alt=media&token=3da49619-7acd-48ef-9f25-efea603393a6",
 			"level": 2,
@@ -1774,7 +1774,7 @@
 			"type": "shield"
 		},
 		"-NzEgcZaaw2oFUsF7NBm": {
-			"armourType": "light",
+			"armourType": "misc",
 			"description": "A shield crafted with golden wings, symbolizing protection and swift defense.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEgcZaaw2oFUsF7NBm?alt=media&token=798a61fe-2673-44dc-87e0-2a53737e8493",
 			"level": 4,
@@ -2171,11 +2171,6 @@
 				{
 					"name": "necrotic",
 					"type": "resistance",
-					"value": 40
-				},
-				{
-					"name": "radiant",
-					"type": "damage",
 					"value": 40
 				},
 				{
@@ -3342,7 +3337,7 @@
 			"type": "belt"
 		},
 		"-OD683rsaEy2yBxeo8Fw": {
-			"armourType": "heavy",
+			"armourType": "misc",
 			"characterClass": "-N_Ot99GWjYjrv9Gs-fP",
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OD683rsaEy2yBxeo8Fw?alt=media&token=c33fc687-7c41-41f7-8523-718a76267dee",
@@ -3500,18 +3495,13 @@
 			"description": "",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OHy08l5Cz0vCld2qSHF?alt=media&token=a2641251-e904-47bb-bb42-736a39cb373e",
 			"level": 3,
-			"name": "Lich's Wrappings",
-			"price": 650,
+			"name": "Blessed Wraps",
+			"price": 800,
 			"properties": [
 				{
-					"name": "wisdom",
-					"type": "stat",
-					"value": 2
-				},
-				{
-					"name": "intelligence",
-					"type": "stat",
-					"value": 2
+					"name": "heal",
+					"type": "heal",
+					"value": 40
 				}
 			],
 			"type": "gloves"
@@ -3628,6 +3618,580 @@
 				}
 			],
 			"type": "armour"
+		},
+		"-OIG-CccF8VTd7BELo99": {
+			"armourType": "misc",
+			"characterClass": "-OHcffU4_J4vJV5nPD1l",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIG-CccF8VTd7BELo99?alt=media&token=8c3323c4-e2a4-487d-a68f-e99fad2ebb2f",
+			"level": 4,
+			"name": "Dreadfather's Mask",
+			"price": 1700,
+			"properties": [
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": -4
+				}
+			],
+			"type": "helmet"
+		},
+		"-OIG02ZTMZxJPtP127s3": {
+			"armourType": "misc",
+			"characterClass": "-OHcffU4_J4vJV5nPD1l",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIG02ZTMZxJPtP127s3?alt=media&token=d4f8efb3-96a0-4d1d-9fa4-30ca08729528",
+			"level": 4,
+			"name": "Dreadfather's Sash",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "piercing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "belt"
+		},
+		"-OIG0CyLGHeCq5_-8P8o": {
+			"armourType": "misc",
+			"characterClass": "-OHcffU4_J4vJV5nPD1l",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIG0CyLGHeCq5_-8P8o?alt=media&token=e61a228c-9a06-4619-aa21-edbe62bf0c52",
+			"level": 4,
+			"name": "Dreadfather's Boots",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "crushing",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "boots"
+		},
+		"-OIG0OXwqPAwR5m2ygYs": {
+			"armourType": "misc",
+			"characterClass": "-OHcffU4_J4vJV5nPD1l",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIG0OXwqPAwR5m2ygYs?alt=media&token=897cf442-4b9a-4ff9-bfa8-85cbc82bb890",
+			"level": 4,
+			"name": "Dreadfather's Wraps",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "radiant",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-OIG0b1_0Qv-JCbVeksA": {
+			"armourClass": 10,
+			"armourType": "cloth",
+			"characterClass": "-OHcffU4_J4vJV5nPD1l",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIG0b1_0Qv-JCbVeksA?alt=media&token=9fabee45-ff66-433b-ae89-7721da41500b",
+			"level": 4,
+			"name": "Dreadfather's Ribcage",
+			"price": 1800,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "armour"
+		},
+		"-OIGAnTlbkzA3DMLPVrC": {
+			"armourType": "misc",
+			"characterClass": "-OI71oq4C31il2XnXrif",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGAnTlbkzA3DMLPVrC?alt=media&token=02d97c5c-db82-428f-819b-4f678f41b5f8",
+			"level": 4,
+			"name": "Sunforged Greaves",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "crushing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "boots"
+		},
+		"-OIGBXAOwBUmfrf0GEI1": {
+			"armourType": "misc",
+			"characterClass": "-OI71oq4C31il2XnXrif",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGBXAOwBUmfrf0GEI1?alt=media&token=d6576c96-1cfe-425f-b02a-63cfb95171b5",
+			"level": 4,
+			"name": "Sunforged Gauntlets",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-OIGC1hWyA2ruLPelg1R": {
+			"armourType": "misc",
+			"characterClass": "-OI71oq4C31il2XnXrif",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGC1hWyA2ruLPelg1R?alt=media&token=d2698a69-edaa-445d-940d-ef2f4bab0709",
+			"level": 4,
+			"name": "Sunforged Belt",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "cold",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "lightning",
+					"type": "resistance",
+					"value": 20
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "belt"
+		},
+		"-OIGCEij6UUx69e-sTfO": {
+			"armourClass": 18,
+			"armourType": "heavy",
+			"characterClass": "-OI71oq4C31il2XnXrif",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGCEij6UUx69e-sTfO?alt=media&token=7fa124fa-c6ca-4e70-b2e4-ecaccc24e7cb",
+			"level": 4,
+			"name": "Sunforged Plate",
+			"price": 1800,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "armour"
+		},
+		"-OIGCUUOa6_Tprk3nGmx": {
+			"armourType": "misc",
+			"characterClass": "-OI71oq4C31il2XnXrif",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGCUUOa6_Tprk3nGmx?alt=media&token=b4121810-4a92-42a0-af51-e42eeff9a78d",
+			"level": 4,
+			"name": "Sunforged Helm",
+			"price": 1700,
+			"properties": [
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "radiant",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				}
+			],
+			"type": "helmet"
+		},
+		"-OIGE1M-NztOpxLhP65m": {
+			"armourType": "misc",
+			"characterClass": "-OI76C9UljPe-6hnDUcP",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGE1M-NztOpxLhP65m?alt=media&token=e1a3d7b8-9758-43e7-b227-292728cbae49",
+			"level": 4,
+			"name": "Umbral Boots",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 40
+				}
+			],
+			"type": "boots"
+		},
+		"-OIGEDX0cqOgxh3Iznhz": {
+			"armourType": "misc",
+			"characterClass": "-OI76C9UljPe-6hnDUcP",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGEDX0cqOgxh3Iznhz?alt=media&token=27c193a3-5613-4669-9424-ba8779e33b32",
+			"level": 4,
+			"name": "Umbral Gloves",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "poison",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "poison",
+					"type": "resistance",
+					"value": 40
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-OIGERwsU6BqmW1DQnAA": {
+			"armourType": "misc",
+			"characterClass": "-OI76C9UljPe-6hnDUcP",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGERwsU6BqmW1DQnAA?alt=media&token=1825aa8d-fdbb-4d11-8e1f-e371d55db013",
+			"level": 4,
+			"name": "Umbral Strap",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "belt"
+		},
+		"-OIGEluk1ENx9rTO3Nzo": {
+			"armourType": "misc",
+			"characterClass": "-OI76C9UljPe-6hnDUcP",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGEluk1ENx9rTO3Nzo?alt=media&token=8660797b-7ad9-49ba-aa35-ab349e868728",
+			"level": 4,
+			"name": "Umbral Hood",
+			"price": 1700,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "critChance",
+					"type": "auxiliaryStat",
+					"value": 2
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "helmet"
+		},
+		"-OIGEyvrhJmIyWrInYHL": {
+			"armourClass": 12,
+			"armourType": "light",
+			"characterClass": "-OI76C9UljPe-6hnDUcP",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGEyvrhJmIyWrInYHL?alt=media&token=f9a7b1ce-41dc-426c-9e9f-a3d957cc8ecd",
+			"level": 4,
+			"name": "Umbral Tunic",
+			"price": 1800,
+			"properties": [
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 4
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 4
+				}
+			],
+			"type": "armour"
+		},
+		"-OIGGef0ouMMSoDjGUdF": {
+			"armourType": "misc",
+			"characterClass": "-OI74eayTZduv3tnmUwr",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGGef0ouMMSoDjGUdF?alt=media&token=d14ee9d5-b350-439b-9cad-1ce8c2e33fda",
+			"level": 4,
+			"name": "Centurion's Greaves",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "necrotic",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "necrotic",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "boots"
+		},
+		"-OIGGrPdsWdsGO48_7m6": {
+			"armourType": "misc",
+			"characterClass": "-OI74eayTZduv3tnmUwr",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGGrPdsWdsGO48_7m6?alt=media&token=64aeb067-5f6e-462c-80fb-522f077cc3fa",
+			"level": 4,
+			"name": "Centurion's Gauntlets",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 4
+				},
+				{
+					"name": "fire",
+					"type": "damage",
+					"value": 40
+				}
+			],
+			"type": "gloves"
+		},
+		"-OIGGxaNZsFNqbgQ1NTB": {
+			"armourType": "misc",
+			"characterClass": "-OI74eayTZduv3tnmUwr",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGGxaNZsFNqbgQ1NTB?alt=media&token=828ebbcf-69fa-428c-9775-f425f351c2f2",
+			"level": 4,
+			"name": "Centurion's Belt",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "crushing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "crushing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "belt"
+		},
+		"-OIGH3utgFlqilEXTLrc": {
+			"armourClass": 15,
+			"armourType": "medium",
+			"characterClass": "-OI74eayTZduv3tnmUwr",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGH3utgFlqilEXTLrc?alt=media&token=c9230c28-423e-4a78-a6e9-82ae0570b1a3",
+			"level": 4,
+			"name": "Centurion's Armour",
+			"price": 1800,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 4
+				},
+				{
+					"name": "slashing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "slashing",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "armour"
+		},
+		"-OIGHDP7d83u1taoV6xy": {
+			"armourType": "misc",
+			"characterClass": "-OI74eayTZduv3tnmUwr",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIGHDP7d83u1taoV6xy?alt=media&token=0a842cf4-44a2-45d5-ad6f-2328253fc135",
+			"level": 4,
+			"name": "Centurion's Guard",
+			"price": 1700,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 1
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "fire",
+					"type": "resistance",
+					"value": 20
+				}
+			],
+			"type": "helmet"
 		}
 	},
 	"classes": {
@@ -8206,7 +8770,7 @@
 			],
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-NZqcxgP5ITgFn-T8xj6?alt=media&token=2ccf3d59-a4f4-41ce-ba9b-7e9fccac6a6d",
 			"level": 4,
-			"maxUses": 3,
+			"maxUses": 2,
 			"name": "Flurry",
 			"price": 550
 		},
@@ -12785,7 +13349,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fskills%2F-OI6P21THAWT0E0VgnjP?alt=media&token=f59fa068-f3d0-47ed-91af-92b438cb3825",
 			"level": 3,
 			"maxUses": 2,
-			"name": "Power Word: Confuse",
+			"name": "Power Word: Confusion",
 			"price": 0
 		}
 	},

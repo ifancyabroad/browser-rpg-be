@@ -24,4 +24,10 @@ export interface IDamageProperty {
 	value: number;
 }
 
-export type TProperty = IStatProperty | IAuxiliaryStatProperty | IResistanceProperty | IDamageProperty;
+export interface IHealProperty {
+	type: PropertyType.Heal;
+	name: "heal";
+	value: number;
+}
+
+export type TProperty = IStatProperty | IAuxiliaryStatProperty | IResistanceProperty | IDamageProperty | IHealProperty;
