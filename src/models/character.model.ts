@@ -24,6 +24,7 @@ import {
 	IAuxiliaryEffectData,
 	IDamageEffectData,
 	IHealEffectData,
+	ISkillDataWithRemaining,
 	IStatusEffectData,
 	IWeaponDamageEffectData,
 	IWeaponDataWithID,
@@ -427,6 +428,21 @@ characterSchema.method("checkConstitution", function checkConstitution() {
 	}
 });
 
+characterSchema.method("checkCharmedAttack", function checkCharmedAttack(skill: ISkillDataWithRemaining) {
+	const isAttack = skill.effects
+		.filter((effect) => effect.target === Target.Enemy)
+		.some((effect) => effect.type === EffectType.Damage || effect.type === EffectType.WeaponDamage);
+
+	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isAttack) {
+		const roll = Game.d20;
+
+		if (roll <= 10) {
+			return true;
+		}
+	}
+	return false;
+});
+
 characterSchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effectTarget }: IEffectData) {
 	const weaponEffect = effect as IWeaponDamageEffectData;
 	const damage = Game.d4;
@@ -595,18 +611,6 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	};
 });
 
-characterSchema.method("getEffectTarget", function getEffectTarget(target: Target) {
-	const isTargetEnemy = target === Target.Enemy;
-	if (this.auxiliaryEffects[AuxiliaryEffect.Charm] && isTargetEnemy) {
-		const roll = Game.d20;
-
-		if (roll <= 10) {
-			return Target.Self;
-		}
-	}
-	return target;
-});
-
 characterSchema.method("createEmptyAction", function createEmptyAction(data: ITurnData, name: string) {
 	const action: IAction = {
 		self: data.self.name,
@@ -672,12 +676,10 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 	const skillSource = { id: skill.id, name: skill.name, icon: skill.icon, skillClass: skill.class };
 
-	const isAttack = skill.effects.some(
-		(effect) => effect.type === EffectType.Damage || effect.type === EffectType.WeaponDamage,
-	);
+	const isCharmedAttack = this.checkCharmedAttack(skill);
 
 	skill.effects.forEach((effect) => {
-		const target = isAttack ? this.getEffectTarget(effect.target) : effect.target;
+		const target = isCharmedAttack ? Target.Self : effect.target;
 		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
 		const effectData = { effect, effectTarget, source: skillSource, target };
 

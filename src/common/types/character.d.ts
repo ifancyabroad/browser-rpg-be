@@ -110,7 +110,6 @@ export interface ICharacterMethods {
 	getHeal(data: IEffectData): IHealEffect;
 	getStatus(data: IEffectData): IStatusEffect;
 	getAuxiliary(data: IEffectData): IAuxiliaryEffect;
-	getEffectTarget(target: Target): Target;
 	createEmptyAction(data: ITurnData, name: string): IAction;
 	createAction(data: ITurnData): IAction;
 	handleDamage(damage: IDamageEffect): void;
@@ -123,6 +122,7 @@ export interface ICharacterMethods {
 
 	checkAlive(): void;
 	checkConstitution(): void;
+	checkCharmedAttack(skill: ISkillDataWithRemaining): boolean;
 }
 
 // Add static methods here
