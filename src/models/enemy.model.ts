@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 import CharacterModel from "./character.model";
 import { IEnemy, IEnemyMethods, IEnemyModel } from "@common/types/enemy";
-import { IHero } from "@common/types/hero";
+import { IHero, IHeroMethods } from "@common/types/hero";
 import {
 	AuxiliaryEffect,
 	AuxiliaryStat,
@@ -123,7 +123,7 @@ enemySchema.method("getUnarmedDamage", function getUnarmedDamage({ effect, effec
 	};
 });
 
-enemySchema.method("getSkill", function getSkill(hero: IHero) {
+enemySchema.method("getSkill", function getSkill(hero: IHero & IHeroMethods) {
 	const priorities: ISkillDataWithRemaining[][] = [[], [], [], []];
 
 	const isDamaged = this.hitPoints < this.maxHitPoints / 2;
@@ -151,6 +151,18 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 		const isAttackOnly = skill.effects.every(
 			(effect) => effect.type === EffectType.Damage && effect.target === Target.Enemy,
 		);
+		const isActiveAuxiliaryBuffOnly = skill.effects.every(
+			(effect) =>
+				effect.type === EffectType.Auxiliary &&
+				effect.target === Target.Self &&
+				this.auxiliaryEffects[effect.effect],
+		);
+		const isActiveAuxiliaryDebuffOnly = skill.effects.every(
+			(effect) =>
+				effect.type === EffectType.Auxiliary &&
+				effect.target === Target.Enemy &&
+				hero.auxiliaryEffects[effect.effect],
+		);
 		const isActiveBuff = this.activeStatusEffects.some((effect) => effect.source.id === skill.id);
 		const isActiveDebuff = hero.activeStatusEffects.some((effect) => effect.source.id === skill.id);
 
@@ -166,9 +178,9 @@ enemySchema.method("getSkill", function getSkill(hero: IHero) {
 			priorities[1].push(skill);
 		} else if (isAttackOnly) {
 			priorities[1].push(skill);
-		} else if (hasDebuff && !isActiveDebuff) {
+		} else if (hasDebuff && !isActiveDebuff && !isActiveAuxiliaryDebuffOnly) {
 			priorities[1].push(skill);
-		} else if (hasBuff && !isActiveBuff) {
+		} else if (hasBuff && !isActiveBuff && !isActiveAuxiliaryBuffOnly) {
 			priorities[1].push(skill);
 		} else if (isBaseAttack) {
 			priorities[2].push(skill);
