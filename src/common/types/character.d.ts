@@ -77,20 +77,6 @@ export interface ICharacterMethods {
 	get frenzyMultiplier(): number;
 	get auxiliaryEffects(): Record<AuxiliaryEffect, boolean>;
 
-	// Backwards compatibility
-	get isStunned(): boolean;
-	get isPoisoned(): boolean;
-	get isDisarmed(): boolean;
-	get isBleeding(): boolean;
-	get isSilenced(): boolean;
-	get isBlinded(): boolean;
-	get isFrenzied(): boolean;
-	get isCharmed(): boolean;
-	get isHasted(): boolean;
-	get isCrippled(): boolean;
-	get isBlessed(): boolean;
-	get isCursed(): boolean;
-
 	// Add methods here
 	getEquipmentArmourClass(): number;
 	getEquipmentBonus(type: PropertyType, name: string): number;

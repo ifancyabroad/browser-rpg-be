@@ -330,83 +330,33 @@ export async function salvage(session: Session & Partial<SessionData>) {
 	}
 }
 
-// Old API endpoint no longer in use
-export async function getProgress(session: Session & Partial<SessionData>) {
+export async function disableSpirits(session: Session & Partial<SessionData>) {
 	const { user } = session;
 	try {
-		const characterClasses = GameData.getClasses();
-
-		const allCharacters = await HeroArchive.find({ user: user.id }).sort({ kills: "desc" }).lean();
-
-		if (!allCharacters) {
-			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible characters to get progress");
-		}
-
-		const topCharacter = allCharacters[0];
-
-		let rank = null;
-
-		if (topCharacter) {
-			rank = (await HeroArchive.countDocuments({ kills: { $gt: topCharacter.kills } })) + 1;
-		}
-
-		const victories = allCharacters.filter((character) => character.kills >= FINAL_LEVEL).length;
-		const kills = allCharacters.reduce((acc, character) => acc + character.kills, 0);
-		const deaths = allCharacters.filter((character) => character.status === Status.Dead).length;
-		const days = allCharacters.reduce((acc, character) => acc + character.day, 0);
-
-		const overallProgress = allCharacters.slice(0, 3).map((character) => {
-			const characterClass = characterClasses.find(({ id }) => id === character.characterClassID);
-			return {
-				id: character._id,
-				name: character.name,
-				level: character.level,
-				kills: character.kills,
-				day: character.day,
-				status: character.status,
-				maxBattleLevel: character.maxBattleLevel,
-				characterClass,
-				slainBy: character.slainBy,
-			};
+		const characterRecord = await HeroModel.findOne({
+			user: user.id,
+			status: Status.Alive,
+			state: State.Idle,
 		});
+		if (!characterRecord) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "No eligible character to disable spirits");
+		}
 
-		const classProgress = characterClasses
-			.map((characterClass) => {
-				const characters = allCharacters.filter(
-					(character) => character.characterClassID === characterClass.id,
-				);
+		if (characterRecord.spiritsDisabled) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Spirits already disabled");
+		}
 
-				if (!characters.length) {
-					return null;
-				}
+		if (characterRecord.gold < characterRecord.disableSpiritsPrice) {
+			throw createHttpError(httpStatus.BAD_REQUEST, "Not enough gold to disable spirits");
+		}
 
-				const character = characters[0];
+		characterRecord.gold -= characterRecord.disableSpiritsPrice;
+		characterRecord.spiritsDisabled = true;
+		const character = await characterRecord.save();
 
-				return {
-					id: character._id,
-					name: character.name,
-					level: character.kills,
-					kills: character.kills,
-					day: character.day,
-					status: character.status,
-					maxBattleLevel: character.maxBattleLevel,
-					characterClass,
-					slainBy: character.slainBy,
-				};
-			})
-			.filter((character) => character);
-
-		return {
-			overallProgress,
-			classProgress,
-			rank,
-			victories,
-			kills,
-			deaths,
-			days,
-		};
+		return character.toJSON();
 	} catch (error) {
-		console.error(`Error getProgress: ${error.message}`);
+		console.error(`Error disableSpirits: ${error.message}`);
 		throw error;
 	}
 }

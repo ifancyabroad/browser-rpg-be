@@ -4,6 +4,7 @@ import CharacterModel, { CharacterArchive } from "./character.model";
 import { IHero, IHeroMethods, IHeroModel } from "@common/types/hero";
 import { GameData } from "@common/utils/game/GameData";
 import {
+	BASE_DISABLE_SPIRITS_PRICE,
 	BASE_POTION_PRICE,
 	BASE_REST_PRICE,
 	BASE_RESTOCK_PRICE,
@@ -89,6 +90,10 @@ const heroSchema = new Schema<IHero, IHeroModel, IHeroMethods>(
 				default: false,
 			},
 		},
+		spiritsDisabled: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	{ timestamps: true, toJSON: { virtuals: true } },
 );
@@ -133,6 +138,11 @@ heroSchema.virtual("restPrice").get(function () {
 heroSchema.virtual("potionPrice").get(function () {
 	const zoneLevel = Math.ceil((this.maxBattleLevel + 1) / 10);
 	return Math.round(BASE_POTION_PRICE * zoneLevel * this.discountMultiplier);
+});
+
+heroSchema.virtual("disableSpiritsPrice").get(function () {
+	const zoneLevel = Math.ceil((this.maxBattleLevel + 1) / 10);
+	return Math.round(BASE_DISABLE_SPIRITS_PRICE * zoneLevel);
 });
 
 heroSchema.virtual("isTwoHandedWeaponEquipped").get(function () {
@@ -182,6 +192,7 @@ heroSchema.method("addLevel", function addLevel(stat: Stat, skill?: string) {
 
 heroSchema.method("rest", function rest() {
 	this.day++;
+	this.spiritsDisabled = false;
 	this.restock();
 	this.restockCount = 0;
 	this.setHitPoints(this.baseMaxHitPoints);

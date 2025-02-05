@@ -104,7 +104,7 @@ function getMonsterData(battleZone: Zone, battleLevel: number) {
 	};
 }
 
-async function getEnemyData(battleZone: Zone, battleLevel: number) {
+async function getEnemyData(battleZone: Zone, battleLevel: number, spiritsDisabled: boolean) {
 	const isBoss = Game.getIsBoss(battleLevel);
 
 	if (isBoss) {
@@ -112,7 +112,7 @@ async function getEnemyData(battleZone: Zone, battleLevel: number) {
 	}
 
 	const roll = Game.d20;
-	if (roll > 1) {
+	if (roll > 1 || spiritsDisabled) {
 		return getMonsterData(battleZone, battleLevel);
 	}
 
@@ -145,7 +145,8 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 
 		const level = characterRecord.maxBattleLevel + 1;
 		const zone = Game.getZone(level);
-		const enemyData = await getEnemyData(zone, level);
+		const spiritsDisabled = characterRecord.spiritsDisabled;
+		const enemyData = await getEnemyData(zone, level, spiritsDisabled);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -175,11 +176,7 @@ export async function startBattle(session: Session & Partial<SessionData>) {
 		});
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battle.toJSON(),
-				enemy: enemy.toJSON(),
-			},
+			battle: battle.toJSON(),
 			character: character.toJSON(),
 			enemy: enemy.toJSON(),
 		};
@@ -213,7 +210,8 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		const level = battleRecord.level + 1;
 		const multiplier = battleRecord.multiplier + BATTLE_MULTIPLIER_INCREMENT;
 		const zone = Game.getZone(level);
-		const enemyData = await getEnemyData(zone, level);
+		const spiritsDisabled = characterRecord.spiritsDisabled;
+		const enemyData = await getEnemyData(zone, level, spiritsDisabled);
 
 		const enemy = await EnemyModel.create(enemyData);
 
@@ -235,11 +233,7 @@ export async function nextBattle(session: Session & Partial<SessionData>) {
 		}
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battle.toJSON(),
-				enemy: enemy.toJSON(),
-			},
+			battle: battle.toJSON(),
 			character: characterRecord.toJSON(),
 			enemy: enemy.toJSON(),
 		};
@@ -316,11 +310,7 @@ export async function getBattle(session: Session & Partial<SessionData>) {
 		}
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battleRecord.toJSON(),
-				enemy: enemyRecord.toJSON(),
-			},
+			battle: battleRecord.toJSON(),
 			character: characterRecord.toJSON(),
 			enemy: enemyRecord.toJSON(),
 		};
@@ -432,11 +422,7 @@ export async function action(skill: IBattleInput, session: Session & Partial<Ses
 		}
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battleRecord.toJSON(),
-				enemy: enemyRecord.toJSON(),
-			},
+			battle: battleRecord.toJSON(),
 			character: characterRecord.toJSON(),
 			enemy: enemyRecord.toJSON(),
 		};
@@ -488,11 +474,7 @@ export async function returnToTown(session: Session & Partial<SessionData>) {
 		});
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battle.toJSON(),
-				enemy: enemy.toJSON(),
-			},
+			battle: battle.toJSON(),
 			character: character.toJSON(),
 			enemy: enemy.toJSON(),
 		};
@@ -546,11 +528,7 @@ export async function takeTreasure(item: ITreasureInput, session: Session & Part
 		const [character, battle] = await Promise.all([characterRecord.save(), battleRecord.save()]);
 
 		return {
-			// Backward compatibility
-			battle: {
-				...battle.toJSON(),
-				enemy: enemyRecord.toJSON(),
-			},
+			battle: battle.toJSON(),
 			character: character.toJSON(),
 			enemy: enemyRecord.toJSON(),
 		};

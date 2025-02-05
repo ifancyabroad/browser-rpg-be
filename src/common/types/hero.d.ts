@@ -33,6 +33,7 @@ export interface IHero extends ICharacter {
 	levelUp?: ILevelUp;
 	slainBy?: string;
 	salvage?: ISalvage;
+	spiritsDisabled: boolean;
 }
 
 export interface IHeroMethods extends ICharacterMethods {
@@ -46,6 +47,7 @@ export interface IHeroMethods extends ICharacterMethods {
 	get restockPrice(): number;
 	get restPrice(): number;
 	get potionPrice(): number;
+	get disableSpiritsPrice(): number;
 	get isTwoHandedWeaponEquipped(): boolean;
 	get shopLevel(): number;
 	get goldValue(): number;

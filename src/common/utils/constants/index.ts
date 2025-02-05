@@ -41,6 +41,8 @@ export const NEW_GAME_RESISTANCE_BONUS = 25;
 
 export const SALVAGE_MULTIPLIER = 0.05;
 
+export const BASE_DISABLE_SPIRITS_PRICE = 100;
+
 export const MODIFIERS = new Map([
 	[1, -5],
 	[2, -4],

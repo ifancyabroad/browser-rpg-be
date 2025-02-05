@@ -5,10 +5,10 @@ import {
 	buyItem,
 	buyPotion,
 	createCharacter,
+	disableSpirits,
 	getActiveCharacter,
 	getCharacterByID,
 	getDailyWinner,
-	getProgress,
 	levelUp,
 	rest,
 	restockItems,
@@ -144,14 +144,14 @@ characterRouter.post(
 	}),
 );
 
-// @GET '/character/progress'
-// @DEST Get character progress
-characterRouter.get(
-	"/progress",
+// @POST '/character/disableSpirits'
+// @DEST Disable spirits for the day
+characterRouter.post(
+	"/disableSpirits",
 	middleware.userAuth,
 	expressAsyncHandler(async (req: Request, res: Response) => {
-		const progress = await getProgress(req.session);
-		res.json({ progress });
+		const character = await disableSpirits(req.session);
+		res.json({ character });
 	}),
 );
 
