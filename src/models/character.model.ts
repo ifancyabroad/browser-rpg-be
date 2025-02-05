@@ -531,30 +531,29 @@ characterSchema.method("getDamage", function getDamage({ effect, effectTarget, t
 	};
 });
 
-characterSchema.method("getHeal", function getHeal({ effect }: IEffectData) {
+characterSchema.method("getHeal", function getHeal({ effect, target }: IEffectData) {
 	const healEffect = effect as IHealEffectData;
 	const heal = Game.dx(healEffect.min, healEffect.max);
 	const modifier = healEffect.modifier ? Game.getModifier(this.stats[healEffect.modifier]) : 0;
 	const bonusMultiplier = this.getHealBonus() / 100 + 1;
 	const value = Math.round((heal + modifier) * bonusMultiplier);
 	return {
-		target: healEffect.target,
+		target,
 		value: Math.max(value, 0),
 	};
 });
 
-characterSchema.method("getStatus", function getStatus({ effect, effectTarget, source }: IEffectData) {
+characterSchema.method("getStatus", function getStatus({ effect, effectTarget, source, target }: IEffectData) {
 	const statusEffect = effect as IStatusEffectData;
 
 	let saved = false;
-	const isTargetEnemy = statusEffect.target === Target.Enemy;
 	const isSavingThrowRequired = statusEffect.modifier && statusEffect.difficulty;
 
 	if (!isSavingThrowRequired) {
 		saved = false;
-	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
+	} else if (effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
 		saved = true;
-	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
+	} else if (effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
 		saved = false;
 	} else {
 		const modifier = Game.getModifier(effectTarget.stats[statusEffect.modifier]);
@@ -563,11 +562,11 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 	}
 
 	// Add 1 for self-targeted effects to account for the current turn
-	const remaining = statusEffect.target === Target.Self ? statusEffect.duration + 1 : statusEffect.duration;
+	const remaining = target === Target.Self ? statusEffect.duration + 1 : statusEffect.duration;
 
 	return {
 		source,
-		target: statusEffect.target,
+		target,
 		properties: statusEffect.properties,
 		remaining,
 		duration: statusEffect.duration,
@@ -577,18 +576,17 @@ characterSchema.method("getStatus", function getStatus({ effect, effectTarget, s
 	};
 });
 
-characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTarget, source }: IEffectData) {
+characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTarget, source, target }: IEffectData) {
 	const auxiliaryEffect = effect as IAuxiliaryEffectData;
 
 	let saved = false;
-	const isTargetEnemy = auxiliaryEffect.target === Target.Enemy;
 	const isSavingThrowRequired = auxiliaryEffect.modifier && auxiliaryEffect.difficulty;
 
 	if (!isSavingThrowRequired) {
 		saved = false;
-	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
+	} else if (effectTarget.auxiliaryEffects[AuxiliaryEffect.Bless]) {
 		saved = true;
-	} else if (isTargetEnemy && effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
+	} else if (effectTarget.auxiliaryEffects[AuxiliaryEffect.Curse]) {
 		saved = false;
 	} else {
 		const modifier = Game.getModifier(effectTarget.stats[auxiliaryEffect.modifier]);
@@ -597,11 +595,11 @@ characterSchema.method("getAuxiliary", function getAuxiliary({ effect, effectTar
 	}
 
 	// Add 1 for self-targeted effects to account for the current turn
-	const remaining = auxiliaryEffect.target === Target.Self ? auxiliaryEffect.duration + 1 : auxiliaryEffect.duration;
+	const remaining = target === Target.Self ? auxiliaryEffect.duration + 1 : auxiliaryEffect.duration;
 
 	return {
 		source,
-		target: auxiliaryEffect.target,
+		target,
 		effect: auxiliaryEffect.effect,
 		remaining,
 		duration: auxiliaryEffect.duration,
@@ -680,7 +678,7 @@ characterSchema.method("createAction", function createAction(data: ITurnData) {
 
 	skill.effects.forEach((effect) => {
 		const target = isCharmedAttack ? Target.Self : effect.target;
-		const effectTarget = effect.target === Target.Self ? data.self : data.enemy;
+		const effectTarget = target === Target.Self ? data.self : data.enemy;
 		const effectData = { effect, effectTarget, source: skillSource, target };
 
 		switch (effect.type) {
