@@ -678,10 +678,10 @@
 		"-Nz9dCPBfsmrmF7finXd": {
 			"armourType": "misc",
 			"description": "Worn by versatile adventurers, this belt aids in mastering various skills.",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dCPBfsmrmF7finXd?alt=media&token=096d0b9b-50fe-40db-9d13-f48298c2db4f",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-Nz9dCPBfsmrmF7finXd?alt=media&token=0ea47614-f283-40b1-a072-0d1c54a7e361",
 			"level": 4,
 			"name": "Jack's Belt",
-			"price": 1420,
+			"price": 1600,
 			"properties": [
 				{
 					"name": "strength",
@@ -1084,8 +1084,8 @@
 			"price": 150,
 			"properties": [
 				{
-					"name": "radiant",
-					"type": "damage",
+					"name": "heal",
+					"type": "heal",
 					"value": 20
 				}
 			],
@@ -1940,9 +1940,9 @@
 			"armourType": "misc",
 			"description": "A ring attuned to nature's essence, offering protection against natural forces.",
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-NzEjbVx4iDWd8myQ-1O?alt=media&token=fea5ac09-3bd2-40f9-aabf-606e94a1ee10",
-			"level": 3,
+			"level": 2,
 			"name": "Ring of Natural Defense",
-			"price": 650,
+			"price": 400,
 			"properties": [
 				{
 					"name": "poison",
@@ -3030,7 +3030,7 @@
 			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OD1MiTvdUnzhJdRDcyC?alt=media&token=e54a528f-eff4-4336-9261-b59826ee4b1a",
 			"level": 4,
 			"name": "Dragon Scale Ring",
-			"price": 1750,
+			"price": 1650,
 			"properties": [
 				{
 					"name": "fire",
@@ -3046,6 +3046,11 @@
 					"name": "cold",
 					"type": "resistance",
 					"value": 25
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
 				}
 			],
 			"type": "ring"
@@ -3404,8 +3409,8 @@
 			"price": 660,
 			"properties": [
 				{
-					"name": "radiant",
-					"type": "damage",
+					"name": "heal",
+					"type": "heal",
 					"value": 40
 				}
 			],
@@ -3414,15 +3419,20 @@
 		"-OHra_lSjcjIhvuICBCI": {
 			"armourType": "misc",
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OHra_lSjcjIhvuICBCI?alt=media&token=5d43389c-a8a9-48b1-8054-961dc2dcb0a1",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OHra_lSjcjIhvuICBCI?alt=media&token=4d3137df-1f06-43ec-bca4-668afbd38f11",
 			"level": 4,
-			"name": "Obsidian Charm",
-			"price": 1600,
+			"name": "Crown Charm",
+			"price": 1400,
 			"properties": [
 				{
-					"name": "armourClass",
-					"type": "auxiliaryStat",
-					"value": 5
+					"name": "radiant",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 4
 				}
 			],
 			"type": "amulet"
@@ -3499,28 +3509,12 @@
 			"price": 800,
 			"properties": [
 				{
-					"name": "heal",
-					"type": "heal",
+					"name": "radiant",
+					"type": "damage",
 					"value": 40
 				}
 			],
 			"type": "gloves"
-		},
-		"-OHy1aFzPXVdx8NEV5cA": {
-			"armourType": "misc",
-			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OHy1aFzPXVdx8NEV5cA?alt=media&token=daed5b79-07d8-45fa-8a6e-ac631728530a",
-			"level": 2,
-			"name": "Wedding Band",
-			"price": 250,
-			"properties": [
-				{
-					"name": "charisma",
-					"type": "stat",
-					"value": 2
-				}
-			],
-			"type": "ring"
 		},
 		"-OHy2JrV38T0OjNW-WBV": {
 			"armourType": "misc",
@@ -4192,6 +4186,150 @@
 				}
 			],
 			"type": "helmet"
+		},
+		"-OIMPKDv9aHS9uxfLL12": {
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIMPKDv9aHS9uxfLL12?alt=media&token=0267963d-df3a-4419-9bcc-cdc01490b2c8",
+			"level": 4,
+			"name": "Deadshot Girdle",
+			"price": 1320,
+			"properties": [
+				{
+					"name": "piercing",
+					"type": "damage",
+					"value": 40
+				},
+				{
+					"name": "hitChance",
+					"type": "auxiliaryStat",
+					"value": 4
+				}
+			],
+			"type": "belt"
+		},
+		"-OIMQ4tZ-LSwGofSsawh": {
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIMQ4tZ-LSwGofSsawh?alt=media&token=1fd9924c-f582-4dc3-9635-3dafb46d51d1",
+			"level": 4,
+			"name": "Jack's Boots",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "boots"
+		},
+		"-OIMQrXX7Q4bITjIEdtR": {
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIMQrXX7Q4bITjIEdtR?alt=media&token=7d25fb0d-c791-46ce-919f-c3f9f235a595",
+			"level": 4,
+			"name": "Jack's Gloves",
+			"price": 1600,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "gloves"
+		},
+		"-OIMRCfAplYC4-tFtwlo": {
+			"armourType": "misc",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Farmours%2F-OIMRCfAplYC4-tFtwlo?alt=media&token=f2df31fc-10ba-48fa-9549-e1b901281e63",
+			"level": 4,
+			"name": "Jack's Mask",
+			"price": 1700,
+			"properties": [
+				{
+					"name": "strength",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "dexterity",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "charisma",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"type": "helmet"
 		}
 	},
 	"classes": {
@@ -4324,7 +4462,7 @@
 				"hand1": "-NgK-mAaFXHeapzVbWAb"
 			},
 			"fallenImage": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2FfallenImage?alt=media&token=62ba1bd5-97e7-459e-aae8-4888a50d8906",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Ficon?alt=media&token=27828c41-3a58-41ed-b0da-824fc9650e6a",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Ficon?alt=media&token=3447cdc1-06c8-4157-80e4-29eee998492c",
 			"name": "Battlemage",
 			"portrait": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fclasses%2F-OI74eayTZduv3tnmUwr%2Fportrait?alt=media&token=ee81b607-5af5-4126-9c1e-2ab9d8eb56ea",
 			"skillClasses": ["barbarian", "warlock"],
@@ -15766,11 +15904,11 @@
 		"-OI6WPS67ruK5CEZybAn": {
 			"damageType": "crushing",
 			"description": "",
-			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OI6WPS67ruK5CEZybAn?alt=media&token=45716640-c088-42a7-9e6c-d91a6e29e8bc",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OI6WPS67ruK5CEZybAn?alt=media&token=d882c531-920d-4cde-8657-5574b841233c",
 			"level": 4,
 			"max": 11,
 			"min": 4,
-			"name": "Divine Radiance",
+			"name": "Divine Candle",
 			"price": 1460,
 			"properties": [
 				{
@@ -15812,6 +15950,121 @@
 					"name": "wisdom",
 					"type": "stat",
 					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-OIMKS39Dm6hnYK35bOm": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "cold",
+					"max": 4,
+					"min": 1,
+					"target": "enemy",
+					"type": "damage"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OIMKS39Dm6hnYK35bOm?alt=media&token=12abcdfd-3282-4566-9fd3-e8e4da0dd9e1",
+			"level": 2,
+			"max": 5,
+			"min": 2,
+			"name": "Frosty Dagger",
+			"price": 160,
+			"size": "oneHanded",
+			"type": "weapon",
+			"weaponType": "dagger"
+		},
+		"-OIMLXg0JszLaTsPa2ad": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OIMLXg0JszLaTsPa2ad?alt=media&token=9e75c817-b42b-4ddf-8dd1-fef681fd313e",
+			"level": 3,
+			"max": 10,
+			"min": 3,
+			"name": "Holy Staff",
+			"price": 620,
+			"properties": [
+				{
+					"name": "heal",
+					"type": "heal",
+					"value": 40
+				},
+				{
+					"name": "wisdom",
+					"type": "stat",
+					"value": 2
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "staff"
+		},
+		"-OIMMrKm9Yzy8o6vlHAu": {
+			"damageType": "slashing",
+			"description": "",
+			"effects": [
+				{
+					"damageType": "radiant",
+					"max": 10,
+					"min": 4,
+					"target": "enemy",
+					"type": "damage"
+				},
+				{
+					"difficulty": 24,
+					"duration": 2,
+					"modifier": "constitution",
+					"properties": [
+						{
+							"name": "radiant",
+							"type": "resistance",
+							"value": -40
+						},
+						{
+							"name": "slashing",
+							"type": "resistance",
+							"value": -40
+						}
+					],
+					"target": "enemy",
+					"type": "status"
+				}
+			],
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OIMMrKm9Yzy8o6vlHAu?alt=media&token=7b5ffcc4-f18e-4995-974a-479b962d8ca7",
+			"level": 5,
+			"max": 16,
+			"min": 10,
+			"name": "Rossi's Dragonslayer",
+			"price": 3200,
+			"properties": [
+				{
+					"name": "radiant",
+					"type": "damage",
+					"value": 50
+				}
+			],
+			"size": "twoHanded",
+			"type": "weapon",
+			"weaponType": "sword"
+		},
+		"-OIMXPphDGKT4i3csv4K": {
+			"damageType": "crushing",
+			"description": "",
+			"icon": "https://firebasestorage.googleapis.com/v0/b/monster-manual.appspot.com/o/images%2Fweapons%2F-OIMXPphDGKT4i3csv4K?alt=media&token=ef2cae9e-db75-4cf7-84db-b423337b8d40",
+			"level": 4,
+			"max": 11,
+			"min": 4,
+			"name": "Staff of Protection",
+			"price": 1360,
+			"properties": [
+				{
+					"name": "armourClass",
+					"type": "auxiliaryStat",
+					"value": 6
 				}
 			],
 			"size": "twoHanded",
