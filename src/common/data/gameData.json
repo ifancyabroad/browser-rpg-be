@@ -4063,7 +4063,7 @@
 				{
 					"name": "dexterity",
 					"type": "stat",
-					"value": 2
+					"value": 4
 				},
 				{
 					"name": "necrotic",
@@ -4176,6 +4176,11 @@
 				},
 				{
 					"name": "intelligence",
+					"type": "stat",
+					"value": 2
+				},
+				{
+					"name": "constitution",
 					"type": "stat",
 					"value": 2
 				},
