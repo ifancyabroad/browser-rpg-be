@@ -13,6 +13,10 @@ export async function getLeaderboard(leaderboardQuery: ILeaderboardQuery, sessio
 	try {
 		let filter: Record<string, unknown> = {};
 
+		if (type === "user") {
+			filter.user = user.id;
+		}
+
 		if (type === "daily") {
 			const now = new Date();
 			const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
